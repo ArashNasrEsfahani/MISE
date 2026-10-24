@@ -1,5 +1,7 @@
 # MISE
 
+[![MISE: Memory-Informed Small Embodied Agent](assets/mise-banner.jpg)](https://arashnasresfahani.github.io/MISE/)
+
 **Memory-Informed Small Embodied Agent**: a retrieval-based agent that lifts local models to frontier level on robotic scene arrangement.
 
 An LLM + RAG embodied agent for hierarchical task planning in AI2-THOR kitchens.
