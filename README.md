@@ -19,11 +19,9 @@ in what the agent has seen and learned, and a function library carries the plan 
 
 ## The Agent at Work
 
-Two real runs, in Kitchens 1 and 2; each reached its goal. Left: the agent's own camera, the only image it uses. Right: a top view for illustration; the agent never sees it.
+A real run in Kitchen 1, which reached its goal. Left: the agent's own camera, the only image it uses. Right: a top view for illustration; the agent never sees it.
 
 ![Kitchen 1: "Put the pan on the stove and turn the stove on."](assets/k1-stove-pan.gif)
-
-![Kitchen 2: "Start the pot on the stove for soup."](assets/k2-pot-heating.gif)
 
 ## What is in it
 
