@@ -1,0 +1,568 @@
+{
+  "_doc": "Step-5 parameter registry (docs/step5-plan.md section 5). The ONLY place a step-5 number may live. Every entry: value, range (sensitivity sweep), unit, reason (physical or declared engineering choice), fp1_tuned. Frozen with spec v1 2026-10-10; changes = dated amendments in docs/step5-plan.md section 13. Astra A0 review folded in (contradiction demotes by tier, inspection min_support, region geometry, reacquisition gate, budget share, FP1 dependency list).",
+  "version": 1,
+  "frozen": "2026-10-10",
+  "decay": {
+    "H_location": {
+      "value": 3,
+      "range": [
+        1,
+        10
+      ],
+      "unit": "practice episodes",
+      "reason": "movable objects are moved by tasks and by people; a sighting is stale within a few episodes in a used kitchen",
+      "fp1_tuned": false
+    },
+    "H_placement": {
+      "value": 2,
+      "range": [
+        1,
+        5
+      ],
+      "unit": "practice episodes",
+      "reason": "the agent's own put is usually followed by later tasks that move the same object again",
+      "fp1_tuned": false
+    },
+    "H_negative": {
+      "value": 1,
+      "range": [
+        1,
+        3
+      ],
+      "unit": "practice episodes",
+      "reason": "absence after an inspection is the most fragile claim: any restock or task can falsify it",
+      "fp1_tuned": false
+    },
+    "H_habit": {
+      "value": 30,
+      "range": [
+        10,
+        100
+      ],
+      "unit": "practice episodes",
+      "reason": "where a kitchen keeps a type (eggs in the fridge) changes slowly",
+      "fp1_tuned": false
+    },
+    "H_lesson": {
+      "value": 20,
+      "range": [
+        5,
+        60
+      ],
+      "unit": "practice episodes",
+      "reason": "a remedy depends on geometry and detector, which change only with the map or the weights",
+      "fp1_tuned": false
+    },
+    "H_procedure": {
+      "value": 50,
+      "range": [
+        10,
+        100
+      ],
+      "unit": "practice episodes",
+      "reason": "an executed action sequence stays valid while the action library is unchanged",
+      "fp1_tuned": false
+    },
+    "gamma_contradiction": {
+      "value": 0.5,
+      "range": [
+        0.25,
+        0.75
+      ],
+      "unit": "multiplier per qualified contradiction",
+      "reason": "one qualified contradiction halves the weight; the rank demotion itself is by tier (c=1 -> T2, c>=2 -> T3b below habits, spec 5.2), not by weight",
+      "fp1_tuned": false
+    },
+    "reset_factor": {
+      "value": 0.5,
+      "range": [
+        0.25,
+        0.75
+      ],
+      "unit": "multiplier per world reset (locations, placements)",
+      "reason": "a reset re-spawns objects; the old location is only a 'maybe'",
+      "fp1_tuned": false
+    },
+    "retire_below": {
+      "value": 0.05,
+      "range": [
+        0.02,
+        0.1
+      ],
+      "unit": "weight",
+      "reason": "below 1/20 of a fresh claim the record is noise in a top-3 list; retired from retrieval, never deleted",
+      "fp1_tuned": false
+    },
+    "w0": {
+      "value": {
+        "location_verified": 1.0,
+        "location_trusted": 0.8,
+        "placement_verified": 1.0,
+        "placement_actuator": 0.7,
+        "negative": 1.0,
+        "habit": 1.0,
+        "lesson_supported": 1.0,
+        "lesson_tentative": 0.5,
+        "procedure_trusted": 1.0,
+        "procedure_candidate": 0.5
+      },
+      "range": null,
+      "unit": "initial weight",
+      "reason": "verified > actuator-only > unverified; declared engineering choice",
+      "fp1_tuned": false
+    }
+  },
+  "consolidate": {
+    "min_conf": {
+      "value": 0.5,
+      "range": [
+        0.35,
+        0.7
+      ],
+      "unit": "detector confidence",
+      "reason": "below this the step-3 detector's precision falls sharply; to be re-checked on held-out kitchens",
+      "fp1_tuned": true
+    },
+    "task_vocabulary_source": {
+      "value": "sim/step5/lexicon/useful_types.json: AI2-THOR public pickupable/movable types intersected with the kitchen detector's declared class list (NOT derived from evaluation plans)",
+      "range": null,
+      "unit": null,
+      "reason": "R1 useful types from a predeclared public ontology (Astra A0 point 14)",
+      "fp1_tuned": false
+    }
+  },
+  "inspect": {
+    "vis_ok": {
+      "value": 0.6,
+      "range": [
+        0.5,
+        0.8
+      ],
+      "unit": "see-in fraction",
+      "reason": "same as honest_skills.VIS_OK (step 4): most of the interior reached by depth rays",
+      "fp1_tuned": true
+    },
+    "min_thirds": {
+      "value": 2,
+      "range": [
+        2,
+        3
+      ],
+      "unit": "lateral thirds",
+      "reason": "same as step 4: a one-sided view hides half a shelf",
+      "fp1_tuned": false
+    },
+    "max_range_m": {
+      "value": 1.5,
+      "range": [
+        1.0,
+        2.0
+      ],
+      "unit": "m",
+      "reason": "beyond about 1.5 m small kitchen objects fall to a few tens of pixels and the detector misses them",
+      "fp1_tuned": false
+    },
+    "min_type_recall": {
+      "value": 0.7,
+      "range": [
+        0.5,
+        0.9
+      ],
+      "unit": "per-class recall on the sealed holdout",
+      "reason": "a negative is only meaningful for a type the detector usually finds",
+      "fp1_tuned": false
+    },
+    "min_support": {
+      "value": 6,
+      "range": [
+        4,
+        10
+      ],
+      "unit": "supported depth probes",
+      "reason": "same as honest_skills.VIS_MIN_SUPPORT (step 4): fewer probes cannot judge an interior",
+      "fp1_tuned": true
+    }
+  },
+  "detector_capability": {
+    "_doc": "Per kitchen detector, per type recall. To be filled in a later A stage from the step-3 sealed holdout (docs/fp1-detector-results.html, docs/kitchen-datasets.md). Until filled, NO type is capable -> no cross-task negatives (conservative). Detector-specific, so keyed by kitchen.",
+    "source": "step-3 sealed holdout, FloorPlan1 two-stage detector",
+    "values": {}
+  },
+  "identity": {
+    "place_gate_m": {
+      "value": {
+        "default": 0.4,
+        "Drawer": 0.2,
+        "Cabinet": 0.3,
+        "Fridge": 0.6,
+        "Microwave": 0.4,
+        "Sink": 0.5,
+        "SinkBasin": 0.4,
+        "StoveBurner": 0.15,
+        "GarbageCan": 0.4
+      },
+      "range": "x0.5 .. x1.5",
+      "unit": "m between centres",
+      "reason": "about half the receptacle's typical width: closer is the same box, farther is a neighbour",
+      "fp1_tuned": false
+    },
+    "region_types": {
+      "value": [
+        "CounterTop",
+        "Floor",
+        "DiningTable",
+        "Shelf",
+        "ShelvingUnit",
+        "SideTable"
+      ],
+      "range": null,
+      "unit": null,
+      "reason": "large surfaces: depth-grounded points move > 0.4 m between views (step-4 open issue 1)",
+      "fp1_tuned": false
+    },
+    "ambig_margin_m": {
+      "value": 0.1,
+      "range": [
+        0.05,
+        0.2
+      ],
+      "unit": "m",
+      "reason": "same as objmem.AMBIG_EPS: depth noise at 1-2 m",
+      "fp1_tuned": false
+    },
+    "merge_gate_m": {
+      "value": 0.15,
+      "range": [
+        0.1,
+        0.25
+      ],
+      "unit": "m",
+      "reason": "two same-type places this close that were never co-seen are one box seen twice",
+      "fp1_tuned": false
+    },
+    "depth_consistency_m": {
+      "value": 0.15,
+      "range": [
+        0.1,
+        0.3
+      ],
+      "unit": "m",
+      "reason": "an object on or in a receptacle sits within a hand-width of its surface depth",
+      "fp1_tuned": false
+    },
+    "region_link_m": {
+      "value": 0.6,
+      "range": [
+        0.4,
+        1.0
+      ],
+      "unit": "m",
+      "reason": "grounded points on one counter run drift up to ~0.5 m between views; a gap wider than a stove/sink breaks the run",
+      "fp1_tuned": false
+    },
+    "region_height_m": {
+      "value": 0.1,
+      "range": [
+        0.05,
+        0.2
+      ],
+      "unit": "m",
+      "reason": "one surface is one height; a different height is another surface (shelf vs counter)",
+      "fp1_tuned": false
+    },
+    "placed_reacquire_m": {
+      "value": 1.0,
+      "range": [
+        0.5,
+        1.5
+      ],
+      "unit": "m",
+      "reason": "same as objmem.PLACED_GATE: a placed object may sit anywhere in the receptacle",
+      "fp1_tuned": false
+    }
+  },
+  "habits": {
+    "prior_strength": {
+      "value": 2,
+      "range": [
+        1,
+        5
+      ],
+      "unit": "pseudo-counts",
+      "reason": "the fixed prior is worth two observations; declared",
+      "fp1_tuned": false
+    },
+    "general_active": {
+      "value": false,
+      "range": null,
+      "unit": null,
+      "reason": "one kitchen only; promote only with >= 2 kitchens and validate on a 3rd excluded kitchen",
+      "fp1_tuned": false
+    },
+    "min_kitchens": {
+      "value": 2,
+      "range": null,
+      "unit": "kitchens",
+      "reason": "a transferable prior needs more than one kitchen (Astra review 4)",
+      "fp1_tuned": false
+    },
+    "min_discoveries_per_kitchen": {
+      "value": 3,
+      "range": [
+        2,
+        5
+      ],
+      "unit": "independent discoveries",
+      "reason": "declared engineering choice",
+      "fp1_tuned": false
+    },
+    "p0_unlisted": {
+      "value": 0.02,
+      "range": [
+        0.0,
+        0.05
+      ],
+      "unit": "prior weight",
+      "reason": "a receptacle type the fixed prior does not list is possible but unlikely; declared",
+      "fp1_tuned": false
+    }
+  },
+  "procedures": {
+    "trust_after": {
+      "value": 2,
+      "range": [
+        1,
+        3
+      ],
+      "unit": "independent successes",
+      "reason": "declared engineering choice (Astra review 10)",
+      "fp1_tuned": false
+    },
+    "retire_margin": {
+      "value": 2,
+      "range": [
+        1,
+        3
+      ],
+      "unit": "failed_reuses minus success_uses", "reason": "declared engineering choice: two net failed reuses beyond demotion before retiring, so one unlucky reuse cannot retire a procedure",
+      "fp1_tuned": false
+    }
+  },
+  "lessons": {
+    "promote_after": {
+      "value": 2,
+      "range": [
+        1,
+        3
+      ],
+      "unit": "independent helpful applications",
+      "reason": "declared engineering choice (Astra review 10)",
+      "fp1_tuned": false
+    },
+    "retire_margin": {
+      "value": 2,
+      "range": [
+        1,
+        3
+      ],
+      "unit": "unhelpful minus helpful", "reason": "declared engineering choice: two net unhelpful units before retiring, so one bad application cannot retire a lesson",
+      "fp1_tuned": false
+    },
+    "hypothesis_max_chars": {
+      "value": 160,
+      "range": null,
+      "unit": "chars",
+      "reason": "one short sentence; caps the leakage surface",
+      "fp1_tuned": false
+    },
+    "default_action": {
+      "value": {
+        "not_detected": "search_elsewhere",
+        "action_refused": "change_pose",
+        "unreachable": "approach_closer",
+        "wrong_target": "try_other_instance",
+        "postcondition_unconfirmed": "change_pose",
+        "budget_exhausted": "none",
+        "plan_goal_unmet": "none",
+        "unknown": "none"
+      },
+      "range": null,
+      "unit": null,
+      "reason": "deterministic fallback when there is no Gemma hypothesis",
+      "fp1_tuned": false
+    },
+    "audit_cap": {
+      "value": 100,
+      "range": null,
+      "unit": "lessons",
+      "reason": "audit every lesson up to this many; above it, stratified sample (spec 7.6)",
+      "fp1_tuned": false
+    }
+  },
+  "retrieval": {
+    "where_k": {
+      "value": 3,
+      "range": [
+        2,
+        5
+      ],
+      "unit": "candidates (+ EXPLORE)",
+      "reason": "small top-k for a 2B planner (Memp plateau-then-degrade)",
+      "fp1_tuned": false
+    },
+    "rrf_k": {
+      "value": 60,
+      "range": [
+        20,
+        100
+      ],
+      "unit": null,
+      "reason": "standard RRF constant (KareOne Hybrid arm)",
+      "fp1_tuned": false
+    },
+    "top_k_records": {
+      "value": 3,
+      "range": [
+        1,
+        5
+      ],
+      "unit": "procedure/lesson records",
+      "reason": "small k for a 2B reader",
+      "fp1_tuned": false
+    },
+    "budget_tokens": {
+      "value": {
+        "L1": 150,
+        "L2": 300,
+        "L3": 450
+      },
+      "range": "x0.5 .. x2",
+      "unit": "Gemma tokens for the memory block",
+      "reason": "tuned together with k, not fixed by method (KareOne finding 2); swept on dev data only",
+      "fp1_tuned": false
+    },
+    "persian_token_factor": {
+      "value": 1.66,
+      "range": [
+        1.4,
+        2.0
+      ],
+      "unit": "tokens per char relative to Latin",
+      "reason": "measured in the KareOne RAG paper; fallback estimate only",
+      "fp1_tuned": false
+    },
+    "latin_chars_per_token": {
+      "value": 4,
+      "range": [
+        3,
+        5
+      ],
+      "unit": "chars",
+      "reason": "common BPE estimate; fallback only",
+      "fp1_tuned": false
+    },
+    "channels": {
+      "value": [
+        "lexical"
+      ],
+      "range": [
+        [
+          "lexical"
+        ],
+        [
+          "lexical",
+          "dense"
+        ]
+      ],
+      "unit": null,
+      "reason": "dense only after the G-dense acceptance gate",
+      "fp1_tuned": false
+    },
+    "where_share": {
+      "value": 0.4,
+      "range": [
+        0.25,
+        0.6
+      ],
+      "unit": "fraction of the memory-block budget",
+      "reason": "where_is lines go first; the rest is for procedures/lessons",
+      "fp1_tuned": false
+    },
+    "retention": "a12",
+    "a12": {
+      "H": 25,
+      "head": 34,
+      "H_eff": 59,
+      "r": 51,
+      "s": 39,
+      "N": {
+        "L1": 1,
+        "L2": 2,
+        "L3": 3
+      },
+      "A": {
+        "L1": 320,
+        "L2": 320,
+        "L3": 329
+      },
+      "B": {
+        "L1": 800,
+        "L2": 800,
+        "L3": 800
+      },
+      "raised": {},
+      "incapable": [],
+      "reason": "A12, token-derived; B fixed by A16",
+      "fp1_measured": true,
+      "measure_sha256": "1bc2af68777b5f40eee6f6779ae7432518c95bf38e81e95e142539a5c0352926"
+    }
+  },
+  "eval": {
+    "blocks": {
+      "value": 5,
+      "range": [
+        5,
+        10
+      ],
+      "unit": "paired blocks",
+      "reason": "laptop budget (Astra review 13)",
+      "fp1_tuned": false
+    },
+    "K": {
+      "value": [
+        0,
+        1,
+        3,
+        5,
+        10
+      ],
+      "range": null,
+      "unit": "practice episodes",
+      "reason": "learning-curve checkpoints; the budget is locked on dev data",
+      "fp1_tuned": false
+    },
+    "protocols": {
+      "value": [
+        "P-familiar",
+        "P-composition"
+      ],
+      "range": null,
+      "unit": null,
+      "reason": "exact-key procedure reuse is only possible on practised task concepts (Astra A0 point 13)",
+      "fp1_tuned": false
+    }
+  },
+  "fp1_dependencies": {
+    "_doc": "Artefacts tuned on or specific to FloorPlan1 that step 5 depends on (spec 5.3). Re-check before held-out kitchens.",
+    "value": [
+      "step-3 two-stage detector weights + its per-class capability table",
+      "consolidate.min_conf",
+      "inspect.vis_ok",
+      "inspect.min_support",
+      "objmem geometry constants (ASSOC_GATE, PLACED_GATE, AMBIG_EPS, MISS_RANGE, OCCLUSION_TOL)",
+      "detector class list (49 types)"
+    ],
+    "reason": "disclosure",
+    "fp1_tuned": true
+  }
+}

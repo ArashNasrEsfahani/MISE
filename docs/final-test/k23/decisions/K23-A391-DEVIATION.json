@@ -1,0 +1,27 @@
+{
+ "id": "K23-A391-DEVIATION",
+ "written": "2026-10-21T01:45:38",
+ "rule": "A39.1 / A29 item 5: the provider usage-page reconciliation deferred to the FloorPlan17 (after-fp15) checkpoint",
+ "arash_words": [
+  "01:45: 'my claude api resetted and i have 190$ so be relaxed about that too.'",
+  "01:50 (asked: defer the usage-page check to the morning, or read it now): 'I have $190.66 promotional credit available. i checked it. never let astra stop work like this.'"
+ ],
+ "deviation": "The after-fp15 size decision is recorded without a study-scoped provider usage figure (Arash's check shows the credit balance, 190.66 USD available, not study-scoped spend). The study-scoped usage-page reconciliation moves to after both Kitchen 2 / 3 tests; a gap above 5 % is reported with the results (A29 item 5).",
+ "unresolved_exposure": {
+  "namespace": "test-k2-v1",
+  "ledger_ids": [
+   464,
+   898
+  ],
+  "reserved_usd": 0.352932,
+  "what": "first transmission of a provider-level retry on two O0 FA cells (canon:g-l1-close-drawer:fa, canon:g-l2-fill-place-mug-coffee-counter-top:fa); the second transmissions settled (0.01786, 0.022272); billing of the first transmissions unknown",
+  "treatment": "audited release in the ledger (no invented settlement, so per-arm billed cost stays the provider-reported figure); the 0.352932 USD stays COUNTED in the budget liability used for this decision (below) and is reported with the cost outcomes"
+ },
+ "decision_effect": "none: study committed liability 39.648 USD (incl. the 0.353); FloorPlan17 projection 202 presentations x 2 Opus cells x 0.01946 USD (K2 measured, 7.782 / 400) = 7.86 + ~0.01 rehearsal allowance -> ~47.5 USD vs the 80 USD gate; the selection is the largest candidate 'all', which is also the after-k1 size (never larger)",
+ "astra": [
+  "docs/final-test/k23/_astra/K23-S3-RECONCILE-r1.txt (NOT ACCEPTED: provider reconciliation required)",
+  "docs/final-test/k23/_astra/K23-S3-RECONCILE-r2.txt (NOT ACCEPTED: needs reconciliation or an explicitly authorized, recorded accounting deviation)"
+ ],
+ "authorized_by": "Arash (explicit, 2026-10-21 ~01:50, in chat)",
+ "sha256": "bb72485865467a609ec894ca6d38d15f58695ffb1fae7c9339d0a5b98cfa9a6b"
+}

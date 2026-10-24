@@ -1,0 +1,95 @@
+{
+ "schema": "ft.amendment-freeze/1",
+ "amendment": "A34-A2+A35",
+ "written": "2026-10-15T12:02:15",
+ "rule": "Common terms 5: frozen BEFORE any new capture (the dev validation and attempt 2)",
+ "signature": {
+  "file": "docs/final-test/signatures.json",
+  "key": "A34-A2+A35",
+  "said": "I approve A2 (A34-A2) and B (A35) as drafted; the amended run is attempt 2."
+ },
+ "adopted_text": {
+  "path": "docs/final-test/amendments/A34-A2_A35.md",
+  "sha256": "32b1c8d1d4ad85aef1a7425a6192f07ed2a859d66833a123d688d49e2de00396"
+ },
+ "drafts": {
+  "path": "docs/final-test/AMENDMENT-DRAFTS-ACC2.md",
+  "sha256": "d087b3eb284473e4e1713c8ce99a15923b1b683260377fc252ad9354c4c1a74a"
+ },
+ "a35_patch": {
+  "path": "sim/final_test/diag/reset_det/c_template_fix_proposal.patch",
+  "sha256": "8de75de0802dd45741cc8d4a88ba40857e281fa116f082395c831b08afa11b73"
+ },
+ "changed_files": {
+  "sim/final_test/acceptance_v2/acc_attempt2.py": {
+   "attempt1": "0dac96fb99c6f29ba5e7454431cd72d4971f1cf2c9f1c515b279419c0a313010",
+   "now": "c986f50462f455d75e3735195fa3a1a3891d2d4da1f5911e7bfc19ce4aa55bc0"
+  },
+  "sim/final_test/acceptance_v2/acc_runner.py": {
+   "attempt1": "996eb5f2f9646482564f6a96d2523d0a6da4c6fc11446c36f545ea398aa52931",
+   "now": "312b398c5a871d35c0c5fcb1f09900c39897c13ffcfd040f1d1d34092688ef59"
+  },
+  "sim/final_test/matrix/execute.py": {
+   "attempt1": "623d9765417c5f10d29068631c414c6a2bd3db081e6437085f72b2536aa97f62",
+   "now": "8940675120da246ffaa6527d98d7ed2bff997e627cd24eb6993e07508ee20fc5"
+  },
+  "sim/final_test/reset_gate.py": {
+   "attempt1": "928639ffed5d6d45168beeb15bf1dbc71aa63a65b9f5a0d626316f3f4e7b866d",
+   "now": "935a7108be6281d210a304603a1fdfebcba74f0b025b95da2080cb17f56733c8"
+  }
+ },
+ "remedy_diff": {
+  "path": "docs/final-test/amendments/A34-A2_A35.remedy.diff",
+  "sha256": "986f808a730ca56257303c52231073c98f59bc673a65174d56a9b107f22a03c4"
+ },
+ "selftests": {
+  "sim/final_test/_reset_gate_selftest.py": "0707014d938a01373929276ad4698892e157bacf46d514ebf83167e5093d5124",
+  "sim/_ftm_execute_selftest.py": "f4f981de5767d23d0fb3e16daf356f1f53c8dd6382fce455cefb2dbcedbd4c8e",
+  "sim/_acc_runner_selftest.py": "b4b85280c21fcd0ad49ecf1c736f90db762ee6dfd803342b91be0b1b8bb335dc",
+  "sim/_acc_attempt2_selftest.py": "0d140d4d92b34bc71ae6169c8f3442f4289ed76a81b549a94f900cd1dda682a4"
+ },
+ "dev_validation_code": {
+  "sim/final_test/diag/reset_det/a34_devval.py": "e98299d3586377aa85c53a4121d4df4b9427dfcd23d6956680eefee4de0adc21",
+  "sim/final_test/diag/reset_det/run_devval.sh": "59378bb9141458fb1c6c8fbb35502c13fd82167b59e087c1d5c8f045abbda5ce",
+  "sim/final_test/diag/reset_det/a34_record.py": "33e42bdb68f83755ee18d4eff184bf322972a9ad844923db4997f3f9b1e3a102"
+ },
+ "guard_exception": {
+  "rule_fingerprint_old": "f503c9fedfaa2062946de51c3c10c311ebc45b7250039b81e864ffd8d21f213c",
+  "rule_fingerprint_new": "6e3f466bc4d4abb9fdb0262cc14bd6d1250d7847434e68a090976b34d08345b0",
+  "pinned_new": "6e3f466bc4d4abb9fdb0262cc14bd6d1250d7847434e68a090976b34d08345b0",
+  "accepts_only_new": true
+ },
+ "treatment_identity": {
+  "old": "7a2ee211b85cc534d7677291fce80b04e92cd24a860f1ddd7665185b3a03b67d",
+  "new": "7a2ee211b85cc534d7677291fce80b04e92cd24a860f1ddd7665185b3a03b67d",
+  "unchanged": true
+ },
+ "reset_gate": {
+  "path": "sim/final_test/reset_gate.py",
+  "sha256": "935a7108be6281d210a304603a1fdfebcba74f0b025b95da2080cb17f56733c8",
+  "note": "pinned separately: outside the decision-rule fingerprint's coverage"
+ },
+ "tolerances": {
+  "path": "docs/final-test/reset_tolerances.json",
+  "sha256": "2ffeca272961649ab232d9db25d89bf031f342a804765b13e34ca11dfdfdcd79",
+  "note": "unchanged (no recalibration, A34-A2 rule 4)"
+ },
+ "frozen_refs_moved": {
+  "sim/final_test/matrix/execute.py": "8940675120da246ffaa6527d98d7ed2bff997e627cd24eb6993e07508ee20fc5"
+ },
+ "dev_validation_protocol": {
+  "presentations": "the 24 dev presentations of the registered A14(b)/(c) set (12 items of reset_tolerances.json calibration.per_item x EN / FA; 2 of them archived from the active pool since, still frozen dev items)",
+  "captures": "2 per presentation, independent in-process restores, two interleaved rounds, the A14(b) calibration executor path (LiveExecutor memory none, CalibHook), no LLM",
+  "rule": "PASS iff 24/24 pairs pass the registered comparison or are overridden under A34-A2 rule 2; obs_drift counts reported; fixed before the first capture; a FAIL is reported as is (Common terms 4)",
+  "evaluator": "python sim/final_test/reset_gate.py validate-a34 (read-only)"
+ },
+ "not_changed": [
+  "docs/final-test/preregistration.md",
+  "docs/final-test/signatures.json",
+  "docs/final-test/freeze.json",
+  "docs/final-test/reset_tolerances.json",
+  "the treatment (identity files)",
+  "roster, 8 arms, 48 presentations, retries, thresholds, budget"
+ ],
+ "sha256": "7f8b0d087d3db7c7f8e11aa6e4a7c171125570747e080a4e0108111074b86a29"
+}

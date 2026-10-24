@@ -1,0 +1,5 @@
+{"schema": "pkg.query/1", "instruction": "Put the apple in the fridge", "lang": "en", "holding": null,
+ "observed": [{"type": "Fridge", "state": "closed"}],
+ "parse": {"ok": true, "roles": [{"verb": "put", "req": "-", "obj": "Apple", "ostate": "-", "src": "-", "dest": "Fridge", "dstate": "-", "neg": 0}], "reasons": []},
+ "types": ["Apple", "Fridge"], "ops": ["put"], "goal_states": [],
+ "need": {"types": [], "tools": [], "appliances": [], "receptacles": [], "ops": []}, "parser_fallback": false}

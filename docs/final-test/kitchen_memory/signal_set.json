@@ -1,0 +1,176 @@
+{
+ "schema": "signal-set/1",
+ "purpose": "H-signal-ceiling direction check (not a gate)",
+ "source": "split_manifest.dev_pilot (12 dev items, outside the acceptance pool and outside every test family)",
+ "items": [
+  "g-l1-off-stove-knob",
+  "g-l1-on-stove-knob",
+  "g-l1-place-bowl-counter-top",
+  "g-l1-place-lettuce-sink-basin",
+  "g-l2-find-pickup-lettuce",
+  "g-l2-find-pickup-pan",
+  "g-l2-microwave-run-egg",
+  "g-l2-microwave-run-potato",
+  "g-l3-chilled-apple",
+  "g-l3-cutlery-sink",
+  "g-l3-tool-cut",
+  "g-l3-tool-flip"
+ ],
+ "presentations": [
+  {
+   "item": "g-l1-off-stove-knob",
+   "lang": "en",
+   "level": "L1"
+  },
+  {
+   "item": "g-l1-off-stove-knob",
+   "lang": "fa",
+   "level": "L1"
+  },
+  {
+   "item": "g-l1-on-stove-knob",
+   "lang": "en",
+   "level": "L1"
+  },
+  {
+   "item": "g-l1-on-stove-knob",
+   "lang": "fa",
+   "level": "L1"
+  },
+  {
+   "item": "g-l1-place-bowl-counter-top",
+   "lang": "en",
+   "level": "L1"
+  },
+  {
+   "item": "g-l1-place-bowl-counter-top",
+   "lang": "fa",
+   "level": "L1"
+  },
+  {
+   "item": "g-l1-place-lettuce-sink-basin",
+   "lang": "en",
+   "level": "L1"
+  },
+  {
+   "item": "g-l1-place-lettuce-sink-basin",
+   "lang": "fa",
+   "level": "L1"
+  },
+  {
+   "item": "g-l2-find-pickup-lettuce",
+   "lang": "en",
+   "level": "L2"
+  },
+  {
+   "item": "g-l2-find-pickup-lettuce",
+   "lang": "fa",
+   "level": "L2"
+  },
+  {
+   "item": "g-l2-find-pickup-pan",
+   "lang": "en",
+   "level": "L2"
+  },
+  {
+   "item": "g-l2-find-pickup-pan",
+   "lang": "fa",
+   "level": "L2"
+  },
+  {
+   "item": "g-l2-microwave-run-egg",
+   "lang": "en",
+   "level": "L2"
+  },
+  {
+   "item": "g-l2-microwave-run-egg",
+   "lang": "fa",
+   "level": "L2"
+  },
+  {
+   "item": "g-l2-microwave-run-potato",
+   "lang": "en",
+   "level": "L2"
+  },
+  {
+   "item": "g-l2-microwave-run-potato",
+   "lang": "fa",
+   "level": "L2"
+  },
+  {
+   "item": "g-l3-chilled-apple",
+   "lang": "en",
+   "level": "L3"
+  },
+  {
+   "item": "g-l3-chilled-apple",
+   "lang": "fa",
+   "level": "L3"
+  },
+  {
+   "item": "g-l3-cutlery-sink",
+   "lang": "en",
+   "level": "L3"
+  },
+  {
+   "item": "g-l3-cutlery-sink",
+   "lang": "fa",
+   "level": "L3"
+  },
+  {
+   "item": "g-l3-tool-cut",
+   "lang": "en",
+   "level": "L3"
+  },
+  {
+   "item": "g-l3-tool-cut",
+   "lang": "fa",
+   "level": "L3"
+  },
+  {
+   "item": "g-l3-tool-flip",
+   "lang": "en",
+   "level": "L3"
+  },
+  {
+   "item": "g-l3-tool-flip",
+   "lang": "fa",
+   "level": "L3"
+  }
+ ],
+ "execute": [
+  {
+   "item": "g-l1-place-bowl-counter-top",
+   "lang": "en"
+  },
+  {
+   "item": "g-l1-off-stove-knob",
+   "lang": "fa"
+  },
+  {
+   "item": "g-l2-microwave-run-egg",
+   "lang": "en"
+  },
+  {
+   "item": "g-l2-find-pickup-pan",
+   "lang": "fa"
+  },
+  {
+   "item": "g-l2-microwave-run-potato",
+   "lang": "fa"
+  },
+  {
+   "item": "g-l3-chilled-apple",
+   "lang": "en"
+  },
+  {
+   "item": "g-l3-cutlery-sink",
+   "lang": "fa"
+  },
+  {
+   "item": "g-l3-tool-cut",
+   "lang": "en"
+  }
+ ],
+ "when": "2026-10-12"
+}

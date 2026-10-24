@@ -1,0 +1,457 @@
+{
+ "schema": "ftm.a26-12.5-registration/1",
+ "stage": "FREEZE-GATES-FT2",
+ "written_utc": "2026-10-15T18:14:11Z",
+ "written_local": "2026-10-15T21:44:11+0330",
+ "written_before": "any capture, plan, execution or score row of namespace freeze-gates-ft2 (no journal of it existed when this file was written); execute.py refuses an empty-plan-control run without this file and records its sha as event a26_12_5_registration before executing",
+ "rule": {
+  "text_ref": "docs/final-test/preregistration.md A26 item 9, 12.5 (line ~1311)",
+  "prereg_sha256": "031349dd22eacc35ec75c25f413f81f86ab42a2ab3ad99342d1f818334b2ce91",
+  "summary": "each expected outcome change attributable solely to the new slicing prerequisite is registered here, with its historical trace evidence, together with the previously specified allowance for known variance; every other outcome difference fails the gate"
+ },
+ "namespace": "freeze-gates-ft2",
+ "treatment_identity": "7a2ee211b85cc534d7677291fce80b04e92cd24a860f1ddd7665185b3a03b67d",
+ "dataset_sha256": "7df9a9251d0d3b9d0b94f698ae2da35c89c464fa5e2dba235abf4b4d6cb13790",
+ "inclusion_manifest": "3f7f3dfb6a34cc6f2ec0a3c8c268e5de7740ef5f41ed943ee922e773278e397e",
+ "baseline": {
+  "path": "sim/step4/refplans_honest.jsonl",
+  "sha256": "72de2d365e457da2ca97be75be8652e9290282852d77eefb3b5c5ec30949958c",
+  "rule": "status ok / FAIL rows, goal_ok (score.evaluator_check)"
+ },
+ "items": [
+  {
+   "item": "g-l1-off-stove-knob",
+   "level": "L1",
+   "reference_plan_actions": [
+    "toggle_off"
+   ],
+   "setup_actions": [
+    "toggle_on"
+   ],
+   "slice_in_reference_plan_or_setup": false,
+   "step4_trace": {
+    "status": "ok",
+    "goal_ok": true,
+    "executed_actions": [
+     "toggle_off"
+    ],
+    "slice_executed": false,
+    "run_hash": "e2377920f9f822c2",
+    "row_sha256": "d370a6750db1fb2fdcb5fd3ffc7c4797c43918f43c2663da6e8a14f95f0aeffd"
+   },
+   "expected_outcome": true,
+   "expected_change": null
+  },
+  {
+   "item": "g-l1-on-stove-knob",
+   "level": "L1",
+   "reference_plan_actions": [
+    "toggle_on"
+   ],
+   "setup_actions": [],
+   "slice_in_reference_plan_or_setup": false,
+   "step4_trace": {
+    "status": "ok",
+    "goal_ok": true,
+    "executed_actions": [
+     "toggle_on"
+    ],
+    "slice_executed": false,
+    "run_hash": "e2377920f9f822c2",
+    "row_sha256": "e631b65cd50223c86cb9b27ed49b0a6706921b016fd0f32c23f6a190da007d8c"
+   },
+   "expected_outcome": true,
+   "expected_change": null
+  },
+  {
+   "item": "g-l1-place-bowl-counter-top",
+   "level": "L1",
+   "reference_plan_actions": [
+    "put_in"
+   ],
+   "setup_actions": [
+    "pickup"
+   ],
+   "slice_in_reference_plan_or_setup": false,
+   "step4_trace": {
+    "status": "ok",
+    "goal_ok": true,
+    "executed_actions": [
+     "put_in"
+    ],
+    "slice_executed": false,
+    "run_hash": "e2377920f9f822c2",
+    "row_sha256": "3bbba39331f2ad3b4421e4bf797829f6529c3f4389f0fea903ad0b435750ee4a"
+   },
+   "expected_outcome": true,
+   "expected_change": null
+  },
+  {
+   "item": "g-l1-place-lettuce-sink-basin",
+   "level": "L1",
+   "reference_plan_actions": [
+    "put_in"
+   ],
+   "setup_actions": [
+    "pickup"
+   ],
+   "slice_in_reference_plan_or_setup": false,
+   "step4_trace": {
+    "status": "ok",
+    "goal_ok": true,
+    "executed_actions": [
+     "put_in"
+    ],
+    "slice_executed": false,
+    "run_hash": "e2377920f9f822c2",
+    "row_sha256": "3cd725532a013a3d24ed5532ef2639e653ec7ebb4f011e8a2fd6ea4b7e22d820"
+   },
+   "expected_outcome": true,
+   "expected_change": null
+  },
+  {
+   "item": "g-l2-find-pickup-lettuce",
+   "level": "L2",
+   "reference_plan_actions": [
+    "search_for",
+    "pickup"
+   ],
+   "setup_actions": [],
+   "slice_in_reference_plan_or_setup": false,
+   "step4_trace": {
+    "status": "ok",
+    "goal_ok": true,
+    "executed_actions": [
+     "search_for",
+     "pickup"
+    ],
+    "slice_executed": false,
+    "run_hash": "e2377920f9f822c2",
+    "row_sha256": "99b743184e8280848f06c863e07fa24b24c1b25067bbb510f4cd06fbbf39a4da"
+   },
+   "expected_outcome": true,
+   "expected_change": null
+  },
+  {
+   "item": "g-l2-find-pickup-pan",
+   "level": "L2",
+   "reference_plan_actions": [
+    "search_for",
+    "pickup"
+   ],
+   "setup_actions": [],
+   "slice_in_reference_plan_or_setup": false,
+   "step4_trace": {
+    "status": "ok",
+    "goal_ok": true,
+    "executed_actions": [
+     "search_for",
+     "pickup"
+    ],
+    "slice_executed": false,
+    "run_hash": "e2377920f9f822c2",
+    "row_sha256": "9333b4d29f45fd8d7e4ca87d7fa10cad334098058d0fb98a890addf2593e90f7"
+   },
+   "expected_outcome": true,
+   "expected_change": null
+  },
+  {
+   "item": "g-l2-microwave-run-egg",
+   "level": "L2",
+   "reference_plan_actions": [
+    "pick_and_place",
+    "close",
+    "toggle_on"
+   ],
+   "setup_actions": [],
+   "slice_in_reference_plan_or_setup": false,
+   "step4_trace": {
+    "status": "ok",
+    "goal_ok": true,
+    "executed_actions": [
+     "pick_and_place",
+     "close",
+     "toggle_on"
+    ],
+    "slice_executed": false,
+    "run_hash": "e2377920f9f822c2",
+    "row_sha256": "2d1f2eda63d893e2249216057cbf7fac997607434786a5da0e1a6e8a3f899450"
+   },
+   "expected_outcome": true,
+   "expected_change": null
+  },
+  {
+   "item": "g-l2-microwave-run-potato",
+   "level": "L2",
+   "reference_plan_actions": [
+    "pick_and_place",
+    "close",
+    "toggle_on"
+   ],
+   "setup_actions": [],
+   "slice_in_reference_plan_or_setup": false,
+   "step4_trace": {
+    "status": "ok",
+    "goal_ok": true,
+    "executed_actions": [
+     "pick_and_place",
+     "close",
+     "toggle_on"
+    ],
+    "slice_executed": false,
+    "run_hash": "e2377920f9f822c2",
+    "row_sha256": "5809b698daf0f9ea83691913e575aba1613feac4beb00d94b0715b23654827f0"
+   },
+   "expected_outcome": true,
+   "expected_change": null
+  },
+  {
+   "item": "g-l3-chilled-apple",
+   "level": "L3",
+   "reference_plan_actions": [
+    "pick_and_place",
+    "close"
+   ],
+   "setup_actions": [],
+   "slice_in_reference_plan_or_setup": false,
+   "step4_trace": {
+    "status": "ok",
+    "goal_ok": true,
+    "executed_actions": [
+     "pick_and_place",
+     "close"
+    ],
+    "slice_executed": false,
+    "run_hash": "e2377920f9f822c2",
+    "row_sha256": "2640e60efb502f2bfe2107793ab5f9ac386a95652b2281856a1527b0a7a475f0"
+   },
+   "expected_outcome": true,
+   "expected_change": null
+  },
+  {
+   "item": "g-l3-tool-flip",
+   "level": "L3",
+   "reference_plan_actions": [
+    "pickup"
+   ],
+   "setup_actions": [],
+   "slice_in_reference_plan_or_setup": false,
+   "step4_trace": {
+    "status": "FAIL",
+    "goal_ok": false,
+    "executed_actions": [
+     "pickup"
+    ],
+    "slice_executed": false,
+    "run_hash": "e2377920f9f822c2",
+    "row_sha256": "48a474a5f302150bade5193b9396c2a819c8e21526615cd2f4cf376dadd8e1ad"
+   },
+   "expected_outcome": false,
+   "expected_change": null
+  }
+ ],
+ "n_items": 10,
+ "presentations": [
+  "g-l1-off-stove-knob:en:canon",
+  "g-l1-off-stove-knob:fa:canon",
+  "g-l1-on-stove-knob:en:canon",
+  "g-l1-on-stove-knob:fa:canon",
+  "g-l1-place-bowl-counter-top:en:canon",
+  "g-l1-place-bowl-counter-top:fa:canon",
+  "g-l1-place-lettuce-sink-basin:en:canon",
+  "g-l1-place-lettuce-sink-basin:fa:canon",
+  "g-l2-find-pickup-lettuce:en:canon",
+  "g-l2-find-pickup-lettuce:fa:canon",
+  "g-l2-find-pickup-pan:en:canon",
+  "g-l2-find-pickup-pan:fa:canon",
+  "g-l2-microwave-run-egg:en:canon",
+  "g-l2-microwave-run-egg:fa:canon",
+  "g-l2-microwave-run-potato:en:canon",
+  "g-l2-microwave-run-potato:fa:canon",
+  "g-l3-chilled-apple:en:canon",
+  "g-l3-chilled-apple:fa:canon",
+  "g-l3-tool-flip:en:canon",
+  "g-l3-tool-flip:fa:canon"
+ ],
+ "expected_changes": [],
+ "expected_changes_reason": "none of the 10 effective dev items has a slice in its successor reference plan or setup, and none executed a slice in its step-4 honest trace; so no outcome change is attributable to the A26 slicing prerequisite (A26 item 2) on this set",
+ "omitted": [
+  {
+   "item": "g-l3-cutlery-sink",
+   "why": "archived by A26 item 4 (goal names the Knife); omitted from the 12.5 set",
+   "step4_trace": {
+    "status": "FAIL",
+    "goal_ok": false,
+    "row_sha256": "f20a0d9bf5a8bc4bdd4f849fe616a6efbd481bb7f484df1ae9a9ed9fd46a0b9c"
+   }
+  },
+  {
+   "item": "g-l3-tool-cut",
+   "why": "archived by A26 item 4 (goal names the Knife); omitted from the 12.5 set",
+   "step4_trace": {
+    "status": "FAIL",
+    "goal_ok": false,
+    "row_sha256": "30aead7341803534be4cedfb906394b9f948ce3a582f3235dc3ee22d9cfa2f38"
+   }
+  }
+ ],
+ "historical_slice_evidence": {
+  "step4_rows_with_an_executed_slice": 23,
+  "successes": 23,
+  "without_butterknife_in_hand": 23,
+  "in_12_5_set": [],
+  "rows": [
+   {
+    "id": "g-l1-slice-apple",
+    "goal_ok": true,
+    "held_before_slice": "Knife",
+    "tool_in_hand_under_A26": false
+   },
+   {
+    "id": "g-l1-slice-bread",
+    "goal_ok": true,
+    "held_before_slice": "Knife",
+    "tool_in_hand_under_A26": false
+   },
+   {
+    "id": "g-l1-slice-tomato",
+    "goal_ok": true,
+    "held_before_slice": "Knife",
+    "tool_in_hand_under_A26": false
+   },
+   {
+    "id": "g-l1-slice-potato",
+    "goal_ok": true,
+    "held_before_slice": "Knife",
+    "tool_in_hand_under_A26": false
+   },
+   {
+    "id": "g-l1-slice-lettuce",
+    "goal_ok": true,
+    "held_before_slice": "Knife",
+    "tool_in_hand_under_A26": false
+   },
+   {
+    "id": "g-l2-slice-apple",
+    "goal_ok": true,
+    "held_before_slice": null,
+    "tool_in_hand_under_A26": false
+   },
+   {
+    "id": "g-l2-slice-bread",
+    "goal_ok": true,
+    "held_before_slice": null,
+    "tool_in_hand_under_A26": false
+   },
+   {
+    "id": "g-l2-slice-tomato",
+    "goal_ok": true,
+    "held_before_slice": null,
+    "tool_in_hand_under_A26": false
+   },
+   {
+    "id": "g-l2-slice-potato",
+    "goal_ok": true,
+    "held_before_slice": null,
+    "tool_in_hand_under_A26": false
+   },
+   {
+    "id": "g-l2-slice-lettuce",
+    "goal_ok": true,
+    "held_before_slice": null,
+    "tool_in_hand_under_A26": false
+   },
+   {
+    "id": "g-l2-slice-tomato-lettuce",
+    "goal_ok": true,
+    "held_before_slice": null,
+    "tool_in_hand_under_A26": false
+   },
+   {
+    "id": "g-l2-slice-bread-tomato",
+    "goal_ok": true,
+    "held_before_slice": null,
+    "tool_in_hand_under_A26": false
+   },
+   {
+    "id": "g-l2-slice-apple-potato",
+    "goal_ok": true,
+    "held_before_slice": null,
+    "tool_in_hand_under_A26": false
+   },
+   {
+    "id": "g-l2-slice-potato-tomato",
+    "goal_ok": true,
+    "held_before_slice": null,
+    "tool_in_hand_under_A26": false
+   },
+   {
+    "id": "g-l2-knife-bread-toaster",
+    "goal_ok": true,
+    "held_before_slice": null,
+    "tool_in_hand_under_A26": false
+   },
+   {
+    "id": "g-l3-apple-slices",
+    "goal_ok": true,
+    "held_before_slice": null,
+    "tool_in_hand_under_A26": false
+   },
+   {
+    "id": "g-l3-tomato-for-salad",
+    "goal_ok": true,
+    "held_before_slice": null,
+    "tool_in_hand_under_A26": false
+   },
+   {
+    "id": "g-l3-bread-for-breakfast",
+    "goal_ok": true,
+    "held_before_slice": null,
+    "tool_in_hand_under_A26": false
+   },
+   {
+    "id": "g-l3-potato-for-frying",
+    "goal_ok": true,
+    "held_before_slice": null,
+    "tool_in_hand_under_A26": false
+   },
+   {
+    "id": "g-l3-shred-lettuce",
+    "goal_ok": true,
+    "held_before_slice": null,
+    "tool_in_hand_under_A26": false
+   },
+   {
+    "id": "g-l3-salad",
+    "goal_ok": true,
+    "held_before_slice": null,
+    "tool_in_hand_under_A26": false
+   },
+   {
+    "id": "g-l3-sandwich-prep",
+    "goal_ok": true,
+    "held_before_slice": null,
+    "tool_in_hand_under_A26": false
+   },
+   {
+    "id": "g-l3-toast",
+    "goal_ok": true,
+    "held_before_slice": null,
+    "tool_in_hand_under_A26": false
+   }
+  ],
+  "note": "old-rule successes (A26 item 5): re-annotated, never re-credited; none is in the 12.5 set"
+ },
+ "variance_allowance": {
+  "min_agreement": 0.8,
+  "source": "previously specified: score.EVAL_MIN_AGREEMENT = 0.80 (prereg s12 item 5 'up to known variance'; the 12.5 rule of the W2 / W4 evidence, gates/12.5.json)"
+ },
+ "decision_rule": [
+  "P0 rows (scored run 0, executed) vs the step-4 goal_ok with every registered expected change applied: agreement >= min_agreement; every unregistered difference is listed and counts against it",
+  "every P0 presentation of the registered set has an executed scored row (a missing one fails)",
+  "unrealistic_slice == 0 at every executed slice of the 12.5 run",
+  "E0 (empty plan): every registered presentation has an executed scored row with plan_len 0 and goal_ok false",
+  "every exec row of the run carries the treatment identity above"
+ ],
+ "sha256": "ede527e4e287a759a00c01c86929762c47bd22b611b289dd9a28d0d381610b05"
+}

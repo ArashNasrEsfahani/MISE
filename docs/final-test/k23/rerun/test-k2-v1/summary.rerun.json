@@ -1,0 +1,1630 @@
+{
+ "namespace": "test-k2-v1",
+ "pass_id": "k2-window-rerun",
+ "status": "POST-HOC SENSITIVITY (K23-WINDOW-RERUN): decided after the results were seen; the registered primary results stand",
+ "window_record_sha256": "078472eb1aefafe04375e200bf66c23eef73a11f80e2a09c0e8d91b3c7a1005c",
+ "main_score_seal_sha256": "28ed8672719c4f7e920717f9910666bb969d6e278f5ac178467c6ce030eac26d",
+ "rerun_score_sha256": "3d4e4010545add535e90ecc41be9df16b6d29f8d8d492794cf85a1fb93d82b4b",
+ "n_rows": 1200,
+ "n_window_rows": 89,
+ "exec_status_transitions": {
+  "blocked_state -> done": 44,
+  "done -> done": 45
+ },
+ "sr_flips": {
+  "0->1": 42,
+  "1->0": 0
+ },
+ "sr_pct": {
+  "main": {
+   "G+M": {
+    "all": [
+     77.0,
+     200
+    ],
+    "L1": [
+     87.23,
+     94
+    ],
+    "L2": [
+     87.14,
+     70
+    ],
+    "L3": [
+     30.56,
+     36
+    ]
+   },
+   "G0": {
+    "all": [
+     63.0,
+     200
+    ],
+    "L1": [
+     75.53,
+     94
+    ],
+    "L2": [
+     68.57,
+     70
+    ],
+    "L3": [
+     19.44,
+     36
+    ]
+   },
+   "O+M": {
+    "all": [
+     88.0,
+     200
+    ],
+    "L1": [
+     88.3,
+     94
+    ],
+    "L2": [
+     91.43,
+     70
+    ],
+    "L3": [
+     80.56,
+     36
+    ]
+   },
+   "O0": {
+    "all": [
+     87.5,
+     200
+    ],
+    "L1": [
+     91.49,
+     94
+    ],
+    "L2": [
+     87.14,
+     70
+    ],
+    "L3": [
+     77.78,
+     36
+    ]
+   },
+   "P+M": {
+    "all": [
+     94.0,
+     200
+    ],
+    "L1": [
+     96.81,
+     94
+    ],
+    "L2": [
+     91.43,
+     70
+    ],
+    "L3": [
+     91.67,
+     36
+    ]
+   },
+   "P0": {
+    "all": [
+     93.0,
+     200
+    ],
+    "L1": [
+     95.74,
+     94
+    ],
+    "L2": [
+     88.57,
+     70
+    ],
+    "L3": [
+     94.44,
+     36
+    ]
+   }
+  },
+  "window_reexecuted": {
+   "G+M": {
+    "all": [
+     80.0,
+     200
+    ],
+    "L1": [
+     88.3,
+     94
+    ],
+    "L2": [
+     92.86,
+     70
+    ],
+    "L3": [
+     33.33,
+     36
+    ]
+   },
+   "G0": {
+    "all": [
+     65.5,
+     200
+    ],
+    "L1": [
+     76.6,
+     94
+    ],
+    "L2": [
+     72.86,
+     70
+    ],
+    "L3": [
+     22.22,
+     36
+    ]
+   },
+   "O+M": {
+    "all": [
+     91.5,
+     200
+    ],
+    "L1": [
+     90.43,
+     94
+    ],
+    "L2": [
+     95.71,
+     70
+    ],
+    "L3": [
+     86.11,
+     36
+    ]
+   },
+   "O0": {
+    "all": [
+     91.5,
+     200
+    ],
+    "L1": [
+     94.68,
+     94
+    ],
+    "L2": [
+     91.43,
+     70
+    ],
+    "L3": [
+     83.33,
+     36
+    ]
+   },
+   "P+M": {
+    "all": [
+     98.0,
+     200
+    ],
+    "L1": [
+     98.94,
+     94
+    ],
+    "L2": [
+     97.14,
+     70
+    ],
+    "L3": [
+     97.22,
+     36
+    ]
+   },
+   "P0": {
+    "all": [
+     97.0,
+     200
+    ],
+    "L1": [
+     98.94,
+     94
+    ],
+    "L2": [
+     92.86,
+     70
+    ],
+    "L3": [
+     100.0,
+     36
+    ]
+   }
+  }
+ },
+ "rows_changed": [
+  {
+   "key": "test-k2-v1|score|G+M|canon:g-l1-close-microwave:fa|r0|run0",
+   "arm": "G+M",
+   "pres": "canon:g-l1-close-microwave:fa",
+   "level": "L1",
+   "main": [
+    "blocked_state",
+    0.0
+   ],
+   "rerun": [
+    "done",
+    0.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|G+M|canon:g-l1-dirty-cup:fa|r0|run0",
+   "arm": "G+M",
+   "pres": "canon:g-l1-dirty-cup:fa",
+   "level": "L1",
+   "main": [
+    "done",
+    1.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|G+M|canon:g-l1-dirty-pan:en|r0|run0",
+   "arm": "G+M",
+   "pres": "canon:g-l1-dirty-pan:en",
+   "level": "L1",
+   "main": [
+    "blocked_state",
+    0.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|G+M|canon:g-l1-drop-spoon:en|r0|run0",
+   "arm": "G+M",
+   "pres": "canon:g-l1-drop-spoon:en",
+   "level": "L1",
+   "main": [
+    "done",
+    1.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|G+M|canon:g-l1-empty-pot:en|r0|run0",
+   "arm": "G+M",
+   "pres": "canon:g-l1-empty-pot:en",
+   "level": "L1",
+   "main": [
+    "done",
+    1.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|G+M|canon:g-l1-fill-pot-coffee:en|r0|run0",
+   "arm": "G+M",
+   "pres": "canon:g-l1-fill-pot-coffee:en",
+   "level": "L1",
+   "main": [
+    "done",
+    1.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|G+M|canon:g-l1-slice-apple:fa|r0|run0",
+   "arm": "G+M",
+   "pres": "canon:g-l1-slice-apple:fa",
+   "level": "L1",
+   "main": [
+    "blocked_state",
+    0.0
+   ],
+   "rerun": [
+    "done",
+    0.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|G+M|canon:g-l2-cook-potato-counter-top:fa|r0|run0",
+   "arm": "G+M",
+   "pres": "canon:g-l2-cook-potato-counter-top:fa",
+   "level": "L2",
+   "main": [
+    "blocked_state",
+    0.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|G+M|canon:g-l2-cook-potato-plate:en|r0|run0",
+   "arm": "G+M",
+   "pres": "canon:g-l2-cook-potato-plate:en",
+   "level": "L2",
+   "main": [
+    "blocked_state",
+    0.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|G+M|canon:g-l2-faucet-on-pickup-sponge:en|r0|run0",
+   "arm": "G+M",
+   "pres": "canon:g-l2-faucet-on-pickup-sponge:en",
+   "level": "L2",
+   "main": [
+    "blocked_state",
+    0.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|G+M|canon:g-l2-light-off-open-fridge:fa|r0|run0",
+   "arm": "G+M",
+   "pres": "canon:g-l2-light-off-open-fridge:fa",
+   "level": "L2",
+   "main": [
+    "done",
+    1.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|G+M|canon:g-l2-salt-then-light-off:en|r0|run0",
+   "arm": "G+M",
+   "pres": "canon:g-l2-salt-then-light-off:en",
+   "level": "L2",
+   "main": [
+    "done",
+    0.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|G+M|canon:g-l2-three-appliances:fa|r0|run0",
+   "arm": "G+M",
+   "pres": "canon:g-l2-three-appliances:fa",
+   "level": "L2",
+   "main": [
+    "done",
+    1.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|G+M|canon:g-l3-dirty-cups:fa|r0|run0",
+   "arm": "G+M",
+   "pres": "canon:g-l3-dirty-cups:fa",
+   "level": "L3",
+   "main": [
+    "blocked_state",
+    0.0
+   ],
+   "rerun": [
+    "done",
+    0.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|G+M|canon:g-l3-stale-coffee:fa|r0|run0",
+   "arm": "G+M",
+   "pres": "canon:g-l3-stale-coffee:fa",
+   "level": "L3",
+   "main": [
+    "blocked_state",
+    0.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|G0|canon:g-l1-close-microwave:fa|r0|run0",
+   "arm": "G0",
+   "pres": "canon:g-l1-close-microwave:fa",
+   "level": "L1",
+   "main": [
+    "done",
+    0.0
+   ],
+   "rerun": [
+    "done",
+    0.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|G0|canon:g-l1-dirty-cup:fa|r0|run0",
+   "arm": "G0",
+   "pres": "canon:g-l1-dirty-cup:fa",
+   "level": "L1",
+   "main": [
+    "done",
+    0.0
+   ],
+   "rerun": [
+    "done",
+    0.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|G0|canon:g-l1-dirty-pan:en|r0|run0",
+   "arm": "G0",
+   "pres": "canon:g-l1-dirty-pan:en",
+   "level": "L1",
+   "main": [
+    "blocked_state",
+    0.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|G0|canon:g-l1-drop-spoon:en|r0|run0",
+   "arm": "G0",
+   "pres": "canon:g-l1-drop-spoon:en",
+   "level": "L1",
+   "main": [
+    "done",
+    1.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|G0|canon:g-l1-empty-pot:en|r0|run0",
+   "arm": "G0",
+   "pres": "canon:g-l1-empty-pot:en",
+   "level": "L1",
+   "main": [
+    "done",
+    1.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|G0|canon:g-l1-fill-pot-coffee:en|r0|run0",
+   "arm": "G0",
+   "pres": "canon:g-l1-fill-pot-coffee:en",
+   "level": "L1",
+   "main": [
+    "done",
+    1.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|G0|canon:g-l1-slice-apple:fa|r0|run0",
+   "arm": "G0",
+   "pres": "canon:g-l1-slice-apple:fa",
+   "level": "L1",
+   "main": [
+    "blocked_state",
+    0.0
+   ],
+   "rerun": [
+    "done",
+    0.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|G0|canon:g-l2-cook-potato-counter-top:fa|r0|run0",
+   "arm": "G0",
+   "pres": "canon:g-l2-cook-potato-counter-top:fa",
+   "level": "L2",
+   "main": [
+    "blocked_state",
+    0.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|G0|canon:g-l2-cook-potato-plate:en|r0|run0",
+   "arm": "G0",
+   "pres": "canon:g-l2-cook-potato-plate:en",
+   "level": "L2",
+   "main": [
+    "blocked_state",
+    0.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|G0|canon:g-l2-faucet-on-pickup-sponge:en|r0|run0",
+   "arm": "G0",
+   "pres": "canon:g-l2-faucet-on-pickup-sponge:en",
+   "level": "L2",
+   "main": [
+    "blocked_state",
+    0.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|G0|canon:g-l2-light-off-open-fridge:fa|r0|run0",
+   "arm": "G0",
+   "pres": "canon:g-l2-light-off-open-fridge:fa",
+   "level": "L2",
+   "main": [
+    "done",
+    1.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|G0|canon:g-l2-salt-then-light-off:en|r0|run0",
+   "arm": "G0",
+   "pres": "canon:g-l2-salt-then-light-off:en",
+   "level": "L2",
+   "main": [
+    "done",
+    0.0
+   ],
+   "rerun": [
+    "done",
+    0.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|G0|canon:g-l2-three-appliances:fa|r0|run0",
+   "arm": "G0",
+   "pres": "canon:g-l2-three-appliances:fa",
+   "level": "L2",
+   "main": [
+    "done",
+    1.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|G0|canon:g-l3-dirty-cups:fa|r0|run0",
+   "arm": "G0",
+   "pres": "canon:g-l3-dirty-cups:fa",
+   "level": "L3",
+   "main": [
+    "blocked_state",
+    0.0
+   ],
+   "rerun": [
+    "done",
+    0.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|G0|canon:g-l3-stale-coffee:fa|r0|run0",
+   "arm": "G0",
+   "pres": "canon:g-l3-stale-coffee:fa",
+   "level": "L3",
+   "main": [
+    "blocked_state",
+    0.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|O+M|canon:g-l1-close-microwave:fa|r0|run0",
+   "arm": "O+M",
+   "pres": "canon:g-l1-close-microwave:fa",
+   "level": "L1",
+   "main": [
+    "done",
+    1.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|O+M|canon:g-l1-dirty-cup:fa|r0|run0",
+   "arm": "O+M",
+   "pres": "canon:g-l1-dirty-cup:fa",
+   "level": "L1",
+   "main": [
+    "done",
+    1.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|O+M|canon:g-l1-dirty-pan:en|r0|run0",
+   "arm": "O+M",
+   "pres": "canon:g-l1-dirty-pan:en",
+   "level": "L1",
+   "main": [
+    "blocked_state",
+    0.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|O+M|canon:g-l1-drop-spoon:en|r0|run0",
+   "arm": "O+M",
+   "pres": "canon:g-l1-drop-spoon:en",
+   "level": "L1",
+   "main": [
+    "done",
+    1.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|O+M|canon:g-l1-empty-pot:en|r0|run0",
+   "arm": "O+M",
+   "pres": "canon:g-l1-empty-pot:en",
+   "level": "L1",
+   "main": [
+    "done",
+    1.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|O+M|canon:g-l1-fill-pot-coffee:en|r0|run0",
+   "arm": "O+M",
+   "pres": "canon:g-l1-fill-pot-coffee:en",
+   "level": "L1",
+   "main": [
+    "done",
+    1.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|O+M|canon:g-l1-slice-apple:fa|r0|run0",
+   "arm": "O+M",
+   "pres": "canon:g-l1-slice-apple:fa",
+   "level": "L1",
+   "main": [
+    "blocked_state",
+    0.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|O+M|canon:g-l2-cook-potato-counter-top:fa|r0|run0",
+   "arm": "O+M",
+   "pres": "canon:g-l2-cook-potato-counter-top:fa",
+   "level": "L2",
+   "main": [
+    "blocked_state",
+    0.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|O+M|canon:g-l2-faucet-on-pickup-sponge:en|r0|run0",
+   "arm": "O+M",
+   "pres": "canon:g-l2-faucet-on-pickup-sponge:en",
+   "level": "L2",
+   "main": [
+    "blocked_state",
+    0.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|O+M|canon:g-l2-light-off-open-fridge:fa|r0|run0",
+   "arm": "O+M",
+   "pres": "canon:g-l2-light-off-open-fridge:fa",
+   "level": "L2",
+   "main": [
+    "done",
+    1.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|O+M|canon:g-l2-salt-then-light-off:en|r0|run0",
+   "arm": "O+M",
+   "pres": "canon:g-l2-salt-then-light-off:en",
+   "level": "L2",
+   "main": [
+    "done",
+    0.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|O+M|canon:g-l2-three-appliances:fa|r0|run0",
+   "arm": "O+M",
+   "pres": "canon:g-l2-three-appliances:fa",
+   "level": "L2",
+   "main": [
+    "done",
+    1.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|O+M|canon:g-l3-dirty-cups:fa|r0|run0",
+   "arm": "O+M",
+   "pres": "canon:g-l3-dirty-cups:fa",
+   "level": "L3",
+   "main": [
+    "blocked_state",
+    0.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|O+M|canon:g-l3-stale-coffee:fa|r0|run0",
+   "arm": "O+M",
+   "pres": "canon:g-l3-stale-coffee:fa",
+   "level": "L3",
+   "main": [
+    "blocked_state",
+    0.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|O0|canon:g-l1-close-microwave:fa|r0|run0",
+   "arm": "O0",
+   "pres": "canon:g-l1-close-microwave:fa",
+   "level": "L1",
+   "main": [
+    "blocked_state",
+    0.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|O0|canon:g-l1-dirty-cup:fa|r0|run0",
+   "arm": "O0",
+   "pres": "canon:g-l1-dirty-cup:fa",
+   "level": "L1",
+   "main": [
+    "done",
+    0.0
+   ],
+   "rerun": [
+    "done",
+    0.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|O0|canon:g-l1-dirty-pan:en|r0|run0",
+   "arm": "O0",
+   "pres": "canon:g-l1-dirty-pan:en",
+   "level": "L1",
+   "main": [
+    "blocked_state",
+    0.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|O0|canon:g-l1-drop-spoon:en|r0|run0",
+   "arm": "O0",
+   "pres": "canon:g-l1-drop-spoon:en",
+   "level": "L1",
+   "main": [
+    "done",
+    1.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|O0|canon:g-l1-empty-pot:en|r0|run0",
+   "arm": "O0",
+   "pres": "canon:g-l1-empty-pot:en",
+   "level": "L1",
+   "main": [
+    "done",
+    1.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|O0|canon:g-l1-fill-pot-coffee:en|r0|run0",
+   "arm": "O0",
+   "pres": "canon:g-l1-fill-pot-coffee:en",
+   "level": "L1",
+   "main": [
+    "done",
+    1.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|O0|canon:g-l1-slice-apple:fa|r0|run0",
+   "arm": "O0",
+   "pres": "canon:g-l1-slice-apple:fa",
+   "level": "L1",
+   "main": [
+    "blocked_state",
+    0.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|O0|canon:g-l2-cook-potato-counter-top:fa|r0|run0",
+   "arm": "O0",
+   "pres": "canon:g-l2-cook-potato-counter-top:fa",
+   "level": "L2",
+   "main": [
+    "blocked_state",
+    0.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|O0|canon:g-l2-cook-potato-plate:en|r0|run0",
+   "arm": "O0",
+   "pres": "canon:g-l2-cook-potato-plate:en",
+   "level": "L2",
+   "main": [
+    "blocked_state",
+    0.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|O0|canon:g-l2-faucet-on-pickup-sponge:en|r0|run0",
+   "arm": "O0",
+   "pres": "canon:g-l2-faucet-on-pickup-sponge:en",
+   "level": "L2",
+   "main": [
+    "blocked_state",
+    0.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|O0|canon:g-l2-light-off-open-fridge:fa|r0|run0",
+   "arm": "O0",
+   "pres": "canon:g-l2-light-off-open-fridge:fa",
+   "level": "L2",
+   "main": [
+    "done",
+    1.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|O0|canon:g-l2-salt-then-light-off:en|r0|run0",
+   "arm": "O0",
+   "pres": "canon:g-l2-salt-then-light-off:en",
+   "level": "L2",
+   "main": [
+    "done",
+    0.0
+   ],
+   "rerun": [
+    "done",
+    0.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|O0|canon:g-l2-three-appliances:fa|r0|run0",
+   "arm": "O0",
+   "pres": "canon:g-l2-three-appliances:fa",
+   "level": "L2",
+   "main": [
+    "done",
+    1.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|O0|canon:g-l3-dirty-cups:fa|r0|run0",
+   "arm": "O0",
+   "pres": "canon:g-l3-dirty-cups:fa",
+   "level": "L3",
+   "main": [
+    "blocked_state",
+    0.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|O0|canon:g-l3-stale-coffee:fa|r0|run0",
+   "arm": "O0",
+   "pres": "canon:g-l3-stale-coffee:fa",
+   "level": "L3",
+   "main": [
+    "blocked_state",
+    0.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|P+M|canon:g-l1-close-microwave:fa|r0|run0",
+   "arm": "P+M",
+   "pres": "canon:g-l1-close-microwave:fa",
+   "level": "L1",
+   "main": [
+    "done",
+    1.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|P+M|canon:g-l1-dirty-cup:fa|r0|run0",
+   "arm": "P+M",
+   "pres": "canon:g-l1-dirty-cup:fa",
+   "level": "L1",
+   "main": [
+    "done",
+    1.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|P+M|canon:g-l1-dirty-pan:en|r0|run0",
+   "arm": "P+M",
+   "pres": "canon:g-l1-dirty-pan:en",
+   "level": "L1",
+   "main": [
+    "blocked_state",
+    0.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|P+M|canon:g-l1-drop-spoon:en|r0|run0",
+   "arm": "P+M",
+   "pres": "canon:g-l1-drop-spoon:en",
+   "level": "L1",
+   "main": [
+    "done",
+    1.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|P+M|canon:g-l1-empty-pot:en|r0|run0",
+   "arm": "P+M",
+   "pres": "canon:g-l1-empty-pot:en",
+   "level": "L1",
+   "main": [
+    "done",
+    1.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|P+M|canon:g-l1-fill-pot-coffee:en|r0|run0",
+   "arm": "P+M",
+   "pres": "canon:g-l1-fill-pot-coffee:en",
+   "level": "L1",
+   "main": [
+    "done",
+    1.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|P+M|canon:g-l1-slice-apple:fa|r0|run0",
+   "arm": "P+M",
+   "pres": "canon:g-l1-slice-apple:fa",
+   "level": "L1",
+   "main": [
+    "blocked_state",
+    0.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|P+M|canon:g-l2-cook-potato-counter-top:fa|r0|run0",
+   "arm": "P+M",
+   "pres": "canon:g-l2-cook-potato-counter-top:fa",
+   "level": "L2",
+   "main": [
+    "blocked_state",
+    0.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|P+M|canon:g-l2-cook-potato-plate:en|r0|run0",
+   "arm": "P+M",
+   "pres": "canon:g-l2-cook-potato-plate:en",
+   "level": "L2",
+   "main": [
+    "blocked_state",
+    0.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|P+M|canon:g-l2-faucet-on-pickup-sponge:en|r0|run0",
+   "arm": "P+M",
+   "pres": "canon:g-l2-faucet-on-pickup-sponge:en",
+   "level": "L2",
+   "main": [
+    "blocked_state",
+    0.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|P+M|canon:g-l2-light-off-open-fridge:fa|r0|run0",
+   "arm": "P+M",
+   "pres": "canon:g-l2-light-off-open-fridge:fa",
+   "level": "L2",
+   "main": [
+    "done",
+    1.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|P+M|canon:g-l2-salt-then-light-off:en|r0|run0",
+   "arm": "P+M",
+   "pres": "canon:g-l2-salt-then-light-off:en",
+   "level": "L2",
+   "main": [
+    "done",
+    0.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|P+M|canon:g-l2-three-appliances:fa|r0|run0",
+   "arm": "P+M",
+   "pres": "canon:g-l2-three-appliances:fa",
+   "level": "L2",
+   "main": [
+    "done",
+    1.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|P+M|canon:g-l3-dirty-cups:fa|r0|run0",
+   "arm": "P+M",
+   "pres": "canon:g-l3-dirty-cups:fa",
+   "level": "L3",
+   "main": [
+    "blocked_state",
+    0.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|P+M|canon:g-l3-stale-coffee:fa|r0|run0",
+   "arm": "P+M",
+   "pres": "canon:g-l3-stale-coffee:fa",
+   "level": "L3",
+   "main": [
+    "blocked_state",
+    0.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|P0|canon:g-l1-close-microwave:fa|r0|run0",
+   "arm": "P0",
+   "pres": "canon:g-l1-close-microwave:fa",
+   "level": "L1",
+   "main": [
+    "blocked_state",
+    0.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|P0|canon:g-l1-dirty-cup:fa|r0|run0",
+   "arm": "P0",
+   "pres": "canon:g-l1-dirty-cup:fa",
+   "level": "L1",
+   "main": [
+    "done",
+    1.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|P0|canon:g-l1-dirty-pan:en|r0|run0",
+   "arm": "P0",
+   "pres": "canon:g-l1-dirty-pan:en",
+   "level": "L1",
+   "main": [
+    "blocked_state",
+    0.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|P0|canon:g-l1-drop-spoon:en|r0|run0",
+   "arm": "P0",
+   "pres": "canon:g-l1-drop-spoon:en",
+   "level": "L1",
+   "main": [
+    "done",
+    1.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|P0|canon:g-l1-empty-pot:en|r0|run0",
+   "arm": "P0",
+   "pres": "canon:g-l1-empty-pot:en",
+   "level": "L1",
+   "main": [
+    "done",
+    1.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|P0|canon:g-l1-fill-pot-coffee:en|r0|run0",
+   "arm": "P0",
+   "pres": "canon:g-l1-fill-pot-coffee:en",
+   "level": "L1",
+   "main": [
+    "done",
+    1.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|P0|canon:g-l1-slice-apple:fa|r0|run0",
+   "arm": "P0",
+   "pres": "canon:g-l1-slice-apple:fa",
+   "level": "L1",
+   "main": [
+    "blocked_state",
+    0.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|P0|canon:g-l2-cook-potato-counter-top:fa|r0|run0",
+   "arm": "P0",
+   "pres": "canon:g-l2-cook-potato-counter-top:fa",
+   "level": "L2",
+   "main": [
+    "blocked_state",
+    0.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|P0|canon:g-l2-cook-potato-plate:en|r0|run0",
+   "arm": "P0",
+   "pres": "canon:g-l2-cook-potato-plate:en",
+   "level": "L2",
+   "main": [
+    "blocked_state",
+    0.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|P0|canon:g-l2-faucet-on-pickup-sponge:en|r0|run0",
+   "arm": "P0",
+   "pres": "canon:g-l2-faucet-on-pickup-sponge:en",
+   "level": "L2",
+   "main": [
+    "blocked_state",
+    0.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|P0|canon:g-l2-light-off-open-fridge:fa|r0|run0",
+   "arm": "P0",
+   "pres": "canon:g-l2-light-off-open-fridge:fa",
+   "level": "L2",
+   "main": [
+    "done",
+    1.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|P0|canon:g-l2-salt-then-light-off:en|r0|run0",
+   "arm": "P0",
+   "pres": "canon:g-l2-salt-then-light-off:en",
+   "level": "L2",
+   "main": [
+    "done",
+    0.0
+   ],
+   "rerun": [
+    "done",
+    0.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|P0|canon:g-l2-three-appliances:fa|r0|run0",
+   "arm": "P0",
+   "pres": "canon:g-l2-three-appliances:fa",
+   "level": "L2",
+   "main": [
+    "done",
+    1.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|P0|canon:g-l3-dirty-cups:fa|r0|run0",
+   "arm": "P0",
+   "pres": "canon:g-l3-dirty-cups:fa",
+   "level": "L3",
+   "main": [
+    "blocked_state",
+    0.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  },
+  {
+   "key": "test-k2-v1|score|P0|canon:g-l3-stale-coffee:fa|r0|run0",
+   "arm": "P0",
+   "pres": "canon:g-l3-stale-coffee:fa",
+   "level": "L3",
+   "main": [
+    "blocked_state",
+    0.0
+   ],
+   "rerun": [
+    "done",
+    1.0
+   ]
+  }
+ ],
+ "analysis": {
+  "pooled_primary": {
+   "G+M - O0": {
+    "estimate": -0.13423267326732674,
+    "interval": [
+     -0.2286144082834521,
+     -0.039850938251201395
+    ],
+    "se": 0.04236837086358856,
+    "nu": 25.366787356531855,
+    "interval_label": "nominal 96.5 % CR2-Satterthwaite interval; actual coverage is not assured"
+   },
+   "G+M - G0": {
+    "estimate": 0.12943069306930693,
+    "interval": [
+     0.059677434038784644,
+     0.19918395209982923
+    ],
+    "se": 0.03131254100217802,
+    "nu": 25.366787356531855,
+    "interval_label": "nominal 96.5 % CR2-Satterthwaite interval; actual coverage is not assured"
+   },
+   "O+M - O0": {
+    "estimate": 0.0,
+    "interval": [
+     -0.05632053483114907,
+     0.05632053483114907
+    ],
+    "se": 0.0252825327543946,
+    "nu": 25.366787356531855,
+    "interval_label": "nominal 96.5 % CR2-Satterthwaite interval; actual coverage is not assured"
+   },
+   "G+M - O+M": {
+    "estimate": -0.13423267326732674,
+    "interval": [
+     -0.21723501817428725,
+     -0.05123032836036624
+    ],
+    "se": 0.03726011320903097,
+    "nu": 25.366787356531855,
+    "interval_label": "nominal 96.5 % CR2-Satterthwaite interval; actual coverage is not assured"
+   }
+  },
+  "g_m_vs_o0_criteria_primary": {
+   "contrast": "G+M - O0",
+   "average": "not met",
+   "each_kitchen": "not met",
+   "thesis_sentences": [
+    "The exploratory average non-inferiority criterion was not met (not evidence of no difference).",
+    "The exploratory each-kitchen non-inferiority criterion was not met (not evidence of no difference)."
+   ],
+   "never_say": "was shown non-inferior",
+   "superiority": "no superiority statement is made from Kitchens 2/3 (A29 item 3)",
+   "validation": "neither criterion is a simulation-validated confirmatory conclusion; power and coverage here are unknown (A29 item 3)"
+  },
+  "per_kitchen": {
+   "FloorPlan15": {
+    "G+M - O0": {
+     "estimate": -0.115,
+     "interval": [
+      -0.2149339273287454,
+      -0.015066072671254635
+     ],
+     "se": 0.044856829429907125,
+     "nu": 25.327312951598586,
+     "interval_label": "nominal 96.5 % CR2-Satterthwaite interval; actual coverage is not assured"
+    },
+    "G+M - G0": {
+     "estimate": 0.145,
+     "interval": [
+      0.04976801664958071,
+      0.2402319833504193
+     ],
+     "se": 0.04274629195116957,
+     "nu": 25.327312951598586,
+     "interval_label": "nominal 96.5 % CR2-Satterthwaite interval; actual coverage is not assured"
+    },
+    "O+M - O0": {
+     "estimate": 0.0,
+     "interval": [
+      -0.07767178215085267,
+      0.07767178215085267
+     ],
+     "se": 0.03486413449955069,
+     "nu": 25.327312951598586,
+     "interval_label": "nominal 96.5 % CR2-Satterthwaite interval; actual coverage is not assured"
+    },
+    "G+M - O+M": {
+     "estimate": -0.115,
+     "interval": [
+      -0.20376541488867025,
+      -0.026234585111329756
+     ],
+     "se": 0.03984367653077013,
+     "nu": 25.327312951598586,
+     "interval_label": "nominal 96.5 % CR2-Satterthwaite interval; actual coverage is not assured"
+    }
+   },
+   "FloorPlan17": {
+    "G+M - O0": {
+     "estimate": -0.15346534653465346,
+     "interval": [
+      -0.26307716576868123,
+      -0.04385352730062568
+     ],
+     "se": 0.04913062761533553,
+     "nu": 24.702948286167764,
+     "interval_label": "nominal 96.5 % CR2-Satterthwaite interval; actual coverage is not assured"
+    },
+    "G+M - G0": {
+     "estimate": 0.11386138613861387,
+     "interval": [
+      0.03639242609325326,
+      0.1913303461839745
+     ],
+     "se": 0.03472343269487819,
+     "nu": 24.702948286167764,
+     "interval_label": "nominal 96.5 % CR2-Satterthwaite interval; actual coverage is not assured"
+    },
+    "O+M - O0": {
+     "estimate": 0.0,
+     "interval": [
+      -0.06560459459657406,
+      0.06560459459657406
+     ],
+     "se": 0.02940554156935959,
+     "nu": 24.702948286167764,
+     "interval_label": "nominal 96.5 % CR2-Satterthwaite interval; actual coverage is not assured"
+    },
+    "G+M - O+M": {
+     "estimate": -0.15346534653465346,
+     "interval": [
+      -0.24531386437876335,
+      -0.06161682869054359
+     ],
+     "se": 0.04116869292703595,
+     "nu": 24.702948286167764,
+     "interval_label": "nominal 96.5 % CR2-Satterthwaite interval; actual coverage is not assured"
+    }
+   }
+  }
+ }
+}

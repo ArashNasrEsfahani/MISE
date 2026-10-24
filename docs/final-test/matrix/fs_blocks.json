@@ -1,0 +1,78 @@
+{
+ "schema": "final-test.fs_blocks/1",
+ "spec": "ftm-1",
+ "L1": {
+  "level": "L1",
+  "text": "Attempts (oldest first; instruction | plan | steps | result):\n1. fa | مایکروویو را خاموش کن. | toggle_off CoffeeMachine | ok | failure\n2. en | Put the tomato in the microwave and close it. | pickup Tomato; cook Tomato; close Microwave | ok retry_exhausted ok | failure\n3. en | The tomato has gone bad. | go_to Tomato | ok | failure\n4. en | Pick up the bread. | pickup Bread | ok | success\n5. fa | کاهو را پیدا کن و بردار. | search_for Lettuce; pickup Lettuce | ok ok | success\n6. fa | این نان بیات شده است؛ از شرش خلاص شو. | pickup Bread | ok | failure\n7. en | Pick up the salt shaker. | pickup SaltShaker | ok | failure\n8. en | Find the sponge and put it in the sink. | (no plan) | - | failure\n9. fa | چیزی می‌خواهم که با آن سوپم را بخورم. | go_to Bowl | ok | failure\n10. fa | فلفل‌پاش را بردار. | pickup PepperShaker | ok | success\nSightings (object -> place, times seen, attempts, newest first):\nApple -> CounterTop x10 (attempts 1,2,3,4,5,6,7,8,9,10)\nBook -> CounterTop x10 (attempts 1,2,3,4,5,6,7,8,9,10)\nBread -> CounterTop x10 (attempts 1,2,3,4,5,6,7,8,9,10)\nFaucet -> CounterTop x10 (attempts 1,2,3,4,5,6,7,8,9,10)\nFloor -> CounterTop x10 (attempts 1,2,3,4,5,6,7,8,9,10)\nMug -> CounterTop x10 (attempts 1,2,3,4,5,6,7,8,9,10)\nPan -> CounterTop x10 (attempts 1,2,3,4,5,6,7,8,9,10)\nPot -> CounterTop x10 (attempts 1,2,3,4,5,6,7,8,9,10)",
+  "real_tokens": 759,
+  "counts": {
+   "gemma": 546,
+   "anthropic": 759
+  },
+  "budget": 800,
+  "retained": {
+   "attempts": 10,
+   "outcomes": 12,
+   "sightings": 8,
+   "sightings_available": 45
+  },
+  "shortened": false,
+  "shortening": "none",
+  "source_sha": "00d4c374461fc64c071cadc9461ef1b5afc50ba2ab0a6b8b15942c29ffa327cf",
+  "sha256": "34a4c91a4770ab876abdb9bb602b262d0a95b1b22625495d8c8a51c29e1c8bf4"
+ },
+ "L2": {
+  "level": "L2",
+  "text": "Attempts (oldest first; instruction | plan | steps | result):\n1. fa | مایکروویو را خاموش کن. | toggle_off CoffeeMachine | ok | failure\n2. en | Put the tomato in the microwave and close it. | pickup Tomato; cook Tomato; close Microwave | ok retry_exhausted ok | failure\n3. en | The tomato has gone bad. | go_to Tomato | ok | failure\n4. en | Pick up the bread. | pickup Bread | ok | success\n5. fa | کاهو را پیدا کن و بردار. | search_for Lettuce; pickup Lettuce | ok ok | success\n6. fa | این نان بیات شده است؛ از شرش خلاص شو. | pickup Bread | ok | failure\n7. en | Pick up the salt shaker. | pickup SaltShaker | ok | failure\n8. en | Find the sponge and put it in the sink. | (no plan) | - | failure\n9. fa | چیزی می‌خواهم که با آن سوپم را بخورم. | go_to Bowl | ok | failure\n10. fa | فلفل‌پاش را بردار. | pickup PepperShaker | ok | success\nSightings (object -> place, times seen, attempts, newest first):\nApple -> CounterTop x10 (attempts 1,2,3,4,5,6,7,8,9,10)\nBook -> CounterTop x10 (attempts 1,2,3,4,5,6,7,8,9,10)\nBread -> CounterTop x10 (attempts 1,2,3,4,5,6,7,8,9,10)\nFaucet -> CounterTop x10 (attempts 1,2,3,4,5,6,7,8,9,10)\nFloor -> CounterTop x10 (attempts 1,2,3,4,5,6,7,8,9,10)\nMug -> CounterTop x10 (attempts 1,2,3,4,5,6,7,8,9,10)\nPan -> CounterTop x10 (attempts 1,2,3,4,5,6,7,8,9,10)\nPot -> CounterTop x10 (attempts 1,2,3,4,5,6,7,8,9,10)",
+  "real_tokens": 759,
+  "counts": {
+   "gemma": 546,
+   "anthropic": 759
+  },
+  "budget": 800,
+  "retained": {
+   "attempts": 10,
+   "outcomes": 12,
+   "sightings": 8,
+   "sightings_available": 45
+  },
+  "shortened": false,
+  "shortening": "none",
+  "source_sha": "00d4c374461fc64c071cadc9461ef1b5afc50ba2ab0a6b8b15942c29ffa327cf",
+  "sha256": "34a4c91a4770ab876abdb9bb602b262d0a95b1b22625495d8c8a51c29e1c8bf4"
+ },
+ "L3": {
+  "level": "L3",
+  "text": "Attempts (oldest first; instruction | plan | steps | result):\n1. fa | مایکروویو را خاموش کن. | toggle_off CoffeeMachine | ok | failure\n2. en | Put the tomato in the microwave and close it. | pickup Tomato; cook Tomato; close Microwave | ok retry_exhausted ok | failure\n3. en | The tomato has gone bad. | go_to Tomato | ok | failure\n4. en | Pick up the bread. | pickup Bread | ok | success\n5. fa | کاهو را پیدا کن و بردار. | search_for Lettuce; pickup Lettuce | ok ok | success\n6. fa | این نان بیات شده است؛ از شرش خلاص شو. | pickup Bread | ok | failure\n7. en | Pick up the salt shaker. | pickup SaltShaker | ok | failure\n8. en | Find the sponge and put it in the sink. | (no plan) | - | failure\n9. fa | چیزی می‌خواهم که با آن سوپم را بخورم. | go_to Bowl | ok | failure\n10. fa | فلفل‌پاش را بردار. | pickup PepperShaker | ok | success\nSightings (object -> place, times seen, attempts, newest first):\nApple -> CounterTop x10 (attempts 1,2,3,4,5,6,7,8,9,10)\nBook -> CounterTop x10 (attempts 1,2,3,4,5,6,7,8,9,10)\nBread -> CounterTop x10 (attempts 1,2,3,4,5,6,7,8,9,10)\nFaucet -> CounterTop x10 (attempts 1,2,3,4,5,6,7,8,9,10)\nFloor -> CounterTop x10 (attempts 1,2,3,4,5,6,7,8,9,10)\nMug -> CounterTop x10 (attempts 1,2,3,4,5,6,7,8,9,10)\nPan -> CounterTop x10 (attempts 1,2,3,4,5,6,7,8,9,10)\nPot -> CounterTop x10 (attempts 1,2,3,4,5,6,7,8,9,10)",
+  "real_tokens": 759,
+  "counts": {
+   "gemma": 546,
+   "anthropic": 759
+  },
+  "budget": 800,
+  "retained": {
+   "attempts": 10,
+   "outcomes": 12,
+   "sightings": 8,
+   "sightings_available": 45
+  },
+  "shortened": false,
+  "shortening": "none",
+  "source_sha": "00d4c374461fc64c071cadc9461ef1b5afc50ba2ab0a6b8b15942c29ffa327cf",
+  "sha256": "34a4c91a4770ab876abdb9bb602b262d0a95b1b22625495d8c8a51c29e1c8bf4"
+ },
+ "source_sha": "00d4c374461fc64c071cadc9461ef1b5afc50ba2ab0a6b8b15942c29ffa327cf",
+ "counter": {
+  "tokenizers": [
+   "gemma",
+   "anthropic"
+  ],
+  "header": "Earlier practice records (raw, from the same practice as the memory):",
+  "budgets": {
+   "L1": 800,
+   "L2": 800,
+   "L3": 800
+  }
+ },
+ "sha256": "1518859f4c8cba8cf7337f3d3c48b31f27a425d4172e10e2b0e1879f7e05451e"
+}

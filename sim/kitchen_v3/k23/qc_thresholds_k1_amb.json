@@ -1,0 +1,673 @@
+{
+ "what": "K23 QC thresholds derived from the Kitchen 1 (FloorPlan1, development data) AMB store, committed amb-plan TRAIN episodes, 4 windows of 8 consecutive episodes",
+ "amb": true,
+ "source_episode_ids": [
+  3000,
+  3001,
+  3002,
+  3003,
+  3004,
+  3005,
+  3006,
+  3007,
+  3008,
+  3009,
+  3010,
+  3011,
+  3012,
+  3013,
+  3014,
+  3015,
+  3016,
+  3017,
+  3018,
+  3019,
+  3020,
+  3021,
+  3022,
+  3023,
+  3025,
+  3026,
+  3027,
+  3028,
+  3029,
+  3030,
+  3031,
+  3032,
+  3033,
+  3034,
+  3035,
+  3036,
+  3037,
+  3038,
+  3039
+ ],
+ "frames_jsonl_sha256": "2665c9c515aae241d9fe5db2d4e3dae7ef5c5e09b4d804c8344fdb289059317a",
+ "source": "/home/arash/thor-data/kitchen_v3_amb/FloorPlan1",
+ "frames_jsonl_size": 106562529,
+ "built": "2026-10-17 16:35:47",
+ "stride": 4,
+ "window": 8,
+ "frame_limits": {
+  "lapvar_low": 111.46332069396972,
+  "lum_low": 77.2317041015625,
+  "lum_high": 173.18504653930665,
+  "clip_high": 0.10663675537109388
+ },
+ "bands": {
+  "blur_low_share": {
+   "min": 0.004830917874396135,
+   "p10": 0.0048594750243925655,
+   "p50": 0.007463054187192118,
+   "p90": 0.02032673267326733,
+   "max": 0.024752475247524754
+  },
+  "exposure_out_share": {
+   "min": 0.0049261083743842365,
+   "p10": 0.007903721406623421,
+   "p50": 0.017425742574257427,
+   "p90": 0.026289855072463772,
+   "max": 0.028985507246376812
+  },
+  "near_dup_share": {
+   "min": 0.0,
+   "p10": 0.0,
+   "p50": 0.0,
+   "p90": 0.0,
+   "max": 0.0
+  },
+  "mask_mismatch_share": {
+   "min": 0.0,
+   "p10": 0.0,
+   "p50": 0.0,
+   "p90": 0.0,
+   "max": 0.0
+  },
+  "anomalies": {
+   "min": 0,
+   "p10": 0.0,
+   "p50": 0.0,
+   "p90": 0.0,
+   "max": 0
+  },
+  "label_problems": {
+   "min": 0,
+   "p10": 0.0,
+   "p50": 0.0,
+   "p90": 0.0,
+   "max": 0
+  },
+  "exact_dup_share": {
+   "min": 0.0,
+   "p10": 0.0,
+   "p50": 0.0,
+   "p90": 0.0,
+   "max": 0.0
+  },
+  "cross_split_dup": {
+   "min": 0,
+   "p10": 0.0,
+   "p50": 0.0,
+   "p90": 0.0,
+   "max": 0
+  },
+  "share_small": {
+   "min": 0.24417859431745353,
+   "p10": 0.24790146414443262,
+   "p50": 0.25763161963586856,
+   "p90": 0.2671307394810185,
+   "max": 0.27075459403101787
+  },
+  "mask_p50": {
+   "min": 1420.0,
+   "p10": 1432.3,
+   "p50": 1471.25,
+   "p90": 1533.65,
+   "max": 1556.0
+  },
+  "labels_per_frame": {
+   "min": 18.5464824120603,
+   "p10": 18.761782971461077,
+   "p50": 19.72594050237296,
+   "p90": 20.345024602161253,
+   "max": 20.41243654822335
+  },
+  "held_share": {
+   "min": 0.5326633165829145,
+   "p10": 0.5336190385891723,
+   "p50": 0.5397036694061812,
+   "p90": 0.5450471800940487,
+   "max": 0.5456852791878173
+  }
+ },
+ "k1_train_labels_per_train_episode": {
+  "Apple": {
+   "median": 11.25,
+   "min": 4.625,
+   "max": 16.5
+  },
+  "Book": {
+   "median": 24.625,
+   "min": 17.75,
+   "max": 29.125
+  },
+  "Bottle": {
+   "median": 19.25,
+   "min": 14.0,
+   "max": 23.375
+  },
+  "Bowl": {
+   "median": 13.9375,
+   "min": 10.375,
+   "max": 16.75
+  },
+  "Bread": {
+   "median": 67.3125,
+   "min": 27.875,
+   "max": 104.0
+  },
+  "ButterKnife": {
+   "median": 16.4375,
+   "min": 11.875,
+   "max": 19.75
+  },
+  "Cabinet": {
+   "median": 285.1875,
+   "min": 266.75,
+   "max": 304.375
+  },
+  "CoffeeMachine": {
+   "median": 31.0625,
+   "min": 30.5,
+   "max": 33.875
+  },
+  "CounterTop": {
+   "median": 140.875,
+   "min": 137.375,
+   "max": 151.0
+  },
+  "CreditCard": {
+   "median": 4.0625,
+   "min": 3.75,
+   "max": 7.125
+  },
+  "Cup": {
+   "median": 13.25,
+   "min": 6.875,
+   "max": 21.625
+  },
+  "DishSponge": {
+   "median": 9.4375,
+   "min": 3.625,
+   "max": 11.75
+  },
+  "Drawer": {
+   "median": 210.3125,
+   "min": 201.75,
+   "max": 215.75
+  },
+  "Egg": {
+   "median": 7.3125,
+   "min": 5.875,
+   "max": 8.75
+  },
+  "Faucet": {
+   "median": 27.8125,
+   "min": 26.75,
+   "max": 30.5
+  },
+  "Floor": {
+   "median": 92.0,
+   "min": 90.0,
+   "max": 92.875
+  },
+  "Fork": {
+   "median": 12.0625,
+   "min": 10.375,
+   "max": 13.625
+  },
+  "Fridge": {
+   "median": 42.6875,
+   "min": 39.25,
+   "max": 44.125
+  },
+  "GarbageCan": {
+   "median": 18.875,
+   "min": 16.75,
+   "max": 20.75
+  },
+  "HousePlant": {
+   "median": 37.3125,
+   "min": 33.75,
+   "max": 40.125
+  },
+  "Kettle": {
+   "median": 23.8125,
+   "min": 20.125,
+   "max": 33.625
+  },
+  "Knife": {
+   "median": 15.625,
+   "min": 14.0,
+   "max": 20.125
+  },
+  "Lettuce": {
+   "median": 25.125,
+   "min": 9.25,
+   "max": 28.75
+  },
+  "LightSwitch": {
+   "median": 15.5,
+   "min": 12.25,
+   "max": 16.25
+  },
+  "Microwave": {
+   "median": 30.3125,
+   "min": 27.375,
+   "max": 35.25
+  },
+  "Mug": {
+   "median": 12.4375,
+   "min": 8.625,
+   "max": 13.75
+  },
+  "Pan": {
+   "median": 31.1875,
+   "min": 28.875,
+   "max": 34.625
+  },
+  "PaperTowelRoll": {
+   "median": 20.125,
+   "min": 18.5,
+   "max": 20.75
+  },
+  "PepperShaker": {
+   "median": 17.25,
+   "min": 16.625,
+   "max": 21.75
+  },
+  "Plate": {
+   "median": 20.625,
+   "min": 19.5,
+   "max": 23.875
+  },
+  "Pot": {
+   "median": 29.1875,
+   "min": 25.125,
+   "max": 32.25
+  },
+  "Potato": {
+   "median": 9.5,
+   "min": 4.875,
+   "max": 11.0
+  },
+  "SaltShaker": {
+   "median": 16.875,
+   "min": 14.5,
+   "max": 17.875
+  },
+  "Shelf": {
+   "median": 86.625,
+   "min": 84.75,
+   "max": 94.25
+  },
+  "ShelvingUnit": {
+   "median": 40.3125,
+   "min": 39.375,
+   "max": 43.25
+  },
+  "Sink": {
+   "median": 39.375,
+   "min": 37.5,
+   "max": 41.625
+  },
+  "SinkBasin": {
+   "median": 9.4375,
+   "min": 6.875,
+   "max": 12.875
+  },
+  "SoapBottle": {
+   "median": 14.25,
+   "min": 8.0,
+   "max": 17.625
+  },
+  "Spatula": {
+   "median": 13.9375,
+   "min": 13.0,
+   "max": 14.375
+  },
+  "Spoon": {
+   "median": 12.75,
+   "min": 11.125,
+   "max": 14.25
+  },
+  "Statue": {
+   "median": 19.4375,
+   "min": 16.625,
+   "max": 22.25
+  },
+  "Stool": {
+   "median": 59.5625,
+   "min": 53.25,
+   "max": 62.0
+  },
+  "StoveBurner": {
+   "median": 100.6875,
+   "min": 93.75,
+   "max": 113.625
+  },
+  "StoveKnob": {
+   "median": 58.875,
+   "min": 45.5,
+   "max": 61.375
+  },
+  "Toaster": {
+   "median": 28.375,
+   "min": 27.5,
+   "max": 29.625
+  },
+  "Tomato": {
+   "median": 18.5625,
+   "min": 9.0,
+   "max": 22.375
+  },
+  "Vase": {
+   "median": 41.625,
+   "min": 35.25,
+   "max": 45.25
+  },
+  "Window": {
+   "median": 44.4375,
+   "min": 42.25,
+   "max": 46.375
+  },
+  "WineBottle": {
+   "median": 19.75,
+   "min": 16.25,
+   "max": 29.5
+  }
+ },
+ "k1_episodes_until_every_type_seen": 2,
+ "windows": [
+  {
+   "episodes": [
+    3000,
+    3007
+   ],
+   "blur_low_share": 0.024752475247524754,
+   "exposure_out_share": 0.01485148514851485,
+   "near_dup_share": 0.0,
+   "mask_mismatch_share": 0.0,
+   "anomalies": 0,
+   "label_problems": 0,
+   "exact_dup_share": 0.0,
+   "cross_split_dup": 0,
+   "share_small": 0.2586750788643533,
+   "mask_p50": 1420.0,
+   "labels_per_frame": 19.264150943396228,
+   "held_share": 0.5358490566037736,
+   "train_per_episode": {
+    "Bread": 55.875,
+    "Cabinet": 266.75,
+    "StoveKnob": 56.5,
+    "Sink": 38.75,
+    "Mug": 11.5,
+    "Floor": 91.625,
+    "Window": 44.625,
+    "StoveBurner": 94.125,
+    "Faucet": 26.875,
+    "Pot": 25.125,
+    "Fridge": 42.125,
+    "SoapBottle": 12.375,
+    "Knife": 16.125,
+    "Plate": 23.875,
+    "HousePlant": 33.75,
+    "Pan": 29.625,
+    "PepperShaker": 17.25,
+    "Toaster": 27.625,
+    "Bottle": 23.375,
+    "ButterKnife": 17.5,
+    "CoffeeMachine": 30.5,
+    "Stool": 62.0,
+    "CounterTop": 138.0,
+    "Drawer": 207.25,
+    "ShelvingUnit": 39.375,
+    "Kettle": 23.25,
+    "Vase": 42.125,
+    "Fork": 10.375,
+    "Shelf": 84.75,
+    "Book": 29.125,
+    "Bowl": 13.5,
+    "Potato": 9.5,
+    "Tomato": 19.75,
+    "Microwave": 27.375,
+    "SaltShaker": 14.5,
+    "DishSponge": 7.75,
+    "Spoon": 11.375,
+    "PaperTowelRoll": 20.5,
+    "Cup": 21.625,
+    "LightSwitch": 15.375,
+    "Lettuce": 28.75,
+    "GarbageCan": 17.375,
+    "Spatula": 14.375,
+    "Statue": 22.25,
+    "WineBottle": 16.25,
+    "Apple": 9.625,
+    "Egg": 8.0,
+    "CreditCard": 4.0,
+    "SinkBasin": 10.375
+   },
+   "train_episodes": 8
+  },
+  {
+   "episodes": [
+    3008,
+    3015
+   ],
+   "blur_low_share": 0.01,
+   "exposure_out_share": 0.02,
+   "near_dup_share": 0.0,
+   "mask_mismatch_share": 0.0,
+   "anomalies": 0,
+   "label_problems": 0,
+   "exact_dup_share": 0.0,
+   "cross_split_dup": 0,
+   "share_small": 0.27075459403101787,
+   "mask_p50": 1461.0,
+   "labels_per_frame": 20.41243654822335,
+   "held_share": 0.5456852791878173,
+   "train_per_episode": {
+    "Cabinet": 295.25,
+    "StoveBurner": 107.25,
+    "StoveKnob": 61.375,
+    "Mug": 8.625,
+    "Floor": 92.375,
+    "Pot": 32.25,
+    "HousePlant": 38.375,
+    "Pan": 32.75,
+    "Bowl": 16.75,
+    "Microwave": 32.75,
+    "WineBottle": 21.25,
+    "CounterTop": 143.75,
+    "Drawer": 215.75,
+    "Sink": 41.625,
+    "Window": 46.375,
+    "Faucet": 30.5,
+    "Fridge": 43.25,
+    "Toaster": 29.625,
+    "GarbageCan": 20.375,
+    "CoffeeMachine": 33.875,
+    "Book": 28.625,
+    "Spoon": 14.125,
+    "Spatula": 13.5,
+    "Vase": 41.125,
+    "SinkBasin": 8.5,
+    "ShelvingUnit": 40.625,
+    "Knife": 15.125,
+    "Shelf": 85.5,
+    "ButterKnife": 15.375,
+    "Plate": 19.5,
+    "DishSponge": 3.625,
+    "Stool": 53.25,
+    "Tomato": 22.375,
+    "SaltShaker": 17.875,
+    "SoapBottle": 8.0,
+    "Cup": 6.875,
+    "PepperShaker": 16.625,
+    "Statue": 18.0,
+    "LightSwitch": 12.25,
+    "Bottle": 15.25,
+    "Lettuce": 25.375,
+    "Bread": 104.0,
+    "Fork": 12.625,
+    "CreditCard": 4.125,
+    "PaperTowelRoll": 19.75,
+    "Egg": 8.75,
+    "Potato": 11.0,
+    "Kettle": 20.125,
+    "Apple": 4.625
+   },
+   "train_episodes": 8
+  },
+  {
+   "episodes": [
+    3016,
+    3023
+   ],
+   "blur_low_share": 0.004830917874396135,
+   "exposure_out_share": 0.028985507246376812,
+   "near_dup_share": 0.0,
+   "mask_mismatch_share": 0.0,
+   "anomalies": 0,
+   "label_problems": 0,
+   "exact_dup_share": 0.0,
+   "cross_split_dup": 0,
+   "share_small": 0.25658816040738386,
+   "mask_p50": 1481.5,
+   "labels_per_frame": 20.187730061349694,
+   "held_share": 0.5435582822085889,
+   "train_per_episode": {
+    "Drawer": 213.375,
+    "Cabinet": 304.375,
+    "Sink": 40.0,
+    "Mug": 13.75,
+    "Floor": 92.875,
+    "Window": 44.25,
+    "Faucet": 28.75,
+    "Kettle": 33.625,
+    "Fridge": 39.25,
+    "SoapBottle": 17.625,
+    "Toaster": 27.5,
+    "DishSponge": 11.75,
+    "Spoon": 14.25,
+    "CoffeeMachine": 30.625,
+    "WineBottle": 29.5,
+    "SinkBasin": 6.875,
+    "CounterTop": 151.0,
+    "HousePlant": 40.125,
+    "PaperTowelRoll": 20.75,
+    "ShelvingUnit": 43.25,
+    "Vase": 45.25,
+    "Pan": 34.625,
+    "Microwave": 35.25,
+    "LightSwitch": 16.25,
+    "Bread": 78.75,
+    "Shelf": 94.25,
+    "Book": 20.625,
+    "Stool": 59.5,
+    "StoveBurner": 113.625,
+    "StoveKnob": 61.25,
+    "Pot": 31.375,
+    "CreditCard": 7.125,
+    "Plate": 20.25,
+    "PepperShaker": 21.75,
+    "Apple": 16.5,
+    "Fork": 13.625,
+    "Spatula": 14.375,
+    "ButterKnife": 19.75,
+    "GarbageCan": 16.75,
+    "Bottle": 14.0,
+    "SaltShaker": 16.625,
+    "Knife": 14.0,
+    "Cup": 13.625,
+    "Bowl": 10.375,
+    "Lettuce": 9.25,
+    "Potato": 9.5,
+    "Tomato": 17.375,
+    "Statue": 20.875,
+    "Egg": 6.625
+   },
+   "train_episodes": 8
+  },
+  {
+   "episodes": [
+    3025,
+    3032
+   ],
+   "blur_low_share": 0.0049261083743842365,
+   "exposure_out_share": 0.0049261083743842365,
+   "near_dup_share": 0.0,
+   "mask_mismatch_share": 0.0,
+   "anomalies": 0,
+   "label_problems": 0,
+   "exact_dup_share": 0.0,
+   "cross_split_dup": 0,
+   "share_small": 0.24417859431745353,
+   "mask_p50": 1556.0,
+   "labels_per_frame": 18.5464824120603,
+   "held_share": 0.5326633165829145,
+   "train_per_episode": {
+    "Cabinet": 275.125,
+    "Sink": 37.5,
+    "Mug": 13.375,
+    "Floor": 90.0,
+    "Window": 42.25,
+    "Kettle": 24.375,
+    "Fridge": 44.125,
+    "Knife": 20.125,
+    "Toaster": 29.125,
+    "ButterKnife": 11.875,
+    "CoffeeMachine": 31.5,
+    "WineBottle": 18.25,
+    "Stool": 59.625,
+    "CounterTop": 137.375,
+    "Drawer": 201.75,
+    "StoveBurner": 93.75,
+    "ShelvingUnit": 40.0,
+    "Pot": 27.0,
+    "SoapBottle": 16.125,
+    "Vase": 35.25,
+    "Plate": 21.0,
+    "HousePlant": 36.25,
+    "Tomato": 9.0,
+    "Lettuce": 24.875,
+    "Microwave": 27.875,
+    "Bottle": 23.25,
+    "Shelf": 87.75,
+    "Faucet": 26.75,
+    "Pan": 28.875,
+    "PepperShaker": 17.25,
+    "PaperTowelRoll": 18.5,
+    "SaltShaker": 17.125,
+    "Egg": 5.875,
+    "LightSwitch": 15.625,
+    "DishSponge": 11.125,
+    "GarbageCan": 20.75,
+    "Spoon": 11.125,
+    "Cup": 12.875,
+    "Bowl": 14.375,
+    "SinkBasin": 12.875,
+    "StoveKnob": 45.5,
+    "CreditCard": 3.75,
+    "Fork": 11.5,
+    "Spatula": 13.0,
+    "Bread": 27.875,
+    "Statue": 16.625,
+    "Book": 17.75,
+    "Potato": 4.875,
+    "Apple": 12.875
+   },
+   "train_episodes": 8
+  }
+ ]
+}

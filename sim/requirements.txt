@@ -1,0 +1,16 @@
+# Python deps for the embodied-agent thesis. Install in the WSL2 venv (~/thor-env).
+# Pins are conservative: only ai2thor is hard-pinned (its build/cache is version-locked).
+
+ai2thor==5.0.0   # simulator (Unity build); runs in WSL2 only, never on Windows
+ultralytics      # YOLO training/inference for the active-perception phase
+# torch/torchvision: the WSL NVIDIA driver here is CUDA 12.7, so the DEFAULT pip wheel (currently +cu130) reports
+# cuda=False ("driver too old"). Install a cu12x build explicitly. Confirmed working on the RTX 4060:
+#   pip install --index-url https://download.pytorch.org/whl/cu124 "torch==2.6.0" "torchvision==0.21.0"
+torch==2.6.0          # cu124 build (see note above); GPU backend for ultralytics
+torchvision==0.21.0   # matches torch 2.6.0 cu124
+opencv-python-headless  # image IO/ops for perception + dataset gen (headless: no GUI/X deps)
+chromadb         # optional vector store; rag.py falls back to a numpy cosine index if absent
+numpy            # arrays / cosine math (imported lazily in modules so pure-stdlib import still works)
+pillow           # frame encode/decode for captures and the VLM image path
+
+# Text embeddings are served by a local Ollama model (nomic-embed-text) over HTTP — no python dep needed.

@@ -1,0 +1,41 @@
+{
+ "version": 1,
+ "approved_by": "Arash",
+ "approved_at": "2026-10-13",
+ "approval": {
+  "decision": "docs/final-test/progress.md, 2026-10-13 ARASH DECISIONS (approval packet), item (7): approve all three natural briefings as written (keep knob line)",
+  "approved_text": "the natural-English tour (natural.file, pinned by natural.sha256) as written, knob line kept",
+  "not_covered": "the record lines in records.jsonl are the generator's deterministic lines (D2 filter: no Knife); they are not wording Arash approved; their agreement with the tour is checked by natural_facts_check, and the knob addition is a verbatim fragment of the tour (its FA line is for Arash's check)"
+ },
+ "natural": {
+  "file": "FloorPlan1.en.natural.md",
+  "sha256": "ef4ac75bd86728cf563c00eda28a248cf9e8317b7e124ca9a954a5a6aa65c89f",
+  "proposal_sha256": "12071175b55dd7686d79c5bdf495d5ce0e72c942e331a1c5ddbb154102fbcafb",
+  "layout_sha16": "cb4a1e2326cc94c8"
+ },
+ "edits": {},
+ "additions": [
+  {
+   "local": "ctrl:StoveKnob",
+   "kind": "ctrl",
+   "prio": 4,
+   "types": [
+    "StoveKnob",
+    "StoveBurner"
+   ],
+   "ops": [
+    "toggle_on",
+    "toggle_off"
+   ],
+   "rels": [
+    "controls:StoveBurner"
+   ],
+   "text": {
+    "en": "There is a stove with four burners (StoveBurner) controlled by four knobs (StoveKnob).",
+    "fa": "اجاق گاز چهار شعله (StoveBurner) دارد که با چهار پیچ (StoveKnob) روشن و خاموش می‌شوند."
+   },
+   "source": "verbatim fragment of the approved FloorPlan1.en.natural.md",
+   "fa_status": "FA wording for Arash's check (the English-only override means the FA line is not shown in the test)"
+  }
+ ]
+}

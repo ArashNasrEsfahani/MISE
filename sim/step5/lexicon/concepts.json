@@ -1,0 +1,1767 @@
+{
+ "_doc": "A4 concept lexicon (docs/step5-plan.md 8.2). Authored from general knowledge + the 49 detector classes (useful_types.json); NOT derived from any dataset command or reference plan. Regenerate with sim/step5/lexicon/_build_concepts.py.",
+ "accusative_fa": [
+  "را"
+ ],
+ "adjectives": {
+  "broken": {
+   "en": [
+    "broken"
+   ],
+   "fa": [
+    "شکسته"
+   ]
+  },
+  "clean": {
+   "en": [
+    "clean",
+    "washed"
+   ],
+   "fa": [
+    "تمیز",
+    "شسته"
+   ]
+  },
+  "closed": {
+   "en": [
+    "closed",
+    "shut"
+   ],
+   "fa": [
+    "بسته"
+   ]
+  },
+  "cold": {
+   "en": [
+    "cold",
+    "chilled"
+   ],
+   "fa": [
+    "سرد"
+   ]
+  },
+  "dirty": {
+   "en": [
+    "dirty"
+   ],
+   "fa": [
+    "کثیف"
+   ]
+  },
+  "empty": {
+   "en": [
+    "empty"
+   ],
+   "fa": [
+    "خالی"
+   ]
+  },
+  "filled": {
+   "en": [
+    "filled",
+    "full"
+   ],
+   "fa": [
+    "پر"
+   ]
+  },
+  "hot": {
+   "en": [
+    "hot",
+    "heated"
+   ],
+   "fa": [
+    "داغ",
+    "گرم"
+   ]
+  },
+  "off": {
+   "en": [
+    "turned off",
+    "switched off"
+   ],
+   "fa": [
+    "خاموش"
+   ]
+  },
+  "on": {
+   "en": [
+    "turned on",
+    "switched on",
+    "lit"
+   ],
+   "fa": [
+    "روشن"
+   ]
+  },
+  "open": {
+   "en": [
+    "open",
+    "opened"
+   ],
+   "fa": [
+    "باز"
+   ]
+  },
+  "sliced": {
+   "en": [
+    "sliced"
+   ],
+   "fa": [
+    "خرد شده",
+    "برش خورده"
+   ]
+  }
+ },
+ "complex_bigrams_fa": [
+  "پس از",
+  "بعد از",
+  "قبل از",
+  "به جای"
+ ],
+ "complex_markers": {
+  "en": [
+   "before",
+   "after",
+   "until",
+   "if",
+   "unless",
+   "when",
+   "while",
+   "once",
+   "because",
+   "or",
+   "instead",
+   "otherwise"
+  ],
+  "fa": [
+   "قبل",
+   "اگر",
+   "مگر",
+   "وقتی",
+   "یا",
+   "تا",
+   "چون"
+  ]
+ },
+ "dataset_fitted": false,
+ "determiners": {
+  "en": [
+   "the",
+   "a",
+   "an",
+   "my",
+   "your",
+   "our",
+   "that",
+   "this",
+   "those",
+   "these",
+   "of",
+   "please"
+  ],
+  "fa": [
+   "یک",
+   "این",
+   "آن",
+   "لطفا"
+  ]
+ },
+ "door_of_fa": {
+  "verbs": [
+   "open",
+   "close"
+  ],
+  "words": [
+   "در"
+  ]
+ },
+ "elided_object_fa": {
+  "source_verbs": [
+   "find",
+   "pick",
+   "heat",
+   "cook",
+   "wash",
+   "slice",
+   "fill",
+   "empty",
+   "put",
+   "drop"
+  ],
+  "target_verbs": [
+   "pick",
+   "put",
+   "drop",
+   "heat",
+   "cook",
+   "wash",
+   "slice",
+   "fill",
+   "empty",
+   "break"
+  ]
+ },
+ "excluded_aliases": {
+  "Knife": {
+   "en": [
+    "knife"
+   ],
+   "en_plural": [
+    "knives"
+   ],
+   "fa": [
+    "چاقو",
+    "کارد"
+   ],
+   "note": "A26 excluded type: alias list for the D2 text check only; never a parser concept"
+  }
+ },
+ "fa_light_verb_tokens": [
+  "کن",
+  "کنید",
+  "بکن",
+  "بکنید",
+  "بکنین",
+  "کنین",
+  "نکن",
+  "نکنید",
+  "نکنی",
+  "نکنین",
+  "بده",
+  "بدهید",
+  "بدین",
+  "بدی",
+  "نده",
+  "ندهید",
+  "ندین"
+ ],
+ "fp1_tuned": false,
+ "hard_sep": {
+  "en": [
+   "then",
+   "but",
+   "afterwards",
+   "after that",
+   "and then"
+  ],
+  "fa": [
+   "سپس",
+   "بعد",
+   "بعد از آن",
+   "ولی",
+   "اما",
+   "و سپس",
+   "بعدش"
+  ]
+ },
+ "names": {
+  "break": [
+   "break",
+   "شکستن"
+  ],
+  "close": [
+   "close",
+   "بستن"
+  ],
+  "cook": [
+   "cook",
+   "پختن"
+  ],
+  "drop": [
+   "drop",
+   "انداختن"
+  ],
+  "empty": [
+   "empty",
+   "خالی کردن"
+  ],
+  "fill": [
+   "fill",
+   "پر کردن"
+  ],
+  "find": [
+   "find",
+   "پیدا کردن"
+  ],
+  "heat": [
+   "heat",
+   "گرم کردن"
+  ],
+  "open": [
+   "open",
+   "باز کردن"
+  ],
+  "pick": [
+   "pick up",
+   "برداشتن"
+  ],
+  "put": [
+   "put",
+   "گذاشتن"
+  ],
+  "slice": [
+   "slice",
+   "برش دادن"
+  ],
+  "toggle": [
+   "toggle",
+   "روشن یا خاموش کردن"
+  ],
+  "wash": [
+   "wash",
+   "شستن"
+  ]
+ },
+ "negation": {
+  "en": [
+   "not",
+   "dont",
+   "never",
+   "without",
+   "no",
+   "avoid",
+   "doesnt",
+   "wont",
+   "shouldnt",
+   "mustnt",
+   "cant",
+   "cannot"
+  ],
+  "fa": [
+   "نه",
+   "بدون",
+   "هرگز",
+   "نباید",
+   "هیچ وقت",
+   "هیچوقت"
+  ]
+ },
+ "ontology_verified": false,
+ "partitive_fa": [
+  "یکی از"
+ ],
+ "prep_dest": {
+  "en": [
+   "in",
+   "into",
+   "inside",
+   "inside of",
+   "on",
+   "onto",
+   "on top of",
+   "to",
+   "in to"
+  ],
+  "fa": [
+   "در",
+   "توی",
+   "تو",
+   "داخل",
+   "درون",
+   "روی",
+   "بالای",
+   "به"
+  ]
+ },
+ "prep_src": {
+  "en": [
+   "from",
+   "out of",
+   "off of"
+  ],
+  "fa": [
+   "از",
+   "بیرون از"
+  ]
+ },
+ "pronouns": {
+  "en": [
+   "it",
+   "them",
+   "that",
+   "this",
+   "one",
+   "those",
+   "these"
+  ],
+  "fa": [
+   "آن",
+   "آنها",
+   "اون",
+   "اینها",
+   "همین",
+   "این"
+  ]
+ },
+ "quantifiers": {
+  "en": [
+   "all",
+   "both",
+   "every",
+   "each",
+   "two",
+   "three",
+   "four",
+   "some",
+   "any",
+   "several",
+   "2",
+   "3",
+   "4"
+  ],
+  "fa": [
+   "همه",
+   "هر",
+   "دو",
+   "سه",
+   "چند",
+   "چندتا",
+   "هردو",
+   "2",
+   "3",
+   "4"
+  ]
+ },
+ "req_names": {
+  "off": [
+   "turn off",
+   "خاموش کردن"
+  ],
+  "on": [
+   "turn on",
+   "روشن کردن"
+  ]
+ },
+ "soft_sep": {
+  "en": [
+   "and"
+  ],
+  "fa": [
+   "و"
+  ]
+ },
+ "source": "authored (general EN/FA knowledge); detector class list from useful_types.json",
+ "types": {
+  "Apple": {
+   "en": [
+    "apple"
+   ],
+   "en_plural": [
+    "apples"
+   ],
+   "fa": [
+    "سیب"
+   ],
+   "name_en": "apple",
+   "name_fa": "سیب"
+  },
+  "Book": {
+   "en": [
+    "book"
+   ],
+   "en_plural": [
+    "books"
+   ],
+   "fa": [
+    "کتاب"
+   ],
+   "name_en": "book",
+   "name_fa": "کتاب"
+  },
+  "Bottle": {
+   "en": [
+    "bottle"
+   ],
+   "en_plural": [
+    "bottles"
+   ],
+   "fa": [
+    "بطری"
+   ],
+   "name_en": "bottle",
+   "name_fa": "بطری"
+  },
+  "Bowl": {
+   "en": [
+    "bowl"
+   ],
+   "en_plural": [
+    "bowls"
+   ],
+   "fa": [
+    "کاسه"
+   ],
+   "name_en": "bowl",
+   "name_fa": "کاسه"
+  },
+  "Bread": {
+   "en": [
+    "bread"
+   ],
+   "en_plural": [
+    "breads"
+   ],
+   "fa": [
+    "نان"
+   ],
+   "name_en": "bread",
+   "name_fa": "نان"
+  },
+  "ButterKnife": {
+   "en": [
+    "butter knife",
+    "butterknife"
+   ],
+   "en_plural": [
+    "butter knives",
+    "butterknives"
+   ],
+   "fa": [
+    "کارد کره",
+    "چاقوی کره"
+   ],
+   "name_en": "butter knife",
+   "name_fa": "کارد کره"
+  },
+  "Cabinet": {
+   "en": [
+    "cabinet",
+    "cupboard"
+   ],
+   "en_plural": [
+    "cabinets",
+    "cupboards"
+   ],
+   "fa": [
+    "کابینت",
+    "کمد"
+   ],
+   "name_en": "cabinet",
+   "name_fa": "کابینت"
+  },
+  "CoffeeMachine": {
+   "en": [
+    "coffee machine",
+    "coffee maker",
+    "coffeemachine"
+   ],
+   "en_plural": [
+    "coffee machines",
+    "coffee makers",
+    "coffeemachines"
+   ],
+   "fa": [
+    "قهوه ساز",
+    "دستگاه قهوه"
+   ],
+   "name_en": "coffee machine",
+   "name_fa": "قهوه ساز"
+  },
+  "CounterTop": {
+   "en": [
+    "counter",
+    "counter top",
+    "countertop",
+    "worktop"
+   ],
+   "en_plural": [
+    "counter tops",
+    "counters",
+    "countertops",
+    "worktops"
+   ],
+   "fa": [
+    "کانتر",
+    "میز کار"
+   ],
+   "name_en": "counter top",
+   "name_fa": "کانتر"
+  },
+  "CreditCard": {
+   "en": [
+    "card",
+    "credit card",
+    "creditcard"
+   ],
+   "en_plural": [
+    "cards",
+    "credit cards",
+    "creditcards"
+   ],
+   "fa": [
+    "کارت اعتباری",
+    "کارت بانکی"
+   ],
+   "name_en": "credit card",
+   "name_fa": "کارت اعتباری"
+  },
+  "Cup": {
+   "en": [
+    "cup"
+   ],
+   "en_plural": [
+    "cups"
+   ],
+   "fa": [
+    "فنجان"
+   ],
+   "name_en": "cup",
+   "name_fa": "فنجان"
+  },
+  "DishSponge": {
+   "en": [
+    "dish sponge",
+    "dishsponge",
+    "sponge"
+   ],
+   "en_plural": [
+    "dish sponges",
+    "dishsponges",
+    "sponges"
+   ],
+   "fa": [
+    "اسفنج ظرفشویی",
+    "اسفنج"
+   ],
+   "name_en": "dish sponge",
+   "name_fa": "اسفنج ظرفشویی"
+  },
+  "Drawer": {
+   "en": [
+    "drawer"
+   ],
+   "en_plural": [
+    "drawers"
+   ],
+   "fa": [
+    "کشو"
+   ],
+   "name_en": "drawer",
+   "name_fa": "کشو"
+  },
+  "Egg": {
+   "en": [
+    "egg"
+   ],
+   "en_plural": [
+    "eggs"
+   ],
+   "fa": [
+    "تخم مرغ"
+   ],
+   "name_en": "egg",
+   "name_fa": "تخم مرغ"
+  },
+  "Faucet": {
+   "en": [
+    "faucet",
+    "tap"
+   ],
+   "en_plural": [
+    "faucets",
+    "taps"
+   ],
+   "fa": [
+    "شیر آب"
+   ],
+   "name_en": "faucet",
+   "name_fa": "شیر آب"
+  },
+  "Floor": {
+   "en": [
+    "floor"
+   ],
+   "en_plural": [
+    "floors"
+   ],
+   "fa": [
+    "کف",
+    "زمین"
+   ],
+   "name_en": "floor",
+   "name_fa": "کف"
+  },
+  "Fork": {
+   "en": [
+    "fork"
+   ],
+   "en_plural": [
+    "forks"
+   ],
+   "fa": [
+    "چنگال"
+   ],
+   "name_en": "fork",
+   "name_fa": "چنگال"
+  },
+  "Fridge": {
+   "en": [
+    "fridge",
+    "refrigerator"
+   ],
+   "en_plural": [
+    "fridges",
+    "refrigerators"
+   ],
+   "fa": [
+    "یخچال"
+   ],
+   "name_en": "fridge",
+   "name_fa": "یخچال"
+  },
+  "GarbageCan": {
+   "en": [
+    "bin",
+    "garbage bin",
+    "garbage can",
+    "garbagecan",
+    "rubbish bin",
+    "trash bin",
+    "trash can"
+   ],
+   "en_plural": [
+    "bins",
+    "garbage bins",
+    "garbage cans",
+    "garbagecans",
+    "rubbish bins",
+    "trash bins",
+    "trash cans"
+   ],
+   "fa": [
+    "سطل زباله",
+    "سطل اشغال",
+    "سطل آشغال"
+   ],
+   "name_en": "garbage can",
+   "name_fa": "سطل زباله"
+  },
+  "HousePlant": {
+   "en": [
+    "house plant",
+    "houseplant",
+    "plant"
+   ],
+   "en_plural": [
+    "house plants",
+    "houseplants",
+    "plants"
+   ],
+   "fa": [
+    "گیاه"
+   ],
+   "name_en": "house plant",
+   "name_fa": "گیاه"
+  },
+  "Kettle": {
+   "en": [
+    "kettle"
+   ],
+   "en_plural": [
+    "kettles"
+   ],
+   "fa": [
+    "کتری"
+   ],
+   "name_en": "kettle",
+   "name_fa": "کتری"
+  },
+  "Lettuce": {
+   "en": [
+    "lettuce"
+   ],
+   "en_plural": [
+    "lettuces"
+   ],
+   "fa": [
+    "کاهو"
+   ],
+   "name_en": "lettuce",
+   "name_fa": "کاهو"
+  },
+  "LightSwitch": {
+   "en": [
+    "light switch",
+    "lightswitch"
+   ],
+   "en_plural": [
+    "light switches",
+    "lightswitches"
+   ],
+   "fa": [
+    "کلید برق",
+    "کلید چراغ"
+   ],
+   "name_en": "light switch",
+   "name_fa": "کلید برق"
+  },
+  "Microwave": {
+   "en": [
+    "microwave",
+    "microwave oven"
+   ],
+   "en_plural": [
+    "microwave ovens",
+    "microwaves"
+   ],
+   "fa": [
+    "مایکروویو",
+    "مایکروفر"
+   ],
+   "name_en": "microwave",
+   "name_fa": "مایکروویو"
+  },
+  "Mug": {
+   "en": [
+    "mug"
+   ],
+   "en_plural": [
+    "mugs"
+   ],
+   "fa": [
+    "لیوان",
+    "ماگ"
+   ],
+   "name_en": "mug",
+   "name_fa": "لیوان"
+  },
+  "Pan": {
+   "en": [
+    "pan"
+   ],
+   "en_plural": [
+    "pans"
+   ],
+   "fa": [
+    "تابه",
+    "ماهیتابه"
+   ],
+   "name_en": "pan",
+   "name_fa": "تابه"
+  },
+  "PaperTowelRoll": {
+   "en": [
+    "paper towel",
+    "paper towel roll",
+    "paper towels",
+    "papertowelroll"
+   ],
+   "en_plural": [
+    "paper towel rolls",
+    "paper towels",
+    "papertowelrolls"
+   ],
+   "fa": [
+    "دستمال کاغذی",
+    "حوله کاغذی"
+   ],
+   "name_en": "paper towel roll",
+   "name_fa": "دستمال کاغذی"
+  },
+  "PepperShaker": {
+   "en": [
+    "pepper",
+    "pepper shaker",
+    "peppershaker"
+   ],
+   "en_plural": [
+    "pepper shakers",
+    "peppers",
+    "peppershakers"
+   ],
+   "fa": [
+    "فلفل پاش",
+    "فلفل دان",
+    "فلفل"
+   ],
+   "name_en": "pepper shaker",
+   "name_fa": "فلفل پاش"
+  },
+  "Plate": {
+   "en": [
+    "plate"
+   ],
+   "en_plural": [
+    "plates"
+   ],
+   "fa": [
+    "بشقاب"
+   ],
+   "name_en": "plate",
+   "name_fa": "بشقاب"
+  },
+  "Pot": {
+   "en": [
+    "pot"
+   ],
+   "en_plural": [
+    "pots"
+   ],
+   "fa": [
+    "قابلمه",
+    "دیگ"
+   ],
+   "name_en": "pot",
+   "name_fa": "قابلمه"
+  },
+  "Potato": {
+   "en": [
+    "potato"
+   ],
+   "en_plural": [
+    "potatoes"
+   ],
+   "fa": [
+    "سیب زمینی"
+   ],
+   "name_en": "potato",
+   "name_fa": "سیب زمینی"
+  },
+  "SaltShaker": {
+   "en": [
+    "salt",
+    "salt shaker",
+    "saltshaker"
+   ],
+   "en_plural": [
+    "salt shakers",
+    "salts",
+    "saltshakers"
+   ],
+   "fa": [
+    "نمک پاش",
+    "نمکدان",
+    "نمک"
+   ],
+   "name_en": "salt shaker",
+   "name_fa": "نمک پاش"
+  },
+  "Shelf": {
+   "en": [
+    "shelf"
+   ],
+   "en_plural": [
+    "shelfs"
+   ],
+   "fa": [
+    "قفسه"
+   ],
+   "name_en": "shelf",
+   "name_fa": "قفسه"
+  },
+  "ShelvingUnit": {
+   "en": [
+    "shelving unit",
+    "shelvingunit"
+   ],
+   "en_plural": [
+    "shelving units",
+    "shelvingunits"
+   ],
+   "fa": [
+    "واحد قفسه",
+    "قفسه بندی"
+   ],
+   "name_en": "shelving unit",
+   "name_fa": "واحد قفسه"
+  },
+  "Sink": {
+   "en": [
+    "sink"
+   ],
+   "en_plural": [
+    "sinks"
+   ],
+   "fa": [
+    "سینک",
+    "ظرفشویی"
+   ],
+   "name_en": "sink",
+   "name_fa": "سینک"
+  },
+  "SinkBasin": {
+   "en": [
+    "basin",
+    "sink basin",
+    "sinkbasin"
+   ],
+   "en_plural": [
+    "basins",
+    "sink basins",
+    "sinkbasins"
+   ],
+   "fa": [
+    "حوضچه سینک"
+   ],
+   "name_en": "sink basin",
+   "name_fa": "حوضچه سینک"
+  },
+  "SoapBottle": {
+   "en": [
+    "dish soap",
+    "soap bottle",
+    "soap dispenser",
+    "soapbottle"
+   ],
+   "en_plural": [
+    "dish soaps",
+    "soap bottles",
+    "soap dispensers",
+    "soapbottles"
+   ],
+   "fa": [
+    "بطری صابون",
+    "صابون مایع"
+   ],
+   "name_en": "soap bottle",
+   "name_fa": "بطری صابون"
+  },
+  "Spatula": {
+   "en": [
+    "spatula"
+   ],
+   "en_plural": [
+    "spatulas"
+   ],
+   "fa": [
+    "کفگیر",
+    "اسپاتول"
+   ],
+   "name_en": "spatula",
+   "name_fa": "کفگیر"
+  },
+  "Spoon": {
+   "en": [
+    "spoon"
+   ],
+   "en_plural": [
+    "spoons"
+   ],
+   "fa": [
+    "قاشق"
+   ],
+   "name_en": "spoon",
+   "name_fa": "قاشق"
+  },
+  "Statue": {
+   "en": [
+    "statue"
+   ],
+   "en_plural": [
+    "statues"
+   ],
+   "fa": [
+    "مجسمه"
+   ],
+   "name_en": "statue",
+   "name_fa": "مجسمه"
+  },
+  "Stool": {
+   "en": [
+    "stool"
+   ],
+   "en_plural": [
+    "stools"
+   ],
+   "fa": [
+    "چهارپایه"
+   ],
+   "name_en": "stool",
+   "name_fa": "چهارپایه"
+  },
+  "StoveBurner": {
+   "en": [
+    "burner",
+    "cooktop",
+    "stove",
+    "stove burner",
+    "stoveburner"
+   ],
+   "en_plural": [
+    "burners",
+    "cooktops",
+    "stove burners",
+    "stoveburners",
+    "stoves"
+   ],
+   "fa": [
+    "اجاق",
+    "شعله اجاق"
+   ],
+   "name_en": "stove burner",
+   "name_fa": "اجاق"
+  },
+  "StoveKnob": {
+   "en": [
+    "burner knob",
+    "knob",
+    "stove knob",
+    "stoveknob"
+   ],
+   "en_plural": [
+    "burner knobs",
+    "knobs",
+    "stove knobs",
+    "stoveknobs"
+   ],
+   "fa": [
+    "دکمه اجاق",
+    "دستگیره اجاق"
+   ],
+   "name_en": "stove knob",
+   "name_fa": "دکمه اجاق"
+  },
+  "Toaster": {
+   "en": [
+    "toaster"
+   ],
+   "en_plural": [
+    "toasters"
+   ],
+   "fa": [
+    "توستر"
+   ],
+   "name_en": "toaster",
+   "name_fa": "توستر"
+  },
+  "Tomato": {
+   "en": [
+    "tomato"
+   ],
+   "en_plural": [
+    "tomatoes"
+   ],
+   "fa": [
+    "گوجه فرنگی",
+    "گوجه"
+   ],
+   "name_en": "tomato",
+   "name_fa": "گوجه فرنگی"
+  },
+  "Vase": {
+   "en": [
+    "vase"
+   ],
+   "en_plural": [
+    "vases"
+   ],
+   "fa": [
+    "گلدان"
+   ],
+   "name_en": "vase",
+   "name_fa": "گلدان"
+  },
+  "Window": {
+   "en": [
+    "window"
+   ],
+   "en_plural": [
+    "windows"
+   ],
+   "fa": [
+    "پنجره"
+   ],
+   "name_en": "window",
+   "name_fa": "پنجره"
+  },
+  "WineBottle": {
+   "en": [
+    "wine bottle",
+    "winebottle"
+   ],
+   "en_plural": [
+    "wine bottles",
+    "winebottles"
+   ],
+   "fa": [
+    "بطری شراب"
+   ],
+   "name_en": "wine bottle",
+   "name_fa": "بطری شراب"
+  }
+ },
+ "verbs": {
+  "break": {
+   "en": [
+    "break",
+    "smash"
+   ],
+   "en_ing": [
+    "breaking",
+    "smashing"
+   ],
+   "fa": [
+    "بشکن",
+    "بشکنید",
+    "شکستن"
+   ],
+   "fa_neg": [
+    "نشکن",
+    "نشکنید"
+   ]
+  },
+  "close": {
+   "en": [
+    "close",
+    "shut"
+   ],
+   "en_ing": [
+    "closing",
+    "shutting"
+   ],
+   "fa": [
+    "ببند",
+    "ببندید",
+    "بستن",
+    "بسته بکن",
+    "بسته بکنید",
+    "بسته بکنین",
+    "بسته کردن",
+    "بسته کن",
+    "بسته کنید",
+    "بسته کنین",
+    "بستهبکن",
+    "بستهبکنید",
+    "بستهبکنین",
+    "بستهکن",
+    "بستهکنید",
+    "بستهکنین"
+   ],
+   "fa_neg": [
+    "بسته نکن",
+    "بسته نکنی",
+    "بسته نکنید",
+    "بسته نکنین",
+    "بستهنکن",
+    "بستهنکنی",
+    "بستهنکنید",
+    "بستهنکنین",
+    "نبند",
+    "نبندید"
+   ]
+  },
+  "cook": {
+   "en": [
+    "cook",
+    "bake"
+   ],
+   "en_ing": [
+    "cooking",
+    "baking"
+   ],
+   "fa": [
+    "بپز",
+    "بپزید",
+    "پختن"
+   ],
+   "fa_neg": [
+    "نپز",
+    "نپزید"
+   ]
+  },
+  "drop": {
+   "en": [
+    "drop"
+   ],
+   "en_ing": [
+    "dropping"
+   ],
+   "fa": [
+    "انداختن",
+    "بیفکن",
+    "بینداز",
+    "بیندازید",
+    "رها بکن",
+    "رها بکنید",
+    "رها بکنین",
+    "رها کن",
+    "رها کنید",
+    "رها کنین",
+    "رهابکن",
+    "رهابکنید",
+    "رهابکنین",
+    "رهاکن",
+    "رهاکنید",
+    "رهاکنین"
+   ],
+   "fa_neg": [
+    "رها نکن",
+    "رها نکنی",
+    "رها نکنید",
+    "رها نکنین",
+    "رهانکن",
+    "رهانکنی",
+    "رهانکنید",
+    "رهانکنین",
+    "نینداز",
+    "نیندازید"
+   ]
+  },
+  "empty": {
+   "en": [
+    "empty out",
+    "pour out"
+   ],
+   "en_ing": [
+    "emptying out",
+    "pouring out"
+   ],
+   "fa": [
+    "خالی بکن",
+    "خالی بکنید",
+    "خالی بکنین",
+    "خالی کردن",
+    "خالی کن",
+    "خالی کنید",
+    "خالی کنین",
+    "خالیبکن",
+    "خالیبکنید",
+    "خالیبکنین",
+    "خالیکن",
+    "خالیکنید",
+    "خالیکنین"
+   ],
+   "fa_neg": [
+    "خالی نکن",
+    "خالی نکنی",
+    "خالی نکنید",
+    "خالی نکنین",
+    "خالینکن",
+    "خالینکنی",
+    "خالینکنید",
+    "خالینکنین"
+   ]
+  },
+  "fill": {
+   "en": [
+    "fill"
+   ],
+   "en_ing": [
+    "filling"
+   ],
+   "fa": [
+    "پر بکن",
+    "پر بکنید",
+    "پر بکنین",
+    "پر کردن",
+    "پر کن",
+    "پر کنید",
+    "پر کنین",
+    "پربکن",
+    "پربکنید",
+    "پربکنین",
+    "پرکن",
+    "پرکنید",
+    "پرکنین"
+   ],
+   "fa_neg": [
+    "پر نکن",
+    "پر نکنی",
+    "پر نکنید",
+    "پر نکنین",
+    "پرنکن",
+    "پرنکنی",
+    "پرنکنید",
+    "پرنکنین"
+   ]
+  },
+  "find": {
+   "en": [
+    "find",
+    "locate",
+    "search for",
+    "look for"
+   ],
+   "en_ing": [
+    "finding",
+    "locating",
+    "searching for",
+    "looking for"
+   ],
+   "fa": [
+    "بگرد",
+    "بگردید",
+    "پیدا بکن",
+    "پیدا بکنید",
+    "پیدا بکنین",
+    "پیدا کردن",
+    "پیدا کن",
+    "پیدا کنید",
+    "پیدا کنین",
+    "پیدابکن",
+    "پیدابکنید",
+    "پیدابکنین",
+    "پیداکن",
+    "پیداکنید",
+    "پیداکنین"
+   ],
+   "fa_neg": [
+    "نگرد",
+    "نگردید",
+    "پیدا نکن",
+    "پیدا نکنی",
+    "پیدا نکنید",
+    "پیدا نکنین",
+    "پیدانکن",
+    "پیدانکنی",
+    "پیدانکنید",
+    "پیدانکنین"
+   ]
+  },
+  "heat": {
+   "en": [
+    "heat",
+    "warm",
+    "heat up",
+    "warm up"
+   ],
+   "en_ing": [
+    "heating",
+    "warming",
+    "heating up",
+    "warming up"
+   ],
+   "fa": [
+    "گرم بکن",
+    "گرم بکنید",
+    "گرم بکنین",
+    "گرم کردن",
+    "گرم کن",
+    "گرم کنید",
+    "گرم کنین",
+    "گرمبکن",
+    "گرمبکنید",
+    "گرمبکنین",
+    "گرمکن",
+    "گرمکنید",
+    "گرمکنین"
+   ],
+   "fa_neg": [
+    "گرم نکن",
+    "گرم نکنی",
+    "گرم نکنید",
+    "گرم نکنین",
+    "گرمنکن",
+    "گرمنکنی",
+    "گرمنکنید",
+    "گرمنکنین"
+   ]
+  },
+  "open": {
+   "en": [
+    "open"
+   ],
+   "en_ing": [
+    "opening"
+   ],
+   "fa": [
+    "باز بکن",
+    "باز بکنید",
+    "باز بکنین",
+    "باز کردن",
+    "باز کن",
+    "باز کنید",
+    "باز کنین",
+    "بازبکن",
+    "بازبکنید",
+    "بازبکنین",
+    "بازکن",
+    "بازکنید",
+    "بازکنین"
+   ],
+   "fa_neg": [
+    "باز نکن",
+    "باز نکنی",
+    "باز نکنید",
+    "باز نکنین",
+    "بازنکن",
+    "بازنکنی",
+    "بازنکنید",
+    "بازنکنین"
+   ]
+  },
+  "pick": {
+   "en": [
+    "pick up",
+    "pick",
+    "take",
+    "grab",
+    "get",
+    "pickup",
+    "lift"
+   ],
+   "en_ing": [
+    "picking up",
+    "picking",
+    "taking",
+    "grabbing",
+    "getting",
+    "lifting"
+   ],
+   "fa": [
+    "بر دار",
+    "بردار",
+    "بردارید",
+    "برداشتن",
+    "بگیر",
+    "بگیرید",
+    "گرفتن"
+   ],
+   "fa_neg": [
+    "برندار",
+    "برندارید",
+    "نگیر",
+    "نگیرید"
+   ]
+  },
+  "put": {
+   "en": [
+    "put",
+    "place",
+    "set",
+    "store",
+    "keep"
+   ],
+   "en_ing": [
+    "putting",
+    "placing",
+    "setting",
+    "storing",
+    "keeping"
+   ],
+   "fa": [
+    "بذار",
+    "بذارید",
+    "بزار",
+    "بزارید",
+    "بنه",
+    "بگذار",
+    "بگذارید",
+    "قرار بده",
+    "قرار بدهید",
+    "قرار بدی",
+    "قرار بدین",
+    "قرار دادن",
+    "قراربده",
+    "قراربدهید",
+    "قراربدی",
+    "قراربدین",
+    "گذاشتن"
+   ],
+   "fa_neg": [
+    "قرار نده",
+    "قرار ندهید",
+    "قرار ندین",
+    "قرارنده",
+    "قرارندهید",
+    "قرارندین",
+    "نذار",
+    "نذارید",
+    "نزار",
+    "نگذار",
+    "نگذارید"
+   ]
+  },
+  "slice": {
+   "en": [
+    "slice",
+    "cut"
+   ],
+   "en_ing": [
+    "slicing",
+    "cutting"
+   ],
+   "fa": [
+    "برش بده",
+    "برش بدهید",
+    "برش بدی",
+    "برش بدین",
+    "برش دادن",
+    "برشبده",
+    "برشبدهید",
+    "برشبدی",
+    "برشبدین",
+    "خرد بکن",
+    "خرد بکنید",
+    "خرد بکنین",
+    "خرد کردن",
+    "خرد کن",
+    "خرد کنید",
+    "خرد کنین",
+    "خردبکن",
+    "خردبکنید",
+    "خردبکنین",
+    "خردکن",
+    "خردکنید",
+    "خردکنین",
+    "قطعه بکن",
+    "قطعه بکنید",
+    "قطعه بکنین",
+    "قطعه کن",
+    "قطعه کنید",
+    "قطعه کنین",
+    "قطعهبکن",
+    "قطعهبکنید",
+    "قطعهبکنین",
+    "قطعهکن",
+    "قطعهکنید",
+    "قطعهکنین"
+   ],
+   "fa_neg": [
+    "برش نده",
+    "برش ندهید",
+    "برش ندین",
+    "برشنده",
+    "برشندهید",
+    "برشندین",
+    "خرد نکن",
+    "خرد نکنی",
+    "خرد نکنید",
+    "خرد نکنین",
+    "خردنکن",
+    "خردنکنی",
+    "خردنکنید",
+    "خردنکنین",
+    "قطعه نکن",
+    "قطعه نکنی",
+    "قطعه نکنید",
+    "قطعه نکنین",
+    "قطعهنکن",
+    "قطعهنکنی",
+    "قطعهنکنید",
+    "قطعهنکنین"
+   ]
+  },
+  "toggle": {
+   "en": [
+    "turn",
+    "switch",
+    "toggle"
+   ],
+   "en_ing": [
+    "turning",
+    "switching",
+    "toggling"
+   ],
+   "fa": [],
+   "fa_neg": []
+  },
+  "toggle:off": {
+   "en": [
+    "turn off",
+    "switch off",
+    "power off"
+   ],
+   "en_ing": [
+    "turning off",
+    "switching off"
+   ],
+   "fa": [
+    "خاموش بکن",
+    "خاموش بکنید",
+    "خاموش بکنین",
+    "خاموش کردن",
+    "خاموش کن",
+    "خاموش کنید",
+    "خاموش کنین",
+    "خاموشبکن",
+    "خاموشبکنید",
+    "خاموشبکنین",
+    "خاموشکن",
+    "خاموشکنید",
+    "خاموشکنین"
+   ],
+   "fa_neg": [
+    "خاموش نکن",
+    "خاموش نکنی",
+    "خاموش نکنید",
+    "خاموش نکنین",
+    "خاموشنکن",
+    "خاموشنکنی",
+    "خاموشنکنید",
+    "خاموشنکنین"
+   ]
+  },
+  "toggle:on": {
+   "en": [
+    "turn on",
+    "switch on",
+    "power on"
+   ],
+   "en_ing": [
+    "turning on",
+    "switching on"
+   ],
+   "fa": [
+    "روشن بکن",
+    "روشن بکنید",
+    "روشن بکنین",
+    "روشن کردن",
+    "روشن کن",
+    "روشن کنید",
+    "روشن کنین",
+    "روشنبکن",
+    "روشنبکنید",
+    "روشنبکنین",
+    "روشنکن",
+    "روشنکنید",
+    "روشنکنین"
+   ],
+   "fa_neg": [
+    "روشن نکن",
+    "روشن نکنی",
+    "روشن نکنید",
+    "روشن نکنین",
+    "روشننکن",
+    "روشننکنی",
+    "روشننکنید",
+    "روشننکنین"
+   ]
+  },
+  "wash": {
+   "en": [
+    "wash",
+    "clean",
+    "rinse"
+   ],
+   "en_ing": [
+    "washing",
+    "cleaning",
+    "rinsing"
+   ],
+   "fa": [
+    "بشور",
+    "بشوی",
+    "بشویید",
+    "تمیز بکن",
+    "تمیز بکنید",
+    "تمیز بکنین",
+    "تمیز کن",
+    "تمیز کنید",
+    "تمیز کنین",
+    "تمیزبکن",
+    "تمیزبکنید",
+    "تمیزبکنین",
+    "تمیزکن",
+    "تمیزکنید",
+    "تمیزکنین",
+    "شستن"
+   ],
+   "fa_neg": [
+    "تمیز نکن",
+    "تمیز نکنی",
+    "تمیز نکنید",
+    "تمیز نکنین",
+    "تمیزنکن",
+    "تمیزنکنی",
+    "تمیزنکنید",
+    "تمیزنکنین",
+    "نشور",
+    "نشوی",
+    "نشویید"
+   ]
+  }
+ },
+ "version": "1"
+}

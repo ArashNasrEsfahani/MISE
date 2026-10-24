@@ -1,0 +1,4013 @@
+{
+ "schema": "pkg.procs/1",
+ "version": "procs-1",
+ "kitchen": "*",
+ "vocab": {
+  "tool_types": [
+   "ButterKnife",
+   "Spatula",
+   "Fork",
+   "Spoon",
+   "Ladle"
+  ],
+  "appliance_types": [
+   "Microwave",
+   "CoffeeMachine",
+   "Toaster",
+   "StoveBurner",
+   "StoveKnob",
+   "Faucet",
+   "SinkBasin",
+   "Sink"
+  ],
+  "receptacle_types": [
+   "Fridge",
+   "Microwave",
+   "Cabinet",
+   "Drawer",
+   "GarbageCan",
+   "SinkBasin",
+   "Sink",
+   "CounterTop",
+   "Plate",
+   "Bowl",
+   "Pot",
+   "Pan",
+   "Toaster",
+   "CoffeeMachine",
+   "StoveBurner",
+   "DiningTable",
+   "Shelf"
+  ]
+ },
+ "categories": {
+  "food": [
+   "Apple",
+   "Bread",
+   "Egg",
+   "Lettuce",
+   "Potato",
+   "Tomato"
+  ],
+  "sliceable": [
+   "Apple",
+   "Bread",
+   "Lettuce",
+   "Potato",
+   "Tomato"
+  ],
+  "dish": [
+   "Bowl",
+   "Cup",
+   "Mug",
+   "Plate",
+   "Pan",
+   "Pot",
+   "Fork",
+   "Spoon",
+   "ButterKnife",
+   "Spatula",
+   "Kettle"
+  ],
+  "fillable": [
+   "Bottle",
+   "Bowl",
+   "Cup",
+   "Kettle",
+   "Mug",
+   "Pot",
+   "WineBottle"
+  ],
+  "vessel": [
+   "Pot",
+   "Pan"
+  ],
+  "breakable": [
+   "Egg",
+   "Mug",
+   "Plate",
+   "Cup",
+   "Bowl",
+   "Vase",
+   "WineBottle"
+  ],
+  "dirtyable": [
+   "Bowl",
+   "Cup",
+   "Mug",
+   "Plate",
+   "Pan",
+   "Pot"
+  ],
+  "openable": [
+   "Fridge",
+   "Cabinet",
+   "Drawer",
+   "Microwave"
+  ],
+  "toggleable": [
+   "CoffeeMachine",
+   "Faucet",
+   "LightSwitch",
+   "Microwave",
+   "StoveKnob",
+   "Toaster"
+  ],
+  "stowable": [
+   "Apple",
+   "Bread",
+   "Egg",
+   "Lettuce",
+   "Potato",
+   "Tomato",
+   "Bowl",
+   "Cup",
+   "Mug",
+   "Plate",
+   "Pan",
+   "Pot",
+   "Fork",
+   "Spoon",
+   "ButterKnife",
+   "Spatula",
+   "SaltShaker",
+   "PepperShaker",
+   "SoapBottle",
+   "DishSponge",
+   "Kettle"
+  ],
+  "discardable": [
+   "Apple",
+   "Bread",
+   "Egg",
+   "Lettuce",
+   "Potato",
+   "Tomato",
+   "Cup",
+   "Mug",
+   "Plate",
+   "Bowl",
+   "PaperTowelRoll"
+  ],
+  "receptacle": [
+   "Fridge",
+   "Microwave",
+   "Cabinet",
+   "Drawer",
+   "GarbageCan",
+   "SinkBasin",
+   "Sink",
+   "CounterTop",
+   "Plate",
+   "Bowl",
+   "Pot",
+   "Pan",
+   "Toaster",
+   "CoffeeMachine",
+   "StoveBurner",
+   "DiningTable",
+   "Shelf"
+  ],
+  "pickupable": [
+   "Apple",
+   "Bread",
+   "Egg",
+   "Lettuce",
+   "Potato",
+   "Tomato",
+   "Bowl",
+   "Cup",
+   "Mug",
+   "Plate",
+   "Pan",
+   "Pot",
+   "Fork",
+   "Spoon",
+   "ButterKnife",
+   "Spatula",
+   "SaltShaker",
+   "PepperShaker",
+   "SoapBottle",
+   "DishSponge",
+   "Kettle",
+   "Bottle",
+   "WineBottle",
+   "Book",
+   "Vase"
+  ]
+ },
+ "verb_ops": {
+  "pick": [
+   "pickup",
+   "pick_and_place"
+  ],
+  "put": [
+   "put_in",
+   "pick_and_place"
+  ],
+  "open": [
+   "open"
+  ],
+  "close": [
+   "close"
+  ],
+  "slice": [
+   "slice"
+  ],
+  "toggle": [
+   "toggle_on",
+   "toggle_off"
+  ],
+  "find": [
+   "search_for",
+   "go_to"
+  ],
+  "heat": [
+   "heat"
+  ],
+  "cook": [
+   "cook"
+  ],
+  "wash": [
+   "wash"
+  ],
+  "fill": [
+   "fill"
+  ],
+  "empty": [
+   "empty"
+  ],
+  "drop": [
+   "drop"
+  ],
+  "break": [
+   "break"
+  ],
+  "clean": [
+   "clean"
+  ],
+  "dirty": [
+   "dirty"
+  ]
+ },
+ "afford": {
+  "cut": {
+   "tools": [
+    "ButterKnife"
+   ],
+   "appliances": [],
+   "recipe": "proc:slice-with-butterknife",
+   "tuned_on": [
+    "g-l3-tool-cut",
+    "g-l3-tool-flip",
+    "g-l3-cutlery-sink"
+   ],
+   "en": "To cut or slice something use the ButterKnife: pickup ButterKnife first.",
+   "request": "You were asked only for something to cut with: pickup ButterKnife and stop there. Do not slice or cut anything unless the command also says to."
+  },
+  "flip": {
+   "tools": [
+    "Spatula"
+   ],
+   "appliances": [],
+   "recipe": null,
+   "tuned_on": [
+    "g-l3-tool-cut",
+    "g-l3-tool-flip",
+    "g-l3-cutlery-sink"
+   ],
+   "en": "To flip or turn food over use the Spatula: pickup Spatula first.",
+   "request": "You were asked only for something to flip with: pickup Spatula and stop there. Do not flip anything unless the command also says to."
+  },
+  "spread": {
+   "tools": [
+    "ButterKnife"
+   ],
+   "appliances": [],
+   "recipe": null,
+   "tuned_on": [
+    "g-l3-tool-cut",
+    "g-l3-tool-flip",
+    "g-l3-cutlery-sink"
+   ],
+   "en": "To spread something use the ButterKnife: pickup ButterKnife first.",
+   "request": "You were asked only for something to spread with: pickup ButterKnife and stop there. Do not spread anything unless the command also says to."
+  },
+  "scoop": {
+   "tools": [
+    "Spoon"
+   ],
+   "appliances": [],
+   "recipe": null,
+   "tuned_on": [
+    "g-l3-tool-cut",
+    "g-l3-tool-flip",
+    "g-l3-cutlery-sink"
+   ],
+   "en": "To scoop or stir liquid or soup use the Spoon: pickup Spoon first.",
+   "request": "You were asked only for something to scoop or stir with: pickup Spoon and stop there. Do not scoop or stir anything unless the command also says to."
+  },
+  "stab": {
+   "tools": [
+    "Fork"
+   ],
+   "appliances": [],
+   "recipe": null,
+   "tuned_on": [
+    "g-l3-tool-cut",
+    "g-l3-tool-flip",
+    "g-l3-cutlery-sink"
+   ],
+   "en": "To pick food up on a prong use the Fork (pickup Fork first); the Spoon is for liquid, the Spatula for flipping.",
+   "request": "You were asked only for something to spear food with: pickup Fork and stop there. Do not spear anything unless the command also says to."
+  },
+  "chill": {
+   "tools": [],
+   "appliances": [
+    "Fridge"
+   ],
+   "recipe": "proc:chill",
+   "tuned_on": [
+    "g-l3-chilled-apple"
+   ],
+   "en": "To chill or keep food cold put it in the Fridge, then close Fridge."
+  },
+  "heat": {
+   "tools": [],
+   "appliances": [
+    "Microwave",
+    "StoveBurner"
+   ],
+   "recipe": "proc:heat-then-place",
+   "tuned_on": [
+    "g-l2-microwave-run-egg",
+    "g-l2-microwave-run-potato"
+   ],
+   "en": "To warm food use heat (the Microwave); a Pot or Pan is warmed on the StoveBurner with its StoveKnob."
+  },
+  "boil": {
+   "tools": [],
+   "appliances": [
+    "StoveBurner"
+   ],
+   "recipe": "proc:stove-pan",
+   "en": "To boil or fry use a Pot or Pan on the StoveBurner, then toggle_on StoveKnob."
+  },
+  "toast": {
+   "tools": [],
+   "appliances": [
+    "Toaster"
+   ],
+   "recipe": "proc:toast",
+   "en": "To toast bread put it in the Toaster, then toggle_on Toaster."
+  },
+  "brew": {
+   "tools": [],
+   "appliances": [
+    "CoffeeMachine"
+   ],
+   "recipe": "proc:coffee",
+   "en": "To make coffee put a Mug in the CoffeeMachine, then toggle_on CoffeeMachine."
+  },
+  "wash": {
+   "tools": [],
+   "appliances": [
+    "SinkBasin",
+    "Faucet"
+   ],
+   "recipe": "proc:wash-dish",
+   "en": "To wash a dish use wash (SinkBasin and Faucet); it switches the water itself."
+  },
+  "discard": {
+   "tools": [],
+   "appliances": [
+    "GarbageCan"
+   ],
+   "recipe": "proc:discard",
+   "en": "To throw something away put it in the GarbageCan."
+  }
+ },
+ "afford_words": {
+  "cut": "cut",
+  "slice": "cut",
+  "chop": "cut",
+  "dice": "cut",
+  "carve": "cut",
+  "trim": "cut",
+  "flip": "flip",
+  "turn over": "flip",
+  "toss": "flip",
+  "spread": "spread",
+  "butter": "spread",
+  "scoop": "scoop",
+  "stir": "scoop",
+  "ladle": "scoop",
+  "serve soup": "scoop",
+  "stab": "stab",
+  "spear": "stab",
+  "chill": "chill",
+  "cool": "chill",
+  "cold": "chill",
+  "refrigerate": "chill",
+  "freeze": "chill",
+  "keep cold": "chill",
+  "keep fresh": "chill",
+  "heat": "heat",
+  "warm": "heat",
+  "reheat": "heat",
+  "microwave": "heat",
+  "cook": "heat",
+  "bake": "heat",
+  "boil": "boil",
+  "fry": "boil",
+  "simmer": "boil",
+  "saute": "boil",
+  "toast": "toast",
+  "brew": "brew",
+  "coffee": "brew",
+  "wash": "wash",
+  "rinse": "wash",
+  "scrub": "wash",
+  "discard": "discard",
+  "throw": "discard",
+  "trash": "discard",
+  "bin": "discard"
+ },
+ "holding_rules": [
+  {
+   "when": "holding_target",
+   "en": "X is already in your hand: do not pickup it again; go straight to put_in R (not pick_and_place).",
+   "action": "skip_pickup_use_put_in"
+  },
+  {
+   "when": "holding_other",
+   "en": "Your hand holds something else: put it down first (put_in on a receptacle you have seen, else drop), then pickup or pick_and_place X.",
+   "action": "release_first"
+  },
+  {
+   "when": "location_unknown",
+   "en": "pickup and pick_and_place walk and search by themselves; use search_for X first only when the command is to find it.",
+   "action": "search_only_if_asked"
+  }
+ ],
+ "entries": [
+  {
+   "schema": "pkg.proc/1",
+   "id": "proc:tool-pickup",
+   "op": "pickup",
+   "composite": false,
+   "triggers": [
+    "pick",
+    "pickup"
+   ],
+   "applies_to": {
+    "categories": [],
+    "types": []
+   },
+   "requires": [
+    {
+     "cond": "the hand is empty",
+     "kind": "executor",
+     "tool": "pickup",
+     "field": "hand",
+     "value": "take"
+    }
+   ],
+   "realism": [],
+   "effects": [
+    {
+     "hand": "?item ends in hand"
+    }
+   ],
+   "route": [
+    {
+     "action": "pickup",
+     "object": "?item",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "slots": {
+    "?item": {
+     "category": "pickupable",
+     "samples": [
+      "Apple",
+      "Mug",
+      "Fork"
+     ]
+    }
+   },
+   "hand_end": "held",
+   "then": null,
+   "confuse": [],
+   "text": {
+    "en": "pickup: walks to the object and picks it up; the hand must be empty first. To carry it to a place use pick_and_place.",
+    "fa": "pickup: به شیء می‌رود و آن را برمی‌دارد؛ دست باید از قبل خالی باشد. برای بردن آن به جای دیگر از pick_and_place استفاده کنید."
+   },
+   "lex": {
+    "en": "pick up take grab",
+    "fa": "برداشتن بردار"
+   },
+   "keys": {
+    "types": [],
+    "ops": [
+     "pick",
+     "pickup"
+    ],
+    "rels": []
+   },
+   "tail": [],
+   "goal": [],
+   "polarity": null,
+   "needs_dest": false,
+   "source": "domain spec + honest_skills@ed9b543f21d8cf8a + step4_gemma@53209052e697d242",
+   "provenance": {
+    "support": [],
+    "spec_only": true
+   },
+   "verified": {
+    "static": false,
+    "wsl": null
+   },
+   "active": true,
+   "prio": 100
+  },
+  {
+   "schema": "pkg.proc/1",
+   "id": "proc:tool-put-in",
+   "op": "put_in",
+   "composite": false,
+   "triggers": [
+    "put",
+    "put_in"
+   ],
+   "applies_to": {
+    "categories": [],
+    "types": []
+   },
+   "requires": [
+    {
+     "cond": "something is held",
+     "kind": "executor",
+     "tool": "put_in",
+     "field": "requires_held",
+     "value": true
+    }
+   ],
+   "realism": [],
+   "effects": [
+    {
+     "hand": "ends empty"
+    }
+   ],
+   "route": [
+    {
+     "action": "pickup",
+     "object": "?item",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "put_in",
+     "object": "?place",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "slots": {
+    "?item": {
+     "category": "stowable",
+     "samples": [
+      "Apple",
+      "Mug"
+     ]
+    },
+    "?place": {
+     "category": "receptacle",
+     "samples": [
+      "CounterTop",
+      "SinkBasin"
+     ]
+    }
+   },
+   "hand_end": "empty",
+   "then": null,
+   "confuse": [],
+   "text": {
+    "en": "put_in R: puts the HELD object into or onto the receptacle R (opens R if closed, and may leave its door open). The object field is the receptacle, not the held item; with nothing held it is an error.",
+    "fa": "put_in R: شیئی را که در دست دارید داخل یا روی R می‌گذارد (اگر بسته باشد باز می‌کند). فیلد object خود گیرنده است نه شیء در دست؛ اگر دست خالی باشد خطا است."
+   },
+   "lex": {
+    "en": "put place set down",
+    "fa": "گذاشتن بگذار"
+   },
+   "keys": {
+    "types": [],
+    "ops": [
+     "put",
+     "put_in"
+    ],
+    "rels": []
+   },
+   "tail": [],
+   "goal": [],
+   "polarity": null,
+   "needs_dest": false,
+   "source": "domain spec + honest_skills@ed9b543f21d8cf8a + step4_gemma@53209052e697d242",
+   "provenance": {
+    "support": [],
+    "spec_only": true
+   },
+   "verified": {
+    "static": false,
+    "wsl": null
+   },
+   "active": true,
+   "prio": 101
+  },
+  {
+   "schema": "pkg.proc/1",
+   "id": "proc:tool-pick-and-place",
+   "op": "pick_and_place",
+   "composite": false,
+   "triggers": [
+    "put",
+    "pick",
+    "pick_and_place"
+   ],
+   "applies_to": {
+    "categories": [],
+    "types": []
+   },
+   "requires": [
+    {
+     "cond": "the hand is empty or holds X",
+     "kind": "executor",
+     "tool": "pick_and_place",
+     "field": "hand",
+     "value": "take-release"
+    }
+   ],
+   "realism": [],
+   "effects": [
+    {
+     "hand": "ends empty"
+    }
+   ],
+   "route": [
+    {
+     "action": "pick_and_place",
+     "object": "?item",
+     "to": "?place",
+     "arg": null
+    }
+   ],
+   "slots": {
+    "?item": {
+     "category": "stowable",
+     "samples": [
+      "Apple",
+      "Mug"
+     ]
+    },
+    "?place": {
+     "category": "receptacle",
+     "samples": [
+      "CounterTop",
+      "Fridge"
+     ]
+    }
+   },
+   "hand_end": "empty",
+   "then": null,
+   "confuse": [],
+   "text": {
+    "en": "pick_and_place X to R: picks X up and puts it into or onto R (it walks, searches and opens R itself, and may leave its door open); the hand is empty afterwards. Closing R is a separate step. If X is already in your hand use put_in R.",
+    "fa": "pick_and_place X to R: X را برمی‌دارد و داخل یا روی R می‌گذارد (خودش راه می‌رود، جستجو می‌کند و R را باز می‌کند)؛ بعد از آن دست خالی است. بستن R گام جدا است. اگر X در دست است از put_in R استفاده کنید."
+   },
+   "lex": {
+    "en": "put place move carry store",
+    "fa": "گذاشتن بگذار ببر"
+   },
+   "keys": {
+    "types": [],
+    "ops": [
+     "pick",
+     "pick_and_place",
+     "put"
+    ],
+    "rels": []
+   },
+   "tail": [],
+   "goal": [],
+   "polarity": null,
+   "needs_dest": false,
+   "source": "domain spec + honest_skills@ed9b543f21d8cf8a + step4_gemma@53209052e697d242",
+   "provenance": {
+    "support": [],
+    "spec_only": true
+   },
+   "verified": {
+    "static": false,
+    "wsl": null
+   },
+   "active": true,
+   "prio": 102
+  },
+  {
+   "schema": "pkg.proc/1",
+   "id": "proc:tool-open",
+   "op": "open",
+   "composite": false,
+   "triggers": [
+    "open",
+    "open"
+   ],
+   "applies_to": {
+    "categories": [],
+    "types": []
+   },
+   "requires": [],
+   "realism": [],
+   "effects": [
+    {
+     "state": "open",
+     "type": "?target"
+    }
+   ],
+   "route": [
+    {
+     "action": "open",
+     "object": "?target",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "slots": {
+    "?target": {
+     "category": "openable",
+     "samples": [
+      "Fridge",
+      "Cabinet"
+     ]
+    }
+   },
+   "hand_end": "same",
+   "then": null,
+   "confuse": [],
+   "text": {
+    "en": "open X: opens a fridge, cabinet, drawer or microwave; it stays open until a close X step. pick_and_place and put_in already open a closed target themselves.",
+    "fa": "open X: یخچال، کابینت، کشو یا مایکروویو را باز می‌کند. pick_and_place و put_in هدف بسته را خودشان باز می‌کنند."
+   },
+   "lex": {
+    "en": "open",
+    "fa": "باز کردن باز کن"
+   },
+   "keys": {
+    "types": [],
+    "ops": [
+     "open"
+    ],
+    "rels": [
+     "effect:open"
+    ]
+   },
+   "tail": [],
+   "goal": [],
+   "polarity": null,
+   "needs_dest": false,
+   "source": "domain spec + honest_skills@ed9b543f21d8cf8a + step4_gemma@53209052e697d242",
+   "provenance": {
+    "support": [],
+    "spec_only": true
+   },
+   "verified": {
+    "static": false,
+    "wsl": null
+   },
+   "active": true,
+   "prio": 103
+  },
+  {
+   "schema": "pkg.proc/1",
+   "id": "proc:tool-close",
+   "op": "close",
+   "composite": false,
+   "triggers": [
+    "close",
+    "close"
+   ],
+   "applies_to": {
+    "categories": [],
+    "types": []
+   },
+   "requires": [],
+   "realism": [],
+   "effects": [
+    {
+     "state": "closed",
+     "type": "?target"
+    }
+   ],
+   "route": [
+    {
+     "action": "close",
+     "object": "?target",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "slots": {
+    "?target": {
+     "category": "openable",
+     "samples": [
+      "Fridge",
+      "Drawer"
+     ]
+    }
+   },
+   "hand_end": "same",
+   "then": null,
+   "confuse": [],
+   "text": {
+    "en": "close X: closes it. It is its own step: add it when the command says to close something or to leave it closed.",
+    "fa": "close X: آن را می‌بندد. این یک گام جدا است: وقتی دستور بستن یا بسته گذاشتن می‌خواهد آن را اضافه کنید."
+   },
+   "lex": {
+    "en": "close shut",
+    "fa": "بستن ببند"
+   },
+   "keys": {
+    "types": [],
+    "ops": [
+     "close"
+    ],
+    "rels": [
+     "effect:closed"
+    ]
+   },
+   "tail": [],
+   "goal": [],
+   "polarity": null,
+   "needs_dest": false,
+   "source": "domain spec + honest_skills@ed9b543f21d8cf8a + step4_gemma@53209052e697d242",
+   "provenance": {
+    "support": [],
+    "spec_only": true
+   },
+   "verified": {
+    "static": false,
+    "wsl": null
+   },
+   "active": true,
+   "prio": 104
+  },
+  {
+   "schema": "pkg.proc/1",
+   "id": "proc:tool-toggle-on",
+   "op": "toggle_on",
+   "composite": false,
+   "triggers": [
+    "toggle",
+    "toggle_on"
+   ],
+   "applies_to": {
+    "categories": [],
+    "types": []
+   },
+   "requires": [],
+   "realism": [],
+   "effects": [
+    {
+     "state": "on",
+     "type": "?target"
+    }
+   ],
+   "route": [
+    {
+     "action": "toggle_on",
+     "object": "?target",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "slots": {
+    "?target": {
+     "category": "toggleable",
+     "samples": [
+      "Faucet",
+      "Toaster"
+     ]
+    }
+   },
+   "hand_end": "same",
+   "then": null,
+   "confuse": [],
+   "text": {
+    "en": "toggle_on X: switches on a faucet, stove knob, coffee machine, toaster, microwave or light. A burner is switched through its StoveKnob. A Microwave only switches on while its door is closed.",
+    "fa": "toggle_on X: شیر آب، knob اجاق، دستگاه قهوه، توستر، مایکروویو یا چراغ را روشن می‌کند. شعله از راه StoveKnob روشن می‌شود. مایکروویو فقط با درِ بسته روشن می‌شود: اول close Microwave."
+   },
+   "lex": {
+    "en": "turn on switch on start",
+    "fa": "روشن کردن روشن کن"
+   },
+   "keys": {
+    "types": [],
+    "ops": [
+     "toggle",
+     "toggle_on"
+    ],
+    "rels": [
+     "effect:on"
+    ]
+   },
+   "tail": [],
+   "goal": [],
+   "polarity": null,
+   "needs_dest": false,
+   "source": "domain spec + honest_skills@ed9b543f21d8cf8a + step4_gemma@53209052e697d242",
+   "provenance": {
+    "support": [],
+    "spec_only": true
+   },
+   "verified": {
+    "static": false,
+    "wsl": null
+   },
+   "active": true,
+   "prio": 105
+  },
+  {
+   "schema": "pkg.proc/1",
+   "id": "proc:tool-toggle-off",
+   "op": "toggle_off",
+   "composite": false,
+   "triggers": [
+    "toggle",
+    "toggle_off"
+   ],
+   "applies_to": {
+    "categories": [],
+    "types": []
+   },
+   "requires": [],
+   "realism": [],
+   "effects": [
+    {
+     "state": "off",
+     "type": "?target"
+    }
+   ],
+   "route": [
+    {
+     "action": "toggle_off",
+     "object": "?target",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "slots": {
+    "?target": {
+     "category": "toggleable",
+     "samples": [
+      "Faucet",
+      "Toaster"
+     ]
+    }
+   },
+   "hand_end": "same",
+   "then": null,
+   "confuse": [],
+   "text": {
+    "en": "toggle_off X: switches it off again (faucet, stove knob, coffee machine, toaster, microwave, light).",
+    "fa": "toggle_off X: آن را دوباره خاموش می‌کند (شیر آب، knob اجاق، دستگاه قهوه، توستر، مایکروویو، چراغ)."
+   },
+   "lex": {
+    "en": "turn off switch off stop",
+    "fa": "خاموش کردن خاموش کن"
+   },
+   "keys": {
+    "types": [],
+    "ops": [
+     "toggle",
+     "toggle_off"
+    ],
+    "rels": [
+     "effect:off"
+    ]
+   },
+   "tail": [],
+   "goal": [],
+   "polarity": null,
+   "needs_dest": false,
+   "source": "domain spec + honest_skills@ed9b543f21d8cf8a + step4_gemma@53209052e697d242",
+   "provenance": {
+    "support": [],
+    "spec_only": true
+   },
+   "verified": {
+    "static": false,
+    "wsl": null
+   },
+   "active": true,
+   "prio": 106
+  },
+  {
+   "schema": "pkg.proc/1",
+   "id": "proc:tool-slice",
+   "op": "slice",
+   "composite": false,
+   "triggers": [
+    "slice",
+    "slice"
+   ],
+   "applies_to": {
+    "categories": [
+     "sliceable"
+    ],
+    "types": []
+   },
+   "requires": [
+    {
+     "cond": "the ButterKnife is in hand",
+     "kind": "executor",
+     "tool": "slice",
+     "field": "requires_tool",
+     "value": [
+      "ButterKnife"
+     ]
+    }
+   ],
+   "realism": [],
+   "effects": [
+    {
+     "state": "sliced",
+     "type": "?food"
+    }
+   ],
+   "route": [
+    {
+     "action": "slice",
+     "object": "?food",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "slots": {
+    "?food": {
+     "category": "sliceable",
+     "samples": [
+      "Apple",
+      "Tomato"
+     ]
+    }
+   },
+   "hand_end": "same",
+   "then": null,
+   "confuse": [],
+   "text": {
+    "en": "slice X: slices it. The executor needs the ButterKnife in hand; pickup ButterKnife first.",
+    "fa": "slice X: آن را برش می‌دهد. اجراکننده کارد کره‌خوری را در دست لازم دارد؛ اول pickup ButterKnife."
+   },
+   "lex": {
+    "en": "cut slice chop",
+    "fa": "برش بریدن ببر"
+   },
+   "keys": {
+    "types": [],
+    "ops": [
+     "slice"
+    ],
+    "rels": [
+     "effect:sliced"
+    ]
+   },
+   "tail": [],
+   "goal": [],
+   "polarity": null,
+   "needs_dest": false,
+   "source": "domain spec + honest_skills@ed9b543f21d8cf8a + step4_gemma@53209052e697d242",
+   "provenance": {
+    "support": [],
+    "spec_only": true
+   },
+   "verified": {
+    "static": false,
+    "wsl": null
+   },
+   "active": true,
+   "prio": 107
+  },
+  {
+   "schema": "pkg.proc/1",
+   "id": "proc:tool-break",
+   "op": "break",
+   "composite": false,
+   "triggers": [
+    "break",
+    "break"
+   ],
+   "applies_to": {
+    "categories": [
+     "breakable"
+    ],
+    "types": []
+   },
+   "requires": [],
+   "realism": [],
+   "effects": [
+    {
+     "state": "broken",
+     "type": "?target"
+    }
+   ],
+   "route": [
+    {
+     "action": "break",
+     "object": "?target",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "slots": {
+    "?target": {
+     "category": "breakable",
+     "samples": [
+      "Egg",
+      "Mug"
+     ]
+    }
+   },
+   "hand_end": "same",
+   "then": null,
+   "confuse": [],
+   "text": {
+    "en": "break X: breaks or cracks it (for example an Egg, Mug or Plate).",
+    "fa": "break X: آن را می‌شکند (مثلا Egg، Mug یا Plate)."
+   },
+   "lex": {
+    "en": "break crack smash",
+    "fa": "شکستن بشکن"
+   },
+   "keys": {
+    "types": [],
+    "ops": [
+     "break"
+    ],
+    "rels": [
+     "effect:broken"
+    ]
+   },
+   "tail": [],
+   "goal": [],
+   "polarity": null,
+   "needs_dest": false,
+   "source": "domain spec + honest_skills@ed9b543f21d8cf8a + step4_gemma@53209052e697d242",
+   "provenance": {
+    "support": [],
+    "spec_only": true
+   },
+   "verified": {
+    "static": false,
+    "wsl": null
+   },
+   "active": true,
+   "prio": 108
+  },
+  {
+   "schema": "pkg.proc/1",
+   "id": "proc:tool-dirty",
+   "op": "dirty",
+   "composite": false,
+   "triggers": [
+    "dirty",
+    "dirty"
+   ],
+   "applies_to": {
+    "categories": [
+     "dirtyable"
+    ],
+    "types": []
+   },
+   "requires": [],
+   "realism": [],
+   "effects": [
+    {
+     "state": "dirty",
+     "type": "?target"
+    }
+   ],
+   "route": [
+    {
+     "action": "dirty",
+     "object": "?target",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "slots": {
+    "?target": {
+     "category": "dirtyable",
+     "samples": [
+      "Plate",
+      "Mug"
+     ]
+    }
+   },
+   "hand_end": "same",
+   "then": null,
+   "confuse": [],
+   "text": {
+    "en": "dirty X: makes it dirty.",
+    "fa": "dirty X: آن را کثیف می‌کند."
+   },
+   "lex": {
+    "en": "dirty soil",
+    "fa": "کثیف کردن کثیف کن"
+   },
+   "keys": {
+    "types": [],
+    "ops": [
+     "dirty"
+    ],
+    "rels": [
+     "effect:dirty"
+    ]
+   },
+   "tail": [],
+   "goal": [],
+   "polarity": null,
+   "needs_dest": false,
+   "source": "domain spec + honest_skills@ed9b543f21d8cf8a + step4_gemma@53209052e697d242",
+   "provenance": {
+    "support": [],
+    "spec_only": true
+   },
+   "verified": {
+    "static": false,
+    "wsl": null
+   },
+   "active": true,
+   "prio": 109
+  },
+  {
+   "schema": "pkg.proc/1",
+   "id": "proc:tool-clean",
+   "op": "clean",
+   "composite": false,
+   "triggers": [
+    "clean",
+    "clean"
+   ],
+   "applies_to": {
+    "categories": [
+     "dirtyable"
+    ],
+    "types": []
+   },
+   "requires": [],
+   "realism": [],
+   "effects": [
+    {
+     "state": "clean",
+     "type": "?target"
+    }
+   ],
+   "route": [
+    {
+     "action": "clean",
+     "object": "?target",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "slots": {
+    "?target": {
+     "category": "dirtyable",
+     "samples": [
+      "Plate",
+      "Mug"
+     ]
+    }
+   },
+   "hand_end": "same",
+   "then": null,
+   "confuse": [
+    {
+     "with": "wash",
+     "note": "wash carries the item to the sink and rinses it there; clean acts in place"
+    }
+   ],
+   "text": {
+    "en": "clean X: cleans it where it is. To rinse something in the sink use wash instead.",
+    "fa": "clean X: آن را همان‌جا که هست تمیز می‌کند. برای شستن در سینک از wash استفاده کنید."
+   },
+   "lex": {
+    "en": "clean scrub wipe",
+    "fa": "تمیز کردن تمیز کن"
+   },
+   "keys": {
+    "types": [],
+    "ops": [
+     "clean"
+    ],
+    "rels": [
+     "confuse:wash",
+     "effect:clean"
+    ]
+   },
+   "tail": [],
+   "goal": [],
+   "polarity": null,
+   "needs_dest": false,
+   "source": "domain spec + honest_skills@ed9b543f21d8cf8a + step4_gemma@53209052e697d242",
+   "provenance": {
+    "support": [],
+    "spec_only": true
+   },
+   "verified": {
+    "static": false,
+    "wsl": null
+   },
+   "active": true,
+   "prio": 110
+  },
+  {
+   "schema": "pkg.proc/1",
+   "id": "proc:tool-fill",
+   "op": "fill",
+   "composite": false,
+   "triggers": [
+    "fill",
+    "fill"
+   ],
+   "applies_to": {
+    "categories": [
+     "fillable"
+    ],
+    "types": []
+   },
+   "requires": [
+    {
+     "cond": "arg is one of water, coffee, wine",
+     "kind": "executor",
+     "tool": "fill",
+     "field": "arg",
+     "value": "liquid"
+    }
+   ],
+   "realism": [],
+   "effects": [
+    {
+     "state": "filled",
+     "type": "?container"
+    }
+   ],
+   "route": [
+    {
+     "action": "fill",
+     "object": "?container",
+     "to": null,
+     "arg": "?liquid"
+    }
+   ],
+   "slots": {
+    "?container": {
+     "category": "fillable",
+     "samples": [
+      "Mug",
+      "Cup"
+     ]
+    },
+    "?liquid": {
+     "category": "liquid",
+     "samples": [
+      "water",
+      "coffee"
+     ]
+    }
+   },
+   "hand_end": "same",
+   "then": null,
+   "confuse": [],
+   "text": {
+    "en": "fill X arg: fills the container with a liquid; arg is water, coffee or wine (water when omitted).",
+    "fa": "fill X arg: ظرف را با مایع پر می‌کند؛ arg یکی از water، coffee یا wine است (پیش‌فرض water)."
+   },
+   "lex": {
+    "en": "fill pour water coffee",
+    "fa": "پر کردن پر کن"
+   },
+   "keys": {
+    "types": [],
+    "ops": [
+     "fill"
+    ],
+    "rels": [
+     "effect:filled"
+    ]
+   },
+   "tail": [],
+   "goal": [],
+   "polarity": null,
+   "needs_dest": false,
+   "source": "domain spec + honest_skills@ed9b543f21d8cf8a + step4_gemma@53209052e697d242",
+   "provenance": {
+    "support": [],
+    "spec_only": true
+   },
+   "verified": {
+    "static": false,
+    "wsl": null
+   },
+   "active": true,
+   "prio": 111
+  },
+  {
+   "schema": "pkg.proc/1",
+   "id": "proc:tool-empty",
+   "op": "empty",
+   "composite": false,
+   "triggers": [
+    "empty",
+    "empty"
+   ],
+   "applies_to": {
+    "categories": [
+     "fillable"
+    ],
+    "types": []
+   },
+   "requires": [],
+   "realism": [],
+   "effects": [
+    {
+     "state": "empty",
+     "type": "?container"
+    }
+   ],
+   "route": [
+    {
+     "action": "empty",
+     "object": "?container",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "slots": {
+    "?container": {
+     "category": "fillable",
+     "samples": [
+      "Mug",
+      "Cup"
+     ]
+    }
+   },
+   "hand_end": "same",
+   "then": null,
+   "confuse": [],
+   "text": {
+    "en": "empty X: pours the liquid out of the container.",
+    "fa": "empty X: مایع داخل ظرف را خالی می‌کند."
+   },
+   "lex": {
+    "en": "empty pour out",
+    "fa": "خالی کردن خالی کن"
+   },
+   "keys": {
+    "types": [],
+    "ops": [
+     "empty"
+    ],
+    "rels": [
+     "effect:empty"
+    ]
+   },
+   "tail": [],
+   "goal": [],
+   "polarity": null,
+   "needs_dest": false,
+   "source": "domain spec + honest_skills@ed9b543f21d8cf8a + step4_gemma@53209052e697d242",
+   "provenance": {
+    "support": [],
+    "spec_only": true
+   },
+   "verified": {
+    "static": false,
+    "wsl": null
+   },
+   "active": true,
+   "prio": 112
+  },
+  {
+   "schema": "pkg.proc/1",
+   "id": "proc:tool-heat",
+   "op": "heat",
+   "composite": false,
+   "triggers": [
+    "heat",
+    "heat"
+   ],
+   "applies_to": {
+    "categories": [
+     "food"
+    ],
+    "types": []
+   },
+   "requires": [
+    {
+     "cond": "a Microwave exists",
+     "kind": "executor",
+     "fixture": "Microwave"
+    },
+    {
+     "cond": "the hand is empty or holds the food",
+     "kind": "executor",
+     "tool": "heat",
+     "field": "hand",
+     "value": "take"
+    }
+   ],
+   "realism": [],
+   "effects": [
+    {
+     "state": "hot",
+     "type": "?food"
+    },
+    {
+     "hand": "?food ends in hand"
+    }
+   ],
+   "route": [
+    {
+     "action": "heat",
+     "object": "?food",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "slots": {
+    "?food": {
+     "category": "food",
+     "samples": [
+      "Egg",
+      "Potato"
+     ]
+    }
+   },
+   "hand_end": "held",
+   "then": "to place it somewhere, follow with put_in or pick_and_place",
+   "confuse": [
+    {
+     "with": "cook",
+     "note": "cook also uses the Microwave and leaves the food in hand; 'put X in the microwave and close it' is pick_and_place + close, not heat"
+    }
+   ],
+   "text": {
+    "en": "heat X: runs the whole microwave cycle itself (in, door closed, on, out again). Use it only when the command is to warm or heat the food. It is not 'put X in the microwave': X does not stay inside.",
+    "fa": "heat X: کل دور مایکروویو را خودش انجام می‌دهد (گذاشتن، بستن در، روشن کردن، بیرون آوردن). فقط برای دستور گرم کردن غذا. این «X را در مایکروویو بگذار» نیست: X داخل نمی‌ماند."
+   },
+   "lex": {
+    "en": "heat warm reheat microwave",
+    "fa": "گرم کردن گرم کن مایکروویو"
+   },
+   "keys": {
+    "types": [
+     "Microwave"
+    ],
+    "ops": [
+     "heat"
+    ],
+    "rels": [
+     "appliance:Microwave",
+     "confuse:cook",
+     "effect:hot"
+    ]
+   },
+   "tail": [],
+   "goal": [],
+   "polarity": null,
+   "needs_dest": false,
+   "source": "domain spec + honest_skills@ed9b543f21d8cf8a + step4_gemma@53209052e697d242",
+   "provenance": {
+    "support": [],
+    "spec_only": true
+   },
+   "verified": {
+    "static": false,
+    "wsl": null
+   },
+   "active": true,
+   "prio": 113
+  },
+  {
+   "schema": "pkg.proc/1",
+   "id": "proc:tool-cook",
+   "op": "cook",
+   "composite": false,
+   "triggers": [
+    "cook",
+    "cook"
+   ],
+   "applies_to": {
+    "categories": [
+     "food"
+    ],
+    "types": []
+   },
+   "requires": [
+    {
+     "cond": "a Microwave exists",
+     "kind": "executor",
+     "fixture": "Microwave"
+    },
+    {
+     "cond": "the hand is empty or holds the food",
+     "kind": "executor",
+     "tool": "cook",
+     "field": "hand",
+     "value": "take"
+    }
+   ],
+   "realism": [],
+   "effects": [
+    {
+     "state": "cooked",
+     "type": "?food"
+    },
+    {
+     "hand": "?food ends in hand"
+    }
+   ],
+   "route": [
+    {
+     "action": "cook",
+     "object": "?food",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "slots": {
+    "?food": {
+     "category": "food",
+     "samples": [
+      "Egg",
+      "Potato"
+     ]
+    }
+   },
+   "hand_end": "held",
+   "then": "to place it somewhere, follow with put_in or pick_and_place",
+   "confuse": [
+    {
+     "with": "heat",
+     "note": "heat and cook share one routine here; only the goal word differs"
+    }
+   ],
+   "text": {
+    "en": "cook X: the same whole microwave cycle as heat (put in, close, switch on, take out). Use it only when the command is to cook the food; it does not leave X in the microwave.",
+    "fa": "cook X: همان دور کامل مایکروویو مثل heat (گذاشتن، بستن در، روشن کردن، بیرون آوردن). فقط وقتی دستور پختن غذا است از آن استفاده کنید؛ X را در مایکروویو نمی‌گذارد."
+   },
+   "lex": {
+    "en": "cook bake",
+    "fa": "پختن بپز"
+   },
+   "keys": {
+    "types": [
+     "Microwave"
+    ],
+    "ops": [
+     "cook"
+    ],
+    "rels": [
+     "appliance:Microwave",
+     "confuse:heat",
+     "effect:cooked"
+    ]
+   },
+   "tail": [],
+   "goal": [],
+   "polarity": null,
+   "needs_dest": false,
+   "source": "domain spec + honest_skills@ed9b543f21d8cf8a + step4_gemma@53209052e697d242",
+   "provenance": {
+    "support": [],
+    "spec_only": true
+   },
+   "verified": {
+    "static": false,
+    "wsl": null
+   },
+   "active": true,
+   "prio": 114
+  },
+  {
+   "schema": "pkg.proc/1",
+   "id": "proc:tool-wash",
+   "op": "wash",
+   "composite": false,
+   "triggers": [
+    "wash",
+    "wash"
+   ],
+   "applies_to": {
+    "categories": [
+     "dish"
+    ],
+    "types": []
+   },
+   "requires": [
+    {
+     "cond": "a SinkBasin exists",
+     "kind": "executor",
+     "fixture": "SinkBasin"
+    },
+    {
+     "cond": "a Faucet exists",
+     "kind": "executor",
+     "fixture": "Faucet"
+    },
+    {
+     "cond": "the hand is empty or holds the item",
+     "kind": "executor",
+     "tool": "wash",
+     "field": "hand",
+     "value": "take-release"
+    }
+   ],
+   "realism": [],
+   "effects": [
+    {
+     "state": "clean",
+     "type": "?item"
+    },
+    {
+     "hand": "ends empty"
+    }
+   ],
+   "route": [
+    {
+     "action": "wash",
+     "object": "?item",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "slots": {
+    "?item": {
+     "category": "dish",
+     "samples": [
+      "Plate",
+      "Mug"
+     ]
+    }
+   },
+   "hand_end": "empty",
+   "then": null,
+   "confuse": [
+    {
+     "with": "clean",
+     "note": "clean acts in place; wash carries the item to the sink"
+    }
+   ],
+   "text": {
+    "en": "wash X: rinses the item in the sink (SinkBasin and Faucet) and leaves it there; the hand is empty afterwards.",
+    "fa": "wash X: شیء را در سینک (SinkBasin و Faucet) می‌شوید و همان‌جا رها می‌کند؛ بعد از آن دست خالی است."
+   },
+   "lex": {
+    "en": "wash rinse dishes",
+    "fa": "شستن بشوی"
+   },
+   "keys": {
+    "types": [
+     "Faucet",
+     "SinkBasin"
+    ],
+    "ops": [
+     "wash"
+    ],
+    "rels": [
+     "appliance:Faucet",
+     "appliance:SinkBasin",
+     "confuse:clean",
+     "effect:clean"
+    ]
+   },
+   "tail": [],
+   "goal": [],
+   "polarity": null,
+   "needs_dest": false,
+   "source": "domain spec + honest_skills@ed9b543f21d8cf8a + step4_gemma@53209052e697d242",
+   "provenance": {
+    "support": [],
+    "spec_only": true
+   },
+   "verified": {
+    "static": false,
+    "wsl": null
+   },
+   "active": true,
+   "prio": 115
+  },
+  {
+   "schema": "pkg.proc/1",
+   "id": "proc:tool-go-to",
+   "op": "go_to",
+   "composite": false,
+   "triggers": [
+    "find",
+    "go_to"
+   ],
+   "applies_to": {
+    "categories": [],
+    "types": []
+   },
+   "requires": [],
+   "realism": [],
+   "effects": [],
+   "route": [
+    {
+     "action": "go_to",
+     "object": "?target",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "slots": {
+    "?target": {
+     "category": "pickupable",
+     "samples": [
+      "Apple",
+      "Mug"
+     ]
+    }
+   },
+   "hand_end": "same",
+   "then": null,
+   "confuse": [],
+   "text": {
+    "en": "go_to X: walks to the object and looks at it.",
+    "fa": "go_to X: به شیء می‌رود و به آن نگاه می‌کند."
+   },
+   "lex": {
+    "en": "go walk to",
+    "fa": "رفتن برو"
+   },
+   "keys": {
+    "types": [],
+    "ops": [
+     "find",
+     "go_to"
+    ],
+    "rels": []
+   },
+   "tail": [],
+   "goal": [],
+   "polarity": null,
+   "needs_dest": false,
+   "source": "domain spec + honest_skills@ed9b543f21d8cf8a + step4_gemma@53209052e697d242",
+   "provenance": {
+    "support": [],
+    "spec_only": true
+   },
+   "verified": {
+    "static": false,
+    "wsl": null
+   },
+   "active": true,
+   "prio": 116
+  },
+  {
+   "schema": "pkg.proc/1",
+   "id": "proc:tool-search-for",
+   "op": "search_for",
+   "composite": false,
+   "triggers": [
+    "find",
+    "search_for"
+   ],
+   "applies_to": {
+    "categories": [],
+    "types": []
+   },
+   "requires": [],
+   "realism": [],
+   "effects": [],
+   "route": [
+    {
+     "action": "search_for",
+     "object": "?target",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "slots": {
+    "?target": {
+     "category": "pickupable",
+     "samples": [
+      "Apple",
+      "Mug"
+     ]
+    }
+   },
+   "hand_end": "same",
+   "then": null,
+   "confuse": [],
+   "text": {
+    "en": "search_for X: looks for the object in likely places and opens closed containers; it succeeds only if the object is actually seen.",
+    "fa": "search_for X: شیء را در جاهای محتمل می‌گردد و محفظه‌های بسته را باز می‌کند؛ فقط وقتی موفق است که شیء واقعا دیده شود."
+   },
+   "lex": {
+    "en": "find search look for locate",
+    "fa": "پیدا کردن پیدا کن بگرد"
+   },
+   "keys": {
+    "types": [],
+    "ops": [
+     "find",
+     "search_for"
+    ],
+    "rels": []
+   },
+   "tail": [],
+   "goal": [],
+   "polarity": null,
+   "needs_dest": false,
+   "source": "domain spec + honest_skills@ed9b543f21d8cf8a + step4_gemma@53209052e697d242",
+   "provenance": {
+    "support": [],
+    "spec_only": true
+   },
+   "verified": {
+    "static": false,
+    "wsl": null
+   },
+   "active": true,
+   "prio": 117
+  },
+  {
+   "schema": "pkg.proc/1",
+   "id": "proc:tool-drop",
+   "op": "drop",
+   "composite": false,
+   "triggers": [
+    "drop",
+    "drop"
+   ],
+   "applies_to": {
+    "categories": [],
+    "types": []
+   },
+   "requires": [
+    {
+     "cond": "something is held",
+     "kind": "executor",
+     "tool": "drop",
+     "field": "requires_held",
+     "value": true
+    }
+   ],
+   "realism": [],
+   "effects": [
+    {
+     "hand": "ends empty"
+    }
+   ],
+   "route": [
+    {
+     "action": "pickup",
+     "object": "?item",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "drop",
+     "object": null,
+     "to": null,
+     "arg": null
+    }
+   ],
+   "slots": {
+    "?item": {
+     "category": "pickupable",
+     "samples": [
+      "Apple",
+      "Mug"
+     ]
+    }
+   },
+   "hand_end": "empty",
+   "then": null,
+   "confuse": [],
+   "text": {
+    "en": "drop: lets go of what you are holding (needs a held object).",
+    "fa": "drop: چیزی را که در دست دارید رها می‌کند (باید شیئی در دست باشد)."
+   },
+   "lex": {
+    "en": "drop let go release",
+    "fa": "رها کردن رها کن"
+   },
+   "keys": {
+    "types": [],
+    "ops": [
+     "drop"
+    ],
+    "rels": []
+   },
+   "tail": [],
+   "goal": [],
+   "polarity": null,
+   "needs_dest": false,
+   "source": "domain spec + honest_skills@ed9b543f21d8cf8a + step4_gemma@53209052e697d242",
+   "provenance": {
+    "support": [],
+    "spec_only": true
+   },
+   "verified": {
+    "static": false,
+    "wsl": null
+   },
+   "active": true,
+   "prio": 118
+  },
+  {
+   "schema": "pkg.proc/1",
+   "id": "proc:tool-close-all",
+   "op": "close_all",
+   "composite": false,
+   "triggers": [
+    "close",
+    "close_all"
+   ],
+   "applies_to": {
+    "categories": [],
+    "types": []
+   },
+   "requires": [],
+   "realism": [],
+   "effects": [],
+   "route": [
+    {
+     "action": "close_all",
+     "object": null,
+     "to": null,
+     "arg": null
+    }
+   ],
+   "slots": {},
+   "hand_end": "same",
+   "then": null,
+   "confuse": [],
+   "text": {
+    "en": "close_all: closes every container you have seen open.",
+    "fa": "close_all: هر محفظه‌ای را که باز دیده‌اید می‌بندد."
+   },
+   "lex": {
+    "en": "close all tidy",
+    "fa": "بستن همه"
+   },
+   "keys": {
+    "types": [],
+    "ops": [
+     "close",
+     "close_all"
+    ],
+    "rels": []
+   },
+   "tail": [],
+   "goal": [],
+   "polarity": null,
+   "needs_dest": false,
+   "source": "domain spec + honest_skills@ed9b543f21d8cf8a + step4_gemma@53209052e697d242",
+   "provenance": {
+    "support": [],
+    "spec_only": true
+   },
+   "verified": {
+    "static": false,
+    "wsl": null
+   },
+   "active": true,
+   "prio": 119
+  },
+  {
+   "schema": "pkg.proc/1",
+   "id": "proc:tool-crouch",
+   "op": "crouch",
+   "composite": false,
+   "triggers": [
+    "crouch"
+   ],
+   "applies_to": {
+    "categories": [],
+    "types": []
+   },
+   "requires": [],
+   "realism": [],
+   "effects": [],
+   "route": [
+    {
+     "action": "crouch",
+     "object": null,
+     "to": null,
+     "arg": null
+    }
+   ],
+   "slots": {},
+   "hand_end": "same",
+   "then": null,
+   "confuse": [],
+   "text": {
+    "en": "crouch: crouches to see low places; stand undoes it.",
+    "fa": "crouch: خم می‌شود تا جاهای پایین را ببیند؛ stand آن را برمی‌گرداند."
+   },
+   "lex": {
+    "en": "crouch low",
+    "fa": "خم شدن"
+   },
+   "keys": {
+    "types": [],
+    "ops": [
+     "crouch"
+    ],
+    "rels": []
+   },
+   "tail": [],
+   "goal": [],
+   "polarity": null,
+   "needs_dest": false,
+   "source": "domain spec + honest_skills@ed9b543f21d8cf8a + step4_gemma@53209052e697d242",
+   "provenance": {
+    "support": [],
+    "spec_only": true
+   },
+   "verified": {
+    "static": false,
+    "wsl": null
+   },
+   "active": true,
+   "prio": 120
+  },
+  {
+   "schema": "pkg.proc/1",
+   "id": "proc:tool-stand",
+   "op": "stand",
+   "composite": false,
+   "triggers": [
+    "stand"
+   ],
+   "applies_to": {
+    "categories": [],
+    "types": []
+   },
+   "requires": [],
+   "realism": [],
+   "effects": [],
+   "route": [
+    {
+     "action": "stand",
+     "object": null,
+     "to": null,
+     "arg": null
+    }
+   ],
+   "slots": {},
+   "hand_end": "same",
+   "then": null,
+   "confuse": [],
+   "text": {
+    "en": "stand: stands up again after crouch.",
+    "fa": "stand: بعد از crouch دوباره می‌ایستد."
+   },
+   "lex": {
+    "en": "stand up",
+    "fa": "ایستادن"
+   },
+   "keys": {
+    "types": [],
+    "ops": [
+     "stand"
+    ],
+    "rels": []
+   },
+   "tail": [],
+   "goal": [],
+   "polarity": null,
+   "needs_dest": false,
+   "source": "domain spec + honest_skills@ed9b543f21d8cf8a + step4_gemma@53209052e697d242",
+   "provenance": {
+    "support": [],
+    "spec_only": true
+   },
+   "verified": {
+    "static": false,
+    "wsl": null
+   },
+   "active": true,
+   "prio": 121
+  },
+  {
+   "schema": "pkg.proc/1",
+   "id": "proc:slice-with-butterknife",
+   "op": "slice",
+   "composite": true,
+   "triggers": [
+    "slice"
+   ],
+   "applies_to": {
+    "categories": [
+     "sliceable"
+    ],
+    "types": [
+     "ButterKnife"
+    ]
+   },
+   "requires": [
+    {
+     "cond": "the hand is empty to take the ButterKnife",
+     "kind": "executor",
+     "tool": "pickup",
+     "field": "hand",
+     "value": "take"
+    },
+    {
+     "cond": "the ButterKnife is in hand",
+     "kind": "executor",
+     "tool": "slice",
+     "field": "requires_tool",
+     "value": [
+      "ButterKnife"
+     ]
+    }
+   ],
+   "realism": [],
+   "effects": [
+    {
+     "state": "sliced",
+     "type": "?food"
+    },
+    {
+     "hand": "ButterKnife stays in hand"
+    }
+   ],
+   "route": [
+    {
+     "action": "pickup",
+     "object": "ButterKnife",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "slice",
+     "object": "?food",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "slots": {
+    "?food": {
+     "category": "sliceable",
+     "samples": [
+      "Apple",
+      "Tomato",
+      "Potato"
+     ]
+    }
+   },
+   "hand_end": "held",
+   "then": null,
+   "confuse": [],
+   "text": {
+    "en": "To slice: pickup ButterKnife, then slice the food.",
+    "fa": "برای برش: اول pickup ButterKnife، بعد slice روی غذا."
+   },
+   "lex": {
+    "en": "slice cut chop salad butter",
+    "fa": "برش بریدن سالاد کره‌خوری"
+   },
+   "keys": {
+    "types": [
+     "ButterKnife"
+    ],
+    "ops": [
+     "slice"
+    ],
+    "rels": [
+     "effect:sliced"
+    ]
+   },
+   "tail": [],
+   "goal": [],
+   "polarity": null,
+   "needs_dest": false,
+   "source": "domain spec + honest_skills@ed9b543f21d8cf8a + step4_gemma@53209052e697d242",
+   "provenance": {
+    "support": [
+     "g-l2-slice-apple-potato",
+     "g-l2-slice-bread-tomato",
+     "g-l2-slice-potato-tomato",
+     "g-l2-slice-tomato-lettuce",
+     "g-l3-salad"
+    ],
+    "spec_only": false
+   },
+   "verified": {
+    "static": false,
+    "wsl": null
+   },
+   "active": true,
+   "prio": 10
+  },
+  {
+   "schema": "pkg.proc/1",
+   "id": "proc:heat-then-place",
+   "op": "heat",
+   "composite": true,
+   "triggers": [
+    "heat",
+    "cook"
+   ],
+   "applies_to": {
+    "categories": [
+     "food"
+    ],
+    "types": [
+     "Microwave"
+    ]
+   },
+   "requires": [
+    {
+     "cond": "a Microwave exists",
+     "kind": "executor",
+     "fixture": "Microwave"
+    },
+    {
+     "cond": "heat leaves the food in hand",
+     "kind": "executor",
+     "tool": "heat",
+     "field": "hand",
+     "value": "take"
+    }
+   ],
+   "realism": [],
+   "effects": [
+    {
+     "state": "hot",
+     "type": "?food"
+    },
+    {
+     "hand": "ends empty"
+    }
+   ],
+   "route": [
+    {
+     "action": "heat",
+     "object": "?food",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "pick_and_place",
+     "object": "?food",
+     "to": "?place",
+     "arg": null
+    }
+   ],
+   "slots": {
+    "?food": {
+     "category": "food",
+     "samples": [
+      "Egg",
+      "Potato",
+      "Tomato"
+     ]
+    },
+    "?place": {
+     "category": "receptacle",
+     "samples": [
+      "Plate",
+      "Bowl",
+      "CounterTop"
+     ]
+    }
+   },
+   "hand_end": "empty",
+   "then": null,
+   "confuse": [
+    {
+     "with": "cook",
+     "note": "heat and cook share one routine; a command to put food in the microwave and close it is not a heat"
+    }
+   ],
+   "text": {
+    "en": "To warm food and then place it: heat the food (it does the whole microwave cycle), then pick_and_place it to the place.",
+    "fa": "برای گرم کردن و بعد گذاشتن غذا: heat روی غذا (کل دور مایکروویو را خودش انجام می‌دهد)، بعد pick_and_place به مقصد."
+   },
+   "lex": {
+    "en": "heat warm microwave place plate bowl",
+    "fa": "گرم کردن مایکروویو بشقاب کاسه"
+   },
+   "keys": {
+    "types": [
+     "Microwave"
+    ],
+    "ops": [
+     "cook",
+     "heat"
+    ],
+    "rels": [
+     "appliance:Microwave",
+     "confuse:cook",
+     "effect:hot"
+    ]
+   },
+   "tail": [],
+   "goal": [],
+   "polarity": null,
+   "needs_dest": true,
+   "source": "domain spec + honest_skills@ed9b543f21d8cf8a + step4_gemma@53209052e697d242",
+   "provenance": {
+    "support": [
+     "g-l2-heat-egg-bowl",
+     "g-l2-heat-potato-plate",
+     "g-l2-heat-apple-plate",
+     "g-l2-heat-bread-counter-top",
+     "g-l2-heat-potato-counter-top",
+     "g-l2-heat-tomato-plate",
+     "g-l3-breakfast"
+    ],
+    "spec_only": false
+   },
+   "verified": {
+    "static": false,
+    "wsl": null
+   },
+   "active": true,
+   "prio": 11
+  },
+  {
+   "schema": "pkg.proc/1",
+   "id": "proc:microwave-put-close",
+   "op": "pick_and_place",
+   "composite": true,
+   "triggers": [
+    "put"
+   ],
+   "applies_to": {
+    "categories": [],
+    "types": [
+     "Microwave"
+    ]
+   },
+   "requires": [
+    {
+     "cond": "a Microwave exists",
+     "kind": "executor",
+     "fixture": "Microwave"
+    },
+    {
+     "cond": "pick_and_place leaves the hand empty",
+     "kind": "executor",
+     "tool": "pick_and_place",
+     "field": "hand",
+     "value": "take-release"
+    }
+   ],
+   "realism": [],
+   "effects": [
+    {
+     "state": "closed",
+     "type": "Microwave"
+    },
+    {
+     "hand": "ends empty"
+    }
+   ],
+   "route": [
+    {
+     "action": "pick_and_place",
+     "object": "?item",
+     "to": "Microwave",
+     "arg": null
+    },
+    {
+     "action": "close",
+     "object": "Microwave",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "slots": {
+    "?item": {
+     "category": "stowable",
+     "samples": [
+      "Apple",
+      "Mug",
+      "Bread"
+     ]
+    }
+   },
+   "hand_end": "empty",
+   "then": null,
+   "confuse": [
+    {
+     "with": "heat",
+     "note": "heat/cook warm the food and return it to your hand; this only stores it"
+    },
+    {
+     "with": "cook",
+     "note": "heat/cook warm the food and return it to your hand; this only stores it"
+    }
+   ],
+   "text": {
+    "en": "To put something in the Microwave: pick_and_place it to Microwave, then close Microwave. This is not heat: heat takes the food out again.",
+    "fa": "برای گذاشتن چیزی در Microwave: pick_and_place به Microwave، بعد close Microwave. این heat نیست: heat غذا را دوباره بیرون می‌آورد."
+   },
+   "lex": {
+    "en": "put microwave close store",
+    "fa": "گذاشتن مایکروویو ببند"
+   },
+   "keys": {
+    "types": [
+     "Microwave"
+    ],
+    "ops": [
+     "close",
+     "put"
+    ],
+    "rels": [
+     "appliance:Microwave",
+     "confuse:cook",
+     "confuse:heat",
+     "effect:closed"
+    ]
+   },
+   "tail": [],
+   "goal": [],
+   "polarity": null,
+   "needs_dest": false,
+   "source": "domain spec + honest_skills@ed9b543f21d8cf8a + step4_gemma@53209052e697d242",
+   "provenance": {
+    "support": [
+     "g-l2-microwave-apple",
+     "g-l2-microwave-bread",
+     "g-l2-microwave-egg",
+     "g-l2-microwave-mug",
+     "g-l2-microwave-potato",
+     "g-l2-microwave-tomato",
+     "g-l2-microwave-run-bread",
+     "g-l2-microwave-run-egg",
+     "g-l2-microwave-run-potato"
+    ],
+    "spec_only": false
+   },
+   "verified": {
+    "static": false,
+    "wsl": null
+   },
+   "active": true,
+   "prio": 12
+  },
+  {
+   "schema": "pkg.proc/1",
+   "id": "proc:microwave-run",
+   "op": "toggle_on",
+   "composite": true,
+   "triggers": [
+    "toggle"
+   ],
+   "applies_to": {
+    "categories": [],
+    "types": [
+     "Microwave"
+    ]
+   },
+   "requires": [
+    {
+     "cond": "a Microwave exists",
+     "kind": "executor",
+     "fixture": "Microwave"
+    },
+    {
+     "cond": "pick_and_place leaves the hand empty",
+     "kind": "executor",
+     "tool": "pick_and_place",
+     "field": "hand",
+     "value": "take-release"
+    }
+   ],
+   "realism": [],
+   "effects": [
+    {
+     "state": "on",
+     "type": "Microwave"
+    },
+    {
+     "state": "closed",
+     "type": "Microwave"
+    },
+    {
+     "hand": "ends empty"
+    }
+   ],
+   "route": [
+    {
+     "action": "pick_and_place",
+     "object": "?item",
+     "to": "Microwave",
+     "arg": null
+    },
+    {
+     "action": "close",
+     "object": "Microwave",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "toggle_on",
+     "object": "Microwave",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "slots": {
+    "?item": {
+     "category": "stowable",
+     "samples": [
+      "Egg",
+      "Potato",
+      "Bread"
+     ]
+    }
+   },
+   "hand_end": "empty",
+   "then": null,
+   "confuse": [
+    {
+     "with": "heat",
+     "note": "heat does the whole cycle and takes the food out; this leaves it inside"
+    }
+   ],
+   "text": {
+    "en": "To run the Microwave with something inside: pick_and_place it to Microwave, close Microwave, then toggle_on Microwave (close first). The food stays inside; do not take it out unless the command says to (then: toggle_off Microwave, open Microwave, pickup it). Done when it is inside, the door is closed and it is on.",
+    "fa": "برای اجرای Microwave با چیزی داخل: pick_and_place به Microwave، close Microwave، toggle_on Microwave. غذا داخل می‌ماند؛ فقط اگر دستور گفت بیرون بیاورید (toggle_off، open، pickup). تمام شد: داخل، در بسته، روشن."
+   },
+   "lex": {
+    "en": "microwave run turn on switch on start close put",
+    "fa": "مایکروویو روشن کن ببند"
+   },
+   "keys": {
+    "types": [
+     "Microwave"
+    ],
+    "ops": [
+     "close",
+     "put",
+     "toggle"
+    ],
+    "rels": [
+     "appliance:Microwave",
+     "confuse:heat",
+     "effect:closed",
+     "effect:on"
+    ]
+   },
+   "tail": [
+    {
+     "action": "toggle_off",
+     "object": "Microwave",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "open",
+     "object": "Microwave",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "pickup",
+     "object": "?item",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "?item",
+     "key": "parentReceptacles",
+     "contains": "Microwave"
+    },
+    {
+     "type": "Microwave",
+     "key": "isOpen",
+     "value": false
+    },
+    {
+     "type": "Microwave",
+     "key": "isToggled",
+     "value": true
+    }
+   ],
+   "polarity": "on",
+   "needs_dest": false,
+   "source": "domain spec + honest_skills@ed9b543f21d8cf8a + step4_gemma@53209052e697d242",
+   "provenance": {
+    "support": [
+     "g-l2-microwave-run-bread",
+     "g-l2-microwave-run-egg",
+     "g-l2-microwave-run-potato"
+    ],
+    "spec_only": false
+   },
+   "verified": {
+    "static": false,
+    "wsl": null
+   },
+   "active": true,
+   "prio": 12
+  },
+  {
+   "schema": "pkg.proc/1",
+   "id": "proc:faucet-run",
+   "op": "toggle_on",
+   "composite": true,
+   "triggers": [
+    "toggle"
+   ],
+   "applies_to": {
+    "categories": [],
+    "types": [
+     "Faucet"
+    ]
+   },
+   "requires": [
+    {
+     "cond": "a Faucet exists",
+     "kind": "executor",
+     "fixture": "Faucet"
+    }
+   ],
+   "realism": [],
+   "effects": [
+    {
+     "state": "on",
+     "type": "Faucet"
+    }
+   ],
+   "route": [
+    {
+     "action": "toggle_on",
+     "object": "Faucet",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "slots": {},
+   "hand_end": "same",
+   "then": null,
+   "confuse": [
+    {
+     "with": "wash",
+     "note": "wash runs the Faucet itself"
+    }
+   ],
+   "text": {
+    "en": "To run the water: toggle_on Faucet; toggle_off Faucet stops it. wash already switches the Faucet on and off itself, so do not add it to a wash.",
+    "fa": "برای باز کردن آب: toggle_on Faucet؛ toggle_off Faucet آن را می‌بندد. wash خودش Faucet را روشن و خاموش می‌کند، پس آن را به wash اضافه نکنید."
+   },
+   "lex": {
+    "en": "faucet water tap run turn on",
+    "fa": "شیر آب باز کن"
+   },
+   "keys": {
+    "types": [
+     "Faucet"
+    ],
+    "ops": [
+     "toggle"
+    ],
+    "rels": [
+     "appliance:Faucet",
+     "confuse:wash",
+     "effect:on"
+    ]
+   },
+   "tail": [
+    {
+     "action": "toggle_off",
+     "object": "Faucet",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [],
+   "polarity": null,
+   "needs_dest": false,
+   "source": "domain spec + honest_skills@ed9b543f21d8cf8a + step4_gemma@53209052e697d242",
+   "provenance": {
+    "support": [],
+    "spec_only": true
+   },
+   "verified": {
+    "static": false,
+    "wsl": null
+   },
+   "active": true,
+   "prio": 12
+  },
+  {
+   "schema": "pkg.proc/1",
+   "id": "proc:chill",
+   "op": "pick_and_place",
+   "composite": true,
+   "triggers": [
+    "put"
+   ],
+   "applies_to": {
+    "categories": [],
+    "types": [
+     "Fridge"
+    ]
+   },
+   "requires": [
+    {
+     "cond": "a Fridge exists",
+     "kind": "executor",
+     "fixture": "Fridge"
+    },
+    {
+     "cond": "pick_and_place leaves the hand empty",
+     "kind": "executor",
+     "tool": "pick_and_place",
+     "field": "hand",
+     "value": "take-release"
+    }
+   ],
+   "realism": [],
+   "effects": [
+    {
+     "state": "closed",
+     "type": "Fridge"
+    },
+    {
+     "hand": "ends empty"
+    }
+   ],
+   "route": [
+    {
+     "action": "pick_and_place",
+     "object": "?food",
+     "to": "Fridge",
+     "arg": null
+    },
+    {
+     "action": "close",
+     "object": "Fridge",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "slots": {
+    "?food": {
+     "category": "stowable",
+     "samples": [
+      "Apple",
+      "Bread",
+      "Tomato"
+     ]
+    }
+   },
+   "hand_end": "empty",
+   "then": null,
+   "confuse": [],
+   "text": {
+    "en": "To chill food: pick_and_place it to Fridge, then close Fridge.",
+    "fa": "برای سرد نگه داشتن غذا: pick_and_place به Fridge، بعد close Fridge."
+   },
+   "lex": {
+    "en": "put fridge cold chill store groceries close",
+    "fa": "گذاشتن یخچال سرد ببند"
+   },
+   "keys": {
+    "types": [
+     "Fridge"
+    ],
+    "ops": [
+     "close",
+     "put"
+    ],
+    "rels": [
+     "effect:closed",
+     "requires:Fridge"
+    ]
+   },
+   "tail": [],
+   "goal": [],
+   "polarity": null,
+   "needs_dest": false,
+   "source": "domain spec + honest_skills@ed9b543f21d8cf8a + step4_gemma@53209052e697d242",
+   "provenance": {
+    "support": [
+     "g-l2-fridge-apple",
+     "g-l2-fridge-bread",
+     "g-l2-fridge-lettuce",
+     "g-l2-fridge-potato",
+     "g-l2-fridge-tomato",
+     "g-l3-groceries",
+     "g-l2-find-place-bread-fridge",
+     "g-l3-chilled-apple"
+    ],
+    "spec_only": false
+   },
+   "verified": {
+    "static": false,
+    "wsl": null
+   },
+   "active": true,
+   "prio": 13
+  },
+  {
+   "schema": "pkg.proc/1",
+   "id": "proc:put-away-close",
+   "op": "pick_and_place",
+   "composite": true,
+   "triggers": [
+    "put"
+   ],
+   "applies_to": {
+    "categories": [],
+    "types": [
+     "Cabinet",
+     "Drawer"
+    ]
+   },
+   "requires": [
+    {
+     "cond": "pick_and_place leaves the hand empty",
+     "kind": "executor",
+     "tool": "pick_and_place",
+     "field": "hand",
+     "value": "take-release"
+    }
+   ],
+   "realism": [],
+   "effects": [
+    {
+     "state": "closed",
+     "type": "?container"
+    },
+    {
+     "hand": "ends empty"
+    }
+   ],
+   "route": [
+    {
+     "action": "pick_and_place",
+     "object": "?item",
+     "to": "?container",
+     "arg": null
+    },
+    {
+     "action": "close",
+     "object": "?container",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "slots": {
+    "?item": {
+     "category": "stowable",
+     "samples": [
+      "Bowl",
+      "SaltShaker",
+      "Spatula"
+     ]
+    },
+    "?container": {
+     "category": "openable",
+     "samples": [
+      "Cabinet",
+      "Drawer"
+     ]
+    }
+   },
+   "hand_end": "empty",
+   "then": null,
+   "confuse": [],
+   "text": {
+    "en": "To put something away in a Cabinet or Drawer: pick_and_place it there, then close it.",
+    "fa": "برای جمع کردن چیزی در Cabinet یا Drawer: pick_and_place به آن‌جا، بعد آن را ببندید."
+   },
+   "lex": {
+    "en": "put away store cabinet drawer close tidy",
+    "fa": "جمع کردن کابینت کشو ببند"
+   },
+   "keys": {
+    "types": [
+     "Cabinet",
+     "Drawer"
+    ],
+    "ops": [
+     "close",
+     "put"
+    ],
+    "rels": [
+     "effect:closed"
+    ]
+   },
+   "tail": [],
+   "goal": [],
+   "polarity": null,
+   "needs_dest": false,
+   "source": "domain spec + honest_skills@ed9b543f21d8cf8a + step4_gemma@53209052e697d242",
+   "provenance": {
+    "support": [
+     "g-l2-cabinet-bowl",
+     "g-l2-cabinet-pepper-shaker",
+     "g-l2-cabinet-salt-shaker",
+     "g-l2-cabinet-soap-bottle",
+     "g-l2-drawer-butter-knife",
+     "g-l2-drawer-spatula"
+    ],
+    "spec_only": false
+   },
+   "verified": {
+    "static": false,
+    "wsl": null
+   },
+   "active": true,
+   "prio": 14
+  },
+  {
+   "schema": "pkg.proc/1",
+   "id": "proc:discard",
+   "op": "pick_and_place",
+   "composite": true,
+   "triggers": [
+    "put"
+   ],
+   "applies_to": {
+    "categories": [],
+    "types": [
+     "GarbageCan"
+    ]
+   },
+   "requires": [
+    {
+     "cond": "pick_and_place leaves the hand empty",
+     "kind": "executor",
+     "tool": "pick_and_place",
+     "field": "hand",
+     "value": "take-release"
+    }
+   ],
+   "realism": [],
+   "effects": [
+    {
+     "hand": "ends empty"
+    }
+   ],
+   "route": [
+    {
+     "action": "pick_and_place",
+     "object": "?item",
+     "to": "GarbageCan",
+     "arg": null
+    }
+   ],
+   "slots": {
+    "?item": {
+     "category": "discardable",
+     "samples": [
+      "Egg",
+      "Tomato",
+      "Bread"
+     ]
+    }
+   },
+   "hand_end": "empty",
+   "then": null,
+   "confuse": [],
+   "text": {
+    "en": "To throw something away: pick_and_place it to GarbageCan.",
+    "fa": "برای دور انداختن چیزی: pick_and_place به GarbageCan."
+   },
+   "lex": {
+    "en": "throw away discard garbage trash bin rotten",
+    "fa": "دور انداختن سطل زباله"
+   },
+   "keys": {
+    "types": [
+     "GarbageCan"
+    ],
+    "ops": [
+     "put"
+    ],
+    "rels": []
+   },
+   "tail": [],
+   "goal": [],
+   "polarity": null,
+   "needs_dest": false,
+   "source": "domain spec + honest_skills@ed9b543f21d8cf8a + step4_gemma@53209052e697d242",
+   "provenance": {
+    "support": [
+     "g-l3-bad-tomato",
+     "g-l3-rotten-egg",
+     "g-l3-stale-bread",
+     "g-l3-wilted-lettuce",
+     "g-l1-place-egg-garbage-can"
+    ],
+    "spec_only": false
+   },
+   "verified": {
+    "static": false,
+    "wsl": null
+   },
+   "active": true,
+   "prio": 15
+  },
+  {
+   "schema": "pkg.proc/1",
+   "id": "proc:dish-to-sink",
+   "op": "pick_and_place",
+   "composite": true,
+   "triggers": [
+    "put"
+   ],
+   "applies_to": {
+    "categories": [],
+    "types": [
+     "SinkBasin",
+     "Sink"
+    ]
+   },
+   "requires": [
+    {
+     "cond": "pick_and_place leaves the hand empty",
+     "kind": "executor",
+     "tool": "pick_and_place",
+     "field": "hand",
+     "value": "take-release"
+    }
+   ],
+   "realism": [],
+   "effects": [
+    {
+     "hand": "ends empty"
+    }
+   ],
+   "route": [
+    {
+     "action": "pick_and_place",
+     "object": "?dish",
+     "to": "SinkBasin",
+     "arg": null
+    }
+   ],
+   "slots": {
+    "?dish": {
+     "category": "dish",
+     "samples": [
+      "Cup",
+      "Fork",
+      "Spatula"
+     ]
+    }
+   },
+   "hand_end": "empty",
+   "then": null,
+   "confuse": [],
+   "text": {
+    "en": "To put dishes in the sink: pick_and_place each one to SinkBasin.",
+    "fa": "برای گذاشتن ظرف‌ها در سینک: برای هر کدام pick_and_place به SinkBasin."
+   },
+   "lex": {
+    "en": "put dishes sink basin cutlery",
+    "fa": "ظرف سینک"
+   },
+   "keys": {
+    "types": [
+     "Sink",
+     "SinkBasin"
+    ],
+    "ops": [
+     "put"
+    ],
+    "rels": []
+   },
+   "tail": [],
+   "goal": [],
+   "polarity": null,
+   "needs_dest": false,
+   "source": "domain spec + honest_skills@ed9b543f21d8cf8a + step4_gemma@53209052e697d242",
+   "provenance": {
+    "support": [
+     "g-l3-cutlery-sink",
+     "g-l2-find-place-cup-sink-basin",
+     "g-l2-find-place-dish-sponge-sink-basin",
+     "g-l2-find-place-fork-sink-basin",
+     "g-l2-find-place-spatula-sink-basin",
+     "g-l1-place-apple-sink-basin"
+    ],
+    "spec_only": false
+   },
+   "verified": {
+    "static": false,
+    "wsl": null
+   },
+   "active": true,
+   "prio": 16
+  },
+  {
+   "schema": "pkg.proc/1",
+   "id": "proc:empty-to-sink",
+   "op": "empty",
+   "composite": true,
+   "triggers": [
+    "empty"
+   ],
+   "applies_to": {
+    "categories": [
+     "fillable"
+    ],
+    "types": [
+     "SinkBasin"
+    ]
+   },
+   "requires": [
+    {
+     "cond": "pick_and_place leaves the hand empty",
+     "kind": "executor",
+     "tool": "pick_and_place",
+     "field": "hand",
+     "value": "take-release"
+    }
+   ],
+   "realism": [],
+   "effects": [
+    {
+     "state": "empty",
+     "type": "?container"
+    },
+    {
+     "hand": "ends empty"
+    }
+   ],
+   "route": [
+    {
+     "action": "empty",
+     "object": "?container",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "pick_and_place",
+     "object": "?container",
+     "to": "SinkBasin",
+     "arg": null
+    }
+   ],
+   "slots": {
+    "?container": {
+     "category": "fillable",
+     "samples": [
+      "Mug",
+      "Cup"
+     ]
+    }
+   },
+   "hand_end": "empty",
+   "then": null,
+   "confuse": [],
+   "text": {
+    "en": "To pour out a container and put it in the sink: empty it, then pick_and_place it to SinkBasin.",
+    "fa": "برای خالی کردن ظرف و گذاشتن آن در سینک: empty، بعد pick_and_place به SinkBasin."
+   },
+   "lex": {
+    "en": "empty pour sink",
+    "fa": "خالی کردن سینک"
+   },
+   "keys": {
+    "types": [
+     "SinkBasin"
+    ],
+    "ops": [
+     "empty"
+    ],
+    "rels": [
+     "effect:empty"
+    ]
+   },
+   "tail": [],
+   "goal": [],
+   "polarity": null,
+   "needs_dest": false,
+   "source": "domain spec + honest_skills@ed9b543f21d8cf8a + step4_gemma@53209052e697d242",
+   "provenance": {
+    "support": [
+     "g-l2-empty-mug-sink"
+    ],
+    "spec_only": false
+   },
+   "verified": {
+    "static": false,
+    "wsl": null
+   },
+   "active": true,
+   "prio": 17
+  },
+  {
+   "schema": "pkg.proc/1",
+   "id": "proc:wash-dish",
+   "op": "wash",
+   "composite": true,
+   "triggers": [
+    "wash"
+   ],
+   "applies_to": {
+    "categories": [
+     "dish"
+    ],
+    "types": [
+     "SinkBasin",
+     "Faucet"
+    ]
+   },
+   "requires": [
+    {
+     "cond": "a SinkBasin exists",
+     "kind": "executor",
+     "fixture": "SinkBasin"
+    },
+    {
+     "cond": "a Faucet exists",
+     "kind": "executor",
+     "fixture": "Faucet"
+    },
+    {
+     "cond": "the hand is empty or holds the dish",
+     "kind": "executor",
+     "tool": "wash",
+     "field": "hand",
+     "value": "take-release"
+    }
+   ],
+   "realism": [],
+   "effects": [
+    {
+     "state": "clean",
+     "type": "?dish"
+    },
+    {
+     "hand": "ends empty"
+    }
+   ],
+   "route": [
+    {
+     "action": "wash",
+     "object": "?dish",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "slots": {
+    "?dish": {
+     "category": "dish",
+     "samples": [
+      "Plate",
+      "Mug",
+      "Pan"
+     ]
+    }
+   },
+   "hand_end": "empty",
+   "then": null,
+   "confuse": [
+    {
+     "with": "clean",
+     "note": "clean acts in place; wash carries the dish to the sink"
+    }
+   ],
+   "text": {
+    "en": "To wash a dish: wash it (SinkBasin and Faucet needed); it stays in the sink and the hand ends empty.",
+    "fa": "برای شستن ظرف: wash (به SinkBasin و Faucet نیاز دارد)؛ ظرف در سینک می‌ماند و دست خالی است."
+   },
+   "lex": {
+    "en": "wash dishes sink soap",
+    "fa": "شستن ظرف سینک"
+   },
+   "keys": {
+    "types": [
+     "Faucet",
+     "SinkBasin"
+    ],
+    "ops": [
+     "wash"
+    ],
+    "rels": [
+     "appliance:Faucet",
+     "appliance:SinkBasin",
+     "confuse:clean",
+     "effect:clean"
+    ]
+   },
+   "tail": [],
+   "goal": [],
+   "polarity": null,
+   "needs_dest": false,
+   "source": "domain spec + honest_skills@ed9b543f21d8cf8a + step4_gemma@53209052e697d242",
+   "provenance": {
+    "support": [],
+    "spec_only": true
+   },
+   "verified": {
+    "static": false,
+    "wsl": null
+   },
+   "active": true,
+   "prio": 18
+  },
+  {
+   "schema": "pkg.proc/1",
+   "id": "proc:fill-container",
+   "op": "fill",
+   "composite": true,
+   "triggers": [
+    "fill"
+   ],
+   "applies_to": {
+    "categories": [
+     "fillable"
+    ],
+    "types": []
+   },
+   "requires": [
+    {
+     "cond": "arg is one of water, coffee, wine",
+     "kind": "executor",
+     "tool": "fill",
+     "field": "arg",
+     "value": "liquid"
+    }
+   ],
+   "realism": [],
+   "effects": [
+    {
+     "state": "filled",
+     "type": "?container"
+    }
+   ],
+   "route": [
+    {
+     "action": "fill",
+     "object": "?container",
+     "to": null,
+     "arg": "?liquid"
+    }
+   ],
+   "slots": {
+    "?container": {
+     "category": "fillable",
+     "samples": [
+      "Mug",
+      "Cup"
+     ]
+    },
+    "?liquid": {
+     "category": "liquid",
+     "samples": [
+      "water",
+      "coffee"
+     ]
+    }
+   },
+   "hand_end": "same",
+   "then": null,
+   "confuse": [],
+   "text": {
+    "en": "To fill a container: fill it with arg water, coffee or wine.",
+    "fa": "برای پر کردن ظرف: fill با arg برابر water، coffee یا wine."
+   },
+   "lex": {
+    "en": "fill water coffee pour",
+    "fa": "پر کردن آب قهوه"
+   },
+   "keys": {
+    "types": [],
+    "ops": [
+     "fill"
+    ],
+    "rels": [
+     "effect:filled"
+    ]
+   },
+   "tail": [],
+   "goal": [],
+   "polarity": null,
+   "needs_dest": false,
+   "source": "domain spec + honest_skills@ed9b543f21d8cf8a + step4_gemma@53209052e697d242",
+   "provenance": {
+    "support": [
+     "g-l3-breakfast"
+    ],
+    "spec_only": false
+   },
+   "verified": {
+    "static": false,
+    "wsl": null
+   },
+   "active": true,
+   "prio": 19
+  },
+  {
+   "schema": "pkg.proc/1",
+   "id": "proc:coffee",
+   "op": "toggle_on",
+   "composite": true,
+   "triggers": [
+    "toggle",
+    "fill",
+    "put"
+   ],
+   "applies_to": {
+    "categories": [],
+    "types": [
+     "CoffeeMachine"
+    ]
+   },
+   "requires": [
+    {
+     "cond": "a CoffeeMachine exists",
+     "kind": "executor",
+     "fixture": "CoffeeMachine"
+    },
+    {
+     "cond": "pick_and_place leaves the hand empty",
+     "kind": "executor",
+     "tool": "pick_and_place",
+     "field": "hand",
+     "value": "take-release"
+    }
+   ],
+   "realism": [],
+   "effects": [
+    {
+     "state": "on",
+     "type": "CoffeeMachine"
+    },
+    {
+     "hand": "ends empty"
+    }
+   ],
+   "route": [
+    {
+     "action": "pick_and_place",
+     "object": "Mug",
+     "to": "CoffeeMachine",
+     "arg": null
+    },
+    {
+     "action": "toggle_on",
+     "object": "CoffeeMachine",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "slots": {},
+   "hand_end": "empty",
+   "then": null,
+   "confuse": [],
+   "text": {
+    "en": "To make coffee: pick_and_place a Mug to CoffeeMachine, then toggle_on CoffeeMachine. Needs a CoffeeMachine; availability unknown, check what you see.",
+    "fa": "برای درست کردن قهوه: pick_and_place یک Mug به CoffeeMachine، بعد toggle_on CoffeeMachine. به CoffeeMachine نیاز دارد؛ وجود آن معلوم نیست، به آنچه می‌بینید نگاه کنید."
+   },
+   "lex": {
+    "en": "coffee machine mug brew",
+    "fa": "قهوه دستگاه قهوه ماگ"
+   },
+   "keys": {
+    "types": [
+     "CoffeeMachine",
+     "Mug"
+    ],
+    "ops": [
+     "fill",
+     "put",
+     "toggle"
+    ],
+    "rels": [
+     "appliance:CoffeeMachine",
+     "effect:on"
+    ]
+   },
+   "tail": [],
+   "goal": [],
+   "polarity": null,
+   "needs_dest": false,
+   "source": "domain spec + honest_skills@ed9b543f21d8cf8a + step4_gemma@53209052e697d242",
+   "provenance": {
+    "support": [],
+    "spec_only": true
+   },
+   "verified": {
+    "static": false,
+    "wsl": null
+   },
+   "active": true,
+   "prio": 20
+  },
+  {
+   "schema": "pkg.proc/1",
+   "id": "proc:toast",
+   "op": "toggle_on",
+   "composite": true,
+   "triggers": [
+    "toggle",
+    "put"
+   ],
+   "applies_to": {
+    "categories": [],
+    "types": [
+     "Toaster"
+    ]
+   },
+   "requires": [
+    {
+     "cond": "a Toaster exists",
+     "kind": "executor",
+     "fixture": "Toaster"
+    },
+    {
+     "cond": "pick_and_place leaves the hand empty",
+     "kind": "executor",
+     "tool": "pick_and_place",
+     "field": "hand",
+     "value": "take-release"
+    }
+   ],
+   "realism": [],
+   "effects": [
+    {
+     "state": "on",
+     "type": "Toaster"
+    },
+    {
+     "hand": "ends empty"
+    }
+   ],
+   "route": [
+    {
+     "action": "pick_and_place",
+     "object": "Bread",
+     "to": "Toaster",
+     "arg": null
+    },
+    {
+     "action": "toggle_on",
+     "object": "Toaster",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "slots": {},
+   "hand_end": "empty",
+   "then": null,
+   "confuse": [],
+   "text": {
+    "en": "To toast bread: pick_and_place Bread to Toaster, then toggle_on Toaster. Needs a Toaster; availability unknown, check what you see.",
+    "fa": "برای برشته کردن نان: pick_and_place از Bread به Toaster، بعد toggle_on Toaster. به Toaster نیاز دارد؛ وجود آن معلوم نیست، به آنچه می‌بینید نگاه کنید."
+   },
+   "lex": {
+    "en": "toast bread toaster",
+    "fa": "نان برشته توستر"
+   },
+   "keys": {
+    "types": [
+     "Bread",
+     "Toaster"
+    ],
+    "ops": [
+     "put",
+     "toggle"
+    ],
+    "rels": [
+     "appliance:Toaster",
+     "effect:on"
+    ]
+   },
+   "tail": [],
+   "goal": [],
+   "polarity": null,
+   "needs_dest": false,
+   "source": "domain spec + honest_skills@ed9b543f21d8cf8a + step4_gemma@53209052e697d242",
+   "provenance": {
+    "support": [],
+    "spec_only": true
+   },
+   "verified": {
+    "static": false,
+    "wsl": null
+   },
+   "active": true,
+   "prio": 21
+  },
+  {
+   "schema": "pkg.proc/1",
+   "id": "proc:stove-pan",
+   "op": "toggle_on",
+   "composite": true,
+   "triggers": [
+    "toggle",
+    "put",
+    "cook"
+   ],
+   "applies_to": {
+    "categories": [
+     "vessel"
+    ],
+    "types": [
+     "StoveBurner",
+     "StoveKnob"
+    ]
+   },
+   "requires": [
+    {
+     "cond": "a StoveBurner exists",
+     "kind": "executor",
+     "fixture": "StoveBurner"
+    },
+    {
+     "cond": "a StoveKnob exists",
+     "kind": "executor",
+     "fixture": "StoveKnob"
+    },
+    {
+     "cond": "pick_and_place leaves the hand empty",
+     "kind": "executor",
+     "tool": "pick_and_place",
+     "field": "hand",
+     "value": "take-release"
+    }
+   ],
+   "realism": [],
+   "effects": [
+    {
+     "state": "on",
+     "type": "StoveKnob"
+    },
+    {
+     "hand": "ends empty"
+    }
+   ],
+   "route": [
+    {
+     "action": "pick_and_place",
+     "object": "?vessel",
+     "to": "StoveBurner",
+     "arg": null
+    },
+    {
+     "action": "toggle_on",
+     "object": "StoveKnob",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "slots": {
+    "?vessel": {
+     "category": "vessel",
+     "samples": [
+      "Pot",
+      "Pan"
+     ]
+    }
+   },
+   "hand_end": "empty",
+   "then": null,
+   "confuse": [
+    {
+     "with": "heat",
+     "note": "heat uses the Microwave; a pot on the stove needs the StoveKnob"
+    }
+   ],
+   "text": {
+    "en": "To warm a Pot or Pan on the stove: pick_and_place it to StoveBurner, then toggle_on StoveKnob. Needs a StoveBurner and a StoveKnob; availability unknown, check what you see.",
+    "fa": "برای گرم کردن Pot یا Pan روی اجاق: pick_and_place به StoveBurner، بعد toggle_on StoveKnob. به StoveBurner و StoveKnob نیاز دارد؛ وجود آن‌ها معلوم نیست، به آنچه می‌بینید نگاه کنید."
+   },
+   "lex": {
+    "en": "stove burner knob pot pan boil fry",
+    "fa": "اجاق شعله قابلمه تابه"
+   },
+   "keys": {
+    "types": [
+     "StoveBurner",
+     "StoveKnob"
+    ],
+    "ops": [
+     "cook",
+     "put",
+     "toggle"
+    ],
+    "rels": [
+     "appliance:StoveBurner",
+     "appliance:StoveKnob",
+     "confuse:heat",
+     "effect:on"
+    ]
+   },
+   "tail": [
+    {
+     "action": "toggle_off",
+     "object": "StoveKnob",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [],
+   "polarity": null,
+   "needs_dest": false,
+   "source": "domain spec + honest_skills@ed9b543f21d8cf8a + step4_gemma@53209052e697d242",
+   "provenance": {
+    "support": [
+     "g-l1-on-stove-knob",
+     "g-l1-off-stove-knob"
+    ],
+    "spec_only": false
+   },
+   "verified": {
+    "static": false,
+    "wsl": null
+   },
+   "active": true,
+   "prio": 22
+  },
+  {
+   "schema": "pkg.proc/1",
+   "id": "proc:find-then-take",
+   "op": "pickup",
+   "composite": true,
+   "triggers": [
+    "find",
+    "pick"
+   ],
+   "applies_to": {
+    "categories": [],
+    "types": []
+   },
+   "requires": [
+    {
+     "cond": "the hand is empty",
+     "kind": "executor",
+     "tool": "pickup",
+     "field": "hand",
+     "value": "take"
+    }
+   ],
+   "realism": [],
+   "effects": [
+    {
+     "hand": "?item ends in hand"
+    }
+   ],
+   "route": [
+    {
+     "action": "search_for",
+     "object": "?item",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "pickup",
+     "object": "?item",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "slots": {
+    "?item": {
+     "category": "pickupable",
+     "samples": [
+      "Fork",
+      "Mug",
+      "Lettuce"
+     ]
+    }
+   },
+   "hand_end": "held",
+   "then": null,
+   "confuse": [],
+   "text": {
+    "en": "To find and take something: search_for it, then pickup (the hand must be empty).",
+    "fa": "برای پیدا کردن و برداشتن چیزی: search_for، بعد pickup (دست باید خالی باشد)."
+   },
+   "lex": {
+    "en": "find pick up search look for take",
+    "fa": "پیدا کردن برداشتن بگرد"
+   },
+   "keys": {
+    "types": [],
+    "ops": [
+     "find",
+     "pick"
+    ],
+    "rels": []
+   },
+   "tail": [],
+   "goal": [],
+   "polarity": null,
+   "needs_dest": false,
+   "source": "domain spec + honest_skills@ed9b543f21d8cf8a + step4_gemma@53209052e697d242",
+   "provenance": {
+    "support": [
+     "g-l2-find-pickup-bowl",
+     "g-l2-find-pickup-egg",
+     "g-l2-find-pickup-lettuce",
+     "g-l2-find-pickup-mug",
+     "g-l2-find-pickup-pan",
+     "g-l2-find-pickup-soap-bottle",
+     "g-l2-find-pickup-spoon"
+    ],
+    "spec_only": false
+   },
+   "verified": {
+    "static": false,
+    "wsl": null
+   },
+   "active": true,
+   "prio": 23
+  },
+  {
+   "schema": "pkg.proc/1",
+   "id": "proc:tidy-up-close",
+   "op": "close_all",
+   "composite": true,
+   "triggers": [
+    "close"
+   ],
+   "applies_to": {
+    "categories": [
+     "openable"
+    ],
+    "types": [],
+    "min_fit": 2
+   },
+   "requires": [],
+   "realism": [],
+   "effects": [
+    {
+     "state": "closed",
+     "type": "?all"
+    }
+   ],
+   "route": [
+    {
+     "action": "close_all",
+     "object": null,
+     "to": null,
+     "arg": null
+    }
+   ],
+   "slots": {},
+   "hand_end": "same",
+   "then": null,
+   "confuse": [],
+   "text": {
+    "en": "To close everything left open: close_all, or close each container by name.",
+    "fa": "برای بستن هرچه باز مانده: close_all یا بستن هر محفظه با نامش."
+   },
+   "lex": {
+    "en": "close all open left open tidy",
+    "fa": "بستن همه باز"
+   },
+   "keys": {
+    "types": [],
+    "ops": [
+     "close"
+    ],
+    "rels": [
+     "effect:closed"
+    ]
+   },
+   "tail": [],
+   "goal": [],
+   "polarity": null,
+   "needs_dest": false,
+   "source": "domain spec + honest_skills@ed9b543f21d8cf8a + step4_gemma@53209052e697d242",
+   "provenance": {
+    "support": [
+     "g-l3-left-open"
+    ],
+    "spec_only": false
+   },
+   "verified": {
+    "static": false,
+    "wsl": null
+   },
+   "active": true,
+   "prio": 24
+  }
+ ],
+ "sha256": "43a663efbbd493ebd9ce4f4a1f30bc4ed4c2b1bc972aa0f6649d9af100781636"
+}

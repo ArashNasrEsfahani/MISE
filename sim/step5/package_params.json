@@ -1,0 +1,60 @@
+{
+ "borrow_order": [
+  "procedure",
+  "example",
+  "template",
+  "profile",
+  "briefing",
+  "uncertainty"
+ ],
+ "budget": 2000,
+ "enabled": false,
+ "fallback_core": {
+  "component": "briefing",
+  "match": 0.3,
+  "max_lines": 5
+ },
+ "headers": {
+  "en": {
+   "briefing": "What the homeowner told me about this kitchen:",
+   "example": "",
+   "procedure": "How the tools work:",
+   "profile": "What I learned here in practice:",
+   "template": "A plan outline for this kind of task:",
+   "uncertainty": "Not known:"
+  }
+ },
+ "irrelevant": {
+  "min_dense_without_key": 0.5,
+  "min_match": 0.0
+ },
+ "k_max": {
+  "example": 2,
+  "template": 1
+ },
+ "log_irrelevant_ids": false,
+ "need_discount": 0.75,
+ "places_in": "profile",
+ "places_max_per_type": 2,
+ "quotas": {
+  "briefing": 300,
+  "example": 550,
+  "procedure": 350,
+  "profile": 350,
+  "template": 300,
+  "uncertainty": 150
+ },
+ "schema": "pkg.params/1",
+ "sha256": "ffe61a2c9187de1340606fe5fe6eb18847319f3383b9b7f7045f7496d819eb22",
+ "uncertainty_text": {
+  "knob_map": "Not learned: which StoveKnob drives which StoveBurner.",
+  "never_seen": "Never seen in my practice: {types}.",
+  "parser": "The command was only partly understood, so some relevant notes may be missing."
+ },
+ "version": "pkg-1",
+ "weights": {
+  "dense": 0.15,
+  "exact": 0.6,
+  "lexical": 0.25
+ }
+}

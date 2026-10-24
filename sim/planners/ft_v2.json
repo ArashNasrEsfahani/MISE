@@ -1,0 +1,13 @@
+{
+ "schema": "pkg.ft_v2/1",
+ "version": "ft-v2",
+ "max_repairs": 2,
+ "summary_limit": 40,
+ "glossary_fa": false,
+ "suggest_types": true,
+ "suggest_cutoff": 0.75,
+ "error_order": "plan-level errors first; then step order; within a step: object, to, arg, hand trace",
+ "exec_contract_sha256": "667aa3d225ae76175b0d3625d2a5251cd8ae16c44278414b61ee75991b1634c2",
+ "texts_sha256": "9ab6477a98805606d998ba166130624a66eb42f9c17b8e1ab71c5c13b0892f5d",
+ "sha256": "42524a6b5ffef1ce561bda1921e13d8fdadb5d153b125e58afea4b572b3f2060"
+}

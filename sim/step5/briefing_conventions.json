@@ -1,0 +1,21 @@
+{
+ "schema": "pkg.conv/1",
+ "source": "domain conventions, not observed",
+ "authoring_note": "Written once from general household convention. Not checked against any kitchen, not tuned afterwards. A line is rendered only for receptacle types that exist in that kitchen's layout.",
+ "categories": {
+  "cutlery": {"name": {"en": "cutlery", "fa": "قاشق و چنگال و کارد کره‌خوری"}, "types": ["Fork", "Spoon", "ButterKnife", "Spatula", "Ladle"], "receptacles": ["Drawer", "CounterTop"]},
+  "dishes": {"name": {"en": "dishes and cups", "fa": "ظرف و لیوان"}, "types": ["Plate", "Bowl", "Cup", "Mug"], "receptacles": ["Cabinet", "CounterTop"]},
+  "cookware": {"name": {"en": "pots and pans", "fa": "قابلمه و تابه"}, "types": ["Pot", "Pan", "Kettle"], "receptacles": ["Cabinet", "StoveBurner"]},
+  "cold_food": {"name": {"en": "cold food", "fa": "خوراکی سرد"}, "types": ["Egg", "Lettuce", "Tomato"], "receptacles": ["Fridge"]},
+  "pantry_food": {"name": {"en": "everyday food", "fa": "خوراکی روزمره"}, "types": ["Bread", "Apple", "Potato"], "receptacles": ["CounterTop", "Cabinet"]},
+  "seasoning": {"name": {"en": "salt and pepper", "fa": "نمک و فلفل"}, "types": ["SaltShaker", "PepperShaker"], "receptacles": ["Cabinet", "CounterTop"]},
+  "cleaning": {"name": {"en": "cleaning supplies", "fa": "وسایل شستشو"}, "types": ["DishSponge", "SoapBottle"], "receptacles": ["SinkBasin", "CounterTop"]},
+  "paper": {"name": {"en": "paper towels", "fa": "دستمال کاغذی"}, "types": ["PaperTowelRoll"], "receptacles": ["CounterTop"]}
+ },
+ "fixture_types": ["Fridge", "Microwave", "Sink", "SinkBasin", "StoveBurner", "StoveKnob", "CounterTop", "Cabinet", "Drawer", "GarbageCan", "CoffeeMachine", "Toaster", "Faucet", "LightSwitch", "Shelf", "ShelvingUnit", "Window"],
+ "tool_types": ["ButterKnife", "Spatula", "Fork", "Spoon", "Ladle"],
+ "anchor_types": ["Fridge", "Microwave", "Sink", "SinkBasin", "StoveBurner", "GarbageCan", "CoffeeMachine", "Toaster"],
+ "core_types": ["Fridge", "Microwave", "SinkBasin", "Sink", "StoveBurner", "CounterTop"],
+ "adjacency_skip_pairs": [["Sink", "SinkBasin"], ["Shelf", "ShelvingUnit"]],
+ "adjacency_exclude": ["StoveKnob", "Faucet", "LightSwitch", "Window"]
+}

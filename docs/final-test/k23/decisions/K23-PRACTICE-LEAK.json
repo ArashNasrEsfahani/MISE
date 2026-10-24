@@ -1,0 +1,13 @@
+{
+ "schema": "k23.decision/1",
+ "id": "K23-PRACTICE-LEAK",
+ "choice": "own-fragments",
+ "rule": "practice-snapshot gate: a test / reserved instruction that is a fragment of a validated practice row's own pinned instruction is exempt inside the free-text fields of A30-valid rows when nothing else leaks there; the registered gate runs first and again",
+ "recovery": "practice-k3-v1: journal rows 1-9 and the verified row-9 checkpoint are kept; attempt 10 is repeated on resume; its four earlier executions (the first run and three launcher retries, each from the row-9 checkpoint, each stopped by the gate at the K = 10 snapshot) are discarded and disclosed with their logs; the failed K = 10 snapshot and the logs are archived before the overwrite; no practice is re-run to change wording; a snapshot that already passed the registered gate is not regenerated.",
+ "by": "Arash",
+ "date": "2026-10-20",
+ "said": "The practice-memory leakage gate refused Kitchen 3's snapshot because Opus's reply in practice attempt 8 echoed 'slice the bread' (a piece of that practice instruction, which is also a test sentence). How should this be handled? -> Own-fragment rule (Recommended)",
+ "recorded": "2026-10-20T20:16:47",
+ "module": "sim/final_test/matrix/k23_leakage.py",
+ "sha256": "ae19bc11ddc97cc3f781e085945f9d2e2d3a15d5bc39573d62d3cdb9a7bab466"
+}

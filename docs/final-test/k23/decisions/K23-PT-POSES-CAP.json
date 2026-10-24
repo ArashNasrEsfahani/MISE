@@ -1,0 +1,10 @@
+{
+ "id": "K23-PT-POSES-CAP",
+ "written": "2026-10-21T11:41:07",
+ "scene": "FloorPlan17",
+ "event": "the registered LIVE pose rule (A28 item 9: 150 poses by the Kitchen 1 function train_kitchen.frozen_poses, seed 20260929, excluding poses within 0.3 m and 20 deg of a TRAIN camera) reached its built-in 20,000-draw cap with 127 poses in FloorPlan17 (first attempt 2026-10-21 11:34:42, StepFailed 'pose sets incomplete: 127 / 150 live, 300 / 300 coverage'); no FloorPlan17 evaluation result existed",
+ "clarification": "the rule's own capped output is used as it is (127 realistic LIVE poses); no other rule tops it up (more draws or a looser exclusion would change the registered rule); disclosed as a shortfall against the 150-pose target; skipped and scored pose counts are reported",
+ "procedure": "recover the failed poses attempt (pose files moved aside with hashes) -> rebind the evaluation code (no FloorPlan17 step done) -> run poses alone -> byte-identity check of both re-drawn pose files against the archived ones (stop and investigate on any difference; never redraw to obtain a match) -> primary ... holdout",
+ "astra": "docs/final-test/k23/_astra/K23-PERCEPTION-TEST-r5.txt (ACCEPTED)",
+ "authority": "Arash's standing go for the perception TEST evaluations (2026-10-21 morning) and his rule to fix, consult Astra and continue"
+}

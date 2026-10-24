@@ -1,0 +1,63 @@
+{
+  "_note": "USD per million tokens, list price. 'status' says how well each number is verified. Thinking tokens are billed as output tokens. Confirm against billed usage in the cost pilot.",
+  "anthropic": {
+    "claude-opus-5-5": {
+      "input": 4.0,
+      "output": 20.0,
+      "cache_read": 0.2,
+      "source": "https://platform.claude.com/docs/en/models/opus-5-5/overview (cited in docs/research/final-test-astra-review.txt; matches the claude-api skill model table)",
+      "as_of": "2026-10-06",
+      "status": "list price per skill cache + Astra review; confirm in cost pilot"
+    },
+    "claude-sonnet-5-5": {
+      "input": 2.0,
+      "output": 10.0,
+      "cache_read": 0.2,
+      "source": "https://platform.claude.com/docs/en/about-claude/pricing (value taken from the claude-api skill model table)",
+      "as_of": "2026-10-06",
+      "status": "list price per skill cache; confirm in cost pilot"
+    },
+    "claude-haiku-4-5-20251001": {
+      "input": 1.0,
+      "output": 5.0,
+      "cache_read": 0.1,
+      "source": "https://platform.claude.com/docs/en/about-claude/pricing (value taken from the claude-api skill model table, id claude-haiku-4-5)",
+      "as_of": "2026-10-06",
+      "status": "list price per skill cache; confirm in cost pilot"
+    }
+  },
+  "openrouter": {
+    "_default": {
+      "input": 1.0,
+      "output": 5.0,
+      "source": "conservative placeholder, used for the pre-call reserve and when a response carries no usage.cost",
+      "as_of": "2026-10-10",
+      "status": "placeholder; the response's usage.cost is preferred; add the chosen model here before the pilot"
+    },
+    "google/gemma-4-26b-a4b-it": {
+      "input": 0.068,
+      "output": 0.225,
+      "source": "https://openrouter.ai/api/v1/models (public listing, fetched 2026-10-10)",
+      "as_of": "2026-10-10",
+      "status": "list price; response usage.cost preferred"
+    }
+  },
+  "ollama": {
+    "_default": {
+      "input": 0.0,
+      "output": 0.0,
+      "source": "local inference",
+      "as_of": "2026-10-10",
+      "status": "no per-token price"
+    }
+  },
+  "codex_cli": {
+    "_default": {
+      "input": 0.0,
+      "output": 0.0,
+      "source": "subscription CLI; tokens are recorded from the event stream, no dollar price",
+      "as_of": "2026-10-10",
+      "status": "no per-token price"
+    }
+  }
+}

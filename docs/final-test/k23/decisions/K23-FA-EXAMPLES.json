@@ -1,0 +1,12 @@
+{
+ "schema": "k23.decision/1",
+ "id": "K23-FA-EXAMPLES",
+ "choice": "english",
+ "rule": "A24.2 item 2: a Persian-practised practice example is rendered in the English package with the same item's registered English instruction; retrieval unchanged; the A31 capture exemption validates it as that English text",
+ "by": "Arash",
+ "date": "2026-10-20",
+ "said": "When a practice example the planner is shown was practised in Persian, the package must still be English (prereg A24.2). How should such an example appear? -> Show its English sentence (Recommended)",
+ "recorded": "2026-10-20T19:39:28",
+ "module": "sim/final_test/matrix/k23_fa_examples.py",
+ "sha256": "90429f1a9b4893e93f07767c3403b6bd0c96f030ae22dad7f43af16eb5ee26a7"
+}

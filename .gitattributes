@@ -1,0 +1,4 @@
+# Byte-exact storage: no end-of-line conversion for any file.
+# Frozen sha256 manifests (docs/final-test/freeze.json, the K23 freeze records, score.seal.json) pin the exact bytes of
+# code and results files; git EOL normalisation (core.autocrlf or "text=auto") would change those bytes on checkout.
+* -text

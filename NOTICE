@@ -1,0 +1,61 @@
+MISE: Memory-Informed Small Embodied Agent
+Copyright (C) 2026 Arash NasrEsfahani, University of Tehran
+
+The code in this repository is licensed under the GNU Affero General Public License v3.0 (see LICENSE).
+AGPL-3.0 was chosen because the perception pipeline is built on Ultralytics YOLO, which is itself AGPL-3.0.
+
+This repository redistributes ONLY the third-party files listed under "Bundled". Everything under
+"Used, not bundled" is downloaded by the user from its original source and stays under its own terms.
+
+---------------------------------------------------------------------------------------------------------
+Bundled
+---------------------------------------------------------------------------------------------------------
+
+Atkinson Hyperlegible Next  (sim/web/ahn-400.woff2, ahn-600.woff2, ahn-700.woff2)
+    Copyright 2020 The Atkinson Hyperlegible Next Project Authors
+    https://github.com/googlefonts/atkinson-hyperlegible-next
+    SIL Open Font License 1.1 -- full text in OFL.txt
+
+Vazirmatn (formerly Vazir)  (sim/web/vazir-400.woff2, vazir-600.woff2)
+    Copyright 2015 The Vazirmatn Project Authors
+    https://github.com/rastikerdar/vazirmatn
+    SIL Open Font License 1.1 -- full text in OFL.txt
+
+---------------------------------------------------------------------------------------------------------
+Used, not bundled
+---------------------------------------------------------------------------------------------------------
+
+AI2-THOR 5.0.0 (simulator, Unity build; installed with pip as `ai2thor`)
+    Allen Institute for AI -- https://github.com/allenai/ai2thor
+    Apache License 2.0. The kitchen scenes (iTHOR FloorPlan1, FloorPlan15, FloorPlan17) are part of AI2-THOR.
+
+Ultralytics YOLO (`ultralytics`, detector training and inference; YOLO26 / YOLO11 base weights)
+    https://github.com/ultralytics/ultralytics
+    GNU Affero General Public License v3.0 (or an Ultralytics Enterprise License)
+
+Gemma 4 (local planner, run through Ollama as `gemma4:e2b-it-q4_K_M`)
+    Google -- Gemma Terms of Use: https://ai.google.dev/gemma/terms
+    The model weights are NOT redistributed here. Pull them yourself (`ollama pull gemma4:e2b-it-q4_K_M`);
+    by doing so you accept the Gemma Terms of Use and Prohibited Use Policy.
+
+BAAI bge-m3 (optional dense-retrieval embeddings, sim/step5)
+    https://huggingface.co/BAAI/bge-m3 -- MIT License. Not redistributed; downloaded on first use.
+
+nomic-embed-text (optional embeddings for the earlier RAG arms, served by Ollama)
+    https://ollama.com/library/nomic-embed-text -- see the model card for its licence. Not redistributed.
+
+Hosted LLM APIs (Anthropic Claude, OpenRouter, Codex CLI) are reached only through their official APIs with the
+user's own keys; no vendor code or model is included.
+
+Python packages listed in sim/requirements.txt (torch, torchvision, opencv-python-headless, numpy, pillow,
+chromadb) are installed by the user and keep their own licences.
+
+---------------------------------------------------------------------------------------------------------
+Trained detector weights
+---------------------------------------------------------------------------------------------------------
+
+The trained per-kitchen detectors are published separately on Hugging Face:
+    ArashNasr/ai2thor-kitchen-perception-floorplan1
+    ArashNasr/ai2thor-kitchen-perception-floorplan15
+    ArashNasr/ai2thor-kitchen-perception-floorplan17
+They are derived from Ultralytics YOLO and trained on frames rendered in AI2-THOR; see each model card for terms.

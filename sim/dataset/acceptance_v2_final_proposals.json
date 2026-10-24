@@ -1,0 +1,766 @@
+{
+ "schema": "ft.acceptance-v2-final-proposals/1",
+ "stage": "ACC-V2b (2026-10-13)",
+ "status": "PROPOSAL for Arash's tick. NOT in general.json. Not registered. No outcome of any kind exists.",
+ "composition": "(i) 8 L1 + 8 L2 reserved + 8 NEW L3 = 24 items / 48 presentations; 2 spare L3",
+ "decision_source": "ARASH DECISIONS 2026-10-13 'E3 (a) and acceptance (i)': 8 NEW L3 items + 8 L1 + 8 L2 from the reserved pool = 24 items / 48 presentations (A24 item 7 + A25 5.4(a), Astra's reading)",
+ "criterion_f": ">= 46/48 valid plans per arm (A24 item 7; unchanged)",
+ "barrier": "These texts, plans, goals and reviews must never become package examples, lexicon entries, retrieval templates or practice items (Astra ACC-V2 review 3).",
+ "replacement_rule": "a spare replaces a main L3 item only if Arash drops that item BEFORE any acceptance call; spares in listed order; after the first acceptance call no item is replaced",
+ "inputs": {
+  "l3_proposals": "6acf39acbf75349f69d3af3da96ff3d6618e3402c1f183f65b71edeb01e2ee6d",
+  "check.json": "9c6b15c7395dd6f91f33fa708c40ed0e19df9c738ea04dd02663131384eb3149",
+  "reserved_successor_check.json": "f933440a38d90c934d85741f2a63ffe1f820d966bd251952c2a3363a3ba47b21"
+ },
+ "reviews": {
+  "docs/final-test/_astra/ACC-V2-review.txt": "3fbeac83c59f1aac9a5868ff0888f3a77dfff235ac6182b64d3d7c3dd8f51f8a",
+  "docs/final-test/_astra/ACC-V2b-blind.txt": "1642395356cd8d0e182fc318269c42ca8b5c12eec640915fd7aec1991a1bcfbf",
+  "docs/final-test/_astra/ACC-V2b-review.txt": "5c82539af57e11499b493723874ba835e7cd1a7401f834c8355e882f8ca67a33",
+  "docs/final-test/_astra/ACC-V2b-claude-review.txt": "54dd0c56504dcdfc1e6491a561b8194141f5a77525b987354829bc8fec19904e"
+ },
+ "still_needed": [
+  "live reference-plan validation in FloorPlan1, no LLM (sim/final_test/acceptance_v2/validate_live.py; NOT run; after K-B2b, with Arash's go)",
+  "visibility audit (A25 item 9) for the types these items need",
+  "Arash ticks every EN/FA text and every goal",
+  "registration: family ids, scene seeds and execution order saved before any acceptance call (A24 item 7)"
+ ],
+ "l1_l2_reserved": [
+  {
+   "id": "g-l1-pickup-butter-knife",
+   "level": "L1",
+   "en": "Pick up the butter knife.",
+   "fa": "کارد کره‌خوری را بردار.",
+   "source": "reserved (A25 5.2)",
+   "successor_trace_ok": true,
+   "e2_identity_pickups": [
+    "ButterKnife"
+   ],
+   "need_item_overlap": [
+    "g-l3-need-spread-butter"
+   ]
+  },
+  {
+   "id": "g-l1-pickup-cup",
+   "level": "L1",
+   "en": "Pick up the cup.",
+   "fa": "فنجان را بردار.",
+   "source": "reserved (A25 5.2)",
+   "successor_trace_ok": true,
+   "e2_identity_pickups": [],
+   "need_item_overlap": []
+  },
+  {
+   "id": "g-l1-pickup-pot",
+   "level": "L1",
+   "en": "Pick up the pot.",
+   "fa": "قابلمه را بردار.",
+   "source": "reserved (A25 5.2)",
+   "successor_trace_ok": true,
+   "e2_identity_pickups": [
+    "Pot"
+   ],
+   "need_item_overlap": []
+  },
+  {
+   "id": "g-l1-pickup-soap-bottle",
+   "level": "L1",
+   "en": "Pick up the soap bottle.",
+   "fa": "صابون مایع را بردار.",
+   "source": "reserved (A25 5.2)",
+   "successor_trace_ok": true,
+   "e2_identity_pickups": [],
+   "need_item_overlap": []
+  },
+  {
+   "id": "g-l1-pickup-spatula",
+   "level": "L1",
+   "en": "Pick up the spatula.",
+   "fa": "کفگیر را بردار.",
+   "source": "reserved (A25 5.2)",
+   "successor_trace_ok": true,
+   "e2_identity_pickups": [
+    "Spatula"
+   ],
+   "need_item_overlap": []
+  },
+  {
+   "id": "g-l1-pickup-tomato",
+   "level": "L1",
+   "en": "Pick up the tomato.",
+   "fa": "گوجه‌فرنگی را بردار.",
+   "source": "reserved (A25 5.2)",
+   "successor_trace_ok": true,
+   "e2_identity_pickups": [],
+   "need_item_overlap": []
+  },
+  {
+   "id": "g-l1-place-plate-counter-top",
+   "level": "L1",
+   "en": "You are holding the plate. Put it on the counter.",
+   "fa": "بشقاب در دست توست؛ آن را روی میز بگذار.",
+   "source": "reserved (A25 5.2)",
+   "successor_trace_ok": true,
+   "e2_identity_pickups": [],
+   "need_item_overlap": []
+  },
+  {
+   "id": "g-l1-place-spoon-sink-basin",
+   "level": "L1",
+   "en": "You are holding the spoon. Put it in the sink.",
+   "fa": "قاشق در دست توست؛ آن را داخل سینک بگذار.",
+   "source": "reserved (A25 5.2)",
+   "successor_trace_ok": true,
+   "e2_identity_pickups": [],
+   "need_item_overlap": []
+  },
+  {
+   "id": "g-l2-cabinet-pepper-shaker",
+   "level": "L2",
+   "en": "Put the pepper shaker away in a cabinet and close it.",
+   "fa": "فلفل‌پاش را داخل یکی از کابینت‌ها بگذار و درش را ببند.",
+   "source": "reserved (A25 5.2)",
+   "successor_trace_ok": true,
+   "e2_identity_pickups": [
+    "PepperShaker"
+   ],
+   "need_item_overlap": []
+  },
+  {
+   "id": "g-l2-find-pickup-bowl",
+   "level": "L2",
+   "en": "Find the bowl and pick it up.",
+   "fa": "کاسه را پیدا کن و بردار.",
+   "source": "reserved (A25 5.2)",
+   "successor_trace_ok": true,
+   "e2_identity_pickups": [],
+   "need_item_overlap": []
+  },
+  {
+   "id": "g-l2-find-pickup-mug",
+   "level": "L2",
+   "en": "Find the mug and pick it up.",
+   "fa": "لیوان را پیدا کن و بردار.",
+   "source": "reserved (A25 5.2)",
+   "successor_trace_ok": true,
+   "e2_identity_pickups": [],
+   "need_item_overlap": []
+  },
+  {
+   "id": "g-l2-find-place-dish-sponge-sink-basin",
+   "level": "L2",
+   "en": "Find the sponge and put it in the sink.",
+   "fa": "اسفنج ظرف‌شویی را پیدا کن و داخل سینک بگذار.",
+   "source": "reserved (A25 5.2)",
+   "successor_trace_ok": true,
+   "e2_identity_pickups": [],
+   "need_item_overlap": []
+  },
+  {
+   "id": "g-l2-find-place-spatula-sink-basin",
+   "level": "L2",
+   "en": "Find the spatula and put it in the sink.",
+   "fa": "کفگیر را پیدا کن و داخل سینک بگذار.",
+   "source": "reserved (A25 5.2)",
+   "successor_trace_ok": true,
+   "e2_identity_pickups": [
+    "Spatula"
+   ],
+   "need_item_overlap": []
+  },
+  {
+   "id": "g-l2-fridge-potato",
+   "level": "L2",
+   "en": "Put the potato in the fridge and close the door.",
+   "fa": "سیب‌زمینی را داخل یخچال بگذار و درش را ببند.",
+   "source": "reserved (A25 5.2)",
+   "successor_trace_ok": true,
+   "e2_identity_pickups": [],
+   "need_item_overlap": []
+  },
+  {
+   "id": "g-l2-microwave-bread",
+   "level": "L2",
+   "en": "Put the bread in the microwave and close it.",
+   "fa": "نان را داخل مایکروویو بگذار و درش را ببند.",
+   "source": "reserved (A25 5.2)",
+   "successor_trace_ok": true,
+   "e2_identity_pickups": [],
+   "need_item_overlap": []
+  },
+  {
+   "id": "g-l2-microwave-mug",
+   "level": "L2",
+   "en": "Put the mug in the microwave and close it.",
+   "fa": "لیوان را داخل مایکروویو بگذار و درش را ببند.",
+   "source": "reserved (A25 5.2)",
+   "successor_trace_ok": true,
+   "e2_identity_pickups": [],
+   "need_item_overlap": []
+  }
+ ],
+ "l3_new": [
+  {
+   "id": "g-l3-a2-egg-mixup",
+   "level": "L3",
+   "en": "Silly me, I put the egg in the microwave instead of the fridge, and I left the microwave open.",
+   "fa": "حواسم نبود و تخم‌مرغ را به جای یخچال گذاشتم توی مایکروویو؛ در مایکروویو را هم باز گذاشتم.",
+   "setup": [
+    {
+     "action": "open",
+     "object": "Microwave",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "pick_and_place",
+     "object": "Egg",
+     "to": "Microwave",
+     "arg": null
+    },
+    {
+     "action": "close",
+     "object": "Fridge",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "pick_and_place",
+     "object": "Egg",
+     "to": "Fridge",
+     "arg": null
+    },
+    {
+     "action": "close",
+     "object": "Fridge",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "close",
+     "object": "Microwave",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Egg",
+     "key": "parentReceptacles",
+     "contains": "Fridge"
+    },
+    {
+     "type": "Fridge",
+     "key": "isOpen",
+     "value": false
+    },
+    {
+     "type": "Microwave",
+     "key": "isOpen",
+     "value": false
+    }
+   ],
+   "reviewed": false,
+   "proposal": true,
+   "role": "main",
+   "origin": "ACC-V2b new; both reviewers KEEP",
+   "note": "Undo a mistake: nothing is asked; the repair is inferred from the confession. Extends excluded g-l2-fridge-egg (goal/plan 0.667, disclosed). The closed fridge is ordinary refrigeration completion (dataset convention), NOT an explicit instruction in the text. The setup moves the egg from the fridge into the open microwave and shuts the fridge."
+  },
+  {
+   "id": "g-l3-a2-potato-salad",
+   "level": "L3",
+   "en": "Tomorrow I'm making potato salad. The potato has to be cooked, and it must keep until then.",
+   "fa": "فردا می‌خواهم سالاد سیب‌زمینی درست کنم؛ سیب‌زمینی باید پخته باشد و تا فردا خراب نشود.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "cook",
+     "object": "Potato",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "pick_and_place",
+     "object": "Potato",
+     "to": "Fridge",
+     "arg": null
+    },
+    {
+     "action": "close",
+     "object": "Fridge",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Potato",
+     "key": "isCooked",
+     "value": true
+    },
+    {
+     "type": "Potato",
+     "key": "parentReceptacles",
+     "contains": "Fridge"
+    },
+    {
+     "type": "Fridge",
+     "key": "isOpen",
+     "value": false
+    }
+   ],
+   "reviewed": false,
+   "proposal": true,
+   "role": "main",
+   "origin": "ACC-V2b new; both reviewers KEEP (strongest); cut-potato route disclosed, not scored (confirmation review)",
+   "note": "Preparation for later: cooked state asked, cold storage inferred from 'must keep until tomorrow'. The goal binds the WHOLE potato (single-object clauses). Step 3c tried 'any' on both clauses (Claude reviewer option (a)); the confirmation review rejected it: two independent 'any' clauses accept a cooked piece outside plus a raw piece inside, and the live reader matches exact types, so PotatoSliced would not count anyway. Option (b) instead: a plan that cuts the potato first is a KNOWN, DISCLOSED way a reasonable plan can fail; live probe of slice-then-cook required. Nested storage (potato in a bowl in the fridge) must be accepted: live check. Extends reserved L2 acceptance item g-l2-fridge-potato (0.667) and g-l3-serve-cooked-potato (disclosed)."
+  },
+  {
+   "id": "g-l3-a2-dirty-mug-coffee",
+   "level": "L3",
+   "en": "I'd like to drink coffee from this mug, but it's still dirty from this morning.",
+   "fa": "دلم می‌خواهد توی همین لیوان قهوه بخورم، ولی از صبح هنوز کثیف مانده.",
+   "setup": [
+    {
+     "action": "dirty",
+     "object": "Mug",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "wash",
+     "object": "Mug",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "empty",
+     "object": "Mug",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "pick_and_place",
+     "object": "Mug",
+     "to": "CoffeeMachine",
+     "arg": null
+    },
+    {
+     "action": "toggle_on",
+     "object": "CoffeeMachine",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Mug",
+     "key": "isDirty",
+     "value": false
+    },
+    {
+     "type": "Mug",
+     "key": "fillLiquid",
+     "value": "coffee"
+    }
+   ],
+   "reviewed": false,
+   "proposal": true,
+   "role": "main",
+   "origin": "ACC-V2b new; text, plan and goal CHANGED per both reviewers",
+   "note": "Precondition repair: the wash is never asked for. Goal = the requested drink (clean mug holding coffee), not a machine state, so brewing then picking up / switching off also passes. 'this mug' makes the vessel obligatory (blind reading: another clean cup would otherwise do). The plan empties possible rinse water first (Astra). The offline check models 'a mug in the switched-on machine fills with coffee' as an ASSUMPTION; live must confirm it, with rinse water present and for a direct-fill route. Extends g-l3-coffee / TEST g-l2-coffee-machine (disclosed)."
+  },
+  {
+   "id": "g-l3-a2-microwave-bowl",
+   "level": "L3",
+   "en": "I want to warm up the potato, but someone left a dirty bowl in the microwave that needs washing.",
+   "fa": "می‌خواهم سیب‌زمینی را گرم کنم، ولی یکی کاسهٔ کثیفش را توی مایکروویو جا گذاشته که باید شسته شود.",
+   "setup": [
+    {
+     "action": "dirty",
+     "object": "Bowl",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "pick_and_place",
+     "object": "Bowl",
+     "to": "Microwave",
+     "arg": null
+    },
+    {
+     "action": "close",
+     "object": "Microwave",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "wash",
+     "object": "Bowl",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "heat",
+     "object": "Potato",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Bowl",
+     "key": "isDirty",
+     "value": false
+    },
+    {
+     "type": "Potato",
+     "key": "temperature",
+     "value": "Hot"
+    }
+   ],
+   "reviewed": false,
+   "proposal": true,
+   "role": "main",
+   "origin": "ACC-V2b new; both reviewers KEEP and promote to main",
+   "note": "Both needs are stated, the route is not; either order passes. It does NOT claim that the bowl physically blocks the heating (Astra). Combines g-l3-warm-potato (TEST, plan 0.50) and g-l1-clean-bowl (disclosed)."
+  },
+  {
+   "id": "g-l3-a2-dinner-done",
+   "level": "L3",
+   "en": "Dinner's over. The stove is still on and the pan needs cleaning.",
+   "fa": "شام تمام شد. اجاق هنوز روشن است و تابه هم باید شسته شود.",
+   "setup": [
+    {
+     "action": "pick_and_place",
+     "object": "Pan",
+     "to": "StoveBurner",
+     "arg": null
+    },
+    {
+     "action": "toggle_on",
+     "object": "StoveKnob",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "dirty",
+     "object": "Pan",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "toggle_off",
+     "object": "StoveKnob",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "wash",
+     "object": "Pan",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "StoveKnob",
+     "key": "isToggled",
+     "value": false,
+     "q": "all"
+    },
+    {
+     "type": "Pan",
+     "key": "isDirty",
+     "value": false
+    }
+   ],
+   "reviewed": false,
+   "proposal": true,
+   "role": "main",
+   "origin": "ACC-V2 draft, Astra KEEP twice; Claude reviewer KEEP",
+   "note": "Shallow situational L3 (shutdown + cleaning; extends g-l1-off-stove-knob). The setup turns on ONE knob; the offline check counts knobs one by one (ACC-V2b knob fix). Live: every knob read off from metadata, no order or final pan place required."
+  },
+  {
+   "id": "g-l3-a2-snack-cleanup",
+   "level": "L3",
+   "en": "I've finished my snack. Throw out what's left of the apple; the plate is dirty too.",
+   "fa": "میان‌وعده‌ام را خوردم. باقی سیب را دور بینداز؛ بشقاب هم کثیف شده است.",
+   "setup": [
+    {
+     "action": "pick_and_place",
+     "object": "Plate",
+     "to": "CounterTop",
+     "arg": null
+    },
+    {
+     "action": "pick_and_place",
+     "object": "Apple",
+     "to": "Plate",
+     "arg": null
+    },
+    {
+     "action": "dirty",
+     "object": "Plate",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "pick_and_place",
+     "object": "Apple",
+     "to": "GarbageCan",
+     "arg": null
+    },
+    {
+     "action": "wash",
+     "object": "Plate",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Apple",
+     "key": "parentReceptacles",
+     "contains": "GarbageCan"
+    },
+    {
+     "type": "Plate",
+     "key": "isDirty",
+     "value": false
+    }
+   ],
+   "reviewed": false,
+   "proposal": true,
+   "role": "main",
+   "origin": "ACC-V2 draft, Astra KEEP twice; setup CHANGED per the Claude reviewer",
+   "note": "Discard + implied wash. The setup now puts the apple ON the plate so the scene matches the story (Claude reviewer); the whole apple is the 'remains' proxy (Astra), no slicing needed. Either order passes. Extends g-l3-old-produce and g-l1-clean-plate (disclosed)."
+  },
+  {
+   "id": "g-l3-a2-coffee-to-go",
+   "level": "L3",
+   "en": "I'm off to work and taking my coffee with me. Hand me my mug of coffee, and don't leave any kitchen appliance on.",
+   "fa": "دارم می‌روم سر کار و قهوه‌ام را با خودم می‌برم. لیوان قهوه‌ام را بده دستم و هیچ‌کدام از دستگاه‌های آشپزخانه را روشن نگذار.",
+   "setup": [
+    {
+     "action": "fill",
+     "object": "Mug",
+     "to": null,
+     "arg": "coffee"
+    },
+    {
+     "action": "pick_and_place",
+     "object": "Mug",
+     "to": "CoffeeMachine",
+     "arg": null
+    },
+    {
+     "action": "toggle_on",
+     "object": "CoffeeMachine",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "toggle_off",
+     "object": "CoffeeMachine",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "pickup",
+     "object": "Mug",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Mug",
+     "key": "isPickedUp",
+     "value": true
+    },
+    {
+     "type": "Mug",
+     "key": "fillLiquid",
+     "value": "coffee"
+    },
+    {
+     "type": "CoffeeMachine",
+     "key": "isToggled",
+     "value": false
+    },
+    {
+     "type": "Microwave",
+     "key": "isToggled",
+     "value": false
+    },
+    {
+     "type": "Toaster",
+     "key": "isToggled",
+     "value": false
+    },
+    {
+     "type": "StoveKnob",
+     "key": "isToggled",
+     "value": false,
+     "q": "all"
+    }
+   ],
+   "reviewed": false,
+   "proposal": true,
+   "role": "main",
+   "origin": "ACC-V2b new; EN/FA and goal CHANGED per both reviewers",
+   "note": "Weak L3 (find the brewing mug, find what is on); extends g-l2-find-pickup-mug and g-l3-leaving-house. The opening was changed so it no longer echoes TEST g-l3-leaving-house in Persian (Claude reviewer). 'Kitchen appliance' = the switchable appliances (coffee machine, microwave, toaster, all stove knobs); LightSwitch and Faucet are not appliances and are not scored. The three guards are true at reset and protect the final state (Astra). Holding the mug is the hand-over proxy. Live: the mug keeps its coffee; either order passes."
+  },
+  {
+   "id": "g-l3-a2-muddy-potato",
+   "level": "L3",
+   "en": "The potato is caked in mud. Leave it soaking in a pot of water.",
+   "fa": "سیب‌زمینی حسابی گلی است. بگذارش توی یک قابلمه آب تا خیس بخورد.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "fill",
+     "object": "Pot",
+     "to": null,
+     "arg": "water"
+    },
+    {
+     "action": "pick_and_place",
+     "object": "Potato",
+     "to": "Pot",
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Pot",
+     "key": "fillLiquid",
+     "value": "water"
+    },
+    {
+     "type": "Potato",
+     "key": "parentReceptacles",
+     "contains": "Pot"
+    }
+   ],
+   "reviewed": false,
+   "proposal": true,
+   "role": "main",
+   "origin": "ACC-V2 draft, Astra KEEP twice; Claude reviewer: borderline L2, prefers spare",
+   "note": "Modest relational L3 (extends g-l1-fill-pot-water); water + containment is a soaking proxy. Kept in main because Astra (both sessions) keeps it there and both reviewers rank dark-rinse below it; the level disagreement is disclosed. Either preparation order passes."
+  }
+ ],
+ "l3_spares": [
+  {
+   "id": "g-l3-a2-dark-rinse",
+   "level": "L3",
+   "en": "I can't see a thing in here, and I want the tap running so I can rinse the vegetables.",
+   "fa": "اینجا هیچ‌چیز دیده نمی‌شود. شیر آب را هم باز کن که سبزی‌ها را بشویم.",
+   "setup": [
+    {
+     "action": "toggle_off",
+     "object": "LightSwitch",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "toggle_on",
+     "object": "LightSwitch",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "toggle_on",
+     "object": "Faucet",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "LightSwitch",
+     "key": "isToggled",
+     "value": true
+    },
+    {
+     "type": "Faucet",
+     "key": "isToggled",
+     "value": true
+    }
+   ],
+   "reviewed": false,
+   "proposal": true,
+   "role": "spare",
+   "origin": "ACC-V2 spare, Astra KEEP; both reviewers: spare",
+   "note": "SPARE 1. Very weak L3: reuses g-l3-too-dark's inference + g-l1-on-faucet. Live: detection and navigation in the dark; the faucet must stay on (no vegetable handling scored)."
+  },
+  {
+   "id": "g-l3-a2-plant-away",
+   "level": "L3",
+   "en": "Before I leave for a week, see to the thirsty plant and make sure no tap is left running.",
+   "fa": "قبل از سفر یک‌هفته‌ای‌ام، به گلدان تشنه برس و مطمئن شو هیچ شیر آبی باز نماند.",
+   "setup": [
+    {
+     "action": "toggle_on",
+     "object": "Faucet",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "fill",
+     "object": "HousePlant",
+     "to": null,
+     "arg": "water"
+    },
+    {
+     "action": "toggle_off",
+     "object": "Faucet",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "HousePlant",
+     "key": "fillLiquid",
+     "value": "water"
+    },
+    {
+     "type": "Faucet",
+     "key": "isToggled",
+     "value": false
+    }
+   ],
+   "reviewed": false,
+   "proposal": true,
+   "role": "spare",
+   "origin": "ACC-V2b replacement (step 3c), reworked from superseded plant-tap; text from the Astra confirmation review (step 3d)",
+   "note": "SPARE 2 (replaces hard-boiled-egg, DROPPED by Astra pass B). Inferred: 'see to the thirsty plant' = water it (water specifically, Astra ACC-V2 plant-tap); the running tap is seen, not told. The text no longer promises week-long hydration, which the goal cannot show (Astra confirmation). Reworked from the superseded plant-tap draft (disclosed). Live: honest HousePlant filling and its water state."
+  }
+ ],
+ "counts": {
+  "items": 24,
+  "presentations": 48,
+  "by_level": {
+   "L1": 8,
+   "L2": 8,
+   "L3": 8
+  }
+ }
+}

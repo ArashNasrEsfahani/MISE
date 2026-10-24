@@ -1,0 +1,427 @@
+{
+ "schema": "signal-set-r2-fresh/1",
+ "stage": "J-fresh-set",
+ "date": "2026-10-13",
+ "purpose": "Round-2 fresh DEVELOPMENT check set (Astra round-2 adoption). The original 24 (signal_set.json) stay as regressions; report the two sets separately. Once inspected, these items are development data. NOT an acceptance set, NOT a test set.",
+ "items_are": "existing dataset items only (sim/dataset/general.json); no new instruction text was written",
+ "rule": [
+  "Pool = split_manifest.nontest, reviewed, EN and FA text present, with a reference plan, status ok in sim/dataset/general_validation_FloorPlan1.json.",
+  "Excluded from the pool: the 12 signal items (24 presentations, also the rehearsal items); manifest exposed_items; practice order-0 items and the C3/W3 evaluation-B screen items (c3_split.json); manifest excluded_inapplicable; any item not ok in the FP1 validation.",
+  "Hard-kind label (first match): tool_only_purpose (L3, single pickup of a tool for a stated purpose), microwave_stay_inside (a Microwave is a plan type), fridge, cutlery (Fork/Spoon/Knife/ButterKnife/Spatula), else other_<level>.",
+  "Step 1, acceptance reservation (done first): inside each kind, seeded shuffle (master_seed 20261010, key seed:kind) and ids alternate between acceptance and fresh, starting side set by a seeded coin that flips per kind. Acceptance keeps up to 8 per level by a seeded hash order; overflow goes to spare (used by nobody).",
+  "Step 2, fresh: from the fresh side, per level, quotas L1 4, L2 5, L3 3; first one item per distinct hard kind (seeded hash order), then fill by the same order.",
+  "Reproduce: python sim/final_test/signal/build_fresh_r2.py (deterministic)."
+ ],
+ "master_seed": 20261010,
+ "dataset_sha256": "956f0ae8b11cde18b14364224e394819248f80f4c0c6fb19e379e6bde53d3aa6",
+ "manifest_sha256": "09c7da232244c4fbec20ff98b47a1a459efff1308f29481aa09961a621e2794f",
+ "pool_size": 40,
+ "pool_by_level": {
+  "L1": 18,
+  "L2": 17,
+  "L3": 5
+ },
+ "items": [
+  "g-l1-pickup-bowl",
+  "g-l1-pickup-pan",
+  "g-l1-pickup-spoon",
+  "g-l1-place-tomato-counter-top",
+  "g-l2-cabinet-bowl",
+  "g-l2-drawer-spatula",
+  "g-l2-find-pickup-egg",
+  "g-l2-fridge-lettuce",
+  "g-l2-microwave-apple",
+  "g-l3-rotten-egg",
+  "g-l3-tool-scrub"
+ ],
+ "item_info": {
+  "g-l1-pickup-bowl": {
+   "level": "L1",
+   "kind": "other_L1",
+   "family": "g-l1-pickup-apple",
+   "en": "Pick up the bowl.",
+   "fa": "کاسه را بردار.",
+   "plan": [
+    [
+     "pickup",
+     "Bowl",
+     null
+    ]
+   ],
+   "has_setup": false,
+   "cited_as_package_support": false
+  },
+  "g-l1-pickup-pan": {
+   "level": "L1",
+   "kind": "other_L1",
+   "family": "g-l1-pickup-apple",
+   "en": "Pick up the pan.",
+   "fa": "تابه را بردار.",
+   "plan": [
+    [
+     "pickup",
+     "Pan",
+     null
+    ]
+   ],
+   "has_setup": false,
+   "cited_as_package_support": false
+  },
+  "g-l1-pickup-spoon": {
+   "level": "L1",
+   "kind": "cutlery",
+   "family": "g-l1-pickup-apple",
+   "en": "Pick up the spoon.",
+   "fa": "قاشق را بردار.",
+   "plan": [
+    [
+     "pickup",
+     "Spoon",
+     null
+    ]
+   ],
+   "has_setup": false,
+   "cited_as_package_support": true
+  },
+  "g-l1-place-tomato-counter-top": {
+   "level": "L1",
+   "kind": "other_L1",
+   "family": "g-l1-place-apple-sink-basin",
+   "en": "You are holding the tomato. Put it on the counter.",
+   "fa": "گوجه‌فرنگی در دست توست؛ آن را روی میز بگذار.",
+   "plan": [
+    [
+     "put_in",
+     "CounterTop",
+     null
+    ]
+   ],
+   "has_setup": true,
+   "cited_as_package_support": false
+  },
+  "g-l2-cabinet-bowl": {
+   "level": "L2",
+   "kind": "other_L2",
+   "family": "g-l2-cabinet-bowl",
+   "en": "Put the bowl away in a cabinet and close it.",
+   "fa": "کاسه را داخل یکی از کابینت‌ها بگذار و درش را ببند.",
+   "plan": [
+    [
+     "pick_and_place",
+     "Bowl",
+     "Cabinet"
+    ],
+    [
+     "close",
+     "Cabinet",
+     null
+    ]
+   ],
+   "has_setup": false,
+   "cited_as_package_support": true
+  },
+  "g-l2-drawer-spatula": {
+   "level": "L2",
+   "kind": "cutlery",
+   "family": "g-l2-cabinet-bowl",
+   "en": "Put the spatula in a drawer and close it.",
+   "fa": "کفگیر را داخل یکی از کشوها بگذار و آن را ببند.",
+   "plan": [
+    [
+     "pick_and_place",
+     "Spatula",
+     "Drawer"
+    ],
+    [
+     "close",
+     "Drawer",
+     null
+    ]
+   ],
+   "has_setup": false,
+   "cited_as_package_support": true
+  },
+  "g-l2-find-pickup-egg": {
+   "level": "L2",
+   "kind": "other_L2",
+   "family": "g-l1-pickup-apple",
+   "en": "Find the egg and pick it up.",
+   "fa": "تخم‌مرغ را پیدا کن و بردار.",
+   "plan": [
+    [
+     "search_for",
+     "Egg",
+     null
+    ],
+    [
+     "pickup",
+     "Egg",
+     null
+    ]
+   ],
+   "has_setup": false,
+   "cited_as_package_support": true
+  },
+  "g-l2-fridge-lettuce": {
+   "level": "L2",
+   "kind": "fridge",
+   "family": "g-l2-cabinet-bowl",
+   "en": "Put the lettuce in the fridge and close the door.",
+   "fa": "کاهو را داخل یخچال بگذار و درش را ببند.",
+   "plan": [
+    [
+     "pick_and_place",
+     "Lettuce",
+     "Fridge"
+    ],
+    [
+     "close",
+     "Fridge",
+     null
+    ]
+   ],
+   "has_setup": false,
+   "cited_as_package_support": true
+  },
+  "g-l2-microwave-apple": {
+   "level": "L2",
+   "kind": "microwave_stay_inside",
+   "family": "g-l2-cabinet-bowl",
+   "en": "Put the apple in the microwave and close it.",
+   "fa": "سیب را داخل مایکروویو بگذار و درش را ببند.",
+   "plan": [
+    [
+     "pick_and_place",
+     "Apple",
+     "Microwave"
+    ],
+    [
+     "close",
+     "Microwave",
+     null
+    ]
+   ],
+   "has_setup": false,
+   "cited_as_package_support": true
+  },
+  "g-l3-rotten-egg": {
+   "level": "L3",
+   "kind": "other_L3",
+   "family": "g-l1-place-apple-sink-basin",
+   "en": "The egg is rotten.",
+   "fa": "تخم‌مرغ گندیده است.",
+   "plan": [
+    [
+     "pick_and_place",
+     "Egg",
+     "GarbageCan"
+    ]
+   ],
+   "has_setup": false,
+   "cited_as_package_support": true
+  },
+  "g-l3-tool-scrub": {
+   "level": "L3",
+   "kind": "tool_only_purpose",
+   "family": "g-l1-pickup-apple",
+   "en": "I need something to scrub the dishes with.",
+   "fa": "چیزی برای سابیدن ظرف‌ها لازم دارم.",
+   "plan": [
+    [
+     "pickup",
+     "DishSponge",
+     null
+    ]
+   ],
+   "has_setup": false,
+   "cited_as_package_support": true
+  }
+ },
+ "presentations": [
+  {
+   "item": "g-l1-pickup-bowl",
+   "lang": "en",
+   "level": "L1"
+  },
+  {
+   "item": "g-l1-pickup-bowl",
+   "lang": "fa",
+   "level": "L1"
+  },
+  {
+   "item": "g-l1-pickup-pan",
+   "lang": "en",
+   "level": "L1"
+  },
+  {
+   "item": "g-l1-pickup-pan",
+   "lang": "fa",
+   "level": "L1"
+  },
+  {
+   "item": "g-l1-pickup-spoon",
+   "lang": "en",
+   "level": "L1"
+  },
+  {
+   "item": "g-l1-pickup-spoon",
+   "lang": "fa",
+   "level": "L1"
+  },
+  {
+   "item": "g-l1-place-tomato-counter-top",
+   "lang": "en",
+   "level": "L1"
+  },
+  {
+   "item": "g-l1-place-tomato-counter-top",
+   "lang": "fa",
+   "level": "L1"
+  },
+  {
+   "item": "g-l2-cabinet-bowl",
+   "lang": "en",
+   "level": "L2"
+  },
+  {
+   "item": "g-l2-cabinet-bowl",
+   "lang": "fa",
+   "level": "L2"
+  },
+  {
+   "item": "g-l2-drawer-spatula",
+   "lang": "en",
+   "level": "L2"
+  },
+  {
+   "item": "g-l2-drawer-spatula",
+   "lang": "fa",
+   "level": "L2"
+  },
+  {
+   "item": "g-l2-find-pickup-egg",
+   "lang": "en",
+   "level": "L2"
+  },
+  {
+   "item": "g-l2-find-pickup-egg",
+   "lang": "fa",
+   "level": "L2"
+  },
+  {
+   "item": "g-l2-fridge-lettuce",
+   "lang": "en",
+   "level": "L2"
+  },
+  {
+   "item": "g-l2-fridge-lettuce",
+   "lang": "fa",
+   "level": "L2"
+  },
+  {
+   "item": "g-l2-microwave-apple",
+   "lang": "en",
+   "level": "L2"
+  },
+  {
+   "item": "g-l2-microwave-apple",
+   "lang": "fa",
+   "level": "L2"
+  },
+  {
+   "item": "g-l3-rotten-egg",
+   "lang": "en",
+   "level": "L3"
+  },
+  {
+   "item": "g-l3-rotten-egg",
+   "lang": "fa",
+   "level": "L3"
+  },
+  {
+   "item": "g-l3-tool-scrub",
+   "lang": "en",
+   "level": "L3"
+  },
+  {
+   "item": "g-l3-tool-scrub",
+   "lang": "fa",
+   "level": "L3"
+  }
+ ],
+ "n_items": 11,
+ "n_presentations": 22,
+ "by_level": {
+  "L1": 4,
+  "L2": 5,
+  "L3": 2
+ },
+ "kinds_covered": [
+  "cutlery",
+  "fridge",
+  "microwave_stay_inside",
+  "other_L1",
+  "other_L2",
+  "other_L3",
+  "tool_only_purpose"
+ ],
+ "acceptance_reservation": {
+  "purpose": "reserved NOW so no dev work touches them; not to be opened, planned, or run until the package is frozen (A24 acceptance gate)",
+  "items": [
+   "g-l1-pickup-butter-knife",
+   "g-l1-pickup-cup",
+   "g-l1-pickup-pot",
+   "g-l1-pickup-soap-bottle",
+   "g-l1-pickup-spatula",
+   "g-l1-pickup-tomato",
+   "g-l1-place-plate-counter-top",
+   "g-l1-place-spoon-sink-basin",
+   "g-l2-cabinet-pepper-shaker",
+   "g-l2-find-pickup-bowl",
+   "g-l2-find-pickup-mug",
+   "g-l2-find-place-dish-sponge-sink-basin",
+   "g-l2-find-place-spatula-sink-basin",
+   "g-l2-fridge-potato",
+   "g-l2-microwave-bread",
+   "g-l2-microwave-mug",
+   "g-l3-cold-bread",
+   "g-l3-tool-salt",
+   "g-l3-tool-soup"
+  ],
+  "by_level": {
+   "L1": 8,
+   "L2": 8,
+   "L3": 3
+  },
+  "target_by_level": {
+   "L1": 8,
+   "L2": 8,
+   "L3": 8
+  },
+  "shortfall_note": "A24 asks 8 per level; the unused non-test L3 pool is too small. Arash/A25 must decide how to fill the L3 gap (held-out families, or a smaller L3 share). It is not filled with already-used items here."
+ },
+ "spare_unused": [
+  "g-l1-pickup-fork",
+  "g-l1-pickup-kettle",
+  "g-l1-pickup-salt-shaker",
+  "g-l1-place-bread-counter-top",
+  "g-l1-place-cup-sink-basin",
+  "g-l1-place-egg-garbage-can",
+  "g-l2-cabinet-salt-shaker",
+  "g-l2-find-pickup-spoon",
+  "g-l2-fridge-bread",
+  "g-l2-fridge-tomato"
+ ],
+ "overlap_checks": {
+  "fresh_vs_signal24": [],
+  "fresh_vs_acceptance": [],
+  "fresh_in_practice_or_screen": []
+ },
+ "honest_caveats": [
+  "Package support: items marked cited_as_package_support appear in a support/tuned_on list of the procedure KB or L3 templates (nearly every non-test L2/L3 item does). The package builder already drops, per presentation, any record that cites the presentation item itself (item-level leave-out). Fresh is therefore self-support-free, not support-free; a family-level leave-out would empty the fresh L2/L3 cells.",
+  "Fresh items share families with practice/signal items (the non-test pool has 15 families). They are fresh as items and texts, not as families; do not call them held-out families.",
+  "EN and FA are the dataset texts as Arash checked them. The known EN/FA mismatch (g-l2-microwave-run-egg) is in the signal set, not here.",
+  "Coverage gaps: only 5 unused non-test L3 items exist, so fresh has 2 L3 items (one purpose-named tool request g-l3-tool-scrub, one indirect state request) and acceptance has 3; 11 items / 22 presentations, not 12 / 24. Microwave HEAT (food back in hand) has no unused item (all heat items were used in practice); the fresh microwave item is the stay-inside kind. Tool-only vs manipulation: g-l3-tool-scrub (tool only) against g-l1-pickup-spoon and g-l2-drawer-spatula (manipulation). Cutlery with a Persian purpose phrase is not available fresh. The 8 spare items (see spare_unused) can add L1/L2 items if Arash wants 12.",
+  "Items were chosen by rule before any plan or outcome was run; reading text and reference plan to label kinds is part of the rule."
+ ]
+}

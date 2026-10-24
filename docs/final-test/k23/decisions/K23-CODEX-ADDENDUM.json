@@ -1,0 +1,20 @@
+{
+ "id": "K23-CODEX-ADDENDUM",
+ "written": "2026-10-21T02:00:49",
+ "arash_words": [
+  "2026-10-21 ~01:45: 'unfreeze and run the codex models after the main testing was done. make sure to not repeat the executions with exact same planning again and to have plannings of gemma and opus saved. unfreeze and freeze again if needed. again you have my full approval.'",
+  "~01:55: 'when i wake up tomorrow i expect the codex results too or at least them running and nearing finishing ... you have my full approval to make this happen even if it means bug fixes and freezing and unfreezing.'"
+ ],
+ "status": "ADDENDUM outside the registered K2 / K3 design (A29 item 1: four core arms). Decided before any K2 / K3 outcome was seen by Arash (K2 planning complete, execution running, nothing scored); reported separately, never mixed into the main K2 / K3 analysis; disclosed as post-registration.",
+ "design": {
+  "sol": "X0 / X+M with gpt-6-sol at r = 0 on every canonical presentation of test-k2-v1 (200) and test-k3-v1 (202): the Kitchen 1 main comparator; EXECUTED after both main tests, reusing every execution unit the main test already ran (execution_unit_key is arm-free) and executing only new units",
+  "explore": "X-<m>0 / X-<m>+M for gpt-6-astra, gpt-6-luna, gpt-5.6-terra at r = 0 on every canonical presentation: PLAN-ONLY as in Kitchen 1 (K23 has no REPEAT block, so r = 0 on all presentations replaces Kitchen 1's r = 0-2 on REPEAT); run after Sol, as time allows",
+  "requests": "the main test's captured requests (capture.jsonl read-only; sources none / S*), request-hash verified and masked before any call",
+  "codex_configuration": "Kitchen 1's: codex-cli 0.162.1 pinned, model per arm, reasoning effort high, read-only sandbox, restricted network, approval Never, identity-checked per call (sim/planners/codex_provider.py)",
+  "gemma_opus": "the main test's Gemma / Opus plans and executions are kept as they are and never re-planned or re-executed"
+ },
+ "isolation": "new file sim/final_test/matrix/k23_codex.py (outside every freeze closure); writes only docs/final-test/k23/codex/<ns>/ and sim/final_test/matrix/work/codex-<ns>/<pass>/ (own phase lock, cache, 0-USD ledger, events); reads the main capture and events read-only; no frozen, pinned or protected file is edited; the main freezes stay valid",
+ "execution_and_scoring": "to be built as separate phases of k23_codex.py (own exec / outcome / score journals; dedupe index from the main exec journal; the main sealed score untouched), each Astra-checked before it runs",
+ "authorized_by": "Arash (explicit, in chat, 2026-10-21 ~01:45 / ~01:55)",
+ "sha256": "ffb0c69aa1c479a51f7baf048999d755fc82108a9dc4c9109556c24edda9af45"
+}

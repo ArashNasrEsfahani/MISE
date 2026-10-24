@@ -1,0 +1,205 @@
+{
+ "counts": {
+  "ButterKnife": {
+   "confused_with": {
+    "Fork": 13,
+    "Plate": 2,
+    "Spatula": 5
+   },
+   "n": 203
+  },
+  "Fork": {
+   "confused_with": {
+    "ButterKnife": 3,
+    "CreditCard": 1,
+    "Spoon": 8
+   },
+   "n": 72
+  },
+  "Pan": {
+   "confused_with": {
+    "Pot": 21,
+    "Statue": 2,
+    "StoveBurner": 5
+   },
+   "n": 648
+  },
+  "PepperShaker": {
+   "confused_with": {
+    "Cup": 2,
+    "SaltShaker": 5
+   },
+   "n": 166
+  },
+  "Plate": {
+   "confused_with": {
+    "Book": 1,
+    "Mug": 1,
+    "Pot": 8
+   },
+   "n": 196
+  },
+  "Pot": {
+   "confused_with": {
+    "Cup": 1,
+    "Drawer": 1,
+    "Pan": 14
+   },
+   "n": 456
+  },
+  "SaltShaker": {
+   "confused_with": {
+    "Bottle": 1,
+    "PepperShaker": 25
+   },
+   "n": 139
+  },
+  "Spatula": {
+   "confused_with": {
+    "ButterKnife": 4,
+    "Plate": 1,
+    "Sink": 1
+   },
+   "n": 152
+  },
+  "Spoon": {
+   "confused_with": {
+    "ButterKnife": 8,
+    "Fork": 12,
+    "Statue": 1
+   },
+   "n": 155
+  }
+ },
+ "direction": "M[X][Y] = count(true X predicted as Y) / n_X (searching for X, a box labelled Y may be an X)",
+ "exclude": [
+  "Knife"
+ ],
+ "kitchen": "FloorPlan1",
+ "map": {
+  "ButterKnife": {
+   "Fork": 0.064,
+   "Spatula": 0.0246
+  },
+  "Fork": {
+   "ButterKnife": 0.0417,
+   "Spoon": 0.1111
+  },
+  "Pan": {
+   "Pot": 0.0324
+  },
+  "PepperShaker": {
+   "SaltShaker": 0.0301
+  },
+  "Plate": {
+   "Pot": 0.0408
+  },
+  "Pot": {
+   "Pan": 0.0307
+  },
+  "SaltShaker": {
+   "PepperShaker": 0.1799
+  },
+  "Spatula": {
+   "ButterKnife": 0.0263
+  },
+  "Spoon": {
+   "ButterKnife": 0.0516,
+   "Fork": 0.0774
+  }
+ },
+ "pairs": [
+  {
+   "count": 12,
+   "n_true": 155,
+   "predicted_as": "Fork",
+   "rate": 0.0774,
+   "true": "Spoon"
+  },
+  {
+   "count": 8,
+   "n_true": 155,
+   "predicted_as": "ButterKnife",
+   "rate": 0.0516,
+   "true": "Spoon"
+  },
+  {
+   "count": 8,
+   "n_true": 72,
+   "predicted_as": "Spoon",
+   "rate": 0.1111,
+   "true": "Fork"
+  },
+  {
+   "count": 3,
+   "n_true": 72,
+   "predicted_as": "ButterKnife",
+   "rate": 0.0417,
+   "true": "Fork"
+  },
+  {
+   "count": 13,
+   "n_true": 203,
+   "predicted_as": "Fork",
+   "rate": 0.064,
+   "true": "ButterKnife"
+  },
+  {
+   "count": 5,
+   "n_true": 203,
+   "predicted_as": "Spatula",
+   "rate": 0.0246,
+   "true": "ButterKnife"
+  },
+  {
+   "count": 4,
+   "n_true": 152,
+   "predicted_as": "ButterKnife",
+   "rate": 0.0263,
+   "true": "Spatula"
+  },
+  {
+   "count": 25,
+   "n_true": 139,
+   "predicted_as": "PepperShaker",
+   "rate": 0.1799,
+   "true": "SaltShaker"
+  },
+  {
+   "count": 8,
+   "n_true": 196,
+   "predicted_as": "Pot",
+   "rate": 0.0408,
+   "true": "Plate"
+  },
+  {
+   "count": 5,
+   "n_true": 166,
+   "predicted_as": "SaltShaker",
+   "rate": 0.0301,
+   "true": "PepperShaker"
+  },
+  {
+   "count": 21,
+   "n_true": 648,
+   "predicted_as": "Pot",
+   "rate": 0.0324,
+   "true": "Pan"
+  },
+  {
+   "count": 14,
+   "n_true": 456,
+   "predicted_as": "Pan",
+   "rate": 0.0307,
+   "true": "Pot"
+  }
+ ],
+ "schema": "e3.lookalike_map/1",
+ "source": "kitchen_v3/FloorPlan1/val_errors_yolo26s.json",
+ "source_op_conf": 0.25,
+ "source_sha256": "7a66519af9d48aceed8e380580173ba2b66b26b7ac4191da1892be6e168ba5cf",
+ "source_split": "val",
+ "source_weights": "/home/arash/fp1_yolo26s.pt",
+ "theta": 0.02,
+ "what": "E3 Ambiguous Objects Map M (DESSTA): for each target type X, the types Y the PRIMARY detector predicts for true X at the operating confidence, measured on this kitchen's evaluation (VAL) split; the agent picks up a box labelled Y (and a low-confidence box of X) to re-check it with the specialist while searching for X"
+}

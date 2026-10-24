@@ -1,0 +1,2228 @@
+{
+ "scene": "FloorPlan15",
+ "generated_ts": "2026-09-28T15:45:24",
+ "n": 277,
+ "tally": {
+  "ok": 259,
+  "FAIL": 15,
+  "skipped": 3
+ },
+ "results": [
+  {
+   "id": "g-l1-pickup-apple",
+   "level": "L1",
+   "en": "Pick up the apple.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.6
+  },
+  {
+   "id": "g-l1-pickup-bread",
+   "level": "L1",
+   "en": "Pick up the bread.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.6
+  },
+  {
+   "id": "g-l1-pickup-tomato",
+   "level": "L1",
+   "en": "Pick up the tomato.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.9
+  },
+  {
+   "id": "g-l1-pickup-potato",
+   "level": "L1",
+   "en": "Pick up the potato.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.6
+  },
+  {
+   "id": "g-l1-pickup-egg",
+   "level": "L1",
+   "en": "Pick up the egg.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.1
+  },
+  {
+   "id": "g-l1-pickup-lettuce",
+   "level": "L1",
+   "en": "Pick up the lettuce.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.6
+  },
+  {
+   "id": "g-l1-pickup-mug",
+   "level": "L1",
+   "en": "Pick up the mug.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.6
+  },
+  {
+   "id": "g-l1-pickup-cup",
+   "level": "L1",
+   "en": "Pick up the cup.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.8
+  },
+  {
+   "id": "g-l1-pickup-bowl",
+   "level": "L1",
+   "en": "Pick up the bowl.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.6
+  },
+  {
+   "id": "g-l1-pickup-plate",
+   "level": "L1",
+   "en": "Pick up the plate.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.7
+  },
+  {
+   "id": "g-l1-pickup-pan",
+   "level": "L1",
+   "en": "Pick up the pan.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.7
+  },
+  {
+   "id": "g-l1-pickup-pot",
+   "level": "L1",
+   "en": "Pick up the pot.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.8
+  },
+  {
+   "id": "g-l1-pickup-knife",
+   "level": "L1",
+   "en": "Pick up the knife.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.6
+  },
+  {
+   "id": "g-l1-pickup-butter-knife",
+   "level": "L1",
+   "en": "Pick up the butter knife.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.6
+  },
+  {
+   "id": "g-l1-pickup-fork",
+   "level": "L1",
+   "en": "Pick up the fork.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.0
+  },
+  {
+   "id": "g-l1-pickup-spoon",
+   "level": "L1",
+   "en": "Pick up the spoon.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.0
+  },
+  {
+   "id": "g-l1-pickup-spatula",
+   "level": "L1",
+   "en": "Pick up the spatula.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.6
+  },
+  {
+   "id": "g-l1-pickup-dish-sponge",
+   "level": "L1",
+   "en": "Pick up the sponge.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.7
+  },
+  {
+   "id": "g-l1-pickup-soap-bottle",
+   "level": "L1",
+   "en": "Pick up the soap bottle.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.7
+  },
+  {
+   "id": "g-l1-pickup-salt-shaker",
+   "level": "L1",
+   "en": "Pick up the salt shaker.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.7
+  },
+  {
+   "id": "g-l1-pickup-pepper-shaker",
+   "level": "L1",
+   "en": "Pick up the pepper shaker.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.8
+  },
+  {
+   "id": "g-l1-pickup-kettle",
+   "level": "L1",
+   "en": "Pick up the kettle.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.3
+  },
+  {
+   "id": "g-l1-open-fridge",
+   "level": "L1",
+   "en": "Open the fridge.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.0
+  },
+  {
+   "id": "g-l1-close-fridge",
+   "level": "L1",
+   "en": "Close the fridge.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.5
+  },
+  {
+   "id": "g-l1-open-microwave",
+   "level": "L1",
+   "en": "Open the microwave.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.8
+  },
+  {
+   "id": "g-l1-close-microwave",
+   "level": "L1",
+   "en": "Close the microwave.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.8
+  },
+  {
+   "id": "g-l1-open-cabinet",
+   "level": "L1",
+   "en": "Open a cabinet.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.7
+  },
+  {
+   "id": "g-l1-close-cabinet",
+   "level": "L2",
+   "en": "A cabinet has been left open. Close it.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.4
+  },
+  {
+   "id": "g-l1-open-drawer",
+   "level": "L1",
+   "en": "Open a drawer.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.6
+  },
+  {
+   "id": "g-l1-close-drawer",
+   "level": "L1",
+   "en": "A drawer has been left open. Close it.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.0
+  },
+  {
+   "id": "g-l1-on-microwave",
+   "level": "L1",
+   "en": "Turn on the microwave.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.7
+  },
+  {
+   "id": "g-l1-off-microwave",
+   "level": "L1",
+   "en": "Turn off the microwave.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.9
+  },
+  {
+   "id": "g-l1-on-toaster",
+   "level": "L1",
+   "en": "Turn on the toaster.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.6
+  },
+  {
+   "id": "g-l1-off-toaster",
+   "level": "L1",
+   "en": "Turn off the toaster.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.8
+  },
+  {
+   "id": "g-l1-on-coffee-machine",
+   "level": "L1",
+   "en": "Turn on the coffee machine.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.7
+  },
+  {
+   "id": "g-l1-off-coffee-machine",
+   "level": "L1",
+   "en": "Turn off the coffee machine.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.8
+  },
+  {
+   "id": "g-l1-on-stove-knob",
+   "level": "L1",
+   "en": "Turn on the stove.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.5
+  },
+  {
+   "id": "g-l1-off-stove-knob",
+   "level": "L1",
+   "en": "Turn off the stove.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.8
+  },
+  {
+   "id": "g-l1-on-faucet",
+   "level": "L1",
+   "en": "Turn on the faucet.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.8
+  },
+  {
+   "id": "g-l1-off-faucet",
+   "level": "L1",
+   "en": "Turn off the faucet.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.9
+  },
+  {
+   "id": "g-l1-off-light",
+   "level": "L1",
+   "en": "Turn off the light.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.5
+  },
+  {
+   "id": "g-l1-on-light",
+   "level": "L1",
+   "en": "Turn on the light.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.6
+  },
+  {
+   "id": "g-l1-goto-fridge",
+   "level": "L1",
+   "en": "Go to the fridge.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.6
+  },
+  {
+   "id": "g-l1-goto-microwave",
+   "level": "L1",
+   "en": "Go to the microwave.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.5
+  },
+  {
+   "id": "g-l1-goto-toaster",
+   "level": "L1",
+   "en": "Go to the toaster.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.6
+  },
+  {
+   "id": "g-l1-goto-coffee-machine",
+   "level": "L1",
+   "en": "Go to the coffee machine.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.6
+  },
+  {
+   "id": "g-l1-goto-sink-basin",
+   "level": "L1",
+   "en": "Go to the sink.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.6
+  },
+  {
+   "id": "g-l1-goto-garbage-can",
+   "level": "L1",
+   "en": "Go to the trash can.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.5
+  },
+  {
+   "id": "g-l1-goto-light-switch",
+   "level": "L1",
+   "en": "Go to the light switch.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.5
+  },
+  {
+   "id": "g-l1-goto-stove-burner",
+   "level": "L1",
+   "en": "Go to the stove.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.6
+  },
+  {
+   "id": "g-l1-goto-dining-table",
+   "level": "L1",
+   "en": "Go to the dining table.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.8
+  },
+  {
+   "id": "g-l1-break-egg",
+   "level": "L1",
+   "en": "Break the egg.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.1
+  },
+  {
+   "id": "g-l1-break-mug",
+   "level": "L1",
+   "en": "Break the mug.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.6
+  },
+  {
+   "id": "g-l1-break-plate",
+   "level": "L1",
+   "en": "Break the plate.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.6
+  },
+  {
+   "id": "g-l1-dirty-bowl",
+   "level": "L1",
+   "en": "Make the bowl dirty.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.5
+  },
+  {
+   "id": "g-l1-clean-bowl",
+   "level": "L1",
+   "en": "The bowl is dirty. Clean it.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.6
+  },
+  {
+   "id": "g-l1-dirty-cup",
+   "level": "L1",
+   "en": "Make the cup dirty.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.6
+  },
+  {
+   "id": "g-l1-clean-cup",
+   "level": "L1",
+   "en": "The cup is dirty. Clean it.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.9
+  },
+  {
+   "id": "g-l1-dirty-mug",
+   "level": "L1",
+   "en": "Make the mug dirty.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.4
+  },
+  {
+   "id": "g-l1-clean-mug",
+   "level": "L1",
+   "en": "The mug is dirty. Clean it.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.6
+  },
+  {
+   "id": "g-l1-dirty-pan",
+   "level": "L1",
+   "en": "Make the pan dirty.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.5
+  },
+  {
+   "id": "g-l1-clean-pan",
+   "level": "L1",
+   "en": "The pan is dirty. Clean it.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.7
+  },
+  {
+   "id": "g-l1-dirty-plate",
+   "level": "L1",
+   "en": "Make the plate dirty.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.6
+  },
+  {
+   "id": "g-l1-clean-plate",
+   "level": "L1",
+   "en": "The plate is dirty. Clean it.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.8
+  },
+  {
+   "id": "g-l1-dirty-pot",
+   "level": "L1",
+   "en": "Make the pot dirty.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.7
+  },
+  {
+   "id": "g-l1-clean-pot",
+   "level": "L1",
+   "en": "The pot is dirty. Clean it.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.2
+  },
+  {
+   "id": "g-l1-fill-bowl-water",
+   "level": "L1",
+   "en": "Fill the bowl with water.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.7
+  },
+  {
+   "id": "g-l1-fill-bowl-coffee",
+   "level": "L1",
+   "en": "Fill the bowl with coffee.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.5
+  },
+  {
+   "id": "g-l1-fill-bowl-wine",
+   "level": "L1",
+   "en": "Fill the bowl with wine.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.5
+  },
+  {
+   "id": "g-l1-fill-cup-water",
+   "level": "L1",
+   "en": "Fill the cup with water.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.6
+  },
+  {
+   "id": "g-l1-fill-cup-coffee",
+   "level": "L1",
+   "en": "Fill the cup with coffee.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.6
+  },
+  {
+   "id": "g-l1-fill-cup-wine",
+   "level": "L1",
+   "en": "Fill the cup with wine.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.7
+  },
+  {
+   "id": "g-l1-fill-mug-water",
+   "level": "L1",
+   "en": "Fill the mug with water.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.5
+  },
+  {
+   "id": "g-l1-fill-mug-coffee",
+   "level": "L1",
+   "en": "Fill the mug with coffee.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.6
+  },
+  {
+   "id": "g-l1-fill-mug-wine",
+   "level": "L1",
+   "en": "Fill the mug with wine.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.6
+  },
+  {
+   "id": "g-l1-fill-pot-water",
+   "level": "L1",
+   "en": "Fill the pot with water.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.7
+  },
+  {
+   "id": "g-l1-fill-pot-coffee",
+   "level": "L1",
+   "en": "Fill the pot with coffee.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.7
+  },
+  {
+   "id": "g-l1-fill-pot-wine",
+   "level": "L1",
+   "en": "Fill the pot with wine.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.7
+  },
+  {
+   "id": "g-l1-fill-kettle-water",
+   "level": "L1",
+   "en": "Fill the kettle with water.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.1
+  },
+  {
+   "id": "g-l1-empty-bowl",
+   "level": "L1",
+   "en": "Empty the bowl.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.8
+  },
+  {
+   "id": "g-l1-empty-cup",
+   "level": "L1",
+   "en": "Empty the cup.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.1
+  },
+  {
+   "id": "g-l1-empty-mug",
+   "level": "L1",
+   "en": "Empty the mug.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.5
+  },
+  {
+   "id": "g-l1-empty-pot",
+   "level": "L1",
+   "en": "Empty the pot.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.0
+  },
+  {
+   "id": "g-l1-empty-kettle",
+   "level": "L1",
+   "en": "Empty the kettle.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.5
+  },
+  {
+   "id": "g-l1-drop-apple",
+   "level": "L1",
+   "en": "Drop the apple.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 7.4
+  },
+  {
+   "id": "g-l1-drop-bread",
+   "level": "L1",
+   "en": "Drop the bread.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.1
+  },
+  {
+   "id": "g-l1-drop-potato",
+   "level": "L1",
+   "en": "Drop the potato.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 2.1
+  },
+  {
+   "id": "g-l1-drop-fork",
+   "level": "L1",
+   "en": "Drop the fork.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.8
+  },
+  {
+   "id": "g-l1-drop-spoon",
+   "level": "L1",
+   "en": "Drop the spoon.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.8
+  },
+  {
+   "id": "g-l1-drop-spatula",
+   "level": "L1",
+   "en": "Drop the spatula.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.1
+  },
+  {
+   "id": "g-l1-drop-dish-sponge",
+   "level": "L1",
+   "en": "Drop the sponge.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.1
+  },
+  {
+   "id": "g-l1-drop-soap-bottle",
+   "level": "L1",
+   "en": "Drop the soap bottle.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.6
+  },
+  {
+   "id": "g-l1-slice-apple",
+   "level": "L1",
+   "en": "Slice the apple.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.4
+  },
+  {
+   "id": "g-l1-slice-bread",
+   "level": "L1",
+   "en": "Slice the bread.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.4
+  },
+  {
+   "id": "g-l1-slice-tomato",
+   "level": "L1",
+   "en": "Slice the tomato.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.2
+  },
+  {
+   "id": "g-l1-slice-potato",
+   "level": "L1",
+   "en": "Slice the potato.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.4
+  },
+  {
+   "id": "g-l1-slice-lettuce",
+   "level": "L1",
+   "en": "Slice the lettuce.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.5
+  },
+  {
+   "id": "g-l1-place-apple-sink-basin",
+   "level": "L1",
+   "en": "You are holding the apple. Put it in the sink.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.4
+  },
+  {
+   "id": "g-l1-place-lettuce-sink-basin",
+   "level": "L1",
+   "en": "You are holding the lettuce. Put it in the sink.",
+   "status": "FAIL",
+   "detail": "goal unmet: Lettuce in SinkBasin | step errors: put_in SinkBasin: No valid positions to place object found",
+   "elapsed_s": 3.1
+  },
+  {
+   "id": "g-l1-place-fork-sink-basin",
+   "level": "L1",
+   "en": "You are holding the fork. Put it in the sink.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.8
+  },
+  {
+   "id": "g-l1-place-spoon-sink-basin",
+   "level": "L1",
+   "en": "You are holding the spoon. Put it in the sink.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.8
+  },
+  {
+   "id": "g-l1-place-cup-sink-basin",
+   "level": "L1",
+   "en": "You are holding the cup. Put it in the sink.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.5
+  },
+  {
+   "id": "g-l1-place-tomato-counter-top",
+   "level": "L1",
+   "en": "You are holding the tomato. Put it on the counter.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.2
+  },
+  {
+   "id": "g-l1-place-bread-counter-top",
+   "level": "L1",
+   "en": "You are holding the bread. Put it on the counter.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.3
+  },
+  {
+   "id": "g-l1-place-mug-counter-top",
+   "level": "L1",
+   "en": "You are holding the mug. Put it on the counter.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.3
+  },
+  {
+   "id": "g-l1-place-plate-counter-top",
+   "level": "L1",
+   "en": "You are holding the plate. Put it on the counter.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.5
+  },
+  {
+   "id": "g-l1-place-bowl-counter-top",
+   "level": "L1",
+   "en": "You are holding the bowl. Put it on the counter.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.0
+  },
+  {
+   "id": "g-l1-place-egg-garbage-can",
+   "level": "L1",
+   "en": "You are holding the egg. Put it in the trash can.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.6
+  },
+  {
+   "id": "g-l1-place-potato-garbage-can",
+   "level": "L1",
+   "en": "You are holding the potato. Put it in the trash can.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.3
+  },
+  {
+   "id": "g-l1-crouch",
+   "level": "L1",
+   "en": "Crouch down.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.2
+  },
+  {
+   "id": "g-l1-stand",
+   "level": "L1",
+   "en": "Stand up.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.2
+  },
+  {
+   "id": "g-l2-fridge-apple",
+   "level": "L2",
+   "en": "Put the apple in the fridge and close the door.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 2.1
+  },
+  {
+   "id": "g-l2-fridge-bread",
+   "level": "L2",
+   "en": "Put the bread in the fridge and close the door.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 2.1
+  },
+  {
+   "id": "g-l2-fridge-tomato",
+   "level": "L2",
+   "en": "Put the tomato in the fridge and close the door.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.9
+  },
+  {
+   "id": "g-l2-fridge-potato",
+   "level": "L2",
+   "en": "Put the potato in the fridge and close the door.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 2.1
+  },
+  {
+   "id": "g-l2-fridge-egg",
+   "level": "L2",
+   "en": "Put the egg in the fridge and close the door.",
+   "status": "skipped",
+   "detail": "goal already true before acting",
+   "elapsed_s": 0.2
+  },
+  {
+   "id": "g-l2-fridge-lettuce",
+   "level": "L2",
+   "en": "Put the lettuce in the fridge and close the door.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 2.5
+  },
+  {
+   "id": "g-l2-microwave-potato",
+   "level": "L2",
+   "en": "Put the potato in the microwave and close it.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.7
+  },
+  {
+   "id": "g-l2-microwave-bread",
+   "level": "L2",
+   "en": "Put the bread in the microwave and close it.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.6
+  },
+  {
+   "id": "g-l2-microwave-apple",
+   "level": "L2",
+   "en": "Put the apple in the microwave and close it.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.7
+  },
+  {
+   "id": "g-l2-microwave-egg",
+   "level": "L2",
+   "en": "Put the egg in the microwave and close it.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.2
+  },
+  {
+   "id": "g-l2-microwave-tomato",
+   "level": "L2",
+   "en": "Put the tomato in the microwave and close it.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.5
+  },
+  {
+   "id": "g-l2-microwave-mug",
+   "level": "L2",
+   "en": "Put the mug in the microwave and close it.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.4
+  },
+  {
+   "id": "g-l2-microwave-run-potato",
+   "level": "L2",
+   "en": "Put the potato in the microwave, close the door, and turn it on.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 2.0
+  },
+  {
+   "id": "g-l2-microwave-run-bread",
+   "level": "L2",
+   "en": "Put the bread in the microwave, close the door, and turn it on.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.8
+  },
+  {
+   "id": "g-l2-microwave-run-egg",
+   "level": "L2",
+   "en": "Put the egg in the microwave, close the door, and turn it on.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.5
+  },
+  {
+   "id": "g-l2-slice-apple",
+   "level": "L2",
+   "en": "Slice the apple.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.3
+  },
+  {
+   "id": "g-l2-slice-bread",
+   "level": "L2",
+   "en": "Slice the bread.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.4
+  },
+  {
+   "id": "g-l2-slice-tomato",
+   "level": "L2",
+   "en": "Slice the tomato.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.3
+  },
+  {
+   "id": "g-l2-slice-potato",
+   "level": "L2",
+   "en": "Slice the potato.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.4
+  },
+  {
+   "id": "g-l2-slice-lettuce",
+   "level": "L2",
+   "en": "Slice the lettuce.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.4
+  },
+  {
+   "id": "g-l2-slice-tomato-lettuce",
+   "level": "L2",
+   "en": "Take the knife, slice the tomato, then slice the lettuce.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.7
+  },
+  {
+   "id": "g-l2-slice-bread-tomato",
+   "level": "L2",
+   "en": "Take the knife, slice the bread, then slice the tomato.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 2.0
+  },
+  {
+   "id": "g-l2-slice-apple-potato",
+   "level": "L2",
+   "en": "Take the knife, slice the apple, then slice the potato.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.9
+  },
+  {
+   "id": "g-l2-slice-potato-tomato",
+   "level": "L2",
+   "en": "Take the knife, slice the potato, then slice the tomato.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 2.0
+  },
+  {
+   "id": "g-l2-heat-potato-plate",
+   "level": "L2",
+   "en": "Heat the potato in the microwave, then put it on the plate.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 2.1
+  },
+  {
+   "id": "g-l2-heat-bread-counter-top",
+   "level": "L2",
+   "en": "Heat the bread in the microwave, then put it on the counter.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 2.3
+  },
+  {
+   "id": "g-l2-heat-apple-plate",
+   "level": "L2",
+   "en": "Heat the apple in the microwave, then put it on the plate.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 2.2
+  },
+  {
+   "id": "g-l2-heat-tomato-plate",
+   "level": "L2",
+   "en": "Heat the tomato in the microwave, then put it on the plate.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 2.1
+  },
+  {
+   "id": "g-l2-heat-egg-bowl",
+   "level": "L2",
+   "en": "Heat the egg in the microwave, then put it in the bowl.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 2.4
+  },
+  {
+   "id": "g-l2-heat-potato-counter-top",
+   "level": "L2",
+   "en": "Heat the potato in the microwave, then put it on the counter.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 2.4
+  },
+  {
+   "id": "g-l2-cook-potato-plate",
+   "level": "L2",
+   "en": "Cook the potato and put it on the plate.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 2.1
+  },
+  {
+   "id": "g-l2-cook-potato-bowl",
+   "level": "L2",
+   "en": "Cook the potato and put it in the bowl.",
+   "status": "FAIL",
+   "detail": "goal unmet: Potato in Bowl | step errors: pick_and_place Potato: No valid positions to place object found",
+   "elapsed_s": 4.6
+  },
+  {
+   "id": "g-l2-cook-potato-pan",
+   "level": "L2",
+   "en": "Cook the potato and put it in the pan.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 2.6
+  },
+  {
+   "id": "g-l2-cook-potato-counter-top",
+   "level": "L2",
+   "en": "Cook the potato and put it on the counter.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 2.3
+  },
+  {
+   "id": "g-l2-wash-bowl",
+   "level": "L2",
+   "en": "The bowl is dirty. Wash it and put it on the counter.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 2.4
+  },
+  {
+   "id": "g-l2-wash-cup",
+   "level": "L2",
+   "en": "The cup is dirty. Wash it and put it on the counter.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 2.6
+  },
+  {
+   "id": "g-l2-wash-mug",
+   "level": "L2",
+   "en": "The mug is dirty. Wash it and put it on the counter.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 2.4
+  },
+  {
+   "id": "g-l2-wash-pan",
+   "level": "L2",
+   "en": "The pan is dirty. Wash it and put it on the counter.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 2.6
+  },
+  {
+   "id": "g-l2-wash-plate",
+   "level": "L2",
+   "en": "The plate is dirty. Wash it and put it on the counter.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 2.6
+  },
+  {
+   "id": "g-l2-wash-pot",
+   "level": "L2",
+   "en": "The pot is dirty. Wash it and put it on the counter.",
+   "status": "FAIL",
+   "detail": "goal unmet: Pot in CounterTop | step errors: pick_and_place Pot: No valid positions to place object found",
+   "elapsed_s": 4.1
+  },
+  {
+   "id": "g-l2-cabinet-soap-bottle",
+   "level": "L2",
+   "en": "Put the soap bottle away in a cabinet and close it.",
+   "status": "FAIL",
+   "detail": "goal unmet: SoapBottle in Cabinet | step errors: pick_and_place SoapBottle: No valid positions to place object found",
+   "elapsed_s": 1.9
+  },
+  {
+   "id": "g-l2-cabinet-salt-shaker",
+   "level": "L2",
+   "en": "Put the salt shaker away in a cabinet and close it.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.6
+  },
+  {
+   "id": "g-l2-cabinet-pepper-shaker",
+   "level": "L2",
+   "en": "Put the pepper shaker away in a cabinet and close it.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.6
+  },
+  {
+   "id": "g-l2-cabinet-plate",
+   "level": "L2",
+   "en": "Put the plate away in a cabinet and close it.",
+   "status": "FAIL",
+   "detail": "goal unmet: Plate in Cabinet | step errors: pick_and_place Plate: No valid positions to place object found",
+   "elapsed_s": 1.9
+  },
+  {
+   "id": "g-l2-cabinet-bowl",
+   "level": "L2",
+   "en": "Put the bowl away in a cabinet and close it.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.4
+  },
+  {
+   "id": "g-l2-drawer-fork",
+   "level": "L2",
+   "en": "Put the fork in a drawer and close it.",
+   "status": "skipped",
+   "detail": "goal already true before acting",
+   "elapsed_s": 0.2
+  },
+  {
+   "id": "g-l2-drawer-spoon",
+   "level": "L2",
+   "en": "Put the spoon in a drawer and close it.",
+   "status": "skipped",
+   "detail": "goal already true before acting",
+   "elapsed_s": 0.2
+  },
+  {
+   "id": "g-l2-drawer-knife",
+   "level": "L2",
+   "en": "Put the knife in a drawer and close it.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 2.2
+  },
+  {
+   "id": "g-l2-drawer-butter-knife",
+   "level": "L2",
+   "en": "Put the butter knife in a drawer and close it.",
+   "status": "FAIL",
+   "detail": "goal unmet: ButterKnife in Drawer | step errors: pick_and_place ButterKnife: No valid positions to place object found",
+   "elapsed_s": 3.1
+  },
+  {
+   "id": "g-l2-drawer-spatula",
+   "level": "L2",
+   "en": "Put the spatula in a drawer and close it.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.6
+  },
+  {
+   "id": "g-l2-find-pickup-egg",
+   "level": "L2",
+   "en": "Find the egg and pick it up.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 2.1
+  },
+  {
+   "id": "g-l2-find-pickup-knife",
+   "level": "L2",
+   "en": "Find the knife and pick it up.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.8
+  },
+  {
+   "id": "g-l2-find-pickup-mug",
+   "level": "L2",
+   "en": "Find the mug and pick it up.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 3.4
+  },
+  {
+   "id": "g-l2-find-pickup-bowl",
+   "level": "L2",
+   "en": "Find the bowl and pick it up.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 2.6
+  },
+  {
+   "id": "g-l2-find-pickup-soap-bottle",
+   "level": "L2",
+   "en": "Find the soap bottle and pick it up.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 2.8
+  },
+  {
+   "id": "g-l2-find-pickup-spoon",
+   "level": "L2",
+   "en": "Find the spoon and pick it up.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 3.7
+  },
+  {
+   "id": "g-l2-find-pickup-lettuce",
+   "level": "L2",
+   "en": "Find the lettuce and pick it up.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 2.6
+  },
+  {
+   "id": "g-l2-find-pickup-pan",
+   "level": "L2",
+   "en": "Find the pan and pick it up.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 2.1
+  },
+  {
+   "id": "g-l2-find-place-fork-sink-basin",
+   "level": "L2",
+   "en": "Find the fork and put it in the sink.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 3.4
+  },
+  {
+   "id": "g-l2-find-place-cup-sink-basin",
+   "level": "L2",
+   "en": "Find the cup and put it in the sink.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 3.7
+  },
+  {
+   "id": "g-l2-find-place-dish-sponge-sink-basin",
+   "level": "L2",
+   "en": "Find the sponge and put it in the sink.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 3.0
+  },
+  {
+   "id": "g-l2-find-place-bread-fridge",
+   "level": "L2",
+   "en": "Find the bread and put it in the fridge.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 3.5
+  },
+  {
+   "id": "g-l2-find-place-spatula-sink-basin",
+   "level": "L2",
+   "en": "Find the spatula and put it in the sink.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 2.0
+  },
+  {
+   "id": "g-l2-two-fork-spoon-sink-basin",
+   "level": "L2",
+   "en": "First put the fork in the sink, then the spoon.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.4
+  },
+  {
+   "id": "g-l2-two-cup-bowl-sink-basin",
+   "level": "L2",
+   "en": "First put the cup in the sink, then the bowl.",
+   "status": "FAIL",
+   "detail": "goal unmet: Bowl in SinkBasin | step errors: pick_and_place Bowl: No valid positions to place object found",
+   "elapsed_s": 2.5
+  },
+  {
+   "id": "g-l2-two-plate-mug-sink-basin",
+   "level": "L2",
+   "en": "First put the plate in the sink, then the mug.",
+   "status": "FAIL",
+   "detail": "goal unmet: Plate in SinkBasin; Mug in SinkBasin | step errors: pick_and_place Plate: No valid positions to place object found / pick_and_place Mug: No valid positions to place object found",
+   "elapsed_s": 3.1
+  },
+  {
+   "id": "g-l2-two-egg-tomato-garbage-can",
+   "level": "L2",
+   "en": "First put the egg in the trash can, then the tomato.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.9
+  },
+  {
+   "id": "g-l2-two-apple-potato-garbage-can",
+   "level": "L2",
+   "en": "First put the apple in the trash can, then the potato.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 3.1
+  },
+  {
+   "id": "g-l2-two-apple-lettuce-fridge",
+   "level": "L2",
+   "en": "First put the apple in the fridge, then the lettuce.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 3.8
+  },
+  {
+   "id": "g-l2-two-tomato-egg-fridge",
+   "level": "L2",
+   "en": "First put the tomato in the fridge, then the egg.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 2.1
+  },
+  {
+   "id": "g-l2-coffee-machine",
+   "level": "L2",
+   "en": "Put the mug in the coffee machine and turn it on.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.0
+  },
+  {
+   "id": "g-l2-stove-pan",
+   "level": "L2",
+   "en": "Put the pan on the stove and turn the stove on.",
+   "status": "FAIL",
+   "detail": "goal unmet: Pan in StoveBurner | step errors: pick_and_place Pan: StoveBurner_0a801165 is full right now",
+   "elapsed_s": 1.5
+  },
+  {
+   "id": "g-l2-stove-pot",
+   "level": "L2",
+   "en": "Put the pot on the stove and turn the stove on.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.9
+  },
+  {
+   "id": "g-l2-stove-water-pot",
+   "level": "L2",
+   "en": "Fill the pot with water, put it on the stove, and turn the stove on.",
+   "status": "ok",
+   "detail": "goal met despite step errors: pick_and_place Pot: another object's collision is blocking held object from being placed",
+   "elapsed_s": 2.4
+  },
+  {
+   "id": "g-l2-stove-water-kettle",
+   "level": "L2",
+   "en": "Fill the kettle with water, put it on the stove, and turn the stove on.",
+   "status": "FAIL",
+   "detail": "goal unmet: Kettle in StoveBurner | step errors: pick_and_place Kettle: StoveBurner_0a801165 is full right now",
+   "elapsed_s": 2.4
+  },
+  {
+   "id": "g-l2-fill-place-cup-water-counter-top",
+   "level": "L2",
+   "en": "Fill the cup with water and put it on the counter.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.5
+  },
+  {
+   "id": "g-l2-fill-place-mug-coffee-counter-top",
+   "level": "L2",
+   "en": "Fill the mug with coffee and put it on the counter.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.2
+  },
+  {
+   "id": "g-l2-fill-place-bowl-water-sink-basin",
+   "level": "L2",
+   "en": "Fill the bowl with water and put it in the sink.",
+   "status": "FAIL",
+   "detail": "goal unmet: Bowl in SinkBasin | step errors: pick_and_place Bowl: No valid positions to place object found",
+   "elapsed_s": 1.8
+  },
+  {
+   "id": "g-l2-fill-place-cup-wine-dining-table",
+   "level": "L2",
+   "en": "Fill the cup with wine and put it on the dining table.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.6
+  },
+  {
+   "id": "g-l2-fill-place-mug-water-microwave",
+   "level": "L2",
+   "en": "Fill the mug with water and put it in the microwave.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.1
+  },
+  {
+   "id": "g-l2-fill-place-cup-water-fridge",
+   "level": "L2",
+   "en": "Fill the cup with water and put it in the fridge.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.5
+  },
+  {
+   "id": "g-l2-light-off-open-fridge",
+   "level": "L2",
+   "en": "Turn off the light, then open the fridge.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.9
+  },
+  {
+   "id": "g-l2-open-microwave-toaster-on",
+   "level": "L2",
+   "en": "Open the microwave, then turn on the toaster.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.8
+  },
+  {
+   "id": "g-l2-coffee-on-pickup-mug",
+   "level": "L2",
+   "en": "Turn on the coffee machine, then pick up the mug.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.7
+  },
+  {
+   "id": "g-l2-faucet-on-pickup-sponge",
+   "level": "L2",
+   "en": "Turn on the faucet, then pick up the sponge.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.0
+  },
+  {
+   "id": "g-l2-open-fridge-pickup-apple",
+   "level": "L2",
+   "en": "Open the fridge, then pick up the apple.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.1
+  },
+  {
+   "id": "g-l2-toaster-then-coffee",
+   "level": "L2",
+   "en": "Turn on the toaster and then the coffee machine.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.8
+  },
+  {
+   "id": "g-l2-open-fridge-microwave",
+   "level": "L2",
+   "en": "Open the fridge and then the microwave.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.3
+  },
+  {
+   "id": "g-l2-stove-then-microwave",
+   "level": "L2",
+   "en": "Turn on the stove, then turn on the microwave.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.9
+  },
+  {
+   "id": "g-l2-salt-then-light-off",
+   "level": "L2",
+   "en": "Pick up the salt shaker, then turn off the light.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.1
+  },
+  {
+   "id": "g-l2-open-cabinet-drawer",
+   "level": "L2",
+   "en": "Open a cabinet, then open a drawer.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.2
+  },
+  {
+   "id": "g-l2-faucet-on-light-off",
+   "level": "L2",
+   "en": "Turn on the faucet, then turn off the light.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.8
+  },
+  {
+   "id": "g-l2-break-egg-pickup-fork",
+   "level": "L2",
+   "en": "Break the egg, then pick up the fork.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.5
+  },
+  {
+   "id": "g-l2-dirty-pan-faucet-on",
+   "level": "L2",
+   "en": "Make the pan dirty, then turn on the faucet.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.1
+  },
+  {
+   "id": "g-l2-open-microwave-pickup-potato",
+   "level": "L2",
+   "en": "Open the microwave, then pick up the potato.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.0
+  },
+  {
+   "id": "g-l2-toaster-on-open-cabinet",
+   "level": "L2",
+   "en": "Turn on the toaster, then open a cabinet.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.9
+  },
+  {
+   "id": "g-l2-three-appliances",
+   "level": "L2",
+   "en": "Turn on the toaster, the coffee machine and the microwave, in that order.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.5
+  },
+  {
+   "id": "g-l2-three-doors",
+   "level": "L2",
+   "en": "Open the fridge, then the microwave, then a cabinet.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.7
+  },
+  {
+   "id": "g-l2-light-fridge-egg",
+   "level": "L2",
+   "en": "Turn off the light, open the fridge, and pick up the egg.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.1
+  },
+  {
+   "id": "g-l2-knife-bread-toaster",
+   "level": "L2",
+   "en": "Pick up the knife, slice the bread, then turn on the toaster.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 2.0
+  },
+  {
+   "id": "g-l2-mug-water-sink",
+   "level": "L2",
+   "en": "Pick up the mug, fill it with water, and put it in the sink.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.2
+  },
+  {
+   "id": "g-l2-close-fridge-faucet-off",
+   "level": "L2",
+   "en": "Close the fridge, then turn off the faucet.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 2.6
+  },
+  {
+   "id": "g-l2-toaster-coffee-off",
+   "level": "L2",
+   "en": "Turn off the toaster, then the coffee machine.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.5
+  },
+  {
+   "id": "g-l2-close-microwave-light-on",
+   "level": "L2",
+   "en": "Close the microwave, then turn the light back on.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 2.2
+  },
+  {
+   "id": "g-l2-stove-off-close-fridge",
+   "level": "L2",
+   "en": "Turn off the stove, then close the fridge.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 2.8
+  },
+  {
+   "id": "g-l2-clean-plate-bowl",
+   "level": "L2",
+   "en": "Clean the plate, then clean the bowl.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.6
+  },
+  {
+   "id": "g-l2-empty-mug-sink",
+   "level": "L2",
+   "en": "Empty the mug and put it in the sink.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.5
+  },
+  {
+   "id": "g-l2-empty-cup-wine",
+   "level": "L2",
+   "en": "Empty the cup, then fill it with wine.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.6
+  },
+  {
+   "id": "g-l2-close-all-light-off",
+   "level": "L2",
+   "en": "Close everything that is open, then turn off the light.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 2.8
+  },
+  {
+   "id": "g-l3-chilled-apple",
+   "level": "L3",
+   "en": "I want to eat this apple cold later.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 2.1
+  },
+  {
+   "id": "g-l3-cold-tomato",
+   "level": "L3",
+   "en": "I'll want this tomato cold for dinner.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.9
+  },
+  {
+   "id": "g-l3-cold-bread",
+   "level": "L3",
+   "en": "I like my bread cold. Keep it for tomorrow.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.8
+  },
+  {
+   "id": "g-l3-cold-potato",
+   "level": "L3",
+   "en": "Leave the potato somewhere it can cool down.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.6
+  },
+  {
+   "id": "g-l3-warm-potato",
+   "level": "L3",
+   "en": "I'd like a warm potato.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.4
+  },
+  {
+   "id": "g-l3-warm-bread",
+   "level": "L3",
+   "en": "Warm up some bread for me.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.5
+  },
+  {
+   "id": "g-l3-hot-tomato",
+   "level": "L3",
+   "en": "I feel like eating a hot tomato.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.4
+  },
+  {
+   "id": "g-l3-warm-apple",
+   "level": "L3",
+   "en": "The apple is too cold to eat. Take the chill off it.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.6
+  },
+  {
+   "id": "g-l3-serve-hot-potato",
+   "level": "L3",
+   "en": "Serve the potato hot on a plate.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 2.1
+  },
+  {
+   "id": "g-l3-serve-hot-egg",
+   "level": "L3",
+   "en": "Serve me a hot egg in a bowl.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 2.4
+  },
+  {
+   "id": "g-l3-serve-cooked-potato",
+   "level": "L3",
+   "en": "Dinner is a cooked potato in a bowl.",
+   "status": "FAIL",
+   "detail": "goal unmet: Potato in Bowl | step errors: pick_and_place Potato: No valid positions to place object found",
+   "elapsed_s": 4.6
+  },
+  {
+   "id": "g-l3-apple-slices",
+   "level": "L3",
+   "en": "I want some apple slices.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.4
+  },
+  {
+   "id": "g-l3-tomato-for-salad",
+   "level": "L3",
+   "en": "Get the tomato ready for a salad.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.3
+  },
+  {
+   "id": "g-l3-bread-for-breakfast",
+   "level": "L3",
+   "en": "Cut up some bread for breakfast.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.4
+  },
+  {
+   "id": "g-l3-potato-for-frying",
+   "level": "L3",
+   "en": "The potato has to be in pieces before I can fry it.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.4
+  },
+  {
+   "id": "g-l3-shred-lettuce",
+   "level": "L3",
+   "en": "The lettuce is too big to eat like this.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.4
+  },
+  {
+   "id": "g-l3-salad",
+   "level": "L3",
+   "en": "Make me a salad.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 2.0
+  },
+  {
+   "id": "g-l3-sandwich-prep",
+   "level": "L3",
+   "en": "Prepare the ingredients for a sandwich.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 2.4
+  },
+  {
+   "id": "g-l3-omelette-egg",
+   "level": "L3",
+   "en": "I need a cracked egg for the omelette.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.0
+  },
+  {
+   "id": "g-l3-toast",
+   "level": "L3",
+   "en": "Make some toast.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 2.1
+  },
+  {
+   "id": "g-l3-coffee",
+   "level": "L3",
+   "en": "Make me a coffee.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.0
+  },
+  {
+   "id": "g-l3-boil-water",
+   "level": "L3",
+   "en": "Boil some water.",
+   "status": "ok",
+   "detail": "goal met despite step errors: pick_and_place Pot: another object's collision is blocking held object from being placed",
+   "elapsed_s": 2.3
+  },
+  {
+   "id": "g-l3-tea-kettle",
+   "level": "L3",
+   "en": "Get the kettle going for tea.",
+   "status": "FAIL",
+   "detail": "goal unmet: Kettle in StoveBurner | step errors: pick_and_place Kettle: StoveBurner_0a801165 is full right now",
+   "elapsed_s": 2.5
+  },
+  {
+   "id": "g-l3-thirsty",
+   "level": "L3",
+   "en": "I'm thirsty. Bring me a cup of water.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.3
+  },
+  {
+   "id": "g-l3-wine",
+   "level": "L3",
+   "en": "Pour me some wine.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.9
+  },
+  {
+   "id": "g-l3-chilled-water",
+   "level": "L3",
+   "en": "I want a cup of water chilling in the fridge.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 2.4
+  },
+  {
+   "id": "g-l3-stale-coffee",
+   "level": "L3",
+   "en": "This coffee has gone cold and stale. Get rid of it.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.8
+  },
+  {
+   "id": "g-l3-old-water",
+   "level": "L3",
+   "en": "The cup has old water in it.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.3
+  },
+  {
+   "id": "g-l3-dishes",
+   "level": "L3",
+   "en": "Do the dishes.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 4.0
+  },
+  {
+   "id": "g-l3-dirty-cups",
+   "level": "L3",
+   "en": "The cups are dirty. Take care of them.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 2.2
+  },
+  {
+   "id": "g-l3-cookware",
+   "level": "L3",
+   "en": "Clean up the cookware after dinner.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 4.0
+  },
+  {
+   "id": "g-l3-bad-tomato",
+   "level": "L3",
+   "en": "The tomato has gone bad.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.2
+  },
+  {
+   "id": "g-l3-stale-bread",
+   "level": "L3",
+   "en": "This bread is stale. Get rid of it.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.3
+  },
+  {
+   "id": "g-l3-rotten-egg",
+   "level": "L3",
+   "en": "The egg is rotten.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.8
+  },
+  {
+   "id": "g-l3-wilted-lettuce",
+   "level": "L3",
+   "en": "The lettuce has wilted and nobody will eat it.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.6
+  },
+  {
+   "id": "g-l3-old-produce",
+   "level": "L3",
+   "en": "The potato and the apple are both past their best.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 2.8
+  },
+  {
+   "id": "g-l3-groceries",
+   "level": "L3",
+   "en": "Put the lettuce, the tomato and the egg where they will stay fresh.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 4.4
+  },
+  {
+   "id": "g-l3-keep-cold",
+   "level": "L3",
+   "en": "Store the apple and the potato somewhere cold.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 3.3
+  },
+  {
+   "id": "g-l3-cutlery-sink",
+   "level": "L3",
+   "en": "The fork, the spoon and the knife have been used. Put them where they get washed.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 2.9
+  },
+  {
+   "id": "g-l3-cutlery-away",
+   "level": "L3",
+   "en": "The butter knife and the spatula are lying around. Put them where cutlery is kept.",
+   "status": "FAIL",
+   "detail": "goal unmet: Spatula in Drawer | step errors: pick_and_place ButterKnife: No valid positions to place object found",
+   "elapsed_s": 4.3
+  },
+  {
+   "id": "g-l3-set-table",
+   "level": "L3",
+   "en": "Set the table for one.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 4.8
+  },
+  {
+   "id": "g-l3-seasoning-away",
+   "level": "L3",
+   "en": "Tidy the seasonings away into a cabinet.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.8
+  },
+  {
+   "id": "g-l3-too-dark",
+   "level": "L3",
+   "en": "It's too dark in here.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.7
+  },
+  {
+   "id": "g-l3-too-bright",
+   "level": "L3",
+   "en": "It's too bright in here.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.5
+  },
+  {
+   "id": "g-l3-save-power",
+   "level": "L3",
+   "en": "Save electricity. Make sure no appliance has been left on.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.6
+  },
+  {
+   "id": "g-l3-leaving-house",
+   "level": "L3",
+   "en": "We are leaving the house. Make the kitchen safe.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.9
+  },
+  {
+   "id": "g-l3-fridge-and-water",
+   "level": "L3",
+   "en": "Someone left the fridge open and the water running.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 2.8
+  },
+  {
+   "id": "g-l3-left-open",
+   "level": "L3",
+   "en": "Everything has been left open. Tidy that up.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 3.7
+  },
+  {
+   "id": "g-l3-pan-heating",
+   "level": "L3",
+   "en": "Get a pan heating on the stove.",
+   "status": "FAIL",
+   "detail": "goal unmet: Pan in StoveBurner | step errors: pick_and_place Pan: StoveBurner_0a801165 is full right now",
+   "elapsed_s": 1.8
+  },
+  {
+   "id": "g-l3-pot-heating",
+   "level": "L3",
+   "en": "Start the pot on the stove for soup.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.3
+  },
+  {
+   "id": "g-l3-breakfast",
+   "level": "L3",
+   "en": "Breakfast: a hot potato on a plate and a cup of coffee.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 2.7
+  },
+  {
+   "id": "g-l3-tool-cut",
+   "level": "L3",
+   "en": "I need something to cut with.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.6
+  },
+  {
+   "id": "g-l3-tool-soup",
+   "level": "L3",
+   "en": "I need something to eat my soup with.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 1.1
+  },
+  {
+   "id": "g-l3-tool-flip",
+   "level": "L3",
+   "en": "I need something to flip the pancakes with.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.6
+  },
+  {
+   "id": "g-l3-tool-salt",
+   "level": "L3",
+   "en": "My food needs salt.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.6
+  },
+  {
+   "id": "g-l3-tool-scrub",
+   "level": "L3",
+   "en": "I need something to scrub the dishes with.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.6
+  },
+  {
+   "id": "g-l3-tool-soap",
+   "level": "L3",
+   "en": "I want to wash my hands.",
+   "status": "ok",
+   "detail": "",
+   "elapsed_s": 0.7
+  }
+ ]
+}

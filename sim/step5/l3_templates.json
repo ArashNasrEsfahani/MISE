@@ -1,0 +1,1241 @@
+{
+ "schema": "pkg.tpls/1",
+ "version": "tpl-1",
+ "authored_from": "domain spec (B6, no test item opened)",
+ "authorship_note": "Authored from kitchen-task domain knowledge and the executor's tool contract. The 116 non-test instructions and reference plans were read by the builder (permitted) to compute `support` and the early check; no test item, test family text or test outcome was opened. Persian trigger words are NOT stored here: they live in ltm_templates.FA_LEXICON as a parsing lexicon for the instruction (Arash 2026-10-12: knowledge is English only).",
+ "categories": {
+  "food": [
+   "Apple",
+   "Bread",
+   "Egg",
+   "Lettuce",
+   "Potato",
+   "Tomato"
+  ],
+  "sliceable": [
+   "Apple",
+   "Bread",
+   "Egg",
+   "Lettuce",
+   "Potato",
+   "Tomato"
+  ],
+  "plates": [
+   "Plate",
+   "Bowl"
+  ],
+  "serving": [
+   "Plate",
+   "Bowl",
+   "Mug",
+   "Cup"
+  ],
+  "drinkware": [
+   "Cup",
+   "Mug"
+  ],
+  "dishes": [
+   "Fork",
+   "Spoon",
+   "ButterKnife",
+   "Plate",
+   "Bowl",
+   "Cup",
+   "Mug",
+   "Pan",
+   "Pot",
+   "Spatula",
+   "Kettle"
+  ],
+  "discardable": [
+   "Apple",
+   "Bread",
+   "Egg",
+   "Lettuce",
+   "Potato",
+   "Tomato",
+   "Fork",
+   "Spoon",
+   "ButterKnife",
+   "Plate",
+   "Bowl",
+   "Cup",
+   "Mug",
+   "Pan",
+   "Pot",
+   "Spatula",
+   "Bottle",
+   "WineBottle",
+   "PaperTowelRoll"
+  ],
+  "toggleable": [
+   "Faucet",
+   "StoveKnob",
+   "CoffeeMachine",
+   "Toaster",
+   "LightSwitch"
+  ],
+  "openable": [
+   "Fridge",
+   "Cabinet",
+   "Drawer",
+   "Microwave"
+  ],
+  "tool": [
+   "ButterKnife",
+   "Fork",
+   "Spoon",
+   "Spatula",
+   "SaltShaker",
+   "PepperShaker",
+   "DishSponge",
+   "SoapBottle",
+   "PaperTowelRoll",
+   "Cup"
+  ]
+ },
+ "groups": {
+  "cold": [
+   "cold",
+   "chill*",
+   "cool*",
+   "fresh*",
+   "refrigerat*",
+   "groceries",
+   "keep it cool"
+  ],
+  "spoiled": [
+   "bad",
+   "gone bad",
+   "rotten",
+   "rot*",
+   "stale",
+   "spoil*",
+   "spoilt",
+   "mould*",
+   "mold*",
+   "wilt*",
+   "expired",
+   "past its best",
+   "get rid of",
+   "throw away",
+   "throw out",
+   "dispose of",
+   "nobody will eat"
+  ],
+  "hot": [
+   "hot",
+   "warm*",
+   "heat*",
+   "reheat*",
+   "serve",
+   "serving"
+  ],
+  "cook": [
+   "cook*",
+   "boil*",
+   "fry*",
+   "bake*",
+   "grill*"
+  ],
+  "dark": [
+   "too dark",
+   "so dark",
+   "its dark",
+   "dark in",
+   "dark here",
+   "cant see",
+   "need light",
+   "need some light",
+   "more light",
+   "dim"
+  ],
+  "bright": [
+   "too bright",
+   "so bright",
+   "glare",
+   "too much light",
+   "blinding",
+   "bright in"
+  ],
+  "left_open": [
+   "left open",
+   "everything open",
+   "everything is open",
+   "all open",
+   "close everything",
+   "close all",
+   "shut everything",
+   "tidy",
+   "doors open"
+  ],
+  "used": [
+   "used",
+   "dirty",
+   "get washed",
+   "to be washed",
+   "need washing",
+   "needs washing",
+   "need to be washed",
+   "needs to be washed",
+   "unwashed",
+   "to the dishes",
+   "for washing"
+  ],
+  "prepare": [
+   "salad",
+   "chop*",
+   "dice*",
+   "mince*",
+   "prepare ingredients"
+  ],
+  "meal": [
+   "breakfast",
+   "lunch",
+   "dinner",
+   "brunch",
+   "supper",
+   "meal",
+   "snack"
+  ],
+  "drink": [
+   "a cup of coffee",
+   "cup of coffee",
+   "a coffee",
+   "some coffee",
+   "coffee please",
+   "something to drink",
+   "thirsty",
+   "glass of water",
+   "a cup of water",
+   "some water"
+  ],
+  "shutdown": [
+   "everything off",
+   "turn off everything",
+   "switch off everything",
+   "everything is off",
+   "im leaving",
+   "i am leaving",
+   "going out",
+   "before i leave",
+   "before bed",
+   "leaving the house",
+   "leaving home"
+  ]
+ },
+ "liquids": {
+  "coffee": [
+   "coffee",
+   "espresso",
+   "latte"
+  ],
+  "water": [
+   "water",
+   "thirsty"
+  ],
+  "wine": [
+   "wine"
+  ]
+ },
+ "purposes": [
+  {
+   "id": "cut",
+   "tool": "ButterKnife",
+   "en": [
+    "cut with",
+    "something to cut",
+    "for cutting",
+    "something sharp",
+    "slice with",
+    "something to slice",
+    "chop with",
+    "something to chop"
+   ],
+   "why": "a ButterKnife cuts soft food"
+  },
+  {
+   "id": "spread",
+   "tool": "ButterKnife",
+   "en": [
+    "something to spread",
+    "spread the butter",
+    "spread butter",
+    "spread it",
+    "spread with"
+   ],
+   "why": "a ButterKnife spreads"
+  },
+  {
+   "id": "soup",
+   "tool": "Spoon",
+   "en": [
+    "my soup",
+    "eat soup",
+    "eat the soup",
+    "soup with",
+    "stir with",
+    "something to stir",
+    "scoop*",
+    "my cereal",
+    "my porridge",
+    "my yogurt"
+   ],
+   "why": "a Spoon is for soup and stirring"
+  },
+  {
+   "id": "eat",
+   "tool": "Fork",
+   "en": [
+    "something to eat with",
+    "my pasta",
+    "eat pasta",
+    "my spaghetti",
+    "my noodles",
+    "eat my salad",
+    "eat the salad"
+   ],
+   "why": "a Fork is for solid food"
+  },
+  {
+   "id": "flip",
+   "tool": "Spatula",
+   "en": [
+    "flip*",
+    "pancake*",
+    "turn over the"
+   ],
+   "why": "a Spatula flips food"
+  },
+  {
+   "id": "salt",
+   "tool": "SaltShaker",
+   "en": [
+    "needs salt",
+    "need salt",
+    "more salt",
+    "some salt",
+    "add salt",
+    "bland",
+    "tasteless",
+    "needs seasoning",
+    "season*"
+   ],
+   "why": "a SaltShaker adds salt"
+  },
+  {
+   "id": "pepper",
+   "tool": "PepperShaker",
+   "en": [
+    "needs pepper",
+    "need pepper",
+    "more pepper",
+    "some pepper",
+    "add pepper"
+   ],
+   "why": "a PepperShaker adds pepper"
+  },
+  {
+   "id": "scrub",
+   "tool": "DishSponge",
+   "en": [
+    "scrub*",
+    "scour*",
+    "something to scrub",
+    "clean the dishes with",
+    "wipe the dishes with"
+   ],
+   "why": "a DishSponge scrubs"
+  },
+  {
+   "id": "hands",
+   "tool": "SoapBottle",
+   "en": [
+    "wash my hands",
+    "wash hands",
+    "wash your hands",
+    "hands dirty",
+    "dirty hands",
+    "hand soap",
+    "sticky hands",
+    "greasy hands"
+   ],
+   "why": "a SoapBottle holds the soap"
+  },
+  {
+   "id": "wipe",
+   "tool": "PaperTowelRoll",
+   "en": [
+    "spill*",
+    "wipe up",
+    "mop up",
+    "something to wipe",
+    "dry my hands",
+    "dry the dishes"
+   ],
+   "why": "a PaperTowelRoll wipes and dries"
+  },
+  {
+   "id": "drinkfrom",
+   "tool": "Cup",
+   "en": [
+    "drink from",
+    "something to drink from",
+    "something to drink out of"
+   ],
+   "why": "a Cup holds a drink"
+  }
+ ],
+ "templates": [
+  {
+   "id": "tpl:meal-sequence",
+   "title": "serve a meal: hot food on a dish, then a drink",
+   "note": "Treat each part as its own goal and keep the hand empty between them: heat leaves the food in the hand, so put_in comes next and takes the receptacle as its object; only then fill the cup.",
+   "intent": {
+    "any": [
+     "meal"
+    ],
+    "not": [
+     "cook"
+    ]
+   },
+   "slots": {
+    "food": {
+     "cat": "food",
+     "multi": false,
+     "required": false
+    },
+    "serving": {
+     "cat": "plates",
+     "multi": false,
+     "required": false
+    },
+    "cup": {
+     "cat": "drinkware",
+     "multi": false,
+     "required": false,
+     "default": "Cup"
+    },
+    "liquid": {
+     "liquid": true,
+     "required": false
+    }
+   },
+   "requires_any": [
+    "food",
+    "liquid"
+   ],
+   "supersedes": [
+    "tpl:heat-serve",
+    "tpl:cook-serve",
+    "tpl:drink-fill"
+   ],
+   "skeleton": [
+    {
+     "action": "heat",
+     "object": "?food",
+     "to": null,
+     "arg": null,
+     "if": "food"
+    },
+    {
+     "action": "put_in",
+     "object": "?serving",
+     "to": null,
+     "arg": null,
+     "if": "food"
+    },
+    {
+     "action": "fill",
+     "object": "?cup",
+     "to": null,
+     "arg": "?liquid",
+     "if": "liquid"
+    }
+   ],
+   "alt_skeletons": [
+    [
+     {
+      "action": "heat",
+      "object": "?food",
+      "to": null,
+      "arg": null
+     },
+     {
+      "action": "pick_and_place",
+      "object": "?food",
+      "to": "?serving",
+      "arg": null
+     },
+     {
+      "action": "fill",
+      "object": "?cup",
+      "to": null,
+      "arg": "?liquid"
+     }
+    ]
+   ],
+   "checks": [
+    "?food is hot",
+    "?food on ?serving",
+    "?cup holds ?liquid",
+    "hand empty"
+   ],
+   "trigger": {
+    "roles": [
+     {
+      "verb": [
+       "heat",
+       "fill"
+      ],
+      "dest": "?any"
+     }
+    ]
+   },
+   "order": 0,
+   "text": {
+    "en": "Template \"serve a meal: hot food on a dish, then a drink\": heat <food>, then put_in <serving>, then fill <cup> with <liquid>. Treat each part as its own goal and keep the hand empty between them: heat leaves the food in the hand, so put_in comes next and takes the receptacle as its object; only then fill the cup."
+   },
+   "support": [
+    "g-l3-breakfast"
+   ],
+   "support_strength": "strong",
+   "support_plan_only": [
+    "g-l2-heat-potato-plate",
+    "g-l2-heat-apple-plate",
+    "g-l2-heat-tomato-plate",
+    "g-l2-heat-egg-bowl",
+    "g-l3-serve-hot-potato",
+    "g-l3-serve-hot-egg"
+   ]
+  },
+  {
+   "id": "tpl:store-cold",
+   "title": "keep food cold or fresh",
+   "note": "Cold storage is the Fridge. One pick_and_place per item, then close Fridge so the door is not left open.",
+   "intent": {
+    "any": [
+     "cold"
+    ]
+   },
+   "slots": {
+    "food": {
+     "cat": "food",
+     "multi": true,
+     "required": true
+    }
+   },
+   "skeleton": [
+    {
+     "action": "pick_and_place",
+     "object": "?food",
+     "to": "Fridge",
+     "arg": null,
+     "each": "food"
+    },
+    {
+     "action": "close",
+     "object": "Fridge",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "alt_skeletons": [],
+   "checks": [
+    "?food in Fridge",
+    "Fridge closed",
+    "hand empty"
+   ],
+   "trigger": {
+    "roles": [
+     {
+      "verb": [
+       "put",
+       "store"
+      ],
+      "dest": "Fridge"
+     }
+    ]
+   },
+   "order": 1,
+   "text": {
+    "en": "Template \"keep food cold or fresh\": pick_and_place <food> to Fridge, then close Fridge. Cold storage is the Fridge. One pick_and_place per item, then close Fridge so the door is not left open."
+   },
+   "support": [
+    "g-l3-chilled-apple",
+    "g-l3-cold-tomato",
+    "g-l3-cold-bread",
+    "g-l3-cold-potato"
+   ],
+   "support_strength": "strong",
+   "support_plan_only": [
+    "g-l2-fridge-apple",
+    "g-l2-fridge-bread",
+    "g-l2-fridge-tomato",
+    "g-l2-fridge-potato",
+    "g-l2-fridge-lettuce"
+   ]
+  },
+  {
+   "id": "tpl:discard-spoiled",
+   "title": "throw away spoiled or unwanted food",
+   "note": "Rubbish goes to GarbageCan. One pick_and_place per item; no washing or slicing is needed.",
+   "intent": {
+    "any": [
+     "spoiled"
+    ]
+   },
+   "slots": {
+    "item": {
+     "cat": "discardable",
+     "multi": true,
+     "required": true
+    }
+   },
+   "skeleton": [
+    {
+     "action": "pick_and_place",
+     "object": "?item",
+     "to": "GarbageCan",
+     "arg": null,
+     "each": "item"
+    }
+   ],
+   "alt_skeletons": [],
+   "checks": [
+    "?item in GarbageCan",
+    "hand empty"
+   ],
+   "trigger": {
+    "roles": [
+     {
+      "verb": [
+       "put",
+       "throw"
+      ],
+      "dest": "GarbageCan"
+     }
+    ]
+   },
+   "order": 2,
+   "text": {
+    "en": "Template \"throw away spoiled or unwanted food\": pick_and_place <item> to GarbageCan. Rubbish goes to GarbageCan. One pick_and_place per item; no washing or slicing is needed."
+   },
+   "support": [
+    "g-l3-bad-tomato",
+    "g-l3-stale-bread",
+    "g-l3-rotten-egg",
+    "g-l3-wilted-lettuce"
+   ],
+   "support_strength": "strong",
+   "support_plan_only": []
+  },
+  {
+   "id": "tpl:heat-serve",
+   "title": "serve food hot on a dish",
+   "note": "heat takes the food and leaves it in the hand, so the next step must put it somewhere: put_in takes the receptacle as its object.",
+   "intent": {
+    "any": [
+     "hot"
+    ],
+    "not": [
+     "cook"
+    ]
+   },
+   "slots": {
+    "food": {
+     "cat": "food",
+     "multi": false,
+     "required": true
+    },
+    "serving": {
+     "cat": "serving",
+     "multi": false,
+     "required": true
+    }
+   },
+   "skeleton": [
+    {
+     "action": "heat",
+     "object": "?food",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "put_in",
+     "object": "?serving",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "alt_skeletons": [
+    [
+     {
+      "action": "heat",
+      "object": "?food",
+      "to": null,
+      "arg": null
+     },
+     {
+      "action": "pick_and_place",
+      "object": "?food",
+      "to": "?serving",
+      "arg": null
+     }
+    ]
+   ],
+   "checks": [
+    "?food is hot",
+    "?food on ?serving",
+    "hand empty"
+   ],
+   "trigger": {
+    "roles": [
+     {
+      "verb": [
+       "heat",
+       "cook"
+      ],
+      "dest": "?any"
+     }
+    ],
+    "state_words": [
+     "warm",
+     "hot"
+    ]
+   },
+   "order": 3,
+   "text": {
+    "en": "Template \"serve food hot on a dish\": heat <food>, then put_in <serving>. heat takes the food and leaves it in the hand, so the next step must put it somewhere: put_in takes the receptacle as its object."
+   },
+   "support": [
+    "g-l2-heat-potato-plate",
+    "g-l2-heat-apple-plate",
+    "g-l2-heat-tomato-plate",
+    "g-l2-heat-egg-bowl",
+    "g-l3-serve-hot-potato",
+    "g-l3-serve-hot-egg"
+   ],
+   "support_strength": "strong",
+   "support_plan_only": []
+  },
+  {
+   "id": "tpl:tool-for-purpose",
+   "title": "fetch the tool a task needs",
+   "note": "The user names a purpose, not an object: pick the tool that serves it. pickup needs an empty hand.",
+   "intent": {
+    "any": [],
+    "purpose": true
+   },
+   "slots": {
+    "tool": {
+     "cat": "tool",
+     "multi": false,
+     "required": true,
+     "from": "purpose"
+    }
+   },
+   "skeleton": [
+    {
+     "action": "pickup",
+     "object": "?tool",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "alt_skeletons": [],
+   "checks": [
+    "?tool in hand"
+   ],
+   "trigger": {
+    "roles": [
+     {
+      "verb": [
+       "get",
+       "bring"
+      ],
+      "dest": "?any"
+     }
+    ]
+   },
+   "order": 5,
+   "text": {
+    "en": "Template \"fetch the tool a task needs\": pickup <tool>. The user names a purpose, not an object: pick the tool that serves it. pickup needs an empty hand."
+   },
+   "support": [
+    "g-l3-tool-soup",
+    "g-l3-tool-flip",
+    "g-l3-tool-salt",
+    "g-l3-tool-scrub",
+    "g-l3-tool-soap"
+   ],
+   "support_strength": "strong",
+   "support_plan_only": [
+    "g-l1-pickup-cup",
+    "g-l1-pickup-butter-knife",
+    "g-l1-pickup-fork",
+    "g-l1-pickup-spoon",
+    "g-l1-pickup-spatula",
+    "g-l1-pickup-dish-sponge",
+    "g-l1-pickup-soap-bottle",
+    "g-l1-pickup-salt-shaker",
+    "g-l1-pickup-pepper-shaker"
+   ]
+  },
+  {
+   "id": "tpl:light-on",
+   "title": "too dark: switch the light on",
+   "note": "The light is a LightSwitch; toggle_on walks to it by itself.",
+   "intent": {
+    "any": [
+     "dark"
+    ]
+   },
+   "slots": {},
+   "skeleton": [
+    {
+     "action": "toggle_on",
+     "object": "LightSwitch",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "alt_skeletons": [],
+   "checks": [
+    "LightSwitch on"
+   ],
+   "trigger": {
+    "roles": [
+     {
+      "verb": [
+       "toggle_on"
+      ],
+      "dest": "?any"
+     }
+    ]
+   },
+   "order": 6,
+   "text": {
+    "en": "Template \"too dark: switch the light on\": toggle_on LightSwitch. The light is a LightSwitch; toggle_on walks to it by itself."
+   },
+   "support": [
+    "g-l3-too-dark"
+   ],
+   "support_strength": "strong",
+   "support_plan_only": [
+    "g-l1-on-light"
+   ]
+  },
+  {
+   "id": "tpl:light-off",
+   "title": "too bright: switch the light off",
+   "note": "The light is a LightSwitch; toggle_off walks to it by itself.",
+   "intent": {
+    "any": [
+     "bright"
+    ]
+   },
+   "slots": {},
+   "skeleton": [
+    {
+     "action": "toggle_off",
+     "object": "LightSwitch",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "alt_skeletons": [],
+   "checks": [
+    "LightSwitch off"
+   ],
+   "trigger": {
+    "roles": [
+     {
+      "verb": [
+       "toggle_off"
+      ],
+      "dest": "?any"
+     }
+    ]
+   },
+   "order": 7,
+   "text": {
+    "en": "Template \"too bright: switch the light off\": toggle_off LightSwitch. The light is a LightSwitch; toggle_off walks to it by itself."
+   },
+   "support": [
+    "g-l3-too-bright"
+   ],
+   "support_strength": "strong",
+   "support_plan_only": [
+    "g-l1-off-light"
+   ]
+  },
+  {
+   "id": "tpl:close-all-open",
+   "title": "tidy up: close what was left open",
+   "note": "close_all closes every container the robot has seen open. If the observation lists specific open containers, close each of those instead.",
+   "intent": {
+    "any": [
+     "left_open"
+    ]
+   },
+   "slots": {
+    "openable": {
+     "cat": "openable",
+     "multi": true,
+     "required": false
+    }
+   },
+   "skeleton": [
+    {
+     "action": "close_all",
+     "object": null,
+     "to": null,
+     "arg": null
+    }
+   ],
+   "alt_skeletons": [
+    [
+     {
+      "action": "close",
+      "object": "?openable",
+      "to": null,
+      "arg": null,
+      "each": "openable"
+     }
+    ]
+   ],
+   "checks": [
+    "no container open"
+   ],
+   "trigger": {
+    "roles": [
+     {
+      "verb": [
+       "close"
+      ],
+      "dest": "?any"
+     }
+    ]
+   },
+   "order": 8,
+   "text": {
+    "en": "Template \"tidy up: close what was left open\": close_all. close_all closes every container the robot has seen open. If the observation lists specific open containers, close each of those instead."
+   },
+   "support": [
+    "g-l1-close-cabinet",
+    "g-l3-left-open"
+   ],
+   "support_strength": "strong",
+   "support_plan_only": []
+  },
+  {
+   "id": "tpl:prepare-slice",
+   "title": "prepare ingredients: butter knife first, then slice each",
+   "note": "Take the ButterKnife first, then one slice per ingredient. A salad is sliced lettuce and tomato. Put the ButterKnife down with put_in CounterTop before any later goal that needs the hand.",
+   "intent": {
+    "any": [
+     "prepare"
+    ]
+   },
+   "slots": {
+    "food": {
+     "cat": "sliceable",
+     "multi": true,
+     "required": false,
+     "defaults_by_group": {
+      "salad": [
+       "Lettuce",
+       "Tomato"
+      ]
+     }
+    }
+   },
+   "requires_any": [
+    "food"
+   ],
+   "skeleton": [
+    {
+     "action": "pickup",
+     "object": "ButterKnife",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "slice",
+     "object": "?food",
+     "to": null,
+     "arg": null,
+     "each": "food"
+    }
+   ],
+   "alt_skeletons": [],
+   "checks": [
+    "?food sliced"
+   ],
+   "trigger": {
+    "roles": [
+     {
+      "verb": [
+       "slice"
+      ],
+      "dest": "?any"
+     }
+    ]
+   },
+   "order": 10,
+   "text": {
+    "en": "Template \"prepare ingredients: butter knife first, then slice each\": pickup ButterKnife, then slice <food>. Take the ButterKnife first, then one slice per ingredient. A salad is sliced lettuce and tomato. Put the ButterKnife down with put_in CounterTop before any later goal that needs the hand."
+   },
+   "support": [
+    "g-l3-salad"
+   ],
+   "support_strength": "strong",
+   "support_plan_only": [
+    "g-l2-slice-tomato-lettuce",
+    "g-l2-slice-bread-tomato",
+    "g-l2-slice-apple-potato",
+    "g-l2-slice-potato-tomato"
+   ]
+  }
+ ],
+ "rejected": [
+  {
+   "id": "tpl:cook-serve",
+   "reason": "no non-test item has this plan shape",
+   "template": {
+    "id": "tpl:cook-serve",
+    "title": "cook food and serve it on a dish",
+    "note": "cook uses the Microwave and, like heat, leaves the food in the hand: put_in follows, with the receptacle as its object.",
+    "intent": {
+     "any": [
+      "cook"
+     ],
+     "not": []
+    },
+    "slots": {
+     "food": {
+      "cat": "food",
+      "multi": false,
+      "required": true
+     },
+     "serving": {
+      "cat": "serving",
+      "multi": false,
+      "required": true
+     }
+    },
+    "skeleton": [
+     {
+      "action": "cook",
+      "object": "?food",
+      "to": null,
+      "arg": null
+     },
+     {
+      "action": "put_in",
+      "object": "?serving",
+      "to": null,
+      "arg": null
+     }
+    ],
+    "alt_skeletons": [
+     [
+      {
+       "action": "cook",
+       "object": "?food",
+       "to": null,
+       "arg": null
+      },
+      {
+       "action": "pick_and_place",
+       "object": "?food",
+       "to": "?serving",
+       "arg": null
+      }
+     ]
+    ],
+    "checks": [
+     "?food is cooked",
+     "?food on ?serving",
+     "hand empty"
+    ],
+    "trigger": {
+     "roles": [
+      {
+       "verb": [
+        "cook"
+       ],
+       "dest": "?any"
+      }
+     ]
+    },
+    "order": 4,
+    "text": {
+     "en": "Template \"cook food and serve it on a dish\": cook <food>, then put_in <serving>. cook uses the Microwave and, like heat, leaves the food in the hand: put_in follows, with the receptacle as its object."
+    }
+   }
+  },
+  {
+   "id": "tpl:wash-used",
+   "reason": "no non-test item has this plan shape",
+   "template": {
+    "id": "tpl:wash-used",
+    "title": "put used items where they get washed",
+    "note": "Used dishes go into the sink basin. One pick_and_place per item; add wash only if the user asks for them to be cleaned.",
+    "intent": {
+     "any": [
+      "used"
+     ]
+    },
+    "slots": {
+     "item": {
+      "cat": "dishes",
+      "multi": true,
+      "required": true
+     },
+     "basin": {
+      "choices": [
+       "SinkBasin",
+       "Sink"
+      ],
+      "required": false
+     }
+    },
+    "skeleton": [
+     {
+      "action": "pick_and_place",
+      "object": "?item",
+      "to": "?basin",
+      "arg": null,
+      "each": "item"
+     }
+    ],
+    "alt_skeletons": [],
+    "checks": [
+     "?item in ?basin",
+     "hand empty"
+    ],
+    "trigger": {
+     "roles": [
+      {
+       "verb": [
+        "put",
+        "wash"
+       ],
+       "dest": "SinkBasin"
+      }
+     ]
+    },
+    "order": 9,
+    "text": {
+     "en": "Template \"put used items where they get washed\": pick_and_place <item> to <basin>. Used dishes go into the sink basin. One pick_and_place per item; add wash only if the user asks for them to be cleaned."
+    }
+   }
+  },
+  {
+   "id": "tpl:drink-fill",
+   "reason": "no non-test item has this plan shape",
+   "template": {
+    "id": "tpl:drink-fill",
+    "title": "pour the drink the user wants",
+    "note": "fill takes the container as its object and the liquid in arg (water, coffee or wine).",
+    "intent": {
+     "any": [
+      "drink"
+     ]
+    },
+    "slots": {
+     "cup": {
+      "cat": "drinkware",
+      "multi": false,
+      "required": false,
+      "default": "Cup"
+     },
+     "liquid": {
+      "liquid": true,
+      "required": true
+     }
+    },
+    "skeleton": [
+     {
+      "action": "fill",
+      "object": "?cup",
+      "to": null,
+      "arg": "?liquid"
+     }
+    ],
+    "alt_skeletons": [],
+    "checks": [
+     "?cup holds ?liquid"
+    ],
+    "trigger": {
+     "roles": [
+      {
+       "verb": [
+        "fill"
+       ],
+       "dest": "?any"
+      }
+     ]
+    },
+    "order": 11,
+    "text": {
+     "en": "Template \"pour the drink the user wants\": fill <cup> with <liquid>. fill takes the container as its object and the liquid in arg (water, coffee or wine)."
+    }
+   }
+  },
+  {
+   "id": "tpl:switch-off-after",
+   "reason": "plan-shape-only support is not enough: no non-test item both has this shape and fires the template (Astra H-B6)",
+   "template": {
+    "id": "tpl:switch-off-after",
+    "title": "leaving or done: switch off what is on",
+    "note": "Switch off each appliance the observation shows as on (a tap, a stove knob, the coffee machine, the toaster, the light).",
+    "intent": {
+     "any": [
+      "shutdown"
+     ]
+    },
+    "slots": {
+     "appliance": {
+      "cat": "toggleable",
+      "multi": true,
+      "required": false,
+      "from_observed_state": "on"
+     }
+    },
+    "skeleton": [
+     {
+      "action": "toggle_off",
+      "object": "?appliance",
+      "to": null,
+      "arg": null,
+      "each": "appliance"
+     }
+    ],
+    "alt_skeletons": [],
+    "checks": [
+     "nothing on"
+    ],
+    "trigger": {
+     "roles": [
+      {
+       "verb": [
+        "toggle_off"
+       ],
+       "dest": "?any"
+      }
+     ]
+    },
+    "order": 12,
+    "text": {
+     "en": "Template \"leaving or done: switch off what is on\": toggle_off <appliance>. Switch off each appliance the observation shows as on (a tap, a stove knob, the coffee machine, the toaster, the light)."
+    }
+   }
+  }
+ ],
+ "sha256": "0abc83fba8b923df35f59ccb137d4d6163746c727d67706fc44f8fee2f3df022",
+ "knowledge_class": "functional affordance, triggered by the instruction (what a kind of request needs); NOT a usual-location or storage-convention claim, which belongs to the briefing alone",
+ "support_rule": "a template ships only if >=1 NON-TEST item has its plan shape AND the template fires on that item's English instruction (strong support). Weak (plan-shape-only) support is not accepted. Support is an offline audit field: it never reaches retrieval ranking."
+}

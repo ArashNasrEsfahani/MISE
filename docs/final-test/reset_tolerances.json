@@ -1,0 +1,149 @@
+{
+  "schema": "final-test.reset-tolerances/1",
+  "amendment": "A14a+A14b",
+  "status": "calibrated",
+  "ceilings": {
+    "pos_m": 0.1,
+    "rot_deg": 15.0,
+    "justification": "A14a (prereg s16): design limits fixed before calibration; grid 0.25 m, ID_SAME_D 0.25 m, VIEW_MOVE 0.20 m, VIEW_PITCH 15 deg; pilot settle 0.44 m would fail",
+    "dated": "2026-10-11",
+    "prereg_sha256": "df4d3852002a7beb54eeef6763bfe311e9fc0a2f411997dc849f9d375a5ff689",
+    "section_sha256": "1d0225745423f74f3a9ebf78bd561204a40f91ff2c00002b10e9d235dbb2aa95"
+  },
+  "calibration": {
+    "items": 12,
+    "restores_per_item": 5,
+    "pairs": 120,
+    "observed_max_pos_m": 0.04,
+    "observed_max_rot_deg": 0.0287,
+    "worst_item": {
+      "pos": "g-l2-find-pickup-lettuce",
+      "rot": "g-l1-off-stove-knob"
+    },
+    "per_item": {
+      "g-l1-off-stove-knob": {
+        "max_pos_m": 1e-05,
+        "max_rot_deg": 0.0287
+      },
+      "g-l1-on-stove-knob": {
+        "max_pos_m": 1e-05,
+        "max_rot_deg": 0.0158
+      },
+      "g-l1-place-bowl-counter-top": {
+        "max_pos_m": 1e-05,
+        "max_rot_deg": 0.0158
+      },
+      "g-l1-place-lettuce-sink-basin": {
+        "max_pos_m": 1e-05,
+        "max_rot_deg": 0.0158
+      },
+      "g-l2-find-pickup-lettuce": {
+        "max_pos_m": 0.04,
+        "max_rot_deg": 0.0158
+      },
+      "g-l2-find-pickup-pan": {
+        "max_pos_m": 0.04,
+        "max_rot_deg": 0.0158
+      },
+      "g-l2-microwave-run-egg": {
+        "max_pos_m": 0.01,
+        "max_rot_deg": 0.0158
+      },
+      "g-l2-microwave-run-potato": {
+        "max_pos_m": 0.04,
+        "max_rot_deg": 0.0158
+      },
+      "g-l3-chilled-apple": {
+        "max_pos_m": 0.04,
+        "max_rot_deg": 0.0
+      },
+      "g-l3-cutlery-sink": {
+        "max_pos_m": 0.01,
+        "max_rot_deg": 0.0158
+      },
+      "g-l3-tool-cut": {
+        "max_pos_m": 0.01,
+        "max_rot_deg": 0.0158
+      },
+      "g-l3-tool-flip": {
+        "max_pos_m": 1e-05,
+        "max_rot_deg": 0.0158
+      }
+    },
+    "symbolic_breaches": [],
+    "summary_other_rows": {
+      "pairs_affected": 21,
+      "rows_differing": 80,
+      "pairs_by_type": {
+        "Cabinet": 17,
+        "Drawer": 8,
+        "Faucet": 4,
+        "Floor": 10
+      }
+    }
+  },
+  "tau_pos_m": 0.05,
+  "tau_rot_deg": 5.0,
+  "agent_pose": "exact",
+  "validation": {
+    "pairs": 24,
+    "pass": 24,
+    "ok": true,
+    "failures": [],
+    "summary_other_rows": {
+      "pairs_affected": 4,
+      "rows_differing": 16,
+      "pairs_by_type": {
+        "Cabinet": 2,
+        "Drawer": 2,
+        "Faucet": 2,
+        "Floor": 1
+      }
+    },
+    "pairs_file_sha256": "22ffa1a862057caa65a13c7f977594921d6455a526d077023860703952ef8cf5"
+  },
+  "validation_log": [
+    {
+      "pairs": 24,
+      "pass": 24,
+      "ok": true,
+      "failures": [],
+      "summary_other_rows": {
+        "pairs_affected": 4,
+        "rows_differing": 16,
+        "pairs_by_type": {
+          "Cabinet": 2,
+          "Drawer": 2,
+          "Faucet": 2,
+          "Floor": 1
+        }
+      },
+      "pairs_file_sha256": "22ffa1a862057caa65a13c7f977594921d6455a526d077023860703952ef8cf5"
+    }
+  ],
+  "protocol": [
+    "0 init-ceilings: A14a numbers (dated BEFORE any calibration restore) -> status ceilings",
+    "1 calibrate: 12 dev items x 5 restores, 10 pairs per item; tau = observed max rounded up to 0.05 m / 5 deg; status calibrated, or failed if a symbolic breach or tau > ceiling (failed is final: new amendment + reset fix)",
+    "2 validate: 24 presentations captured twice from fresh restores; ok iff 24/24 pairs pass; ONE-SHOT (a recorded validation is never replaced; a failed one makes the file failed)",
+    "3 Phase C: compare(phase_A_state, post_sweep_state, load_tolerances()) before every execution"
+  ],
+  "sha256": "bb2d7054e9fcade0ec6ae508b96458f8854a335b4e56b3fcf1fe067fdd8dfcf1",
+  "agent_pose_tolerance": {
+    "position_m": 0.001,
+    "rotation_deg": 0.01,
+    "note": "A14b: numerical precision, fixed, not calibrated"
+  },
+  "previous_attempts": [
+    {
+      "amendment": "A14a",
+      "status": "failed",
+      "file": "docs/final-test/matrix/rehearsal-v1/calib/reset_tolerances.A14a-FAILED.json",
+      "file_sha256": "f6f91233718c40955c353258c63fbb9bbfd2a3a3a01e641dc21853087f452c76",
+      "reasons": [
+        "23 pair(s) break the symbolic part"
+      ],
+      "restores_sha256": "a5d06959a96d64ceb325efa928950293330aa6c81e494534b42b820d92d51392"
+    }
+  ],
+  "failure_reasons": []
+}

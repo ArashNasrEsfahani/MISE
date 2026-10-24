@@ -1,0 +1,16 @@
+{
+  "theme": "darkly",
+  "endpoint": "http://172.20.144.1:11434",
+  "model": "gemma3:4b",
+  "capture_dir": "captures",
+  "walk_delay": 0.09,
+  "view_mode": "RGB",
+  "sensors": {
+    "depth": false,
+    "instance": true,
+    "semantic": false,
+    "normals": false
+  },
+  "win_x": 16,
+  "win_y": 37
+}

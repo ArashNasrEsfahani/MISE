@@ -1,0 +1,6 @@
+{"invocation": "37735a4d4bbb42379d9f39a72440ce93", "scene": "FloorPlan15", "pipeline": "main", "stamp": "20261016-193532-37735a4d",
+ "capture_rc": 99, "qc_rc": -1, "guard_ok": false, "guard_rc": "0", "guard_killed": false, "phase": "exit",
+ "done_before": 114, "done_after": 117, "new_episodes": [114, 115, 116], "new_skipped": [], "skipped_not_train": [],
+ "failed_after": 0, "failed_episodes": {}, "thermal": false, "ended": "2026-10-16 19:39:53", "guard_burst": false,
+ "complete": false, "skipped_unexplained": [], "qc_report": "sim/kitchen_v3/k23/FloorPlan15/qc/batch_015.json",
+ "qc_report_sha256": "9fe95733d7f70f850eccbf807b2860584df50d77149ecc71b831a8d3e7aec55a"}

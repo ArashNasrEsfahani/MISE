@@ -1,0 +1,22 @@
+# Conda environment for the embodied-agent thesis code.
+#
+#   conda env create -f environment.yml
+#   conda activate thor-env
+#
+# Two places run Python:
+#   * WSL2 Ubuntu 22.04 (the simulator, perception training, the live agent). The thesis used a plain venv at ~/thor-env;
+#     this file reproduces the same packages. AI2-THOR needs an X display (WSLg) - see docs/ai2thor-wsl-setup.md.
+#   * Windows (offline selftests and the statistical analysis): only the Python standard library plus numpy is needed.
+#
+# torch / torchvision: the default pip wheel is built for a newer CUDA than the WSL driver used in the thesis
+# (CUDA 12.7), so it reports cuda=False. Install the cu124 build explicitly AFTER creating the env:
+#   pip install --index-url https://download.pytorch.org/whl/cu124 "torch==2.6.0" "torchvision==0.21.0"
+# (sim/requirements.txt pins the same versions; docs/ai2thor-wsl-setup.md has the full bring-up log.)
+name: thor-env
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - pip:
+      - -r sim/requirements.txt

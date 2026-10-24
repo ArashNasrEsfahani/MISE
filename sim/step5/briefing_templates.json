@@ -1,0 +1,29 @@
+{
+ "schema": "pkg.tpl/1",
+ "note": "EN + FA strings per line kind; no kitchen-specific text. Type tokens stay in English inside the Persian lines.",
+ "intro": {"en": "Welcome home. Here is a short tour of the kitchen, as its owner would give it. The map frame: +x is east, +z is north.",
+           "fa": "به خانه خوش آمدید. این یک معرفی کوتاه آشپزخانه است، همان‌طور که صاحب خانه می‌گوید. جهت‌ها روی نقشه: +x شرق و +z شمال."},
+ "sections": {"core": {"en": "The main fixtures", "fa": "امکانات اصلی"}, "exist": {"en": "Other fixtures", "fa": "بقیهٔ امکانات"},
+              "place": {"en": "Where things are", "fa": "جای هر چیز"}, "adj": {"en": "What is next to what", "fa": "کنار چه چیزی چیست"},
+              "open": {"en": "What opens or switches", "fa": "چه چیزی باز یا روشن می‌شود"}, "conv": {"en": "Usual storage (house habits)", "fa": "جای معمول وسایل (عادت‌های خانه)"}},
+ "kinds": {
+  "exist_one": {"en": "There is one {T}.", "fa": "یک {T} هست."},
+  "exist_many": {"en": "There are {n} {T} units.", "fa": "{n} عدد {T} هست."},
+  "place_one": {"en": "The {T} is in the {dir} of the kitchen.", "fa": "{T} در {dir} آشپزخانه است."},
+  "place_many": {"en": "The {T} units are in the {dir} of the kitchen.", "fa": "{T}‌ها در {dir} آشپزخانه‌اند."},
+  "place_spread": {"en": "The {T} units are spread around the kitchen.", "fa": "{T}‌ها در سرتاسر آشپزخانه پخش‌اند."},
+  "adj": {"en": "The {T} is next to the {list}.", "fa": "{T} کنار {list} است."},
+  "open_open": {"en": "The {T} can be opened and closed.", "fa": "{T} را می‌شود باز و بسته کرد."},
+  "open_toggle": {"en": "The {T} can be switched on and off.", "fa": "{T} را می‌شود روشن و خاموش کرد."},
+  "open_both": {"en": "The {T} can be opened and closed, and switched on and off.", "fa": "{T} را می‌شود باز و بسته کرد و روشن و خاموش کرد."},
+  "conv": {"en": "Usual place for {cat} ({types}), a general convention not checked today: {where}.", "fa": "معمولاً (رسم عمومی، امروز بررسی نشده): {cat} ({types}) {where} نگه داشته می‌شود."}
+ },
+ "dirs": {
+  "north": {"en": "north", "fa": "شمال"}, "south": {"en": "south", "fa": "جنوب"}, "east": {"en": "east", "fa": "شرق"}, "west": {"en": "west", "fa": "غرب"},
+  "northeast": {"en": "north-east", "fa": "شمال شرقی"}, "northwest": {"en": "north-west", "fa": "شمال غربی"},
+  "southeast": {"en": "south-east", "fa": "جنوب شرقی"}, "southwest": {"en": "south-west", "fa": "جنوب غربی"}, "middle": {"en": "middle", "fa": "وسط"}
+ },
+ "prep": {"default": {"en": "in a {T}", "fa": "در {T}"}, "CounterTop": {"en": "on a {T}", "fa": "روی {T}"}, "StoveBurner": {"en": "on a {T}", "fa": "روی {T}"}},
+ "join": {"en": {"sep": ", ", "last": " and "}, "fa": {"sep": "، ", "last": " و "}},
+ "or": {"en": " or ", "fa": " یا "}
+}

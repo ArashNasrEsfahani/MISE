@@ -1,0 +1,173 @@
+{
+ "schema": "goal.need-cues/1",
+ "version": "r6b-v1",
+ "written": "2026-10-13, stage K-A2, from general English / Persian usage; no item id, no type, no per-language target map",
+ "meaning": "A NEED is (a) a need or want cue plus an indefinite placeholder with a purpose and no satisfying object named, or (b) a desired state of a named object with no operation stated that reaches it. Negation, questions and mere preferences never fire; no single state word fires.",
+ "en": {
+  "cue": [
+   "need",
+   "needs",
+   "want",
+   "wants",
+   "require",
+   "requires"
+  ],
+  "cue_bigram": [
+   [
+    "would",
+    "like"
+   ],
+   [
+    "id",
+    "like"
+   ],
+   [
+    "d",
+    "like"
+   ],
+   [
+    "could",
+    "use"
+   ]
+  ],
+  "preference": [
+   "like",
+   "likes",
+   "prefer",
+   "prefers",
+   "love",
+   "loves",
+   "enjoy",
+   "enjoys"
+  ],
+  "negation": [
+   "not",
+   "dont",
+   "never",
+   "no",
+   "doesnt",
+   "wont",
+   "wouldnt",
+   "didnt",
+   "cant",
+   "cannot",
+   "nothing",
+   "without",
+   "neither",
+   "nor"
+  ],
+  "placeholder": [
+   "something",
+   "anything",
+   "somewhere",
+   "someplace",
+   "anywhere"
+  ],
+  "purpose_after_placeholder": [
+   "to",
+   "for",
+   "that",
+   "which",
+   "i",
+   "we",
+   "so"
+  ],
+  "question_first": [
+   "is",
+   "are",
+   "was",
+   "were",
+   "does",
+   "do",
+   "did",
+   "has",
+   "have",
+   "what",
+   "who",
+   "which",
+   "how",
+   "why",
+   "when",
+   "where",
+   "whether",
+   "can",
+   "could",
+   "would",
+   "should",
+   "will",
+   "shall",
+   "may"
+  ],
+  "placeholder_thing": [
+   "something",
+   "anything"
+  ],
+  "placeholder_place": [
+   "somewhere",
+   "someplace",
+   "anywhere"
+  ]
+ },
+ "fa": {
+  "cue": [
+   "لازم",
+   "لازمه",
+   "نیاز",
+   "خواهم",
+   "خوام",
+   "میخواهم",
+   "میخوام",
+   "خواهیم",
+   "خوایم",
+   "خواهد",
+   "خواد"
+  ],
+  "cue_prefix_negation": [
+   "نمی"
+  ],
+  "negation_after_cue": [
+   "ندارم",
+   "نداریم",
+   "ندارد",
+   "نیست",
+   "نیستم"
+  ],
+  "negation": [
+   "نه",
+   "نباید",
+   "هیچ",
+   "هیچی",
+   "نمیخواهم",
+   "نمیخوام",
+   "نخواهم"
+  ],
+  "preference": [
+   "دوست",
+   "ترجیح"
+  ],
+  "placeholder": [
+   "چیزی",
+   "جایی",
+   "چیز"
+  ],
+  "purpose_after_placeholder": [
+   "برای",
+   "که",
+   "با",
+   "باهاش",
+   "تویش",
+   "توش"
+  ],
+  "question_first": [
+   "ایا"
+  ],
+  "placeholder_thing": [
+   "چیزی",
+   "چیز"
+  ],
+  "placeholder_place": [
+   "جایی"
+  ]
+ },
+ "r6b": "Stage K-r6b build, 2026-10-13 (amended protocol R6b, ROUND6B-FIXES.md section 2): a byte-for-byte copy of the r6-v1 lists plus placeholder_thing / placeholder_place per language. The thing / place split is decided by the placeholder token alone (a frozen, language-symmetric token list): no item id, no type, no purpose-word matching, no scorer input. The r6-v1 file is not edited."
+}

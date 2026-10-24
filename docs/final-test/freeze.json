@@ -1,0 +1,1964 @@
+{
+ "a24_2_cost": {
+  "basis_evidence": {
+   "amendment": "A33",
+   "prereg_heading_sha256": "7223786fb3516b8f87ed8e43891b5b63ce9862dd9924cf710d111632360db5d3"
+  },
+  "energy_evidence": {
+   "cells": 2,
+   "energy_py_sha256": "d9f57b97730db32f076dc4b4805cfafa50cdc2155361c5d2e2c28fe859e45d89",
+   "journals": {
+    "docs/final-test/energy/c5-simple-journals/energy.c5simple.jsonl": "0c0229ed00c83a84e7b92ead7993cbc02699d3aa47e713717c055a680faa0e81",
+    "docs/final-test/energy/c5-simple-journals/plan.c5simple.jsonl": "3f2db6d22e49804dba0d96f6d9cef1db27c463d9a7c1c426f5131218289b88bc"
+   },
+   "ok": true,
+   "path": "docs/final-test/energy/c5-simple-measurement.json",
+   "sha256": "870632db03abdba63b9e9129fd4fd443cf30999cbe23d9f64857f44463806e8c",
+   "totals": {
+    "energy_j_gpu": 109.7097,
+    "planning_s": 3.477023,
+    "usd_energy": 6.094983333333333e-06
+   }
+  },
+  "energy_method": {
+   "accuracy": "approximate: a mean of about 10 readings per second times the time; no calibration, no coverage or gap checks; the readings are the driver's own power figure, not an external meter",
+   "code": "sim/final_test/matrix/energy.py, installed for one launch (energy.measuring) on plan.Plan._call_cell by matrix_run.py (plan phase) and planfirst.py; mandatory in test-v1 (planning is refused when nvidia-smi cannot be read). plan.py is not edited",
+   "decision": "Arash, 2026-10-14 (docs/final-test/progress.md 'ARASH DECISION: simplify the energy method (C5)'): measure the GPU's average power draw with nvidia-smi during Gemma planning, multiply by the planning time, price it at 0.20 USD/kWh; drop the coverage / gap / backwards-clock checks; disclose it plainly as a simple, approximate method",
+   "disclosure": "Planning energy is a simple, approximate figure: the GPU's average power draw reported by nvidia-smi (about 10 readings per second) during each Gemma planning call, multiplied by the planning time and priced at 0.20 USD/kWh. Only the GPU is counted (CPU and the rest of the laptop are not), so it understates total energy; idle power is included. The 10 practice rows that ran before the meter existed are estimated from the measured rate and flagged.",
+   "evidence": "docs/final-test/energy/c5-simple-measurement.json",
+   "id": "c5-simple-1",
+   "join": "analyze.attach_energy: a Gemma plan row takes energy_j_gpu and planning_s from the one energy row whose bound plan line sha256 equals the sha256 of its plan journal line; no such row (or several) -> no energy figure -> UNKNOWN cost",
+   "journal": "energy.jsonl (energy.<pass id>.jsonl for --pass-id runs) beside plan.jsonl: one 'open' row per run (GPU name, idle mean) and one 'cell' row per Gemma cell, bound to its plan journal line by sha256",
+   "method": "a background nvidia-smi (--query-gpu=power.draw.instant -i 0 -lms 100) prints the GPU board power about every 100 ms for the whole plan phase. Per Gemma plan cell: planning_s = the time from just before plan.Plan._call_cell starts to just after it returns (every attempt, repair and parse of that cell); gpu_w_mean = the plain mean of the readings that arrived in that time (none there: the readings within 1 s of it); energy_j_gpu = gpu_w_mean x planning_s; USD = energy_j_gpu / 3,600,000 x usd_per_kwh. A cell with no reading at all has no energy figure (its cost is UNKNOWN)",
+   "not_measured": "GPU only: the CPU, memory, display, storage, fans and power-supply losses are NOT measured (energy_j_cpu is None), so the figure is LOWER than the laptop's total planning energy. The reading is the whole GPU board (every process on it, the idle floor included, never subtracted); the idle floor measured when the meter opens is reported",
+   "unmeasured_estimate": {
+    "definition": "rate_w = (sum of the measured energy_j_gpu) / (sum of their planning_s) over every Gemma plan row of the analysed run with an energy figure from the join (never estimates): the average measured Gemma GPU power per planning second; an eligible practice row's estimate = rate_w x its own planning seconds (planning_s / plan_secs; none -> UNKNOWN), assuming the measured and the earlier calls draw comparable power (same laptop, same model). Only the 10 practice-v2 rows named in the terms (bound to practice.jsonl by sha) are eligible",
+    "disclosure": "reported per arm: measured joules (primary), estimated rows / seconds / joules / USD and the rate (n cells, seconds); markdown labels the estimate",
+    "min_cells": 20,
+    "rate": "measured_rate",
+    "too_few": "fewer than min_cells measured rows (or zero measured seconds) -> no rate -> the practice rows stay UNKNOWN"
+   },
+   "unmeasured_rule": "the 10 practice-v2 rows ran before the meter existed. On Arash's decision of 2026-10-14 ('energy estimate ok') each is ESTIMATED as the run's measured Gemma rate x the row's own planning seconds and flagged 'estimated'; the measured figure stays the primary one and the estimate is disclosed beside it. Every other Gemma row without an energy figure keeps an UNKNOWN cost",
+   "unmeasured_rule_basis": "arash-decision:2026-10-14",
+   "unmeasured_rule_terms": {
+    "claim": "headline",
+    "eligible": [
+     "practice"
+    ],
+    "rate": "measured_rate",
+    "rows": {
+     "journal": "docs/final-test/matrix/practice-v2/practice.jsonl",
+     "journal_sha256": "ab84215a35cc082a770815d630949eeedbf39d8eaf63fe18ce47f9d846d31dda",
+     "row_ids": [
+      "1d0a3b6e730c510041a8606505bd3c798e2eed7b61baed949ad1898d21992f38",
+      "2178d14b21d0856da776b465ce620d6870cd01623b360bf3bfb8043f1a32e372",
+      "2dec82fa8cf40f5de41dc4fdff8223d44f9f9c8ac41fef7ef56a026ea83a9774",
+      "2efa5590a87ebd75a498bd5de13e20b65aabdc971d16ef8ce28504a7364f9ea4",
+      "3cbd72acca05775964fb3ed3ed4850effb89c389372c89245442bc1c9853dcc1",
+      "777e908a5ac8254444bbb53f62bd1a2b65af4445c1fa1f0b10e4f4618c26d608",
+      "7d361af12284598cbe8f72ed6b34312580e157f6de72d3d49f18bcca307753e5",
+      "b7fc99c4a11b691fb864cd082ba69caa2f1c22593ede037e4223148cc44a81f4",
+      "bd9f087c5d208556af0b907ff72ef1f99e31aaae4e745db750c56a25cf31ef66",
+      "dba5a9f8d647f60bac20b7a18a1d38ebbb2b2408095c04e0a3e372e3d907fd62"
+     ]
+    }
+   }
+  },
+  "hardware_price_basis": "amendment:A33",
+  "hardware_price_disclosure": "A33: planning time is measured on the run laptop (RTX 4060, 8 GB). The headline hardware allocation combines those measured hours with the USD 399 reference-device price. The energy term is the laptop GPU's energy during planning (energy_method c5-simple-1: nvidia-smi average power x planning time; GPU only, approximate). A Gemma plan row without an energy figure stays UNKNOWN and blocks the A24.2 statement. Sensitivity: the hw_time_3x row (3 x planning hours, laptop energy held fixed; factor 3 = an approved sensitivity assumption, not a measured slowdown); the reading rule uses the headline view only",
+  "hardware_price_source": "reference price, prereg A33 (2026-10-14, Arash decision 8; prospectively replaces A24.2's 'declared laptop purchase price'): NVIDIA Jetson Orin Nano Super Developer Kit 8 GB, USD 399 (ledger 2026-10-12 'Hardware price for A24.2'); a reference device price, not the run laptop's price, and not shown to run this system; recorded in freeze.json as a24_2_cost before the first test call",
+  "hardware_price_usd": 399.0,
+  "hardware_time_factor": 3.0,
+  "operating_hours": 6000.0,
+  "status": "recorded",
+  "unmeasured_rule": {
+   "basis": "arash-decision:2026-10-14",
+   "by": "Arash",
+   "date": "2026-10-14",
+   "said": "energy estimate ok",
+   "source": "docs/final-test/progress.md 2026-10-14 'ARASH DECISION: energy estimate for the 10 unmeasured practice rows = OK' and 'ARASH DECISION: simplify the energy method (C5)'",
+   "terms": {
+    "claim": "headline",
+    "eligible": [
+     "practice"
+    ],
+    "rate": "measured_rate",
+    "rows": {
+     "journal": "docs/final-test/matrix/practice-v2/practice.jsonl",
+     "journal_sha256": "ab84215a35cc082a770815d630949eeedbf39d8eaf63fe18ce47f9d846d31dda",
+     "row_ids": [
+      "1d0a3b6e730c510041a8606505bd3c798e2eed7b61baed949ad1898d21992f38",
+      "2178d14b21d0856da776b465ce620d6870cd01623b360bf3bfb8043f1a32e372",
+      "2dec82fa8cf40f5de41dc4fdff8223d44f9f9c8ac41fef7ef56a026ea83a9774",
+      "2efa5590a87ebd75a498bd5de13e20b65aabdc971d16ef8ce28504a7364f9ea4",
+      "3cbd72acca05775964fb3ed3ed4850effb89c389372c89245442bc1c9853dcc1",
+      "777e908a5ac8254444bbb53f62bd1a2b65af4445c1fa1f0b10e4f4618c26d608",
+      "7d361af12284598cbe8f72ed6b34312580e157f6de72d3d49f18bcca307753e5",
+      "b7fc99c4a11b691fb864cd082ba69caa2f1c22593ede037e4223148cc44a81f4",
+      "bd9f087c5d208556af0b907ff72ef1f99e31aaae4e745db750c56a25cf31ef66",
+      "dba5a9f8d647f60bac20b7a18a1d38ebbb2b2408095c04e0a3e372e3d907fd62"
+     ]
+    }
+   }
+  },
+  "usd_per_kwh": 0.2,
+  "version": "a24.2-cost-1"
+ },
+ "acceptance": {
+  "attempts": {
+   "1": {
+    "file_sha256": "4f8c50f771c50402307077bf8d15e296af988fcf01cc648107b2adfca8041af9",
+    "intact": true,
+    "path": "docs/final-test/matrix/acceptance-v2-restart1/acceptance_verdict.json",
+    "problems": [],
+    "protocol_stopped": null,
+    "self_sha256": "868000ba0f1d4dcc50d7b2571f0fc5f0a31e69070f38c49afe361c55a1762380",
+    "verdict": "NOT PASS"
+   },
+   "2": {
+    "file_sha256": "00f5f2b5c81ba6e88e1ddbbedccd26c52e23448abe62df9029a1a76b0c1d3a10",
+    "intact": true,
+    "path": "docs/final-test/matrix/acceptance-v2-a2/acceptance_verdict.json",
+    "problems": [],
+    "protocol_stopped": true,
+    "self_sha256": "eeda4ef8df839c0e0ecb6d10982b6467d7327075c9c20561114e46c3297f6789",
+    "verdict": "NOT PASS"
+   }
+  },
+  "rule": "freeze precondition: acceptance PASS (registration decision rule; never re-scored, pooled or redefined)",
+  "terminal": true,
+  "verdict": "NOT PASS",
+  "waiver": {
+   "acceptance_recorded_as": "NOT PASS",
+   "attempt1_verdict_sha256": "4f8c50f771c50402307077bf8d15e296af988fcf01cc648107b2adfca8041af9",
+   "attempt2_verdict_self_sha256": "eeda4ef8df839c0e0ecb6d10982b6467d7327075c9c20561114e46c3297f6789",
+   "attempt2_verdict_sha256": "00f5f2b5c81ba6e88e1ddbbedccd26c52e23448abe62df9029a1a76b0c1d3a10",
+   "file": "docs/final-test/amendments/A36-DRAFT.md",
+   "file_sha256": "8e32f6f93c54cb655038c53143b2d40503c7124118119ecce230429a98c6ca96",
+   "key": "A36",
+   "reasons": [],
+   "revised_analysis_identity": {
+    "a36_version": "a36-r2",
+    "files": {
+     "sim/final_test/matrix/a36.py": "e7fa7fdbf61e1a4384ff36ca25b0edae301882cd36454fd850a900a374a2c7d0",
+     "sim/final_test/matrix/analyze.py": "4ae75018b9cc133abf1707b370ed379caeef4612983ead7d25d3b70f64d186d6",
+     "sim/final_test/matrix/score.py": "78e7ca7f193cd8778608384f13486d8519e5c4a9874d4acccd902288b753745b",
+     "sim/final_test_h1_stats.py": "27954de73ca9a18e4831a180b196d7eb9b96681c2056c9e25af8b0ba1b9e9265"
+    },
+    "files_sha256": "debd5b200fdafb1a61650d24643bfb10374ee2650b1e1e4d70a78b08a2cc61de",
+    "missing": [],
+    "status": "PLACEHOLDER: bound by file sha; the A36 analysis stage has not declared its own identity record"
+   },
+   "signature": {
+    "by": "Arash",
+    "date": "2026-10-15",
+    "file": "docs/final-test/amendments/A36-DRAFT.md",
+    "file_sha256": "8e32f6f93c54cb655038c53143b2d40503c7124118119ecce230429a98c6ca96",
+    "prereg_sha256": "031349dd22eacc35ec75c25f413f81f86ab42a2ab3ad99342d1f818334b2ce91",
+    "said": "sign"
+   },
+   "valid": true,
+   "waives": "waives only the acceptance-PASS precondition"
+  }
+ },
+ "acceptance_registration": {
+  "amendment": "A32 (DRAFT - pending Arash's signature at the freeze; written 2026-10-14 BEFORE any acceptance call)",
+  "file_sha256": "2622f6c2b22377cd888c30f66531dff88fdb3272b454035f6af463feed64af99",
+  "ok": true,
+  "path": "docs/final-test/acceptance_registration.json",
+  "reasons": [],
+  "roster_sealed": true,
+  "self_sha256": "fef2bd3ea7e2c24adc0bc4684b5f18fd2f2505751a8c9beece84120930a204d4",
+  "signature": null,
+  "signature_status": "PENDING ARASH"
+ },
+ "all_gates_pass": true,
+ "analysis_plan": {
+  "plan": {
+   "a24_2_cost": {
+    "allocation": "shared / arm-specific preparation rows (practice.jsonl, priced as Gemma since practice is Gemma-planned, and optional prep_cost.jsonl rows, which must name cost_kind gemma / api / codex): a row with `arm` (or `arms`) goes to those arms, a row without goes to the consumer arms under allocation_rule; each arm's allocated total is spread equally over its attempted presentations. Planning seconds of a prep row = planning_s or plan_secs (never the episode wall_s). A Gemma prep row without a validated measurement makes its targets' cost UNKNOWN (energy_method.unmeasured_rule; practice-v2 has no energy measurement)",
+    "allocation_rule": {
+     "consumer_suffixes": [
+      "+M",
+      "+FS"
+     ],
+     "meaning": "split: each shared row is allocated ONCE, divided among its target arms in proportion to their registered workload (the cohort presentations; equal workloads -> equal shares; with all 8 main arms the practice consumers are G+M, O+M, X+M, G+FS, O+FS = one fifth each; Astra P-cost Q1/Q2). full (each target carries the whole row) duplicates shared expenditure and is not reported. practice_required: consumer arms without any practice / preparation row are UNKNOWN",
+     "mode": "split",
+     "practice_required": true
+    },
+    "arm_kinds": {
+     "api": "O* (and archived S* / H*): cost_usd of the plan journal (dated list prices; reasoning and repairs included, cache replays cost 0)",
+     "codex": "X*: CLI planning NOT priced (subscription: no incremental API expenditure; A24.2 prices local Gemma and API arms only); its allocated preparation USD is kept and reported, its total stays incomplete, never zero",
+     "gemma": "G*: energy + hardware allocation (+ any cost_usd); a Gemma row without an energy figure (energy_j_gpu) makes the arm's cost UNKNOWN unless the practice-row estimate applies"
+    },
+    "ci": "95 % percentile interval (inverted-CDF order statistics, no interpolation), task-family cluster bootstrap, B = 20000, seed = final_test_power.SEED; ONE resampling matrix over the union of families for every arm, view and ratio",
+    "claim": {
+     "C_upper_max": 0.1,
+     "R_lower_min": 0.8,
+     "rule": "permitted only when the lower 95 % bound of R >= 0.80 AND the upper 95 % bound of C <= 0.10, both obtainable and finite, in a complete study, with G+M and O0 covering the cohort, and (real data) with freeze.json a24_2_cost recorded including the hardware price basis; A24.2 makes this the statement available when H1 is not established; otherwise estimates and CIs only",
+     "text": "Gemma with the package retained at least 80% of unassisted Opus's success rate at at most 10% of its specified planning cost",
+     "view": "headline"
+    },
+    "codex_pareto_exception": "documented exception to 'showing all arms' (Astra P-cost Q6; no subscription allocation rule is registered): X arms appear in the Pareto table and under the plot with their SR and known preparation USD, without a cost coordinate. A subscription allocation would have to be fixed prospectively (PENDING ARASH if wanted)",
+    "cohort": "the registered task cohort = every (item, language) presentation scored in any arm, minus INVALID presentations (dropped from every arm). Every outcome uses the same item weights: item value = mean over its cohort presentations; an arm missing a cohort presentation is reported (missing_vs_cohort), never silently dropped, and blocks the reading rule if it is G+M or O0",
+    "energy_method": {
+     "accuracy": "approximate: a mean of about 10 readings per second times the time; no calibration, no coverage or gap checks; the readings are the driver's own power figure, not an external meter",
+     "code": "sim/final_test/matrix/energy.py, installed for one launch (energy.measuring) on plan.Plan._call_cell by matrix_run.py (plan phase) and planfirst.py; mandatory in test-v1 (planning is refused when nvidia-smi cannot be read). plan.py is not edited",
+     "decision": "Arash, 2026-10-14 (docs/final-test/progress.md 'ARASH DECISION: simplify the energy method (C5)'): measure the GPU's average power draw with nvidia-smi during Gemma planning, multiply by the planning time, price it at 0.20 USD/kWh; drop the coverage / gap / backwards-clock checks; disclose it plainly as a simple, approximate method",
+     "disclosure": "Planning energy is a simple, approximate figure: the GPU's average power draw reported by nvidia-smi (about 10 readings per second) during each Gemma planning call, multiplied by the planning time and priced at 0.20 USD/kWh. Only the GPU is counted (CPU and the rest of the laptop are not), so it understates total energy; idle power is included. The 10 practice rows that ran before the meter existed are estimated from the measured rate and flagged.",
+     "evidence": "docs/final-test/energy/c5-simple-measurement.json",
+     "id": "c5-simple-1",
+     "join": "analyze.attach_energy: a Gemma plan row takes energy_j_gpu and planning_s from the one energy row whose bound plan line sha256 equals the sha256 of its plan journal line; no such row (or several) -> no energy figure -> UNKNOWN cost",
+     "journal": "energy.jsonl (energy.<pass id>.jsonl for --pass-id runs) beside plan.jsonl: one 'open' row per run (GPU name, idle mean) and one 'cell' row per Gemma cell, bound to its plan journal line by sha256",
+     "method": "a background nvidia-smi (--query-gpu=power.draw.instant -i 0 -lms 100) prints the GPU board power about every 100 ms for the whole plan phase. Per Gemma plan cell: planning_s = the time from just before plan.Plan._call_cell starts to just after it returns (every attempt, repair and parse of that cell); gpu_w_mean = the plain mean of the readings that arrived in that time (none there: the readings within 1 s of it); energy_j_gpu = gpu_w_mean x planning_s; USD = energy_j_gpu / 3,600,000 x usd_per_kwh. A cell with no reading at all has no energy figure (its cost is UNKNOWN)",
+     "not_measured": "GPU only: the CPU, memory, display, storage, fans and power-supply losses are NOT measured (energy_j_cpu is None), so the figure is LOWER than the laptop's total planning energy. The reading is the whole GPU board (every process on it, the idle floor included, never subtracted); the idle floor measured when the meter opens is reported",
+     "unmeasured_estimate": {
+      "definition": "rate_w = (sum of the measured energy_j_gpu) / (sum of their planning_s) over every Gemma plan row of the analysed run with an energy figure from the join (never estimates): the average measured Gemma GPU power per planning second; an eligible practice row's estimate = rate_w x its own planning seconds (planning_s / plan_secs; none -> UNKNOWN), assuming the measured and the earlier calls draw comparable power (same laptop, same model). Only the 10 practice-v2 rows named in the terms (bound to practice.jsonl by sha) are eligible",
+      "disclosure": "reported per arm: measured joules (primary), estimated rows / seconds / joules / USD and the rate (n cells, seconds); markdown labels the estimate",
+      "min_cells": 20,
+      "rate": "measured_rate",
+      "too_few": "fewer than min_cells measured rows (or zero measured seconds) -> no rate -> the practice rows stay UNKNOWN"
+     },
+     "unmeasured_rule": "the 10 practice-v2 rows ran before the meter existed. On Arash's decision of 2026-10-14 ('energy estimate ok') each is ESTIMATED as the run's measured Gemma rate x the row's own planning seconds and flagged 'estimated'; the measured figure stays the primary one and the estimate is disclosed beside it. Every other Gemma row without an energy figure keeps an UNKNOWN cost",
+     "unmeasured_rule_basis": "arash-decision:2026-10-14",
+     "unmeasured_rule_terms": {
+      "claim": "headline",
+      "eligible": [
+       "practice"
+      ],
+      "rate": "measured_rate",
+      "rows": {
+       "journal": "docs/final-test/matrix/practice-v2/practice.jsonl",
+       "journal_sha256": "ab84215a35cc082a770815d630949eeedbf39d8eaf63fe18ce47f9d846d31dda",
+       "row_ids": [
+        "1d0a3b6e730c510041a8606505bd3c798e2eed7b61baed949ad1898d21992f38",
+        "2178d14b21d0856da776b465ce620d6870cd01623b360bf3bfb8043f1a32e372",
+        "2dec82fa8cf40f5de41dc4fdff8223d44f9f9c8ac41fef7ef56a026ea83a9774",
+        "2efa5590a87ebd75a498bd5de13e20b65aabdc971d16ef8ce28504a7364f9ea4",
+        "3cbd72acca05775964fb3ed3ed4850effb89c389372c89245442bc1c9853dcc1",
+        "777e908a5ac8254444bbb53f62bd1a2b65af4445c1fa1f0b10e4f4618c26d608",
+        "7d361af12284598cbe8f72ed6b34312580e157f6de72d3d49f18bcca307753e5",
+        "b7fc99c4a11b691fb864cd082ba69caa2f1c22593ede037e4223148cc44a81f4",
+        "bd9f087c5d208556af0b907ff72ef1f99e31aaae4e745db750c56a25cf31ef66",
+        "dba5a9f8d647f60bac20b7a18a1d38ebbb2b2408095c04e0a3e372e3d907fd62"
+       ]
+      }
+     }
+    },
+    "energy_requirement": "the producer takes the mean GPU power over the SAME interval that gives the planning seconds (energy_method c5-simple-1); the energy method is recorded in freeze.json",
+    "energy_rule": "GPU energy in joules (plan row energy_j_gpu = nvidia-smi mean power x planning_s) / 3,600,000 x usd_per_kwh (energy_method)",
+    "hardware_price_basis": "amendment:A33",
+    "hardware_price_disclosure": "A33: planning time is measured on the run laptop (RTX 4060, 8 GB). The headline hardware allocation combines those measured hours with the USD 399 reference-device price. The energy term is the laptop GPU's energy during planning (energy_method c5-simple-1: nvidia-smi average power x planning time; GPU only, approximate). A Gemma plan row without an energy figure stays UNKNOWN and blocks the A24.2 statement. Sensitivity: the hw_time_3x row (3 x planning hours, laptop energy held fixed; factor 3 = an approved sensitivity assumption, not a measured slowdown); the reading rule uses the headline view only",
+    "hardware_price_source": "reference price, prereg A33 (2026-10-14, Arash decision 8; prospectively replaces A24.2's 'declared laptop purchase price'): NVIDIA Jetson Orin Nano Super Developer Kit 8 GB, USD 399 (ledger 2026-10-12 'Hardware price for A24.2'); a reference device price, not the run laptop's price, and not shown to run this system; recorded in freeze.json as a24_2_cost before the first test call",
+    "hardware_price_status": "recorded: prereg A33 (prospective; approved by Arash 2026-10-14, decision 8; signature pending at the freeze summary). D13 is closed. freeze.json a24_2_cost must carry this basis; the freeze builder checks that the A33 heading exists in the prereg",
+    "hardware_price_usd": 399.0,
+    "hardware_rule": "hardware_price_usd / operating_hours x attributable planning hours",
+    "hardware_time_factor": 3.0,
+    "hardware_time_note": "view hw_time_3x = '3x hardware-time sensitivity; measured laptop energy held fixed' (ledger 2026-10-12: a Jetson-class device plans more slowly). It is NOT an estimate of Jetson energy or of total operating cost",
+    "operating_hours": 6000.0,
+    "operating_hours_rule": "three years at 2,000 operating hours / year",
+    "outcomes": {
+     "a": "total planning USD / successful tasks per arm = sum of item-mean cost / sum of item-mean SR (equal to presentation totals / successes under complete EN/FA coverage); the raw totals are reported too",
+     "b": "R = SR(G+M) / SR(O0) and C = mean planning USD per attempted task G+M / O0, item-weighted on the cohort",
+     "c": "Pareto data: item-weighted SR against mean planning USD per attempted task, all arms (pareto.svg beside analysis.json)",
+     "latency": "planning seconds per attempted task including repairs and failed attempts (mean, median, p90)"
+    },
+    "planning_seconds": "plan row planning_s if present, else wall_s (the plan cell's wall time: every sequential attempt, repair and failed attempt, counted once; never both the cell interval and its attempts); no other fallback (a sum of request latencies would omit parsing, retrieval and package time) -> a Gemma row without either is UNKNOWN",
+    "scope": "planning cost only (executor / simulator excluded); CIs describe task-sampling uncertainty conditional on these prices and assumptions",
+    "undefined_rule": "a ratio with denominator 0 is +infinity when the numerator is > 0 and UNDEFINED when it is 0 (point estimate and every bootstrap replicate). Infinite replicates stay in the ordering; if ANY replicate is undefined, or a needed cost is unknown, the CI bounds are 'not obtainable' (reported with the counts, never dropped) and the reading rule cannot be satisfied",
+    "usd_per_kwh": 0.2,
+    "version": "a24.2-cost-1",
+    "views": {
+     "electricity_only": "headline without the hardware allocation",
+     "hardware_only": "the hardware allocation alone (per arm only; no C is formed for it)",
+     "headline": "API USD + energy + hardware + allocated",
+     "hw_time_3x": "3x hardware-time sensitivity; measured laptop energy held fixed"
+    },
+    "workload": "scored cells only: every plan row of (arm, canon presentation, r = 0, block main or unset) is summed (all incurred attempts); plan rows of other blocks (REPEAT r > 0, curve, relocation) are totalled separately and are not in the per-task outcomes"
+   },
+   "a36": {
+    "eligibility": "excluded_reset (a36.excluded_reset, computed in score.py): a core cell (block main, canon, r0, run0) whose final class is infra_exec and whose 3 attempts (0, 1, 2) of the CURRENT epoch (latest of the executor's epoch state, rows and starts) each started once (exec_attempt_start) and stopped at the pre-execution reset gate (status blocked_state, registered comparison failed, not overridden, prims == sweep prims, 0 action-resolve, no error, no outcome); anything mixed, malformed or missing -> not flagged",
+    "h1": "h1_rule_c7 unchanged (K >= 20 guard; K < 20 -> inconclusive); its validation did not cover this selection step",
+    "per_arm_sr": "item-weighted (analyze.arm_rates) over non-flagged cells; item and presentation denominators printed",
+    "registered_alongside": "A21: infra_exec = SR 0 in every denominator; differences between the two analyses are named",
+    "reset_limited": "an arm with MORE than 5% of its core cells flagged labels every contrast involving it",
+    "retention": "paired common subset per contrast: a presentation flagged in EITHER arm leaves both; then the registered aggregation (per item the mean of retained EN/FA differences, equal item weights, empty items / families dropped, K and N recomputed); every contrast (H1, Holm m = 3, exploratory H4a-b / H5a-c, equivalence E1); exploratory stays exploratory",
+    "rule": "a36-r2",
+    "status": "SIGNED (Arash, 2026-10-15; signatures.json key A36; A36-DRAFT.md r2); binds the locked test once the freeze records it",
+    "text": "docs/final-test/amendments/A36-DRAFT.md r2 (signatures.json key A36)",
+    "unavailable": "fewer than 2 retained families -> the contrast is unavailable: H1 / E1 inconclusive (no claim), a Holm member enters with p = 1 and m stays 3; counts are explicit zeros"
+   },
+   "dependence": {
+    "cluster": "the 42 test families (paired: every arm of a family moves together)",
+    "shared_executions": "plan cells with equal execution-unit keys share one simulator run; their outcome is ONE realisation. The family cluster contains every unit, so the intervals and tests already treat copies as dependent; the report adds the number of independent executions and a sensitivity that drops presentations where the two arms of a contrast share a unit (that estimate is performance CONDITIONAL on non-shared executions: it changes the population and cannot validate or replace the full-sample result)",
+    "unit_of_analysis": "item (mean of its EN and FA presentations)"
+   },
+   "h1": {
+    "alpha_one_sided": 0.025,
+    "contrast": "SR(G+M) - SR(O0)",
+    "decision": "A24.1: h1-rule-1 = C7 (final_test_h1_stats.h1_rule_c7): CR2 + Satterthwaite, guard K >= 20 discordant families, one-sided computational level .0175 per tail (nominal 96.5 % interval); NI iff L > -.05; superior iff NI and L > 0 (fixed sequence); materially inferior iff U < -.05; 'statistically lower' iff NI and U < 0; se = 0 / undefined df / guard failure -> inconclusive. The registered wild+percentile rule (final_test_power.h1_decision) failed its validation and is never used for a claim",
+    "estimation_only_if": "H1_PROCEDURE['validated'] is False (then estimate + interval only, no NI / superior / inferior wording)",
+    "exploratory_equivalence": "E1 (G+M vs O+M): CR2 + Satterthwaite 90 % interval + guard K >= 20, inside +/-5 pp; exploratory only",
+    "family": "none -- H1 stands alone; it is NOT a member of the Holm family",
+    "margin": 0.05,
+    "validation": "docs/final-test/h1_validation/v100_summary.C7.json (226 configurations x 100,000 datasets, 0/628 null cells above the frozen gate)",
+    "views": "primary = item-weighted (validated); family-weighted and infra-paired = sensitivities (same rule, not separately validated)"
+   },
+   "holm": {
+    "alpha": 0.05,
+    "exploratory": {
+     "H4a": [
+      "G+M",
+      "G+FS",
+      "two",
+      0.0
+     ],
+     "H4b": [
+      "O+M",
+      "O+FS",
+      "two",
+      0.0
+     ],
+     "H5a": [
+      "X+M",
+      "X0",
+      "greater",
+      0.0
+     ],
+     "H5b": [
+      "X+M",
+      "G+M",
+      "two",
+      0.0
+     ],
+     "H5c": [
+      "G+M",
+      "X0",
+      "ni_x2",
+      -0.05
+     ]
+    },
+    "m": 3,
+    "members": {
+     "H2a": [
+      "G+M",
+      "G0",
+      "greater",
+      0.0
+     ],
+     "H2c": [
+      "O+M",
+      "O0",
+      "greater",
+      0.0
+     ],
+     "H3a": [
+      "O+M",
+      "G+M",
+      "two",
+      0.0
+     ]
+    },
+    "note": "m = 3 since A24.5 (H2a, H2c, H3a; all superiority or two-sided, no non-inferiority member); H4a-b and H5a-c are EXPLORATORY (raw p, listed in `exploratory`); H2b, H3b and H3c are WITHDRAWN (Sonnet is archived, A23), their IDs are kept in `withdrawn`; the smaller m relaxes the Holm thresholds, which is disclosed (the report prints the m = 8 adjustment of the A23 family next to the m = 3 verdict)",
+    "withdrawn": {
+     "H2b": {
+      "contrast": "SR(S+M) - SR(S0)",
+      "meaning": "Sonnet memory gain"
+     },
+     "H3b": {
+      "contrast": "SR(S+M) - SR(G+M)",
+      "meaning": "Sonnet+memory vs Gemma+memory"
+     },
+     "H3c": {
+      "contrast": "SR(G+M) - SR(S0)",
+      "meaning": "Gemma+memory non-inferior to Sonnet without memory"
+     }
+    }
+   },
+   "ni_guard": {
+    "effect": "applied to NO m = 3 Holm member (none is a non-inferiority test); retained for the m = 8 transparency comparison, where H5c's p is set to 1 (not rejected)",
+    "observed_discordance_below": 0.25,
+    "residual": "no inflation above nominal was seen in the grid once the guard applies (largest rates are at or below nominal within Monte Carlo error); NI claims from H5c are still labelled approximate",
+    "scope": "H5c only, and only inside the m = 8 transparency comparison (A24.5 made H5c exploratory); NOT H1, whose registered calibration table (section 9.6) is unchanged",
+    "why": "docs/final-test/matrix/ni_calibration.json: type-I error of the complete non-inferiority procedure at the null boundary D = -5 pp, 4,000 simulations per cell (Monte Carlo SE about .001), discordance .05-.30, family ICC 0 / .3 / .6; without the guard the first-Holm-step rate (nominal p1 < .00227) is up to .14 at discordance .05, .054 at .10, .027 at .15, .009 at .20 and .0075 at .25; with the guard at .25 the largest first-step rate in the grid is .0022 and the largest rate at the most lenient step (nominal .025) is .0213; guards at .20 and .15 left .0037 and .0047"
+   },
+   "p_values": {
+    "greater": "one-sided wild cluster bootstrap, null imposed at delta0 (0 for superiority)",
+    "ni_x2": "H5c (EXPLORATORY since A24.5): p1 = one-sided wild test of H0: D <= -5 pp (the null BOUNDARY is imposed, not 0), reported raw; min(1, 2 p1) with the guard only in the m = 8 transparency comparison; never from a test of D = 0",
+    "two": "min(1, 2 min(p_greater, p_less)) at delta0 = 0"
+   },
+   "seeds": {
+    "B_interval": 20000,
+    "B_tests": 9999,
+    "master": 20261010
+   },
+   "sensitivities": [
+    "family_weighted",
+    "infra_paired (planner transport failure OR execution infrastructure failure of either arm)",
+    "distinct_units_only",
+    "x_isolation_paired (H5: drop presentations whose X cell had a tool event or an identity mismatch)"
+   ],
+   "version": "ftm-analysis-3",
+   "x_disclosure": "X_DISCLOSURE (printed with every X result)"
+  },
+  "sha256": "ad4b67bca59e52528710ac65f248495cafa670f1d81399b129c0214f1ce787fa"
+ },
+ "arash_check": {
+  "by": "Arash",
+  "date": "2026-10-16",
+  "said": "i hereby sign the new freeze summary and kitchen 1 planning should start. (A37 re-freeze, pre-signed; freeze sha ef11aa0d09675d46)"
+ },
+ "arms": {
+  "G+FS": {
+   "chooser": "S*",
+   "planner": "G",
+   "prompt": "FS"
+  },
+  "G+M": {
+   "chooser": "S*",
+   "planner": "G",
+   "prompt": "S*"
+  },
+  "G0": {
+   "chooser": "prior",
+   "planner": "G",
+   "prompt": "none"
+  },
+  "O+FS": {
+   "chooser": "S*",
+   "planner": "O",
+   "prompt": "FS"
+  },
+  "O+M": {
+   "chooser": "S*",
+   "planner": "O",
+   "prompt": "S*"
+  },
+  "O0": {
+   "chooser": "prior",
+   "planner": "O",
+   "prompt": "none"
+  },
+  "X+M": {
+   "chooser": "S*",
+   "planner": "X:gpt-6-sol",
+   "prompt": "S*"
+  },
+  "X0": {
+   "chooser": "prior",
+   "planner": "X:gpt-6-sol",
+   "prompt": "none"
+  }
+ },
+ "artefacts": {
+  "acceptance_registration.json": {
+   "path": "docs/final-test/acceptance_registration.json",
+   "sha256": "2622f6c2b22377cd888c30f66531dff88fdb3272b454035f6af463feed64af99"
+  },
+  "c11_audit.json": {
+   "path": "sim/final_test/diag/c11/c11_audit.json",
+   "sha256": "ab3c01e6a251d12e3a8be5d465b2716376a0e4a33e01c6bc0f0273b590068902"
+  },
+  "context_fit (dev)": {
+   "path": "docs/final-test/matrix/rehearsal-v3/context_fit.json",
+   "sha256": "83083031d06527b6622410b44f7b6f49eb75b7ab02459b14afcd2a2ad33cd71a"
+  },
+  "equiv_replay.json": {
+   "path": "sim/final_test/diag/a31/equiv_replay.json",
+   "sha256": "70ec9a3f9942b13dcaf8730ad8d5d0a5bddbd493d2fbf3f553bb2aef42dc3442"
+  },
+  "evidence 12.10": {
+   "path": "docs/final-test/matrix/gates_ft2/12.10.json",
+   "sha256": "aa9c52f80fdd8b55d146f1ed152aed10474efd04283618d72078c89846e0314f"
+  },
+  "evidence 12.2": {
+   "path": "docs/final-test/matrix/gates_ft2/12.2.json",
+   "sha256": "8af27294ce0a140a8dba0195c9e64ecf5000780e79a39ce1b8f03338056a0214"
+  },
+  "evidence 12.3": {
+   "path": "docs/final-test/matrix/gates_ft2/12.3.json",
+   "sha256": "8fabfe66ea67f05053f6004cb8569f6108316bc9db6cd36690dd0758a4f0b13d"
+  },
+  "evidence 12.5": {
+   "path": "docs/final-test/matrix/gates_ft2/12.5.json",
+   "sha256": "20ccea18fb3f4a9f3bf714f93cb73dd98a05e709d24dbfc87280ffa534cb46ce"
+  },
+  "evidence 12.7": {
+   "path": "docs/final-test/matrix/gates_ft2/12.7.json",
+   "sha256": "0e021255eea3e3b5ebc467709730bc9cfb6775dd851df7244fcc9479ad274088"
+  },
+  "evidence G-iso": {
+   "path": "docs/final-test/matrix/gates_ft2/G-iso.json",
+   "sha256": "0d49f0c03a6c345e8c069913c51bc3a6ba527903878a5f6a53a57e894371faac"
+  },
+  "evidence X-iso": {
+   "path": "docs/final-test/matrix/gates_ft2/X-iso.json",
+   "sha256": "f536e28c242cedef0dbf260c717c6d0b5dbf9b2f42ce2d6d95c6caae33def959"
+  },
+  "evidence context": {
+   "path": "docs/final-test/matrix/gates_ft2/context.json",
+   "sha256": "45789275f35a04284c16bc1b835d9aaa47a1b10d27d1e26d0d377c713a3dde05"
+  },
+  "evidence leakage": {
+   "path": "docs/final-test/matrix/gates_ft2/leakage.json",
+   "sha256": "566d55f2348513ccf45b4fdcf8d3fad4936b192e23f9e7309d88aaa4cbfeb499"
+  },
+  "evidence tokens": {
+   "path": "docs/final-test/matrix/gates_ft2/tokens.json",
+   "sha256": "1da8d9ee78706b22439bdad1716e629af9ba89d4ada0cd9e05cbfff7cb54ea2f"
+  },
+  "exec_contract.json": {
+   "path": "sim/planners/exec_contract.json",
+   "sha256": "93047cc3252a02b6921ae426a9c5e8a01e3532ac28a6208f724a918675d5b9c6"
+  },
+  "fs_block.py": {
+   "path": "sim/final_test/matrix/fs_block.py",
+   "sha256": "52aba774c3559a5ee6db4a368c4ffead3f1461d6e64ad7ae73b439eab5edbce9"
+  },
+  "fs_v2_corpus (S* example store)": {
+   "path": "sim/final_test/snapshots_ft2/o0/k10/practice_rows.jsonl",
+   "sha256": "36fbfdbd869829bfc966e8f17c43865f61b10697e1d7c65fb49562601f3b529c"
+  },
+  "ft_v2.json": {
+   "path": "sim/planners/ft_v2.json",
+   "sha256": "d80e2066c20061ee7f13f64bfcfa22c7a1ea52c24a2bed42b7609456ed919795"
+  },
+  "g_iso (dev)": {
+   "path": "docs/final-test/matrix/rehearsal-v3/g_iso.json",
+   "sha256": "db3efb5e310636992e1a60968bbe45c048ce375b074d9bb2bcb1270d505298f3"
+  },
+  "package_params.json": {
+   "path": "sim/step5/package_params.json",
+   "sha256": "9a07f2d2023dd39fd9775f7d2ebaf51141a69bab39574036f4fd2d6f77396bd9"
+  },
+  "token_gate (dev)": {
+   "path": "sim/final_test/diag/freeze_gates/token_gate.json",
+   "sha256": "88f952b093647a2949be728dc835fa6aa86303803b81bbf96b1b91c4808f7070"
+  }
+ },
+ "blocked_run_rule": {
+  "classes": {
+   "exec_blocked_state": "infra_exec",
+   "exec_crash": "infra_exec",
+   "missing_exec": "missing",
+   "missing_outcome": "missing",
+   "not_executed": "agent",
+   "ok": "ok",
+   "plan_ceiling": "budget",
+   "plan_infra": "infra_planner",
+   "plan_rejected": "agent"
+  },
+  "infra_flag_rate": 0.05,
+  "sha256": "a8f15ee9fa445d10ec4406be6240c5ba531df0c60b40c5d335db1fcc0c083bf0",
+  "spec": {
+   "agent": "everything after the first plan step started: wrong plan, refusal, invalid plan, step failures, the 900 s episode wall cap, the 3000 primitive cap",
+   "flag": "an arm with more than 5 % infra cells in the scored run, or a contrast whose primary and sensitivity wordings differ, is marked 'infrastructure-sensitive' in the report",
+   "g_iso": "a blocked run is never a G-iso pass (a pass needs every presentation measured)",
+   "hang": "the 60 s detector hang guard (exit 75) kills the process; the interrupted attempt is repeated without using one of the 3 attempts; a unit that hangs on 3 successive launches is declared a terminal crash by Arash with a ledger note (it then counts as an infra_exec failure)",
+   "infra": "a run that never reached the agent's plan through no fault of the plan: restored world differs from Phase A (blocked_state), simulator crash or hang (the hang guard kills it), planner transport failure after 3 transport retries",
+   "precedence": "one cell gets one class, first match wins: (1) INVALID episode (honesty counter) -> section 13, not a failure class; (2) planner transport failure after the retries -> infra_planner; (3) a plan the validator rejected (no JSON, schema, unknown action or type, refusal, truncation) -> agent, nothing executed; (4) restored world not equal to Phase A, simulator crash or hang at ANY time, including after the first step (the run is discarded and re-run from a fresh restore) -> infra_exec once the 3 attempts are used; (5) step failures, the 900 s wall cap, the 3000 primitive cap -> agent (the episode ends with its own result)",
+   "retries": "execution: attempts 0, 1, 2, each from a fresh restore; planner: transport retries 3, then re-queued in up to 2 later sessions",
+   "scoring": "an infra run that is still missing after the retries counts as failure (SR 0) in the primary analysis and stays in every denominator (section 13)",
+   "sensitivity": "reported next to every contrast: the presentations where EITHER arm of the contrast has an infra_planner or infra_exec scored cell are dropped from BOTH arms",
+   "version": "ftm-blocked-1"
+  }
+ },
+ "c11_audit": {
+  "binding": {
+   "audit_script": "f955d1e3144ed6910f1aeed4ff3d9b07c6d07b7ff16c33a19ef591df7d509fe4",
+   "capture": "9c80d71765414b696d930b5f3e78640b9824d55cc1fc8604d2fa7676bd071fe4",
+   "dataset": "7df9a9251d0d3b9d0b94f698ae2da35c89c464fa5e2dba235abf4b4d6cb13790",
+   "forbidden_set_sha": "b3d40bb80557de6989e08479647148336c3d618197b7212497f522de89ba09f5",
+   "inclusion_manifest_a26": "3f7f3dfb6a34cc6f2ec0a3c8c268e5de7740ef5f41ed943ee922e773278e397e",
+   "n_forbidden_ids": 180,
+   "n_gold_goals": 172,
+   "n_gold_plans": 99,
+   "n_reserved": 29,
+   "plan": "f352c5c564b9ab6078b8c6f51004f92c91684e078407d3e6525ecbbfdbfdcaca",
+   "prereg": "031349dd22eacc35ec75c25f413f81f86ab42a2ab3ad99342d1f818334b2ce91",
+   "reserved_sha": "a183a792c099d34d791738a2ef06144b579e91bf4fbc1baf16e11b292a29cb46",
+   "scanner_code": {
+    "capture.py": "4378ee70e49c882da438f6cac687f53215ad588362ac7cd87aa502c376bb4d90",
+    "runner.py": "11cfa2541ce3030a3bb2fa0b9553723a274f8b1b831e89e3b3e09389165770df",
+    "treatment.py": "ed311a5b285525fad51c2ccb795dc359c8c397f49a816e446df701c2fe60312f"
+   },
+   "snapshots": {
+    "k1": "37f400a319bc0b5c847531ac61b380dc765f82ee32fd03a869346a863cf47974",
+    "k10": "583fddb6c22aec0de258770f9f4cda72c0f4802151aef5acf00e90e9339d9611",
+    "k3": "82c5ef9788938cd83d8dfa98e0aafeacdca1317ec38e4c895523577e06ec574c",
+    "k5": "27a551b7400032c3c974e42af1bff8893053f90ca6fbb137e10ec4e08649ae23"
+   },
+   "split_manifest_self": "09c7da232244c4fbec20ff98b47a1a459efff1308f29481aa09961a621e2794f",
+   "treatment_practice_v2": "7a2ee211b85cc534d7677291fce80b04e92cd24a860f1ddd7665185b3a03b67d",
+   "treatment_rehearsal_v3": "9b26a99f8fc931510ddbc5eb067907dd238331a417df724fba5c8ab8b235d364",
+   "treatment_test_v1": "7a2ee211b85cc534d7677291fce80b04e92cd24a860f1ddd7665185b3a03b67d"
+  },
+  "ok": true,
+  "path": "sim/final_test/diag/c11/c11_audit.json",
+  "scope": "C11 on the dev captures + stores; C11 on the acceptance captures is acceptance's criterion (registration c11_on_acceptance)",
+  "sha256": "ab3c01e6a251d12e3a8be5d465b2716376a0e4a33e01c6bc0f0273b590068902"
+ },
+ "caps": {
+  "ep_prim_cap": 3000,
+  "episode_wall_s": 900,
+  "max_steps": 12,
+  "retries_per_step": 3
+ },
+ "code": {
+  "sim/agent_llm.py": "a108a91a1d0a905a33d348c2765d1e60b967155627880c3aaf332a6c0b01bd81",
+  "sim/agentic_rag.py": "09e7ecb8250126ae0028c60dd7191062bbc0d7546570376451247b1d742fa23d",
+  "sim/eval.py": "4b3fe3415bfc90f03000a155d7f6d5426781250ed6f9180acd8fe52ce161940d",
+  "sim/feedback.py": "0c09ae0bc2858d914009085f477f83d692f41a69db41ba2237ecfa4d60f628a2",
+  "sim/final_test/acceptance_v2/acc_attempt2.py": "ea854799e76036da1aaaff210296363f0c53de350643c6aa2cbdcc707956b06c",
+  "sim/final_test/acceptance_v2/acc_runner.py": "4fdf2f491636d307397b0f3a5143ee5de2332ae13605f6cd5b02ba861b5b2c9d",
+  "sim/final_test/acceptance_v2/register_a25.py": "db23a7ceec1062edbf3ce56577fe45278c7e3bc07cf6d164d44033ad1361dda0",
+  "sim/final_test/acceptance_v2/validate_live.py": "91b742d64017d08ded418fb13a278d92958d0dd7faa0d8dd67fd9f4929ed5bfa",
+  "sim/final_test/acceptance_v2/validate_reserved.py": "ac5b2dbb437e5f2450c7a4bad72bc45f2d8440435c2d5a258d6baee4088f4e9c",
+  "sim/final_test/c3/real_counter.py": "92bd73fa1ebb953fdd1a2a99d6065bfd71ea9c700fb69483129ff6d2f22ab77a",
+  "sim/final_test/diag/c11/c11_audit.py": "f955d1e3144ed6910f1aeed4ff3d9b07c6d07b7ff16c33a19ef591df7d509fe4",
+  "sim/final_test/matrix/a36.py": "e7fa7fdbf61e1a4384ff36ca25b0edae301882cd36454fd850a900a374a2c7d0",
+  "sim/final_test/matrix/acc_common.py": "7af5b85bee782c5189761edaf50f547c2d34b71f9403061f083f0a96ca99b7b4",
+  "sim/final_test/matrix/analyze.py": "4ae75018b9cc133abf1707b370ed379caeef4612983ead7d25d3b70f64d186d6",
+  "sim/final_test/matrix/capture.py": "4378ee70e49c882da438f6cac687f53215ad588362ac7cd87aa502c376bb4d90",
+  "sim/final_test/matrix/common.py": "89a33c3ea7a4674c3ea185ff18fa2856845ab4f4f2114f6574efcdf3f5c9813a",
+  "sim/final_test/matrix/context_fit.py": "0adcfe01f73e442ba01c0ca13c64f50e49d762b8ecdbdeb0182d6e60f894cec4",
+  "sim/final_test/matrix/energy.py": "d9f57b97730db32f076dc4b4805cfafa50cdc2155361c5d2e2c28fe859e45d89",
+  "sim/final_test/matrix/execute.py": "7f556ea5c199ac29d4b255e4571d4a68a9bced7327ef2c35664e162193faff7e",
+  "sim/final_test/matrix/fg_runner.py": "3088ad5d839e949d03fe6deeb2f85c6dd61029c5b6b272499910be089ef303be",
+  "sim/final_test/matrix/freeze.py": "905c0fe0711e05547f94a5bfd7d8b0416a95428cdc0cc5edb501411084cd8737",
+  "sim/final_test/matrix/freeze_ft2.py": "94251ca6bb10f03f2bd979c5362643cffa5223517f2c7ab8a024febfe4a4c141",
+  "sim/final_test/matrix/fs_block.py": "52aba774c3559a5ee6db4a368c4ffead3f1461d6e64ad7ae73b439eab5edbce9",
+  "sim/final_test/matrix/gate_evidence.py": "8a368da51ada8ec1184ef3601b17685ade3817585fc5d103b09a9a58dea5134b",
+  "sim/final_test/matrix/matrix_run.py": "8fef0bf45c74d2591e1fa9abd5bc34583665dccb3bd52887e27a96a73d11bc4e",
+  "sim/final_test/matrix/monitor.py": "dbfbdc9e75be5ebc4b8505f9c96e3c30197f5f3962303278bd58a42e19764147",
+  "sim/final_test/matrix/obs_health.py": "f99cf9d79d417fef73e6cffd2bbefe50f42edaf193dd1af654280da48ee095ac",
+  "sim/final_test/matrix/plan.py": "36471d9ac9102ac5ae989816670a4cbb37cad50838994e9bf4703c0701dae053",
+  "sim/final_test/matrix/plan_batch.py": "9079ef1aa9df79a37829516e160427b2163635137f448de6834c159e187d506c",
+  "sim/final_test/matrix/planfirst.py": "dbcb7c60a3300a7eebb5a210bb3e2db314d8a00c46953bb750bbf12c2d0af41d",
+  "sim/final_test/matrix/practice_k.py": "c47a2b360cd368ba67ccf703012d8b9bea45f7d1e738b8829110833d6dcb9140",
+  "sim/final_test/matrix/retention_a12.py": "5d81e7fbabfa0a9ff001d228c01239dd8a160b0d8a30c77e3eaf4fe2600263f6",
+  "sim/final_test/matrix/score.py": "78e7ca7f193cd8778608384f13486d8519e5c4a9874d4acccd902288b753745b",
+  "sim/final_test/matrix/throttle.py": "f62576a34f9e772c3630a81da6a27ae9c566a9b0dc0fc5aa4937e01dc685ba6f",
+  "sim/final_test/matrix/treatment.py": "ed311a5b285525fad51c2ccb795dc359c8c397f49a816e446df701c2fe60312f",
+  "sim/final_test/matrix/x_isolation_probe.py": "a254d4b9edbb768995b44798ba167b1c6f0df71533d64f2d82a3e1fcd60ac17c",
+  "sim/final_test/reset_gate.py": "383c0b33cbc20e35e2f808cadb6ccb16c81c362c1c5e84eff57789ee8ddb3875",
+  "sim/final_test_callplan.py": "29d44e64ce14a55749e9a67606c97debe5dc32275e7b9fe1cceb713a63be16f9",
+  "sim/final_test_h1.py": "9f50be07422e44e9ba346dfb1e2c55522466772eb10906db5b11485736733740",
+  "sim/final_test_h1_stats.py": "27954de73ca9a18e4831a180b196d7eb9b96681c2056c9e25af8b0ba1b9e9265",
+  "sim/final_test_power.py": "6f1f32b56c55d4c7c3ed8134d6de66b2d1953095f7d528c2b287f4cbb8b15912",
+  "sim/final_test_power_secondary.py": "3c4ef72881d83e4bea0cc7485aa3b87366edc4a56fcb285534787517b8d4b132",
+  "sim/final_test_split.py": "b4003719bf514df5b39d037f730816a493f20f8b5d71858376cd24a99bba93b3",
+  "sim/gen_dataset.py": "b0bd8e21d1539dcfb66f1f2af462524a270265ad7788a9216384b125a6ebf506",
+  "sim/general_set.py": "e6d40f7ccbdab8941679d022f4bb39488dc6659f5568cdf2f1cdcb068ca0443e",
+  "sim/goal_schema.py": "0ca5c46b52e7e869871bed936ef54fe7c16dbbaefeea4f45151c279181e12220",
+  "sim/honest.py": "a3b76525d80509b8e7388cdd7a5213dd4e9d11f5116ca60f5da079b8c65db8a2",
+  "sim/honest_console.py": "ffd72d8711dea69110087dbd50c6729eab29b35c80ac5e6a6ead8d79d422c38e",
+  "sim/honest_map.py": "aeafa01dc86435744b0e77ed85de6a44a7ce1827c1557dbf3e2bc3a6155be5db",
+  "sim/honest_skills.py": "ea860610f11ace941fde71dde449efa5c636719586a6a81b8c51e5ff418ab5a8",
+  "sim/improve.py": "5605af0d7792b7f51040e95e70710e7de5cd7dda7088284d18bf666b701faa4c",
+  "sim/kitchen_briefing.py": "c75447d236f5ff69807da7f6897d4a6104eb563f2730aaf5b75b6fb068ea5c9f",
+  "sim/knowledge.py": "e746313d194a09122fe412eb6d46a4105a4e7a20b63fcd957b5c916433910315",
+  "sim/levels.py": "06bf7191183a37441783794436d3c02393da1646413b349e00a14c96275cec95",
+  "sim/llm.py": "9262391eff4058988d37809934c809520b83492730a1428a09bd8f9befde19f1",
+  "sim/ltm.py": "f4387f16caa3adb63ef778fe8698be437e30b8e31ace035ea11cec4c324c9c21",
+  "sim/ltm_adapter.py": "abe3545b06b2f4ed1e949986e157229916f7ab9c6efd445120dfe8d2a8aea6d2",
+  "sim/ltm_concepts.py": "bf8bb279dccbba7898bc524c6a3abfeb86a87c026decaf938964e16099793a98",
+  "sim/ltm_consolidate.py": "d385f07867428ce7ceaac8e0e64614e89d2af111e09c8c2615b8ccdeda903599",
+  "sim/ltm_decay.py": "1d318ac8b89917729c9975293a016bbc8641762ff47b52079f40d67ad6f503a3",
+  "sim/ltm_events.py": "d57e9e7d1f51ca00d0977d036c056bedd9d335909f80f6d459cb9d6244f5bc35",
+  "sim/ltm_examples.py": "509aacc15cba9f4d79d255c21c74b9d3222ad51ac7c44f8608511d78f4270405",
+  "sim/ltm_fragments.py": "c4a59348d5b0846288bf7eced130e9c94a35c4270bd100568c823e7b810a6183",
+  "sim/ltm_habits.py": "e9b2ba9cd45ad868786a62ec55ae38e08098ac745ad2da36bc9726086623294a",
+  "sim/ltm_identity.py": "1ae97d2eb804e1f10685bbd1f11eaa79aa72be4389bf89d685ce1be8bff01c53",
+  "sim/ltm_lessons.py": "59becef96825cf7993b1b2865d4b074832cda8bb99fe215c39b138908f0afcf5",
+  "sim/ltm_package.py": "da29b4a934bc1ff32fa9c26de34617c003e7c245b7558aef4e21057beb64bc76",
+  "sim/ltm_procedural.py": "801e4f9e458dbeac4e68388ac130ff40868f79f73ab864698874f5ecdbe394a4",
+  "sim/ltm_profile.py": "6e001f3df62c5a22097bdaefec54b1e0deb91c3a667706490b45844f54e36a05",
+  "sim/ltm_retrieval.py": "fbee350f094a7eaaa21e54283d143d0ef6a8d25c81d179c1ae19694ec271d0a0",
+  "sim/ltm_retrieve.py": "ca2c397e1206a2775c5af34d19d5e115961947b63a133a39cc3f2ff10708a25e",
+  "sim/ltm_store.py": "d34fd8b31cdbe5af12cc256299c48293aba942c67860ff938afcc176e7df04ab",
+  "sim/ltm_templates.py": "d9b7593cae0d0bafbe498de12326fdd7148133ec710bbb7a511a9d719116a83c",
+  "sim/ltm_wm.py": "ba0c1cec25f12e8a8c8104e3446f182a35c829ac3334cc76cd8d02b651f591dc",
+  "sim/memory.py": "8184f372f1db5f84d2ccbe3ff4172fab2043a843c5634892fad7de168fcccc75",
+  "sim/navmap.py": "d3f56eb92d9545bdb1e4c4bdd1850fbd325f30ddb9ed322ebbaf8de4a04845d8",
+  "sim/objmem.py": "a74e2492d1bfaa15fe68c93ca432c6911bfacb52e2c21ce3e005ef97c581ee2f",
+  "sim/perception.py": "6c13a45dee0d686c7cefbc6be20fdd6a565d37c5ba74ce64bb0c31dbe288333b",
+  "sim/pkg_schema.py": "7df5102cafb9b36f546acadd18bfbfa7dce24e419be965f1db3cda832cc8c6ea",
+  "sim/planners/__init__.py": "e69e2a1e80620c6663776dec089f1706c8053c4530e41781d0181e6195619c52",
+  "sim/planners/anthropic_batch.py": "126e5657483325285f671ac96a5ff7511eef51268e00c3ce2ba2a1ad051eb177",
+  "sim/planners/anthropic_provider.py": "ac91e848138984f3200a279a516afc6730b56d7f1976b070c794b5bc3199fb5d",
+  "sim/planners/base.py": "1b51d1585edba87369781faaf5134b4fdf6a46d9b16344b56875877430a8ddee",
+  "sim/planners/cache.py": "964d6c2e376492631ab976b22d9a7b08e03a6480654cfcff17dd8b18c87b176e",
+  "sim/planners/codex_provider.py": "686995f0a64007a934578aebb8c2f27cceb985aa949ef38e634c12499bda8118",
+  "sim/planners/contract.py": "2334ed82b865b39631d92a6873dd45e66fbffc3c4351b2e691b65eac383e90ce",
+  "sim/planners/keys.py": "524e639494f6f194d7f35ed61a656d573fe82e028a14d71fb4af63e4b0f20035",
+  "sim/planners/ledger.py": "3f7676e75396f25b8f4ab0657f6c3318c95ffaa8099950d52839e501df3cafd4",
+  "sim/planners/ollama_provider.py": "d5d6a7b757e6d8a9cdabd998a143decf09474bfb2a5f05754d333b10b366416c",
+  "sim/planners/openrouter_provider.py": "4a4db8fa4c8a5d76ba50572549fe98ef461d7bc0a6c702db74ecfa9990d8474b",
+  "sim/planners/prices.py": "75198cd2d8b2d015198d805b1694e0c5e871ebfd1e88fe58459d67a466d213f7",
+  "sim/planners/runner.py": "11cfa2541ce3030a3bb2fa0b9553723a274f8b1b831e89e3b3e09389165770df",
+  "sim/planners/summary_v2.py": "ad13424fa3cb93139a015aae54e52dd703720f2543d3014b4db8f5a5274ae3ce",
+  "sim/planners/validator_v2.py": "c281643edd7df8cbafb22fc2063385137f324e77157156b2193665f282b48f44",
+  "sim/rag.py": "6f90ec210eda175fd5cdb2919cef4869a62d45610a52a1506e4a8e46fe26a01b",
+  "sim/scan_plan.py": "a2e36a793392acb77f259edf69f94491f8e03ba6ae703ca7d076bcc5764e2c04",
+  "sim/search.py": "948f32976e87437d2c609cb5f9d57b0004ac8fc8b44e845ed57f05b0cdaa0851",
+  "sim/skills.py": "efde02cc781c6e9193e4ccfc0a1c6363f836e8d754cc679eafdb7ad001b85441",
+  "sim/state_data.py": "15294d0893f2957cd46d0a77a27302129d22df5762dd56ca4fa5b85f6837f47b",
+  "sim/step4_gemma.py": "53209052e697d242ec2cbc9538ce2e157820c70171572112fd5d9f070c0abac0",
+  "sim/step4_refplans.py": "14d08ec0903bc646fa94642080a4ddf8e82ccedab0c0f9af238ea91f70b0cb38",
+  "sim/step5_eval.py": "7d2fbf3bb76b4dc724817457b6132dd3eba6815a3796a7a3a12f80f458a6d278",
+  "sim/step5_live.py": "6ad512c64d22c99f87b47619bd4ee25b13f29401a0442d6e6a628a587d88c416",
+  "sim/thor_actions.py": "f752ed5d6ff51b30a5e6cbe0d9afd51cbadba95d74bef503aee3f3f375702a7a",
+  "sim/trace.py": "471fdf6c4671946f5d6f65483bf152b23ffa82377f274e4d593039c7f2645a68",
+  "sim/type_scope.py": "e81f1f9dd44e02a3ad78d25efb8ea6fc8cddc9efac86f057e417a789b9699676",
+  "sim/vocab.py": "c26ea2ea5c1ec61e5d9a32d5c1f90ca725d90c653798c59bfe041f3c48f29526",
+  "sim/webapp.py": "2a396e0a262d0bd6482f5d5cbe55b680f16fc47773b25a62d76b18d6fba743ae",
+  "sim/yolo_recipe.py": "e7688bebaeb07aca51f023b9be8c66cb450fd2edc6bc8ac1f16ee185729412b5"
+ },
+ "code_entries": [
+  "sim/final_test/matrix/capture.py",
+  "sim/final_test/matrix/plan.py",
+  "sim/final_test/matrix/execute.py",
+  "sim/final_test/matrix/score.py",
+  "sim/final_test/c3/real_counter.py",
+  "sim/final_test/reset_gate.py",
+  "sim/final_test/matrix/common.py",
+  "sim/planners/contract.py",
+  "sim/final_test/matrix/practice_k.py",
+  "sim/final_test/matrix/fs_block.py",
+  "sim/final_test/matrix/matrix_run.py",
+  "sim/final_test/matrix/monitor.py",
+  "sim/final_test/matrix/analyze.py",
+  "sim/final_test/matrix/retention_a12.py",
+  "sim/final_test/matrix/x_isolation_probe.py",
+  "sim/final_test_power.py",
+  "sim/final_test_power_secondary.py",
+  "sim/final_test_callplan.py",
+  "sim/planners/codex_provider.py",
+  "sim/final_test/matrix/freeze.py",
+  "sim/final_test/matrix/freeze_ft2.py",
+  "sim/final_test/matrix/gate_evidence.py",
+  "sim/final_test/matrix/fg_runner.py",
+  "sim/final_test/matrix/a36.py",
+  "sim/final_test/matrix/plan_batch.py",
+  "sim/final_test/matrix/context_fit.py",
+  "sim/final_test/matrix/acc_common.py",
+  "sim/final_test/acceptance_v2/acc_runner.py",
+  "sim/final_test/acceptance_v2/register_a25.py",
+  "sim/final_test/acceptance_v2/validate_live.py",
+  "sim/final_test/acceptance_v2/validate_reserved.py",
+  "sim/final_test/diag/c11/c11_audit.py",
+  "sim/final_test/matrix/planfirst.py",
+  "sim/final_test/matrix/energy.py"
+ ],
+ "codex_cli_version": "codex-cli 0.162.1",
+ "cost_guard": {
+  "sha256": "b20cc2ed6de11450851fe2d17f8f873e55acbc66be95ce727d578d7e6fad90dc",
+  "spec": {
+   "billing_statement": "after W5, and at every pause, Arash compares the ledger total with the provider's own usage page; a gap above 5 % is reported with the results",
+   "cadence": "at block boundaries only, each time 60 more billed Opus cells exist; the cumulative mean AND the recent window must be <= pause_above_usd",
+   "checks": [
+    "cumulative mean over all billed Opus cells",
+    "recent window: mean of the last 60 billed Opus cells"
+   ],
+   "decision_rule": "every pause decision is outcome-blind: only spend, token, error and integrity counters may be used; in test-v1 the note names that evidence (>= 20 characters) and --outcome-blind attests it",
+   "denominator": "number of billed Opus cells (cost_usd > 0); a transport failure that was never billed is not counted",
+   "in_flight": "covers A29 batch execution (chunk holds, request reservations, unresolved results): a transmission or a batch chunk in flight is a ledger reservation / hold at its worst case and counts against both ceilings until settled or released; an absent batch result stays unresolved, never free",
+   "minimum_sample": 60,
+   "not_allowed": "changing a prompt, a model, a budget, the arm roster outside the cut order, or the ceilings after the first call; that is a protocol change = amendment + restart of the phase",
+   "numerator": "sum of cost_usd over every attempt of the cell, including repaired, rejected and infra-failed cells that were billed",
+   "pause_above_usd": 0.08,
+   "projection": "spent (settled + open reservations at their worst case) + remaining cells x running mean per model <= each ceiling (core, total)",
+   "reconciliation": {
+    "abs_usd": 0.05,
+    "rel": 0.02,
+    "rule": "at every boundary the ledger's settled paid total must equal the sum of cost_usd over all plan-journal rows within max(abs, rel x larger total); otherwise pause"
+   },
+   "reference_usd": 0.044,
+   "responses_to_a_pause": {
+    "continue": "--ack-pause NOTE --pause-response continue (nothing else changes)",
+    "cut": "--ack-pause NOTE --pause-response cut AFTER recording the next group of the registered cut order (--cut), blind to outcomes",
+    "stop": "declare the study incomplete (--declare-incomplete); section 13 applies"
+   },
+   "threshold": "explicit (A24.1-C rule, A37 sync prices): pause above 0.080 USD per billed Opus cell; NOT 2 x the 0.044 reference; a heuristic tripwire, not a completion test",
+   "unit": "one billed Opus cell = the first transmission + up to two repair turns + every billed transport attempt; cache replays are not cells",
+   "units": "USD per billed Opus cell",
+   "version": "ftm-guard-4"
+  }
+ },
+ "created": "2026-10-16T16:00:40",
+ "dataset_sha256": "7df9a9251d0d3b9d0b94f698ae2da35c89c464fa5e2dba235abf4b4d6cb13790",
+ "dedup": {
+  "golden_key": "d4f6dcbd3511fed50e4d63992f3dc62a",
+  "golden_ok": true,
+  "sha256": "cdf28673650e691421d81d1a7e8cb77b7caf7843071823e085a00d7c1cc49b69",
+  "spec": {
+   "costs": "planner USD is charged to the arm whose call made the plan; the wall time of a shared execution is split equally among the scored cells that share it; simulator time is otherwise reported as a total",
+   "dependence": "shared outcomes are copies of one realisation, never independent replications: analysis clusters on the 42 families (a unit sits inside one presentation, a presentation inside one item, an item inside one family) and reports the shared share",
+   "fields": [
+    "plan (normalised: action, object, to, arg, order kept)",
+    "pres (item, language, world)",
+    "chooser (prior | ltm)",
+    "snapshot sha (None for a prior chooser)",
+    "restored state (world id + setup sha)",
+    "post-sweep summary sha of the Phase A capture",
+    "caps",
+    "seed policy"
+   ],
+   "sharing": "arms with equal keys share one simulator run; each plan cell keeps its own plan row and is linked to the unit by the exec record's `cells` list and by the score row's `unit`",
+   "version": "ftm-unit-1"
+  }
+ },
+ "detector_weights": {
+  "primary": {
+   "path": "sim/weights/v3/FloorPlan1.yolo26s.pt",
+   "sha256": "4418f63f4b84060c51353bffb574d05e49042e763b36136d870c7e56e8b90f54"
+  },
+  "specialist": {
+   "path": "sim/weights/v3/FloorPlan1.amb26m.pt",
+   "sha256": "b02c5d05c7dcd6860a1f2658873fcc9ec0d5d6ad589ae3de68e512f4b813b356"
+  }
+ },
+ "evidence_sha": {
+  "12.10": "aa9c52f80fdd8b55d146f1ed152aed10474efd04283618d72078c89846e0314f",
+  "12.2": "8af27294ce0a140a8dba0195c9e64ecf5000780e79a39ce1b8f03338056a0214",
+  "12.3": "8fabfe66ea67f05053f6004cb8569f6108316bc9db6cd36690dd0758a4f0b13d",
+  "12.5": "20ccea18fb3f4a9f3bf714f93cb73dd98a05e709d24dbfc87280ffa534cb46ce",
+  "12.7": "0e021255eea3e3b5ebc467709730bc9cfb6775dd851df7244fcc9479ad274088",
+  "G-iso": "0d49f0c03a6c345e8c069913c51bc3a6ba527903878a5f6a53a57e894371faac",
+  "X-iso": "f536e28c242cedef0dbf260c717c6d0b5dbf9b2f42ce2d6d95c6caae33def959",
+  "context": "45789275f35a04284c16bc1b835d9aaa47a1b10d27d1e26d0d377c713a3dde05",
+  "leakage": "566d55f2348513ccf45b4fdcf8d3fad4936b192e23f9e7309d88aaa4cbfeb499",
+  "tokens": "1da8d9ee78706b22439bdad1716e629af9ba89d4ada0cd9e05cbfff7cb54ea2f"
+ },
+ "families_approved_sha256": "5b598e6ee2e32f011a2e438cf0a46633f1a3db24f0c7a850ffb44fa0904e5f82",
+ "fb1_feedback_contract": {
+  "cap_chars": 600,
+  "contract": "fb-1",
+  "disclosure": "fb-1 repair-feedback contract (FREEZE-GATES step 2; Astra FREEZE-GATES Q1), disclosed next to the treatment id (C6 / A24.1-T)",
+  "ok": true,
+  "omit_marker": "- (feedback cut: {n} more characters not shown)",
+  "reasons": [],
+  "runner_sha256": "11cfa2541ce3030a3bb2fa0b9553723a274f8b1b831e89e3b3e09389165770df",
+  "tokens_per_char": {
+   "anthropic": 2.0,
+   "codex": 2.0,
+   "gemma": 1.0
+  },
+  "vectors": {
+   "lines": "38ac764ca0001dc21046ac0a7e3b3a9c3408234c2886b09a88859d64cec74194",
+   "long": "6f7704581b3d90273330f944569fe40fe4421381cb8c8d86f1e7816bcf36ed95",
+   "persian": "11e6288c498671a20d009e7b29b4683f71beadeb7af70f760cac55b6014f1abc"
+  }
+ },
+ "final_projection_sha256": "06e04e3f4b9620b0fbc9b34dd46cfdc37da94820bb72a2855f86184af881d302",
+ "freeze_profile": "ft-v2",
+ "gates": {
+  "12.1": {
+   "evidence": {
+    "dataset_matches_split": true,
+    "missing_entries": [],
+    "n_code_files": 109,
+    "parse_errors": [],
+    "pins_failing": [],
+    "refreeze_exception_reasons": [],
+    "required_pins": {
+     "sim/final_test/matrix/capture.py": "9ae7036c",
+     "sim/final_test/matrix/practice_k.py": "c47a2b36",
+     "sim/planners/runner.py": "11cfa254"
+    },
+    "treatment_test_v1_equals_acceptance": true,
+    "unhashed": []
+   },
+   "pass": true,
+   "status": "PASS"
+  },
+  "12.10": {
+   "evidence": {
+    "created": "2026-10-16T15:48:01",
+    "file_status": "PASS",
+    "final_identity": null,
+    "owed": null,
+    "reason": null,
+    "sha": "aa9c52f80fdd8b55d146f1ed152aed10474efd04283618d72078c89846e0314f",
+    "source": "practice-v2 journal + rehearsal-v3 capture + regex scan of sim/step5/live and _b1_gates"
+   },
+   "pass": true,
+   "status": "PASS"
+  },
+  "12.11": {
+   "evidence": {
+    "contract_version": "ft-v2",
+    "effective_contracts": {
+     "acceptance-v2": {
+      "system_sha": "0dedee0231456e8c8610823eac455babe4a0d1bebfa6cc18c558c5c21a6d6932",
+      "types_sha": "4ab4b63e6ec0632429b854a04a964e6f8407fd79975776a302cf6da55be1fbb9",
+      "version": "ft-v2"
+     },
+     "test-v1": {
+      "system_sha": "0dedee0231456e8c8610823eac455babe4a0d1bebfa6cc18c558c5c21a6d6932",
+      "types_sha": "4ab4b63e6ec0632429b854a04a964e6f8407fd79975776a302cf6da55be1fbb9",
+      "version": "ft-v2"
+     }
+    },
+    "one_configuration": true,
+    "redeclared_in": [],
+    "render_callers": {
+     "sim/final_test/acceptance_v2/acc_runner.py": [
+      2311,
+      2267
+     ],
+     "sim/final_test/diag/c11/c11_audit.py": [
+      276,
+      251
+     ],
+     "sim/final_test/diag/freeze_gates/cost_projection.py": [
+      53
+     ],
+     "sim/final_test/matrix/context_fit.py": [
+      348
+     ],
+     "sim/final_test/matrix/plan.py": [
+      656,
+      247,
+      584,
+      651
+     ]
+    },
+    "render_messages_defined_in": [
+     "sim/final_test/matrix/plan.py"
+    ],
+    "reorder_within_called_in": [],
+    "rule": "one renderer: plan.render_messages over planners.contract (the block headers live there only), called only from the registered modules (AST); every ft-v2 namespace builds the same effective contract; the memory reranker reorder_within is not on the ft-v2 delivery path",
+    "stray_render_callers": []
+   },
+   "pass": true,
+   "status": "PASS"
+  },
+  "12.12": {
+   "evidence": {
+    "detector_n": 49,
+    "detector_types_json_sha": "5c9fb5d5a564322ba08c5f2040904b6a037d5b4c7495e9af353cb1133d9f6199",
+    "dev_capture_rows": 56,
+    "dev_plan_rows": 132,
+    "ordered_types_sha": "db08b02f3e9c19dea053ba6211f3a58182bdd9b242f53c1cc8981521ca379bd1",
+    "reasons": [],
+    "registered": {
+     "kitchen": "FloorPlan1",
+     "method": "sorted(set(YOLO(weights).names.values())) (write_detector_types.py) -> common.sha256_json(list)",
+     "n": 49,
+     "ordered_sha": "db08b02f3e9c19dea053ba6211f3a58182bdd9b242f53c1cc8981521ca379bd1",
+     "registered_in": "docs/final-test/freeze.json 068814ab gate 12.12 types_sha; treatment identity 7a2ee211 weights file sha",
+     "weights": "sim/weights/v3/FloorPlan1.yolo26s.pt",
+     "weights_sha": "4418f63f4b84060c51353bffb574d05e49042e763b36136d870c7e56e8b90f54"
+    },
+    "shown_n": 48,
+    "texts_checked": 246,
+    "weights_sha": "4418f63f4b84060c51353bffb574d05e49042e763b36136d870c7e56e8b90f54"
+   },
+   "pass": true,
+   "status": "PASS"
+  },
+  "12.13": {
+   "evidence": {
+    "acceptance_v2": {
+     "attempt_ceiling": 8.0,
+     "items": "acceptance_roster",
+     "study_guard": true,
+     "total": 16.0,
+     "treatment": "ft-v2"
+    },
+    "cache_started_empty_under": "freeze.508a0b405cb3e540.json",
+    "ceilings": {
+     "core": 60.0,
+     "total": 100.0
+    },
+    "namespaces": [
+     "acceptance-v2",
+     "acceptance-v2-a2",
+     "freeze-gates-ft2",
+     "practice-v1",
+     "practice-v2",
+     "rehearsal-v1",
+     "rehearsal-v2",
+     "rehearsal-v3",
+     "test-v1"
+    ],
+    "test_cache_files": 1832
+   },
+   "pass": true,
+   "status": "PASS"
+  },
+  "12.2": {
+   "evidence": {
+    "created": "2026-10-16T15:48:00",
+    "file_status": "PASS",
+    "final_identity": null,
+    "owed": null,
+    "reason": null,
+    "sha": "8af27294ce0a140a8dba0195c9e64ecf5000780e79a39ce1b8f03338056a0214",
+    "source": "rehearsal-v3 capture (run 1) vs split_manifest dev_pilot + the registered relocation / repeat subsets"
+   },
+   "pass": true,
+   "status": "PASS"
+  },
+  "12.3": {
+   "evidence": {
+    "created": "2026-10-16T15:48:00",
+    "file_status": "PASS",
+    "final_identity": null,
+    "owed": null,
+    "reason": null,
+    "sha": "8fabfe66ea67f05053f6004cb8569f6108316bc9db6cd36690dd0758a4f0b13d",
+    "source": "rehearsal-v3 capture audit + practice-v2 practice audit + rehearsal-v3 G-iso executions, each row bound to its identity"
+   },
+   "pass": true,
+   "status": "PASS"
+  },
+  "12.4": {
+   "evidence": {
+    "ceilings": {
+     "dated": "2026-10-11",
+     "justification": "A14a (prereg s16): design limits fixed before calibration; grid 0.25 m, ID_SAME_D 0.25 m, VIEW_MOVE 0.20 m, VIEW_PITCH 15 deg; pilot settle 0.44 m would fail",
+     "pos_m": 0.1,
+     "prereg_sha256": "df4d3852002a7beb54eeef6763bfe311e9fc0a2f411997dc849f9d375a5ff689",
+     "rot_deg": 15.0,
+     "section_sha256": "1d0225745423f74f3a9ebf78bd561204a40f91ff2c00002b10e9d235dbb2aa95"
+    },
+    "sha": "2ffeca272961649ab232d9db25d89bf031f342a804765b13e34ca11dfdfdcd79",
+    "status": "calibrated",
+    "tau_pos_m": 0.05,
+    "tau_rot_deg": 5.0,
+    "validation": {
+     "failures": [],
+     "ok": true,
+     "pairs": 24,
+     "pairs_file_sha256": "22ffa1a862057caa65a13c7f977594921d6455a526d077023860703952ef8cf5",
+     "pass": 24,
+     "summary_other_rows": {
+      "pairs_affected": 4,
+      "pairs_by_type": {
+       "Cabinet": 2,
+       "Drawer": 2,
+       "Faucet": 2,
+       "Floor": 1
+      },
+      "rows_differing": 16
+     }
+    }
+   },
+   "pass": true,
+   "status": "PASS"
+  },
+  "12.5": {
+   "evidence": {
+    "created": "2026-10-16T15:48:00",
+    "file_status": "PASS",
+    "final_identity": null,
+    "owed": null,
+    "reason": null,
+    "sha": "20ccea18fb3f4a9f3bf714f93cb73dd98a05e709d24dbfc87280ffa534cb46ce",
+    "source": "freeze-gates-ft2 score.jsonl (P0, E0) + exec identity + a26_12_5_registration.json + its event + sim/step4/refplans_honest.jsonl"
+   },
+   "pass": true,
+   "status": "PASS"
+  },
+  "12.6": {
+   "evidence": {
+    "parts": {
+     "G-iso": "PASS",
+     "leakage": "PASS",
+     "snapshot": "PASS"
+    }
+   },
+   "pass": true,
+   "status": "PASS"
+  },
+  "12.7": {
+   "evidence": {
+    "created": "2026-10-16T15:48:01",
+    "file_status": "PASS",
+    "final_identity": null,
+    "owed": null,
+    "reason": null,
+    "sha": "0e021255eea3e3b5ebc467709730bc9cfb6775dd851df7244fcc9479ad274088",
+    "source": "ft-v2 namespace ledgers + common.cost_guard dry run + acc_common study-wide check / fake over-cap (temporary ledger)"
+   },
+   "pass": true,
+   "status": "PASS"
+  },
+  "12.8": {
+   "evidence": {
+    "reasons": [],
+    "sha": "5b598e6ee2e32f011a2e438cf0a46633f1a3db24f0c7a850ffb44fa0904e5f82"
+   },
+   "pass": true,
+   "status": "PASS"
+  },
+  "12.9": {
+   "evidence": {
+    "digest": "b37049369adfe3d2b653af0ab301a062ca5cbe96ace6aa0d3f2559ee9b563fc2",
+    "error": null,
+    "expected_prefix": "b37049369adf",
+    "model": "gemma4:e2b-it-q4_K_M",
+    "parent_model": "gemma4-validation-20260929:e2b-imatrix-attention-q6-q8-draft2",
+    "version": "0.32.15"
+   },
+   "pass": true,
+   "status": "PASS"
+  },
+  "A12": {
+   "evidence": {
+    "basis": {
+     "astra": "C4 Q6: A12 superseded / not applicable, no manufactured coverage pass",
+     "capture_audit": [
+      "not applicable: superseded by the A24 package (no coverage pass is claimed)"
+     ],
+     "prereg_A24_item_1": "this replaces A16's 800-token B for the +M arms",
+     "prereg_line_sha": "58bdd9f6c6fb138871875da4f9c5e15141798f1ed33c9145ade98303b137083a"
+    },
+    "rule": "F4: recorded as NOT_APPLICABLE by the registered text, never passed silently; the ft-v2 budget is the tokens gate"
+   },
+   "pass": true,
+   "status": "NOT_APPLICABLE"
+  },
+  "A14": {
+   "evidence": {
+    "ceilings": {
+     "dated": "2026-10-11",
+     "justification": "A14a (prereg s16): design limits fixed before calibration; grid 0.25 m, ID_SAME_D 0.25 m, VIEW_MOVE 0.20 m, VIEW_PITCH 15 deg; pilot settle 0.44 m would fail",
+     "pos_m": 0.1,
+     "prereg_sha256": "df4d3852002a7beb54eeef6763bfe311e9fc0a2f411997dc849f9d375a5ff689",
+     "rot_deg": 15.0,
+     "section_sha256": "1d0225745423f74f3a9ebf78bd561204a40f91ff2c00002b10e9d235dbb2aa95"
+    },
+    "sha": "2ffeca272961649ab232d9db25d89bf031f342a804765b13e34ca11dfdfdcd79",
+    "status": "calibrated",
+    "tau_pos_m": 0.05,
+    "tau_rot_deg": 5.0,
+    "validation": {
+     "failures": [],
+     "ok": true,
+     "pairs": 24,
+     "pairs_file_sha256": "22ffa1a862057caa65a13c7f977594921d6455a526d077023860703952ef8cf5",
+     "pass": 24,
+     "summary_other_rows": {
+      "pairs_affected": 4,
+      "pairs_by_type": {
+       "Cabinet": 2,
+       "Drawer": 2,
+       "Faucet": 2,
+       "Floor": 1
+      },
+      "rows_differing": 16
+     }
+    }
+   },
+   "pass": true,
+   "status": "PASS"
+  },
+  "G-iso": {
+   "evidence": {
+    "created": "2026-10-16T15:48:01",
+    "file_status": "PASS",
+    "final_identity": {
+     "namespace": "freeze-gates-ft2",
+     "namespaces_with_final_identity_captures": [
+      "acceptance-v2"
+     ],
+     "owed": null,
+     "reasons": [],
+     "report": {
+      "blocked": [],
+      "control_noise": [],
+      "diff": [],
+      "executions": {
+       "all_real": true,
+       "dedup": false,
+       "executor_calls": 36,
+       "expected": 36,
+       "result_cache": false,
+       "unique_episode_ids": 36
+      },
+      "n": 12,
+      "n_registered": 12,
+      "sha256": "e60c2ef9dbe2d6f45253597a3a27dfe4e20fe06c3e0303e5589b0f2d0a445091",
+      "status": "pass",
+      "treatment_id": "7a2ee211b85cc534d7677291fce80b04e92cd24a860f1ddd7665185b3a03b67d"
+     },
+     "required_identity": "7a2ee211b85cc534d7677291fce80b04e92cd24a860f1ddd7665185b3a03b67d",
+     "status": "PASS"
+    },
+    "owed": null,
+    "reason": null,
+    "sha": "0d49f0c03a6c345e8c069913c51bc3a6ba527903878a5f6a53a57e894371faac",
+    "source": "freeze-gates-ft2 g_iso.json under the final identity (+ the rehearsal-v3 dev report)"
+   },
+   "pass": true,
+   "status": "PASS"
+  },
+  "X-iso": {
+   "evidence": {
+    "created": "2026-10-16T15:48:02",
+    "file_status": "PASS",
+    "final_identity": null,
+    "owed": null,
+    "reason": null,
+    "sha": "f536e28c242cedef0dbf260c717c6d0b5dbf9b2f42ce2d6d95c6caae33def959",
+    "source": "x_isolation.json + codex --version now + the current provider flag set"
+   },
+   "pass": true,
+   "status": "PASS"
+  },
+  "a24_2_cost": {
+   "evidence": {
+    "energy_method": {
+     "accuracy": "approximate: a mean of about 10 readings per second times the time; no calibration, no coverage or gap checks; the readings are the driver's own power figure, not an external meter",
+     "code": "sim/final_test/matrix/energy.py, installed for one launch (energy.measuring) on plan.Plan._call_cell by matrix_run.py (plan phase) and planfirst.py; mandatory in test-v1 (planning is refused when nvidia-smi cannot be read). plan.py is not edited",
+     "decision": "Arash, 2026-10-14 (docs/final-test/progress.md 'ARASH DECISION: simplify the energy method (C5)'): measure the GPU's average power draw with nvidia-smi during Gemma planning, multiply by the planning time, price it at 0.20 USD/kWh; drop the coverage / gap / backwards-clock checks; disclose it plainly as a simple, approximate method",
+     "disclosure": "Planning energy is a simple, approximate figure: the GPU's average power draw reported by nvidia-smi (about 10 readings per second) during each Gemma planning call, multiplied by the planning time and priced at 0.20 USD/kWh. Only the GPU is counted (CPU and the rest of the laptop are not), so it understates total energy; idle power is included. The 10 practice rows that ran before the meter existed are estimated from the measured rate and flagged.",
+     "evidence": "docs/final-test/energy/c5-simple-measurement.json",
+     "id": "c5-simple-1",
+     "join": "analyze.attach_energy: a Gemma plan row takes energy_j_gpu and planning_s from the one energy row whose bound plan line sha256 equals the sha256 of its plan journal line; no such row (or several) -> no energy figure -> UNKNOWN cost",
+     "journal": "energy.jsonl (energy.<pass id>.jsonl for --pass-id runs) beside plan.jsonl: one 'open' row per run (GPU name, idle mean) and one 'cell' row per Gemma cell, bound to its plan journal line by sha256",
+     "method": "a background nvidia-smi (--query-gpu=power.draw.instant -i 0 -lms 100) prints the GPU board power about every 100 ms for the whole plan phase. Per Gemma plan cell: planning_s = the time from just before plan.Plan._call_cell starts to just after it returns (every attempt, repair and parse of that cell); gpu_w_mean = the plain mean of the readings that arrived in that time (none there: the readings within 1 s of it); energy_j_gpu = gpu_w_mean x planning_s; USD = energy_j_gpu / 3,600,000 x usd_per_kwh. A cell with no reading at all has no energy figure (its cost is UNKNOWN)",
+     "not_measured": "GPU only: the CPU, memory, display, storage, fans and power-supply losses are NOT measured (energy_j_cpu is None), so the figure is LOWER than the laptop's total planning energy. The reading is the whole GPU board (every process on it, the idle floor included, never subtracted); the idle floor measured when the meter opens is reported",
+     "unmeasured_estimate": {
+      "definition": "rate_w = (sum of the measured energy_j_gpu) / (sum of their planning_s) over every Gemma plan row of the analysed run with an energy figure from the join (never estimates): the average measured Gemma GPU power per planning second; an eligible practice row's estimate = rate_w x its own planning seconds (planning_s / plan_secs; none -> UNKNOWN), assuming the measured and the earlier calls draw comparable power (same laptop, same model). Only the 10 practice-v2 rows named in the terms (bound to practice.jsonl by sha) are eligible",
+      "disclosure": "reported per arm: measured joules (primary), estimated rows / seconds / joules / USD and the rate (n cells, seconds); markdown labels the estimate",
+      "min_cells": 20,
+      "rate": "measured_rate",
+      "too_few": "fewer than min_cells measured rows (or zero measured seconds) -> no rate -> the practice rows stay UNKNOWN"
+     },
+     "unmeasured_rule": "the 10 practice-v2 rows ran before the meter existed. On Arash's decision of 2026-10-14 ('energy estimate ok') each is ESTIMATED as the run's measured Gemma rate x the row's own planning seconds and flagged 'estimated'; the measured figure stays the primary one and the estimate is disclosed beside it. Every other Gemma row without an energy figure keeps an UNKNOWN cost",
+     "unmeasured_rule_basis": "arash-decision:2026-10-14",
+     "unmeasured_rule_terms": {
+      "claim": "headline",
+      "eligible": [
+       "practice"
+      ],
+      "rate": "measured_rate",
+      "rows": {
+       "journal": "docs/final-test/matrix/practice-v2/practice.jsonl",
+       "journal_sha256": "ab84215a35cc082a770815d630949eeedbf39d8eaf63fe18ce47f9d846d31dda",
+       "row_ids": [
+        "1d0a3b6e730c510041a8606505bd3c798e2eed7b61baed949ad1898d21992f38",
+        "2178d14b21d0856da776b465ce620d6870cd01623b360bf3bfb8043f1a32e372",
+        "2dec82fa8cf40f5de41dc4fdff8223d44f9f9c8ac41fef7ef56a026ea83a9774",
+        "2efa5590a87ebd75a498bd5de13e20b65aabdc971d16ef8ce28504a7364f9ea4",
+        "3cbd72acca05775964fb3ed3ed4850effb89c389372c89245442bc1c9853dcc1",
+        "777e908a5ac8254444bbb53f62bd1a2b65af4445c1fa1f0b10e4f4618c26d608",
+        "7d361af12284598cbe8f72ed6b34312580e157f6de72d3d49f18bcca307753e5",
+        "b7fc99c4a11b691fb864cd082ba69caa2f1c22593ede037e4223148cc44a81f4",
+        "bd9f087c5d208556af0b907ff72ef1f99e31aaae4e745db750c56a25cf31ef66",
+        "dba5a9f8d647f60bac20b7a18a1d38ebbb2b2408095c04e0a3e372e3d907fd62"
+       ]
+      }
+     }
+    },
+    "hardware_price_basis": "amendment:A33",
+    "reasons": []
+   },
+   "pass": true,
+   "status": "PASS"
+  },
+  "acceptance": {
+   "evidence": {
+    "acceptance": "NOT PASS",
+    "file_sha256": "8e32f6f93c54cb655038c53143b2d40503c7124118119ecce230429a98c6ca96",
+    "reasons": [],
+    "waiver": "A36",
+    "waives": "waives only the acceptance-PASS precondition"
+   },
+   "pass": true,
+   "status": "WAIVED"
+  },
+  "context": {
+   "evidence": {
+    "created": "2026-10-16T15:48:02",
+    "file_status": "PASS",
+    "final_identity": {
+     "acceptance_not_pass_disposition": "acceptance NOT PASS overall is waived by A36 (freeze_ft2.acceptance_record); this gate reads only its own criteria (Astra A36-DRAFT-r1 Q4)",
+     "criteria": [
+      "i"
+     ],
+     "evidence_files": {
+      "capture.jsonl": "49fbcd2550dbc8c0b74db6005f5c8c23956766b594cd77dcddf7a76927e994c2",
+      "context_fit.json": "63cb7689ddf590bbceedc1eff0a1f53f905d55d3c16f2514998934fd1d206407"
+     },
+     "namespace": "acceptance-v2-a2",
+     "owed": null,
+     "reasons": [],
+     "required_identity": "7a2ee211b85cc534d7677291fce80b04e92cd24a860f1ddd7665185b3a03b67d",
+     "status": "PASS",
+     "verdict": {
+      "authenticated_by_replay": true,
+      "bundle_manifest_sha": "5a066f2b46e447cbb33a5fb0c5c65611200dc403610364955417e2412f8324f8",
+      "file_sha256": "00f5f2b5c81ba6e88e1ddbbedccd26c52e23448abe62df9029a1a76b0c1d3a10",
+      "self_sha256": "eeda4ef8df839c0e0ecb6d10982b6467d7327075c9c20561114e46c3297f6789",
+      "treatment_id": "7a2ee211b85cc534d7677291fce80b04e92cd24a860f1ddd7665185b3a03b67d",
+      "verdict": "NOT PASS"
+     }
+    },
+    "owed": null,
+    "reason": null,
+    "sha": "45789275f35a04284c16bc1b835d9aaa47a1b10d27d1e26d0d377c713a3dde05",
+    "source": "rehearsal-v3 context_fit.json (context_fit.py --real); FINAL: acceptance-v2-a2 verdict criterion i (authenticated, bundle replay) + its context_fit.json + capture.jsonl"
+   },
+   "pass": true,
+   "status": "PASS"
+  },
+  "fb-1": {
+   "evidence": {
+    "reasons": []
+   },
+   "pass": true,
+   "status": "PASS"
+  },
+  "leakage": {
+   "evidence": {
+    "created": "2026-10-16T15:48:02",
+    "file_status": "PASS",
+    "final_identity": {
+     "acceptance_not_pass_disposition": "acceptance NOT PASS overall is waived by A36 (freeze_ft2.acceptance_record); this gate reads only its own criteria (Astra A36-DRAFT-r1 Q4)",
+     "c11_audit": {
+      "binding_treatment_test_v1": "7a2ee211b85cc534d7677291fce80b04e92cd24a860f1ddd7665185b3a03b67d",
+      "reasons": [],
+      "scope": "c11_audit.py scans the rehearsal-v3 dev capture / plan bytes (its registered scope) with the forbidden set and identity of the final freeze; the acceptance-v2-a2 bytes are covered by criterion c11 (c11_acceptance.json)",
+      "status": "clean"
+     },
+     "criteria": [
+      "c11"
+     ],
+     "evidence_files": {
+      "c11_acceptance.json": "7f78571ddb27eb55b5068182ba7ed4602c456fb4b32868063b796d66626877c4",
+      "capture.jsonl": "49fbcd2550dbc8c0b74db6005f5c8c23956766b594cd77dcddf7a76927e994c2",
+      "plan.jsonl": "ef550c9794137a04da11990b6b92361432759330eac1d08e39727c05a7956578"
+     },
+     "namespace": "acceptance-v2-a2",
+     "owed": null,
+     "reasons": [],
+     "required_identity": "7a2ee211b85cc534d7677291fce80b04e92cd24a860f1ddd7665185b3a03b67d",
+     "status": "PASS",
+     "verdict": {
+      "authenticated_by_replay": true,
+      "bundle_manifest_sha": "5a066f2b46e447cbb33a5fb0c5c65611200dc403610364955417e2412f8324f8",
+      "file_sha256": "00f5f2b5c81ba6e88e1ddbbedccd26c52e23448abe62df9029a1a76b0c1d3a10",
+      "self_sha256": "eeda4ef8df839c0e0ecb6d10982b6467d7327075c9c20561114e46c3297f6789",
+      "treatment_id": "7a2ee211b85cc534d7677291fce80b04e92cd24a860f1ddd7665185b3a03b67d",
+      "verdict": "NOT PASS"
+     }
+    },
+    "owed": null,
+    "reason": null,
+    "sha": "566d55f2348513ccf45b4fdcf8d3fad4936b192e23f9e7309d88aaa4cbfeb499",
+    "source": "sim/final_test/diag/c11/c11_audit.json + snapshots_ft2/o0/k*/practice_manifest.json; FINAL: the same audit bound to the final identity + acceptance-v2-a2 criterion c11 (authenticated verdict) + c11_acceptance.json"
+   },
+   "pass": true,
+   "status": "PASS"
+  },
+  "registration": {
+   "evidence": {
+    "reasons": [],
+    "roster_sealed": true
+   },
+   "pass": true,
+   "status": "PASS"
+  },
+  "signatures": {
+   "evidence": {
+    "rule": "Arash signs A30 / A31 / A32 / A33 / A24.1-C at the freeze; never filled by code",
+    "unsigned": []
+   },
+   "pass": true,
+   "status": "PASS"
+  },
+  "snapshot": {
+   "evidence": {
+    "S_star_state_hash": "15657aed1581aedff751ee347b43f28c4fd93583cc95ece1838b3d9ed7725ac8",
+    "n": 4,
+    "reasons": [],
+    "roles": {
+     "S*": "S* = the deployed memory of every +M arm and the FS-v2 example corpus (prereg 6.3)",
+     "o0k1": "learning curve only (A27, order 0, K = 1)",
+     "o0k10": "S* = the deployed memory of every +M arm and the FS-v2 example corpus (prereg 6.3)",
+     "o0k3": "learning curve only (A27, order 0, K = 3)",
+     "o0k5": "learning curve only (A27, order 0, K = 5)"
+    }
+   },
+   "pass": true,
+   "status": "PASS"
+  },
+  "tokens": {
+   "evidence": {
+    "created": "2026-10-16T15:48:02",
+    "file_status": "PASS",
+    "final_identity": {
+     "acceptance_not_pass_disposition": "acceptance NOT PASS overall is waived by A36 (freeze_ft2.acceptance_record); this gate reads only its own criteria (Astra A36-DRAFT-r1 Q4)",
+     "criteria": [
+      "g",
+      "h"
+     ],
+     "evidence_files": {
+      "capture.jsonl": "49fbcd2550dbc8c0b74db6005f5c8c23956766b594cd77dcddf7a76927e994c2",
+      "g_eligible.json": "3a0bff7278a03ffbc560a9317424467e76291f9c37a602887d9122d28ebbad31"
+     },
+     "namespace": "acceptance-v2-a2",
+     "owed": null,
+     "reasons": [],
+     "required_identity": "7a2ee211b85cc534d7677291fce80b04e92cd24a860f1ddd7665185b3a03b67d",
+     "status": "PASS",
+     "verdict": {
+      "authenticated_by_replay": true,
+      "bundle_manifest_sha": "5a066f2b46e447cbb33a5fb0c5c65611200dc403610364955417e2412f8324f8",
+      "file_sha256": "00f5f2b5c81ba6e88e1ddbbedccd26c52e23448abe62df9029a1a76b0c1d3a10",
+      "self_sha256": "eeda4ef8df839c0e0ecb6d10982b6467d7327075c9c20561114e46c3297f6789",
+      "treatment_id": "7a2ee211b85cc534d7677291fce80b04e92cd24a860f1ddd7665185b3a03b67d",
+      "verdict": "NOT PASS"
+     }
+    },
+    "owed": null,
+    "reason": null,
+    "sha": "1da8d9ee78706b22439bdad1716e629af9ba89d4ada0cd9e05cbfff7cb54ea2f",
+    "source": "rehearsal-v3 capture block counts (header + block, real counter) + diag/freeze_gates/token_gate.json; FINAL: acceptance-v2-a2 verdict criteria g / h (authenticated, bundle replay) + g_eligible.json + capture.jsonl"
+   },
+   "pass": true,
+   "status": "PASS"
+  }
+ },
+ "inclusion_manifest": {
+  "archived": [
+   "g-l1-pickup-knife",
+   "g-l2-drawer-knife",
+   "g-l2-find-pickup-knife",
+   "g-l3-cutlery-sink",
+   "g-l3-set-table",
+   "g-l3-tool-cut"
+  ],
+  "path": "docs/final-test/inclusion_manifest_a26.json",
+  "sha256": "3f7f3dfb6a34cc6f2ec0a3c8c268e5de7740ef5f41ed943ee922e773278e397e"
+ },
+ "lexicon": {
+  "parser_version": "2",
+  "path": "sim/step5/lexicon/concepts.json",
+  "sha256": "9a385d78090c6a28115f401699d02750364ac8188a7d2a7feb303dbae858173d"
+ },
+ "map": {
+  "path": "sim/step4/FloorPlan1.map.json",
+  "sha256": "47c1f1d045b8e1ffe770333455107bdfcabc158d88038cbe62657de7aa87a041"
+ },
+ "map_sha": "47c1f1d045b8e1ffe770333455107bdfcabc158d88038cbe62657de7aa87a041",
+ "master_seed": 20261010,
+ "models": {
+  "codex": [
+   "gpt-6-sol",
+   "gpt-6-astra",
+   "gpt-6-luna",
+   "gpt-5.6-terra"
+  ],
+  "gemma_tag": "gemma4:e2b-it-q4_K_M",
+  "planners": {
+   "gemma": [
+    "ollama",
+    "gemma4:e2b-it-q4_K_M"
+   ],
+   "haiku": [
+    "anthropic",
+    "claude-haiku-4-5-20251001"
+   ],
+   "opus": [
+    "anthropic",
+    "claude-opus-5-5"
+   ],
+   "sonnet": [
+    "anthropic",
+    "claude-sonnet-5-5"
+   ]
+  }
+ },
+ "namespaces": {
+  "acceptance-v2": {
+   "attempt_ceiling": 8.0,
+   "items": "acceptance_roster",
+   "study_guard": true,
+   "total": 16.0,
+   "treatment": "ft-v2"
+  },
+  "acceptance-v2-a2": {
+   "attempt_ceiling": 8.0,
+   "items": "acceptance_roster",
+   "study_guard": true,
+   "total": 8.0,
+   "treatment": "ft-v2"
+  },
+  "freeze-gates-ft2": {
+   "core": 0.0,
+   "items": "dev_pilot",
+   "total": 0.0,
+   "treatment": "ft-v2"
+  },
+  "practice-v1": {
+   "core": 0.0,
+   "items": "practice_pool",
+   "total": 0.0,
+   "treatment": "ft-v1"
+  },
+  "practice-v2": {
+   "core": 0.0,
+   "items": "practice_pool",
+   "total": 0.0,
+   "treatment": "ft-v2"
+  },
+  "rehearsal-v1": {
+   "core": 0.5,
+   "items": "dev_pilot",
+   "total": 1.0,
+   "treatment": "ft-v1"
+  },
+  "rehearsal-v2": {
+   "core": 0.0,
+   "items": "dev_pilot",
+   "total": 0.5,
+   "treatment": "ft-v1"
+  },
+  "rehearsal-v3": {
+   "core": 0.5,
+   "items": "dev_pilot",
+   "total": 1.0,
+   "treatment": "ft-v2"
+  },
+  "test-v1": {
+   "core": 60.0,
+   "items": "test",
+   "total": 100.0,
+   "treatment": "ft-v2"
+  }
+ },
+ "note": "ft-v2 freeze (freeze_ft2.py)",
+ "ollama": {
+  "digest": "b37049369adfe3d2b653af0ab301a062ca5cbe96ace6aa0d3f2559ee9b563fc2",
+  "model": "gemma4:e2b-it-q4_K_M",
+  "parent_model": "gemma4-validation-20260929:e2b-imatrix-attention-q6-q8-draft2",
+  "version": "0.32.15"
+ },
+ "params_sha256": "17a2e08063bb0d3e600b571a013701ec12383da4e0b219607d47081b520bf785",
+ "power_secondary_sha256": "23664d22070b3eb5dc7a846d8c32d92c04a588ad7b42b702155b55c588ecab6a",
+ "practice_equivalence": {
+  "new_treatment_py": "ed311a5b285525fad51c2ccb795dc359c8c397f49a816e446df701c2fe60312f",
+  "ok": true,
+  "old_treatment_py": "89c38dafda2c6474728176af8f90ba4e02fc0d8d2d108e9d540bebe73ed4d848",
+  "path": "sim/final_test/diag/a31/equiv_replay.json",
+  "reasons": [],
+  "sha256": "70ec9a3f9942b13dcaf8730ad8d5d0a5bddbd493d2fbf3f553bb2aef42dc3442",
+  "snapshot_treatment_ids": [
+   "d5831abcbf89e393fd79807dfc674dd1fb54d27b864955f958c6dd86f6a4910f"
+  ],
+  "verdict": "EQUIVALENT: five full replays (attempts 1, 2, 4, 6, 10; byte-identical pre-attempt db) plus a complete equivalence argument for attempts 3, 5, 7, 8, 9 (exhaustive static + example records of the exact prefix; db part by grammar on source and 6 states)"
+ },
+ "prereg_sha256": "031349dd22eacc35ec75c25f413f81f86ab42a2ab3ad99342d1f818334b2ce91",
+ "prompt": {
+  "experience_header_sha": "bca9cd065cc5522631ff548f8ab50c8cbc1cabf05f79344a27aa9b09df1f6290",
+  "ft_v2_texts_sha": "9ab6477a98805606d998ba166130624a66eb42f9c17b8e1ab71c5c13b0892f5d",
+  "package_header_sha": "9ba1662b90019ef9f41cf94f6d070f086927b535a8c605f6d29838d27a1d2d80",
+  "plan_schema_sha": "33f7d945e07ffd5572c7ff2bdbf8970a98aef0d00d752dc6872913d71e2370ca",
+  "system_text_sha": "0dedee0231456e8c8610823eac455babe4a0d1bebfa6cc18c558c5c21a6d6932",
+  "system_v2_template_sha": "6675fc2aeb387c3864e7b6c53344e9e567e038e5db1930d2e1ba0b779361e5f4",
+  "types": {
+   "detector_n": 49,
+   "detector_sha": "db08b02f3e9c19dea053ba6211f3a58182bdd9b242f53c1cc8981521ca379bd1",
+   "excluded": [
+    "Knife"
+   ],
+   "method": "sorted(set(YOLO(primary weights).names.values())) (or detector_types.json for the same weights sha) -> treatment.planner_types = type_scope.filter_types (order kept); rendered joined by ', ' in SYSTEM_V2",
+   "shown_n": 48,
+   "shown_sha": "4ab4b63e6ec0632429b854a04a964e6f8407fd79975776a302cf6da55be1fbb9",
+   "shown_types_sha": "4ab4b63e6ec0632429b854a04a964e6f8407fd79975776a302cf6da55be1fbb9",
+   "type_scope_sha": "e81f1f9dd44e02a3ad78d25efb8ea6fc8cddc9efac86f057e417a789b9699676"
+  },
+  "user_template_sha": "de19d1df7db49a9f6e08ba3e0b795ecdfe6f8d9336134ac1833732ffefc3050f",
+  "version": "ft-v2"
+ },
+ "reloc_seed": 1388635998,
+ "reset_tolerances_sha256": "2ffeca272961649ab232d9db25d89bf031f342a804765b13e34ca11dfdfdcd79",
+ "schema": "final-test.freeze/1",
+ "seed_policy": "none (the honest executor takes no simulator seed; world_seed is a recorded label, always 0)",
+ "sha256": "622004d5190355c9d01d396cbab998d07faacd0dbf3b46663023867d8dee7a48",
+ "signatures": {
+  "A24.1-C": {
+   "signature": {
+    "by": "Arash",
+    "date": "2026-10-14",
+    "said": "I sign A24.1-C"
+   },
+   "signed": true,
+   "source": "signatures.json",
+   "status": "recorded"
+  },
+  "A30": {
+   "signature": {
+    "by": "Arash",
+    "date": "2026-10-15",
+    "said": "I sign A30, A31, A32 and A33."
+   },
+   "signed": true,
+   "source": "signatures.json",
+   "status": "recorded"
+  },
+  "A31": {
+   "signature": {
+    "by": "Arash",
+    "date": "2026-10-15",
+    "said": "I sign A30, A31, A32 and A33."
+   },
+   "signed": true,
+   "source": "signatures.json",
+   "status": "recorded"
+  },
+  "A32": {
+   "signature": {
+    "by": "Arash",
+    "date": "2026-10-15",
+    "said": "I sign A30, A31, A32 and A33."
+   },
+   "signed": true,
+   "source": "signatures.json",
+   "status": "recorded"
+  },
+  "A33": {
+   "signature": {
+    "by": "Arash",
+    "date": "2026-10-15",
+    "said": "I sign A30, A31, A32 and A33."
+   },
+   "signed": true,
+   "source": "signatures.json",
+   "status": "recorded"
+  }
+ },
+ "snapshots": {
+  "S*": {
+   "E_frozen": 10,
+   "dir": "sim/final_test/snapshots_ft2/o0/k10",
+   "dir_sha": "173029111f158a691d2a99c0d0589258b3a791588bb40c893fa92a9cd62df463",
+   "files": {
+    "fragments.json": "a5376f98054a8cd1f158366a0d5e251a3e93d8bf1de8d57359cda58aa73662c7",
+    "ltm.db": "819b1e58d37326e8c7ba20b13995b004acc0bef67f6b89acda07024650cc0038",
+    "manifest.json": "583fddb6c22aec0de258770f9f4cda72c0f4802151aef5acf00e90e9339d9611",
+    "practice_manifest.json": "2b93b0ac4ea7fa61fd431a3e3556a92e7f9b6179ef849f22c10a299daf97d891",
+    "practice_rows.jsonl": "36fbfdbd869829bfc966e8f17c43865f61b10697e1d7c65fb49562601f3b529c"
+   },
+   "integrity": [],
+   "k": 10,
+   "leakage_ok": true,
+   "namespace": "practice-v2",
+   "package_profile": "pkg-1.r6b",
+   "practice_manifest_sha": "636de8e1ff62f287bc5b13314f057567cad54c19a466bc2a33262ed8b67f81d4",
+   "role": "S* = the deployed memory of every +M arm and the FS-v2 example corpus (prereg 6.3)",
+   "rows_sha": "36fbfdbd869829bfc966e8f17c43865f61b10697e1d7c65fb49562601f3b529c",
+   "source": "o0k10",
+   "state_hash": "15657aed1581aedff751ee347b43f28c4fd93583cc95ece1838b3d9ed7725ac8",
+   "treatment": "ft-v2",
+   "treatment_id": "d5831abcbf89e393fd79807dfc674dd1fb54d27b864955f958c6dd86f6a4910f"
+  },
+  "o0k1": {
+   "E_frozen": 1,
+   "dir": "sim/final_test/snapshots_ft2/o0/k1",
+   "dir_sha": "61849aeb306eebe71d616723b7d8b871b6b0b2e5788e01aa178eff6b9f2aa139",
+   "files": {
+    "fragments.json": "a5376f98054a8cd1f158366a0d5e251a3e93d8bf1de8d57359cda58aa73662c7",
+    "ltm.db": "23e18501f9dc5b46f47d664240d5885f8576c8e4fd5c55da2e6e2af109d014b3",
+    "manifest.json": "37f400a319bc0b5c847531ac61b380dc765f82ee32fd03a869346a863cf47974",
+    "practice_manifest.json": "146adc01a58162bed575e94b6af464fee67dba136d89da9283ec8a8a2a017d39",
+    "practice_rows.jsonl": "843dfcb663b606a2d1de8d91ee9e251e3008c7a8f1548462683c5932c205aaea"
+   },
+   "integrity": [],
+   "k": 1,
+   "leakage_ok": true,
+   "namespace": "practice-v2",
+   "package_profile": "pkg-1.r6b",
+   "practice_manifest_sha": "9a1d7b623062ccd434c1c9a4636d69a3786b8712ad70f13ccc2104bfd5cb3a04",
+   "role": "learning curve only (A27, order 0, K = 1)",
+   "rows_sha": "843dfcb663b606a2d1de8d91ee9e251e3008c7a8f1548462683c5932c205aaea",
+   "source": "o0k1",
+   "state_hash": "5382b49174aedbcf98250ff15d0266dc28ffd68190fcb8096ba3bd2eceb57629",
+   "treatment": "ft-v2",
+   "treatment_id": "d5831abcbf89e393fd79807dfc674dd1fb54d27b864955f958c6dd86f6a4910f"
+  },
+  "o0k10": {
+   "E_frozen": 10,
+   "dir": "sim/final_test/snapshots_ft2/o0/k10",
+   "dir_sha": "173029111f158a691d2a99c0d0589258b3a791588bb40c893fa92a9cd62df463",
+   "files": {
+    "fragments.json": "a5376f98054a8cd1f158366a0d5e251a3e93d8bf1de8d57359cda58aa73662c7",
+    "ltm.db": "819b1e58d37326e8c7ba20b13995b004acc0bef67f6b89acda07024650cc0038",
+    "manifest.json": "583fddb6c22aec0de258770f9f4cda72c0f4802151aef5acf00e90e9339d9611",
+    "practice_manifest.json": "2b93b0ac4ea7fa61fd431a3e3556a92e7f9b6179ef849f22c10a299daf97d891",
+    "practice_rows.jsonl": "36fbfdbd869829bfc966e8f17c43865f61b10697e1d7c65fb49562601f3b529c"
+   },
+   "integrity": [],
+   "k": 10,
+   "leakage_ok": true,
+   "namespace": "practice-v2",
+   "package_profile": "pkg-1.r6b",
+   "practice_manifest_sha": "636de8e1ff62f287bc5b13314f057567cad54c19a466bc2a33262ed8b67f81d4",
+   "role": "S* = the deployed memory of every +M arm and the FS-v2 example corpus (prereg 6.3)",
+   "rows_sha": "36fbfdbd869829bfc966e8f17c43865f61b10697e1d7c65fb49562601f3b529c",
+   "source": "o0k10",
+   "state_hash": "15657aed1581aedff751ee347b43f28c4fd93583cc95ece1838b3d9ed7725ac8",
+   "treatment": "ft-v2",
+   "treatment_id": "d5831abcbf89e393fd79807dfc674dd1fb54d27b864955f958c6dd86f6a4910f"
+  },
+  "o0k3": {
+   "E_frozen": 3,
+   "dir": "sim/final_test/snapshots_ft2/o0/k3",
+   "dir_sha": "b80526e0b8657486068fbc84761bf7334a497604dd8c8af55faa1edf790d4b00",
+   "files": {
+    "fragments.json": "a5376f98054a8cd1f158366a0d5e251a3e93d8bf1de8d57359cda58aa73662c7",
+    "ltm.db": "55b4add26016e8a05062d6de08d613d5ff313950f25aef168b1c25082fa0eabb",
+    "manifest.json": "82c5ef9788938cd83d8dfa98e0aafeacdca1317ec38e4c895523577e06ec574c",
+    "practice_manifest.json": "ba86552db5a27c2c39da1a05c51ac99bc29d9566f85b08b60b09daee291b4b96",
+    "practice_rows.jsonl": "a077431138fa1a7e478ebc80dd0bee4364546dd04949c33fe4fdb0fbc85b4b6b"
+   },
+   "integrity": [],
+   "k": 3,
+   "leakage_ok": true,
+   "namespace": "practice-v2",
+   "package_profile": "pkg-1.r6b",
+   "practice_manifest_sha": "c50205cb59dd067a953297b34530729e290439140a156a21c1ff70e012bc6e4e",
+   "role": "learning curve only (A27, order 0, K = 3)",
+   "rows_sha": "a077431138fa1a7e478ebc80dd0bee4364546dd04949c33fe4fdb0fbc85b4b6b",
+   "source": "o0k3",
+   "state_hash": "33380c43c80fa66fe554b3f0365abc568eb712452e89b752bd14856000a66a23",
+   "treatment": "ft-v2",
+   "treatment_id": "d5831abcbf89e393fd79807dfc674dd1fb54d27b864955f958c6dd86f6a4910f"
+  },
+  "o0k5": {
+   "E_frozen": 5,
+   "dir": "sim/final_test/snapshots_ft2/o0/k5",
+   "dir_sha": "c136bcf2996831e969f544ddfb052fd8085e450e4e0c6192d851e6301e45bfc4",
+   "files": {
+    "fragments.json": "a5376f98054a8cd1f158366a0d5e251a3e93d8bf1de8d57359cda58aa73662c7",
+    "ltm.db": "cd506910ba91bbe7cbec7cd209c1a19fc8a0862324e2a5c8a682068bc2c54b52",
+    "manifest.json": "27a551b7400032c3c974e42af1bff8893053f90ca6fbb137e10ec4e08649ae23",
+    "practice_manifest.json": "c92df302ea2909d61eec2478f58e5176f100964209b63eac8322a29bed37baa9",
+    "practice_rows.jsonl": "f9d888a10fbd5be1af208e34d14e62f2810b418f632343cec2c169488ff82bd1"
+   },
+   "integrity": [],
+   "k": 5,
+   "leakage_ok": true,
+   "namespace": "practice-v2",
+   "package_profile": "pkg-1.r6b",
+   "practice_manifest_sha": "941971d457d4af85352336e1cc2cc4e94511de407fe8aa05db3546e943822c95",
+   "role": "learning curve only (A27, order 0, K = 5)",
+   "rows_sha": "f9d888a10fbd5be1af208e34d14e62f2810b418f632343cec2c169488ff82bd1",
+   "source": "o0k5",
+   "state_hash": "c7d99b7a651bb3752b3b40a72448e32f02dd26959e0bc5ee4b09c4e14a6211d4",
+   "treatment": "ft-v2",
+   "treatment_id": "d5831abcbf89e393fd79807dfc674dd1fb54d27b864955f958c6dd86f6a4910f"
+  }
+ },
+ "spec": "ftm-1",
+ "split_sha256": "09c7da232244c4fbec20ff98b47a1a459efff1308f29481aa09961a621e2794f",
+ "status_summary": {
+  "FAIL": [],
+  "NOT_APPLICABLE": [
+   "A12"
+  ],
+  "PASS": [
+   "12.1",
+   "12.10",
+   "12.11",
+   "12.12",
+   "12.13",
+   "12.2",
+   "12.3",
+   "12.4",
+   "12.5",
+   "12.6",
+   "12.7",
+   "12.8",
+   "12.9",
+   "A14",
+   "G-iso",
+   "X-iso",
+   "a24_2_cost",
+   "context",
+   "fb-1",
+   "leakage",
+   "registration",
+   "signatures",
+   "snapshot",
+   "tokens"
+  ],
+  "PENDING": [],
+  "WAIVED": [
+   "acceptance"
+  ]
+ },
+ "succession": {
+  "a36_impl": {
+   "approval": {
+    "authorization_kind": "pre-approval: Arash authorized writing and approving the scoped A36 implementation record before it existed; this entry binds that authorization to the exact bytes written afterwards. It is NOT an inspection of an already-existing digest.",
+    "authorization_preceded_record_creation": true,
+    "authorized_at": "2026-10-16T00:05:00+03:30",
+    "by": "Arash",
+    "date": "2026-10-16",
+    "file": "docs/final-test/amendments/A36.impl.json",
+    "file_sha256": "af8b07a66f0209f3bf1d3396abe53de5ebfe0a4d8062f5f736ea83da2b6a54fb",
+    "prereg_sha256": "031349dd22eacc35ec75c25f413f81f86ab42a2ab3ad99342d1f818334b2ce91",
+    "record_created_at": "2026-10-16T16:00:05",
+    "said": "write and i approve."
+   },
+   "approval_key": "A36-IMPL",
+   "files": {
+    "sim/_acc_attempt2_selftest.py": "fbb49ddd9f52ebe75dfdb9c3baa846387cd46b19314d4a3c3be0a5b9f2def274",
+    "sim/_acc_runner_selftest.py": "a9a962f4442ef00312182948cccb9a85186adb556d1140b8e72dcc26349af198",
+    "sim/_final_matrix_selftest.py": "d6ff2c3ca664dbcabef92fc9c174213c16eb6dbaedc6cda1c9207f996a40440d",
+    "sim/_ftm_a36_selftest.py": "c17d36183dbcd80affae5be6f84b21391bdb1f2771d433be5c138354981685b8",
+    "sim/_ftm_freeze_ft2_selftest.py": "8bebe447d167aaa4f841153e1796ad084e5ecf986130336e5e5df9af48191e34",
+    "sim/_ftm_freeze_gates_selftest.py": "b7e9d6fa2bb7e25255ec7c636c7b6ef9af14c7cd80ed98841b52240d15e1f5b6",
+    "sim/_ftm_treatment_selftest.py": "5be761dd81479abaa543109ede443d15cc4d7c14c7cefec7dec921ae838d2c10",
+    "sim/final_test/matrix/a36.py": "e7fa7fdbf61e1a4384ff36ca25b0edae301882cd36454fd850a900a374a2c7d0",
+    "sim/final_test/matrix/analyze.py": "4ae75018b9cc133abf1707b370ed379caeef4612983ead7d25d3b70f64d186d6",
+    "sim/final_test/matrix/common.py": "89a33c3ea7a4674c3ea185ff18fa2856845ab4f4f2114f6574efcdf3f5c9813a",
+    "sim/final_test/matrix/execute.py": "7f556ea5c199ac29d4b255e4571d4a68a9bced7327ef2c35664e162193faff7e",
+    "sim/final_test/matrix/fg_runner.py": "3088ad5d839e949d03fe6deeb2f85c6dd61029c5b6b272499910be089ef303be",
+    "sim/final_test/matrix/freeze.py": "905c0fe0711e05547f94a5bfd7d8b0416a95428cdc0cc5edb501411084cd8737",
+    "sim/final_test/matrix/freeze_ft2.py": "94251ca6bb10f03f2bd979c5362643cffa5223517f2c7ab8a024febfe4a4c141",
+    "sim/final_test/matrix/gate_evidence.py": "8a368da51ada8ec1184ef3601b17685ade3817585fc5d103b09a9a58dea5134b",
+    "sim/final_test/matrix/score.py": "78e7ca7f193cd8778608384f13486d8519e5c4a9874d4acccd902288b753745b"
+   },
+   "ok": true,
+   "reasons": [],
+   "record": {
+    "file_sha256": "af8b07a66f0209f3bf1d3396abe53de5ebfe0a4d8062f5f736ea83da2b6a54fb",
+    "path": "docs/final-test/amendments/A36.impl.json",
+    "self_sha256": "a63723e9532b4d73ae982b897d401a63dc156fb9a069aff56d9c7ced2cb131c8"
+   }
+  },
+  "ok": true,
+  "predecessor": {
+   "created": "2026-10-12T14:03:13",
+   "freeze_status": "treatment-only-unvalidated",
+   "path": "docs/final-test/freeze_history/freeze.62c800afe922f64e.json",
+   "role": "the historical freeze: the attempt-1 freeze + the A34-A2+A35 amendment freeze (archived by write_ft2 before the ft-v2 freeze replaces it)",
+   "self_sha256": "68069a965eac07cf4cecd4ba5c2732ee1974f2073e2a6e41ba1ae46e776e3fdb",
+   "sha256": "62c800afe922f64efe4fdbc4d4d83a10b43bef5a79e7845883484fb602bade1e"
+  },
+  "reasons": [],
+  "rule": "the ft-v2 freeze succeeds the historical A34-A2 + A35 amendment freeze (preserved in freeze_history, authenticated by sha and by the freeze_json_problems rule); the A34-A2 re-freeze exception extends to the A36 implementation files only with the signed A36 waiver and Arash's A36-IMPL approval of the exact record",
+  "waiver": {
+   "file": "docs/final-test/amendments/A36-DRAFT.md",
+   "file_sha256": "8e32f6f93c54cb655038c53143b2d40503c7124118119ecce230429a98c6ca96",
+   "key": "A36",
+   "signature": {
+    "by": "Arash",
+    "date": "2026-10-15",
+    "file": "docs/final-test/amendments/A36-DRAFT.md",
+    "file_sha256": "8e32f6f93c54cb655038c53143b2d40503c7124118119ecce230429a98c6ca96",
+    "prereg_sha256": "031349dd22eacc35ec75c25f413f81f86ab42a2ab3ad99342d1f818334b2ce91",
+    "said": "sign"
+   }
+  }
+ },
+ "treatment": {
+  "briefing": {
+   "allow_unapproved": false,
+   "hint_table_sha": "86ea2979f97e569ba2ff843e218ea6721d7c71ca4ee8f0dba7e7081c1b57e62b",
+   "n_records": 60,
+   "records_sha": "c763b17bf90a86569396c5310c4a445d8836e740724fb9233a28dca5a0019f78"
+  },
+  "files": {
+   "sim/final_test/matrix/fs_block.py": "52aba774c3559a5ee6db4a368c4ffead3f1461d6e64ad7ae73b439eab5edbce9",
+   "sim/final_test/matrix/treatment.py": "ed311a5b285525fad51c2ccb795dc359c8c397f49a816e446df701c2fe60312f",
+   "sim/goal_schema.py": "0ca5c46b52e7e869871bed936ef54fe7c16dbbaefeea4f45151c279181e12220",
+   "sim/honest.py": "a3b76525d80509b8e7388cdd7a5213dd4e9d11f5116ca60f5da079b8c65db8a2",
+   "sim/honest_map.py": "aeafa01dc86435744b0e77ed85de6a44a7ce1827c1557dbf3e2bc3a6155be5db",
+   "sim/honest_skills.py": "ea860610f11ace941fde71dde449efa5c636719586a6a81b8c51e5ff418ab5a8",
+   "sim/kitchen_briefing.py": "c75447d236f5ff69807da7f6897d4a6104eb563f2730aaf5b75b6fb068ea5c9f",
+   "sim/kitchen_v3/FloorPlan1/state_calib.json": "4546208584e9dfc8fbaf9a5fe08dfdd53a34d70583d89d9dc67e573998c06ce2",
+   "sim/ltm_examples.py": "509aacc15cba9f4d79d255c21c74b9d3222ad51ac7c44f8608511d78f4270405",
+   "sim/ltm_package.py": "da29b4a934bc1ff32fa9c26de34617c003e7c245b7558aef4e21057beb64bc76",
+   "sim/ltm_procedural.py": "801e4f9e458dbeac4e68388ac130ff40868f79f73ab864698874f5ecdbe394a4",
+   "sim/ltm_profile.py": "6e001f3df62c5a22097bdaefec54b1e0deb91c3a667706490b45844f54e36a05",
+   "sim/ltm_templates.py": "d9b7593cae0d0bafbe498de12326fdd7148133ec710bbb7a511a9d719116a83c",
+   "sim/navmap.py": "d3f56eb92d9545bdb1e4c4bdd1850fbd325f30ddb9ed322ebbaf8de4a04845d8",
+   "sim/objmem.py": "a74e2492d1bfaa15fe68c93ca432c6911bfacb52e2c21ce3e005ef97c581ee2f",
+   "sim/perception.py": "6c13a45dee0d686c7cefbc6be20fdd6a565d37c5ba74ce64bb0c31dbe288333b",
+   "sim/planners/anthropic_batch.py": "126e5657483325285f671ac96a5ff7511eef51268e00c3ce2ba2a1ad051eb177",
+   "sim/planners/anthropic_provider.py": "ac91e848138984f3200a279a516afc6730b56d7f1976b070c794b5bc3199fb5d",
+   "sim/planners/base.py": "1b51d1585edba87369781faaf5134b4fdf6a46d9b16344b56875877430a8ddee",
+   "sim/planners/codex_provider.py": "686995f0a64007a934578aebb8c2f27cceb985aa949ef38e634c12499bda8118",
+   "sim/planners/contract.py": "2334ed82b865b39631d92a6873dd45e66fbffc3c4351b2e691b65eac383e90ce",
+   "sim/planners/exec_contract.json": "93047cc3252a02b6921ae426a9c5e8a01e3532ac28a6208f724a918675d5b9c6",
+   "sim/planners/ft_v2.json": "d80e2066c20061ee7f13f64bfcfa22c7a1ea52c24a2bed42b7609456ed919795",
+   "sim/planners/ollama_provider.py": "d5d6a7b757e6d8a9cdabd998a143decf09474bfb2a5f05754d333b10b366416c",
+   "sim/planners/summary_v2.py": "ad13424fa3cb93139a015aae54e52dd703720f2543d3014b4db8f5a5274ae3ce",
+   "sim/planners/validator_v2.py": "c281643edd7df8cbafb22fc2063385137f324e77157156b2193665f282b48f44",
+   "sim/search.py": "948f32976e87437d2c609cb5f9d57b0004ac8fc8b44e845ed57f05b0cdaa0851",
+   "sim/step4_gemma.py": "53209052e697d242ec2cbc9538ce2e157820c70171572112fd5d9f070c0abac0",
+   "sim/step5/briefing_conventions.json": "9076842929b8807f5b2d004d2bc4dac5306760036f2b834b0ca1d13f472aded5",
+   "sim/step5/homeowner_inventory.json": "6fa1ff25e60179e349c7e784242acd9e781d100c7a2f0c9e5aeeb3e56814a053",
+   "sim/step5/l3_templates.json": "f02de51a92f57f49c481211d585a66bf399cab2b5ce3f5f7d28685268cdbfbc7",
+   "sim/step5/lexicon/concepts.json": "9a385d78090c6a28115f401699d02750364ac8188a7d2a7feb303dbae858173d",
+   "sim/step5/lexicon/need_cues_r6b.json": "3a60b932472237399bcdb10a82ed0881fe1557951414f9dadf1b5533454b2a84",
+   "sim/step5/package_params.json": "9a07f2d2023dd39fd9775f7d2ebaf51141a69bab39574036f4fd2d6f77396bd9",
+   "sim/step5/procedures_kb.json": "bcc8cba7b7962612b4bf8aed7cf8329b35be9382ddbbb9575543b6178941cb69",
+   "sim/step5/uses_table.json": "af04fa419b6d44b084566893cf7ef35aca284a6acafe424e40bdf915d7e9dc32",
+   "sim/step5_live.py": "6ad512c64d22c99f87b47619bd4ee25b13f29401a0442d6e6a628a587d88c416",
+   "sim/type_scope.py": "e81f1f9dd44e02a3ad78d25efb8ea6fc8cddc9efac86f057e417a789b9699676",
+   "sim/weights/v3/FloorPlan1.amb26m.pt": "b02c5d05c7dcd6860a1f2658873fcc9ec0d5d6ad589ae3de68e512f4b813b356",
+   "sim/weights/v3/FloorPlan1.state_broken.pt": "39c02b0a67f760803b09808cff1962c04bda22804f8e95b016e1bb6c7850ef8d",
+   "sim/weights/v3/FloorPlan1.state_cooked.pt": "7eb96a17ac936e98a24948bd6db2c6c59946de74142486243a9c5063b9c25fd2",
+   "sim/weights/v3/FloorPlan1.state_dirty.pt": "c802083a001646aabfb213b95d0df8a43e869d89a40a6fe28fef374df0e66f38",
+   "sim/weights/v3/FloorPlan1.state_filled.pt": "cfa9e536e131ded39213a2334fc167674438558c8d8341d1a806f978238d2549",
+   "sim/weights/v3/FloorPlan1.state_on.pt": "752f9b610f4d7a9569cc4d2397363e55b40b593ecabb3c1a8fe6456e048ccf41",
+   "sim/weights/v3/FloorPlan1.state_open.pt": "a0e110a0f7ad3dcfe9ae3be2d0932f55353993fafb03ae96958bce336e0d4223",
+   "sim/weights/v3/FloorPlan1.state_sliced.pt": "638c6711c9ffa025adb0afd0a03b1b4d4f14ad5ad8437428415350e4a5104c7e",
+   "sim/weights/v3/FloorPlan1.yolo26s.pt": "4418f63f4b84060c51353bffb574d05e49042e763b36136d870c7e56e8b90f54"
+  },
+  "mask": "universal",
+  "params_sha": "f564cf1cedbbce853519c9c5c85201de16058a4170a4e7993ba99d76f340965a",
+  "profile": "pkg-1.r6b",
+  "sha": "7a2ee211b85cc534d7677291fce80b04e92cd24a860f1ddd7665185b3a03b67d",
+  "switch_sha": "32878c99a233c0991550158fbfca075d491b55e7a411ee2fcd6ac0839f913212",
+  "test_v1_treatment": "ft-v2",
+  "version": "ft-v2"
+ },
+ "writers": {
+  "sim/final_test/matrix/freeze.py": "905c0fe0711e05547f94a5bfd7d8b0416a95428cdc0cc5edb501411084cd8737",
+  "sim/final_test/matrix/freeze_ft2.py": "94251ca6bb10f03f2bd979c5362643cffa5223517f2c7ab8a024febfe4a4c141",
+  "sim/final_test/matrix/gate_evidence.py": "8a368da51ada8ec1184ef3601b17685ade3817585fc5d103b09a9a58dea5134b"
+ },
+ "x_arms": {
+  "arms": [
+   "X0",
+   "X+M"
+  ],
+  "cli_flags_sha256": "920b0fcf4e5ec8b7d7c236dc0d83e13a618c36b5bf03f06022d86c4cf072f2a6",
+  "hardened_features": [
+   "apps",
+   "shell_tool",
+   "browser_use",
+   "browser_use_external",
+   "computer_use",
+   "multi_agent",
+   "plugins",
+   "hooks",
+   "image_generation",
+   "skill_search",
+   "view_image",
+   "sleep_tool",
+   "unified_exec",
+   "goals",
+   "remote_plugin",
+   "in_app_browser"
+  ],
+  "isolation_report_sha256": "21961546776770ec85075a2648ab2435f61ac60fec0553839b1813bf291444bd",
+  "model": "gpt-6-sol",
+  "reasoning_effort": "high",
+  "sandbox": "read-only",
+  "server_side_model": "not observable through the CLI (disclosed, A21 E)",
+  "session_log_filter": "codex_exec=info,off"
+ }
+}

@@ -1,0 +1,1387 @@
+# file docs/final-test/freeze.json before=8b78cc9b4901bbb523abff62eb931d4feef53642b3258f3674b87a0a64c7c97c after=62c800afe922f64efe4fdbc4d4d83a10b43bef5a79e7845883484fb602bade1e
+--- a/docs/final-test/freeze.json
++++ b/docs/final-test/freeze.json
+@@ -30,6 +30,124 @@
+   "retention": "a12"
+  },
+  "all_gates_pass": false,
++ "amendment_freezes": {
++  "A34-A2+A35": {
++   "a35_patch": {
++    "path": "sim/final_test/diag/reset_det/c_template_fix_proposal.patch",
++    "sha256": "8de75de0802dd45741cc8d4a88ba40857e281fa116f082395c831b08afa11b73"
++   },
++   "adopted_text": {
++    "path": "docs/final-test/amendments/A34-A2_A35.md",
++    "sha256": "32b1c8d1d4ad85aef1a7425a6192f07ed2a859d66833a123d688d49e2de00396"
++   },
++   "amendment": "A34-A2+A35",
++   "changed_files": {
++    "sim/final_test/acceptance_v2/acc_runner.py": {
++     "attempt1": "996eb5f2f9646482564f6a96d2523d0a6da4c6fc11446c36f545ea398aa52931",
++     "now": "4fdf2f491636d307397b0f3a5143ee5de2332ae13605f6cd5b02ba861b5b2c9d"
++    },
++    "sim/final_test/matrix/capture.py": {
++     "attempt1": "9ae7036c262a57c287d287ea69e87670a5e25e2f46c9066de0ca633cc61a8f00",
++     "now": "4378ee70e49c882da438f6cac687f53215ad588362ac7cd87aa502c376bb4d90"
++    },
++    "sim/final_test/matrix/execute.py": {
++     "attempt1": "623d9765417c5f10d29068631c414c6a2bd3db081e6437085f72b2536aa97f62",
++     "now": "7961c8fb1238da10b674d9c10c4c6f04d1bf4b96332e4a6ac69247a55be77545"
++    },
++    "sim/final_test/matrix/freeze_ft2.py": {
++     "attempt1": "3a735ad5d4a726c3d352d9a8704ee4a06138446cf32d7f12c46b34d318475ae5",
++     "now": "162d6c621a8e7b8786204e9e30e4862d8b4e413ec63c3479daab941564d67854"
++    },
++    "sim/final_test/matrix/obs_health.py": {
++     "attempt1": "absent",
++     "now": "f99cf9d79d417fef73e6cffd2bbefe50f42edaf193dd1af654280da48ee095ac"
++    },
++    "sim/final_test/reset_gate.py": {
++     "attempt1": "928639ffed5d6d45168beeb15bf1dbc71aa63a65b9f5a0d626316f3f4e7b866d",
++     "now": "383c0b33cbc20e35e2f808cadb6ccb16c81c362c1c5e84eff57789ee8ddb3875"
++    }
++   },
++   "dev_validation_code": {
++    "sim/final_test/diag/reset_det/a34_devval.py": "da726c812a7df8d5313cbb5e266e16dc18446db4e665466577dba55d17847df1",
++    "sim/final_test/diag/reset_det/run_devval.sh": "59378bb9141458fb1c6c8fbb35502c13fd82167b59e087c1d5c8f045abbda5ce"
++   },
++   "dev_validation_protocol": {
++    "captures": "2 per presentation, independent in-process restores, two interleaved rounds, the A14(b) calibration executor path (LiveExecutor memory none, CalibHook), no LLM, by the pinned sim/final_test/diag/reset_det/a34_devval.py + run_devval.sh",
++    "evaluator": "python sim/final_test/reset_gate.py validate-a34 (read-only; canonical append-only log)",
++    "presentations": "the 24 dev presentations of the registered A14(b)/(c) set: the 12 items of reset_tolerances.json calibration.per_item x EN / FA (2 of them archived from the active pool since; definitions from the frozen v1 dataset the split manifest pins)",
++    "rule": "PASS iff 24/24 pairs pass the registered comparison or are overridden under A34-A2 rule 2; obs_drift counts reported; every capture after the freeze; a FAIL is logged and terminal (Common terms 4)"
++   },
++   "drafts": {
++    "path": "docs/final-test/AMENDMENT-DRAFTS-ACC2.md",
++    "sha256": "d087b3eb284473e4e1713c8ce99a15923b1b683260377fc252ad9354c4c1a74a"
++   },
++   "excluded_self_referential": [
++    "docs/final-test/freeze.json",
++    "remedy diff",
++    "sim/final_test/acceptance_v2/acc_attempt2.py (full sha; core sha pinned instead)"
++   ],
++   "frozen_refs_moved": {
++    "sim/final_test/matrix/capture.py": "4378ee70e49c882da438f6cac687f53215ad588362ac7cd87aa502c376bb4d90",
++    "sim/final_test/matrix/execute.py": "7961c8fb1238da10b674d9c10c4c6f04d1bf4b96332e4a6ac69247a55be77545"
++   },
++   "guard_exception": {
++    "rule_fingerprint_new": "d43568cd4785ec20ad9e0580c4f80f1d35ab4a43af6559a2ab0052ed238cbddd",
++    "rule_fingerprint_old": "f503c9fedfaa2062946de51c3c10c311ebc45b7250039b81e864ffd8d21f213c"
++   },
++   "not_changed": [
++    "docs/final-test/preregistration.md",
++    "docs/final-test/signatures.json",
++    "docs/final-test/freeze.json",
++    "docs/final-test/reset_tolerances.json",
++    "the treatment (identity files)",
++    "roster, 8 arms, 48 presentations, retries, thresholds, budget"
++   ],
++   "reset_gate": {
++    "note": "pinned separately: outside the decision-rule fingerprint's coverage",
++    "path": "sim/final_test/reset_gate.py",
++    "sha256": "383c0b33cbc20e35e2f808cadb6ccb16c81c362c1c5e84eff57789ee8ddb3875"
++   },
++   "rule": "Common terms 5: frozen BEFORE any new capture (the dev validation and attempt 2)",
++   "schema": "ft.amendment-freeze/1",
++   "self_core_sha256": "8b7cc4aaa498ecd1e97851257111394232d78b643764406e2d4fb0c439a5a982",
++   "selftests": {
++    "sim/_acc_attempt2_selftest.py": "4a290b2834e52f7535b31a78f08374661c13a1a3c1ed45d920624924a23e6dfe",
++    "sim/_acc_runner_selftest.py": "a3970cbaa3d3ebf25e347fd27beed4343fb98d590035e849b51ad6fc5b91fc07",
++    "sim/_ftm_execute_selftest.py": "19ef59e28dfb0b42842b5aca195c1bf9dd6b23f8d187a67de8435b7e84c239a4",
++    "sim/final_test/_reset_gate_selftest.py": "342adf121a6b078850313b2232393301466322b39bf3e4e2b9e6c06ce38e1a78"
++   },
++   "sha256": "32a8738457f8b1981f33b21dc54535796a0c8675875147148726dd7a5b798c3f",
++   "signature": {
++    "file": "docs/final-test/signatures.json",
++    "key": "A34-A2+A35",
++    "said": "I approve A2 (A34-A2) and B (A35) as drafted; the amended run is attempt 2."
++   },
++   "signed_pins": {
++    "docs/final-test/AMENDMENT-DRAFTS-ACC2.md": "d087b3eb284473e4e1713c8ce99a15923b1b683260377fc252ad9354c4c1a74a",
++    "docs/final-test/amendments/A34-A2_A35.md": "32b1c8d1d4ad85aef1a7425a6192f07ed2a859d66833a123d688d49e2de00396",
++    "sim/final_test/acceptance_v2/acc_runner.py": "4fdf2f491636d307397b0f3a5143ee5de2332ae13605f6cd5b02ba861b5b2c9d",
++    "sim/final_test/diag/reset_det/a34_devval.py": "da726c812a7df8d5313cbb5e266e16dc18446db4e665466577dba55d17847df1",
++    "sim/final_test/diag/reset_det/c_template_fix_proposal.patch": "8de75de0802dd45741cc8d4a88ba40857e281fa116f082395c831b08afa11b73",
++    "sim/final_test/diag/reset_det/run_devval.sh": "59378bb9141458fb1c6c8fbb35502c13fd82167b59e087c1d5c8f045abbda5ce",
++    "sim/final_test/matrix/capture.py": "4378ee70e49c882da438f6cac687f53215ad588362ac7cd87aa502c376bb4d90",
++    "sim/final_test/matrix/execute.py": "7961c8fb1238da10b674d9c10c4c6f04d1bf4b96332e4a6ac69247a55be77545",
++    "sim/final_test/matrix/freeze_ft2.py": "162d6c621a8e7b8786204e9e30e4862d8b4e413ec63c3479daab941564d67854",
++    "sim/final_test/matrix/obs_health.py": "f99cf9d79d417fef73e6cffd2bbefe50f42edaf193dd1af654280da48ee095ac",
++    "sim/final_test/reset_gate.py": "383c0b33cbc20e35e2f808cadb6ccb16c81c362c1c5e84eff57789ee8ddb3875"
++   },
++   "tolerances": {
++    "note": "unchanged (no recalibration, A34-A2 rule 4)",
++    "path": "docs/final-test/reset_tolerances.json",
++    "sha256": "2ffeca272961649ab232d9db25d89bf031f342a804765b13e34ca11dfdfdcd79"
++   },
++   "treatment_identity": {
++    "new": "7a2ee211b85cc534d7677291fce80b04e92cd24a860f1ddd7665185b3a03b67d",
++    "old": "7a2ee211b85cc534d7677291fce80b04e92cd24a860f1ddd7665185b3a03b67d",
++    "unchanged": true
++   },
++   "written": "2026-10-15T13:18:20"
++  }
++ },
+  "arash_check": null,
+  "arms": {
+   "G+M": {
+@@ -580,7 +698,7 @@
+  "reset_tolerances_sha256": "2ffeca272961649ab232d9db25d89bf031f342a804765b13e34ca11dfdfdcd79",
+  "schema": "final-test.freeze/1",
+  "seed_policy": "none (the honest executor takes no simulator seed; world_seed is a recorded label, always 0)",
+- "sha256": "07c31332a29d70272de7dd6f639662eb97d644df2eb8ce4892743ec1e18e6288",
++ "sha256": "68069a965eac07cf4cecd4ba5c2732ee1974f2073e2a6e41ba1ae46e776e3fdb",
+  "snapshots": {
+   "S*": {
+    "E_frozen": 10,
+# file sim/final_test/acceptance_v2/acc_attempt2.py before=0dac96fb99c6f29ba5e7454431cd72d4971f1cf2c9f1c515b279419c0a313010 after=ea854799e76036da1aaaff210296363f0c53de350643c6aa2cbdcc707956b06c
+--- a/sim/final_test/acceptance_v2/acc_attempt2.py
++++ b/sim/final_test/acceptance_v2/acc_attempt2.py
+@@ -46,6 +46,9 @@
+      value flows, the provider constants); the RENDERED prompt texts (prompt_texts_sha, recomputed by a fresh interpreter; ft_v2.json's
+      stored sha must equal them) AND the rendered messages (rendered_prompts_sha: PlannerContract's rendering methods on a fixed probe); the FT2 switch outside its file pins;
+      ft_v2.json outside its exec-contract sha; the package-parameter / briefing / profile identity; the namespace ceilings.
++     SIGNED EXCEPTION (A34-A2 + A35, Arash 2026-10-15; SIGNED_AMENDMENT / amendment_problems): the rule fingerprint may move from
++     attempt 1's f503c9fe... to exactly SIGNED_AMENDMENT["rule_fingerprint_new"], and this module may change to carry the exception, only
++     when the record's `amendment` block equals amendment_block() (signature, drafts, adopted text, A35 patch, reset_gate.py shas on disk).
+   5. RE-FREEZE          refrozen.treatment_identity = the identity computed now (= the registration pin unless an identity file changed);
+      refrozen.frozen_refs = exactly the registration frozen refs that moved, with their new shas.
+   6. GATES + REVIEW     a gate summary with EVERY gate of the FROZEN manifest REQUIRED_GATES (every offline selftest of the repo) at rc=0,
+@@ -156,6 +159,30 @@
+     "_step5_plantiming_selftest", "_step5_replay_selftest", "_step5_retention_a12_selftest", "_step5_retrieval_selftest",
+     "_step5_rules_selftest", "_step5_storage_selftest", "_trace_selftest")
+ GATES_NOT_OFFLINE = {"_bench_orth_selftest": "opens a network socket on this machine (its own check G10 fails); not an offline gate, and not acceptance code"}
++#: SIGNED AMENDMENT A34-A2 + A35 (Arash 2026-10-15, docs/final-test/signatures.json "A34-A2+A35"; adopted text
++#: docs/final-test/amendments/A34-A2_A35.md). Common terms 1: his signature supersedes the no-tuning prohibition FOR THE NAMED CHANGES ONLY.
++#: The guard accepts exactly (Astra ACC2-IMPL-r1 1: bound to IMMUTABLE reviewed artefacts, never to whatever is on disk):
++#:   (1) the decision-rule fingerprint moving from rule_fingerprint_old (attempt 1's) to rule_fingerprint_new, no other value;
++#:   (2) the changed tracked files being EXACTLY the pinned remedy files at their pinned shas, plus this module at its pinned core sha
++#:       (its bytes with the one `self_core_sha256` line removed) and docs/final-test/freeze.json changed ONLY by the added
++#:       `amendment_freezes["A34-A2+A35"]` entry (Common terms 5; everything else equal in content, self-sha consistent);
++#:   (3) the signature, drafts, adopted text and A35 patch at their pinned shas; the record's `amendment` block = amendment_block();
++#:   (4) the prospective A34-A2 rule-4 dev validation bound in the record, reproduced now, captured after the freeze, never failed.
++SIGNED_AMENDMENT = {
++    "key": "A34-A2+A35",
++    "said": "I approve A2 (A34-A2) and B (A35) as drafted; the amended run is attempt 2.",
++    "text": "docs/final-test/amendments/A34-A2_A35.md",
++    "drafts": "docs/final-test/AMENDMENT-DRAFTS-ACC2.md",
++    "a35_patch": "sim/final_test/diag/reset_det/c_template_fix_proposal.patch",
++    "a35_patch_sha16": "8de75de0802dd457",
++    "reset_gate": "sim/final_test/reset_gate.py",
++    "freeze_json": "docs/final-test/freeze.json",
++    "validation_log": "docs/final-test/amendments/A34-A2_A35.validation.jsonl",
++    "rule_fingerprint_old": "f503c9fedfaa2062946de51c3c10c311ebc45b7250039b81e864ffd8d21f213c",
++    "rule_fingerprint_new": "d43568cd4785ec20ad9e0580c4f80f1d35ab4a43af6559a2ab0052ed238cbddd",
++    "pins": {"docs/final-test/amendments/A34-A2_A35.md": "32b1c8d1d4ad85aef1a7425a6192f07ed2a859d66833a123d688d49e2de00396", "docs/final-test/AMENDMENT-DRAFTS-ACC2.md": "d087b3eb284473e4e1713c8ce99a15923b1b683260377fc252ad9354c4c1a74a", "sim/final_test/diag/reset_det/c_template_fix_proposal.patch": "8de75de0802dd45741cc8d4a88ba40857e281fa116f082395c831b08afa11b73", "sim/final_test/diag/reset_det/a34_devval.py": "da726c812a7df8d5313cbb5e266e16dc18446db4e665466577dba55d17847df1", "sim/final_test/diag/reset_det/run_devval.sh": "59378bb9141458fb1c6c8fbb35502c13fd82167b59e087c1d5c8f045abbda5ce", "sim/final_test/reset_gate.py": "383c0b33cbc20e35e2f808cadb6ccb16c81c362c1c5e84eff57789ee8ddb3875", "sim/final_test/matrix/execute.py": "7961c8fb1238da10b674d9c10c4c6f04d1bf4b96332e4a6ac69247a55be77545", "sim/final_test/matrix/capture.py": "4378ee70e49c882da438f6cac687f53215ad588362ac7cd87aa502c376bb4d90", "sim/final_test/matrix/obs_health.py": "f99cf9d79d417fef73e6cffd2bbefe50f42edaf193dd1af654280da48ee095ac", "sim/final_test/matrix/freeze_ft2.py": "162d6c621a8e7b8786204e9e30e4862d8b4e413ec63c3479daab941564d67854", "sim/final_test/acceptance_v2/acc_runner.py": "4fdf2f491636d307397b0f3a5143ee5de2332ae13605f6cd5b02ba861b5b2c9d"},
++    "self_core_sha256": "8b7cc4aaa498ecd1e97851257111394232d78b643764406e2d4fb0c439a5a982",
++}
+ 
+ 
+ def _root(root=None) -> str:
+@@ -1459,8 +1486,262 @@
+     return out
+ 
+ 
++def self_core_sha(root=None) -> str:
++    """sha256 of this module's bytes with the single `"self_core_sha256":` line removed (the pin cannot contain itself)."""
++    b = open(_abs(SELF_REL, root), "rb").read()
++    keep = [ln for ln in b.split(b"\n") if b'"self_core_sha256":' not in ln]
++    return hashlib.sha256(b"\n".join(keep)).hexdigest()
++
++
++def amendment_block(root=None) -> dict:
++    """What the correction record's `amendment` must equal: the PINNED constants (never values read from disk)."""
++    S = SIGNED_AMENDMENT
++    return {"key": S["key"], "rule_fingerprint_old": S["rule_fingerprint_old"], "rule_fingerprint_new": S["rule_fingerprint_new"],
++            "pins": dict(S["pins"]), "self_core_sha256": S["self_core_sha256"], "freeze_json": S["freeze_json"],
++            "protected_changed": [SELF_REL, S["freeze_json"]]}
++
++
++def _strip_amendment_freeze(d: dict) -> dict:
++    return {k: v for k, v in d.items() if k not in ("amendment_freezes", "sha256")}
++
++
++def freeze_json_problems(rec: dict, root=None) -> list:
++    """freeze.json may differ from its attempt-1 bundle copy ONLY by the added amendment_freezes["A34-A2+A35"] entry, which must be the
++    record's freeze file content (self-sha recomputed and consistent). [] = exactly that narrow Common-terms-5 change."""
++    S = SIGNED_AMENDMENT
++    p, b = _abs(S["freeze_json"], root), _bundle_file(1, S["freeze_json"], root)
++    try:
++        cur, old = _json(p), _json(b)
++    except Exception as e:                                         # noqa: BLE001
++        return [f"freeze.json unreadable ({type(e).__name__})"]
++    if not isinstance(cur, dict) or not isinstance(old, dict):
++        return ["freeze.json or its attempt-1 bundle copy missing"]
++    out = []
++    if _strip_amendment_freeze(cur) != _strip_amendment_freeze(old) or "amendment_freezes" in old:
++        out.append("freeze.json changed beyond the added amendment_freezes entry")
++    if cur.get("sha256") != C.self_sha(cur):
++        out.append("freeze.json self-sha inconsistent")
++    af = cur.get("amendment_freezes")
++    fr = (rec or {}).get("freeze") or {}
++    fz = _json(_abs(fr["path"], root)) if fr.get("path") else None
++    if not isinstance(af, dict) or sorted(af) != [S["key"]]:
++        out.append("freeze.json does not carry exactly the A34-A2+A35 amendment freeze")
++    elif not isinstance(fz, dict) or af[S["key"]] != fz or fr.get("sha256") != file_sha(_abs(fr["path"], root)):
++        out.append("freeze.json's amendment freeze is not the correction record's freeze file")
++    else:
++        out += freeze_content_problems(fz, root)
++    return out
++
++
++#: A34-A2 rule 4 protocol, FIXED (the freeze must carry exactly this; Astra ACC2-IMPL-r3 3)
++DEV_VALIDATION_PROTOCOL = {
++    "presentations": "the 24 dev presentations of the registered A14(b)/(c) set: the 12 items of reset_tolerances.json calibration.per_item x EN / FA "
++                     "(2 of them archived from the active pool since; definitions from the frozen v1 dataset the split manifest pins)",
++    "captures": "2 per presentation, independent in-process restores, two interleaved rounds, the A14(b) calibration executor path "
++                "(LiveExecutor memory none, CalibHook), no LLM, by the pinned sim/final_test/diag/reset_det/a34_devval.py + run_devval.sh",
++    "rule": "PASS iff 24/24 pairs pass the registered comparison or are overridden under A34-A2 rule 2; obs_drift counts reported; every capture "
++            "after the freeze; a FAIL is logged and terminal (Common terms 4)",
++    "evaluator": "python sim/final_test/reset_gate.py validate-a34 (read-only; canonical append-only log)",
++}
++DEV_VALIDATION_CODE = ("sim/final_test/diag/reset_det/a34_devval.py", "sim/final_test/diag/reset_det/run_devval.sh")
++
++#: the freeze supplement's self-referential exclusions (Astra ACC2-IMPL-r2 4): it never holds the sha of freeze.json (it is inside it),
++#: of the remedy diff (which covers freeze.json) or of this module (pinned by its core sha instead)
++FREEZE_EXCLUDED = ("docs/final-test/freeze.json", "remedy diff", SELF_REL + " (full sha; core sha pinned instead)")
++
++
++def freeze_content_problems(fz: dict, root=None) -> list:
++    """The amendment freeze's REQUIRED contents equal the reviewed constants and the attempt-1 / registration facts (never trusted)."""
++    import acc_runner as A
++    S = SIGNED_AMENDMENT
++    out = []
++    v1 = _json(verdict_path(1, root)) or {}
++    cs = v1.get("code_state") or {}
++    code = {r: s for r, s in S["pins"].items() if r in _tracked_pin_paths(root)}
++    want = {"schema": "ft.amendment-freeze/1", "amendment": S["key"],
++            "signature": {"file": "docs/final-test/signatures.json", "key": S["key"], "said": S["said"]},
++            "signed_pins": dict(S["pins"]), "self_core_sha256": S["self_core_sha256"],
++            "guard_exception": {"rule_fingerprint_old": S["rule_fingerprint_old"], "rule_fingerprint_new": S["rule_fingerprint_new"]},
++            "changed_files": {r: {"attempt1": cs.get(r, "absent"), "now": s} for r, s in sorted(code.items())},
++            "excluded_self_referential": list(FREEZE_EXCLUDED), "dev_validation_protocol": dict(DEV_VALIDATION_PROTOCOL),
++            "dev_validation_code": {r: S["pins"].get(r) for r in DEV_VALIDATION_CODE}}
++    for k, v in want.items():
++        if fz.get(k) != v:
++            out.append(f"amendment freeze: {k} is not the reviewed value")
++    try:
++        pin_t = (A.registration(root).get("pins") or {}).get("treatment")
++    except Exception:                                              # noqa: BLE001
++        pin_t = None
++    ti = fz.get("treatment_identity") or {}
++    if not pin_t or ti.get("old") != pin_t or ti.get("new") != pin_t:
++        out.append("amendment freeze: treatment identity is not the registration's unchanged pin")
++    tol = _abs("docs/final-test/reset_tolerances.json", root)
++    if (fz.get("tolerances") or {}).get("sha256") != (file_sha(tol) if os.path.isfile(tol) else None):
++        out.append("amendment freeze: the tolerance file is not the frozen one")
++    if _epoch(fz.get("written")) is None:
++        out.append("amendment freeze: no written time")
++    if any(not S["pins"].get(r) for r in DEV_VALIDATION_CODE):
++        out.append("amendment freeze: the dev-validation capture code is not pinned")
++    if fz.get("sha256") != C.self_sha(fz):
++        out.append("amendment freeze: self-sha mismatch")
++    return out
++
++
++def _epoch(s):
++    import datetime as _dt
++    try:
++        return _dt.datetime.strptime(str(s), "%Y-%m-%dT%H:%M:%S").timestamp()
++    except ValueError:
++        return None
++
++
++def a34_validation_problems(rec: dict, root=None) -> list:
++    """A34-A2 rule 4 enforced (Astra ACC2-IMPL-r1 6): the record binds the dev validation (pairs + result + log entry), the roster is the
++    frozen 24 dev presentations, every capture is AFTER the freeze, the result is reproduced NOW by reset_gate.validate_a34 with the
++    registered (validated) tolerances, it is a PASS, and the append-only log holds no failed validation (a failure is terminal)."""
++    from final_test import reset_gate as RG
++    S = SIGNED_AMENDMENT
++    out = []
++    lg = _abs(S["validation_log"], root)
++    rows = (_rows(lg) or []) if os.path.isfile(lg) else []
++    if any(r.get("ok") is not True for r in rows):
++        return ["the A34-A2 dev validation FAILED once (its log records it): terminal NOT PASS under this protocol (Common terms 4)"]
++    dv = (rec or {}).get("dev_validation") or {}
++    for k in ("pairs", "result"):
++        x = dv.get(k) or {}
++        if not x.get("path") or not os.path.isfile(_abs(x["path"], root)) or file_sha(_abs(x["path"], root)) != x.get("sha256"):
++            out.append(f"dev validation: {k} file missing or changed")
++    if out:
++        return out
++    pairs = _json(_abs(dv["pairs"]["path"], root)) or {}
++    res = _json(_abs(dv["result"]["path"], root)) or {}
++    tol = _json(_abs("docs/final-test/reset_tolerances.json", root)) or {}
++    want = [f"canon:{i}:{lg_}" for i in sorted((tol.get("calibration") or {}).get("per_item") or {}) for lg_ in ("en", "fa")]
++    if pairs.get("presentations") != want or len(want) != RG.EXPECTED_PAIRS:
++        out.append("dev validation: not the frozen 24 dev presentations (the A14 calibration items x EN / FA)")
++    fz = _json(_abs(((rec or {}).get("freeze") or {}).get("path") or "", root)) or {}
++    t0 = _epoch(fz.get("written"))
++    ts = [x for pr in (pairs.get("capture_ts") or []) for x in pr]
++    if t0 is None or len(ts) != 2 * len(want) or any(not isinstance(x, (int, float)) or x <= t0 for x in ts):
++        out.append("dev validation: a capture is not after the freeze (or its time is missing)")
++    if not any(r.get("result_sha256") == dv["result"]["sha256"] and r.get("pairs_file_sha256") == dv["pairs"]["sha256"] for r in rows):
++        out.append("dev validation: the result is not in the append-only validation log")
++    if pairs.get("driver_sha256") != [S["pins"].get(DEV_VALIDATION_CODE[0])]:
++        out.append("dev validation: not captured by the pinned a34_devval.py")
++    specs = _presentation_specs(want, root)
++    if pairs.get("presentation_specs") != specs:
++        out.append("dev validation: the presentations' reference plans / goal counts are not the frozen items'")
++    lb = dv.get("log") if isinstance(dv.get("log"), dict) else {}
++    raw = open(lg, "rb").read() if os.path.isfile(lg) else b""
++    if not lb.get("prefix_len") or hashlib.sha256(raw[: lb["prefix_len"]]).hexdigest() != lb.get("prefix_sha256"):
++        out.append("dev validation: the validation log was rewritten (its bound prefix changed)")
++    try:
++        tl = RG.load_tolerances(_abs("docs/final-test/reset_tolerances.json", root), "validated")
++        v = RG.validate_a34([tuple(p_) for p_ in pairs["pairs"]], tl, obs=[tuple(o_) for o_ in pairs["obs"]], presentations=specs)
++    except Exception as e:                                         # noqa: BLE001 -- recorded as a failure (terminal), never an escape
++        _persist_failure(lg, dv, {"error": f"{type(e).__name__}: {str(e)[:120]}"})
++        return out + [f"dev validation: not reproducible ({type(e).__name__}: {str(e)[:120]}) -- recorded as a FAILED validation"]
++    if not v["ok"] or res.get("ok") is not True:
++        _persist_failure(lg, dv, v)                                 # Astra ACC2-IMPL-r2 5: a failure found here is recorded, hence terminal
++        out.append(f"dev validation: NOT PASS ({v['registered_pass']} pass + {v['overridden']} overridden of {v['pairs']})")
++    ks = ("pairs", "registered_pass", "overridden", "blocked", "ok")
++    if {k: v[k] for k in ks} != {k: res.get(k) for k in ks}:
++        out.append("dev validation: the recorded result is not what the pairs reproduce now")
++    return out
++
++
++def _presentation_specs(names: list, root=None) -> list:
++    """{plan, goal_clauses} of each dev presentation from the live dataset, else the frozen v1 dataset the split manifest pins (sha checked)."""
++    import general_set as gs
++    ds = _json(_abs("sim/dataset/general.json", root)) or {}
++    items = {i["id"]: i for i in ds.get("items") or []}
++    man = _json(_abs("docs/final-test/split_manifest.json", root)) or {}
++    v1p = _abs(f"sim/dataset/archive/general.v1.{str(man.get('dataset_sha256'))[:8]}.json", root)
++    if os.path.isfile(v1p) and file_sha(v1p) == man.get("dataset_sha256"):
++        for i in (_json(v1p) or {}).get("items") or []:
++            items.setdefault(i["id"], i)
++    out = []
++    for n in names:
++        it = items.get(C.parse_pres(n)["item"]) or {}
++        out.append({"plan": list(it.get("plan") or []), "goal_clauses": sorted({gs.format_goal(a) for a in it.get("goal") or []})} if it else None)
++    return out
++
++
++def _persist_failure(lg: str, dv: dict, v: dict) -> None:
++    try:
++        os.makedirs(os.path.dirname(lg), exist_ok=True)
++        with open(lg, "a", encoding="utf-8", newline="\n") as f:
++            f.write(json.dumps({"amendment": "A34-A2", "source": "acc_attempt2.a34_validation_problems", "ok": False,
++                                "pairs_file_sha256": (dv.get("pairs") or {}).get("sha256"), "pairs": v.get("pairs"),
++                                "registered_pass": v.get("registered_pass"), "overridden": v.get("overridden"), "blocked": v.get("blocked"),
++                                "error": v.get("error")},
++                               sort_keys=True) + "\n")
++    except OSError:
++        pass
++
++
++def _tracked_pin_paths(root=None) -> set:
++    """The pinned paths that are tracked code / data (checked through code_state); every other pin is checked by its disk sha."""
++    S = SIGNED_AMENDMENT
++    tr = set(tracked_files(root)) | set(TRACKED_EXACT)
++    return {r for r in S["pins"] if r in tr or (r.startswith("sim/final_test/matrix/") and r.endswith(".py"))}
++
++
++def amendment_problems(rec: dict, v1: dict, root=None, *, now=None) -> list:
++    """[] iff the signed A34-A2 + A35 exception applies to this record and tree; else why not (never raises)."""
++    S = SIGNED_AMENDMENT
++    am = (rec or {}).get("amendment")
++    if am is None:
++        return ["the correction record names no signed amendment"]
++    out = []
++    try:
++        if am != amendment_block(root):
++            out.append("the record's amendment block is not the signed A34-A2 + A35 block")
++
++        def sha(rel):
++            q = _abs(rel, root)
++            return file_sha(q) if os.path.isfile(q) else "absent"
++        tracked = _tracked_pin_paths(root)
++        for rel in (S["text"], S["drafts"], S["a35_patch"]) + DEV_VALIDATION_CODE:
++            if rel not in S["pins"]:
++                out.append(f"{rel} is not pinned")
++        for rel, s_ in S["pins"].items():
++            if rel not in tracked and sha(rel) != s_:
++                out.append(f"{rel} is not at its pinned sha")
++        if not S["pins"].get(S["a35_patch"], "").startswith(S["a35_patch_sha16"]):
++            out.append("the pinned A35 patch is not the signed one")
++        sig = (_json(_abs("docs/final-test/signatures.json", root)) or {}).get(S["key"]) or {}
++        if (sig.get("by") != "Arash" or sig.get("said") != S["said"] or sig.get("drafts_sha256") != S["pins"].get(S["drafts"])
++                or sig.get("b_patch_sha16") != S["a35_patch_sha16"]):
++            out.append("signatures.json does not hold Arash's A34-A2+A35 signature binding the drafts and the A35 patch")
++        if v1.get("rule_fingerprint") != S["rule_fingerprint_old"]:
++            out.append("the attempt-1 verdict's rule fingerprint is not the one the amendment was signed against")
++        if self_core_sha(root) != S["self_core_sha256"]:
++            out.append("acc_attempt2.py is not the reviewed version (core sha)")
++        now = now if now is not None else code_state(root)
++        changed = set(changed_files(v1, root, now=now))
++        code_pins = {r: s for r, s in S["pins"].items() if r in tracked}
++        allowed = set(code_pins) | {SELF_REL, S["freeze_json"]}
++        if changed - allowed:
++            out.append(f"tracked files changed outside the signed set: {sorted(changed - allowed)[:4]}")
++        for r, s in code_pins.items():
++            if now.get(r, "absent") != s:
++                out.append(f"{r} is not at its pinned sha")
++        if S["freeze_json"] in changed:
++            out += freeze_json_problems(rec, root)
++        else:
++            out.append("freeze.json does not carry the amendment freeze (Common terms 5)")
++    except Exception as e:                                         # noqa: BLE001
++        out.append(f"the amendment cannot be checked ({type(e).__name__}: {str(e)[:120]})")
++    return out
++
++
+ def code_diff_problems(rec: dict, v1: dict, root=None, *, now=None) -> list:
+     out = []
++    amp = amendment_problems(rec, v1, root, now=now) if (rec or {}).get("amendment") is not None else None
++    amend_ok = amp == []
++    if amp:
++        out += [f"signed amendment: {x}" for x in amp]
+     before = v1.get("code_state") or {}
+     now = now if now is not None else code_state(root)
+     rem = ((rec.get("remedy") or {}).get("files")) if isinstance(rec.get("remedy"), dict) else None
+@@ -1468,7 +1749,7 @@
+         return ["correction record: remedy.files missing"]
+     changed = changed_files(v1, root, now=now)
+     for r in changed:
+-        if is_protected(r):
++        if is_protected(r) and not (amend_ok and r in (SELF_REL, SIGNED_AMENDMENT["freeze_json"])):
+             out.append(f"PROTECTED file changed since attempt 1: {r} (never part of a correction; a new amendment for Arash)")
+         bf = _bundle_file(1, r, root)
+         if before.get(r, "absent") != "absent" and (not os.path.isfile(bf) or file_sha(bf) != before.get(r)):
+@@ -1490,8 +1771,11 @@
+         out.append("remedy.diff: not the sha of the diff generated from the attempt-1 bundle to the disk (acc_attempt2.make_diff)")
+     out += diff_reconstruction_problems(patch, v1, root, now=now)
+     try:
+-        if rule_fingerprint()["sha"] != v1.get("rule_fingerprint"):
+-            out.append("the decision-rule fingerprint changed since attempt 1 (ACCEPTANCE IS NEVER TUNED)")
++        fp_now = rule_fingerprint()["sha"]
++        if fp_now != v1.get("rule_fingerprint") and not (amend_ok and v1.get("rule_fingerprint") == SIGNED_AMENDMENT["rule_fingerprint_old"]
++                                                          and fp_now == SIGNED_AMENDMENT["rule_fingerprint_new"]):
++            out.append("the decision-rule fingerprint changed since attempt 1 (ACCEPTANCE IS NEVER TUNED; only the signed A34-A2 + A35 "
++                       "old -> new fingerprint is accepted)")
+         if ft2_core_sha() != v1.get("ft2_core_sha"):
+             out.append("the FT2 treatment switch changed outside its executor / contract file pins (treatment redesign)")
+         if ft_v2_json_core_sha(root) != v1.get("ft_v2_json_core_sha"):
+@@ -1700,12 +1984,36 @@
+     now = owed_state(root)
+     if now["error"]:
+         out.append(f"the owed state is unreadable now: {now['error']}")
++    rec = _json(correction_path(root)) or {}
++    amend_ok = rec.get("amendment") is not None and amendment_problems(rec, v1, root) == []
+     for x in now["problems"]:
+         m = OWED_RE.match(x)
+         k = int(m.group(1)) if m else None
+         if k is None or k not in OWED_REPLACED + OWED_INHERITED:
++            if amend_ok and _owed4_signed_rebind(x, root):
++                continue                                           # the signed amendment re-binds exactly this file (see below)
+             out.append(x)
+     return out
++
++
++_OWED4_RE = re.compile(r"^owed item 4 \(a24_frozen_first\): frozen-first '[^']*': binding (\S+) \(file\) is stale \(recorded [0-9a-f]+, now ([0-9a-f]+)\)$")
++
++
++def _owed4_signed_rebind(problem: str, root=None) -> bool:
++    """A34-A2 + A35 (signed): owed item 4 binds the acceptance rule code by whole-file sha, so the SIGNED rule change necessarily makes
++    those bindings stale. Excused ONLY for a whole-file binding of a file the signed amendment pins (acc_runner.py at its pinned sha, or this
++    module at its pinned core sha) whose current sha is the one reported; every other owed problem still refuses."""
++    S = SIGNED_AMENDMENT
++    m = _OWED4_RE.match(problem)
++    if not m:
++        return False
++    rel, now12 = m.group(1), m.group(2)
++    q = _abs(rel, root)
++    if not os.path.isfile(q) or not file_sha(q).startswith(now12):
++        return False
++    if rel == SELF_REL:
++        return self_core_sha(root) == S["self_core_sha256"]
++    return rel in S["pins"] and file_sha(q) == S["pins"][rel]
+ 
+ 
+ def bindings_problems(root=None, *, fast: bool = False) -> list:
+@@ -1764,6 +2072,8 @@
+         out.append("the roster differs from attempt 1's (the same 48 presentations)")
+     out += A.order_problems(reg, roster)
+     out += code_diff_problems(rec, v1, root)
++    if rec.get("amendment") is not None:                           # A34-A2 rule 4: the prospective dev validation, enforced
++        out += [f"A34-A2 rule 4: {x}" for x in a34_validation_problems(rec, root)]
+     out += refreeze_problems(rec, v1, root, identity=identity)
+     out += gates_problems(rec, root)
+     out += astra_problems(rec, root)
+# file sim/final_test/acceptance_v2/acc_runner.py before=996eb5f2f9646482564f6a96d2523d0a6da4c6fc11446c36f545ea398aa52931 after=4fdf2f491636d307397b0f3a5143ee5de2332ae13605f6cd5b02ba861b5b2c9d
+--- a/sim/final_test/acceptance_v2/acc_runner.py
++++ b/sim/final_test/acceptance_v2/acc_runner.py
+@@ -1525,8 +1525,20 @@
+     # each with its own base evidence; a kb: source then resolves only to one of these, not to the container digest alone
+     kbo = LP.load_kb(os.path.join(r, "sim", "step5", "procedures_kb.json"))
+     kb_recs = {x["id"]: list((x.get("provenance") or {}).get("evidence") or []) for x in kbo.records() + kbo.afford_records()}
++    # ACC-V2 correction cycle (criterion (c), 2026-10-15): the L3 decomposition templates (B6) cite "spec:<sha16 of the frozen template file>",
++    # authored by "script:ltm_templates@<sha16 of the module>". Each template record resolves to ITS frozen definition: the file's stored
++    # self-sha must equal its recomputation, and the record id must be one of the templates that frozen file defines (static_records).
++    import ltm_templates as LT
++    tpath = os.path.join(r, "sim", "step5", "l3_templates.json")
++    tdata = json.load(open(tpath, encoding="utf-8"))
++    if tdata.get("sha256") != LT._self_sha(tdata):
++        raise ValueError("l3_templates.json: stored sha256 differs from its recomputation")
++    tpl = LT.Templates(tdata, tpath)
++    with open(os.path.join(r, "sim", "ltm_templates.py"), "rb") as f:
++        tmod16 = hashlib.sha256(f.read()).hexdigest()[:16]
++    templates = {"sha16": tpl.sha[:16], "module16": tmod16, "ids": sorted(x["id"] for x in tpl.static_records())}
+     return {"kitchen": KITCHEN, "kb16": (kb.get("sha256") or LP._self_sha(kb))[:16], "briefing16": str(lay.get("sha256") or "")[:16],
+-            "kb_records": kb_recs,
++            "kb_records": kb_recs, "templates": templates,
+             "briefing_ids": sorted(bids), "claims": sorted(claims), "attempts": sorted(att), "fs_examples": sorted(fs),
+             "fixed": list(FIXED_SOURCES), "sim": os.path.join(r, "sim")}
+ 
+@@ -1552,6 +1564,27 @@
+     return None
+ 
+ 
++def template_record_problem(x: dict, inv: dict):
++    """None when the package record `x` (source spec:...) is a template of the FROZEN template file: component template, an id that file
++    defines, its source = spec:<the file's self-sha16>, authored_by = script:ltm_templates@<the frozen module's sha16>, no evidence; else the
++    reason (ACC-V2 correction cycle: a template resolves to its own frozen definition, never by the spec: prefix alone)."""
++    t = inv.get("templates")
++    if not isinstance(t, dict) or not t.get("ids"):
++        return "no template inventory"
++    rid = x.get("id")
++    if x.get("component") != "template":
++        return f"record {rid!r} cites a template spec but is not of component template"
++    if rid not in set(t["ids"]):
++        return f"record {rid!r} is not a template of the frozen template file"
++    if str(x.get("source")) != "spec:" + t["sha16"]:
++        return f"record {rid!r}: source {x.get('source')!r} is not the frozen template file spec:{t['sha16']}"
++    if str(x.get("authored_by")) != "script:ltm_templates@" + t["module16"]:
++        return f"record {rid!r}: authored_by {x.get('authored_by')!r} is not the frozen module script:ltm_templates@{t['module16']}"
++    if type(x.get("evidence", [])) is not list or x.get("evidence", []):
++        return f"record {rid!r}: a template carries no evidence"
++    return None
++
++
+ def provenance_problem(x: dict, inv: dict):
+     """None when the package record `x` resolves to a source that exists, else the reason."""
+     if not isinstance(x, dict):
+@@ -1565,6 +1598,11 @@
+     elif src.startswith("briefing:") and src not in inv["fixed"]:
+         ok = src[len("briefing:"):] == inv["briefing16"] and (x.get("id") in set(inv["briefing_ids"]) or (       # the natural fixture line is
+             x.get("id") == f"briefing/{inv['kitchen']}/fixtures" and ab == "script:kitchen_briefing.natural_fixture_line"))  # computed from the layout
++    elif src.startswith("spec:"):
++        why = template_record_problem(x, inv)
++        if why:
++            return why
++        ok = True
+     elif src.startswith("practice:ltm/"):
+         ok = src.split("/", 1)[1] == inv["kitchen"] and bool(evs) and all(e in set(inv["claims"]) for e in evs)
+     elif src.startswith("practice:"):
+@@ -1868,6 +1906,57 @@
+         for c in u.get("cells") or []:
+             out[c["key"]] = uk
+     return out
++
++
++def _a34_override_problem(sc) -> str | None:
++    """A34-A2 (signed 2026-10-15): an execution row whose registered reset comparison failed may count as ok ONLY through a recorded
++    override: override True, a non-empty breach list confined to the observation kinds, and an obs_drift record of A34-A2. None = fine."""
++    sc = sc if isinstance(sc, dict) else {}
++    if sc.get("registered_ok") is not False and not sc.get("override") and sc.get("obs_drift") is None:
++        return None                                            # an ordinary pass (attempt-1 rows carry no registered_ok field)
++    br = sc.get("breaches") or []
++    d = sc.get("obs_drift")
++    if sc.get("registered_ok") is not False or sc.get("override") is not True or not br:
++        return "A34-A2 override fields inconsistent (registered_ok / override / breaches)"
++    if any(not isinstance(x, dict) or x.get("kind") not in ("seen_types", "summary", "summary.coords") for x in br):
++        return "A34-A2 override with a non-observation breach"
++    from final_test import reset_gate as RG                    # stdlib only; rule 3 (complete record) + 2(b) (pipeline evidence)
++    p = RG.obs_drift_problems(d, br)
++    if p:
++        return f"A34-A2 override without a complete obs_drift record ({p[0]})"
++    p = RG.pipeline_problems(sc.get("obs_pipeline"))
++    if p or d.get("settings") != RG.pipeline_settings(sc.get("obs_pipeline")):
++        return f"A34-A2 override without valid observation-pipeline evidence ({(p or ['settings differ'])[0]})"
++    return None
++
++
++def obs_drift_report(executed: dict, p0: dict, want_cells: dict, arms, pres) -> dict:
++    """A34-A2 rule 5, DESCRIPTIVE ONLY (never gated): obs_drift counts per arm (+ P0), SR with drift episodes excluded (labelled
++    descriptive and potentially selection-biased) and, for every arm pair, SR on the common presentation subset with no drift in either
++    arm, with its denominators. Primary SR (sr_descriptive_not_gated) keeps every eligible episode."""
++    def is_drift(e):
++        return isinstance((e.get("state_check") or {}).get("obs_drift"), dict)
++    by_arm = {a: {} for a in arms}
++    for k, (e, o) in executed.items():
++        a, p = want_cells[k]
++        by_arm[a][p] = (is_drift(e), o.get("goal_ok") is True)
++    drift_pres = {a: sorted(p for p, (d, _) in by_arm[a].items() if d) for a in arms}
++    counts = {a: len(drift_pres[a]) for a in arms}
++    counts["P0"] = sum(1 for p, (e, o) in p0.items() if is_drift(e))
++    excl = {}
++    for a in arms:
++        den = len(pres) - counts[a]
++        num = sum(1 for p, (d, g) in by_arm[a].items() if g and not d)
++        excl[a] = {"sr": round(num / den, 4) if den else None, "n": den}
++    common = {}
++    for i, a in enumerate(arms):
++        for b in arms[i + 1:]:
++            sub = [p for p in pres if p not in set(drift_pres[a]) | set(drift_pres[b])]
++            ga = sum(1 for p in sub if by_arm[a].get(p, (False, False))[1])
++            gb = sum(1 for p in sub if by_arm[b].get(p, (False, False))[1])
++            common[f"{a} vs {b}"] = {"n": len(sub), "sr_a": round(ga / len(sub), 4) if sub else None, "sr_b": round(gb / len(sub), 4) if sub else None}
++    return {"amendment": "A34-A2", "label": "descriptive, not gated; drift-excluded SR is potentially selection-biased",
++            "counts": counts, "drift_presentations": drift_pres, "sr_drift_excluded": excl, "sr_common_no_drift_subset": common}
+ 
+ 
+ def decide(ev: dict, reg: dict, roster, *, treatment_id: str = TREATMENT_SHA) -> dict:
+@@ -2042,6 +2131,8 @@
+     for k, (e, o) in list(executed.items()) + [(f"P0|{p}", v) for p, v in p0.items()]:
+         if (e.get("state_check") or {}).get("ok") is not True:
+             crit["d"].append(f"{k}: reset state check not ok")
++        elif _a34_override_problem(e.get("state_check")):           # A34-A2: an override must be a recorded, complete obs_drift
++            crit["d"].append(f"{k}: {_a34_override_problem(e.get('state_check'))}")
+         if e.get("snapshot_sha_before") != e.get("snapshot_sha_after"):
+             crit["d"].append(f"{k}: snapshot changed during execution")
+     # ---- (e) P0 reaches the goal on every presentation of an item classified feasible
+@@ -2122,7 +2213,9 @@
+     for a in arms:                                             # descriptive only (not gated)
+         xs = [o.get("goal_ok") is True for k, (e, o) in executed.items() if want_cells[k][0] == a]
+         sr[a] = round(sum(xs) / 48.0, 4) if xs else 0.0
++    drift = obs_drift_report(executed, p0, want_cells, arms, pres)
+     return {"schema": SCHEMA + "/decision", "verdict": "PASS" if ok else "NOT PASS", "attempt": ev.get("attempt"),
++            "obs_drift_descriptive_not_gated": drift,
+             "criteria": {k: {"pass": not v, "reasons": v[:25], "n_reasons": len(v)} for k, v in crit.items()},
+             "valid_plans_per_arm": per_arm, "listing_c": listing, "sr_descriptive_not_gated": sr,
+             "parser_fallback_descriptive_not_gated": parser_fb,
+# file sim/final_test/matrix/capture.py before=9ae7036c262a57c287d287ea69e87670a5e25e2f46c9066de0ca633cc61a8f00 after=4378ee70e49c882da438f6cac687f53215ad588362ac7cd87aa502c376bb4d90
+--- a/sim/final_test/matrix/capture.py
++++ b/sim/final_test/matrix/capture.py
+@@ -50,6 +50,7 @@
+ sys.path.insert(0, HERE)
+ import common as C                                    # noqa: E402  (also puts sim/ on sys.path)
+ import treatment as T                                 # noqa: E402  (C4: the ft-v2 switch; inert in every ft-v1 namespace)
++import obs_health as OH                               # noqa: E402  (A34-A2 2(b): observation-pipeline health evidence)
+ 
+ LEVELS = ("L1", "L2", "L3")
+ SCENE = "FloorPlan1"
+@@ -791,8 +792,11 @@
+         req = self.make_request(key, it, lang, world)
+         ctx = self.reset_patch(self.reloc_seed) if world == "reloc" else canonical_reset()
+         t0 = time.time()
++        OH.install()                                       # A34-A2 2(b): behaviour-preserving observation-pipeline health counters
++        OH.reset()
+         with ctx:
+             res = self.ex.execute(req)
++        obs_pipeline = OH.record(self.ident["sha"] if self.ft2 else None, (self.hook.pending or {}).get("sweep_prims"))
+         rs = restored_state(world, self.reloc_seed, it.get("setup"))
+         base = dict(key=key, namespace=self.ns, pres=pres, item=iid, lang=lang, level=it["level"], world=world, capture_run=run,
+                     restored_state=rs, reloc_seed=self.reloc_seed if world == "reloc" else None, wall_s=round(time.time() - t0, 2))
+@@ -822,7 +826,7 @@
+         if self.ft2 and C.sha256_text("\n".join(p["summary"])) != p["summary_sha"]:
+             raise CaptureAbort("%s: the executor summary sha changed under the ft-v2 renderer" % key)
+         sdoc = {"schema": "ftm.capture-state/1", "pres": pres, "run": run, "key": key, "world_hash": res.initial_state_hash,
+-                "summary_sha": p["summary_sha"], "state": state}
++                "summary_sha": p["summary_sha"], "state": state, "obs_pipeline": obs_pipeline}
+         text = json.dumps(sdoc, ensure_ascii=False, sort_keys=True, default=str)
+         if C.key_leak(text):
+             raise CaptureAbort("%s: key-like text in the state file" % key)
+@@ -842,7 +846,7 @@
+                         prompt_summary_sha=p["prompt_summary_sha"], observed_types=p["observed_types"], full_summary_n=p["full_summary_n"])
+         return C.make_record("capture", status="ok", instruction=p["instruction"], holding=p["holding"], summary=p["summary"],
+                              summary_sha=p["summary_sha"], blocks=p["blocks"], requests=p["requests"], state_ref=sref,
+-                             world_hash=res.initial_state_hash, audit=audit, **base)
++                             world_hash=res.initial_state_hash, audit=audit, obs_pipeline=obs_pipeline, **base)
+ 
+     # -- the phase ------------------------------------------------------------------------------------------------------
+     def snapshot_shas(self, names) -> dict:
+# file sim/final_test/matrix/execute.py before=623d9765417c5f10d29068631c414c6a2bd3db081e6437085f72b2536aa97f62 after=7961c8fb1238da10b674d9c10c4c6f04d1bf4b96332e4a6ac69247a55be77545
+--- a/sim/final_test/matrix/execute.py
++++ b/sim/final_test/matrix/execute.py
+@@ -34,6 +34,7 @@
+ sys.path.insert(0, HERE)
+ import common as C                                              # noqa: E402  (also puts sim/ on sys.path)
+ import treatment as T                                           # noqa: E402  (C4: the ft-v2 switch; inert in ft-v1 namespaces)
++import obs_health as OH                                         # noqa: E402  (A34-A2 2(b): observation-pipeline health evidence)
+ 
+ PHASE = "execute"
+ SCENE = "FloorPlan1"
+@@ -155,7 +156,13 @@
+     return any(str(told).lower() == str(h.get("type", "")).lower() for h in actual)
+ 
+ 
+-def replay_precondition(state_a, state_now, told_a, told_now, tol) -> dict:
++def presentation_of(item: dict) -> dict:
++    """A34-A2 2(b): what a capture must be bound to -- the presentation's reference plan and its own goal-clause texts (the evaluator's keys)."""
++    import general_set as gs
++    return {"plan": list(item.get("plan") or []), "goal_clauses": sorted({gs.format_goal(a) for a in item.get("goal") or []})}
++
++
++def replay_precondition(state_a, state_now, told_a, told_now, tol, *, obs_a=None, obs_b=None, presentation=None) -> dict:
+     """A21 C -- the pre-execution check of the replay hook, pure. A cached plan may run only if the world just restored equals the world
+     Phase A captured, on everything the task can depend on:
+       * `reset_gate.compare` (A14 / A14a / A14b): object identities and types, capabilities, containment (parents / contents), open / toggled /
+@@ -163,7 +170,12 @@
+         plan feasibility verdicts, per-object position and rotation within tau, the agent pose to numerical precision;
+       * the ACTUAL holding (names), equal to Phase A's;
+       * the told holding equal to Phase A's AND consistent with the actual holding.
+-    Continuous jitter inside tau, non-task summary rows and the strict world hash do not breach. -> {'ok', 'breaches', 'max_dpos', 'max_drot'}."""
++    Continuous jitter inside tau, non-task summary rows and the strict world hash do not breach. -> {'ok', 'breaches', 'max_dpos', 'max_drot'}.
++    A34-A2 (signed 2026-10-15): the registered comparison above runs unchanged; when its COMPLETE breach set (holding checks included) is
++    observation-only (seen_types / summary / summary.coords), both captures are valid and bound to the presentation
++    (presentation_of(item): its reference plan and goal-clause texts), both observation pipelines are valid and ran with the same frozen settings (obs_a = the Phase A capture row's obs_pipeline,
++    obs_b = this episode's, both obs_health.record) and the world-only snapshots are identical at stored precision, the comparison is
++    overridden: ok True, registered_ok False, obs_drift recorded in full (reset_gate.a34_override)."""
+     from final_test import reset_gate as rg                                      # lazy: stdlib only
+     if state_a is None or state_now is None:
+         return {"ok": False, "breaches": [{"kind": "capture_state_missing" if state_a is None else "state_missing"}], "max_dpos": None, "max_drot": None}
+@@ -176,7 +188,11 @@
+         br.append({"kind": "told_holding", "capture": told_a, "now": told_now})
+     if not told_matches_actual(told_now, hn):
+         br.append({"kind": "told_vs_actual_holding", "told": told_now, "actual": [h["type"] for h in hn][:5]})
+-    return {"ok": not br, "breaches": br, "max_dpos": chk.get("max_dpos"), "max_drot": chk.get("max_drot"), "actual_holding": [h["name"] for h in hn]}
++    ov = (rg.a34_override(state_a, state_now, br, obs_a=obs_a, obs_b=obs_b, presentation=presentation) if br
++          else {"override": False, "why": [], "obs_drift": None})
++    return {"ok": (not br) or ov["override"], "registered_ok": not br, "override": ov["override"], "override_why": ov["why"][:6],
++            "obs_drift": ov["obs_drift"], "breaches": br, "max_dpos": chk.get("max_dpos"), "max_drot": chk.get("max_drot"),
++            "actual_holding": [h["name"] for h in hn]}
+ 
+ 
+ # ================================================================================================ plan-first gate
+@@ -536,11 +552,15 @@
+         if pp["world"] == "reloc" and not getattr(ex, "supports_reloc", False):
+             raise RuntimeError("this executor cannot build the relocation world (E1 has no relocation hook); run with --worlds canon")
+         state_a = self._state_of(cap)
+-        box = {"chk": None, "mismatch": None}
++        box = {"chk": None, "mismatch": None, "obs": None}
+         steps = to_steps(u["plan"])
+ 
+         def state_check(state, post):
+-            chk = replay_precondition(state_a, state, cap.get("holding"), (post or {}).get("holding"), self.tol())
++            obs_b = OH.record((self.ident or {}).get("sha"), (post or {}).get("sweep_prims"))      # A34-A2 2(b): this episode's pipeline
++            box["obs"] = obs_b
++            chk = replay_precondition(state_a, state, cap.get("holding"), (post or {}).get("holding"), self.tol(),
++                                      obs_a=cap.get("obs_pipeline"), obs_b=obs_b,
++                                      presentation=presentation_of(item))
+             box["chk"] = chk
+             return chk
+ 
+@@ -559,6 +579,8 @@
+             return {"steps": [dict(s) for s in steps], "info": {"replay": True, "unit": u["unit"], "n_steps": len(steps)}}
+ 
+         ex.state_check, ex.plan_hook = state_check, hook
++        OH.install()                                                             # A34-A2: behaviour-preserving pipeline health counters
++        OH.reset()
+         status, res, err = "done", None, None
+         if self.ft2:                                                             # C4: hook B for THIS episode only (or explicitly none)
+             T.install_policy(ex, u.get("exec_policy"), self.hints() if u.get("exec_policy") else None)
+@@ -607,7 +629,9 @@
+         wh = getattr(res, "initial_state_hash", None) if res is not None else None
+         rec = C.make_record("exec", key=self.cell_key(u["unit"], run), namespace=self.ns, unit=u["unit"], run=run, attempt=attempt, pres=u["pres"],
+                             status=status, state_check={"ok": chk.get("ok"), "breaches": (chk.get("breaches") or [])[:20], "max_dpos": chk.get("max_dpos"),
+-                                                        "max_drot": chk.get("max_drot")},
++                                                        "max_drot": chk.get("max_drot"), "registered_ok": chk.get("registered_ok"),
++                                                        "override": chk.get("override"), "override_why": chk.get("override_why"),
++                                                        "obs_drift": chk.get("obs_drift"), "obs_pipeline": box.get("obs")},
+                             audit=audit, prims=core.get("prims"), wall_s=round(time.time() - t0, 2), snapshot_sha_before=sha_b, snapshot_sha_after=sha_a,
+                             epoch=self.epoch.get(u["pres"], 0), error=err, chooser=u["chooser"], cells=[c["key"] for c in u["cells"]], world_hash_match=(None if wh is None else wh == cap.get("world_hash")),
+                             world_seed=world_seed_of(self.ns, u["pres"]))
+# file sim/final_test/matrix/freeze_ft2.py before=3a735ad5d4a726c3d352d9a8704ee4a06138446cf32d7f12c46b34d318475ae5 after=162d6c621a8e7b8786204e9e30e4862d8b4e413ec63c3479daab941564d67854
+--- a/sim/final_test/matrix/freeze_ft2.py
++++ b/sim/final_test/matrix/freeze_ft2.py
+@@ -414,6 +414,29 @@
+             "ok": not why, "reasons": why}
+ 
+ 
++def _refrozen_by_correction(root) -> dict:
++    """{rel: sha} the acceptance correction record (A34-A2 + A35, signed 2026-10-15) re-froze; {} when there is no intact record."""
++    try:
++        cr = F._read_json(os.path.join(root, "docs", "final-test", "acceptance_correction.json"))
++    except (OSError, ValueError):
++        return {}
++    if not isinstance(cr, dict) or cr.get("sha256") != C.self_sha(cr):
++        return {}
++    try:                                                   # Astra ACC2-IMPL-r2 6: only the SIGNED amendment's reviewed paths at their pinned shas
++        _ad = os.path.join(root, "sim", "final_test", "acceptance_v2")
++        if _ad not in sys.path:
++            sys.path.insert(0, _ad)
++        import acc_attempt2 as A2
++        v1 = F._read_json(A2.verdict_path(1, root))
++        if A2.amendment_problems(cr, v1, root):
++            return {}
++        pins = A2.SIGNED_AMENDMENT["pins"]
++    except Exception:                                      # noqa: BLE001 -- unverifiable: nothing is accepted
++        return {}
++    rf = (cr.get("refrozen") or {}).get("frozen_refs") or {}
++    return {r: s for r, s in rf.items() if pins.get(r) == s}
++
++
+ def registration_record(root, code):
+     import acc_common as AC
+     p = AC.acceptance_registration_path(root)
+@@ -425,9 +448,10 @@
+     why += AC.acceptance_registration_problems(reg)
+     if reg.get("written_before_any_acceptance_call") is not True:
+         why.append("the registration does not state it was written before any acceptance call")
++    refrozen = _refrozen_by_correction(root)               # A34-A2 + A35 (signed 2026-10-15): the correction record re-freezes moved refs
+     for rel, want in sorted(((reg.get("frozen_refs") or {}).get("files") or {}).items()):
+-        if _sha(root, rel) != want:
+-            why.append(f"frozen ref {rel} changed since the registration (stale)")
++        if _sha(root, rel) != want and not (rel in refrozen and _sha(root, rel) == refrozen[rel]):
++            why.append(f"frozen ref {rel} changed since the registration (stale; not re-frozen by the correction record)")
+     acc_cap = C.journal_path("acceptance-v2", "capture", root)
+     if os.path.exists(acc_cap) and os.path.getsize(acc_cap) > 0 and not reg.get("roster"):
+         why.append("acceptance-v2 has capture rows but the roster was never sealed (ordering violated)")
+@@ -657,7 +681,9 @@
+     fz["code"] = {rel: F._sha_file(F._abs(root, rel)) for rel in files}
+     fz["writers"] = {rel: fz["code"].get(rel) for rel in ("sim/final_test/matrix/freeze.py", "sim/final_test/matrix/freeze_ft2.py",
+                                                           "sim/final_test/matrix/gate_evidence.py")}
+-    pin_bad = sorted(rel for rel, want in REQUIRED_PINS.items() if not str(fz["code"].get(rel) or "").startswith(want))
++    _rf = _refrozen_by_correction(root)                    # A34-A2 + A35 (signed): a pin re-frozen by the correction record at its exact sha
++    pin_bad = sorted(rel for rel, want in REQUIRED_PINS.items() if not str(fz["code"].get(rel) or "").startswith(want)
++                     and not (rel in _rf and fz["code"].get(rel) == _rf[rel]))
+     man = C.load_manifest(root)
+     inc = man.get("inclusion") or {}
+     ds_ok = fz["dataset_sha256"] == (inc.get("dataset_sha256") or man.get("dataset_sha256"))
+# file sim/final_test/matrix/obs_health.py before=absent after=f99cf9d79d417fef73e6cffd2bbefe50f42edaf193dd1af654280da48ee095ac
+--- a/sim/final_test/matrix/obs_health.py
++++ b/sim/final_test/matrix/obs_health.py
+@@ -0,0 +1,82 @@
++"""A34-A2 (signed 2026-10-15) rule 2(b): observation-pipeline HEALTH and EFFECTIVE SETTINGS evidence for one episode (Astra ACC2-IMPL-r1 3).
++
++Pure instrumentation, behaviour-preserving: `install()` wraps, at class level and once per process, `perception.TwoStageDetector.detect`
++(counts calls and records the effective detector configuration it ran with) and `perception.StateEstimator.annotate` (counts calls and
++exceptions; an exception is RE-RAISED unchanged, so the caller's own handling -- TwoStageDetector swallows a state failure -- is exactly
++as before). Nothing else is touched; no return value is altered. `reset()` before an episode, `snapshot()` right after the start sweep.
++
++The capture (Phase A) and the execution (Phase C) both record {"schema", "treatment_id", "sweep_prims", "health": snapshot()}; reset_gate's
++`pipeline_problems` / `pipeline_settings` judge it. Missing evidence never passes an override.
++"""
++from __future__ import annotations
++
++import os
++import threading
++
++SCHEMA = "obs-pipeline/1"
++_LOCK = threading.Lock()
++_S = {"detect_calls": 0, "state_calls": 0, "state_errors": 0, "configs": set()}
++_INSTALLED = {"ok": False}
++
++
++def _base(p):
++    return os.path.basename(str(p)) if p else None
++
++
++def install() -> bool:
++    """Idempotent. Returns True when the wrappers are in place (False if perception cannot be imported: the evidence is then absent)."""
++    if _INSTALLED["ok"]:
++        return True
++    try:
++        import perception as P
++    except Exception:                                          # noqa: BLE001 -- no perception: no evidence (an override stays blocked)
++        return False
++    det0, ann0 = P.TwoStageDetector.detect, P.StateEstimator.annotate
++    if getattr(det0, "_obs_health", False):
++        _INSTALLED["ok"] = True
++        return True
++
++    def detect(self, frame_rgb, conf: float = 0.25, inspecting=None):
++        cfg = (str(getattr(self, "mode", None)), _base(getattr(getattr(self, "primary", None), "weights_path", None)),
++               _base(getattr(getattr(self, "specialist", None), "weights_path", None)), getattr(self, "states", None) is not None,
++               float(conf))
++        with _LOCK:
++            _S["detect_calls"] += 1
++            _S["configs"].add(cfg)
++        return det0(self, frame_rgb, conf=conf, inspecting=inspecting)
++
++    def annotate(self, frame_rgb, dets):
++        with _LOCK:
++            _S["state_calls"] += 1
++        try:
++            return ann0(self, frame_rgb, dets)
++        except Exception:
++            with _LOCK:
++                _S["state_errors"] += 1
++            raise
++
++    detect._obs_health = True
++    annotate._obs_health = True
++    P.TwoStageDetector.detect = detect
++    P.StateEstimator.annotate = annotate
++    _INSTALLED["ok"] = True
++    return True
++
++
++def reset() -> None:
++    with _LOCK:
++        _S.update(detect_calls=0, state_calls=0, state_errors=0, configs=set())
++
++
++def snapshot() -> dict | None:
++    """The health counters since the last reset(); None when the instrumentation is not installed (= no evidence)."""
++    if not _INSTALLED["ok"]:
++        return None
++    with _LOCK:
++        return {"detect_calls": _S["detect_calls"], "state_calls": _S["state_calls"], "state_errors": _S["state_errors"],
++                "configs": sorted([list(c) for c in _S["configs"]])}
++
++
++def record(treatment_id, sweep_prims) -> dict:
++    """The per-episode observation-pipeline record (both phases build it the same way)."""
++    return {"schema": SCHEMA, "treatment_id": treatment_id, "sweep_prims": sweep_prims, "health": snapshot()}
+# file sim/final_test/reset_gate.py before=928639ffed5d6d45168beeb15bf1dbc71aa63a65b9f5a0d626316f3f4e7b866d after=383c0b33cbc20e35e2f808cadb6ccb16c81c362c1c5e84eff57789ee8ddb3875
+--- a/sim/final_test/reset_gate.py
++++ b/sim/final_test/reset_gate.py
+@@ -32,7 +32,10 @@
+     2. ``validate``       reads 24 pairs (each presentation captured twice from fresh restores), applies tau and
+        records ``validation = {pairs, pass, ok}``; ok iff 24 of 24 pass.
+     3. Phase C (A14 d)    ``load_tolerances()`` + :func:`compare` between the Phase A capture and the state right
+-       after the fixed sweep of each execution; any breach blocks that execution.
++       after the fixed sweep of each execution; any breach blocks that execution -- except under the SIGNED amendment A34-A2
++       (2026-10-15; `compare_a34` / `a34_override`): an observation-only breach set (seen_types / summary / summary.coords) of two valid
++       captures with identical pipeline settings and identical world-only snapshots at stored precision is overridden and logged as obs_drift.
++       ``validate-a34`` runs the A34-A2 rule-4 dev validation read-only (it never writes the tolerance file).
+ 
+     python sim/final_test/reset_gate.py show
+     python sim/final_test/reset_gate.py init-ceilings --pos-m P --rot-deg R --justification TEXT --dated YYYY-MM-DD
+@@ -414,6 +417,386 @@
+     return _compare(a, b, tp, tr)
+ 
+ 
++# ------------------------------------------------------------------------------------------------- A34-A2 (signed 2026-10-15)
++#: A34-A2 (Arash, 2026-10-15, signatures.json "A34-A2+A35"; text docs/final-test/amendments/A34-A2_A35.md). The registered comparison
++#: (`compare`) is UNCHANGED and always runs first. A failing comparison is OVERRIDDEN (the execution proceeds) iff ALL hold:
++#:   (a) the complete breach set is non-empty and confined to the observation-derived kinds below;
++#:   (b) both captures are valid (no missing, malformed or non-finite data; self-consistent shas; summary syntax; labels / feasibility
++#:       complete for the presentation) and both observation pipelines are valid (health evidence present, detector ran, no state-stage
++#:       failure) and ran with identical frozen settings (treatment identity + effective detector configuration + sweep length);
++#:   (c) the canonical world-only snapshots are identical at the stored precision (objects: identity, type, pose, parents / contents,
++#:       capabilities, every state flag, accessibility; evaluator labels; feasibility verdicts; agent position, rotation, horizon, standing).
++#: Anything else, or any missing data, stays blocking. Each override is recorded in full as `obs_drift`. No tolerance changes (rule 4).
++A34_AMENDMENT = "A34-A2"
++#: the ONE canonical append-only log of every rule-4 validation (a failure stays on record: Common terms 4; Astra ACC2-IMPL-r2 5)
++A34_VALIDATION_LOG = os.path.join(ROOT, "docs", "final-test", "amendments", "A34-A2_A35.validation.jsonl")
++OBS_KINDS = ("seen_types", "summary", "summary.coords")
++OBS_PIPELINE_SCHEMA = "obs-pipeline/1"
++_OBJ_KEYS = ("type", "caps", "flags", "parents", "contains", "pos", "rot", "accessible")
++#: the ONE line shape the post-sweep summary has (4160 / 4160 lines of the attempt-1 + rehearsal-v3 captures): "Type [state] on/in Place at
++#: (x.xx, z.zz), step N" -- a line that does not match it exactly is malformed (Astra ACC2-IMPL-r2 1)
++_LINE_RE = re.compile(r"^[A-Z][A-Za-z]* \[[^\[\]\n]*\] on/in (?:\?|[A-Za-z][A-Za-z0-9_]*) at \(-?\d+\.\d{2}, -?\d+\.\d{2}\), step \d+$")
++_NONFINITE_RE = re.compile(r"(?i)\b(nan|inf|infinity)\b")
++_HEX64 = re.compile(r"^[0-9a-f]{64}$")
++
++
++def _finite(x) -> bool:
++    return isinstance(x, (int, float)) and not isinstance(x, bool) and math.isfinite(x)
++
++
++def _finite_list(v, n=3) -> bool:
++    return isinstance(v, list) and len(v) == n and all(_finite(x) for x in v)
++
++
++def _all_finite(x) -> bool:
++    """Every number anywhere inside a JSON value is finite (labels / feasibility / health)."""
++    if isinstance(x, bool) or x is None or isinstance(x, str):
++        return True
++    if isinstance(x, (int, float)):
++        return math.isfinite(x)
++    if isinstance(x, dict):
++        return all(isinstance(k, str) and _all_finite(v) for k, v in x.items())
++    if isinstance(x, (list, tuple)):
++        return all(_all_finite(v) for v in x)
++    return False
++
++
++def _summary_line_ok(line: str) -> bool:
++    """The full summary-line grammar (_LINE_RE); no non-finite token."""
++    return bool(_LINE_RE.match(line)) and not _NONFINITE_RE.search(line)
++
++
++def _feas_info_ok(v) -> bool:
++    if v is None:
++        return True
++    return (isinstance(v, dict) and sorted(v) == ["capable", "n", "n_accessible", "type"] and isinstance(v.get("type"), str) and v["type"]
++            and isinstance(v.get("n"), int) and not isinstance(v["n"], bool)
++            and isinstance(v.get("n_accessible"), int) and not isinstance(v["n_accessible"], bool) and 0 <= v["n_accessible"] <= v["n"]
++            and (v.get("capable") is None or isinstance(v.get("capable"), bool)))
++
++
++def state_problems(s, *, presentation: dict | None = None) -> list:
++    """A34-A2 2(b): validity of one captured state. [] = valid. Every field the override relies on must be present, of the right kind and
++    finite; the stored summary / symbolic shas must match the content; summary lines must have the A14a syntax; the evaluator labels must
++    hold a non-empty goal-clause map (str -> bool) and the reset flag; the feasibility record must hold one well-formed verdict per
++    reference-plan step. `presentation` = {"plan": [steps], "goal_clauses": [clause texts]} binds them to the ACTUAL presentation: exactly one complete
++    verdict per reference-plan step with that step's action / object type / destination type, and the labels keyed by exactly the
++    presentation's own goal clauses (Astra ACC2-IMPL-r2 1 / r3 1). An override always passes it; without it the state is never override-valid (see a34_override)."""
++    out = []
++    if not isinstance(s, dict) or s.get("schema") != STATE_SCHEMA:
++        return [f"not a {STATE_SCHEMA}"]
++    objs = s.get("objects")
++    if not isinstance(objs, dict) or not objs:
++        out.append("objects missing or empty")
++        objs = {}
++    for n, r in objs.items():
++        tag = f"object {str(n)[:40]}"
++        if not isinstance(r, dict) or any(k not in r for k in _OBJ_KEYS):
++            out.append(f"{tag}: missing field")
++            continue
++        if not isinstance(r["type"], str) or not r["type"]:
++            out.append(f"{tag}: type")
++        if not _finite_list(r["pos"]) or not _finite_list(r["rot"]):
++            out.append(f"{tag}: pose missing / not finite")
++        if not isinstance(r["flags"], dict) or sorted(r["flags"]) != sorted(FLAGS) or not all(isinstance(v, bool) for v in r["flags"].values()):
++            out.append(f"{tag}: flags")
++        if not all(isinstance(r[k], list) and all(isinstance(x, str) for x in r[k]) for k in ("caps", "parents", "contains")):
++            out.append(f"{tag}: caps / parents / contains")
++        if not isinstance(r["accessible"], bool):
++            out.append(f"{tag}: accessible")
++    ag = s.get("agent")
++    if (not isinstance(ag, dict) or not _finite_list(ag.get("position")) or not _finite_list(ag.get("rotation"))
++            or not _finite(ag.get("horizon")) or not isinstance(ag.get("standing"), bool)):
++        out.append("agent pose missing / malformed / not finite")
++    sm = s.get("summary")
++    if not isinstance(sm, list) or not sm or not all(isinstance(x, str) and x for x in sm):
++        out.append("summary missing / empty / malformed")
++    else:
++        if s.get("summary_sha") != sha256_text("\n".join(sm)):
++            out.append("summary_sha does not match the summary")
++        bad = [i for i, x in enumerate(sm) if not _summary_line_ok(x)]
++        if bad:
++            out.append(f"summary line(s) {bad[:4]} malformed (coordinate pair / non-finite token)")
++    st = s.get("seen_types")
++    if not isinstance(st, list) or not all(isinstance(x, str) and x for x in st) or st != sorted(set(st)):
++        out.append("seen_types missing / malformed")
++    lab = s.get("labels")
++    gc = lab.get("goal_clauses") if isinstance(lab, dict) else None
++    if (not isinstance(gc, dict) or not gc or not all(isinstance(k, str) and k and isinstance(v, bool) for k, v in gc.items())
++            or not isinstance(lab.get("goal_true_at_reset"), bool) or not _all_finite(lab) or sorted(lab) != ["goal_clauses", "goal_true_at_reset"]):
++        out.append("labels missing / incomplete (exactly goal_clauses str -> bool and goal_true_at_reset bool)")
++    elif presentation is not None:
++        want = presentation.get("goal_clauses") if isinstance(presentation, dict) else None
++        if (not isinstance(want, list) or not want or sorted(gc) != sorted(set(want))
++                or lab["goal_true_at_reset"] != all(gc.values())):
++            out.append("labels are not keyed by the presentation's own goal clauses (or the reset flag is inconsistent)")
++    fe = s.get("feasibility")
++    if not isinstance(fe, dict) or not fe or not _all_finite(fe):
++        out.append("feasibility missing / empty / not finite")
++    else:
++        keys_ok = sorted(fe) == [f"{i:02d}" for i in range(len(fe))]
++        if not keys_ok:
++            out.append("feasibility steps are not 00..NN")
++        if not all(isinstance(v, dict) and isinstance(v.get("action"), str) and v["action"] and "object" in v and "to" in v
++                   and _feas_info_ok(v.get("object")) and _feas_info_ok(v.get("to")) for v in fe.values()):
++            out.append("feasibility verdict malformed")
++        elif presentation is not None and keys_ok:
++            plan = presentation.get("plan") if isinstance(presentation, dict) else None
++            if not isinstance(plan, list) or len(fe) != len(plan):
++                out.append("feasibility does not have one verdict per step of the presentation's reference plan")
++            else:
++                for i, st_ in enumerate(plan):
++                    st_ = st_ if isinstance(st_, dict) else {"action": str(st_)}
++                    v = fe[f"{i:02d}"]
++                    if (v["action"] != str(st_.get("action")) or (v["object"] or {}).get("type") != st_.get("object")
++                            or (v["to"] or {}).get("type") != st_.get("to")):
++                        out.append(f"feasibility step {i:02d} is not the presentation's reference-plan step")
++                        break
++    if not out:
++        try:
++            if s.get("symbolic_sha") != sha256_text(canon(symbolic_part(s))):
++                out.append("symbolic_sha does not match the state")
++        except Exception as e:                                     # noqa: BLE001 -- unreadable = invalid
++            out.append(f"symbolic part unreadable ({type(e).__name__})")
++    return out
++
++
++def pipeline_problems(obs) -> list:
++    """A34-A2 2(b): one episode's observation-pipeline record (obs_health.record) is present and healthy. [] = valid."""
++    if not isinstance(obs, dict) or obs.get("schema") != OBS_PIPELINE_SCHEMA:
++        return ["observation-pipeline record missing"]
++    out = []
++    if not isinstance(obs.get("treatment_id"), str) or not _HEX64.match(obs["treatment_id"]):
++        out.append("treatment id missing")
++    sp = obs.get("sweep_prims")
++    if not isinstance(sp, int) or isinstance(sp, bool) or sp <= 0:
++        out.append("sweep length missing")
++    h = obs.get("health")
++    if not isinstance(h, dict) or not _all_finite(h):
++        return out + ["pipeline health evidence missing"]
++    dc, sc, se = h.get("detect_calls"), h.get("state_calls"), h.get("state_errors")
++    if not all(isinstance(x, int) and not isinstance(x, bool) and x >= 0 for x in (dc, sc, se)):
++        out.append("pipeline health counters malformed")
++    else:
++        if dc == 0:
++            out.append("the detector never ran during the sweep")
++        if se != 0:
++            out.append(f"{se} state-classifier failure(s) during the sweep (swallowed by the detector)")
++    cf = h.get("configs")
++    ok_cf = isinstance(cf, list) and cf and all(
++        isinstance(c, list) and len(c) == 5 and c[0] in ("auto", "off", "always") and isinstance(c[1], str) and c[1]
++        and (c[2] is None or (isinstance(c[2], str) and c[2])) and isinstance(c[3], bool) and _finite(c[4]) and 0 < c[4] < 1 for c in cf)
++    if not ok_cf:
++        out.append("effective detector configuration missing / malformed")
++    elif not out:
++        n_state = sum(1 for c in cf if c[3])
++        if n_state == len(cf) and sc != dc:
++            out.append(f"the state stage is enabled but ran {sc} time(s) for {dc} detector call(s)")
++        elif n_state == 0 and sc != 0:
++            out.append("state-stage calls without a state-enabled configuration")
++        elif 0 < n_state < len(cf) and not 0 < sc <= dc:
++            out.append("state-stage call count inconsistent with the mixed configuration")
++    return out
++
++
++def pipeline_settings(obs: dict) -> str:
++    """The frozen settings an observation pipeline ran with: treatment identity (code + weights), the effective detector configuration(s)
++    and the sweep length. Equal on both sides is condition 2(b)'s 'identical frozen settings'."""
++    return sha256_text(canon({"treatment_id": obs.get("treatment_id"), "configs": (obs.get("health") or {}).get("configs"),
++                              "sweep_prims": obs.get("sweep_prims")}))
++
++
++def world_snapshot(s: dict) -> dict:
++    """A34-A2 2(c): the canonical WORLD-ONLY snapshot at the stored precision (objects 1e-5, agent 1e-4, as captured). Nothing derived
++    from the observation pipeline (summary, seen types, task types) enters it."""
++    return {"objects": {n: {k: r[k] for k in _OBJ_KEYS} for n, r in sorted(s["objects"].items())},
++            "agent": {k: s["agent"][k] for k in ("position", "rotation", "horizon", "standing")},
++            "labels": s["labels"], "feasibility": s["feasibility"]}
++
++
++def obs_drift_record(a: dict, b: dict, breaches: list, obs_a=None, obs_b=None) -> dict:
++    """A34-A2 rule 3, COMPLETE (nothing truncated): types only in A / only in B, every differing summary row, every coordinate delta,
++    every breach, both pipelines' settings ids."""
++    ca, cb = collections.Counter(a["summary"]), collections.Counter(b["summary"])
++    rows_a, rows_b = sorted((ca - cb).elements()), sorted((cb - ca).elements())
++    deltas = []
++    sa, sb = _strip_coords(a["summary"]), _strip_coords(b["summary"])
++    ib = collections.defaultdict(list)
++    for j, x in enumerate(sb):
++        ib[x].append(j)
++    for i, x in enumerate(sa):                                     # rows equal up to the (x, z) pairs: their coordinate delta
++        if ib.get(x):
++            j = ib[x].pop(0)
++            pa, pb = _summary_coords([a["summary"][i]])[0], _summary_coords([b["summary"][j]])[0]
++            if len(pa) == len(pb):
++                d = max((math.hypot(p[0] - q[0], p[1] - q[1]) for p, q in zip(pa, pb)), default=0.0)
++                if d > 0:
++                    deltas.append({"row": _lead(a["summary"][i]), "delta_m": round(d, 4)})
++    return {"amendment": A34_AMENDMENT, "kinds": sorted({str(x.get("kind")) for x in breaches}),
++            "types_only_a": sorted(set(a["seen_types"]) - set(b["seen_types"])),
++            "types_only_b": sorted(set(b["seen_types"]) - set(a["seen_types"])),
++            "summary_rows_only_a": rows_a, "summary_rows_only_b": rows_b, "n_rows_differing": len(rows_a) + len(rows_b),
++            "positional_diffs": [{"i": i, "a": x, "b": y} for i, (x, y) in enumerate(itertools.zip_longest(a["summary"], b["summary"])) if x != y],
++            "coord_deltas": deltas, "max_coord_delta_m": max((d["delta_m"] for d in deltas), default=0.0),
++            "breaches": [dict(x) for x in breaches], "n_breaches": len(breaches),
++            "summary_sha_a": a["summary_sha"], "summary_sha_b": b["summary_sha"],
++            "settings": pipeline_settings(obs_a) if isinstance(obs_a, dict) else None}
++
++
++def obs_drift_problems(d, breaches=None) -> list:
++    """Rule 3 record check (used by acc_runner criterion (d)): required fields, kinds, and internal consistency. [] = complete."""
++    if not isinstance(d, dict) or d.get("amendment") != A34_AMENDMENT:
++        return ["no A34-A2 obs_drift record"]
++    out = []
++    for k, t in (("kinds", list), ("types_only_a", list), ("types_only_b", list), ("summary_rows_only_a", list), ("summary_rows_only_b", list),
++                 ("coord_deltas", list), ("breaches", list), ("n_rows_differing", int), ("n_breaches", int), ("max_coord_delta_m", (int, float)),
++                 ("summary_sha_a", str), ("summary_sha_b", str), ("settings", str), ("positional_diffs", list)):
++        if not isinstance(d.get(k), t) or isinstance(d.get(k), bool):
++            out.append(f"obs_drift.{k} missing / malformed")
++    if out:
++        return out
++    br = d["breaches"]
++    if not br or len(br) != d["n_breaches"] or any(not isinstance(x, dict) or x.get("kind") not in OBS_KINDS for x in br):
++        out.append("obs_drift breaches missing / not observation-only")
++    if d["kinds"] != sorted({x.get("kind") for x in br if isinstance(x, dict)}):
++        out.append("obs_drift kinds do not match its breaches")
++    if breaches is not None and [dict(x) for x in breaches][:len(br)] != br[:len(breaches)]:
++        out.append("obs_drift breaches differ from the state check's breaches")
++    if d["n_rows_differing"] != len(d["summary_rows_only_a"]) + len(d["summary_rows_only_b"]):
++        out.append("obs_drift row count inconsistent")
++    if "seen_types" in d["kinds"] and not (d["types_only_a"] or d["types_only_b"]):
++        out.append("obs_drift: a seen_types breach without the differing types")
++    pdl = d["positional_diffs"]
++    if not all(isinstance(x, dict) and sorted(x) == ["a", "b", "i"] and isinstance(x["i"], int) and not isinstance(x["i"], bool) and x["i"] >= 0
++               and all(v is None or (isinstance(v, str) and _summary_line_ok(v)) for v in (x["a"], x["b"])) and x["a"] != x["b"] for x in pdl):
++        out.append("obs_drift positional differences malformed")
++    elif [x["i"] for x in pdl] != sorted({x["i"] for x in pdl}):
++        out.append("obs_drift positional differences not in order")
++    if "summary" in d["kinds"] and not pdl:
++        out.append("obs_drift: a summary breach without the differing rows")
++    if "summary.coords" in d["kinds"] and not d["coord_deltas"]:
++        out.append("obs_drift: a summary.coords breach without coordinate deltas")
++    if not _all_finite(d):
++        out.append("obs_drift holds a non-finite number")
++    for k in ("types_only_a", "types_only_b"):
++        if not all(isinstance(x, str) and x for x in d[k]) or d[k] != sorted(set(x for x in d[k] if isinstance(x, str))):
++            out.append(f"obs_drift.{k} entries malformed")
++    if {x for x in d["types_only_a"] if isinstance(x, str)} & {x for x in d["types_only_b"] if isinstance(x, str)}:
++        out.append("obs_drift: a type both only-in-A and only-in-B")
++    for k in ("summary_rows_only_a", "summary_rows_only_b"):
++        if not all(isinstance(x, str) and _summary_line_ok(x) for x in d[k]):
++            out.append(f"obs_drift.{k} entries malformed")
++    if not (_HEX64.match(d["summary_sha_a"]) and _HEX64.match(d["summary_sha_b"]) and _HEX64.match(d["settings"])):
++        out.append("obs_drift shas malformed")
++    if (d["summary_sha_a"] == d["summary_sha_b"]) != (not d.get("positional_diffs")):
++        out.append("obs_drift summary shas inconsistent with the recorded row differences")
++    dl = d["coord_deltas"]
++    if not all(isinstance(x, dict) and sorted(x) == ["delta_m", "row"] and isinstance(x["row"], str) and x["row"] and _finite(x["delta_m"])
++               and x["delta_m"] > 0 for x in dl):
++        out.append("obs_drift coordinate deltas malformed (each {row, delta_m > 0})")
++    elif not _finite(d["max_coord_delta_m"]) or d["max_coord_delta_m"] != max((x["delta_m"] for x in dl), default=0.0):
++        out.append("obs_drift maximum coordinate delta inconsistent")
++    for x in br:
++        if not isinstance(x, dict):
++            continue
++        if x.get("kind") == "seen_types" and (x.get("only_a") != d["types_only_a"] or x.get("only_b") != d["types_only_b"]):
++            out.append("obs_drift types do not reconcile with the seen_types breach")
++        if x.get("kind") == "summary.coords" and not (_finite(x.get("delta")) and x["delta"] <= d["max_coord_delta_m"] + 1e-9):
++            out.append("obs_drift deltas do not reconcile with the summary.coords breach")
++    if "seen_types" not in d["kinds"] and (d["types_only_a"] or d["types_only_b"]):
++        out.append("obs_drift: differing types without a seen_types breach")
++    return out
++
++
++def a34_override(a, b, breaches, *, obs_a, obs_b, presentation: dict | None = None) -> dict:
++    """A34-A2 rule 2. `breaches` = the COMPLETE breach set of the registered comparison plus every further pre-execution check (e.g. the
++    holding checks of execute.replay_precondition). obs_a / obs_b = the two episodes' observation-pipeline records (obs_health.record).
++    -> {"override": bool, "why": [reasons it does not apply], "obs_drift": record|None}. An empty breach set is no override."""
++    if not isinstance(breaches, list) or not breaches:
++        return {"override": False, "why": ["no breach: an ordinary pass, nothing to override"], "obs_drift": None}
++    why = []
++    kinds = [x.get("kind") if isinstance(x, dict) else None for x in breaches]
++    bad = sorted({str(k) for k in kinds if k not in OBS_KINDS})
++    if bad:
++        why.append(f"(a) non-observation breach kind(s): {bad[:6]}")
++    invalid = False
++    if not isinstance(presentation, dict):
++        why.append("(b) the presentation (reference plan + goal count) the captures must be bound to is missing")
++    for tag, s in (("a", a), ("b", b)):
++        p = state_problems(s, presentation=presentation if isinstance(presentation, dict) else None)
++        if p:
++            invalid = True
++            why.append(f"(b) capture {tag} invalid: {p[:3]}")
++    pa, pb = pipeline_problems(obs_a), pipeline_problems(obs_b)
++    if pa:
++        why.append(f"(b) observation pipeline a invalid: {pa[:3]}")
++    if pb:
++        why.append(f"(b) observation pipeline b invalid: {pb[:3]}")
++    if not pa and not pb and pipeline_settings(obs_a) != pipeline_settings(obs_b):
++        why.append("(b) the observation pipelines ran with different settings (treatment identity / detector configuration / sweep length)")
++    if not invalid:
++        try:
++            wa, wb = world_snapshot(a), world_snapshot(b)
++            if canon(wa) != canon(wb):
++                diff = sorted(n for n in set(wa["objects"]) | set(wb["objects"]) if wa["objects"].get(n) != wb["objects"].get(n))
++                parts = ([f"objects {diff[:4]}"] if diff else []) + [k for k in ("agent", "labels", "feasibility") if canon(wa[k]) != canon(wb[k])]
++                why.append(f"(c) world snapshots differ: {parts[:5]}")
++        except Exception as e:                                     # noqa: BLE001 -- missing data blocks
++            why.append(f"(c) world snapshot unreadable ({type(e).__name__})")
++    if why:
++        return {"override": False, "why": why, "obs_drift": None}
++    return {"override": True, "why": [], "obs_drift": obs_drift_record(a, b, breaches, obs_a, obs_b)}
++
++
++def compare_a34(a: dict, b: dict, tol: dict, *, obs_a, obs_b, presentation: dict | None = None, extra_breaches=()) -> dict:
++    """The Phase C gate under A34-A2: the registered `compare` first (unchanged), then the override. -> the registered result plus
++    `registered_ok` (the registered verdict incl. extra_breaches), `override`, `override_why`, `obs_drift`; `ok` = registered_ok or override."""
++    r = compare(a, b, tol)
++    br = list(r["breaches"]) + [dict(x) for x in extra_breaches]
++    out = dict(r, breaches=br, registered_ok=not br, override=False, override_why=[], obs_drift=None)
++    if br:
++        ov = a34_override(a, b, br, obs_a=obs_a, obs_b=obs_b, presentation=presentation)
++        out.update(override=ov["override"], override_why=ov["why"], obs_drift=ov["obs_drift"])
++    out["ok"] = out["registered_ok"] or out["override"]
++    return out
++
++
++def validate_a34(pairs: list, tol: dict, *, obs: list, presentations: list | None = None, expected: int = EXPECTED_PAIRS) -> dict:
++    """A34-A2 rule 4, the prospective dev validation: PASS iff there are exactly `expected` pairs and in every pair the registered
++    comparison passes or is overridden under rule 2. `obs` = [(obs_a, obs_b)] per pair. Writes nothing (the registered tolerance file and
++    its one-shot validation stay untouched)."""
++    if len(obs) != len(pairs) or (presentations is not None and len(presentations) != len(pairs)):
++        raise ValueError("one observation-pipeline pair (and presentation) per state pair")
++    passed = overridden = 0
++    bad, drift = [], []
++    kinds = collections.Counter()
++    pipe_bad = []
++    for k, ((a, b), (oa, ob)) in enumerate(zip(pairs, obs)):
++        pl = presentations[k] if presentations is not None else None
++        for tag, o in (("a", oa), ("b", ob)):
++            if pipeline_problems(o):
++                pipe_bad.append({"pair": k, "side": tag, "why": pipeline_problems(o)[:3]})
++        try:
++            r = compare_a34(a, b, tol, obs_a=oa, obs_b=ob, presentation=pl)
++        except Exception as e:                                     # noqa: BLE001 -- malformed data: the pair is blocked, never an escape
++            bad.append({"pair": k, "breaches": [], "why": [f"malformed data ({type(e).__name__}: {str(e)[:80]})"]})
++            continue
++        if r["registered_ok"]:
++            passed += 1
++        elif r["override"]:
++            overridden += 1
++            drift.append(dict(r["obs_drift"], pair=k))
++            for x in r["obs_drift"]["kinds"]:
++                kinds[x] += 1
++        else:
++            bad.append({"pair": k, "breaches": r["breaches"][:5], "why": r["override_why"]})
++    n = len(pairs)
++    return {"amendment": A34_AMENDMENT, "pairs": n, "expected": expected, "registered_pass": passed, "overridden": overridden,
++            "blocked": len(bad), "ok": n == expected and passed + overridden == n, "obs_drift_by_kind": dict(sorted(kinds.items())),
++            "obs_drift_types": dict(sorted(collections.Counter(t for d in drift for t in d["types_only_a"] + d["types_only_b"]).items())),
++            "obs_drift": drift, "failures": bad, "pipeline_problems": pipe_bad}
++
++
+ # ------------------------------------------------------------------------------------------------- calibration
+ def _acc_other(acc: dict, r: dict) -> None:
+     d = r.get("diag") or {}
+@@ -603,6 +986,13 @@
+ 
+ 
+ # ------------------------------------------------------------------------------------------------- CLI
++def _relroot(p: str) -> str:
++    try:
++        return os.path.relpath(os.path.abspath(p), ROOT).replace(os.sep, "/")
++    except ValueError:                                     # another drive (a temporary test directory)
++        return os.path.abspath(p).replace(os.sep, "/")
++
++
+ def _cli(argv=None) -> int:
+     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
+     ap.add_argument("--tolerances", default=DEFAULT_TOL_PATH)
+@@ -619,7 +1009,40 @@
+     p.add_argument("--items", type=int, default=12)
+     p = sub.add_parser("validate")
+     p.add_argument("--pairs", required=True)
++    p = sub.add_parser("validate-a34", help="A34-A2 rule 4 dev validation (read-only: writes only --out, never the tolerance file)")
++    p.add_argument("--pairs", required=True, help='{"pairs": [[stateA, stateB], ...], "obs": [[obsA, obsB], ...], "plan_lens": [...]}')
++    p.add_argument("--out", required=True)
+     a = ap.parse_args(argv)
++    if a.cmd == "validate-a34":
++        d = load_tolerances(a.tolerances, "validated")
++        with open(a.pairs, "rb") as fh:
++            pairs_sha = hashlib.sha256(fh.read()).hexdigest()
++        try:
++            doc = _read(a.pairs)
++            v = validate_a34([tuple(p) for p in doc["pairs"]], d, obs=[tuple(s) for s in doc["obs"]], presentations=doc.get("presentation_specs"))
++        except Exception as e:                                     # noqa: BLE001 -- recorded as a FAILED validation (terminal), then re-raised
++            os.makedirs(os.path.dirname(A34_VALIDATION_LOG), exist_ok=True)
++            with open(A34_VALIDATION_LOG, "a", encoding="utf-8", newline="\n") as f:
++                f.write(json.dumps({"amendment": A34_AMENDMENT, "pairs_file_sha256": pairs_sha, "ok": False,
++                                    "error": f"{type(e).__name__}: {str(e)[:160]}"}, sort_keys=True) + "\n")
++                f.flush()
++                os.fsync(f.fileno())
++            raise
++        v.update(presentations=doc.get("presentations"), pairs_file_sha256=pairs_sha, tolerances_sha256=d.get("sha256"),
++                 tau_pos_m=d.get("tau_pos_m"), tau_rot_deg=d.get("tau_rot_deg"))
++        body = json.dumps(v, indent=1, ensure_ascii=False) + "\n"
++        # the canonical log FIRST (mandatory, fixed path): a failure is recorded before any result file exists
++        os.makedirs(os.path.dirname(A34_VALIDATION_LOG), exist_ok=True)
++        with open(A34_VALIDATION_LOG, "a", encoding="utf-8", newline="\n") as f:
++            f.write(json.dumps({"amendment": A34_AMENDMENT, "pairs_file_sha256": pairs_sha, "result_file": _relroot(a.out),
++                                "result_sha256": hashlib.sha256(body.encode("utf-8")).hexdigest(), "ok": v["ok"], "pairs": v["pairs"],
++                                "registered_pass": v["registered_pass"], "overridden": v["overridden"], "blocked": v["blocked"]}, sort_keys=True) + "\n")
++            f.flush()
++            os.fsync(f.fileno())
++        with open(a.out, "w", encoding="utf-8", newline="\n") as f:
++            f.write(body)
++        print(json.dumps({k: v[k] for k in ("pairs", "registered_pass", "overridden", "blocked", "ok", "obs_drift_by_kind", "obs_drift_types")}))
++        return 0 if v["ok"] else 2
+     if a.cmd == "show":
+         print(json.dumps(load_tolerances(a.tolerances, "any"), indent=2, ensure_ascii=False))
+         return 0

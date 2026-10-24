@@ -1,0 +1,206 @@
+{
+ "schema": "ft.uses-table/1",
+ "version": "r6-v1",
+ "written": "2026-10-13, stage K-A2, before any round-6 planning or execution result",
+ "vocabulary": "FloorPlan1's detector type list (docs/final-test/matrix/detector_types.json, 49 types) minus the D2 exclusion; type names only, the 30-kitchen inventory was not read",
+ "template": "<Type>: <one short use phrase>[; <at most one more>]. English only, general kitchen knowledge; no item text, no reference plan, no ranking",
+ "order": "alphabetical by type name (fixed)",
+ "capability_rule": "everyday use only; a row never grants a simulator capability (the skill contracts decide what an action can do)",
+ "excluded": {
+  "Knife": "archived by amendment R6-D2 (not shown to any agent)"
+ },
+ "rows": [
+  {
+   "type": "Apple",
+   "use": "a fruit to eat raw or cook"
+  },
+  {
+   "type": "Book",
+   "use": "something to read"
+  },
+  {
+   "type": "Bottle",
+   "use": "holds a drink or another liquid"
+  },
+  {
+   "type": "Bowl",
+   "use": "holds soup, cereal or salad to eat or serve"
+  },
+  {
+   "type": "Bread",
+   "use": "food to eat; can be sliced or toasted"
+  },
+  {
+   "type": "ButterKnife",
+   "use": "spreads butter or jam; can cut soft food"
+  },
+  {
+   "type": "Cabinet",
+   "use": "stores dishes, food and other things behind a door"
+  },
+  {
+   "type": "CoffeeMachine",
+   "use": "makes coffee into a cup or mug"
+  },
+  {
+   "type": "CounterTop",
+   "use": "a work surface to set things on and prepare food"
+  },
+  {
+   "type": "CreditCard",
+   "use": "pays for things"
+  },
+  {
+   "type": "Cup",
+   "use": "holds a drink"
+  },
+  {
+   "type": "DishSponge",
+   "use": "scrubs and cleans dishes"
+  },
+  {
+   "type": "Drawer",
+   "use": "stores cutlery and small utensils"
+  },
+  {
+   "type": "Egg",
+   "use": "food to cook; can be fried or boiled"
+  },
+  {
+   "type": "Faucet",
+   "use": "gives running water at the sink"
+  },
+  {
+   "type": "Floor",
+   "use": "the ground you walk on"
+  },
+  {
+   "type": "Fork",
+   "use": "picks up food to eat it"
+  },
+  {
+   "type": "Fridge",
+   "use": "keeps food and drinks cold"
+  },
+  {
+   "type": "GarbageCan",
+   "use": "takes rubbish and spoiled food"
+  },
+  {
+   "type": "HousePlant",
+   "use": "a potted plant for decoration"
+  },
+  {
+   "type": "Kettle",
+   "use": "boils water"
+  },
+  {
+   "type": "Lettuce",
+   "use": "a leafy vegetable for salads"
+  },
+  {
+   "type": "LightSwitch",
+   "use": "turns the room light on or off"
+  },
+  {
+   "type": "Microwave",
+   "use": "heats food and drinks"
+  },
+  {
+   "type": "Mug",
+   "use": "holds a hot drink"
+  },
+  {
+   "type": "Pan",
+   "use": "fries or sautes food on a stove burner"
+  },
+  {
+   "type": "PaperTowelRoll",
+   "use": "wipes up spills; dries hands"
+  },
+  {
+   "type": "PepperShaker",
+   "use": "seasons food with pepper"
+  },
+  {
+   "type": "Plate",
+   "use": "holds food to eat or serve"
+  },
+  {
+   "type": "Pot",
+   "use": "boils or cooks food on a stove burner"
+  },
+  {
+   "type": "Potato",
+   "use": "a vegetable to cook"
+  },
+  {
+   "type": "SaltShaker",
+   "use": "seasons food with salt"
+  },
+  {
+   "type": "Shelf",
+   "use": "holds things on display or in storage"
+  },
+  {
+   "type": "ShelvingUnit",
+   "use": "holds things on several shelves"
+  },
+  {
+   "type": "Sink",
+   "use": "the basin and tap area for washing"
+  },
+  {
+   "type": "SinkBasin",
+   "use": "where dishes and food get washed"
+  },
+  {
+   "type": "SoapBottle",
+   "use": "holds soap for washing hands or dishes"
+  },
+  {
+   "type": "Spatula",
+   "use": "flips or turns food in a pan"
+  },
+  {
+   "type": "Spoon",
+   "use": "stirs or scoops; eats soup"
+  },
+  {
+   "type": "Statue",
+   "use": "a decoration"
+  },
+  {
+   "type": "Stool",
+   "use": "a seat"
+  },
+  {
+   "type": "StoveBurner",
+   "use": "heats a pot or pan for cooking"
+  },
+  {
+   "type": "StoveKnob",
+   "use": "turns a stove burner on or off"
+  },
+  {
+   "type": "Toaster",
+   "use": "toasts bread"
+  },
+  {
+   "type": "Tomato",
+   "use": "a vegetable for salads or cooking"
+  },
+  {
+   "type": "Vase",
+   "use": "holds flowers"
+  },
+  {
+   "type": "Window",
+   "use": "lets in light and air"
+  },
+  {
+   "type": "WineBottle",
+   "use": "holds wine"
+  }
+ ]
+}

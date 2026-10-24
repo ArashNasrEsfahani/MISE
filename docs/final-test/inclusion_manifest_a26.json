@@ -1,0 +1,1308 @@
+{
+ "schema": "a26.inclusion/1",
+ "date": "2026-10-13",
+ "stage": "K-B2b",
+ "note": "A26 item 4 effective inclusion manifest: the original split manifest with the archived ids removed; no reshuffle of any surviving assignment. split_manifest.json is kept unchanged as the archived original (historical replay). Families are not regrouped (sim/final_test_split.py not re-run).",
+ "base_split_manifest": {
+  "path": "docs/final-test/split_manifest.json",
+  "sha256": "c1ec1b62d58932e630b8bfb2966e6c2e9d590b010244ec48156c9166b39ca3d9",
+  "self_sha256": "09c7da232244c4fbec20ff98b47a1a459efff1308f29481aa09961a621e2794f",
+  "dataset_sha256": "956f0ae8b11cde18b14364224e394819248f80f4c0c6fb19e379e6bde53d3aa6"
+ },
+ "dataset": {
+  "path": "sim/dataset/general.json",
+  "sha256": "7df9a9251d0d3b9d0b94f698ae2da35c89c464fa5e2dba235abf4b4d6cb13790",
+  "version": 2,
+  "archived_original": {
+   "path": "sim/dataset/archive/general.v1.956f0ae8.json",
+   "sha256": "956f0ae8b11cde18b14364224e394819248f80f4c0c6fb19e379e6bde53d3aa6"
+  },
+  "history": [
+   {
+    "sha256": "42287065ef2d4813188a54de252b149f780789f0f51d21f8e8b1e7d1e8a423b3",
+    "stage": "K-B2b",
+    "date": "2026-10-13",
+    "what": "A26 successor (archived ids removed; items (8)/(9) updated)"
+   },
+   {
+    "sha256": "7df9a9251d0d3b9d0b94f698ae2da35c89c464fa5e2dba235abf4b4d6cb13790",
+    "stage": "ACC-ADD",
+    "date": "2026-10-14",
+    "what": "10 approved new L3 acceptance items appended (8 main + 2 spares); no existing item changed"
+   }
+  ]
+ },
+ "archived": [
+  "g-l1-pickup-knife",
+  "g-l2-drawer-knife",
+  "g-l2-find-pickup-knife",
+  "g-l3-cutlery-sink",
+  "g-l3-set-table",
+  "g-l3-tool-cut"
+ ],
+ "groups": {
+  "test": [
+   "g-l1-break-egg",
+   "g-l1-break-mug",
+   "g-l1-break-plate",
+   "g-l1-clean-bowl",
+   "g-l1-clean-cup",
+   "g-l1-clean-mug",
+   "g-l1-clean-pan",
+   "g-l1-clean-plate",
+   "g-l1-clean-pot",
+   "g-l1-close-drawer",
+   "g-l1-close-fridge",
+   "g-l1-close-microwave",
+   "g-l1-crouch",
+   "g-l1-dirty-bowl",
+   "g-l1-dirty-cup",
+   "g-l1-dirty-mug",
+   "g-l1-dirty-pan",
+   "g-l1-dirty-plate",
+   "g-l1-dirty-pot",
+   "g-l1-drop-apple",
+   "g-l1-drop-bread",
+   "g-l1-drop-dish-sponge",
+   "g-l1-drop-potato",
+   "g-l1-drop-soap-bottle",
+   "g-l1-drop-spoon",
+   "g-l1-empty-bowl",
+   "g-l1-empty-kettle",
+   "g-l1-empty-mug",
+   "g-l1-empty-pot",
+   "g-l1-fill-bowl-wine",
+   "g-l1-fill-cup-coffee",
+   "g-l1-fill-mug-coffee",
+   "g-l1-fill-pot-coffee",
+   "g-l1-fill-pot-wine",
+   "g-l1-goto-coffee-machine",
+   "g-l1-goto-garbage-can",
+   "g-l1-goto-light-switch",
+   "g-l1-goto-microwave",
+   "g-l1-goto-sink-basin",
+   "g-l1-goto-stove-burner",
+   "g-l1-open-cabinet",
+   "g-l1-open-drawer",
+   "g-l1-open-fridge",
+   "g-l1-open-microwave",
+   "g-l1-slice-apple",
+   "g-l1-slice-lettuce",
+   "g-l1-stand",
+   "g-l2-clean-plate-bowl",
+   "g-l2-close-all-light-off",
+   "g-l2-close-fridge-faucet-off",
+   "g-l2-close-microwave-light-on",
+   "g-l2-coffee-machine",
+   "g-l2-coffee-on-pickup-mug",
+   "g-l2-cook-potato-bowl",
+   "g-l2-cook-potato-counter-top",
+   "g-l2-cook-potato-pan",
+   "g-l2-cook-potato-plate",
+   "g-l2-dirty-pan-faucet-on",
+   "g-l2-empty-cup-wine",
+   "g-l2-faucet-on-light-off",
+   "g-l2-faucet-on-pickup-sponge",
+   "g-l2-fill-place-bowl-water-sink-basin",
+   "g-l2-fill-place-cup-water-counter-top",
+   "g-l2-fill-place-cup-water-fridge",
+   "g-l2-fill-place-mug-coffee-counter-top",
+   "g-l2-fill-place-mug-water-microwave",
+   "g-l2-knife-bread-toaster",
+   "g-l2-light-fridge-egg",
+   "g-l2-light-off-open-fridge",
+   "g-l2-mug-water-sink",
+   "g-l2-open-cabinet-drawer",
+   "g-l2-open-fridge-microwave",
+   "g-l2-open-fridge-pickup-apple",
+   "g-l2-open-microwave-pickup-potato",
+   "g-l2-salt-then-light-off",
+   "g-l2-slice-bread",
+   "g-l2-stove-off-close-fridge",
+   "g-l2-stove-pan",
+   "g-l2-stove-pot",
+   "g-l2-stove-then-microwave",
+   "g-l2-stove-water-kettle",
+   "g-l2-stove-water-pot",
+   "g-l2-three-appliances",
+   "g-l2-three-doors",
+   "g-l2-toaster-coffee-off",
+   "g-l2-toaster-on-open-cabinet",
+   "g-l2-toaster-then-coffee",
+   "g-l2-two-apple-lettuce-fridge",
+   "g-l2-two-apple-potato-garbage-can",
+   "g-l2-two-cup-bowl-sink-basin",
+   "g-l2-two-egg-tomato-garbage-can",
+   "g-l2-wash-bowl",
+   "g-l2-wash-cup",
+   "g-l2-wash-mug",
+   "g-l2-wash-pan",
+   "g-l2-wash-plate",
+   "g-l2-wash-pot",
+   "g-l3-boil-water",
+   "g-l3-chilled-water",
+   "g-l3-coffee",
+   "g-l3-cookware",
+   "g-l3-dirty-cups",
+   "g-l3-dishes",
+   "g-l3-fridge-and-water",
+   "g-l3-hot-tomato",
+   "g-l3-leaving-house",
+   "g-l3-old-produce",
+   "g-l3-old-water",
+   "g-l3-omelette-egg",
+   "g-l3-pan-heating",
+   "g-l3-pot-heating",
+   "g-l3-potato-for-frying",
+   "g-l3-sandwich-prep",
+   "g-l3-save-power",
+   "g-l3-seasoning-away",
+   "g-l3-serve-cooked-potato",
+   "g-l3-shred-lettuce",
+   "g-l3-stale-coffee",
+   "g-l3-tea-kettle",
+   "g-l3-thirsty",
+   "g-l3-toast",
+   "g-l3-tomato-for-salad",
+   "g-l3-warm-apple",
+   "g-l3-warm-bread",
+   "g-l3-warm-potato"
+  ],
+  "test_uncapped_not_scored": [
+   "g-l1-drop-fork",
+   "g-l1-drop-spatula",
+   "g-l1-empty-cup",
+   "g-l1-fill-bowl-coffee",
+   "g-l1-fill-bowl-water",
+   "g-l1-fill-cup-water",
+   "g-l1-fill-cup-wine",
+   "g-l1-fill-kettle-water",
+   "g-l1-fill-mug-water",
+   "g-l1-fill-mug-wine",
+   "g-l1-fill-pot-water",
+   "g-l1-slice-bread",
+   "g-l1-slice-potato",
+   "g-l1-slice-tomato",
+   "g-l2-slice-apple",
+   "g-l2-slice-lettuce",
+   "g-l2-slice-potato",
+   "g-l2-slice-tomato",
+   "g-l2-two-fork-spoon-sink-basin",
+   "g-l2-two-plate-mug-sink-basin",
+   "g-l2-two-tomato-egg-fridge",
+   "g-l3-apple-slices",
+   "g-l3-bread-for-breakfast",
+   "g-l3-cutlery-away",
+   "g-l3-keep-cold",
+   "g-l3-wine"
+  ],
+  "nontest": [
+   "g-l1-close-cabinet",
+   "g-l1-off-coffee-machine",
+   "g-l1-off-faucet",
+   "g-l1-off-light",
+   "g-l1-off-microwave",
+   "g-l1-off-stove-knob",
+   "g-l1-off-toaster",
+   "g-l1-on-coffee-machine",
+   "g-l1-on-faucet",
+   "g-l1-on-light",
+   "g-l1-on-microwave",
+   "g-l1-on-stove-knob",
+   "g-l1-on-toaster",
+   "g-l1-pickup-apple",
+   "g-l1-pickup-bowl",
+   "g-l1-pickup-bread",
+   "g-l1-pickup-butter-knife",
+   "g-l1-pickup-cup",
+   "g-l1-pickup-dish-sponge",
+   "g-l1-pickup-egg",
+   "g-l1-pickup-fork",
+   "g-l1-pickup-kettle",
+   "g-l1-pickup-lettuce",
+   "g-l1-pickup-mug",
+   "g-l1-pickup-pan",
+   "g-l1-pickup-pepper-shaker",
+   "g-l1-pickup-plate",
+   "g-l1-pickup-pot",
+   "g-l1-pickup-potato",
+   "g-l1-pickup-salt-shaker",
+   "g-l1-pickup-soap-bottle",
+   "g-l1-pickup-spatula",
+   "g-l1-pickup-spoon",
+   "g-l1-pickup-tomato",
+   "g-l1-place-apple-sink-basin",
+   "g-l1-place-bowl-counter-top",
+   "g-l1-place-bread-counter-top",
+   "g-l1-place-cup-sink-basin",
+   "g-l1-place-egg-garbage-can",
+   "g-l1-place-fork-sink-basin",
+   "g-l1-place-lettuce-sink-basin",
+   "g-l1-place-mug-counter-top",
+   "g-l1-place-plate-counter-top",
+   "g-l1-place-potato-garbage-can",
+   "g-l1-place-spoon-sink-basin",
+   "g-l1-place-tomato-counter-top",
+   "g-l2-break-egg-pickup-fork",
+   "g-l2-cabinet-bowl",
+   "g-l2-cabinet-pepper-shaker",
+   "g-l2-cabinet-salt-shaker",
+   "g-l2-cabinet-soap-bottle",
+   "g-l2-drawer-butter-knife",
+   "g-l2-drawer-spatula",
+   "g-l2-empty-mug-sink",
+   "g-l2-find-pickup-bowl",
+   "g-l2-find-pickup-egg",
+   "g-l2-find-pickup-lettuce",
+   "g-l2-find-pickup-mug",
+   "g-l2-find-pickup-pan",
+   "g-l2-find-pickup-soap-bottle",
+   "g-l2-find-pickup-spoon",
+   "g-l2-find-place-bread-fridge",
+   "g-l2-find-place-cup-sink-basin",
+   "g-l2-find-place-dish-sponge-sink-basin",
+   "g-l2-find-place-fork-sink-basin",
+   "g-l2-find-place-spatula-sink-basin",
+   "g-l2-fridge-apple",
+   "g-l2-fridge-bread",
+   "g-l2-fridge-lettuce",
+   "g-l2-fridge-potato",
+   "g-l2-fridge-tomato",
+   "g-l2-heat-apple-plate",
+   "g-l2-heat-bread-counter-top",
+   "g-l2-heat-egg-bowl",
+   "g-l2-heat-potato-counter-top",
+   "g-l2-heat-potato-plate",
+   "g-l2-heat-tomato-plate",
+   "g-l2-microwave-apple",
+   "g-l2-microwave-bread",
+   "g-l2-microwave-egg",
+   "g-l2-microwave-mug",
+   "g-l2-microwave-potato",
+   "g-l2-microwave-run-bread",
+   "g-l2-microwave-run-egg",
+   "g-l2-microwave-run-potato",
+   "g-l2-microwave-tomato",
+   "g-l2-open-microwave-toaster-on",
+   "g-l2-slice-apple-potato",
+   "g-l2-slice-bread-tomato",
+   "g-l2-slice-potato-tomato",
+   "g-l2-slice-tomato-lettuce",
+   "g-l3-bad-tomato",
+   "g-l3-breakfast",
+   "g-l3-chilled-apple",
+   "g-l3-cold-bread",
+   "g-l3-cold-potato",
+   "g-l3-cold-tomato",
+   "g-l3-groceries",
+   "g-l3-left-open",
+   "g-l3-rotten-egg",
+   "g-l3-salad",
+   "g-l3-serve-hot-egg",
+   "g-l3-serve-hot-potato",
+   "g-l3-stale-bread",
+   "g-l3-too-bright",
+   "g-l3-too-dark",
+   "g-l3-tool-flip",
+   "g-l3-tool-salt",
+   "g-l3-tool-scrub",
+   "g-l3-tool-soap",
+   "g-l3-tool-soup",
+   "g-l3-wilted-lettuce"
+  ],
+  "practice_pool": [
+   "g-l1-close-cabinet",
+   "g-l1-off-coffee-machine",
+   "g-l1-off-faucet",
+   "g-l1-off-light",
+   "g-l1-off-microwave",
+   "g-l1-off-stove-knob",
+   "g-l1-off-toaster",
+   "g-l1-on-coffee-machine",
+   "g-l1-on-faucet",
+   "g-l1-on-light",
+   "g-l1-on-microwave",
+   "g-l1-on-stove-knob",
+   "g-l1-on-toaster",
+   "g-l1-pickup-apple",
+   "g-l1-pickup-bowl",
+   "g-l1-pickup-bread",
+   "g-l1-pickup-butter-knife",
+   "g-l1-pickup-cup",
+   "g-l1-pickup-dish-sponge",
+   "g-l1-pickup-egg",
+   "g-l1-pickup-fork",
+   "g-l1-pickup-kettle",
+   "g-l1-pickup-lettuce",
+   "g-l1-pickup-mug",
+   "g-l1-pickup-pan",
+   "g-l1-pickup-pepper-shaker",
+   "g-l1-pickup-plate",
+   "g-l1-pickup-pot",
+   "g-l1-pickup-potato",
+   "g-l1-pickup-salt-shaker",
+   "g-l1-pickup-soap-bottle",
+   "g-l1-pickup-spatula",
+   "g-l1-pickup-spoon",
+   "g-l1-pickup-tomato",
+   "g-l1-place-apple-sink-basin",
+   "g-l1-place-bowl-counter-top",
+   "g-l1-place-bread-counter-top",
+   "g-l1-place-cup-sink-basin",
+   "g-l1-place-egg-garbage-can",
+   "g-l1-place-fork-sink-basin",
+   "g-l1-place-lettuce-sink-basin",
+   "g-l1-place-mug-counter-top",
+   "g-l1-place-plate-counter-top",
+   "g-l1-place-potato-garbage-can",
+   "g-l1-place-spoon-sink-basin",
+   "g-l1-place-tomato-counter-top",
+   "g-l2-break-egg-pickup-fork",
+   "g-l2-cabinet-bowl",
+   "g-l2-cabinet-pepper-shaker",
+   "g-l2-cabinet-salt-shaker",
+   "g-l2-cabinet-soap-bottle",
+   "g-l2-drawer-butter-knife",
+   "g-l2-drawer-spatula",
+   "g-l2-empty-mug-sink",
+   "g-l2-find-pickup-bowl",
+   "g-l2-find-pickup-egg",
+   "g-l2-find-pickup-lettuce",
+   "g-l2-find-pickup-mug",
+   "g-l2-find-pickup-pan",
+   "g-l2-find-pickup-soap-bottle",
+   "g-l2-find-pickup-spoon",
+   "g-l2-find-place-bread-fridge",
+   "g-l2-find-place-cup-sink-basin",
+   "g-l2-find-place-dish-sponge-sink-basin",
+   "g-l2-find-place-fork-sink-basin",
+   "g-l2-find-place-spatula-sink-basin",
+   "g-l2-fridge-apple",
+   "g-l2-fridge-bread",
+   "g-l2-fridge-lettuce",
+   "g-l2-fridge-potato",
+   "g-l2-fridge-tomato",
+   "g-l2-heat-apple-plate",
+   "g-l2-heat-bread-counter-top",
+   "g-l2-heat-egg-bowl",
+   "g-l2-heat-potato-counter-top",
+   "g-l2-heat-potato-plate",
+   "g-l2-heat-tomato-plate",
+   "g-l2-microwave-apple",
+   "g-l2-microwave-bread",
+   "g-l2-microwave-egg",
+   "g-l2-microwave-mug",
+   "g-l2-microwave-potato",
+   "g-l2-microwave-run-bread",
+   "g-l2-microwave-run-egg",
+   "g-l2-microwave-run-potato",
+   "g-l2-microwave-tomato",
+   "g-l2-open-microwave-toaster-on",
+   "g-l2-slice-apple-potato",
+   "g-l2-slice-bread-tomato",
+   "g-l2-slice-potato-tomato",
+   "g-l2-slice-tomato-lettuce",
+   "g-l3-bad-tomato",
+   "g-l3-breakfast",
+   "g-l3-chilled-apple",
+   "g-l3-cold-bread",
+   "g-l3-cold-potato",
+   "g-l3-cold-tomato",
+   "g-l3-groceries",
+   "g-l3-left-open",
+   "g-l3-rotten-egg",
+   "g-l3-salad",
+   "g-l3-serve-hot-egg",
+   "g-l3-serve-hot-potato",
+   "g-l3-stale-bread",
+   "g-l3-too-bright",
+   "g-l3-too-dark",
+   "g-l3-tool-flip",
+   "g-l3-tool-salt",
+   "g-l3-tool-scrub",
+   "g-l3-tool-soap",
+   "g-l3-tool-soup",
+   "g-l3-wilted-lettuce"
+  ],
+  "dev_pilot": [
+   "g-l1-off-stove-knob",
+   "g-l1-on-stove-knob",
+   "g-l1-place-bowl-counter-top",
+   "g-l1-place-lettuce-sink-basin",
+   "g-l2-find-pickup-lettuce",
+   "g-l2-find-pickup-pan",
+   "g-l2-microwave-run-egg",
+   "g-l2-microwave-run-potato",
+   "g-l3-chilled-apple",
+   "g-l3-tool-flip"
+  ],
+  "repeat_subset": [
+   "g-l1-clean-bowl",
+   "g-l1-clean-cup",
+   "g-l1-clean-mug",
+   "g-l1-clean-plate",
+   "g-l1-dirty-cup",
+   "g-l1-dirty-plate",
+   "g-l1-drop-spoon",
+   "g-l1-goto-microwave",
+   "g-l1-goto-sink-basin",
+   "g-l1-goto-stove-burner",
+   "g-l2-clean-plate-bowl",
+   "g-l2-cook-potato-plate",
+   "g-l2-fill-place-bowl-water-sink-basin",
+   "g-l2-fill-place-mug-coffee-counter-top",
+   "g-l2-stove-pan",
+   "g-l2-stove-then-microwave",
+   "g-l2-three-appliances",
+   "g-l2-toaster-on-open-cabinet",
+   "g-l2-wash-cup",
+   "g-l2-wash-mug",
+   "g-l3-boil-water",
+   "g-l3-chilled-water",
+   "g-l3-cookware",
+   "g-l3-sandwich-prep",
+   "g-l3-save-power",
+   "g-l3-serve-cooked-potato",
+   "g-l3-tea-kettle",
+   "g-l3-tomato-for-salad",
+   "g-l3-warm-apple",
+   "g-l3-warm-bread"
+  ],
+  "relocation_probe": [
+   "g-l1-clean-bowl",
+   "g-l1-dirty-cup",
+   "g-l1-goto-stove-burner",
+   "g-l2-cook-potato-plate",
+   "g-l2-stove-pan",
+   "g-l2-toaster-on-open-cabinet",
+   "g-l2-wash-cup",
+   "g-l3-cookware",
+   "g-l3-sandwich-prep",
+   "g-l3-save-power"
+  ],
+  "excluded_inapplicable": [
+   "g-l1-goto-dining-table",
+   "g-l1-goto-fridge",
+   "g-l1-goto-toaster",
+   "g-l2-cabinet-plate",
+   "g-l2-drawer-fork",
+   "g-l2-drawer-spoon",
+   "g-l2-fill-place-cup-wine-dining-table",
+   "g-l2-fridge-egg"
+  ],
+  "exposed_items": [
+   "g-l1-close-cabinet",
+   "g-l1-pickup-apple",
+   "g-l1-pickup-bread",
+   "g-l1-pickup-dish-sponge",
+   "g-l1-pickup-potato",
+   "g-l2-fridge-apple",
+   "g-l3-chilled-apple",
+   "g-l3-cold-tomato"
+  ]
+ },
+ "families": [
+  {
+   "family": "g-l1-break-egg",
+   "level": "L1",
+   "role": "test",
+   "items": [
+    "g-l1-break-egg",
+    "g-l1-break-mug",
+    "g-l1-break-plate",
+    "g-l3-omelette-egg"
+   ],
+   "removed": []
+  },
+  {
+   "family": "g-l1-clean-bowl",
+   "level": "L1",
+   "role": "test",
+   "items": [
+    "g-l1-clean-bowl",
+    "g-l1-clean-cup",
+    "g-l1-clean-mug",
+    "g-l1-clean-pan",
+    "g-l1-clean-plate",
+    "g-l1-clean-pot"
+   ],
+   "removed": []
+  },
+  {
+   "family": "g-l1-close-cabinet",
+   "level": "L2",
+   "role": "nontest-forced",
+   "items": [
+    "g-l1-close-cabinet"
+   ],
+   "removed": []
+  },
+  {
+   "family": "g-l1-close-drawer",
+   "level": "L1",
+   "role": "test",
+   "items": [
+    "g-l1-close-drawer",
+    "g-l1-close-fridge",
+    "g-l1-close-microwave"
+   ],
+   "removed": []
+  },
+  {
+   "family": "g-l1-crouch",
+   "level": "L1",
+   "role": "test",
+   "items": [
+    "g-l1-crouch"
+   ],
+   "removed": []
+  },
+  {
+   "family": "g-l1-dirty-bowl",
+   "level": "L1",
+   "role": "test",
+   "items": [
+    "g-l1-dirty-bowl",
+    "g-l1-dirty-cup",
+    "g-l1-dirty-mug",
+    "g-l1-dirty-pan",
+    "g-l1-dirty-plate",
+    "g-l1-dirty-pot"
+   ],
+   "removed": []
+  },
+  {
+   "family": "g-l1-drop-apple",
+   "level": "L1",
+   "role": "test",
+   "items": [
+    "g-l1-drop-apple",
+    "g-l1-drop-bread",
+    "g-l1-drop-dish-sponge",
+    "g-l1-drop-fork",
+    "g-l1-drop-potato",
+    "g-l1-drop-soap-bottle",
+    "g-l1-drop-spatula",
+    "g-l1-drop-spoon"
+   ],
+   "removed": []
+  },
+  {
+   "family": "g-l1-empty-bowl",
+   "level": "L1",
+   "role": "test",
+   "items": [
+    "g-l1-empty-bowl",
+    "g-l1-empty-cup",
+    "g-l1-empty-kettle",
+    "g-l1-empty-mug",
+    "g-l1-empty-pot",
+    "g-l3-old-water",
+    "g-l3-stale-coffee"
+   ],
+   "removed": []
+  },
+  {
+   "family": "g-l1-fill-bowl-coffee",
+   "level": "L1",
+   "role": "test",
+   "items": [
+    "g-l1-fill-bowl-coffee",
+    "g-l1-fill-bowl-water",
+    "g-l1-fill-bowl-wine",
+    "g-l1-fill-cup-coffee",
+    "g-l1-fill-cup-water",
+    "g-l1-fill-cup-wine",
+    "g-l1-fill-kettle-water",
+    "g-l1-fill-mug-coffee",
+    "g-l1-fill-mug-water",
+    "g-l1-fill-mug-wine",
+    "g-l1-fill-pot-coffee",
+    "g-l1-fill-pot-water",
+    "g-l1-fill-pot-wine",
+    "g-l2-empty-cup-wine",
+    "g-l3-wine"
+   ],
+   "removed": []
+  },
+  {
+   "family": "g-l1-goto-coffee-machine",
+   "level": "L1",
+   "role": "test",
+   "items": [
+    "g-l1-goto-coffee-machine",
+    "g-l1-goto-garbage-can",
+    "g-l1-goto-light-switch",
+    "g-l1-goto-microwave",
+    "g-l1-goto-sink-basin",
+    "g-l1-goto-stove-burner"
+   ],
+   "removed": []
+  },
+  {
+   "family": "g-l1-off-coffee-machine",
+   "level": "L1",
+   "role": "nontest",
+   "items": [
+    "g-l1-off-coffee-machine",
+    "g-l1-off-faucet",
+    "g-l1-off-light",
+    "g-l1-off-microwave",
+    "g-l1-off-stove-knob",
+    "g-l1-off-toaster",
+    "g-l3-too-bright"
+   ],
+   "removed": []
+  },
+  {
+   "family": "g-l1-on-coffee-machine",
+   "level": "L1",
+   "role": "nontest",
+   "items": [
+    "g-l1-on-coffee-machine",
+    "g-l1-on-faucet",
+    "g-l1-on-light",
+    "g-l1-on-microwave",
+    "g-l1-on-stove-knob",
+    "g-l1-on-toaster",
+    "g-l3-too-dark"
+   ],
+   "removed": []
+  },
+  {
+   "family": "g-l1-open-cabinet",
+   "level": "L1",
+   "role": "test",
+   "items": [
+    "g-l1-open-cabinet",
+    "g-l1-open-drawer",
+    "g-l1-open-fridge",
+    "g-l1-open-microwave"
+   ],
+   "removed": []
+  },
+  {
+   "family": "g-l1-pickup-apple",
+   "level": "L1",
+   "role": "nontest-forced",
+   "items": [
+    "g-l1-pickup-apple",
+    "g-l1-pickup-bowl",
+    "g-l1-pickup-bread",
+    "g-l1-pickup-butter-knife",
+    "g-l1-pickup-cup",
+    "g-l1-pickup-dish-sponge",
+    "g-l1-pickup-egg",
+    "g-l1-pickup-fork",
+    "g-l1-pickup-kettle",
+    "g-l1-pickup-lettuce",
+    "g-l1-pickup-mug",
+    "g-l1-pickup-pan",
+    "g-l1-pickup-pepper-shaker",
+    "g-l1-pickup-plate",
+    "g-l1-pickup-pot",
+    "g-l1-pickup-potato",
+    "g-l1-pickup-salt-shaker",
+    "g-l1-pickup-soap-bottle",
+    "g-l1-pickup-spatula",
+    "g-l1-pickup-spoon",
+    "g-l1-pickup-tomato",
+    "g-l2-find-pickup-bowl",
+    "g-l2-find-pickup-egg",
+    "g-l2-find-pickup-lettuce",
+    "g-l2-find-pickup-mug",
+    "g-l2-find-pickup-pan",
+    "g-l2-find-pickup-soap-bottle",
+    "g-l2-find-pickup-spoon",
+    "g-l3-tool-flip",
+    "g-l3-tool-salt",
+    "g-l3-tool-scrub",
+    "g-l3-tool-soap",
+    "g-l3-tool-soup"
+   ],
+   "removed": [
+    "g-l1-pickup-knife",
+    "g-l2-find-pickup-knife",
+    "g-l3-tool-cut"
+   ]
+  },
+  {
+   "family": "g-l1-place-apple-sink-basin",
+   "level": "L1",
+   "role": "nontest",
+   "items": [
+    "g-l1-place-apple-sink-basin",
+    "g-l1-place-bowl-counter-top",
+    "g-l1-place-bread-counter-top",
+    "g-l1-place-cup-sink-basin",
+    "g-l1-place-egg-garbage-can",
+    "g-l1-place-fork-sink-basin",
+    "g-l1-place-lettuce-sink-basin",
+    "g-l1-place-mug-counter-top",
+    "g-l1-place-plate-counter-top",
+    "g-l1-place-potato-garbage-can",
+    "g-l1-place-spoon-sink-basin",
+    "g-l1-place-tomato-counter-top",
+    "g-l2-find-place-bread-fridge",
+    "g-l2-find-place-cup-sink-basin",
+    "g-l2-find-place-dish-sponge-sink-basin",
+    "g-l2-find-place-fork-sink-basin",
+    "g-l2-find-place-spatula-sink-basin",
+    "g-l3-bad-tomato",
+    "g-l3-rotten-egg",
+    "g-l3-stale-bread",
+    "g-l3-wilted-lettuce"
+   ],
+   "removed": []
+  },
+  {
+   "family": "g-l1-slice-apple",
+   "level": "L1",
+   "role": "test",
+   "items": [
+    "g-l1-slice-apple",
+    "g-l1-slice-bread",
+    "g-l1-slice-lettuce",
+    "g-l1-slice-potato",
+    "g-l1-slice-tomato",
+    "g-l2-slice-apple",
+    "g-l2-slice-bread",
+    "g-l2-slice-lettuce",
+    "g-l2-slice-potato",
+    "g-l2-slice-tomato",
+    "g-l3-apple-slices",
+    "g-l3-bread-for-breakfast",
+    "g-l3-potato-for-frying",
+    "g-l3-shred-lettuce",
+    "g-l3-tomato-for-salad"
+   ],
+   "removed": []
+  },
+  {
+   "family": "g-l1-stand",
+   "level": "L1",
+   "role": "test",
+   "items": [
+    "g-l1-stand"
+   ],
+   "removed": []
+  },
+  {
+   "family": "g-l2-break-egg-pickup-fork",
+   "level": "L2",
+   "role": "nontest",
+   "items": [
+    "g-l2-break-egg-pickup-fork"
+   ],
+   "removed": []
+  },
+  {
+   "family": "g-l2-cabinet-bowl",
+   "level": "L2",
+   "role": "nontest-forced",
+   "items": [
+    "g-l2-cabinet-bowl",
+    "g-l2-cabinet-pepper-shaker",
+    "g-l2-cabinet-salt-shaker",
+    "g-l2-cabinet-soap-bottle",
+    "g-l2-drawer-butter-knife",
+    "g-l2-drawer-spatula",
+    "g-l2-fridge-apple",
+    "g-l2-fridge-bread",
+    "g-l2-fridge-lettuce",
+    "g-l2-fridge-potato",
+    "g-l2-fridge-tomato",
+    "g-l2-microwave-apple",
+    "g-l2-microwave-bread",
+    "g-l2-microwave-egg",
+    "g-l2-microwave-mug",
+    "g-l2-microwave-potato",
+    "g-l2-microwave-tomato",
+    "g-l3-chilled-apple",
+    "g-l3-cold-bread",
+    "g-l3-cold-potato",
+    "g-l3-cold-tomato"
+   ],
+   "removed": []
+  },
+  {
+   "family": "g-l2-clean-plate-bowl",
+   "level": "L3",
+   "role": "test",
+   "items": [
+    "g-l2-clean-plate-bowl",
+    "g-l3-cookware",
+    "g-l3-dirty-cups",
+    "g-l3-dishes"
+   ],
+   "removed": []
+  },
+  {
+   "family": "g-l2-close-all-light-off",
+   "level": "L2",
+   "role": "test",
+   "items": [
+    "g-l2-close-all-light-off"
+   ],
+   "removed": []
+  },
+  {
+   "family": "g-l2-close-fridge-faucet-off",
+   "level": "L2",
+   "role": "test",
+   "items": [
+    "g-l2-close-fridge-faucet-off",
+    "g-l3-fridge-and-water"
+   ],
+   "removed": []
+  },
+  {
+   "family": "g-l2-close-microwave-light-on",
+   "level": "L2",
+   "role": "test",
+   "items": [
+    "g-l2-close-microwave-light-on"
+   ],
+   "removed": []
+  },
+  {
+   "family": "g-l2-coffee-machine",
+   "level": "L2",
+   "role": "test",
+   "items": [
+    "g-l2-coffee-machine",
+    "g-l2-stove-pan",
+    "g-l2-stove-pot",
+    "g-l3-coffee",
+    "g-l3-pan-heating",
+    "g-l3-pot-heating"
+   ],
+   "removed": []
+  },
+  {
+   "family": "g-l2-coffee-on-pickup-mug",
+   "level": "L2",
+   "role": "test",
+   "items": [
+    "g-l2-coffee-on-pickup-mug",
+    "g-l2-faucet-on-pickup-sponge"
+   ],
+   "removed": []
+  },
+  {
+   "family": "g-l2-cook-potato-bowl",
+   "level": "L2",
+   "role": "test",
+   "items": [
+    "g-l2-cook-potato-bowl",
+    "g-l2-cook-potato-counter-top",
+    "g-l2-cook-potato-pan",
+    "g-l2-cook-potato-plate",
+    "g-l3-serve-cooked-potato"
+   ],
+   "removed": []
+  },
+  {
+   "family": "g-l2-dirty-pan-faucet-on",
+   "level": "L2",
+   "role": "test",
+   "items": [
+    "g-l2-dirty-pan-faucet-on"
+   ],
+   "removed": []
+  },
+  {
+   "family": "g-l2-empty-mug-sink",
+   "level": "L2",
+   "role": "nontest",
+   "items": [
+    "g-l2-empty-mug-sink"
+   ],
+   "removed": []
+  },
+  {
+   "family": "g-l2-faucet-on-light-off",
+   "level": "L2",
+   "role": "test",
+   "items": [
+    "g-l2-faucet-on-light-off"
+   ],
+   "removed": []
+  },
+  {
+   "family": "g-l2-fill-place-bowl-water-sink-basin",
+   "level": "L2",
+   "role": "test",
+   "items": [
+    "g-l2-fill-place-bowl-water-sink-basin",
+    "g-l2-fill-place-cup-water-counter-top",
+    "g-l2-fill-place-cup-water-fridge",
+    "g-l2-fill-place-mug-coffee-counter-top",
+    "g-l2-fill-place-mug-water-microwave"
+   ],
+   "removed": []
+  },
+  {
+   "family": "g-l2-heat-apple-plate",
+   "level": "L2",
+   "role": "nontest",
+   "items": [
+    "g-l2-heat-apple-plate",
+    "g-l2-heat-bread-counter-top",
+    "g-l2-heat-egg-bowl",
+    "g-l2-heat-potato-counter-top",
+    "g-l2-heat-potato-plate",
+    "g-l2-heat-tomato-plate",
+    "g-l3-serve-hot-egg",
+    "g-l3-serve-hot-potato"
+   ],
+   "removed": []
+  },
+  {
+   "family": "g-l2-knife-bread-toaster",
+   "level": "L2",
+   "role": "test",
+   "items": [
+    "g-l2-knife-bread-toaster",
+    "g-l3-toast"
+   ],
+   "removed": []
+  },
+  {
+   "family": "g-l2-light-fridge-egg",
+   "level": "L2",
+   "role": "test",
+   "items": [
+    "g-l2-light-fridge-egg"
+   ],
+   "removed": []
+  },
+  {
+   "family": "g-l2-light-off-open-fridge",
+   "level": "L2",
+   "role": "test",
+   "items": [
+    "g-l2-light-off-open-fridge"
+   ],
+   "removed": []
+  },
+  {
+   "family": "g-l2-microwave-run-bread",
+   "level": "L2",
+   "role": "nontest",
+   "items": [
+    "g-l2-microwave-run-bread",
+    "g-l2-microwave-run-egg",
+    "g-l2-microwave-run-potato"
+   ],
+   "removed": []
+  },
+  {
+   "family": "g-l2-mug-water-sink",
+   "level": "L2",
+   "role": "test",
+   "items": [
+    "g-l2-mug-water-sink"
+   ],
+   "removed": []
+  },
+  {
+   "family": "g-l2-open-cabinet-drawer",
+   "level": "L2",
+   "role": "test",
+   "items": [
+    "g-l2-open-cabinet-drawer",
+    "g-l2-open-fridge-microwave"
+   ],
+   "removed": []
+  },
+  {
+   "family": "g-l2-open-fridge-pickup-apple",
+   "level": "L2",
+   "role": "test",
+   "items": [
+    "g-l2-open-fridge-pickup-apple",
+    "g-l2-open-microwave-pickup-potato"
+   ],
+   "removed": []
+  },
+  {
+   "family": "g-l2-open-microwave-toaster-on",
+   "level": "L2",
+   "role": "nontest",
+   "items": [
+    "g-l2-open-microwave-toaster-on"
+   ],
+   "removed": []
+  },
+  {
+   "family": "g-l2-salt-then-light-off",
+   "level": "L2",
+   "role": "test",
+   "items": [
+    "g-l2-salt-then-light-off"
+   ],
+   "removed": []
+  },
+  {
+   "family": "g-l2-slice-apple-potato",
+   "level": "L2",
+   "role": "nontest",
+   "items": [
+    "g-l2-slice-apple-potato",
+    "g-l2-slice-bread-tomato",
+    "g-l2-slice-potato-tomato",
+    "g-l2-slice-tomato-lettuce",
+    "g-l3-salad"
+   ],
+   "removed": []
+  },
+  {
+   "family": "g-l2-stove-off-close-fridge",
+   "level": "L2",
+   "role": "test",
+   "items": [
+    "g-l2-stove-off-close-fridge"
+   ],
+   "removed": []
+  },
+  {
+   "family": "g-l2-stove-then-microwave",
+   "level": "L2",
+   "role": "test",
+   "items": [
+    "g-l2-stove-then-microwave",
+    "g-l2-toaster-then-coffee"
+   ],
+   "removed": []
+  },
+  {
+   "family": "g-l2-stove-water-kettle",
+   "level": "L2",
+   "role": "test",
+   "items": [
+    "g-l2-stove-water-kettle",
+    "g-l2-stove-water-pot",
+    "g-l3-boil-water",
+    "g-l3-tea-kettle"
+   ],
+   "removed": []
+  },
+  {
+   "family": "g-l2-three-appliances",
+   "level": "L2",
+   "role": "test",
+   "items": [
+    "g-l2-three-appliances"
+   ],
+   "removed": []
+  },
+  {
+   "family": "g-l2-three-doors",
+   "level": "L2",
+   "role": "test",
+   "items": [
+    "g-l2-three-doors"
+   ],
+   "removed": []
+  },
+  {
+   "family": "g-l2-toaster-coffee-off",
+   "level": "L3",
+   "role": "test",
+   "items": [
+    "g-l2-toaster-coffee-off",
+    "g-l3-leaving-house",
+    "g-l3-save-power"
+   ],
+   "removed": []
+  },
+  {
+   "family": "g-l2-toaster-on-open-cabinet",
+   "level": "L2",
+   "role": "test",
+   "items": [
+    "g-l2-toaster-on-open-cabinet"
+   ],
+   "removed": []
+  },
+  {
+   "family": "g-l2-two-apple-lettuce-fridge",
+   "level": "L2",
+   "role": "test",
+   "items": [
+    "g-l2-two-apple-lettuce-fridge",
+    "g-l2-two-apple-potato-garbage-can",
+    "g-l2-two-cup-bowl-sink-basin",
+    "g-l2-two-egg-tomato-garbage-can",
+    "g-l2-two-fork-spoon-sink-basin",
+    "g-l2-two-plate-mug-sink-basin",
+    "g-l2-two-tomato-egg-fridge",
+    "g-l3-cutlery-away",
+    "g-l3-keep-cold",
+    "g-l3-old-produce",
+    "g-l3-seasoning-away"
+   ],
+   "removed": []
+  },
+  {
+   "family": "g-l2-wash-bowl",
+   "level": "L2",
+   "role": "test",
+   "items": [
+    "g-l2-wash-bowl",
+    "g-l2-wash-cup",
+    "g-l2-wash-mug",
+    "g-l2-wash-pan",
+    "g-l2-wash-plate",
+    "g-l2-wash-pot"
+   ],
+   "removed": []
+  },
+  {
+   "family": "g-l3-breakfast",
+   "level": "L3",
+   "role": "nontest",
+   "items": [
+    "g-l3-breakfast"
+   ],
+   "removed": []
+  },
+  {
+   "family": "g-l3-chilled-water",
+   "level": "L3",
+   "role": "test",
+   "items": [
+    "g-l3-chilled-water"
+   ],
+   "removed": []
+  },
+  {
+   "family": "g-l3-cutlery-sink",
+   "level": "L3",
+   "role": "nontest",
+   "items": [
+    "g-l3-groceries"
+   ],
+   "removed": [
+    "g-l3-cutlery-sink"
+   ]
+  },
+  {
+   "family": "g-l3-hot-tomato",
+   "level": "L3",
+   "role": "test",
+   "items": [
+    "g-l3-hot-tomato",
+    "g-l3-warm-apple",
+    "g-l3-warm-bread",
+    "g-l3-warm-potato"
+   ],
+   "removed": []
+  },
+  {
+   "family": "g-l3-left-open",
+   "level": "L3",
+   "role": "nontest",
+   "items": [
+    "g-l3-left-open"
+   ],
+   "removed": []
+  },
+  {
+   "family": "g-l3-sandwich-prep",
+   "level": "L3",
+   "role": "test",
+   "items": [
+    "g-l3-sandwich-prep"
+   ],
+   "removed": []
+  },
+  {
+   "family": "g-l3-thirsty",
+   "level": "L3",
+   "role": "test",
+   "items": [
+    "g-l3-thirsty"
+   ],
+   "removed": []
+  }
+ ],
+ "counts": {
+  "test": 125,
+  "test_uncapped_not_scored": 26,
+  "nontest": 112,
+  "practice_pool": 112,
+  "dev_pilot": 10,
+  "repeat_subset": 30,
+  "relocation_probe": 10,
+  "excluded_inapplicable": 8,
+  "exposed_items": 8
+ },
+ "removed_from": {
+  "nontest": [
+   "g-l1-pickup-knife",
+   "g-l2-find-pickup-knife",
+   "g-l3-cutlery-sink",
+   "g-l3-tool-cut"
+  ],
+  "practice_pool": [
+   "g-l1-pickup-knife",
+   "g-l2-find-pickup-knife",
+   "g-l3-cutlery-sink",
+   "g-l3-tool-cut"
+  ],
+  "dev_pilot": [
+   "g-l3-cutlery-sink",
+   "g-l3-tool-cut"
+  ],
+  "excluded_inapplicable": [
+   "g-l2-drawer-knife",
+   "g-l3-set-table"
+  ]
+ },
+ "acceptance_reserved": {
+  "stage": "ACC-ADD",
+  "date": "2026-10-14",
+  "decision": "docs/final-test/progress.md '2026-10-14 -- ARASH DECISION: card 14 + the three Persian lines ALL APPROVED'",
+  "slate": {
+   "path": "sim/dataset/acceptance_v2_final_proposals.json",
+   "sha256": "174537f6ffd803b7fddbdcf6aa70f3e5071c7d0a727b22f062ba2e3eb68df161"
+  },
+  "items": [
+   "g-l3-a2-egg-mixup",
+   "g-l3-a2-potato-salad",
+   "g-l3-a2-dirty-mug-coffee",
+   "g-l3-a2-microwave-bowl",
+   "g-l3-a2-dinner-done",
+   "g-l3-a2-snack-cleanup",
+   "g-l3-a2-coffee-to-go",
+   "g-l3-a2-muddy-potato",
+   "g-l3-a2-dark-rinse",
+   "g-l3-a2-plant-away"
+  ],
+  "main": [
+   "g-l3-a2-egg-mixup",
+   "g-l3-a2-potato-salad",
+   "g-l3-a2-dirty-mug-coffee",
+   "g-l3-a2-microwave-bowl",
+   "g-l3-a2-dinner-done",
+   "g-l3-a2-snack-cleanup",
+   "g-l3-a2-coffee-to-go",
+   "g-l3-a2-muddy-potato"
+  ],
+  "spares_in_replacement_order": [
+   "g-l3-a2-dark-rinse",
+   "g-l3-a2-plant-away"
+  ],
+  "rule": "Reserved ACCEPTANCE items. They are in NO split group (test, test_uncapped_not_scored, nontest, practice_pool, dev_pilot, repeat_subset, relocation_probe, excluded_inapplicable, exposed_items), so common.guard_items refuses them in every namespace and no manifest-driven builder (nontest_items, load_nontest_items, the early checks, w4a, goalschema measure) sees them; ft-v2 practice also refuses them through practice_k.RESERVED_SOURCES (slate pinned), and the leakage gates (practice needles, capture A31 forbidden set, freeze-gates leakage_audit incl. their gold plans / goals) forbid them. Slate barrier: never package examples, lexicon entries, retrieval templates or practice items. A spare replaces a main item only if Arash drops it BEFORE any acceptance call. The 19 A25 5.2 reserved items keep their split groups and their existing handling (practice_k.RESERVED_SOURCES)."
+ },
+ "amendments": [
+  {
+   "stage": "ACC-ADD",
+   "date": "2026-10-14",
+   "what": "dataset sha re-pinned after the ACC-ADD append; acceptance_reserved block added; groups, counts, families and archived unchanged"
+  }
+ ],
+ "sha256": "ea74fbefd95a26dda08fcc1769728ad16f252adac5346eb3dc7f9ce2feae5994"
+}

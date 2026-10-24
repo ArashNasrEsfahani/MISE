@@ -1,0 +1,9415 @@
+{
+ "version": 2,
+ "successor": {
+  "status": "CANDIDATE - not active. Stage K-B2b applies it together with the rest of the A26 successor version.",
+  "of": "sim/dataset/general.json",
+  "of_sha256": "956f0ae8b11cde18b14364224e394819248f80f4c0c6fb19e379e6bde53d3aa6",
+  "of_version": 1,
+  "proposals": "sim/dataset/knife_to_butterknife_proposals.json",
+  "proposals_sha256": "8aaf0dc904d59865d7a6226207d86c27c449cf7fcffff037fee8640015a537dc",
+  "decisions": "docs/final-test/progress.md, 2026-10-13 ARASH DECISIONS (approval packet), items (8) and (9)",
+  "builder": "sim/dataset/build_general_v2_candidate.py",
+  "rule": "reviewed marks copied unchanged; archived items kept verbatim under 'archived' and tombstoned in 'deleted'; no item added"
+ },
+ "items": [
+  {
+   "id": "g-l1-pickup-apple",
+   "level": "L1",
+   "en": "Pick up the apple.",
+   "fa": "سیب را بردار.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pickup",
+     "object": "Apple",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Apple",
+     "key": "isPickedUp",
+     "value": true
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-pickup-bread",
+   "level": "L1",
+   "en": "Pick up the bread.",
+   "fa": "نان را بردار.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pickup",
+     "object": "Bread",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Bread",
+     "key": "isPickedUp",
+     "value": true
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-pickup-tomato",
+   "level": "L1",
+   "en": "Pick up the tomato.",
+   "fa": "گوجه‌فرنگی را بردار.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pickup",
+     "object": "Tomato",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Tomato",
+     "key": "isPickedUp",
+     "value": true
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-pickup-potato",
+   "level": "L1",
+   "en": "Pick up the potato.",
+   "fa": "سیب‌زمینی را بردار.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pickup",
+     "object": "Potato",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Potato",
+     "key": "isPickedUp",
+     "value": true
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-pickup-egg",
+   "level": "L1",
+   "en": "Pick up the egg.",
+   "fa": "تخم‌مرغ را بردار.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pickup",
+     "object": "Egg",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Egg",
+     "key": "isPickedUp",
+     "value": true
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-pickup-lettuce",
+   "level": "L1",
+   "en": "Pick up the lettuce.",
+   "fa": "کاهو را بردار.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pickup",
+     "object": "Lettuce",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Lettuce",
+     "key": "isPickedUp",
+     "value": true
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-pickup-mug",
+   "level": "L1",
+   "en": "Pick up the mug.",
+   "fa": "لیوان را بردار.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pickup",
+     "object": "Mug",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Mug",
+     "key": "isPickedUp",
+     "value": true
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-pickup-cup",
+   "level": "L1",
+   "en": "Pick up the cup.",
+   "fa": "فنجان را بردار.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pickup",
+     "object": "Cup",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Cup",
+     "key": "isPickedUp",
+     "value": true
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-pickup-bowl",
+   "level": "L1",
+   "en": "Pick up the bowl.",
+   "fa": "کاسه را بردار.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pickup",
+     "object": "Bowl",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Bowl",
+     "key": "isPickedUp",
+     "value": true
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-pickup-plate",
+   "level": "L1",
+   "en": "Pick up the plate.",
+   "fa": "بشقاب را بردار.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pickup",
+     "object": "Plate",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Plate",
+     "key": "isPickedUp",
+     "value": true
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-pickup-pan",
+   "level": "L1",
+   "en": "Pick up the pan.",
+   "fa": "تابه را بردار.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pickup",
+     "object": "Pan",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Pan",
+     "key": "isPickedUp",
+     "value": true
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-pickup-pot",
+   "level": "L1",
+   "en": "Pick up the pot.",
+   "fa": "قابلمه را بردار.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pickup",
+     "object": "Pot",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Pot",
+     "key": "isPickedUp",
+     "value": true
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-pickup-butter-knife",
+   "level": "L1",
+   "en": "Pick up the butter knife.",
+   "fa": "کارد کره‌خوری را بردار.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pickup",
+     "object": "ButterKnife",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "ButterKnife",
+     "key": "isPickedUp",
+     "value": true
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-pickup-fork",
+   "level": "L1",
+   "en": "Pick up the fork.",
+   "fa": "چنگال را بردار.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pickup",
+     "object": "Fork",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Fork",
+     "key": "isPickedUp",
+     "value": true
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-pickup-spoon",
+   "level": "L1",
+   "en": "Pick up the spoon.",
+   "fa": "قاشق را بردار.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pickup",
+     "object": "Spoon",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Spoon",
+     "key": "isPickedUp",
+     "value": true
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-pickup-spatula",
+   "level": "L1",
+   "en": "Pick up the spatula.",
+   "fa": "کفگیر را بردار.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pickup",
+     "object": "Spatula",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Spatula",
+     "key": "isPickedUp",
+     "value": true
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-pickup-dish-sponge",
+   "level": "L1",
+   "en": "Pick up the sponge.",
+   "fa": "اسفنج ظرف‌شویی را بردار.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pickup",
+     "object": "DishSponge",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "DishSponge",
+     "key": "isPickedUp",
+     "value": true
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-pickup-soap-bottle",
+   "level": "L1",
+   "en": "Pick up the soap bottle.",
+   "fa": "صابون مایع را بردار.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pickup",
+     "object": "SoapBottle",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "SoapBottle",
+     "key": "isPickedUp",
+     "value": true
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-pickup-salt-shaker",
+   "level": "L1",
+   "en": "Pick up the salt shaker.",
+   "fa": "نمکدان را بردار.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pickup",
+     "object": "SaltShaker",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "SaltShaker",
+     "key": "isPickedUp",
+     "value": true
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-pickup-pepper-shaker",
+   "level": "L1",
+   "en": "Pick up the pepper shaker.",
+   "fa": "فلفل‌پاش را بردار.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pickup",
+     "object": "PepperShaker",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "PepperShaker",
+     "key": "isPickedUp",
+     "value": true
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-pickup-kettle",
+   "level": "L1",
+   "en": "Pick up the kettle.",
+   "fa": "کتری را بردار.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pickup",
+     "object": "Kettle",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Kettle",
+     "key": "isPickedUp",
+     "value": true
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-open-fridge",
+   "level": "L1",
+   "en": "Open the fridge.",
+   "fa": "در یخچال را باز کن.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "open",
+     "object": "Fridge",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Fridge",
+     "key": "isOpen",
+     "value": true
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-close-fridge",
+   "level": "L1",
+   "en": "Close the fridge.",
+   "fa": "در یخچال را ببند.",
+   "setup": [
+    {
+     "action": "open",
+     "object": "Fridge",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "close",
+     "object": "Fridge",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Fridge",
+     "key": "isOpen",
+     "value": false
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-open-microwave",
+   "level": "L1",
+   "en": "Open the microwave.",
+   "fa": "در مایکروویو را باز کن.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "open",
+     "object": "Microwave",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Microwave",
+     "key": "isOpen",
+     "value": true
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-close-microwave",
+   "level": "L1",
+   "en": "Close the microwave.",
+   "fa": "در مایکروویو را ببند.",
+   "setup": [
+    {
+     "action": "open",
+     "object": "Microwave",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "close",
+     "object": "Microwave",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Microwave",
+     "key": "isOpen",
+     "value": false
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-open-cabinet",
+   "level": "L1",
+   "en": "Open a cabinet.",
+   "fa": "یکی از کابینت‌ها را باز کن.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "open",
+     "object": "Cabinet",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Cabinet",
+     "key": "isOpen",
+     "value": true,
+     "q": "any"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-close-cabinet",
+   "level": "L2",
+   "en": "A cabinet has been left open. Close it.",
+   "fa": "یکی از کابینت‌ها باز مانده است؛ آن را ببند.",
+   "setup": [
+    {
+     "action": "open",
+     "object": "Cabinet",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "close",
+     "object": "Cabinet",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Cabinet",
+     "key": "isOpen",
+     "value": false,
+     "q": "all"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-open-drawer",
+   "level": "L1",
+   "en": "Open a drawer.",
+   "fa": "یکی از کشوها را باز کن.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "open",
+     "object": "Drawer",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Drawer",
+     "key": "isOpen",
+     "value": true,
+     "q": "any"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-close-drawer",
+   "level": "L1",
+   "en": "A drawer has been left open. Close it.",
+   "fa": "یکی از کشوها باز مانده است؛ آن را ببند.",
+   "setup": [
+    {
+     "action": "open",
+     "object": "Drawer",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "close",
+     "object": "Drawer",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Drawer",
+     "key": "isOpen",
+     "value": false,
+     "q": "all"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-on-microwave",
+   "level": "L1",
+   "en": "Turn on the microwave.",
+   "fa": "مایکروویو را روشن کن.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "toggle_on",
+     "object": "Microwave",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Microwave",
+     "key": "isToggled",
+     "value": true
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-off-microwave",
+   "level": "L1",
+   "en": "Turn off the microwave.",
+   "fa": "مایکروویو را خاموش کن.",
+   "setup": [
+    {
+     "action": "toggle_on",
+     "object": "Microwave",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "toggle_off",
+     "object": "Microwave",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Microwave",
+     "key": "isToggled",
+     "value": false
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-on-toaster",
+   "level": "L1",
+   "en": "Turn on the toaster.",
+   "fa": "توستر را روشن کن.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "toggle_on",
+     "object": "Toaster",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Toaster",
+     "key": "isToggled",
+     "value": true
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-off-toaster",
+   "level": "L1",
+   "en": "Turn off the toaster.",
+   "fa": "توستر را خاموش کن.",
+   "setup": [
+    {
+     "action": "toggle_on",
+     "object": "Toaster",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "toggle_off",
+     "object": "Toaster",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Toaster",
+     "key": "isToggled",
+     "value": false
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-on-coffee-machine",
+   "level": "L1",
+   "en": "Turn on the coffee machine.",
+   "fa": "قهوه‌ساز را روشن کن.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "toggle_on",
+     "object": "CoffeeMachine",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "CoffeeMachine",
+     "key": "isToggled",
+     "value": true
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-off-coffee-machine",
+   "level": "L1",
+   "en": "Turn off the coffee machine.",
+   "fa": "قهوه‌ساز را خاموش کن.",
+   "setup": [
+    {
+     "action": "toggle_on",
+     "object": "CoffeeMachine",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "toggle_off",
+     "object": "CoffeeMachine",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "CoffeeMachine",
+     "key": "isToggled",
+     "value": false
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-on-stove-knob",
+   "level": "L1",
+   "en": "Turn on the stove.",
+   "fa": "اجاق گاز را روشن کن.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "toggle_on",
+     "object": "StoveKnob",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "StoveKnob",
+     "key": "isToggled",
+     "value": true,
+     "q": "any"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-off-stove-knob",
+   "level": "L1",
+   "en": "Turn off the stove.",
+   "fa": "اجاق گاز را خاموش کن.",
+   "setup": [
+    {
+     "action": "toggle_on",
+     "object": "StoveKnob",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "toggle_off",
+     "object": "StoveKnob",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "StoveKnob",
+     "key": "isToggled",
+     "value": false,
+     "q": "all"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-on-faucet",
+   "level": "L1",
+   "en": "Turn on the faucet.",
+   "fa": "شیر آب را باز کن.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "toggle_on",
+     "object": "Faucet",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Faucet",
+     "key": "isToggled",
+     "value": true
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-off-faucet",
+   "level": "L1",
+   "en": "Turn off the faucet.",
+   "fa": "شیر آب را ببند.",
+   "setup": [
+    {
+     "action": "toggle_on",
+     "object": "Faucet",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "toggle_off",
+     "object": "Faucet",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Faucet",
+     "key": "isToggled",
+     "value": false
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-off-light",
+   "level": "L1",
+   "en": "Turn off the light.",
+   "fa": "چراغ را خاموش کن.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "toggle_off",
+     "object": "LightSwitch",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "LightSwitch",
+     "key": "isToggled",
+     "value": false
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-on-light",
+   "level": "L1",
+   "en": "Turn on the light.",
+   "fa": "چراغ را روشن کن.",
+   "setup": [
+    {
+     "action": "toggle_off",
+     "object": "LightSwitch",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "toggle_on",
+     "object": "LightSwitch",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "LightSwitch",
+     "key": "isToggled",
+     "value": true
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-goto-fridge",
+   "level": "L1",
+   "en": "Go to the fridge.",
+   "fa": "به سمت یخچال برو.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "go_to",
+     "object": "Fridge",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Fridge",
+     "key": "distance",
+     "max": 1.5
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-goto-microwave",
+   "level": "L1",
+   "en": "Go to the microwave.",
+   "fa": "به سمت مایکروویو برو.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "go_to",
+     "object": "Microwave",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Microwave",
+     "key": "distance",
+     "max": 1.5
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-goto-toaster",
+   "level": "L1",
+   "en": "Go to the toaster.",
+   "fa": "به سمت توستر برو.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "go_to",
+     "object": "Toaster",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Toaster",
+     "key": "distance",
+     "max": 1.5
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-goto-coffee-machine",
+   "level": "L1",
+   "en": "Go to the coffee machine.",
+   "fa": "به سمت قهوه‌ساز برو.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "go_to",
+     "object": "CoffeeMachine",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "CoffeeMachine",
+     "key": "distance",
+     "max": 1.5
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-goto-sink-basin",
+   "level": "L1",
+   "en": "Go to the sink.",
+   "fa": "به سمت سینک برو.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "go_to",
+     "object": "SinkBasin",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "SinkBasin",
+     "key": "distance",
+     "max": 1.5
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-goto-garbage-can",
+   "level": "L1",
+   "en": "Go to the trash can.",
+   "fa": "به سمت سطل زباله برو.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "go_to",
+     "object": "GarbageCan",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "GarbageCan",
+     "key": "distance",
+     "max": 1.5
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-goto-light-switch",
+   "level": "L1",
+   "en": "Go to the light switch.",
+   "fa": "به سمت کلید چراغ برو.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "go_to",
+     "object": "LightSwitch",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "LightSwitch",
+     "key": "distance",
+     "max": 1.5
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-goto-stove-burner",
+   "level": "L1",
+   "en": "Go to the stove.",
+   "fa": "به سمت اجاق گاز برو.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "go_to",
+     "object": "StoveBurner",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "StoveBurner",
+     "key": "distance",
+     "max": 1.5,
+     "q": "any"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-goto-dining-table",
+   "level": "L1",
+   "en": "Go to the dining table.",
+   "fa": "به سمت میز غذاخوری برو.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "go_to",
+     "object": "DiningTable",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "DiningTable",
+     "key": "distance",
+     "max": 1.5
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-break-egg",
+   "level": "L1",
+   "en": "Break the egg.",
+   "fa": "تخم‌مرغ را بشکن.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "break",
+     "object": "Egg",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Egg",
+     "key": "isBroken",
+     "value": true,
+     "q": "any"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-break-mug",
+   "level": "L1",
+   "en": "Break the mug.",
+   "fa": "لیوان را بشکن.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "break",
+     "object": "Mug",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Mug",
+     "key": "isBroken",
+     "value": true,
+     "q": "any"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-break-plate",
+   "level": "L1",
+   "en": "Break the plate.",
+   "fa": "بشقاب را بشکن.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "break",
+     "object": "Plate",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Plate",
+     "key": "isBroken",
+     "value": true,
+     "q": "any"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-dirty-bowl",
+   "level": "L1",
+   "en": "Make the bowl dirty.",
+   "fa": "کاسه را کثیف کن.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "dirty",
+     "object": "Bowl",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Bowl",
+     "key": "isDirty",
+     "value": true
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-clean-bowl",
+   "level": "L1",
+   "en": "The bowl is dirty. Clean it.",
+   "fa": "کاسه کثیف است؛ تمیزش کن.",
+   "setup": [
+    {
+     "action": "dirty",
+     "object": "Bowl",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "clean",
+     "object": "Bowl",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Bowl",
+     "key": "isDirty",
+     "value": false
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-dirty-cup",
+   "level": "L1",
+   "en": "Make the cup dirty.",
+   "fa": "فنجان را کثیف کن.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "dirty",
+     "object": "Cup",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Cup",
+     "key": "isDirty",
+     "value": true
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-clean-cup",
+   "level": "L1",
+   "en": "The cup is dirty. Clean it.",
+   "fa": "فنجان کثیف است؛ تمیزش کن.",
+   "setup": [
+    {
+     "action": "dirty",
+     "object": "Cup",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "clean",
+     "object": "Cup",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Cup",
+     "key": "isDirty",
+     "value": false
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-dirty-mug",
+   "level": "L1",
+   "en": "Make the mug dirty.",
+   "fa": "لیوان را کثیف کن.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "dirty",
+     "object": "Mug",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Mug",
+     "key": "isDirty",
+     "value": true
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-clean-mug",
+   "level": "L1",
+   "en": "The mug is dirty. Clean it.",
+   "fa": "لیوان کثیف است؛ تمیزش کن.",
+   "setup": [
+    {
+     "action": "dirty",
+     "object": "Mug",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "clean",
+     "object": "Mug",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Mug",
+     "key": "isDirty",
+     "value": false
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-dirty-pan",
+   "level": "L1",
+   "en": "Make the pan dirty.",
+   "fa": "تابه را کثیف کن.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "dirty",
+     "object": "Pan",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Pan",
+     "key": "isDirty",
+     "value": true
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-clean-pan",
+   "level": "L1",
+   "en": "The pan is dirty. Clean it.",
+   "fa": "تابه کثیف است؛ تمیزش کن.",
+   "setup": [
+    {
+     "action": "dirty",
+     "object": "Pan",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "clean",
+     "object": "Pan",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Pan",
+     "key": "isDirty",
+     "value": false
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-dirty-plate",
+   "level": "L1",
+   "en": "Make the plate dirty.",
+   "fa": "بشقاب را کثیف کن.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "dirty",
+     "object": "Plate",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Plate",
+     "key": "isDirty",
+     "value": true
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-clean-plate",
+   "level": "L1",
+   "en": "The plate is dirty. Clean it.",
+   "fa": "بشقاب کثیف است؛ تمیزش کن.",
+   "setup": [
+    {
+     "action": "dirty",
+     "object": "Plate",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "clean",
+     "object": "Plate",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Plate",
+     "key": "isDirty",
+     "value": false
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-dirty-pot",
+   "level": "L1",
+   "en": "Make the pot dirty.",
+   "fa": "قابلمه را کثیف کن.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "dirty",
+     "object": "Pot",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Pot",
+     "key": "isDirty",
+     "value": true
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-clean-pot",
+   "level": "L1",
+   "en": "The pot is dirty. Clean it.",
+   "fa": "قابلمه کثیف است؛ تمیزش کن.",
+   "setup": [
+    {
+     "action": "dirty",
+     "object": "Pot",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "clean",
+     "object": "Pot",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Pot",
+     "key": "isDirty",
+     "value": false
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-fill-bowl-water",
+   "level": "L1",
+   "en": "Fill the bowl with water.",
+   "fa": "کاسه را با آب پر کن.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "fill",
+     "object": "Bowl",
+     "to": null,
+     "arg": "water"
+    }
+   ],
+   "goal": [
+    {
+     "type": "Bowl",
+     "key": "isFilledWithLiquid",
+     "value": true
+    },
+    {
+     "type": "Bowl",
+     "key": "fillLiquid",
+     "value": "water"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-fill-bowl-coffee",
+   "level": "L1",
+   "en": "Fill the bowl with coffee.",
+   "fa": "کاسه را با قهوه پر کن.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "fill",
+     "object": "Bowl",
+     "to": null,
+     "arg": "coffee"
+    }
+   ],
+   "goal": [
+    {
+     "type": "Bowl",
+     "key": "isFilledWithLiquid",
+     "value": true
+    },
+    {
+     "type": "Bowl",
+     "key": "fillLiquid",
+     "value": "coffee"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-fill-bowl-wine",
+   "level": "L1",
+   "en": "Fill the bowl with wine.",
+   "fa": "کاسه را با شراب پر کن.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "fill",
+     "object": "Bowl",
+     "to": null,
+     "arg": "wine"
+    }
+   ],
+   "goal": [
+    {
+     "type": "Bowl",
+     "key": "isFilledWithLiquid",
+     "value": true
+    },
+    {
+     "type": "Bowl",
+     "key": "fillLiquid",
+     "value": "wine"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-fill-cup-water",
+   "level": "L1",
+   "en": "Fill the cup with water.",
+   "fa": "فنجان را با آب پر کن.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "fill",
+     "object": "Cup",
+     "to": null,
+     "arg": "water"
+    }
+   ],
+   "goal": [
+    {
+     "type": "Cup",
+     "key": "isFilledWithLiquid",
+     "value": true
+    },
+    {
+     "type": "Cup",
+     "key": "fillLiquid",
+     "value": "water"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-fill-cup-coffee",
+   "level": "L1",
+   "en": "Fill the cup with coffee.",
+   "fa": "فنجان را با قهوه پر کن.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "fill",
+     "object": "Cup",
+     "to": null,
+     "arg": "coffee"
+    }
+   ],
+   "goal": [
+    {
+     "type": "Cup",
+     "key": "isFilledWithLiquid",
+     "value": true
+    },
+    {
+     "type": "Cup",
+     "key": "fillLiquid",
+     "value": "coffee"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-fill-cup-wine",
+   "level": "L1",
+   "en": "Fill the cup with wine.",
+   "fa": "فنجان را با شراب پر کن.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "fill",
+     "object": "Cup",
+     "to": null,
+     "arg": "wine"
+    }
+   ],
+   "goal": [
+    {
+     "type": "Cup",
+     "key": "isFilledWithLiquid",
+     "value": true
+    },
+    {
+     "type": "Cup",
+     "key": "fillLiquid",
+     "value": "wine"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-fill-mug-water",
+   "level": "L1",
+   "en": "Fill the mug with water.",
+   "fa": "لیوان را با آب پر کن.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "fill",
+     "object": "Mug",
+     "to": null,
+     "arg": "water"
+    }
+   ],
+   "goal": [
+    {
+     "type": "Mug",
+     "key": "isFilledWithLiquid",
+     "value": true
+    },
+    {
+     "type": "Mug",
+     "key": "fillLiquid",
+     "value": "water"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-fill-mug-coffee",
+   "level": "L1",
+   "en": "Fill the mug with coffee.",
+   "fa": "لیوان را با قهوه پر کن.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "fill",
+     "object": "Mug",
+     "to": null,
+     "arg": "coffee"
+    }
+   ],
+   "goal": [
+    {
+     "type": "Mug",
+     "key": "isFilledWithLiquid",
+     "value": true
+    },
+    {
+     "type": "Mug",
+     "key": "fillLiquid",
+     "value": "coffee"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-fill-mug-wine",
+   "level": "L1",
+   "en": "Fill the mug with wine.",
+   "fa": "لیوان را با شراب پر کن.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "fill",
+     "object": "Mug",
+     "to": null,
+     "arg": "wine"
+    }
+   ],
+   "goal": [
+    {
+     "type": "Mug",
+     "key": "isFilledWithLiquid",
+     "value": true
+    },
+    {
+     "type": "Mug",
+     "key": "fillLiquid",
+     "value": "wine"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-fill-pot-water",
+   "level": "L1",
+   "en": "Fill the pot with water.",
+   "fa": "قابلمه را با آب پر کن.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "fill",
+     "object": "Pot",
+     "to": null,
+     "arg": "water"
+    }
+   ],
+   "goal": [
+    {
+     "type": "Pot",
+     "key": "isFilledWithLiquid",
+     "value": true
+    },
+    {
+     "type": "Pot",
+     "key": "fillLiquid",
+     "value": "water"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-fill-pot-coffee",
+   "level": "L1",
+   "en": "Fill the pot with coffee.",
+   "fa": "قابلمه را با قهوه پر کن.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "fill",
+     "object": "Pot",
+     "to": null,
+     "arg": "coffee"
+    }
+   ],
+   "goal": [
+    {
+     "type": "Pot",
+     "key": "isFilledWithLiquid",
+     "value": true
+    },
+    {
+     "type": "Pot",
+     "key": "fillLiquid",
+     "value": "coffee"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-fill-pot-wine",
+   "level": "L1",
+   "en": "Fill the pot with wine.",
+   "fa": "قابلمه را با شراب پر کن.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "fill",
+     "object": "Pot",
+     "to": null,
+     "arg": "wine"
+    }
+   ],
+   "goal": [
+    {
+     "type": "Pot",
+     "key": "isFilledWithLiquid",
+     "value": true
+    },
+    {
+     "type": "Pot",
+     "key": "fillLiquid",
+     "value": "wine"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-fill-kettle-water",
+   "level": "L1",
+   "en": "Fill the kettle with water.",
+   "fa": "کتری را با آب پر کن.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "fill",
+     "object": "Kettle",
+     "to": null,
+     "arg": "water"
+    }
+   ],
+   "goal": [
+    {
+     "type": "Kettle",
+     "key": "isFilledWithLiquid",
+     "value": true
+    },
+    {
+     "type": "Kettle",
+     "key": "fillLiquid",
+     "value": "water"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-empty-bowl",
+   "level": "L1",
+   "en": "Empty the bowl.",
+   "fa": "کاسه را خالی کن.",
+   "setup": [
+    {
+     "action": "fill",
+     "object": "Bowl",
+     "to": null,
+     "arg": "water"
+    }
+   ],
+   "plan": [
+    {
+     "action": "empty",
+     "object": "Bowl",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Bowl",
+     "key": "isFilledWithLiquid",
+     "value": false
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-empty-cup",
+   "level": "L1",
+   "en": "Empty the cup.",
+   "fa": "فنجان را خالی کن.",
+   "setup": [
+    {
+     "action": "fill",
+     "object": "Cup",
+     "to": null,
+     "arg": "water"
+    }
+   ],
+   "plan": [
+    {
+     "action": "empty",
+     "object": "Cup",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Cup",
+     "key": "isFilledWithLiquid",
+     "value": false
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-empty-mug",
+   "level": "L1",
+   "en": "Empty the mug.",
+   "fa": "لیوان را خالی کن.",
+   "setup": [
+    {
+     "action": "fill",
+     "object": "Mug",
+     "to": null,
+     "arg": "water"
+    }
+   ],
+   "plan": [
+    {
+     "action": "empty",
+     "object": "Mug",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Mug",
+     "key": "isFilledWithLiquid",
+     "value": false
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-empty-pot",
+   "level": "L1",
+   "en": "Empty the pot.",
+   "fa": "قابلمه را خالی کن.",
+   "setup": [
+    {
+     "action": "fill",
+     "object": "Pot",
+     "to": null,
+     "arg": "water"
+    }
+   ],
+   "plan": [
+    {
+     "action": "empty",
+     "object": "Pot",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Pot",
+     "key": "isFilledWithLiquid",
+     "value": false
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-empty-kettle",
+   "level": "L1",
+   "en": "Empty the kettle.",
+   "fa": "کتری را خالی کن.",
+   "setup": [
+    {
+     "action": "fill",
+     "object": "Kettle",
+     "to": null,
+     "arg": "water"
+    }
+   ],
+   "plan": [
+    {
+     "action": "empty",
+     "object": "Kettle",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Kettle",
+     "key": "isFilledWithLiquid",
+     "value": false
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-drop-apple",
+   "level": "L1",
+   "en": "Drop the apple.",
+   "fa": "سیب را رها کن.",
+   "setup": [
+    {
+     "action": "pickup",
+     "object": "Apple",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "drop",
+     "object": null,
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Apple",
+     "key": "isPickedUp",
+     "value": false
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-drop-bread",
+   "level": "L1",
+   "en": "Drop the bread.",
+   "fa": "نان را رها کن.",
+   "setup": [
+    {
+     "action": "pickup",
+     "object": "Bread",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "drop",
+     "object": null,
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Bread",
+     "key": "isPickedUp",
+     "value": false
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-drop-potato",
+   "level": "L1",
+   "en": "Drop the potato.",
+   "fa": "سیب‌زمینی را رها کن.",
+   "setup": [
+    {
+     "action": "pickup",
+     "object": "Potato",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "drop",
+     "object": null,
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Potato",
+     "key": "isPickedUp",
+     "value": false
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-drop-fork",
+   "level": "L1",
+   "en": "Drop the fork.",
+   "fa": "چنگال را رها کن.",
+   "setup": [
+    {
+     "action": "pickup",
+     "object": "Fork",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "drop",
+     "object": null,
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Fork",
+     "key": "isPickedUp",
+     "value": false
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-drop-spoon",
+   "level": "L1",
+   "en": "Drop the spoon.",
+   "fa": "قاشق را رها کن.",
+   "setup": [
+    {
+     "action": "pickup",
+     "object": "Spoon",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "drop",
+     "object": null,
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Spoon",
+     "key": "isPickedUp",
+     "value": false
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-drop-spatula",
+   "level": "L1",
+   "en": "Drop the spatula.",
+   "fa": "کفگیر را رها کن.",
+   "setup": [
+    {
+     "action": "pickup",
+     "object": "Spatula",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "drop",
+     "object": null,
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Spatula",
+     "key": "isPickedUp",
+     "value": false
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-drop-dish-sponge",
+   "level": "L1",
+   "en": "Drop the sponge.",
+   "fa": "اسفنج ظرف‌شویی را رها کن.",
+   "setup": [
+    {
+     "action": "pickup",
+     "object": "DishSponge",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "drop",
+     "object": null,
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "DishSponge",
+     "key": "isPickedUp",
+     "value": false
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-drop-soap-bottle",
+   "level": "L1",
+   "en": "Drop the soap bottle.",
+   "fa": "صابون مایع را رها کن.",
+   "setup": [
+    {
+     "action": "pickup",
+     "object": "SoapBottle",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "drop",
+     "object": null,
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "SoapBottle",
+     "key": "isPickedUp",
+     "value": false
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-slice-apple",
+   "level": "L1",
+   "en": "Slice the apple.",
+   "fa": "سیب را ببر.",
+   "setup": [
+    {
+     "action": "pickup",
+     "object": "ButterKnife",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "slice",
+     "object": "Apple",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Apple",
+     "key": "isSliced",
+     "value": true,
+     "q": "any"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-slice-bread",
+   "level": "L1",
+   "en": "Slice the bread.",
+   "fa": "نان را ببر.",
+   "setup": [
+    {
+     "action": "pickup",
+     "object": "ButterKnife",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "slice",
+     "object": "Bread",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Bread",
+     "key": "isSliced",
+     "value": true,
+     "q": "any"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-slice-tomato",
+   "level": "L1",
+   "en": "Slice the tomato.",
+   "fa": "گوجه‌فرنگی را ببر.",
+   "setup": [
+    {
+     "action": "pickup",
+     "object": "ButterKnife",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "slice",
+     "object": "Tomato",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Tomato",
+     "key": "isSliced",
+     "value": true,
+     "q": "any"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-slice-potato",
+   "level": "L1",
+   "en": "Slice the potato.",
+   "fa": "سیب‌زمینی را ببر.",
+   "setup": [
+    {
+     "action": "pickup",
+     "object": "ButterKnife",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "slice",
+     "object": "Potato",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Potato",
+     "key": "isSliced",
+     "value": true,
+     "q": "any"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-slice-lettuce",
+   "level": "L1",
+   "en": "Slice the lettuce.",
+   "fa": "کاهو را ببر.",
+   "setup": [
+    {
+     "action": "pickup",
+     "object": "ButterKnife",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "slice",
+     "object": "Lettuce",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Lettuce",
+     "key": "isSliced",
+     "value": true,
+     "q": "any"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-place-apple-sink-basin",
+   "level": "L1",
+   "en": "You are holding the apple. Put it in the sink.",
+   "fa": "سیب در دست توست؛ آن را داخل سینک بگذار.",
+   "setup": [
+    {
+     "action": "pickup",
+     "object": "Apple",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "put_in",
+     "object": "SinkBasin",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Apple",
+     "key": "parentReceptacles",
+     "contains": "SinkBasin"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-place-lettuce-sink-basin",
+   "level": "L1",
+   "en": "You are holding the lettuce. Put it in the sink.",
+   "fa": "کاهو در دست توست؛ آن را داخل سینک بگذار.",
+   "setup": [
+    {
+     "action": "pickup",
+     "object": "Lettuce",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "put_in",
+     "object": "SinkBasin",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Lettuce",
+     "key": "parentReceptacles",
+     "contains": "SinkBasin"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-place-fork-sink-basin",
+   "level": "L1",
+   "en": "You are holding the fork. Put it in the sink.",
+   "fa": "چنگال در دست توست؛ آن را داخل سینک بگذار.",
+   "setup": [
+    {
+     "action": "pickup",
+     "object": "Fork",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "put_in",
+     "object": "SinkBasin",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Fork",
+     "key": "parentReceptacles",
+     "contains": "SinkBasin"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-place-spoon-sink-basin",
+   "level": "L1",
+   "en": "You are holding the spoon. Put it in the sink.",
+   "fa": "قاشق در دست توست؛ آن را داخل سینک بگذار.",
+   "setup": [
+    {
+     "action": "pickup",
+     "object": "Spoon",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "put_in",
+     "object": "SinkBasin",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Spoon",
+     "key": "parentReceptacles",
+     "contains": "SinkBasin"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-place-cup-sink-basin",
+   "level": "L1",
+   "en": "You are holding the cup. Put it in the sink.",
+   "fa": "فنجان در دست توست؛ آن را داخل سینک بگذار.",
+   "setup": [
+    {
+     "action": "pickup",
+     "object": "Cup",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "put_in",
+     "object": "SinkBasin",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Cup",
+     "key": "parentReceptacles",
+     "contains": "SinkBasin"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-place-tomato-counter-top",
+   "level": "L1",
+   "en": "You are holding the tomato. Put it on the counter.",
+   "fa": "گوجه‌فرنگی در دست توست؛ آن را روی میز بگذار.",
+   "setup": [
+    {
+     "action": "pickup",
+     "object": "Tomato",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "put_in",
+     "object": "CounterTop",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Tomato",
+     "key": "parentReceptacles",
+     "contains": "CounterTop"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-place-bread-counter-top",
+   "level": "L1",
+   "en": "You are holding the bread. Put it on the counter.",
+   "fa": "نان در دست توست؛ آن را روی میز بگذار.",
+   "setup": [
+    {
+     "action": "pickup",
+     "object": "Bread",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "put_in",
+     "object": "CounterTop",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Bread",
+     "key": "parentReceptacles",
+     "contains": "CounterTop"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-place-mug-counter-top",
+   "level": "L1",
+   "en": "You are holding the mug. Put it on the counter.",
+   "fa": "لیوان در دست توست؛ آن را روی میز بگذار.",
+   "setup": [
+    {
+     "action": "pickup",
+     "object": "Mug",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "put_in",
+     "object": "CounterTop",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Mug",
+     "key": "parentReceptacles",
+     "contains": "CounterTop"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-place-plate-counter-top",
+   "level": "L1",
+   "en": "You are holding the plate. Put it on the counter.",
+   "fa": "بشقاب در دست توست؛ آن را روی میز بگذار.",
+   "setup": [
+    {
+     "action": "pickup",
+     "object": "Plate",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "put_in",
+     "object": "CounterTop",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Plate",
+     "key": "parentReceptacles",
+     "contains": "CounterTop"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-place-bowl-counter-top",
+   "level": "L1",
+   "en": "You are holding the bowl. Put it on the counter.",
+   "fa": "کاسه در دست توست؛ آن را روی میز بگذار.",
+   "setup": [
+    {
+     "action": "pickup",
+     "object": "Bowl",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "put_in",
+     "object": "CounterTop",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Bowl",
+     "key": "parentReceptacles",
+     "contains": "CounterTop"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-place-egg-garbage-can",
+   "level": "L1",
+   "en": "You are holding the egg. Put it in the trash can.",
+   "fa": "تخم‌مرغ در دست توست؛ آن را داخل سطل زباله بگذار.",
+   "setup": [
+    {
+     "action": "pickup",
+     "object": "Egg",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "put_in",
+     "object": "GarbageCan",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Egg",
+     "key": "parentReceptacles",
+     "contains": "GarbageCan"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-place-potato-garbage-can",
+   "level": "L1",
+   "en": "You are holding the potato. Put it in the trash can.",
+   "fa": "سیب‌زمینی در دست توست؛ آن را داخل سطل زباله بگذار.",
+   "setup": [
+    {
+     "action": "pickup",
+     "object": "Potato",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "put_in",
+     "object": "GarbageCan",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Potato",
+     "key": "parentReceptacles",
+     "contains": "GarbageCan"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-crouch",
+   "level": "L1",
+   "en": "Crouch down.",
+   "fa": "خم شو.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "crouch",
+     "object": null,
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Agent",
+     "key": "isStanding",
+     "value": false
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l1-stand",
+   "level": "L1",
+   "en": "Stand up.",
+   "fa": "بلند شو و بایست.",
+   "setup": [
+    {
+     "action": "crouch",
+     "object": null,
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "stand",
+     "object": null,
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Agent",
+     "key": "isStanding",
+     "value": true
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-fridge-apple",
+   "level": "L2",
+   "en": "Put the apple in the fridge and close the door.",
+   "fa": "سیب را داخل یخچال بگذار و درش را ببند.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pick_and_place",
+     "object": "Apple",
+     "to": "Fridge",
+     "arg": null
+    },
+    {
+     "action": "close",
+     "object": "Fridge",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Apple",
+     "key": "parentReceptacles",
+     "contains": "Fridge"
+    },
+    {
+     "type": "Fridge",
+     "key": "isOpen",
+     "value": false
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-fridge-bread",
+   "level": "L2",
+   "en": "Put the bread in the fridge and close the door.",
+   "fa": "نان را داخل یخچال بگذار و درش را ببند.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pick_and_place",
+     "object": "Bread",
+     "to": "Fridge",
+     "arg": null
+    },
+    {
+     "action": "close",
+     "object": "Fridge",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Bread",
+     "key": "parentReceptacles",
+     "contains": "Fridge"
+    },
+    {
+     "type": "Fridge",
+     "key": "isOpen",
+     "value": false
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-fridge-tomato",
+   "level": "L2",
+   "en": "Put the tomato in the fridge and close the door.",
+   "fa": "گوجه‌فرنگی را داخل یخچال بگذار و درش را ببند.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pick_and_place",
+     "object": "Tomato",
+     "to": "Fridge",
+     "arg": null
+    },
+    {
+     "action": "close",
+     "object": "Fridge",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Tomato",
+     "key": "parentReceptacles",
+     "contains": "Fridge"
+    },
+    {
+     "type": "Fridge",
+     "key": "isOpen",
+     "value": false
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-fridge-potato",
+   "level": "L2",
+   "en": "Put the potato in the fridge and close the door.",
+   "fa": "سیب‌زمینی را داخل یخچال بگذار و درش را ببند.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pick_and_place",
+     "object": "Potato",
+     "to": "Fridge",
+     "arg": null
+    },
+    {
+     "action": "close",
+     "object": "Fridge",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Potato",
+     "key": "parentReceptacles",
+     "contains": "Fridge"
+    },
+    {
+     "type": "Fridge",
+     "key": "isOpen",
+     "value": false
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-fridge-egg",
+   "level": "L2",
+   "en": "Put the egg in the fridge and close the door.",
+   "fa": "تخم‌مرغ را داخل یخچال بگذار و درش را ببند.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pick_and_place",
+     "object": "Egg",
+     "to": "Fridge",
+     "arg": null
+    },
+    {
+     "action": "close",
+     "object": "Fridge",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Egg",
+     "key": "parentReceptacles",
+     "contains": "Fridge"
+    },
+    {
+     "type": "Fridge",
+     "key": "isOpen",
+     "value": false
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-fridge-lettuce",
+   "level": "L2",
+   "en": "Put the lettuce in the fridge and close the door.",
+   "fa": "کاهو را داخل یخچال بگذار و درش را ببند.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pick_and_place",
+     "object": "Lettuce",
+     "to": "Fridge",
+     "arg": null
+    },
+    {
+     "action": "close",
+     "object": "Fridge",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Lettuce",
+     "key": "parentReceptacles",
+     "contains": "Fridge"
+    },
+    {
+     "type": "Fridge",
+     "key": "isOpen",
+     "value": false
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-microwave-potato",
+   "level": "L2",
+   "en": "Put the potato in the microwave and close it.",
+   "fa": "سیب‌زمینی را داخل مایکروویو بگذار و درش را ببند.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pick_and_place",
+     "object": "Potato",
+     "to": "Microwave",
+     "arg": null
+    },
+    {
+     "action": "close",
+     "object": "Microwave",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Potato",
+     "key": "parentReceptacles",
+     "contains": "Microwave"
+    },
+    {
+     "type": "Microwave",
+     "key": "isOpen",
+     "value": false
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-microwave-bread",
+   "level": "L2",
+   "en": "Put the bread in the microwave and close it.",
+   "fa": "نان را داخل مایکروویو بگذار و درش را ببند.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pick_and_place",
+     "object": "Bread",
+     "to": "Microwave",
+     "arg": null
+    },
+    {
+     "action": "close",
+     "object": "Microwave",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Bread",
+     "key": "parentReceptacles",
+     "contains": "Microwave"
+    },
+    {
+     "type": "Microwave",
+     "key": "isOpen",
+     "value": false
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-microwave-apple",
+   "level": "L2",
+   "en": "Put the apple in the microwave and close it.",
+   "fa": "سیب را داخل مایکروویو بگذار و درش را ببند.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pick_and_place",
+     "object": "Apple",
+     "to": "Microwave",
+     "arg": null
+    },
+    {
+     "action": "close",
+     "object": "Microwave",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Apple",
+     "key": "parentReceptacles",
+     "contains": "Microwave"
+    },
+    {
+     "type": "Microwave",
+     "key": "isOpen",
+     "value": false
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-microwave-egg",
+   "level": "L2",
+   "en": "Put the egg in the microwave and close it.",
+   "fa": "تخم‌مرغ را داخل مایکروویو بگذار و درش را ببند.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pick_and_place",
+     "object": "Egg",
+     "to": "Microwave",
+     "arg": null
+    },
+    {
+     "action": "close",
+     "object": "Microwave",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Egg",
+     "key": "parentReceptacles",
+     "contains": "Microwave"
+    },
+    {
+     "type": "Microwave",
+     "key": "isOpen",
+     "value": false
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-microwave-tomato",
+   "level": "L2",
+   "en": "Put the tomato in the microwave and close it.",
+   "fa": "گوجه‌فرنگی را داخل مایکروویو بگذار و درش را ببند.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pick_and_place",
+     "object": "Tomato",
+     "to": "Microwave",
+     "arg": null
+    },
+    {
+     "action": "close",
+     "object": "Microwave",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Tomato",
+     "key": "parentReceptacles",
+     "contains": "Microwave"
+    },
+    {
+     "type": "Microwave",
+     "key": "isOpen",
+     "value": false
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-microwave-mug",
+   "level": "L2",
+   "en": "Put the mug in the microwave and close it.",
+   "fa": "لیوان را داخل مایکروویو بگذار و درش را ببند.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pick_and_place",
+     "object": "Mug",
+     "to": "Microwave",
+     "arg": null
+    },
+    {
+     "action": "close",
+     "object": "Microwave",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Mug",
+     "key": "parentReceptacles",
+     "contains": "Microwave"
+    },
+    {
+     "type": "Microwave",
+     "key": "isOpen",
+     "value": false
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-microwave-run-potato",
+   "level": "L2",
+   "en": "Put the potato in the microwave, close the door, and turn it on.",
+   "fa": "سیب‌زمینی را داخل مایکروویو بگذار، درش را ببند و روشنش کن.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pick_and_place",
+     "object": "Potato",
+     "to": "Microwave",
+     "arg": null
+    },
+    {
+     "action": "close",
+     "object": "Microwave",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "toggle_on",
+     "object": "Microwave",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Potato",
+     "key": "parentReceptacles",
+     "contains": "Microwave"
+    },
+    {
+     "type": "Microwave",
+     "key": "isOpen",
+     "value": false
+    },
+    {
+     "type": "Microwave",
+     "key": "isToggled",
+     "value": true
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-microwave-run-bread",
+   "level": "L2",
+   "en": "Put the bread in the microwave, close the door, and turn it on.",
+   "fa": "نان را داخل مایکروویو بگذار، درش را ببند و روشنش کن.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pick_and_place",
+     "object": "Bread",
+     "to": "Microwave",
+     "arg": null
+    },
+    {
+     "action": "close",
+     "object": "Microwave",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "toggle_on",
+     "object": "Microwave",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Bread",
+     "key": "parentReceptacles",
+     "contains": "Microwave"
+    },
+    {
+     "type": "Microwave",
+     "key": "isOpen",
+     "value": false
+    },
+    {
+     "type": "Microwave",
+     "key": "isToggled",
+     "value": true
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-microwave-run-egg",
+   "level": "L2",
+   "en": "Put the egg in the microwave, close the door, and turn it on.",
+   "fa": "تخم‌مرغ را داخل مایکروویو بگذار، درش را ببند و روشنش کن.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pick_and_place",
+     "object": "Egg",
+     "to": "Microwave",
+     "arg": null
+    },
+    {
+     "action": "close",
+     "object": "Microwave",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "toggle_on",
+     "object": "Microwave",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Egg",
+     "key": "parentReceptacles",
+     "contains": "Microwave"
+    },
+    {
+     "type": "Microwave",
+     "key": "isOpen",
+     "value": false
+    },
+    {
+     "type": "Microwave",
+     "key": "isToggled",
+     "value": true
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-slice-apple",
+   "level": "L2",
+   "en": "Slice the apple.",
+   "fa": "سیب را برش بزن.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pickup",
+     "object": "ButterKnife",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "slice",
+     "object": "Apple",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Apple",
+     "key": "isSliced",
+     "value": true,
+     "q": "any"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-slice-bread",
+   "level": "L2",
+   "en": "Slice the bread.",
+   "fa": "نان را برش بزن.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pickup",
+     "object": "ButterKnife",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "slice",
+     "object": "Bread",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Bread",
+     "key": "isSliced",
+     "value": true,
+     "q": "any"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-slice-tomato",
+   "level": "L2",
+   "en": "Slice the tomato.",
+   "fa": "گوجه‌فرنگی را برش بزن.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pickup",
+     "object": "ButterKnife",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "slice",
+     "object": "Tomato",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Tomato",
+     "key": "isSliced",
+     "value": true,
+     "q": "any"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-slice-potato",
+   "level": "L2",
+   "en": "Slice the potato.",
+   "fa": "سیب‌زمینی را برش بزن.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pickup",
+     "object": "ButterKnife",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "slice",
+     "object": "Potato",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Potato",
+     "key": "isSliced",
+     "value": true,
+     "q": "any"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-slice-lettuce",
+   "level": "L2",
+   "en": "Slice the lettuce.",
+   "fa": "کاهو را برش بزن.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pickup",
+     "object": "ButterKnife",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "slice",
+     "object": "Lettuce",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Lettuce",
+     "key": "isSliced",
+     "value": true,
+     "q": "any"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-slice-tomato-lettuce",
+   "level": "L2",
+   "en": "Take the butter knife, slice the tomato, then slice the lettuce.",
+   "fa": "کارد کره‌خوری را بردار، اول گوجه‌فرنگی و بعد کاهو را برش بزن.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pickup",
+     "object": "ButterKnife",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "slice",
+     "object": "Tomato",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "slice",
+     "object": "Lettuce",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Tomato",
+     "key": "isSliced",
+     "value": true,
+     "q": "any"
+    },
+    {
+     "type": "Lettuce",
+     "key": "isSliced",
+     "value": true,
+     "q": "any"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-slice-bread-tomato",
+   "level": "L2",
+   "en": "Take the butter knife, slice the bread, then slice the tomato.",
+   "fa": "کارد کره‌خوری را بردار، اول نان و بعد گوجه‌فرنگی را برش بزن.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pickup",
+     "object": "ButterKnife",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "slice",
+     "object": "Bread",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "slice",
+     "object": "Tomato",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Bread",
+     "key": "isSliced",
+     "value": true,
+     "q": "any"
+    },
+    {
+     "type": "Tomato",
+     "key": "isSliced",
+     "value": true,
+     "q": "any"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-slice-apple-potato",
+   "level": "L2",
+   "en": "Take the butter knife, slice the apple, then slice the potato.",
+   "fa": "کارد کره‌خوری را بردار، اول سیب و بعد سیب‌زمینی را برش بزن.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pickup",
+     "object": "ButterKnife",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "slice",
+     "object": "Apple",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "slice",
+     "object": "Potato",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Apple",
+     "key": "isSliced",
+     "value": true,
+     "q": "any"
+    },
+    {
+     "type": "Potato",
+     "key": "isSliced",
+     "value": true,
+     "q": "any"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-slice-potato-tomato",
+   "level": "L2",
+   "en": "Take the butter knife, slice the potato, then slice the tomato.",
+   "fa": "کارد کره‌خوری را بردار، اول سیب‌زمینی و بعد گوجه‌فرنگی را برش بزن.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pickup",
+     "object": "ButterKnife",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "slice",
+     "object": "Potato",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "slice",
+     "object": "Tomato",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Potato",
+     "key": "isSliced",
+     "value": true,
+     "q": "any"
+    },
+    {
+     "type": "Tomato",
+     "key": "isSliced",
+     "value": true,
+     "q": "any"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-heat-potato-plate",
+   "level": "L2",
+   "en": "Heat the potato in the microwave, then put it on the plate.",
+   "fa": "سیب‌زمینی را در مایکروویو گرم کن، سپس روی بشقاب بگذار.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "heat",
+     "object": "Potato",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "pick_and_place",
+     "object": "Potato",
+     "to": "Plate",
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Potato",
+     "key": "temperature",
+     "value": "Hot"
+    },
+    {
+     "type": "Potato",
+     "key": "parentReceptacles",
+     "contains": "Plate"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-heat-bread-counter-top",
+   "level": "L2",
+   "en": "Heat the bread in the microwave, then put it on the counter.",
+   "fa": "نان را در مایکروویو گرم کن، سپس روی کانتر بگذار.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "heat",
+     "object": "Bread",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "pick_and_place",
+     "object": "Bread",
+     "to": "CounterTop",
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Bread",
+     "key": "temperature",
+     "value": "Hot"
+    },
+    {
+     "type": "Bread",
+     "key": "parentReceptacles",
+     "contains": "CounterTop"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-heat-apple-plate",
+   "level": "L2",
+   "en": "Heat the apple in the microwave, then put it on the plate.",
+   "fa": "سیب را در مایکروویو گرم کن، سپس روی بشقاب بگذار.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "heat",
+     "object": "Apple",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "pick_and_place",
+     "object": "Apple",
+     "to": "Plate",
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Apple",
+     "key": "temperature",
+     "value": "Hot"
+    },
+    {
+     "type": "Apple",
+     "key": "parentReceptacles",
+     "contains": "Plate"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-heat-tomato-plate",
+   "level": "L2",
+   "en": "Heat the tomato in the microwave, then put it on the plate.",
+   "fa": "گوجه‌فرنگی را در مایکروویو گرم کن، سپس روی بشقاب بگذار.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "heat",
+     "object": "Tomato",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "pick_and_place",
+     "object": "Tomato",
+     "to": "Plate",
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Tomato",
+     "key": "temperature",
+     "value": "Hot"
+    },
+    {
+     "type": "Tomato",
+     "key": "parentReceptacles",
+     "contains": "Plate"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-heat-egg-bowl",
+   "level": "L2",
+   "en": "Heat the egg in the microwave, then put it in the bowl.",
+   "fa": "تخم‌مرغ را در مایکروویو گرم کن، سپس داخل کاسه بگذار.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "heat",
+     "object": "Egg",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "pick_and_place",
+     "object": "Egg",
+     "to": "Bowl",
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Egg",
+     "key": "temperature",
+     "value": "Hot"
+    },
+    {
+     "type": "Egg",
+     "key": "parentReceptacles",
+     "contains": "Bowl"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-heat-potato-counter-top",
+   "level": "L2",
+   "en": "Heat the potato in the microwave, then put it on the counter.",
+   "fa": "سیب‌زمینی را در مایکروویو گرم کن، سپس روی کانتر بگذار.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "heat",
+     "object": "Potato",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "pick_and_place",
+     "object": "Potato",
+     "to": "CounterTop",
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Potato",
+     "key": "temperature",
+     "value": "Hot"
+    },
+    {
+     "type": "Potato",
+     "key": "parentReceptacles",
+     "contains": "CounterTop"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-cook-potato-plate",
+   "level": "L2",
+   "en": "Cook the potato and put it on the plate.",
+   "fa": "سیب‌زمینی را بپز و روی بشقاب بگذار.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "cook",
+     "object": "Potato",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "pick_and_place",
+     "object": "Potato",
+     "to": "Plate",
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Potato",
+     "key": "isCooked",
+     "value": true
+    },
+    {
+     "type": "Potato",
+     "key": "parentReceptacles",
+     "contains": "Plate"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-cook-potato-bowl",
+   "level": "L2",
+   "en": "Cook the potato and put it in the bowl.",
+   "fa": "سیب‌زمینی را بپز و داخل کاسه بگذار.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "cook",
+     "object": "Potato",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "pick_and_place",
+     "object": "Potato",
+     "to": "Bowl",
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Potato",
+     "key": "isCooked",
+     "value": true
+    },
+    {
+     "type": "Potato",
+     "key": "parentReceptacles",
+     "contains": "Bowl"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-cook-potato-pan",
+   "level": "L2",
+   "en": "Cook the potato and put it in the pan.",
+   "fa": "سیب‌زمینی را بپز و داخل تابه بگذار.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "cook",
+     "object": "Potato",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "pick_and_place",
+     "object": "Potato",
+     "to": "Pan",
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Potato",
+     "key": "isCooked",
+     "value": true
+    },
+    {
+     "type": "Potato",
+     "key": "parentReceptacles",
+     "contains": "Pan"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-cook-potato-counter-top",
+   "level": "L2",
+   "en": "Cook the potato and put it on the counter.",
+   "fa": "سیب‌زمینی را بپز و روی کانتر بگذار.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "cook",
+     "object": "Potato",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "pick_and_place",
+     "object": "Potato",
+     "to": "CounterTop",
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Potato",
+     "key": "isCooked",
+     "value": true
+    },
+    {
+     "type": "Potato",
+     "key": "parentReceptacles",
+     "contains": "CounterTop"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-wash-bowl",
+   "level": "L2",
+   "en": "The bowl is dirty. Wash it and put it on the counter.",
+   "fa": "کاسه کثیف است؛ آن را بشوی و روی کانتر بگذار.",
+   "setup": [
+    {
+     "action": "dirty",
+     "object": "Bowl",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "wash",
+     "object": "Bowl",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "pick_and_place",
+     "object": "Bowl",
+     "to": "CounterTop",
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Bowl",
+     "key": "isDirty",
+     "value": false
+    },
+    {
+     "type": "Bowl",
+     "key": "parentReceptacles",
+     "contains": "CounterTop"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-wash-cup",
+   "level": "L2",
+   "en": "The cup is dirty. Wash it and put it on the counter.",
+   "fa": "فنجان کثیف است؛ آن را بشوی و روی کانتر بگذار.",
+   "setup": [
+    {
+     "action": "dirty",
+     "object": "Cup",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "wash",
+     "object": "Cup",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "pick_and_place",
+     "object": "Cup",
+     "to": "CounterTop",
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Cup",
+     "key": "isDirty",
+     "value": false
+    },
+    {
+     "type": "Cup",
+     "key": "parentReceptacles",
+     "contains": "CounterTop"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-wash-mug",
+   "level": "L2",
+   "en": "The mug is dirty. Wash it and put it on the counter.",
+   "fa": "لیوان کثیف است؛ آن را بشوی و روی کانتر بگذار.",
+   "setup": [
+    {
+     "action": "dirty",
+     "object": "Mug",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "wash",
+     "object": "Mug",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "pick_and_place",
+     "object": "Mug",
+     "to": "CounterTop",
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Mug",
+     "key": "isDirty",
+     "value": false
+    },
+    {
+     "type": "Mug",
+     "key": "parentReceptacles",
+     "contains": "CounterTop"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-wash-pan",
+   "level": "L2",
+   "en": "The pan is dirty. Wash it and put it on the counter.",
+   "fa": "تابه کثیف است؛ آن را بشوی و روی کانتر بگذار.",
+   "setup": [
+    {
+     "action": "dirty",
+     "object": "Pan",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "wash",
+     "object": "Pan",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "pick_and_place",
+     "object": "Pan",
+     "to": "CounterTop",
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Pan",
+     "key": "isDirty",
+     "value": false
+    },
+    {
+     "type": "Pan",
+     "key": "parentReceptacles",
+     "contains": "CounterTop"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-wash-plate",
+   "level": "L2",
+   "en": "The plate is dirty. Wash it and put it on the counter.",
+   "fa": "بشقاب کثیف است؛ آن را بشوی و روی کانتر بگذار.",
+   "setup": [
+    {
+     "action": "dirty",
+     "object": "Plate",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "wash",
+     "object": "Plate",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "pick_and_place",
+     "object": "Plate",
+     "to": "CounterTop",
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Plate",
+     "key": "isDirty",
+     "value": false
+    },
+    {
+     "type": "Plate",
+     "key": "parentReceptacles",
+     "contains": "CounterTop"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-wash-pot",
+   "level": "L2",
+   "en": "The pot is dirty. Wash it and put it on the counter.",
+   "fa": "قابلمه کثیف است؛ آن را بشوی و روی کانتر بگذار.",
+   "setup": [
+    {
+     "action": "dirty",
+     "object": "Pot",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "wash",
+     "object": "Pot",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "pick_and_place",
+     "object": "Pot",
+     "to": "CounterTop",
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Pot",
+     "key": "isDirty",
+     "value": false
+    },
+    {
+     "type": "Pot",
+     "key": "parentReceptacles",
+     "contains": "CounterTop"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-cabinet-soap-bottle",
+   "level": "L2",
+   "en": "Put the soap bottle away in a cabinet and close it.",
+   "fa": "بطری صابون را داخل یکی از کابینت‌ها بگذار و درش را ببند.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pick_and_place",
+     "object": "SoapBottle",
+     "to": "Cabinet",
+     "arg": null
+    },
+    {
+     "action": "close",
+     "object": "Cabinet",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "SoapBottle",
+     "key": "parentReceptacles",
+     "contains": "Cabinet"
+    },
+    {
+     "type": "Cabinet",
+     "key": "isOpen",
+     "value": false,
+     "q": "all"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-cabinet-salt-shaker",
+   "level": "L2",
+   "en": "Put the salt shaker away in a cabinet and close it.",
+   "fa": "نمکدان را داخل یکی از کابینت‌ها بگذار و درش را ببند.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pick_and_place",
+     "object": "SaltShaker",
+     "to": "Cabinet",
+     "arg": null
+    },
+    {
+     "action": "close",
+     "object": "Cabinet",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "SaltShaker",
+     "key": "parentReceptacles",
+     "contains": "Cabinet"
+    },
+    {
+     "type": "Cabinet",
+     "key": "isOpen",
+     "value": false,
+     "q": "all"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-cabinet-pepper-shaker",
+   "level": "L2",
+   "en": "Put the pepper shaker away in a cabinet and close it.",
+   "fa": "فلفل‌پاش را داخل یکی از کابینت‌ها بگذار و درش را ببند.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pick_and_place",
+     "object": "PepperShaker",
+     "to": "Cabinet",
+     "arg": null
+    },
+    {
+     "action": "close",
+     "object": "Cabinet",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "PepperShaker",
+     "key": "parentReceptacles",
+     "contains": "Cabinet"
+    },
+    {
+     "type": "Cabinet",
+     "key": "isOpen",
+     "value": false,
+     "q": "all"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-cabinet-plate",
+   "level": "L2",
+   "en": "Put the plate away in a cabinet and close it.",
+   "fa": "بشقاب را داخل یکی از کابینت‌ها بگذار و درش را ببند.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pick_and_place",
+     "object": "Plate",
+     "to": "Cabinet",
+     "arg": null
+    },
+    {
+     "action": "close",
+     "object": "Cabinet",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Plate",
+     "key": "parentReceptacles",
+     "contains": "Cabinet"
+    },
+    {
+     "type": "Cabinet",
+     "key": "isOpen",
+     "value": false,
+     "q": "all"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-cabinet-bowl",
+   "level": "L2",
+   "en": "Put the bowl away in a cabinet and close it.",
+   "fa": "کاسه را داخل یکی از کابینت‌ها بگذار و درش را ببند.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pick_and_place",
+     "object": "Bowl",
+     "to": "Cabinet",
+     "arg": null
+    },
+    {
+     "action": "close",
+     "object": "Cabinet",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Bowl",
+     "key": "parentReceptacles",
+     "contains": "Cabinet"
+    },
+    {
+     "type": "Cabinet",
+     "key": "isOpen",
+     "value": false,
+     "q": "all"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-drawer-fork",
+   "level": "L2",
+   "en": "Put the fork in a drawer and close it.",
+   "fa": "چنگال را داخل یکی از کشوها بگذار و آن را ببند.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pick_and_place",
+     "object": "Fork",
+     "to": "Drawer",
+     "arg": null
+    },
+    {
+     "action": "close",
+     "object": "Drawer",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Fork",
+     "key": "parentReceptacles",
+     "contains": "Drawer"
+    },
+    {
+     "type": "Drawer",
+     "key": "isOpen",
+     "value": false,
+     "q": "all"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-drawer-spoon",
+   "level": "L2",
+   "en": "Put the spoon in a drawer and close it.",
+   "fa": "قاشق را داخل یکی از کشوها بگذار و آن را ببند.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pick_and_place",
+     "object": "Spoon",
+     "to": "Drawer",
+     "arg": null
+    },
+    {
+     "action": "close",
+     "object": "Drawer",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Spoon",
+     "key": "parentReceptacles",
+     "contains": "Drawer"
+    },
+    {
+     "type": "Drawer",
+     "key": "isOpen",
+     "value": false,
+     "q": "all"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-drawer-butter-knife",
+   "level": "L2",
+   "en": "Put the butter knife in a drawer and close it.",
+   "fa": "کارد کره‌خوری را داخل یکی از کشوها بگذار و آن را ببند.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pick_and_place",
+     "object": "ButterKnife",
+     "to": "Drawer",
+     "arg": null
+    },
+    {
+     "action": "close",
+     "object": "Drawer",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "ButterKnife",
+     "key": "parentReceptacles",
+     "contains": "Drawer"
+    },
+    {
+     "type": "Drawer",
+     "key": "isOpen",
+     "value": false,
+     "q": "all"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-drawer-spatula",
+   "level": "L2",
+   "en": "Put the spatula in a drawer and close it.",
+   "fa": "کفگیر را داخل یکی از کشوها بگذار و آن را ببند.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pick_and_place",
+     "object": "Spatula",
+     "to": "Drawer",
+     "arg": null
+    },
+    {
+     "action": "close",
+     "object": "Drawer",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Spatula",
+     "key": "parentReceptacles",
+     "contains": "Drawer"
+    },
+    {
+     "type": "Drawer",
+     "key": "isOpen",
+     "value": false,
+     "q": "all"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-find-pickup-egg",
+   "level": "L2",
+   "en": "Find the egg and pick it up.",
+   "fa": "تخم‌مرغ را پیدا کن و بردار.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "search_for",
+     "object": "Egg",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "pickup",
+     "object": "Egg",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Egg",
+     "key": "isPickedUp",
+     "value": true
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-find-pickup-mug",
+   "level": "L2",
+   "en": "Find the mug and pick it up.",
+   "fa": "لیوان را پیدا کن و بردار.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "search_for",
+     "object": "Mug",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "pickup",
+     "object": "Mug",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Mug",
+     "key": "isPickedUp",
+     "value": true
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-find-pickup-bowl",
+   "level": "L2",
+   "en": "Find the bowl and pick it up.",
+   "fa": "کاسه را پیدا کن و بردار.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "search_for",
+     "object": "Bowl",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "pickup",
+     "object": "Bowl",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Bowl",
+     "key": "isPickedUp",
+     "value": true
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-find-pickup-soap-bottle",
+   "level": "L2",
+   "en": "Find the soap bottle and pick it up.",
+   "fa": "بطری صابون را پیدا کن و بردار.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "search_for",
+     "object": "SoapBottle",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "pickup",
+     "object": "SoapBottle",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "SoapBottle",
+     "key": "isPickedUp",
+     "value": true
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-find-pickup-spoon",
+   "level": "L2",
+   "en": "Find the spoon and pick it up.",
+   "fa": "قاشق را پیدا کن و بردار.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "search_for",
+     "object": "Spoon",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "pickup",
+     "object": "Spoon",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Spoon",
+     "key": "isPickedUp",
+     "value": true
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-find-pickup-lettuce",
+   "level": "L2",
+   "en": "Find the lettuce and pick it up.",
+   "fa": "کاهو را پیدا کن و بردار.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "search_for",
+     "object": "Lettuce",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "pickup",
+     "object": "Lettuce",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Lettuce",
+     "key": "isPickedUp",
+     "value": true
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-find-pickup-pan",
+   "level": "L2",
+   "en": "Find the pan and pick it up.",
+   "fa": "تابه را پیدا کن و بردار.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "search_for",
+     "object": "Pan",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "pickup",
+     "object": "Pan",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Pan",
+     "key": "isPickedUp",
+     "value": true
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-find-place-fork-sink-basin",
+   "level": "L2",
+   "en": "Find the fork and put it in the sink.",
+   "fa": "چنگال را پیدا کن و داخل سینک بگذار.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "search_for",
+     "object": "Fork",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "pick_and_place",
+     "object": "Fork",
+     "to": "SinkBasin",
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Fork",
+     "key": "parentReceptacles",
+     "contains": "SinkBasin"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-find-place-cup-sink-basin",
+   "level": "L2",
+   "en": "Find the cup and put it in the sink.",
+   "fa": "فنجان را پیدا کن و داخل سینک بگذار.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "search_for",
+     "object": "Cup",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "pick_and_place",
+     "object": "Cup",
+     "to": "SinkBasin",
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Cup",
+     "key": "parentReceptacles",
+     "contains": "SinkBasin"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-find-place-dish-sponge-sink-basin",
+   "level": "L2",
+   "en": "Find the sponge and put it in the sink.",
+   "fa": "اسفنج ظرف‌شویی را پیدا کن و داخل سینک بگذار.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "search_for",
+     "object": "DishSponge",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "pick_and_place",
+     "object": "DishSponge",
+     "to": "SinkBasin",
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "DishSponge",
+     "key": "parentReceptacles",
+     "contains": "SinkBasin"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-find-place-bread-fridge",
+   "level": "L2",
+   "en": "Find the bread and put it in the fridge.",
+   "fa": "نان را پیدا کن و داخل یخچال بگذار.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "search_for",
+     "object": "Bread",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "pick_and_place",
+     "object": "Bread",
+     "to": "Fridge",
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Bread",
+     "key": "parentReceptacles",
+     "contains": "Fridge"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-find-place-spatula-sink-basin",
+   "level": "L2",
+   "en": "Find the spatula and put it in the sink.",
+   "fa": "کفگیر را پیدا کن و داخل سینک بگذار.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "search_for",
+     "object": "Spatula",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "pick_and_place",
+     "object": "Spatula",
+     "to": "SinkBasin",
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Spatula",
+     "key": "parentReceptacles",
+     "contains": "SinkBasin"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-two-fork-spoon-sink-basin",
+   "level": "L2",
+   "en": "First put the fork in the sink, then the spoon.",
+   "fa": "اول چنگال و بعد قاشق را داخل سینک بگذار.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pick_and_place",
+     "object": "Fork",
+     "to": "SinkBasin",
+     "arg": null
+    },
+    {
+     "action": "pick_and_place",
+     "object": "Spoon",
+     "to": "SinkBasin",
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Fork",
+     "key": "parentReceptacles",
+     "contains": "SinkBasin"
+    },
+    {
+     "type": "Spoon",
+     "key": "parentReceptacles",
+     "contains": "SinkBasin"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-two-cup-bowl-sink-basin",
+   "level": "L2",
+   "en": "First put the cup in the sink, then the bowl.",
+   "fa": "اول فنجان و بعد کاسه را داخل سینک بگذار.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pick_and_place",
+     "object": "Cup",
+     "to": "SinkBasin",
+     "arg": null
+    },
+    {
+     "action": "pick_and_place",
+     "object": "Bowl",
+     "to": "SinkBasin",
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Cup",
+     "key": "parentReceptacles",
+     "contains": "SinkBasin"
+    },
+    {
+     "type": "Bowl",
+     "key": "parentReceptacles",
+     "contains": "SinkBasin"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-two-plate-mug-sink-basin",
+   "level": "L2",
+   "en": "First put the plate in the sink, then the mug.",
+   "fa": "اول بشقاب و بعد لیوان را داخل سینک بگذار.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pick_and_place",
+     "object": "Plate",
+     "to": "SinkBasin",
+     "arg": null
+    },
+    {
+     "action": "pick_and_place",
+     "object": "Mug",
+     "to": "SinkBasin",
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Plate",
+     "key": "parentReceptacles",
+     "contains": "SinkBasin"
+    },
+    {
+     "type": "Mug",
+     "key": "parentReceptacles",
+     "contains": "SinkBasin"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-two-egg-tomato-garbage-can",
+   "level": "L2",
+   "en": "First put the egg in the trash can, then the tomato.",
+   "fa": "اول تخم‌مرغ و بعد گوجه‌فرنگی را داخل سطل زباله بگذار.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pick_and_place",
+     "object": "Egg",
+     "to": "GarbageCan",
+     "arg": null
+    },
+    {
+     "action": "pick_and_place",
+     "object": "Tomato",
+     "to": "GarbageCan",
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Egg",
+     "key": "parentReceptacles",
+     "contains": "GarbageCan"
+    },
+    {
+     "type": "Tomato",
+     "key": "parentReceptacles",
+     "contains": "GarbageCan"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-two-apple-potato-garbage-can",
+   "level": "L2",
+   "en": "First put the apple in the trash can, then the potato.",
+   "fa": "اول سیب و بعد سیب‌زمینی را داخل سطل زباله بگذار.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pick_and_place",
+     "object": "Apple",
+     "to": "GarbageCan",
+     "arg": null
+    },
+    {
+     "action": "pick_and_place",
+     "object": "Potato",
+     "to": "GarbageCan",
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Apple",
+     "key": "parentReceptacles",
+     "contains": "GarbageCan"
+    },
+    {
+     "type": "Potato",
+     "key": "parentReceptacles",
+     "contains": "GarbageCan"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-two-apple-lettuce-fridge",
+   "level": "L2",
+   "en": "First put the apple in the fridge, then the lettuce.",
+   "fa": "اول سیب و بعد کاهو را داخل یخچال بگذار.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pick_and_place",
+     "object": "Apple",
+     "to": "Fridge",
+     "arg": null
+    },
+    {
+     "action": "pick_and_place",
+     "object": "Lettuce",
+     "to": "Fridge",
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Apple",
+     "key": "parentReceptacles",
+     "contains": "Fridge"
+    },
+    {
+     "type": "Lettuce",
+     "key": "parentReceptacles",
+     "contains": "Fridge"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-two-tomato-egg-fridge",
+   "level": "L2",
+   "en": "First put the tomato in the fridge, then the egg.",
+   "fa": "اول گوجه‌فرنگی و بعد تخم‌مرغ را داخل یخچال بگذار.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pick_and_place",
+     "object": "Tomato",
+     "to": "Fridge",
+     "arg": null
+    },
+    {
+     "action": "pick_and_place",
+     "object": "Egg",
+     "to": "Fridge",
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Tomato",
+     "key": "parentReceptacles",
+     "contains": "Fridge"
+    },
+    {
+     "type": "Egg",
+     "key": "parentReceptacles",
+     "contains": "Fridge"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-coffee-machine",
+   "level": "L2",
+   "en": "Put the mug in the coffee machine and turn it on.",
+   "fa": "لیوان را داخل قهوه‌ساز بگذار و آن را روشن کن.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pick_and_place",
+     "object": "Mug",
+     "to": "CoffeeMachine",
+     "arg": null
+    },
+    {
+     "action": "toggle_on",
+     "object": "CoffeeMachine",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Mug",
+     "key": "parentReceptacles",
+     "contains": "CoffeeMachine"
+    },
+    {
+     "type": "CoffeeMachine",
+     "key": "isToggled",
+     "value": true
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-stove-pan",
+   "level": "L2",
+   "en": "Put the pan on the stove and turn the stove on.",
+   "fa": "تابه را روی اجاق گاز بگذار و اجاق را روشن کن.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pick_and_place",
+     "object": "Pan",
+     "to": "StoveBurner",
+     "arg": null
+    },
+    {
+     "action": "toggle_on",
+     "object": "StoveKnob",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Pan",
+     "key": "parentReceptacles",
+     "contains": "StoveBurner"
+    },
+    {
+     "type": "StoveKnob",
+     "key": "isToggled",
+     "value": true,
+     "q": "any"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-stove-pot",
+   "level": "L2",
+   "en": "Put the pot on the stove and turn the stove on.",
+   "fa": "قابلمه را روی اجاق گاز بگذار و اجاق را روشن کن.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pick_and_place",
+     "object": "Pot",
+     "to": "StoveBurner",
+     "arg": null
+    },
+    {
+     "action": "toggle_on",
+     "object": "StoveKnob",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Pot",
+     "key": "parentReceptacles",
+     "contains": "StoveBurner"
+    },
+    {
+     "type": "StoveKnob",
+     "key": "isToggled",
+     "value": true,
+     "q": "any"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-stove-water-pot",
+   "level": "L2",
+   "en": "Fill the pot with water, put it on the stove, and turn the stove on.",
+   "fa": "قابلمه را با آب پر کن، روی اجاق گاز بگذار و اجاق را روشن کن.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "fill",
+     "object": "Pot",
+     "to": null,
+     "arg": "water"
+    },
+    {
+     "action": "pick_and_place",
+     "object": "Pot",
+     "to": "StoveBurner",
+     "arg": null
+    },
+    {
+     "action": "toggle_on",
+     "object": "StoveKnob",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Pot",
+     "key": "isFilledWithLiquid",
+     "value": true
+    },
+    {
+     "type": "Pot",
+     "key": "parentReceptacles",
+     "contains": "StoveBurner"
+    },
+    {
+     "type": "StoveKnob",
+     "key": "isToggled",
+     "value": true,
+     "q": "any"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-stove-water-kettle",
+   "level": "L2",
+   "en": "Fill the kettle with water, put it on the stove, and turn the stove on.",
+   "fa": "کتری را با آب پر کن، روی اجاق گاز بگذار و اجاق را روشن کن.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "fill",
+     "object": "Kettle",
+     "to": null,
+     "arg": "water"
+    },
+    {
+     "action": "pick_and_place",
+     "object": "Kettle",
+     "to": "StoveBurner",
+     "arg": null
+    },
+    {
+     "action": "toggle_on",
+     "object": "StoveKnob",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Kettle",
+     "key": "isFilledWithLiquid",
+     "value": true
+    },
+    {
+     "type": "Kettle",
+     "key": "parentReceptacles",
+     "contains": "StoveBurner"
+    },
+    {
+     "type": "StoveKnob",
+     "key": "isToggled",
+     "value": true,
+     "q": "any"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-fill-place-cup-water-counter-top",
+   "level": "L2",
+   "en": "Fill the cup with water and put it on the counter.",
+   "fa": "فنجان را با آب پر کن و روی کانتر بگذار.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "fill",
+     "object": "Cup",
+     "to": null,
+     "arg": "water"
+    },
+    {
+     "action": "pick_and_place",
+     "object": "Cup",
+     "to": "CounterTop",
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Cup",
+     "key": "fillLiquid",
+     "value": "water"
+    },
+    {
+     "type": "Cup",
+     "key": "parentReceptacles",
+     "contains": "CounterTop"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-fill-place-mug-coffee-counter-top",
+   "level": "L2",
+   "en": "Fill the mug with coffee and put it on the counter.",
+   "fa": "لیوان را با قهوه پر کن و روی کانتر بگذار.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "fill",
+     "object": "Mug",
+     "to": null,
+     "arg": "coffee"
+    },
+    {
+     "action": "pick_and_place",
+     "object": "Mug",
+     "to": "CounterTop",
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Mug",
+     "key": "fillLiquid",
+     "value": "coffee"
+    },
+    {
+     "type": "Mug",
+     "key": "parentReceptacles",
+     "contains": "CounterTop"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-fill-place-bowl-water-sink-basin",
+   "level": "L2",
+   "en": "Fill the bowl with water and put it in the sink.",
+   "fa": "کاسه را با آب پر کن و داخل سینک بگذار.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "fill",
+     "object": "Bowl",
+     "to": null,
+     "arg": "water"
+    },
+    {
+     "action": "pick_and_place",
+     "object": "Bowl",
+     "to": "SinkBasin",
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Bowl",
+     "key": "fillLiquid",
+     "value": "water"
+    },
+    {
+     "type": "Bowl",
+     "key": "parentReceptacles",
+     "contains": "SinkBasin"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-fill-place-cup-wine-dining-table",
+   "level": "L2",
+   "en": "Fill the cup with wine and put it on the dining table.",
+   "fa": "فنجان را با شراب پر کن و روی میز غذاخوری بگذار.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "fill",
+     "object": "Cup",
+     "to": null,
+     "arg": "wine"
+    },
+    {
+     "action": "pick_and_place",
+     "object": "Cup",
+     "to": "DiningTable",
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Cup",
+     "key": "fillLiquid",
+     "value": "wine"
+    },
+    {
+     "type": "Cup",
+     "key": "parentReceptacles",
+     "contains": "DiningTable"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-fill-place-mug-water-microwave",
+   "level": "L2",
+   "en": "Fill the mug with water and put it in the microwave.",
+   "fa": "لیوان را با آب پر کن و داخل مایکروویو بگذار.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "fill",
+     "object": "Mug",
+     "to": null,
+     "arg": "water"
+    },
+    {
+     "action": "pick_and_place",
+     "object": "Mug",
+     "to": "Microwave",
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Mug",
+     "key": "fillLiquid",
+     "value": "water"
+    },
+    {
+     "type": "Mug",
+     "key": "parentReceptacles",
+     "contains": "Microwave"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-fill-place-cup-water-fridge",
+   "level": "L2",
+   "en": "Fill the cup with water and put it in the fridge.",
+   "fa": "فنجان را با آب پر کن و داخل یخچال بگذار.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "fill",
+     "object": "Cup",
+     "to": null,
+     "arg": "water"
+    },
+    {
+     "action": "pick_and_place",
+     "object": "Cup",
+     "to": "Fridge",
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Cup",
+     "key": "fillLiquid",
+     "value": "water"
+    },
+    {
+     "type": "Cup",
+     "key": "parentReceptacles",
+     "contains": "Fridge"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-light-off-open-fridge",
+   "level": "L2",
+   "en": "Turn off the light, then open the fridge.",
+   "fa": "چراغ را خاموش کن، سپس در یخچال را باز کن.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "toggle_off",
+     "object": "LightSwitch",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "open",
+     "object": "Fridge",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "LightSwitch",
+     "key": "isToggled",
+     "value": false
+    },
+    {
+     "type": "Fridge",
+     "key": "isOpen",
+     "value": true
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-open-microwave-toaster-on",
+   "level": "L2",
+   "en": "Open the microwave, then turn on the toaster.",
+   "fa": "در مایکروویو را باز کن، سپس توستر را روشن کن.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "open",
+     "object": "Microwave",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "toggle_on",
+     "object": "Toaster",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Microwave",
+     "key": "isOpen",
+     "value": true
+    },
+    {
+     "type": "Toaster",
+     "key": "isToggled",
+     "value": true
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-coffee-on-pickup-mug",
+   "level": "L2",
+   "en": "Turn on the coffee machine, then pick up the mug.",
+   "fa": "قهوه‌ساز را روشن کن، سپس لیوان را بردار.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "toggle_on",
+     "object": "CoffeeMachine",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "pickup",
+     "object": "Mug",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "CoffeeMachine",
+     "key": "isToggled",
+     "value": true
+    },
+    {
+     "type": "Mug",
+     "key": "isPickedUp",
+     "value": true
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-faucet-on-pickup-sponge",
+   "level": "L2",
+   "en": "Turn on the faucet, then pick up the sponge.",
+   "fa": "شیر آب را باز کن، سپس اسفنج ظرف‌شویی را بردار.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "toggle_on",
+     "object": "Faucet",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "pickup",
+     "object": "DishSponge",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Faucet",
+     "key": "isToggled",
+     "value": true
+    },
+    {
+     "type": "DishSponge",
+     "key": "isPickedUp",
+     "value": true
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-open-fridge-pickup-apple",
+   "level": "L2",
+   "en": "Open the fridge, then pick up the apple.",
+   "fa": "در یخچال را باز کن، سپس سیب را بردار.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "open",
+     "object": "Fridge",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "pickup",
+     "object": "Apple",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Fridge",
+     "key": "isOpen",
+     "value": true
+    },
+    {
+     "type": "Apple",
+     "key": "isPickedUp",
+     "value": true
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-toaster-then-coffee",
+   "level": "L2",
+   "en": "Turn on the toaster and then the coffee machine.",
+   "fa": "اول توستر و بعد قهوه‌ساز را روشن کن.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "toggle_on",
+     "object": "Toaster",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "toggle_on",
+     "object": "CoffeeMachine",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Toaster",
+     "key": "isToggled",
+     "value": true
+    },
+    {
+     "type": "CoffeeMachine",
+     "key": "isToggled",
+     "value": true
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-open-fridge-microwave",
+   "level": "L2",
+   "en": "Open the fridge and then the microwave.",
+   "fa": "اول در یخچال و بعد در مایکروویو را باز کن.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "open",
+     "object": "Fridge",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "open",
+     "object": "Microwave",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Fridge",
+     "key": "isOpen",
+     "value": true
+    },
+    {
+     "type": "Microwave",
+     "key": "isOpen",
+     "value": true
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-stove-then-microwave",
+   "level": "L2",
+   "en": "Turn on the stove, then turn on the microwave.",
+   "fa": "اجاق گاز را روشن کن، سپس مایکروویو را روشن کن.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "toggle_on",
+     "object": "StoveKnob",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "toggle_on",
+     "object": "Microwave",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "StoveKnob",
+     "key": "isToggled",
+     "value": true,
+     "q": "any"
+    },
+    {
+     "type": "Microwave",
+     "key": "isToggled",
+     "value": true
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-salt-then-light-off",
+   "level": "L2",
+   "en": "Pick up the salt shaker, then turn off the light.",
+   "fa": "نمکدان را بردار، سپس چراغ را خاموش کن.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pickup",
+     "object": "SaltShaker",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "toggle_off",
+     "object": "LightSwitch",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "SaltShaker",
+     "key": "isPickedUp",
+     "value": true
+    },
+    {
+     "type": "LightSwitch",
+     "key": "isToggled",
+     "value": false
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-open-cabinet-drawer",
+   "level": "L2",
+   "en": "Open a cabinet, then open a drawer.",
+   "fa": "اول یکی از کابینت‌ها و بعد یکی از کشوها را باز کن.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "open",
+     "object": "Cabinet",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "open",
+     "object": "Drawer",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Cabinet",
+     "key": "isOpen",
+     "value": true,
+     "q": "any"
+    },
+    {
+     "type": "Drawer",
+     "key": "isOpen",
+     "value": true,
+     "q": "any"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-faucet-on-light-off",
+   "level": "L2",
+   "en": "Turn on the faucet, then turn off the light.",
+   "fa": "شیر آب را باز کن، سپس چراغ را خاموش کن.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "toggle_on",
+     "object": "Faucet",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "toggle_off",
+     "object": "LightSwitch",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Faucet",
+     "key": "isToggled",
+     "value": true
+    },
+    {
+     "type": "LightSwitch",
+     "key": "isToggled",
+     "value": false
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-break-egg-pickup-fork",
+   "level": "L2",
+   "en": "Break the egg, then pick up the fork.",
+   "fa": "تخم‌مرغ را بشکن، سپس چنگال را بردار.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "break",
+     "object": "Egg",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "pickup",
+     "object": "Fork",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Egg",
+     "key": "isBroken",
+     "value": true,
+     "q": "any"
+    },
+    {
+     "type": "Fork",
+     "key": "isPickedUp",
+     "value": true
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-dirty-pan-faucet-on",
+   "level": "L2",
+   "en": "Make the pan dirty, then turn on the faucet.",
+   "fa": "تابه را کثیف کن، سپس شیر آب را باز کن.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "dirty",
+     "object": "Pan",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "toggle_on",
+     "object": "Faucet",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Pan",
+     "key": "isDirty",
+     "value": true
+    },
+    {
+     "type": "Faucet",
+     "key": "isToggled",
+     "value": true
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-open-microwave-pickup-potato",
+   "level": "L2",
+   "en": "Open the microwave, then pick up the potato.",
+   "fa": "در مایکروویو را باز کن، سپس سیب‌زمینی را بردار.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "open",
+     "object": "Microwave",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "pickup",
+     "object": "Potato",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Microwave",
+     "key": "isOpen",
+     "value": true
+    },
+    {
+     "type": "Potato",
+     "key": "isPickedUp",
+     "value": true
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-toaster-on-open-cabinet",
+   "level": "L2",
+   "en": "Turn on the toaster, then open a cabinet.",
+   "fa": "توستر را روشن کن، سپس یکی از کابینت‌ها را باز کن.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "toggle_on",
+     "object": "Toaster",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "open",
+     "object": "Cabinet",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Toaster",
+     "key": "isToggled",
+     "value": true
+    },
+    {
+     "type": "Cabinet",
+     "key": "isOpen",
+     "value": true,
+     "q": "any"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-three-appliances",
+   "level": "L2",
+   "en": "Turn on the toaster, the coffee machine and the microwave, in that order.",
+   "fa": "به‌ترتیب توستر، قهوه‌ساز و مایکروویو را روشن کن.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "toggle_on",
+     "object": "Toaster",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "toggle_on",
+     "object": "CoffeeMachine",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "toggle_on",
+     "object": "Microwave",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Toaster",
+     "key": "isToggled",
+     "value": true
+    },
+    {
+     "type": "CoffeeMachine",
+     "key": "isToggled",
+     "value": true
+    },
+    {
+     "type": "Microwave",
+     "key": "isToggled",
+     "value": true
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-three-doors",
+   "level": "L2",
+   "en": "Open the fridge, then the microwave, then a cabinet.",
+   "fa": "به‌ترتیب در یخچال، در مایکروویو و یکی از کابینت‌ها را باز کن.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "open",
+     "object": "Fridge",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "open",
+     "object": "Microwave",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "open",
+     "object": "Cabinet",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Fridge",
+     "key": "isOpen",
+     "value": true
+    },
+    {
+     "type": "Microwave",
+     "key": "isOpen",
+     "value": true
+    },
+    {
+     "type": "Cabinet",
+     "key": "isOpen",
+     "value": true,
+     "q": "any"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-light-fridge-egg",
+   "level": "L2",
+   "en": "Turn off the light, open the fridge, and pick up the egg.",
+   "fa": "چراغ را خاموش کن، در یخچال را باز کن و تخم‌مرغ را بردار.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "toggle_off",
+     "object": "LightSwitch",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "open",
+     "object": "Fridge",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "pickup",
+     "object": "Egg",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "LightSwitch",
+     "key": "isToggled",
+     "value": false
+    },
+    {
+     "type": "Fridge",
+     "key": "isOpen",
+     "value": true
+    },
+    {
+     "type": "Egg",
+     "key": "isPickedUp",
+     "value": true
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-knife-bread-toaster",
+   "level": "L2",
+   "en": "Pick up the butter knife, slice the bread, then turn on the toaster.",
+   "fa": "کارد کره‌خوری را بردار، نان را برش بزن و سپس توستر را روشن کن.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pickup",
+     "object": "ButterKnife",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "slice",
+     "object": "Bread",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "toggle_on",
+     "object": "Toaster",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Bread",
+     "key": "isSliced",
+     "value": true,
+     "q": "any"
+    },
+    {
+     "type": "Toaster",
+     "key": "isToggled",
+     "value": true
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-mug-water-sink",
+   "level": "L2",
+   "en": "Pick up the mug, fill it with water, and put it in the sink.",
+   "fa": "لیوان را بردار، با آب پرش کن و داخل سینک بگذار.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pickup",
+     "object": "Mug",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "fill",
+     "object": "Mug",
+     "to": null,
+     "arg": "water"
+    },
+    {
+     "action": "put_in",
+     "object": "SinkBasin",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Mug",
+     "key": "fillLiquid",
+     "value": "water"
+    },
+    {
+     "type": "Mug",
+     "key": "parentReceptacles",
+     "contains": "SinkBasin"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-close-fridge-faucet-off",
+   "level": "L2",
+   "en": "Close the fridge, then turn off the faucet.",
+   "fa": "در یخچال را ببند، سپس شیر آب را ببند.",
+   "setup": [
+    {
+     "action": "open",
+     "object": "Fridge",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "toggle_on",
+     "object": "Faucet",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "close",
+     "object": "Fridge",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "toggle_off",
+     "object": "Faucet",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Fridge",
+     "key": "isOpen",
+     "value": false
+    },
+    {
+     "type": "Faucet",
+     "key": "isToggled",
+     "value": false
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-toaster-coffee-off",
+   "level": "L2",
+   "en": "Turn off the toaster, then the coffee machine.",
+   "fa": "اول توستر و بعد قهوه‌ساز را خاموش کن.",
+   "setup": [
+    {
+     "action": "toggle_on",
+     "object": "Toaster",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "toggle_on",
+     "object": "CoffeeMachine",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "toggle_off",
+     "object": "Toaster",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "toggle_off",
+     "object": "CoffeeMachine",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Toaster",
+     "key": "isToggled",
+     "value": false
+    },
+    {
+     "type": "CoffeeMachine",
+     "key": "isToggled",
+     "value": false
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-close-microwave-light-on",
+   "level": "L2",
+   "en": "Close the microwave, then turn the light back on.",
+   "fa": "در مایکروویو را ببند، سپس چراغ را دوباره روشن کن.",
+   "setup": [
+    {
+     "action": "open",
+     "object": "Microwave",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "toggle_off",
+     "object": "LightSwitch",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "close",
+     "object": "Microwave",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "toggle_on",
+     "object": "LightSwitch",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Microwave",
+     "key": "isOpen",
+     "value": false
+    },
+    {
+     "type": "LightSwitch",
+     "key": "isToggled",
+     "value": true
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-stove-off-close-fridge",
+   "level": "L2",
+   "en": "Turn off the stove, then close the fridge.",
+   "fa": "اجاق گاز را خاموش کن، سپس در یخچال را ببند.",
+   "setup": [
+    {
+     "action": "toggle_on",
+     "object": "StoveKnob",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "open",
+     "object": "Fridge",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "toggle_off",
+     "object": "StoveKnob",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "close",
+     "object": "Fridge",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "StoveKnob",
+     "key": "isToggled",
+     "value": false,
+     "q": "all"
+    },
+    {
+     "type": "Fridge",
+     "key": "isOpen",
+     "value": false
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-clean-plate-bowl",
+   "level": "L2",
+   "en": "Clean the plate, then clean the bowl.",
+   "fa": "اول بشقاب و بعد کاسه را تمیز کن.",
+   "setup": [
+    {
+     "action": "dirty",
+     "object": "Plate",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "dirty",
+     "object": "Bowl",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "clean",
+     "object": "Plate",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "clean",
+     "object": "Bowl",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Plate",
+     "key": "isDirty",
+     "value": false
+    },
+    {
+     "type": "Bowl",
+     "key": "isDirty",
+     "value": false
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-empty-mug-sink",
+   "level": "L2",
+   "en": "Empty the mug and put it in the sink.",
+   "fa": "لیوان را خالی کن و داخل سینک بگذار.",
+   "setup": [
+    {
+     "action": "fill",
+     "object": "Mug",
+     "to": null,
+     "arg": "coffee"
+    }
+   ],
+   "plan": [
+    {
+     "action": "empty",
+     "object": "Mug",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "pick_and_place",
+     "object": "Mug",
+     "to": "SinkBasin",
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Mug",
+     "key": "isFilledWithLiquid",
+     "value": false
+    },
+    {
+     "type": "Mug",
+     "key": "parentReceptacles",
+     "contains": "SinkBasin"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-empty-cup-wine",
+   "level": "L2",
+   "en": "Empty the cup, then fill it with wine.",
+   "fa": "فنجان را خالی کن، سپس با شراب پرش کن.",
+   "setup": [
+    {
+     "action": "fill",
+     "object": "Cup",
+     "to": null,
+     "arg": "water"
+    }
+   ],
+   "plan": [
+    {
+     "action": "empty",
+     "object": "Cup",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "fill",
+     "object": "Cup",
+     "to": null,
+     "arg": "wine"
+    }
+   ],
+   "goal": [
+    {
+     "type": "Cup",
+     "key": "fillLiquid",
+     "value": "wine"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l2-close-all-light-off",
+   "level": "L2",
+   "en": "Close everything that is open, then turn off the light.",
+   "fa": "هرچه باز است را ببند، سپس چراغ را خاموش کن.",
+   "setup": [
+    {
+     "action": "open",
+     "object": "Fridge",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "open",
+     "object": "Microwave",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "close_all",
+     "object": null,
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "toggle_off",
+     "object": "LightSwitch",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Fridge",
+     "key": "isOpen",
+     "value": false
+    },
+    {
+     "type": "Microwave",
+     "key": "isOpen",
+     "value": false
+    },
+    {
+     "type": "LightSwitch",
+     "key": "isToggled",
+     "value": false
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l3-chilled-apple",
+   "level": "L3",
+   "en": "I want to eat this apple cold later.",
+   "fa": "می‌خواهم این سیب را بعداً سرد بخورم.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pick_and_place",
+     "object": "Apple",
+     "to": "Fridge",
+     "arg": null
+    },
+    {
+     "action": "close",
+     "object": "Fridge",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Apple",
+     "key": "parentReceptacles",
+     "contains": "Fridge"
+    },
+    {
+     "type": "Fridge",
+     "key": "isOpen",
+     "value": false
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l3-cold-tomato",
+   "level": "L3",
+   "en": "I'll want this tomato cold for dinner.",
+   "fa": "این گوجه‌فرنگی را برای شام سرد می‌خواهم.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pick_and_place",
+     "object": "Tomato",
+     "to": "Fridge",
+     "arg": null
+    },
+    {
+     "action": "close",
+     "object": "Fridge",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Tomato",
+     "key": "parentReceptacles",
+     "contains": "Fridge"
+    },
+    {
+     "type": "Fridge",
+     "key": "isOpen",
+     "value": false
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l3-cold-bread",
+   "level": "L3",
+   "en": "I like my bread cold. Keep it for tomorrow.",
+   "fa": "نان را سرد دوست دارم؛ برای فردا نگهش دار.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pick_and_place",
+     "object": "Bread",
+     "to": "Fridge",
+     "arg": null
+    },
+    {
+     "action": "close",
+     "object": "Fridge",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Bread",
+     "key": "parentReceptacles",
+     "contains": "Fridge"
+    },
+    {
+     "type": "Fridge",
+     "key": "isOpen",
+     "value": false
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l3-cold-potato",
+   "level": "L3",
+   "en": "Leave the potato somewhere it can cool down.",
+   "fa": "سیب‌زمینی را جایی بگذار که خنک شود.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pick_and_place",
+     "object": "Potato",
+     "to": "Fridge",
+     "arg": null
+    },
+    {
+     "action": "close",
+     "object": "Fridge",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Potato",
+     "key": "parentReceptacles",
+     "contains": "Fridge"
+    },
+    {
+     "type": "Fridge",
+     "key": "isOpen",
+     "value": false
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l3-warm-potato",
+   "level": "L3",
+   "en": "I'd like a warm potato.",
+   "fa": "یک سیب‌زمینی گرم می‌خواهم.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "heat",
+     "object": "Potato",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Potato",
+     "key": "temperature",
+     "value": "Hot"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l3-warm-bread",
+   "level": "L3",
+   "en": "Warm up some bread for me.",
+   "fa": "کمی نان برایم گرم کن.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "heat",
+     "object": "Bread",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Bread",
+     "key": "temperature",
+     "value": "Hot"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l3-hot-tomato",
+   "level": "L3",
+   "en": "I feel like eating a hot tomato.",
+   "fa": "هوس گوجه‌فرنگی داغ کرده‌ام.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "heat",
+     "object": "Tomato",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Tomato",
+     "key": "temperature",
+     "value": "Hot"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l3-warm-apple",
+   "level": "L3",
+   "en": "The apple is too cold to eat. Take the chill off it.",
+   "fa": "سیب برای خوردن زیادی سرد است؛ گرمش کن.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "heat",
+     "object": "Apple",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Apple",
+     "key": "temperature",
+     "value": "Hot"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l3-serve-hot-potato",
+   "level": "L3",
+   "en": "Serve the potato hot on a plate.",
+   "fa": "سیب‌زمینی را داغ در یک بشقاب سرو کن.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "heat",
+     "object": "Potato",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "pick_and_place",
+     "object": "Potato",
+     "to": "Plate",
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Potato",
+     "key": "temperature",
+     "value": "Hot"
+    },
+    {
+     "type": "Potato",
+     "key": "parentReceptacles",
+     "contains": "Plate"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l3-serve-hot-egg",
+   "level": "L3",
+   "en": "Serve me a hot egg in a bowl.",
+   "fa": "یک تخم‌مرغ داغ در کاسه برایم سرو کن.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "heat",
+     "object": "Egg",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "pick_and_place",
+     "object": "Egg",
+     "to": "Bowl",
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Egg",
+     "key": "temperature",
+     "value": "Hot"
+    },
+    {
+     "type": "Egg",
+     "key": "parentReceptacles",
+     "contains": "Bowl"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l3-serve-cooked-potato",
+   "level": "L3",
+   "en": "Dinner is a cooked potato in a bowl.",
+   "fa": "شام، سیب‌زمینی پخته در کاسه است.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "cook",
+     "object": "Potato",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "pick_and_place",
+     "object": "Potato",
+     "to": "Bowl",
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Potato",
+     "key": "isCooked",
+     "value": true
+    },
+    {
+     "type": "Potato",
+     "key": "parentReceptacles",
+     "contains": "Bowl"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l3-apple-slices",
+   "level": "L3",
+   "en": "I want some apple slices.",
+   "fa": "چند برش سیب می‌خواهم.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pickup",
+     "object": "ButterKnife",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "slice",
+     "object": "Apple",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Apple",
+     "key": "isSliced",
+     "value": true,
+     "q": "any"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l3-tomato-for-salad",
+   "level": "L3",
+   "en": "Get the tomato ready for a salad.",
+   "fa": "گوجه‌فرنگی را برای سالاد آماده کن.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pickup",
+     "object": "ButterKnife",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "slice",
+     "object": "Tomato",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Tomato",
+     "key": "isSliced",
+     "value": true,
+     "q": "any"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l3-bread-for-breakfast",
+   "level": "L3",
+   "en": "Cut up some bread for breakfast.",
+   "fa": "کمی نان برای صبحانه آماده کن؛ باید تکه شده باشد.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pickup",
+     "object": "ButterKnife",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "slice",
+     "object": "Bread",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Bread",
+     "key": "isSliced",
+     "value": true,
+     "q": "any"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l3-potato-for-frying",
+   "level": "L3",
+   "en": "The potato has to be in pieces before I can fry it.",
+   "fa": "سیب‌زمینی باید قبل از سرخ‌کردن تکه‌تکه شود.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pickup",
+     "object": "ButterKnife",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "slice",
+     "object": "Potato",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Potato",
+     "key": "isSliced",
+     "value": true,
+     "q": "any"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l3-shred-lettuce",
+   "level": "L3",
+   "en": "The lettuce is too big to eat like this.",
+   "fa": "کاهو این‌طوری برای خوردن زیادی بزرگ است.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pickup",
+     "object": "ButterKnife",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "slice",
+     "object": "Lettuce",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Lettuce",
+     "key": "isSliced",
+     "value": true,
+     "q": "any"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l3-salad",
+   "level": "L3",
+   "en": "Make me a salad.",
+   "fa": "برایم سالاد درست کن.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pickup",
+     "object": "ButterKnife",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "slice",
+     "object": "Lettuce",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "slice",
+     "object": "Tomato",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Lettuce",
+     "key": "isSliced",
+     "value": true,
+     "q": "any"
+    },
+    {
+     "type": "Tomato",
+     "key": "isSliced",
+     "value": true,
+     "q": "any"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l3-sandwich-prep",
+   "level": "L3",
+   "en": "Prepare the ingredients for a sandwich.",
+   "fa": "مواد لازم برای ساندویچ را آماده کن.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pickup",
+     "object": "ButterKnife",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "slice",
+     "object": "Bread",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "slice",
+     "object": "Tomato",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "slice",
+     "object": "Lettuce",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Bread",
+     "key": "isSliced",
+     "value": true,
+     "q": "any"
+    },
+    {
+     "type": "Tomato",
+     "key": "isSliced",
+     "value": true,
+     "q": "any"
+    },
+    {
+     "type": "Lettuce",
+     "key": "isSliced",
+     "value": true,
+     "q": "any"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l3-omelette-egg",
+   "level": "L3",
+   "en": "I need a cracked egg for the omelette.",
+   "fa": "برای املت یک تخم‌مرغ شکسته لازم دارم.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "break",
+     "object": "Egg",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Egg",
+     "key": "isBroken",
+     "value": true,
+     "q": "any"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l3-toast",
+   "level": "L3",
+   "en": "Make some toast.",
+   "fa": "نان تست درست کن.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pickup",
+     "object": "ButterKnife",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "slice",
+     "object": "Bread",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "toggle_on",
+     "object": "Toaster",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Bread",
+     "key": "isSliced",
+     "value": true,
+     "q": "any"
+    },
+    {
+     "type": "Toaster",
+     "key": "isToggled",
+     "value": true
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l3-coffee",
+   "level": "L3",
+   "en": "Make me a coffee.",
+   "fa": "برایم قهوه درست کن.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pick_and_place",
+     "object": "Mug",
+     "to": "CoffeeMachine",
+     "arg": null
+    },
+    {
+     "action": "toggle_on",
+     "object": "CoffeeMachine",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Mug",
+     "key": "parentReceptacles",
+     "contains": "CoffeeMachine"
+    },
+    {
+     "type": "CoffeeMachine",
+     "key": "isToggled",
+     "value": true
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l3-boil-water",
+   "level": "L3",
+   "en": "Boil some water.",
+   "fa": "کمی آب بجوشان.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "fill",
+     "object": "Pot",
+     "to": null,
+     "arg": "water"
+    },
+    {
+     "action": "pick_and_place",
+     "object": "Pot",
+     "to": "StoveBurner",
+     "arg": null
+    },
+    {
+     "action": "toggle_on",
+     "object": "StoveKnob",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Pot",
+     "key": "isFilledWithLiquid",
+     "value": true
+    },
+    {
+     "type": "Pot",
+     "key": "parentReceptacles",
+     "contains": "StoveBurner"
+    },
+    {
+     "type": "StoveKnob",
+     "key": "isToggled",
+     "value": true,
+     "q": "any"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l3-tea-kettle",
+   "level": "L3",
+   "en": "Get the kettle going for tea.",
+   "fa": "کتری را برای چای آماده کن و روی اجاق بگذار تا جوش بیاید.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "fill",
+     "object": "Kettle",
+     "to": null,
+     "arg": "water"
+    },
+    {
+     "action": "pick_and_place",
+     "object": "Kettle",
+     "to": "StoveBurner",
+     "arg": null
+    },
+    {
+     "action": "toggle_on",
+     "object": "StoveKnob",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Kettle",
+     "key": "isFilledWithLiquid",
+     "value": true
+    },
+    {
+     "type": "Kettle",
+     "key": "parentReceptacles",
+     "contains": "StoveBurner"
+    },
+    {
+     "type": "StoveKnob",
+     "key": "isToggled",
+     "value": true,
+     "q": "any"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l3-thirsty",
+   "level": "L3",
+   "en": "I'm thirsty. Bring me a cup of water.",
+   "fa": "تشنه‌ام؛ یک فنجان آب برایم بیاور.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "fill",
+     "object": "Cup",
+     "to": null,
+     "arg": "water"
+    },
+    {
+     "action": "pickup",
+     "object": "Cup",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Cup",
+     "key": "fillLiquid",
+     "value": "water"
+    },
+    {
+     "type": "Cup",
+     "key": "isPickedUp",
+     "value": true
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l3-wine",
+   "level": "L3",
+   "en": "Pour me some wine.",
+   "fa": "کمی شراب برایم بریز.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "fill",
+     "object": "Cup",
+     "to": null,
+     "arg": "wine"
+    }
+   ],
+   "goal": [
+    {
+     "type": "Cup",
+     "key": "fillLiquid",
+     "value": "wine"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l3-chilled-water",
+   "level": "L3",
+   "en": "I want a cup of water chilling in the fridge.",
+   "fa": "یک فنجان آب می‌خواهم که در یخچال خنک شود.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "fill",
+     "object": "Cup",
+     "to": null,
+     "arg": "water"
+    },
+    {
+     "action": "pick_and_place",
+     "object": "Cup",
+     "to": "Fridge",
+     "arg": null
+    },
+    {
+     "action": "close",
+     "object": "Fridge",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Cup",
+     "key": "fillLiquid",
+     "value": "water"
+    },
+    {
+     "type": "Cup",
+     "key": "parentReceptacles",
+     "contains": "Fridge"
+    },
+    {
+     "type": "Fridge",
+     "key": "isOpen",
+     "value": false
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l3-stale-coffee",
+   "level": "L3",
+   "en": "This coffee has gone cold and stale. Get rid of it.",
+   "fa": "این قهوه سرد و مانده شده است؛ دورش بریز.",
+   "setup": [
+    {
+     "action": "fill",
+     "object": "Mug",
+     "to": null,
+     "arg": "coffee"
+    }
+   ],
+   "plan": [
+    {
+     "action": "empty",
+     "object": "Mug",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Mug",
+     "key": "isFilledWithLiquid",
+     "value": false
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l3-old-water",
+   "level": "L3",
+   "en": "The cup has old water in it.",
+   "fa": "داخل فنجان آب مانده است.",
+   "setup": [
+    {
+     "action": "fill",
+     "object": "Cup",
+     "to": null,
+     "arg": "water"
+    }
+   ],
+   "plan": [
+    {
+     "action": "empty",
+     "object": "Cup",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Cup",
+     "key": "isFilledWithLiquid",
+     "value": false
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l3-dishes",
+   "level": "L3",
+   "en": "Do the dishes.",
+   "fa": "ظرف‌ها را بشوی.",
+   "setup": [
+    {
+     "action": "dirty",
+     "object": "Plate",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "dirty",
+     "object": "Bowl",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "wash",
+     "object": "Plate",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "wash",
+     "object": "Bowl",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Plate",
+     "key": "isDirty",
+     "value": false
+    },
+    {
+     "type": "Bowl",
+     "key": "isDirty",
+     "value": false
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l3-dirty-cups",
+   "level": "L3",
+   "en": "The cups are dirty. Take care of them.",
+   "fa": "لیوان و فنجان کثیف‌اند؛ رسیدگی کن.",
+   "setup": [
+    {
+     "action": "dirty",
+     "object": "Mug",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "dirty",
+     "object": "Cup",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "wash",
+     "object": "Mug",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "wash",
+     "object": "Cup",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Mug",
+     "key": "isDirty",
+     "value": false
+    },
+    {
+     "type": "Cup",
+     "key": "isDirty",
+     "value": false
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l3-cookware",
+   "level": "L3",
+   "en": "Clean up the cookware after dinner.",
+   "fa": "بعد از شام ظرف‌های پخت‌وپز را تمیز کن.",
+   "setup": [
+    {
+     "action": "dirty",
+     "object": "Pan",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "dirty",
+     "object": "Pot",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "wash",
+     "object": "Pan",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "wash",
+     "object": "Pot",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Pan",
+     "key": "isDirty",
+     "value": false
+    },
+    {
+     "type": "Pot",
+     "key": "isDirty",
+     "value": false
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l3-bad-tomato",
+   "level": "L3",
+   "en": "The tomato has gone bad.",
+   "fa": "گوجه‌فرنگی خراب شده است.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pick_and_place",
+     "object": "Tomato",
+     "to": "GarbageCan",
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Tomato",
+     "key": "parentReceptacles",
+     "contains": "GarbageCan"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l3-stale-bread",
+   "level": "L3",
+   "en": "This bread is stale. Get rid of it.",
+   "fa": "این نان بیات شده است؛ از شرش خلاص شو.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pick_and_place",
+     "object": "Bread",
+     "to": "GarbageCan",
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Bread",
+     "key": "parentReceptacles",
+     "contains": "GarbageCan"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l3-rotten-egg",
+   "level": "L3",
+   "en": "The egg is rotten.",
+   "fa": "تخم‌مرغ گندیده است.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pick_and_place",
+     "object": "Egg",
+     "to": "GarbageCan",
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Egg",
+     "key": "parentReceptacles",
+     "contains": "GarbageCan"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l3-wilted-lettuce",
+   "level": "L3",
+   "en": "The lettuce has wilted and nobody will eat it.",
+   "fa": "کاهو پلاسیده شده و دیگر کسی آن را نمی‌خورد.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pick_and_place",
+     "object": "Lettuce",
+     "to": "GarbageCan",
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Lettuce",
+     "key": "parentReceptacles",
+     "contains": "GarbageCan"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l3-old-produce",
+   "level": "L3",
+   "en": "The potato and the apple are both past their best.",
+   "fa": "سیب‌زمینی و سیب هر دو کهنه شده‌اند.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pick_and_place",
+     "object": "Potato",
+     "to": "GarbageCan",
+     "arg": null
+    },
+    {
+     "action": "pick_and_place",
+     "object": "Apple",
+     "to": "GarbageCan",
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Potato",
+     "key": "parentReceptacles",
+     "contains": "GarbageCan"
+    },
+    {
+     "type": "Apple",
+     "key": "parentReceptacles",
+     "contains": "GarbageCan"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l3-groceries",
+   "level": "L3",
+   "en": "Put the lettuce, the tomato and the egg where they will stay fresh.",
+   "fa": "کاهو، گوجه‌فرنگی و تخم‌مرغ را جایی بگذار که تازه بمانند.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pick_and_place",
+     "object": "Lettuce",
+     "to": "Fridge",
+     "arg": null
+    },
+    {
+     "action": "pick_and_place",
+     "object": "Tomato",
+     "to": "Fridge",
+     "arg": null
+    },
+    {
+     "action": "pick_and_place",
+     "object": "Egg",
+     "to": "Fridge",
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Lettuce",
+     "key": "parentReceptacles",
+     "contains": "Fridge"
+    },
+    {
+     "type": "Tomato",
+     "key": "parentReceptacles",
+     "contains": "Fridge"
+    },
+    {
+     "type": "Egg",
+     "key": "parentReceptacles",
+     "contains": "Fridge"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l3-keep-cold",
+   "level": "L3",
+   "en": "Store the apple and the potato somewhere cold.",
+   "fa": "سیب و سیب‌زمینی را در جای سرد نگه‌داری کن.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pick_and_place",
+     "object": "Apple",
+     "to": "Fridge",
+     "arg": null
+    },
+    {
+     "action": "pick_and_place",
+     "object": "Potato",
+     "to": "Fridge",
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Apple",
+     "key": "parentReceptacles",
+     "contains": "Fridge"
+    },
+    {
+     "type": "Potato",
+     "key": "parentReceptacles",
+     "contains": "Fridge"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l3-cutlery-away",
+   "level": "L3",
+   "en": "The butter knife and the spatula are lying around. Put them where cutlery is kept.",
+   "fa": "کارد کره‌خوری و کفگیر همین‌طور رها شده‌اند؛ آن‌ها را جایی بگذار که قاشق و چنگال نگه‌داری می‌شود.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pick_and_place",
+     "object": "ButterKnife",
+     "to": "Drawer",
+     "arg": null
+    },
+    {
+     "action": "pick_and_place",
+     "object": "Spatula",
+     "to": "Drawer",
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "ButterKnife",
+     "key": "parentReceptacles",
+     "contains": "Drawer"
+    },
+    {
+     "type": "Spatula",
+     "key": "parentReceptacles",
+     "contains": "Drawer"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l3-seasoning-away",
+   "level": "L3",
+   "en": "Tidy the seasonings away into a cabinet.",
+   "fa": "ادویه‌ها را مرتب داخل کابینت بگذار.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pick_and_place",
+     "object": "SaltShaker",
+     "to": "Cabinet",
+     "arg": null
+    },
+    {
+     "action": "pick_and_place",
+     "object": "PepperShaker",
+     "to": "Cabinet",
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "SaltShaker",
+     "key": "parentReceptacles",
+     "contains": "Cabinet"
+    },
+    {
+     "type": "PepperShaker",
+     "key": "parentReceptacles",
+     "contains": "Cabinet"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l3-too-dark",
+   "level": "L3",
+   "en": "It's too dark in here.",
+   "fa": "اینجا خیلی تاریک است.",
+   "setup": [
+    {
+     "action": "toggle_off",
+     "object": "LightSwitch",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "toggle_on",
+     "object": "LightSwitch",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "LightSwitch",
+     "key": "isToggled",
+     "value": true
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l3-too-bright",
+   "level": "L3",
+   "en": "It's too bright in here.",
+   "fa": "اینجا خیلی روشن است.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "toggle_off",
+     "object": "LightSwitch",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "LightSwitch",
+     "key": "isToggled",
+     "value": false
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l3-save-power",
+   "level": "L3",
+   "en": "Save electricity. Make sure no appliance has been left on.",
+   "fa": "در مصرف برق صرفه‌جویی کن؛ مطمئن شو هیچ وسیله‌ای روشن نمانده است.",
+   "setup": [
+    {
+     "action": "toggle_on",
+     "object": "Toaster",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "toggle_on",
+     "object": "CoffeeMachine",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "toggle_off",
+     "object": "Toaster",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "toggle_off",
+     "object": "CoffeeMachine",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Toaster",
+     "key": "isToggled",
+     "value": false
+    },
+    {
+     "type": "CoffeeMachine",
+     "key": "isToggled",
+     "value": false
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l3-leaving-house",
+   "level": "L3",
+   "en": "We are leaving the house. Make the kitchen safe.",
+   "fa": "داریم از خانه بیرون می‌رویم؛ آشپزخانه را ایمن کن.",
+   "setup": [
+    {
+     "action": "toggle_on",
+     "object": "StoveKnob",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "toggle_on",
+     "object": "Faucet",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "toggle_off",
+     "object": "StoveKnob",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "toggle_off",
+     "object": "Faucet",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "StoveKnob",
+     "key": "isToggled",
+     "value": false,
+     "q": "all"
+    },
+    {
+     "type": "Faucet",
+     "key": "isToggled",
+     "value": false
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l3-fridge-and-water",
+   "level": "L3",
+   "en": "Someone left the fridge open and the water running.",
+   "fa": "یک نفر در یخچال را باز و شیر آب را باز گذاشته است.",
+   "setup": [
+    {
+     "action": "open",
+     "object": "Fridge",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "toggle_on",
+     "object": "Faucet",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "close",
+     "object": "Fridge",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "toggle_off",
+     "object": "Faucet",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Fridge",
+     "key": "isOpen",
+     "value": false
+    },
+    {
+     "type": "Faucet",
+     "key": "isToggled",
+     "value": false
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l3-left-open",
+   "level": "L3",
+   "en": "Everything has been left open. Tidy that up.",
+   "fa": "همه‌چیز باز مانده است؛ مرتبش کن.",
+   "setup": [
+    {
+     "action": "open",
+     "object": "Fridge",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "open",
+     "object": "Microwave",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "open",
+     "object": "Cabinet",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "close",
+     "object": "Fridge",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "close",
+     "object": "Microwave",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "close",
+     "object": "Cabinet",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Fridge",
+     "key": "isOpen",
+     "value": false
+    },
+    {
+     "type": "Microwave",
+     "key": "isOpen",
+     "value": false
+    },
+    {
+     "type": "Cabinet",
+     "key": "isOpen",
+     "value": false,
+     "q": "all"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l3-pan-heating",
+   "level": "L3",
+   "en": "Get a pan heating on the stove.",
+   "fa": "یک تابه روی اجاق بگذار تا داغ شود.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pick_and_place",
+     "object": "Pan",
+     "to": "StoveBurner",
+     "arg": null
+    },
+    {
+     "action": "toggle_on",
+     "object": "StoveKnob",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Pan",
+     "key": "parentReceptacles",
+     "contains": "StoveBurner"
+    },
+    {
+     "type": "StoveKnob",
+     "key": "isToggled",
+     "value": true,
+     "q": "any"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l3-pot-heating",
+   "level": "L3",
+   "en": "Start the pot on the stove for soup.",
+   "fa": "قابلمه را برای سوپ روی اجاق بار بگذار.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pick_and_place",
+     "object": "Pot",
+     "to": "StoveBurner",
+     "arg": null
+    },
+    {
+     "action": "toggle_on",
+     "object": "StoveKnob",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Pot",
+     "key": "parentReceptacles",
+     "contains": "StoveBurner"
+    },
+    {
+     "type": "StoveKnob",
+     "key": "isToggled",
+     "value": true,
+     "q": "any"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l3-breakfast",
+   "level": "L3",
+   "en": "Breakfast: a hot potato on a plate and a cup of coffee.",
+   "fa": "صبحانه: یک سیب‌زمینی داغ در بشقاب و یک فنجان قهوه.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "heat",
+     "object": "Potato",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "pick_and_place",
+     "object": "Potato",
+     "to": "Plate",
+     "arg": null
+    },
+    {
+     "action": "fill",
+     "object": "Cup",
+     "to": null,
+     "arg": "coffee"
+    }
+   ],
+   "goal": [
+    {
+     "type": "Potato",
+     "key": "temperature",
+     "value": "Hot"
+    },
+    {
+     "type": "Potato",
+     "key": "parentReceptacles",
+     "contains": "Plate"
+    },
+    {
+     "type": "Cup",
+     "key": "fillLiquid",
+     "value": "coffee"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l3-tool-soup",
+   "level": "L3",
+   "en": "I need something to eat my soup with.",
+   "fa": "چیزی می‌خواهم که با آن سوپم را بخورم.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pickup",
+     "object": "Spoon",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Spoon",
+     "key": "isPickedUp",
+     "value": true
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l3-tool-flip",
+   "level": "L3",
+   "en": "I need something to flip the pancakes with.",
+   "fa": "چیزی برای برگرداندن پنکیک‌ها لازم دارم.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pickup",
+     "object": "Spatula",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Spatula",
+     "key": "isPickedUp",
+     "value": true
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l3-tool-salt",
+   "level": "L3",
+   "en": "My food needs salt.",
+   "fa": "غذایم نمک کم دارد.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pickup",
+     "object": "SaltShaker",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "SaltShaker",
+     "key": "isPickedUp",
+     "value": true
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l3-tool-scrub",
+   "level": "L3",
+   "en": "I need something to scrub the dishes with.",
+   "fa": "چیزی برای سابیدن ظرف‌ها لازم دارم.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pickup",
+     "object": "DishSponge",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "DishSponge",
+     "key": "isPickedUp",
+     "value": true
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l3-tool-soap",
+   "level": "L3",
+   "en": "I want to wash my hands.",
+   "fa": "می‌خواهم دست‌هایم را بشویم.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "pickup",
+     "object": "SoapBottle",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "SoapBottle",
+     "key": "isPickedUp",
+     "value": true
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l3-a2-egg-mixup",
+   "level": "L3",
+   "en": "Silly me, I put the egg in the microwave instead of the fridge, and I left the microwave open.",
+   "fa": "حواسم نبود و تخم‌مرغ را به جای یخچال گذاشتم توی مایکروویو؛ در مایکروویو را هم باز گذاشتم.",
+   "setup": [
+    {
+     "action": "open",
+     "object": "Microwave",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "pick_and_place",
+     "object": "Egg",
+     "to": "Microwave",
+     "arg": null
+    },
+    {
+     "action": "close",
+     "object": "Fridge",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "pick_and_place",
+     "object": "Egg",
+     "to": "Fridge",
+     "arg": null
+    },
+    {
+     "action": "close",
+     "object": "Fridge",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "close",
+     "object": "Microwave",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Egg",
+     "key": "parentReceptacles",
+     "contains": "Fridge"
+    },
+    {
+     "type": "Fridge",
+     "key": "isOpen",
+     "value": false
+    },
+    {
+     "type": "Microwave",
+     "key": "isOpen",
+     "value": false
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l3-a2-potato-salad",
+   "level": "L3",
+   "en": "Tomorrow I'm making potato salad. The potato has to be cooked, and it must keep until then.",
+   "fa": "فردا می‌خواهم سالاد سیب‌زمینی درست کنم؛ سیب‌زمینی باید پخته باشد و تا فردا خراب نشود.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "cook",
+     "object": "Potato",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "pick_and_place",
+     "object": "Potato",
+     "to": "Fridge",
+     "arg": null
+    },
+    {
+     "action": "close",
+     "object": "Fridge",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Potato",
+     "key": "isCooked",
+     "value": true
+    },
+    {
+     "type": "Potato",
+     "key": "parentReceptacles",
+     "contains": "Fridge"
+    },
+    {
+     "type": "Fridge",
+     "key": "isOpen",
+     "value": false
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l3-a2-dirty-mug-coffee",
+   "level": "L3",
+   "en": "I'd like to drink coffee from this mug, but it's still dirty from this morning.",
+   "fa": "دلم می‌خواهد توی همین لیوان قهوه بخورم، ولی از صبح هنوز کثیف مانده.",
+   "setup": [
+    {
+     "action": "dirty",
+     "object": "Mug",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "wash",
+     "object": "Mug",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "empty",
+     "object": "Mug",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "pick_and_place",
+     "object": "Mug",
+     "to": "CoffeeMachine",
+     "arg": null
+    },
+    {
+     "action": "toggle_on",
+     "object": "CoffeeMachine",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Mug",
+     "key": "isDirty",
+     "value": false
+    },
+    {
+     "type": "Mug",
+     "key": "fillLiquid",
+     "value": "coffee"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l3-a2-microwave-bowl",
+   "level": "L3",
+   "en": "I want to warm up the potato, but someone left a dirty bowl in the microwave that needs washing.",
+   "fa": "می‌خواهم سیب‌زمینی را گرم کنم، ولی یکی کاسهٔ کثیفش را توی مایکروویو جا گذاشته که باید شسته شود.",
+   "setup": [
+    {
+     "action": "dirty",
+     "object": "Bowl",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "pick_and_place",
+     "object": "Bowl",
+     "to": "Microwave",
+     "arg": null
+    },
+    {
+     "action": "close",
+     "object": "Microwave",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "wash",
+     "object": "Bowl",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "heat",
+     "object": "Potato",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Bowl",
+     "key": "isDirty",
+     "value": false
+    },
+    {
+     "type": "Potato",
+     "key": "temperature",
+     "value": "Hot"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l3-a2-dinner-done",
+   "level": "L3",
+   "en": "Dinner's over. The stove is still on and the pan needs cleaning.",
+   "fa": "شام تمام شد. اجاق هنوز روشن است و تابه هم باید شسته شود.",
+   "setup": [
+    {
+     "action": "pick_and_place",
+     "object": "Pan",
+     "to": "StoveBurner",
+     "arg": null
+    },
+    {
+     "action": "toggle_on",
+     "object": "StoveKnob",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "dirty",
+     "object": "Pan",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "toggle_off",
+     "object": "StoveKnob",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "wash",
+     "object": "Pan",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "StoveKnob",
+     "key": "isToggled",
+     "value": false,
+     "q": "all"
+    },
+    {
+     "type": "Pan",
+     "key": "isDirty",
+     "value": false
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l3-a2-snack-cleanup",
+   "level": "L3",
+   "en": "I've finished my snack. Throw out what's left of the apple; the plate is dirty too.",
+   "fa": "میان‌وعده‌ام را خوردم. باقی سیب را دور بینداز؛ بشقاب هم کثیف شده است.",
+   "setup": [
+    {
+     "action": "pick_and_place",
+     "object": "Plate",
+     "to": "CounterTop",
+     "arg": null
+    },
+    {
+     "action": "pick_and_place",
+     "object": "Apple",
+     "to": "Plate",
+     "arg": null
+    },
+    {
+     "action": "dirty",
+     "object": "Plate",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "pick_and_place",
+     "object": "Apple",
+     "to": "GarbageCan",
+     "arg": null
+    },
+    {
+     "action": "wash",
+     "object": "Plate",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Apple",
+     "key": "parentReceptacles",
+     "contains": "GarbageCan"
+    },
+    {
+     "type": "Plate",
+     "key": "isDirty",
+     "value": false
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l3-a2-coffee-to-go",
+   "level": "L3",
+   "en": "I'm off to work and taking my coffee with me. Hand me my mug of coffee, and don't leave any kitchen appliance on.",
+   "fa": "دارم می‌روم سر کار و قهوه‌ام را با خودم می‌برم. لیوان قهوه‌ام را بده دستم و هیچ‌کدام از دستگاه‌های آشپزخانه را روشن نگذار.",
+   "setup": [
+    {
+     "action": "fill",
+     "object": "Mug",
+     "to": null,
+     "arg": "coffee"
+    },
+    {
+     "action": "pick_and_place",
+     "object": "Mug",
+     "to": "CoffeeMachine",
+     "arg": null
+    },
+    {
+     "action": "toggle_on",
+     "object": "CoffeeMachine",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "toggle_off",
+     "object": "CoffeeMachine",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "pickup",
+     "object": "Mug",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Mug",
+     "key": "isPickedUp",
+     "value": true
+    },
+    {
+     "type": "Mug",
+     "key": "fillLiquid",
+     "value": "coffee"
+    },
+    {
+     "type": "CoffeeMachine",
+     "key": "isToggled",
+     "value": false
+    },
+    {
+     "type": "Microwave",
+     "key": "isToggled",
+     "value": false
+    },
+    {
+     "type": "Toaster",
+     "key": "isToggled",
+     "value": false
+    },
+    {
+     "type": "StoveKnob",
+     "key": "isToggled",
+     "value": false,
+     "q": "all"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l3-a2-muddy-potato",
+   "level": "L3",
+   "en": "The potato is caked in mud. Leave it soaking in a pot of water.",
+   "fa": "سیب‌زمینی حسابی گلی است. بگذارش توی یک قابلمه آب تا خیس بخورد.",
+   "setup": [],
+   "plan": [
+    {
+     "action": "fill",
+     "object": "Pot",
+     "to": null,
+     "arg": "water"
+    },
+    {
+     "action": "pick_and_place",
+     "object": "Potato",
+     "to": "Pot",
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "Pot",
+     "key": "fillLiquid",
+     "value": "water"
+    },
+    {
+     "type": "Potato",
+     "key": "parentReceptacles",
+     "contains": "Pot"
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l3-a2-dark-rinse",
+   "level": "L3",
+   "en": "I can't see a thing in here, and I want the tap running so I can rinse the vegetables.",
+   "fa": "اینجا هیچ‌چیز دیده نمی‌شود. شیر آب را هم باز کن که سبزی‌ها را بشویم.",
+   "setup": [
+    {
+     "action": "toggle_off",
+     "object": "LightSwitch",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "toggle_on",
+     "object": "LightSwitch",
+     "to": null,
+     "arg": null
+    },
+    {
+     "action": "toggle_on",
+     "object": "Faucet",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "LightSwitch",
+     "key": "isToggled",
+     "value": true
+    },
+    {
+     "type": "Faucet",
+     "key": "isToggled",
+     "value": true
+    }
+   ],
+   "reviewed": true
+  },
+  {
+   "id": "g-l3-a2-plant-away",
+   "level": "L3",
+   "en": "Before I leave for a week, see to the thirsty plant and make sure no tap is left running.",
+   "fa": "قبل از سفر یک‌هفته‌ای‌ام، به گلدان تشنه برس و مطمئن شو هیچ شیر آبی باز نماند.",
+   "setup": [
+    {
+     "action": "toggle_on",
+     "object": "Faucet",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "plan": [
+    {
+     "action": "fill",
+     "object": "HousePlant",
+     "to": null,
+     "arg": "water"
+    },
+    {
+     "action": "toggle_off",
+     "object": "Faucet",
+     "to": null,
+     "arg": null
+    }
+   ],
+   "goal": [
+    {
+     "type": "HousePlant",
+     "key": "fillLiquid",
+     "value": "water"
+    },
+    {
+     "type": "Faucet",
+     "key": "isToggled",
+     "value": false
+    }
+   ],
+   "reviewed": true
+  }
+ ],
+ "archived": [
+  {
+   "id": "g-l1-pickup-knife",
+   "level": "L1",
+   "action": "ARCHIVE",
+   "reason": "duplicate of g-l1-pickup-butter-knife (a RESERVED acceptance item) once the Knife is removed",
+   "split_group": "dev_nontest",
+   "decision": "docs/final-test/progress.md, 2026-10-13 ARASH DECISIONS (approval packet), items (8) and (9) (9)",
+   "item": {
+    "id": "g-l1-pickup-knife",
+    "level": "L1",
+    "en": "Pick up the knife.",
+    "fa": "چاقو را بردار.",
+    "setup": [],
+    "plan": [
+     {
+      "action": "pickup",
+      "object": "Knife",
+      "to": null,
+      "arg": null
+     }
+    ],
+    "goal": [
+     {
+      "type": "Knife",
+      "key": "isPickedUp",
+      "value": true
+     }
+    ],
+    "reviewed": true
+   }
+  },
+  {
+   "id": "g-l2-drawer-knife",
+   "level": "L2",
+   "action": "ARCHIVE",
+   "reason": "duplicate of g-l2-drawer-butter-knife; already excluded_inapplicable",
+   "split_group": "excluded_inapplicable",
+   "decision": "docs/final-test/progress.md, 2026-10-13 ARASH DECISIONS (approval packet), items (8) and (9) (9)",
+   "item": {
+    "id": "g-l2-drawer-knife",
+    "level": "L2",
+    "en": "Put the knife in a drawer and close it.",
+    "fa": "چاقو را داخل یکی از کشوها بگذار و آن را ببند.",
+    "setup": [],
+    "plan": [
+     {
+      "action": "pick_and_place",
+      "object": "Knife",
+      "to": "Drawer",
+      "arg": null
+     },
+     {
+      "action": "close",
+      "object": "Drawer",
+      "to": null,
+      "arg": null
+     }
+    ],
+    "goal": [
+     {
+      "type": "Knife",
+      "key": "parentReceptacles",
+      "contains": "Drawer"
+     },
+     {
+      "type": "Drawer",
+      "key": "isOpen",
+      "value": false,
+      "q": "all"
+     }
+    ],
+    "reviewed": true
+   }
+  },
+  {
+   "id": "g-l2-find-pickup-knife",
+   "level": "L2",
+   "action": "ARCHIVE",
+   "reason": "the goal names the Knife itself; a Knife-free version changes what is asked, so the old id is retired, never re-meant",
+   "split_group": "dev_nontest",
+   "decision": "docs/final-test/progress.md, 2026-10-13 ARASH DECISIONS (approval packet), items (8) and (9) (9)",
+   "item": {
+    "id": "g-l2-find-pickup-knife",
+    "level": "L2",
+    "en": "Find the knife and pick it up.",
+    "fa": "چاقو را پیدا کن و بردار.",
+    "setup": [],
+    "plan": [
+     {
+      "action": "search_for",
+      "object": "Knife",
+      "to": null,
+      "arg": null
+     },
+     {
+      "action": "pickup",
+      "object": "Knife",
+      "to": null,
+      "arg": null
+     }
+    ],
+    "goal": [
+     {
+      "type": "Knife",
+      "key": "isPickedUp",
+      "value": true
+     }
+    ],
+    "reviewed": true
+   }
+  },
+  {
+   "id": "g-l3-cutlery-sink",
+   "level": "L3",
+   "action": "ARCHIVE",
+   "reason": "the goal names the Knife itself; a Knife-free version changes what is asked, so the old id is retired, never re-meant",
+   "split_group": "dev_nontest",
+   "decision": "docs/final-test/progress.md, 2026-10-13 ARASH DECISIONS (approval packet), items (8) and (9) (9)",
+   "item": {
+    "id": "g-l3-cutlery-sink",
+    "level": "L3",
+    "en": "The fork, the spoon and the knife have been used. Put them where they get washed.",
+    "fa": "چنگال، قاشق و چاقو استفاده شده‌اند؛ آن‌ها را جایی بگذار که شسته می‌شوند.",
+    "setup": [],
+    "plan": [
+     {
+      "action": "pick_and_place",
+      "object": "Fork",
+      "to": "SinkBasin",
+      "arg": null
+     },
+     {
+      "action": "pick_and_place",
+      "object": "Spoon",
+      "to": "SinkBasin",
+      "arg": null
+     },
+     {
+      "action": "pick_and_place",
+      "object": "Knife",
+      "to": "SinkBasin",
+      "arg": null
+     }
+    ],
+    "goal": [
+     {
+      "type": "Fork",
+      "key": "parentReceptacles",
+      "contains": "SinkBasin"
+     },
+     {
+      "type": "Spoon",
+      "key": "parentReceptacles",
+      "contains": "SinkBasin"
+     },
+     {
+      "type": "Knife",
+      "key": "parentReceptacles",
+      "contains": "SinkBasin"
+     }
+    ],
+    "reviewed": true
+   }
+  },
+  {
+   "id": "g-l3-set-table",
+   "level": "L3",
+   "action": "ARCHIVE_KEEP_EXCLUDED",
+   "reason": "the goal names the Knife itself; a Knife-free version changes what is asked, so the old id is retired, never re-meant",
+   "split_group": "excluded_inapplicable",
+   "decision": "docs/final-test/progress.md, 2026-10-13 ARASH DECISIONS (approval packet), items (8) and (9) (9)",
+   "item": {
+    "id": "g-l3-set-table",
+    "level": "L3",
+    "en": "Set the table for one.",
+    "fa": "میز را برای یک نفر بچین.",
+    "setup": [],
+    "plan": [
+     {
+      "action": "pick_and_place",
+      "object": "Plate",
+      "to": "DiningTable",
+      "arg": null
+     },
+     {
+      "action": "pick_and_place",
+      "object": "Fork",
+      "to": "DiningTable",
+      "arg": null
+     },
+     {
+      "action": "pick_and_place",
+      "object": "Knife",
+      "to": "DiningTable",
+      "arg": null
+     }
+    ],
+    "goal": [
+     {
+      "type": "Plate",
+      "key": "parentReceptacles",
+      "contains": "DiningTable"
+     },
+     {
+      "type": "Fork",
+      "key": "parentReceptacles",
+      "contains": "DiningTable"
+     },
+     {
+      "type": "Knife",
+      "key": "parentReceptacles",
+      "contains": "DiningTable"
+     }
+    ],
+    "reviewed": true
+   }
+  },
+  {
+   "id": "g-l3-tool-cut",
+   "level": "L3",
+   "action": "ARCHIVE",
+   "reason": "the goal names the Knife itself; a Knife-free version changes what is asked, so the old id is retired, never re-meant",
+   "split_group": "dev_nontest",
+   "decision": "docs/final-test/progress.md, 2026-10-13 ARASH DECISIONS (approval packet), items (8) and (9) (9)",
+   "item": {
+    "id": "g-l3-tool-cut",
+    "level": "L3",
+    "en": "I need something to cut with.",
+    "fa": "چیزی برای بریدن لازم دارم.",
+    "setup": [],
+    "plan": [
+     {
+      "action": "pickup",
+      "object": "Knife",
+      "to": null,
+      "arg": null
+     }
+    ],
+    "goal": [
+     {
+      "type": "Knife",
+      "key": "isPickedUp",
+      "value": true
+     }
+    ],
+    "reviewed": true
+   }
+  }
+ ],
+ "deleted": [
+  "g-l2-cool-bread-counter-top",
+  "g-l2-cool-apple-plate",
+  "g-l2-cool-tomato-plate",
+  "g-l2-cool-potato-counter-top",
+  "g-l2-cool-lettuce-counter-top",
+  "g-l2-cool-egg-bowl",
+  "g-l3-serve-cold-apple",
+  "g-l3-serve-cold-tomato",
+  "g-l2-open-all-cabinets-light",
+  "g-l2-open-all-drawers-fork",
+  "g-l2-all-burners-microwave",
+  "g-l1-pickup-knife",
+  "g-l2-drawer-knife",
+  "g-l2-find-pickup-knife",
+  "g-l3-cutlery-sink",
+  "g-l3-set-table",
+  "g-l3-tool-cut"
+ ],
+ "updated_ts": "2026-10-14T00:58:32"
+}

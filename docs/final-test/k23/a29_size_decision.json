@@ -1,0 +1,205 @@
+{
+ "schema": "k23.a29-size-decision/1",
+ "rule": "prereg A29 item 6 (cost-adaptive, aggregate cost counters only; never grows, never redraws)",
+ "kitchens": {
+  "FloorPlan15": {
+   "candidate": "all",
+   "manifest_sha256": "41aced3d93030d3e2c658b8f64ec0f29d5295dcfa247d14d4f78bcf9800f0b26",
+   "presentations": 200,
+   "items": 100,
+   "checkpoint": "after-k1",
+   "ts": "2026-10-21T00:15:02",
+   "roster_sha256": "47ea79ae2cf2112e7edbf5e7ada0505fc37b2a6be2af18870f1703f9ee6713bc"
+  },
+  "FloorPlan17": {
+   "candidate": "all",
+   "manifest_sha256": "0e0de8fb038b94c7bc5a4e23d657f6a669ab7c52ed6cbd3298283f1546395689",
+   "presentations": 202,
+   "items": 101,
+   "checkpoint": "after-fp15",
+   "ts": "2026-10-21T01:46:35",
+   "roster_sha256": "33a5a596d574873be01c103d6da6883953608ee0aebd4f14e0f531e597f4c88f"
+  }
+ },
+ "checkpoints": [
+  {
+   "checkpoint": "after-k1",
+   "ts": "2026-10-21T00:15:02",
+   "measure_ns": "test-v1",
+   "means": {
+    "O0": {
+     "usd": 4.685636,
+     "billed": 250,
+     "cells": 250,
+     "mean": 0.01874254
+    },
+    "O+M": {
+     "usd": 4.731706,
+     "billed": 250,
+     "cells": 250,
+     "mean": 0.01892682
+    }
+   },
+   "spend": {
+    "recorded_committed_usd": 31.512845,
+    "settled_usd": 31.429731,
+    "open_usd": 0.083114,
+    "provider_usd": null,
+    "used_usd": 31.512845,
+    "provider_reconciled": false
+   },
+   "gate_usd": 80.0,
+   "rehearsal_fraction": 0.1,
+   "trials": [
+    {
+     "size": "all",
+     "kitchens": {
+      "FloorPlan15": {
+       "presentations": 200,
+       "retained_usd": 7.5339,
+       "rehearsal_allowance_usd": 0.0,
+       "total_usd": 7.5339
+      },
+      "FloorPlan17": {
+       "presentations": 202,
+       "retained_usd": 7.6092,
+       "rehearsal_allowance_usd": 0.0,
+       "total_usd": 7.6092
+      }
+     },
+     "projection_usd": 46.6559,
+     "within_gate": true
+    },
+    {
+     "size": "first_60",
+     "kitchens": {
+      "FloorPlan15": {
+       "presentations": 120,
+       "retained_usd": 4.5203,
+       "rehearsal_allowance_usd": 0.0,
+       "total_usd": 4.5203
+      },
+      "FloorPlan17": {
+       "presentations": 120,
+       "retained_usd": 4.5203,
+       "rehearsal_allowance_usd": 0.0,
+       "total_usd": 4.5203
+      }
+     },
+     "projection_usd": 40.5535,
+     "within_gate": true
+    },
+    {
+     "size": "first_50",
+     "kitchens": {
+      "FloorPlan15": {
+       "presentations": 100,
+       "retained_usd": 3.7669,
+       "rehearsal_allowance_usd": 0.0,
+       "total_usd": 3.7669
+      },
+      "FloorPlan17": {
+       "presentations": 100,
+       "retained_usd": 3.7669,
+       "rehearsal_allowance_usd": 0.0,
+       "total_usd": 3.7669
+      }
+     },
+     "projection_usd": 39.0467,
+     "within_gate": true
+    }
+   ],
+   "selected": "all",
+   "decides": [
+    "FloorPlan15",
+    "FloorPlan17"
+   ],
+   "ceiling": {
+    "candidate": "all",
+    "presentations_label": 250,
+    "source": "docs/final-test/matrix/study_projection_a29.json",
+    "sha256": "1c54dd389a5b665999d9211139a4e2cc1ecbbf0cf78cc24076be0ec0ecb74804"
+   },
+   "interpretation": null
+  },
+  {
+   "checkpoint": "after-fp15",
+   "ts": "2026-10-21T01:46:35",
+   "measure_ns": "test-k2-v1",
+   "means": {
+    "O0": {
+     "usd": 3.872248,
+     "billed": 200,
+     "cells": 200,
+     "mean": 0.01936124
+    },
+    "O+M": {
+     "usd": 3.909776,
+     "billed": 200,
+     "cells": 200,
+     "mean": 0.01954888
+    }
+   },
+   "spend": {
+    "recorded_committed_usd": 39.294869,
+    "settled_usd": 39.211755,
+    "open_usd": 0.083114,
+    "provider_usd": null,
+    "used_usd": 39.294869,
+    "provider_reconciled": false
+   },
+   "gate_usd": 80.0,
+   "rehearsal_fraction": 0.1,
+   "trials": [
+    {
+     "size": "all",
+     "kitchens": {
+      "FloorPlan17": {
+       "presentations": 202,
+       "retained_usd": 7.8598,
+       "rehearsal_allowance_usd": 0.0109,
+       "total_usd": 7.8707
+      }
+     },
+     "projection_usd": 47.1656,
+     "within_gate": true
+    },
+    {
+     "size": "first_60",
+     "kitchens": {
+      "FloorPlan17": {
+       "presentations": 120,
+       "retained_usd": 4.6692,
+       "rehearsal_allowance_usd": 0.0,
+       "total_usd": 4.6692
+      }
+     },
+     "projection_usd": 43.9641,
+     "within_gate": true
+    },
+    {
+     "size": "first_50",
+     "kitchens": {
+      "FloorPlan17": {
+       "presentations": 100,
+       "retained_usd": 3.891,
+       "rehearsal_allowance_usd": 0.0,
+       "total_usd": 3.891
+      }
+     },
+     "projection_usd": 43.1859,
+     "within_gate": true
+    }
+   ],
+   "selected": "all",
+   "decides": [
+    "FloorPlan17"
+   ],
+   "ceiling": {
+    "from": "the recorded after-k1 selection"
+   },
+   "interpretation": "'after FloorPlan15' = test-k2-v1's paid planning is complete (a full plan_first_complete event) and its ledger has no open reservation; Kitchen 2 execution is unbilled, so every cost counter of FloorPlan15 is final (Astra K23-TOOLING-G3 2)"
+  }
+ ],
+ "sha256": "b3d6ff06b41f53718c9a920aaf11d3c8a67b1e2195558fa89877864cfe4acab5"
+}

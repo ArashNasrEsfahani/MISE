@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trace · observability</title>
+<meta name="description" content="Event log, run trees, causal lineage and the database browser for the embodied agent.">
+<link rel="icon" href="data:,"><!-- inert: keeps the page at ZERO external requests -->
+
+<script>try{var _t=localStorage.getItem("thor.theme");if(_t==="light"||_t==="dark")document.documentElement.setAttribute("data-theme",_t);}catch(e){}</script>
+<script>
+/* Resolve asset base once: the page is served at /trace (assets live under /static/),
+   but it is also reviewed straight off disk over file:// where /static/ does not exist. */
+(function () {
+  var base = location.protocol === "file:" ? "./" : "/static/";
+  window.__TRACE_BASE__ = base;
+  var l = document.createElement("link");
+  l.rel = "stylesheet";
+  l.href = base + "trace.css?v=1";
+  document.head.appendChild(l);
+})();
+</script>
+</head>
+<body>
+
+<a class="skip" href="#surface">Skip to content</a>
+
+<!-- ══════════════════════════════════════════════════════ topbar ══ -->
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark" aria-hidden="true"></span>
+    <h1 class="brand-name">Trace<span class="brand-sub">what the agent did, and why</span></h1>
+    <a class="btn" href="/" title="back to the console">← Console</a>
+  </div>
+
+  <span class="chip chip-demo" id="mode-chip" hidden>demo data</span>
+
+  <form class="search" id="search-form" role="search">
+    <label class="vh" for="q-global">Search runs, events, artifacts and writes</label>
+    <input class="search-input" id="q-global" type="search" dir="auto"
+           placeholder="search commands, summaries, entries…" autocomplete="off">
+  </form>
+
+  <div class="topbar-right">
+    <button class="btn btn-toggle" id="live-toggle" type="button" aria-pressed="false"
+            title="Poll /trace_tail every 1.2 s and prepend new events">
+      <span class="dot" aria-hidden="true"></span> live tail
+    </button>
+    <button class="btn" id="theme-toggle" type="button" title="theme: system → light → dark (shared with the console)">◐ System</button>
+    <button class="btn" id="refresh" type="button" title="Reload the active view">reload</button>
+    <span class="chip chip-health" id="health-chip" title="tracer health">—</span>
+  </div>
+</header>
+
+<div class="shell">
+
+  <!-- ══════════════════════════════════════════════════════ rail ══ -->
+  <nav class="rail" id="rail" role="tablist" aria-label="Views" aria-orientation="vertical">
+    <button class="rail-btn" role="tab" id="tab-timeline" data-view="timeline" aria-controls="view-timeline" aria-selected="true">
+      <span class="rail-key" aria-hidden="true">1</span><span class="rail-label">Timeline</span>
+    </button>
+    <button class="rail-btn" role="tab" id="tab-runs" data-view="runs" aria-controls="view-runs" aria-selected="false">
+      <span class="rail-key" aria-hidden="true">2</span><span class="rail-label">Runs</span>
+    </button>
+    <button class="rail-btn" role="tab" id="tab-lineage" data-view="lineage" aria-controls="view-lineage" aria-selected="false">
+      <span class="rail-key" aria-hidden="true">3</span><span class="rail-label">Lineage</span>
+    </button>
+    <button class="rail-btn" role="tab" id="tab-db" data-view="db" aria-controls="view-db" aria-selected="false">
+      <span class="rail-key" aria-hidden="true">4</span><span class="rail-label">Database</span>
+    </button>
+    <button class="rail-btn" role="tab" id="tab-stats" data-view="stats" aria-controls="view-stats" aria-selected="false">
+      <span class="rail-key" aria-hidden="true">5</span><span class="rail-label">Stats</span>
+    </button>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════════════ surface ══ -->
+  <main class="surface" id="surface">
+
+    <!-- ① TIMELINE ────────────────────────────────────────────── -->
+    <section class="view" id="view-timeline" role="tabpanel" aria-labelledby="tab-timeline">
+      <div class="filters" id="tl-filters">
+        <div class="filter-row">
+          <span class="flabel">type</span>
+          <div class="chipset" id="tl-types" role="group" aria-label="Filter by event type"></div>
+        </div>
+        <div class="filter-row">
+          <span class="flabel">level</span>
+          <select class="ctl" id="tl-level" aria-label="Minimum level">
+            <option value="DEBUG">DEBUG and up</option>
+            <option value="DEFAULT" selected>DEFAULT and up</option>
+            <option value="WARNING">WARNING and up</option>
+            <option value="ERROR">ERROR only</option>
+          </select>
+          <span class="flabel">actor</span>
+          <select class="ctl" id="tl-actor" aria-label="Filter by actor"><option value="">any actor</option></select>
+          <span class="flabel">scene</span>
+          <select class="ctl" id="tl-scene" aria-label="Filter by scene"><option value="">any scene</option></select>
+          <span class="flabel">window</span>
+          <select class="ctl" id="tl-window" aria-label="Time window">
+            <option value="">all time</option>
+            <option value="300">last 5 min</option>
+            <option value="3600">last hour</option>
+            <option value="86400">last 24 h</option>
+          </select>
+          <input class="ctl ctl-grow" id="tl-q" type="search" dir="auto" placeholder="free text in summary…" aria-label="Free-text search in summary">
+          <input class="ctl ctl-mono" id="tl-run" type="search" placeholder="run id…" aria-label="Filter by run id">
+          <button class="btn" id="tl-clear" type="button">clear</button>
+        </div>
+      </div>
+
+      <div class="tl-head" role="presentation">
+        <span class="c-seq">seq</span><span class="c-time">time</span><span class="c-lvl" title="level"></span>
+        <span class="c-type">type</span><span class="c-actor">actor</span><span class="c-scene">scene</span>
+        <span class="c-sum">summary</span><span class="c-write">write</span>
+      </div>
+
+      <div class="tl-scroll" id="tl-scroll" tabindex="0" role="grid" aria-label="Event feed" aria-rowcount="0">
+        <div class="tl-spacer" id="tl-spacer"></div>
+        <div class="tl-rows" id="tl-rows"></div>
+        <div class="state" id="tl-state" hidden></div>
+      </div>
+
+      <div class="tl-foot">
+        <span id="tl-count" class="mono muted">—</span>
+        <button class="btn" id="tl-older" type="button">load older</button>
+      </div>
+    </section>
+
+    <!-- ② RUNS ────────────────────────────────────────────────── -->
+    <section class="view view-split" id="view-runs" role="tabpanel" aria-labelledby="tab-runs" hidden>
+      <div class="pane pane-list">
+        <div class="pane-head">
+          <span class="pane-title">runs</span>
+          <select class="ctl" id="run-kind" aria-label="Filter runs by kind">
+            <option value="">all kinds</option>
+            <option value="command">command</option>
+            <option value="eval">eval</option>
+            <option value="teach">teach</option>
+            <option value="demo">demo</option>
+            <option value="explore">explore</option>
+            <option value="maint">maint</option>
+          </select>
+          <input class="ctl ctl-grow" id="run-q" type="search" dir="auto" placeholder="command…" aria-label="Filter runs by command">
+        </div>
+        <div class="pane-body" id="run-list" role="listbox" aria-label="Runs"></div>
+      </div>
+      <div class="pane pane-detail">
+        <div class="pane-body" id="run-detail"></div>
+      </div>
+    </section>
+
+    <!-- ③ LINEAGE ─────────────────────────────────────────────── -->
+    <section class="view" id="view-lineage" role="tabpanel" aria-labelledby="tab-lineage" hidden>
+      <div class="filters">
+        <div class="filter-row">
+          <span class="flabel">node</span>
+          <input class="ctl ctl-mono ctl-grow" id="lin-node" type="search" list="lin-suggest"
+                 placeholder="art:kb:procedure:12 · span:… · run:…" aria-label="Graph root node id">
+          <datalist id="lin-suggest"></datalist>
+          <span class="flabel">direction</span>
+          <select class="ctl" id="lin-dir" aria-label="Graph direction">
+            <option value="both" selected>both</option>
+            <option value="up">up · causes</option>
+            <option value="down">down · effects</option>
+          </select>
+          <span class="flabel">depth</span>
+          <input class="ctl ctl-range" id="lin-depth" type="range" min="1" max="10" value="6" aria-label="Maximum depth">
+          <output class="mono" id="lin-depth-out">6</output>
+          <button class="btn" id="lin-go" type="button">draw</button>
+          <span class="zoom" role="group" aria-label="Zoom">
+            <button class="btn btn-sq" id="lin-zoom-out" type="button" aria-label="Zoom out">−</button>
+            <button class="btn btn-sq" id="lin-zoom-fit" type="button" aria-label="Fit graph">fit</button>
+            <button class="btn btn-sq" id="lin-zoom-in" type="button" aria-label="Zoom in">+</button>
+          </span>
+        </div>
+        <div class="filter-row legend" id="lin-legend" role="group" aria-label="Relation visibility"></div>
+      </div>
+      <div class="graph-wrap" id="lin-wrap">
+        <div class="state" id="lin-state" hidden></div>
+      </div>
+      <div class="lin-foot"><span class="mono muted" id="lin-note">—</span></div>
+    </section>
+
+    <!-- ④ DATABASE ────────────────────────────────────────────── -->
+    <section class="view view-db" id="view-db" role="tabpanel" aria-labelledby="tab-db" hidden>
+      <div class="pane pane-catalog">
+        <div class="pane-head"><span class="pane-title">stores</span></div>
+        <div class="pane-body" id="db-catalog"></div>
+      </div>
+      <div class="pane pane-rows">
+        <div class="pane-head">
+          <span class="pane-title" id="db-table-title">—</span>
+          <input class="ctl ctl-grow" id="db-q" type="search" dir="auto" placeholder="filter rows…" aria-label="Filter rows">
+          <span class="pager">
+            <button class="btn btn-sq" id="db-prev" type="button" aria-label="Previous page">‹</button>
+            <span class="mono muted" id="db-range">—</span>
+            <button class="btn btn-sq" id="db-next" type="button" aria-label="Next page">›</button>
+          </span>
+        </div>
+        <div class="banner" id="db-banner">read-only — this browser never writes to research data</div>
+        <div class="pane-body pane-body-flush" id="db-rows"></div>
+      </div>
+      <div class="pane pane-rowdetail">
+        <div class="pane-head"><span class="pane-title">row detail</span></div>
+        <div class="pane-body" id="db-detail"></div>
+      </div>
+    </section>
+
+    <!-- ⑤ STATS ───────────────────────────────────────────────── -->
+    <section class="view" id="view-stats" role="tabpanel" aria-labelledby="tab-stats" hidden>
+      <div class="stats-grid" id="stats-grid"></div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════════════ drawer ══ -->
+  <aside class="drawer" id="drawer" aria-label="Detail" hidden>
+    <div class="drawer-head">
+      <span class="drawer-title" id="drawer-title">detail</span>
+      <button class="btn btn-sq" id="drawer-close" type="button" aria-label="Close detail (Esc)">✕</button>
+    </div>
+    <div class="drawer-body" id="drawer-body"></div>
+  </aside>
+
+</div>
+
+<script>
+(function () {
+  var s = document.createElement("script");
+  s.src = (window.__TRACE_BASE__ || "/static/") + "trace.js?v=1";
+  document.body.appendChild(s);
+})();
+</script>
+</body>
+</html>

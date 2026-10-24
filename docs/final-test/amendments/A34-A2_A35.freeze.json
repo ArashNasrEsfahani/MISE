@@ -1,0 +1,116 @@
+{
+ "schema": "ft.amendment-freeze/1",
+ "amendment": "A34-A2+A35",
+ "written": "2026-10-15T13:18:20",
+ "rule": "Common terms 5: frozen BEFORE any new capture (the dev validation and attempt 2)",
+ "signature": {
+  "file": "docs/final-test/signatures.json",
+  "key": "A34-A2+A35",
+  "said": "I approve A2 (A34-A2) and B (A35) as drafted; the amended run is attempt 2."
+ },
+ "adopted_text": {
+  "path": "docs/final-test/amendments/A34-A2_A35.md",
+  "sha256": "32b1c8d1d4ad85aef1a7425a6192f07ed2a859d66833a123d688d49e2de00396"
+ },
+ "drafts": {
+  "path": "docs/final-test/AMENDMENT-DRAFTS-ACC2.md",
+  "sha256": "d087b3eb284473e4e1713c8ce99a15923b1b683260377fc252ad9354c4c1a74a"
+ },
+ "a35_patch": {
+  "path": "sim/final_test/diag/reset_det/c_template_fix_proposal.patch",
+  "sha256": "8de75de0802dd45741cc8d4a88ba40857e281fa116f082395c831b08afa11b73"
+ },
+ "changed_files": {
+  "sim/final_test/acceptance_v2/acc_runner.py": {
+   "attempt1": "996eb5f2f9646482564f6a96d2523d0a6da4c6fc11446c36f545ea398aa52931",
+   "now": "4fdf2f491636d307397b0f3a5143ee5de2332ae13605f6cd5b02ba861b5b2c9d"
+  },
+  "sim/final_test/matrix/capture.py": {
+   "attempt1": "9ae7036c262a57c287d287ea69e87670a5e25e2f46c9066de0ca633cc61a8f00",
+   "now": "4378ee70e49c882da438f6cac687f53215ad588362ac7cd87aa502c376bb4d90"
+  },
+  "sim/final_test/matrix/execute.py": {
+   "attempt1": "623d9765417c5f10d29068631c414c6a2bd3db081e6437085f72b2536aa97f62",
+   "now": "7961c8fb1238da10b674d9c10c4c6f04d1bf4b96332e4a6ac69247a55be77545"
+  },
+  "sim/final_test/matrix/freeze_ft2.py": {
+   "attempt1": "3a735ad5d4a726c3d352d9a8704ee4a06138446cf32d7f12c46b34d318475ae5",
+   "now": "162d6c621a8e7b8786204e9e30e4862d8b4e413ec63c3479daab941564d67854"
+  },
+  "sim/final_test/matrix/obs_health.py": {
+   "attempt1": "absent",
+   "now": "f99cf9d79d417fef73e6cffd2bbefe50f42edaf193dd1af654280da48ee095ac"
+  },
+  "sim/final_test/reset_gate.py": {
+   "attempt1": "928639ffed5d6d45168beeb15bf1dbc71aa63a65b9f5a0d626316f3f4e7b866d",
+   "now": "383c0b33cbc20e35e2f808cadb6ccb16c81c362c1c5e84eff57789ee8ddb3875"
+  }
+ },
+ "excluded_self_referential": [
+  "docs/final-test/freeze.json",
+  "remedy diff",
+  "sim/final_test/acceptance_v2/acc_attempt2.py (full sha; core sha pinned instead)"
+ ],
+ "selftests": {
+  "sim/final_test/_reset_gate_selftest.py": "342adf121a6b078850313b2232393301466322b39bf3e4e2b9e6c06ce38e1a78",
+  "sim/_ftm_execute_selftest.py": "19ef59e28dfb0b42842b5aca195c1bf9dd6b23f8d187a67de8435b7e84c239a4",
+  "sim/_acc_runner_selftest.py": "a3970cbaa3d3ebf25e347fd27beed4343fb98d590035e849b51ad6fc5b91fc07",
+  "sim/_acc_attempt2_selftest.py": "4a290b2834e52f7535b31a78f08374661c13a1a3c1ed45d920624924a23e6dfe"
+ },
+ "dev_validation_code": {
+  "sim/final_test/diag/reset_det/a34_devval.py": "da726c812a7df8d5313cbb5e266e16dc18446db4e665466577dba55d17847df1",
+  "sim/final_test/diag/reset_det/run_devval.sh": "59378bb9141458fb1c6c8fbb35502c13fd82167b59e087c1d5c8f045abbda5ce"
+ },
+ "signed_pins": {
+  "docs/final-test/amendments/A34-A2_A35.md": "32b1c8d1d4ad85aef1a7425a6192f07ed2a859d66833a123d688d49e2de00396",
+  "docs/final-test/AMENDMENT-DRAFTS-ACC2.md": "d087b3eb284473e4e1713c8ce99a15923b1b683260377fc252ad9354c4c1a74a",
+  "sim/final_test/diag/reset_det/c_template_fix_proposal.patch": "8de75de0802dd45741cc8d4a88ba40857e281fa116f082395c831b08afa11b73",
+  "sim/final_test/diag/reset_det/a34_devval.py": "da726c812a7df8d5313cbb5e266e16dc18446db4e665466577dba55d17847df1",
+  "sim/final_test/diag/reset_det/run_devval.sh": "59378bb9141458fb1c6c8fbb35502c13fd82167b59e087c1d5c8f045abbda5ce",
+  "sim/final_test/reset_gate.py": "383c0b33cbc20e35e2f808cadb6ccb16c81c362c1c5e84eff57789ee8ddb3875",
+  "sim/final_test/matrix/execute.py": "7961c8fb1238da10b674d9c10c4c6f04d1bf4b96332e4a6ac69247a55be77545",
+  "sim/final_test/matrix/capture.py": "4378ee70e49c882da438f6cac687f53215ad588362ac7cd87aa502c376bb4d90",
+  "sim/final_test/matrix/obs_health.py": "f99cf9d79d417fef73e6cffd2bbefe50f42edaf193dd1af654280da48ee095ac",
+  "sim/final_test/matrix/freeze_ft2.py": "162d6c621a8e7b8786204e9e30e4862d8b4e413ec63c3479daab941564d67854",
+  "sim/final_test/acceptance_v2/acc_runner.py": "4fdf2f491636d307397b0f3a5143ee5de2332ae13605f6cd5b02ba861b5b2c9d"
+ },
+ "self_core_sha256": "8b7cc4aaa498ecd1e97851257111394232d78b643764406e2d4fb0c439a5a982",
+ "guard_exception": {
+  "rule_fingerprint_old": "f503c9fedfaa2062946de51c3c10c311ebc45b7250039b81e864ffd8d21f213c",
+  "rule_fingerprint_new": "d43568cd4785ec20ad9e0580c4f80f1d35ab4a43af6559a2ab0052ed238cbddd"
+ },
+ "treatment_identity": {
+  "old": "7a2ee211b85cc534d7677291fce80b04e92cd24a860f1ddd7665185b3a03b67d",
+  "new": "7a2ee211b85cc534d7677291fce80b04e92cd24a860f1ddd7665185b3a03b67d",
+  "unchanged": true
+ },
+ "reset_gate": {
+  "path": "sim/final_test/reset_gate.py",
+  "sha256": "383c0b33cbc20e35e2f808cadb6ccb16c81c362c1c5e84eff57789ee8ddb3875",
+  "note": "pinned separately: outside the decision-rule fingerprint's coverage"
+ },
+ "tolerances": {
+  "path": "docs/final-test/reset_tolerances.json",
+  "sha256": "2ffeca272961649ab232d9db25d89bf031f342a804765b13e34ca11dfdfdcd79",
+  "note": "unchanged (no recalibration, A34-A2 rule 4)"
+ },
+ "frozen_refs_moved": {
+  "sim/final_test/matrix/capture.py": "4378ee70e49c882da438f6cac687f53215ad588362ac7cd87aa502c376bb4d90",
+  "sim/final_test/matrix/execute.py": "7961c8fb1238da10b674d9c10c4c6f04d1bf4b96332e4a6ac69247a55be77545"
+ },
+ "dev_validation_protocol": {
+  "presentations": "the 24 dev presentations of the registered A14(b)/(c) set: the 12 items of reset_tolerances.json calibration.per_item x EN / FA (2 of them archived from the active pool since; definitions from the frozen v1 dataset the split manifest pins)",
+  "captures": "2 per presentation, independent in-process restores, two interleaved rounds, the A14(b) calibration executor path (LiveExecutor memory none, CalibHook), no LLM, by the pinned sim/final_test/diag/reset_det/a34_devval.py + run_devval.sh",
+  "rule": "PASS iff 24/24 pairs pass the registered comparison or are overridden under A34-A2 rule 2; obs_drift counts reported; every capture after the freeze; a FAIL is logged and terminal (Common terms 4)",
+  "evaluator": "python sim/final_test/reset_gate.py validate-a34 (read-only; canonical append-only log)"
+ },
+ "not_changed": [
+  "docs/final-test/preregistration.md",
+  "docs/final-test/signatures.json",
+  "docs/final-test/freeze.json",
+  "docs/final-test/reset_tolerances.json",
+  "the treatment (identity files)",
+  "roster, 8 arms, 48 presentations, retries, thresholds, budget"
+ ],
+ "sha256": "32a8738457f8b1981f33b21dc54535796a0c8675875147148726dd7a5b798c3f"
+}

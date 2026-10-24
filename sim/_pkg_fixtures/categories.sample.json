@@ -1,0 +1,71 @@
+{
+ "categories": {
+  "cleaning": [
+   "DishSponge",
+   "SoapBottle"
+  ],
+  "cold_food": [
+   "Egg",
+   "Lettuce",
+   "Tomato"
+  ],
+  "cookware": [
+   "Pot",
+   "Pan",
+   "Kettle"
+  ],
+  "cutlery": [
+   "Fork",
+   "Spoon",
+   "ButterKnife",
+   "Spatula",
+   "Ladle"
+  ],
+  "dishes": [
+   "Plate",
+   "Bowl",
+   "Cup",
+   "Mug"
+  ],
+  "pantry_food": [
+   "Bread",
+   "Apple",
+   "Potato"
+  ],
+  "paper": [
+   "PaperTowelRoll"
+  ],
+  "seasoning": [
+   "SaltShaker",
+   "PepperShaker"
+  ]
+ },
+ "fixture_types": [
+  "Fridge",
+  "Microwave",
+  "Sink",
+  "SinkBasin",
+  "StoveBurner",
+  "StoveKnob",
+  "CounterTop",
+  "Cabinet",
+  "Drawer",
+  "GarbageCan",
+  "CoffeeMachine",
+  "Toaster",
+  "Faucet",
+  "LightSwitch",
+  "Shelf",
+  "ShelvingUnit",
+  "Window"
+ ],
+ "note": "Fixture copy for selftests (B7). Production reads sim/step5/briefing_conventions.json.",
+ "schema": "pkg.categories.sample/1",
+ "tool_types": [
+  "ButterKnife",
+  "Spatula",
+  "Fork",
+  "Spoon",
+  "Ladle"
+ ]
+}

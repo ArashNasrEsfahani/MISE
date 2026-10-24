@@ -1,0 +1,102 @@
+{
+ "schema": "ftm.c5-simple-measurement/1",
+ "method": "c5-simple-1",
+ "ts": "2026-10-14T14:59:09",
+ "namespace": "rehearsal-v3",
+ "items": [
+  "g-l1-place-lettuce-sink-basin",
+  "g-l3-chilled-apple"
+ ],
+ "model": "gemma4:e2b-it-q4_K_M",
+ "meter": {
+  "method": "c5-simple-1",
+  "ok": true,
+  "problems": [],
+  "devices": {
+   "gpu": {
+    "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "source": "nvidia-smi --query-gpu=power.draw.instant --format=csv,noheader,nounits -i 0 -lms 100"
+   }
+  },
+  "host": "KareOne-Laptop",
+  "platform": "Windows-11-10.0.22631-SP0",
+  "python": "3.14.0",
+  "idle_floor": {
+   "secs": 3.000748,
+   "gpu_w": 3.275,
+   "problems": []
+  }
+ },
+ "join": {
+  "method": "c5-simple-1",
+  "strict": true,
+  "energy_rows": 2,
+  "open_rows": 1,
+  "gemma_plan_rows": 2,
+  "measured": 2,
+  "refused_interval": 0,
+  "no_energy_row": 0,
+  "ambiguous": 0,
+  "wrong_method": 0,
+  "invalid_energy_row": 0,
+  "unbound_energy_rows": 0,
+  "interval_shorter_than_wall": 0,
+  "fields_disagree": 0,
+  "already_present": 0,
+  "inline_fields_stripped": 0,
+  "unparsable_lines": 0,
+  "idle_floor": [
+   {
+    "ts": "2026-10-14T14:59:03.423",
+    "gpu_w": 3.275
+   }
+  ],
+  "complete": true
+ },
+ "cells": [
+  {
+   "key": "rehearsal-v3|c5simple|canon:g-l1-place-lettuce-sink-basin:en|G+M|r0",
+   "status": "ok",
+   "calls": 1,
+   "cached_calls": 0,
+   "wall_s": 1.157,
+   "planning_s": 1.157472,
+   "gpu_samples": 10,
+   "gpu_w_mean": 45.322,
+   "energy_j_gpu": 52.459,
+   "check_mean_x_time": 52.4589,
+   "usd_energy": 2.9143888888888894e-06,
+   "usd_hardware": 2.138108e-05,
+   "energy_state": "measured"
+  },
+  {
+   "key": "rehearsal-v3|c5simple|canon:g-l3-chilled-apple:en|G+M|r0",
+   "status": "ok",
+   "calls": 1,
+   "cached_calls": 0,
+   "wall_s": 2.319,
+   "planning_s": 2.319551,
+   "gpu_samples": 22,
+   "gpu_w_mean": 24.682,
+   "energy_j_gpu": 57.2507,
+   "check_mean_x_time": 57.2512,
+   "usd_energy": 3.1805944444444444e-06,
+   "usd_hardware": 4.284726152777778e-05,
+   "energy_state": "measured"
+  }
+ ],
+ "totals": {
+  "planning_s": 3.477023,
+  "energy_j_gpu": 109.7097,
+  "usd_energy": 6.094983333333333e-06
+ },
+ "journals": {
+  "docs/final-test/energy/c5-simple-journals/energy.c5simple.jsonl": "0c0229ed00c83a84e7b92ead7993cbc02699d3aa47e713717c055a680faa0e81",
+  "docs/final-test/energy/c5-simple-journals/plan.c5simple.jsonl": "3f2db6d22e49804dba0d96f6d9cef1db27c463d9a7c1c426f5131218289b88bc"
+ },
+ "energy_py_sha256": "d9f57b97730db32f076dc4b4805cfafa50cdc2155361c5d2e2c28fe859e45d89",
+ "measure_py_sha256": "574110b9484546fe2c2b127bf81b0104a897c3a4e7599983b9e6bc88e4897cb6",
+ "ok": true,
+ "problems": [],
+ "note": "a demonstration that the simple method runs end to end on real Gemma calls (dev items of rehearsal-v3, local Ollama, no paid call, no simulator); not a calibration. GPU only; the GPU may be shared with other jobs (gross reading)"
+}

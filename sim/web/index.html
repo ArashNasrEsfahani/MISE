@@ -1,0 +1,621 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kitchen agent console</title>
+<link rel="icon" href="data:,">
+<!-- theme before first paint: system (no attribute) | light | dark  (docs/console-v2-spec.md §4.2) -->
+<script>try{var _t=localStorage.getItem("thor.theme");if(_t==="light"||_t==="dark")document.documentElement.dataset.theme=_t;}catch(e){}</script>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<!--
+  Console v2 (docs/console-v2-spec.md). Every element id that app.js read before v2 is kept; new ids are for
+  honest mode (honest.js) and the new workspaces. Layout classes are l-*, state classes is-* (spec §7).
+  body[data-mode]        oracle | honest          <- honest.js (/status.honest.on)
+  body[data-acting]      present while an honest job holds the lease
+  body[data-view-mode]   run | eval | setup       <- initTabs() on .viewtabs
+  body[data-agent]       idle|think|exec|done|fail  <- renderStage()
+-->
+<body data-view-mode="run" data-agent="idle" data-mode="oracle">
+
+<a class="skip" href="#cmd">Skip to the instruction box</a>
+
+<!-- ══════════════════════════════════════════════════════════ topbar ══ -->
+<header class="l-top">
+  <div class="brand">
+    <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><rect x="2" y="2" width="16" height="16" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="10" cy="10" r="3.2" fill="currentColor"/></svg>
+    <span class="brand-name">Kitchen agent</span>
+  </div>
+
+  <nav class="ws viewtabs" role="tablist" aria-label="workspace">
+    <button type="button" role="tab" data-tab="run" aria-controls="pane-run" aria-selected="true" tabindex="0">Run</button>
+    <button type="button" role="tab" data-tab="eval" aria-controls="pane-eval" aria-selected="false" tabindex="-1">Evaluate</button>
+    <button type="button" role="tab" data-tab="setup" aria-controls="pane-setup" aria-selected="false" tabindex="-1">Setup</button>
+  </nav>
+
+  <div class="health" aria-label="system health">
+    <span class="hchip hchip-state" title="what the console is doing"><i class="dot"></i><span id="tb-state">ready</span></span>
+    <!-- The LLM switch (/llm). Off = nothing contacts Ollama; on = starts Ollama if it is not answering. -->
+    <button type="button" class="hchip hchip-btn" id="chip-llm" aria-pressed="true"
+            title="the LLM planner (Ollama) — click to switch"><i class="dot"></i>LLM <span id="llm-state">—</span></button>
+    <span class="hchip" id="chip-fps" title="frames per second of the live view"><span id="fps">—</span>&nbsp;fps</span>
+    <span class="hchip hchip-quiet" id="chip-gpu" title="renderer"><span id="gpu">—</span></span>
+    <span class="hchip hchip-quiet" title="kitchen scene"><span id="scene">—</span></span>
+    <!-- ONE #eval-badge; app.js overwrites its className wholesale, so the chip shell is the PARENT -->
+    <span class="hchip hchip-quiet" title="evaluation run">eval <span class="dim eval-badge" id="eval-badge"></span></span>
+  </div>
+
+  <div class="toplinks">
+    <a class="btn quiet" href="/trace" target="_blank" rel="noopener" title="open the trace viewer (every action, plan and memory write) in a new tab">Trace ↗</a>
+    <button type="button" id="theme-btn" class="btn quiet" title="theme: system → light → dark" aria-label="theme">◐ <span id="theme-say">System</span></button>
+    <!-- Reset. Two scopes on purpose: the second throws away evidence, so it needs a deliberate second click. -->
+    <div class="resetbox" id="resetbox">
+      <button type="button" class="btn" id="reset-btn" aria-expanded="false"
+              title="reload the scene and clear the console">Reset</button>
+      <span class="reset-arm" id="reset-arm" hidden role="group" aria-label="what to reset">
+        <button type="button" class="btn" id="reset-session"
+                title="Reload this kitchen to its starting state and clear the transcript, plan and demo.&#10;Keeps everything the agent has learned, and keeps your motion/perception/view settings.">Scene + chat</button>
+        <button type="button" class="btn danger" id="reset-all"
+                title="Also wipe what the agent has LEARNED: knowledge base, spatial memory, the discovered nav map, the bandit's weights, the loop reports and the trace store.&#10;Not recoverable.">Everything</button>
+        <button type="button" class="btn quiet" id="reset-cancel" aria-label="cancel reset">✕</button>
+      </span>
+    </div>
+  </div>
+</header>
+
+<main class="l-main">
+
+<!-- ════════════════════════════════════════════════════════ RUN ══ -->
+<div class="l-runpane" id="pane-run" data-pane="run" role="tabpanel" aria-label="run">
+
+  <!-- command bar: agent mode + the instruction -->
+  <section class="l-cmdbar" aria-label="instruction">
+    <div class="cmdrow">
+      <span class="fld-label" id="agent-l">Agent</span>
+      <div class="seg" id="agent-mode" role="radiogroup" aria-labelledby="agent-l">
+        <button type="button" role="radio" aria-checked="true" tabindex="0" data-amode="oracle" class="on"
+                title="The planner and the executor read the simulator's object list.">Oracle</button>
+        <button type="button" role="radio" aria-checked="false" tabindex="-1" data-amode="honest"
+                title="FloorPlan1 only. The agent decides from its camera + depth, its own walked map and its memory. Switching reloads the scene once.">Honest</button>
+      </div>
+      <div class="cmdbox">
+        <input id="cmd" dir="auto" autocomplete="off" placeholder="Tell the agent what to do, in English or فارسی" aria-label="instruction for the agent">
+        <span class="cmd-item" id="cmd-item" hidden></span>
+      </div>
+      <button type="button" class="btn primary" id="send" onclick="send()">Run</button>
+      <button type="button" class="btn stop honest-only" id="h-stop" disabled title="stop the honest agent before its next primitive">Stop</button>
+      <div class="setpick honest-only" id="h-setbox">
+        <button type="button" class="btn" id="h-set" aria-expanded="false" aria-controls="h-setpop">From the set ▾</button>
+        <div class="setpop" id="h-setpop" hidden role="dialog" aria-label="pick an instruction from the general set">
+          <div class="setpop-tools">
+            <input id="h-setq" type="search" dir="auto" placeholder="search English, فارسی or id" aria-label="search the set">
+            <div class="seg" id="h-setlang" role="radiogroup" aria-label="language">
+              <button type="button" role="radio" aria-checked="true" tabindex="0" data-lang="en" class="on">EN</button>
+              <button type="button" role="radio" aria-checked="false" tabindex="-1" data-lang="fa">فا</button>
+            </div>
+          </div>
+          <div class="setpop-list" id="h-setlist"><span class="dim">loading…</span></div>
+          <p class="setpop-note dim">Items that need a setup run through <bdi>sim/step4_gemma_trial.py</bdi>, not here.</p>
+        </div>
+      </div>
+    </div>
+    <div class="modeline">
+      <span class="oracle-only"><b>Oracle:</b> the planner and the executor read the simulator's object list.</span>
+      <span class="honest-only"><b>Honest:</b> decides from camera + depth, its own walked map and memory. Pose comes from the simulator.</span>
+      <!-- THE SENSES SWITCH (oracle only): what the planner is allowed to know before it plans. Drives the SAME
+           /perception endpoint as #perc in Setup › Perception; app.js keeps the two in sync. -->
+      <span class="senses oracle-only">
+        <button type="button" id="perc-toggle" class="sense-btn" aria-pressed="false" onclick="togglePerception()"
+                title="OFF — the planner is handed AI2-THOR's ground-truth object list for the whole room.&#10;ON — it sees ONLY what this scene's trained YOLO detector finds while the agent turns and searches.&#10;Execution and scoring still resolve objects through the simulator; this changes what the planner KNOWS.">
+          <span class="sense-dot" aria-hidden="true"></span><span id="perc-toggle-text">scene info: full (oracle)</span>
+        </button>
+        <span class="sense-note" id="perc-note"></span>
+      </span>
+      <span class="honest-only dim">Planner senses are not used here: the honest agent always plans from its own camera.</span>
+      <span class="modeline-model">model <button type="button" class="linkbtn" id="cmd-model" title="change the model in Setup › Planner">—</button></span>
+      <span class="h-avail" id="h-avail" role="status"></span>
+    </div>
+  </section>
+
+  <div class="l-run">
+    <!-- ───────────────────────────── camera column ── -->
+    <section class="panel l-camcol" aria-label="camera">
+      <div class="camtools">
+        <div class="seg" id="views" role="radiogroup" aria-label="camera view">
+          <button type="button" role="radio" aria-checked="true"  tabindex="0"  data-view="rgb" class="on">RGB</button>
+          <button type="button" role="radio" aria-checked="false" tabindex="-1" data-view="depth">Depth</button>
+          <button type="button" role="radio" aria-checked="false" tabindex="-1" data-view="detect" title="detections: in honest mode the agent's own last look, only while nothing has moved since">Detect</button>
+          <button type="button" role="radio" aria-checked="false" tabindex="-1" data-view="map">Map</button>
+          <button type="button" role="radio" aria-checked="false" tabindex="-1" data-view="mapnav" title="top-down view with the discovered nav map overlaid">Map+Nav</button>
+          <button type="button" role="radio" aria-checked="false" tabindex="-1" data-view="instance" class="oracle-only" title="simulator render the agent does not have">Instance</button>
+          <button type="button" role="radio" aria-checked="false" tabindex="-1" data-view="semantic" class="oracle-only">Semantic</button>
+          <button type="button" role="radio" aria-checked="false" tabindex="-1" data-view="normals" class="oracle-only">Normals</button>
+        </div>
+        <details class="menu" id="cam-menu">
+          <summary class="btn">Display ▾</summary>
+          <div class="menu-body">
+            <span class="fld-label">resolution</span>
+            <div class="seg" id="res" role="radiogroup" aria-label="capture resolution">
+              <button type="button" role="radio" aria-checked="false" tabindex="-1" data-res="448x448">448</button>
+              <button type="button" role="radio" aria-checked="true"  tabindex="0"  data-res="600x600" class="on">600</button>
+              <button type="button" role="radio" aria-checked="false" tabindex="-1" data-res="800x600">800</button>
+              <button type="button" role="radio" aria-checked="false" tabindex="-1" data-res="1024x768">1024</button>
+            </div>
+            <!-- Motion detail = how finely the AGENT's own plans animate (one frame per generator yield). -->
+            <span class="fld-label">motion</span>
+            <div class="seg" id="motion" role="radiogroup" aria-label="motion detail">
+              <button type="button" role="radio" aria-checked="true"  tabindex="0"  data-motion="fast" class="on" title="30° turns, 0.25 m steps — fewest frames, quickest run">fast</button>
+              <button type="button" role="radio" aria-checked="false" tabindex="-1" data-motion="normal" title="15° turns, 0.15 m steps, doors swing open">normal</button>
+              <button type="button" role="radio" aria-checked="false" tabindex="-1" data-motion="cinematic" title="8° turns, 0.08 m steps, paced — every move visible">cinematic</button>
+            </div>
+            <label class="toggle honest-only"><input type="checkbox" id="h-pip-on" checked><span>show the last look (picture in picture)</span></label>
+          </div>
+        </details>
+        <span class="camtools-gap"></span>
+        <button type="button" class="btn" onclick="api('/capture')" title="save this frame to the capture library">Capture</button>
+        <button type="button" class="btn oracle-only" onclick="api('/capture?all=1')" title="save every sensor stream (reloads with all sensors on)">All streams</button>
+        <label class="btn toggle-btn" title="record the live view as a GIF"><input type="checkbox" id="rec"><span>● GIF</span></label>
+        <button type="button" class="btn quiet" onclick="api('/save_gif')">Save GIF</button>
+      </div>
+
+      <!-- the ONE camera node; moved into Setup while Setup is open (spec §4.6) -->
+      <div class="cam-slot" id="cam-home">
+        <div class="cam-well" id="viewport">
+          <div class="vp-media">
+            <img id="cam" src="/stream" alt="agent camera feed" title="click to inspect (simulator truth) · shift-click to pick up (oracle only)">
+            <div class="hud-strip">
+              <span class="hud" id="hud-scene">—</span>
+              <span class="hud dim" id="hud-obj"></span>
+              <span class="hud-gap"></span>
+              <span class="hud viewchip" id="hud-view">RGB</span>
+              <span class="hud dim" id="hud-res"></span>
+              <span class="hud rec" id="hud-rec" hidden>● REC</span>
+              <span class="hud drivebadge" id="hud-drive">◆ DRIVE</span>
+              <span class="hud" id="hud-fps">— fps</span>
+              <span class="hud dim" id="hud-gpu">—</span>
+            </div>
+            <!-- what the running generator says it is doing THIS frame -->
+            <div class="hud-motion"><span class="motionchip" id="hud-motion" hidden></span></div>
+            <div class="cam-over" id="cam-over" hidden></div>
+            <figure class="pip honest-only" id="h-pip" hidden>
+              <img id="h-pip-img" alt="the agent's last look with its own detections">
+              <figcaption><span id="h-pip-cap">last look</span>
+                <button type="button" class="pip-x" id="h-pip-x" aria-label="hide the last look" title="hide">×</button></figcaption>
+            </figure>
+            <p class="vp-hint" id="vp-hint">click to inspect · shift-click to pick up</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="camfoot">
+        <div class="holdline">
+          <span>Holding <b id="h-holding" class="honest-only">—</b><b id="held" class="truthval">—</b></span>
+          <span class="badge belief honest-only">agent's belief</span>
+          <span class="badge truth oracle-only">simulator truth</span>
+          <span class="dim small honest-only">simulator: <bdi id="held-name">empty hand</bdi></span>
+          <span class="heldacts oracle-only" aria-label="held object">
+            <button type="button" class="btn sm" onclick="api('/held?name=drop')">drop</button>
+            <button type="button" class="btn sm" onclick="api('/held?name=throw')">throw</button>
+            <button type="button" class="btn sm quiet" onclick="api('/held?name=nudge')">nudge</button>
+            <button type="button" class="btn sm quiet" onclick="api('/held?name=spin')">spin</button>
+          </span>
+        </div>
+        <div class="telemetry" id="telemetry" title="simulator display: read for this screen, never given to the honest agent's decisions">
+          <span>pos <bdi id="t-pos">—</bdi></span>
+          <span>yaw <bdi id="t-yaw">—</bdi></span>
+          <span>pitch <bdi id="t-pitch">—</bdi></span>
+          <span id="t-stance">—</span>
+          <span class="dim small">simulator display</span>
+        </div>
+      </div>
+
+      <div class="manual" aria-label="manual drive">
+        <div class="dpad">
+          <button type="button" class="btn key" data-act="rotate_left" title="rotate left (Q / ←)" aria-label="rotate left">↺</button>
+          <button type="button" class="btn key" data-act="move_left" title="strafe left (A)" aria-label="strafe left">◀</button>
+          <button type="button" class="btn key" data-act="move_ahead" title="move forward (W)" aria-label="move forward">▲</button>
+          <button type="button" class="btn key" data-act="move_back" title="move back (S)" aria-label="move back">▼</button>
+          <button type="button" class="btn key" data-act="move_right" title="strafe right (D)" aria-label="strafe right">▶</button>
+          <button type="button" class="btn key" data-act="rotate_right" title="rotate right (E / →)" aria-label="rotate right">↻</button>
+          <button type="button" class="btn key" data-act="look_up" title="look up (↑)" aria-label="look up">⤒</button>
+          <button type="button" class="btn key" data-act="look_down" title="look down (↓)" aria-label="look down">⤓</button>
+        </div>
+        <div class="manual-side">
+          <button type="button" class="btn sm" data-act="crouch" title="crouch (C)">crouch</button>
+          <button type="button" class="btn sm quiet" data-act="stand">stand</button>
+          <label class="toggle"><input type="checkbox" id="gamemode"><span>keyboard drive (WASD)</span></label>
+        </div>
+        <p class="manual-lock" id="manual-lock" hidden>Locked while the agent acts. Stop first.</p>
+      </div>
+    </section>
+
+    <!-- ───────────────────────────── ticket column ── -->
+    <section class="l-ticketcol" aria-label="plan">
+      <div class="histbar" id="h-histbar" hidden role="status">
+        <span>Viewing an earlier instruction. Map, memory and audit still show the live agent.</span>
+        <button type="button" class="btn sm" id="h-live">Back to live</button>
+      </div>
+      <article class="ticket" id="ticket" data-lvl="">
+        <h2 class="t-cmd" id="t-cmd"><span class="dim">No instruction yet</span></h2>
+        <div class="t-meta">
+          <span class="lvl" id="t-level">level: not classified</span>
+          <span class="dim small" id="t-levelsrc"></span>
+          <span class="badge prov" id="t-prov">simulator truth</span>
+          <!-- the L1/L2/L3 spine: group, not img; app.js marks aria-current and says the level in #level-say -->
+          <div class="lspine" id="level-spine" role="group" aria-label="command level">
+            <span class="vh" id="level-say" role="status">command level: not classified yet</span>
+            <span class="lvseg" data-lvl="L1" title="L1 atomic: one command, one function">L1</span>
+            <span class="lvseg" data-lvl="L2" title="L2 sequential: an ordered chain of functions">L2</span>
+            <span class="lvseg" data-lvl="L3" title="L3 abstract goal: decomposed into a new plan">L3</span>
+          </div>
+        </div>
+        <div class="stage" id="stage" role="status" aria-live="polite"><span class="stage-dot"></span><span id="stage-text">ready</span></div>
+        <div class="stamps" id="t-stamps"></div>
+        <!-- oracle plan (from /status.plan) -->
+        <div class="plan oracle-only" id="plan" aria-label="current plan"></div>
+        <!-- honest plan (from /honest.steps) -->
+        <ol class="steps honest-only" id="h-steps" aria-label="the honest agent's plan"></ol>
+        <p class="planner" id="t-planner"></p>
+        <div class="rate oracle-only" id="rate" hidden>
+          <span class="rate-label">Rate this plan</span>
+          <button type="button" id="rate-up" class="btn sm" onclick="sendRating(true)" title="thumbs up — this plan worked well">&#9650; good</button>
+          <button type="button" id="rate-down" class="btn sm" onclick="sendRating(false)" title="thumbs down — this plan went wrong">&#9660; bad</button>
+          <span class="rate-note dim small" id="rate-note"></span>
+        </div>
+        <div class="ticket-foot oracle-only">
+          <span class="dim small loop-stat" id="loop-stat"></span>
+          <span class="ledger-chips" id="loop-ledger"></span>
+        </div>
+        <div class="ticket-foot honest-only">
+          <button type="button" class="btn sm" id="h-look" title="sweep the camera around; memory is kept">Look around</button>
+          <button type="button" class="btn sm quiet" id="h-forget" title="the next instruction starts a new memory episode; what is in the hand is kept">Forget memory</button>
+          <span class="dim small" id="h-session"></span>
+        </div>
+      </article>
+
+      <details class="drawer" id="transcript">
+        <summary>Transcript <span class="dim small">(planner, executor, simulator supervision)</span></summary>
+        <div class="transcript" id="log" aria-live="off" aria-label="transcript"></div>
+      </details>
+    </section>
+
+    <!-- ───────────────────────────── mind column ── -->
+    <section class="panel l-mindcol" aria-label="what the agent knows">
+      <div class="tabs mindtabs" role="tablist" aria-label="agent mind">
+        <button type="button" role="tab" data-tab="m-map" aria-controls="pane-m-map" aria-selected="false" tabindex="-1" class="honest-only">Map</button>
+        <button type="button" role="tab" data-tab="m-mem" aria-controls="pane-m-mem" aria-selected="false" tabindex="-1" class="honest-only">Memory <span class="tabn" id="h-memn"></span></button>
+        <button type="button" role="tab" data-tab="m-aud" aria-controls="pane-m-aud" aria-selected="false" tabindex="-1" class="honest-only">Audit <span class="tabn" id="h-audn"></span></button>
+        <button type="button" role="tab" data-tab="m-nav" aria-controls="pane-m-nav" aria-selected="true" tabindex="0" class="oracle-only">Nav map</button>
+        <button type="button" role="tab" data-tab="m-truth" aria-controls="pane-m-truth" aria-selected="false" tabindex="-1"><span class="oracle-only">Objects</span><span class="honest-only">Simulator truth</span></button>
+        <button type="button" role="tab" data-tab="m-learn" aria-controls="pane-m-learn" aria-selected="false" tabindex="-1" class="oracle-only">Learning</button>
+      </div>
+
+      <!-- honest: the agent's own walked map -->
+      <div class="mpane" id="pane-m-map" data-pane="m-map" role="tabpanel" aria-label="the agent's own map" hidden>
+        <div class="mapbox">
+          <canvas id="h-map" aria-label="the agent's own walked map, with its pose and remembered objects"></canvas>
+          <div class="maptip" id="h-maptip" hidden></div>
+          <div class="maptools">
+            <button type="button" class="btn sm quiet" id="h-map-in" aria-label="zoom in">+</button>
+            <button type="button" class="btn sm quiet" id="h-map-out" aria-label="zoom out">−</button>
+            <button type="button" class="btn sm quiet" id="h-map-reset">Fit</button>
+          </div>
+        </div>
+        <p class="maphead small" id="h-mapstat">—</p>
+        <div class="legend small">
+          <span><i class="lg lg-free"></i>free cell (walked)</span>
+          <span><i class="lg lg-edge"></i>learned blocked edge</span>
+          <span><i class="lg lg-agent"></i>agent</span>
+          <span><i class="lg lg-trusted"></i>trusted</span>
+          <span><i class="lg lg-placed"></i>placed (not re-seen)</span>
+          <span><i class="lg lg-contra"></i>contradicted</span>
+          <span><i class="lg lg-target"></i>current target</span>
+          <span><i class="lg lg-visit"></i>search visits, numbered</span>
+        </div>
+      </div>
+
+      <!-- honest: object memory -->
+      <div class="mpane" id="pane-m-mem" data-pane="m-mem" role="tabpanel" aria-label="object memory" hidden>
+        <div class="row">
+          <input id="h-memq" class="grow" type="search" placeholder="filter by type, state or status" aria-label="filter memory">
+        </div>
+        <div class="tblwrap">
+          <table class="memtbl" id="h-mem">
+            <thead><tr>
+              <th><button type="button" class="sortbtn" data-sort="type">Object</button></th>
+              <th><button type="button" class="sortbtn" data-sort="state">State</button></th>
+              <th><button type="button" class="sortbtn" data-sort="status">Status</button></th>
+              <th><button type="button" class="sortbtn" data-sort="conf" title="confidence">Conf.</button></th>
+              <th>Where</th>
+              <th class="n"><button type="button" class="sortbtn" data-sort="step">Step</button></th>
+              <th class="n"><button type="button" class="sortbtn" data-sort="seen">Seen</button></th>
+            </tr></thead>
+            <tbody id="h-membody"><tr><td colspan="7" class="dim">Nothing remembered yet. Run an instruction or press Look around.</td></tr></tbody>
+          </table>
+        </div>
+        <p class="fld-label" id="h-places-h">Places seen</p>
+        <div class="chips" id="h-places"></div>
+      </div>
+
+      <!-- honest: audit -->
+      <div class="mpane" id="pane-m-aud" data-pane="m-aud" role="tabpanel" aria-label="honesty audit" hidden>
+        <div id="h-audit"><p class="dim">No audit yet.</p></div>
+      </div>
+
+      <!-- oracle: the discovered nav map -->
+      <div class="mpane" id="pane-m-nav" data-pane="m-nav" role="tabpanel" aria-label="discovered nav map">
+        <p class="maphead small"><span class="navmap-stat" id="navmap-stat">—</span></p>
+        <canvas id="navmap" aria-label="occupancy grid discovered by the agent"></canvas>
+        <div class="legend small">
+          <span><i class="lg lg-dfree"></i>free</span><span><i class="lg lg-dblock"></i>blocked</span>
+          <span><i class="lg lg-dunk"></i>unknown</span><span><i class="lg lg-doracle"></i>oracle</span>
+          <span><i class="lg lg-agent"></i>agent</span>
+        </div>
+      </div>
+
+      <!-- both: simulator truth / objects -->
+      <div class="mpane" id="pane-m-truth" data-pane="m-truth" role="tabpanel" aria-label="objects (simulator truth)" hidden>
+        <p class="truthnote"><span class="badge truth">simulator truth</span>
+          <span class="dim small honest-only">display only — nothing here reaches the agent</span></p>
+        <div class="row">
+          <input id="objq" placeholder="filter by type…" class="grow" aria-label="filter objects by type" oninput="renderObjs()">
+          <label class="toggle"><input type="checkbox" id="objvis" onchange="renderObjs()"><span>visible</span></label>
+        </div>
+        <div class="objlist" id="objs"></div>
+        <div class="oracle-only objtools">
+          <div class="params">
+            <label for="p-open">openness <input type="range" id="p-open" min="0" max="1" step="0.1" value="1"></label>
+            <label for="p-liquid">liquid <select id="p-liquid"></select></label>
+          </div>
+          <div class="objacts" id="objacts"><span class="dim">select an object</span></div>
+        </div>
+      </div>
+
+      <!-- oracle: learning (self-improving loop, teach, demo, perception label) -->
+      <div class="mpane" id="pane-m-learn" data-pane="m-learn" role="tabpanel" aria-label="learning" hidden>
+        <label class="toggle" title="Phase-7 self-improving loop: write successful plans / failure lessons back into the knowledge base after each command"><input type="checkbox" id="loop" checked><span>self-improve after every command</span></label>
+        <h3 class="subh">Teach the knowledge base</h3>
+        <div class="row">
+          <input id="teach-text" class="grow" dir="auto" placeholder="fact:, lesson:, spatial:" aria-label="teach the knowledge base">
+          <button type="button" class="btn" onclick="sendTeach()">Teach</button>
+        </div>
+        <h3 class="subh">Record a demonstration</h3>
+        <div class="row">
+          <input id="demo-cmd" class="grow" dir="auto" placeholder="the command this demo teaches" aria-label="command this demonstration teaches">
+        </div>
+        <div class="row">
+          <button type="button" class="btn" id="demo-start" onclick="demoStart()">Record demo</button>
+          <button type="button" class="btn" id="demo-stop" onclick="demoStop(true)">Save</button>
+          <button type="button" class="btn quiet" id="demo-cancel" onclick="demoStop(false)">Discard</button>
+          <span class="dim small" id="demo-stat"></span>
+        </div>
+        <h3 class="subh">Label a detection</h3>
+        <div class="row">
+          <input id="pf-obj" dir="auto" placeholder="object" aria-label="object label">
+          <input id="pf-rec" dir="auto" placeholder="receptacle" aria-label="receptacle label">
+          <input id="pf-bbox" placeholder="x1,y1,x2,y2" aria-label="bounding box">
+          <button type="button" class="btn" onclick="sendPerceptionFeedback()">Label</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- earlier instructions (honest history) -->
+  <nav class="l-rail honest-only" id="h-rail" aria-label="earlier instructions">
+    <span class="fld-label">Earlier</span>
+    <div class="rail-items" id="h-railitems"><span class="dim small">Finished instructions appear here.</span></div>
+  </nav>
+</div>
+
+<!-- ═══════════════════════════════════════════════════ EVALUATE ══ -->
+<section class="l-evalpane" id="pane-eval" data-pane="eval" role="tabpanel" aria-label="evaluation" hidden>
+
+  <!-- INSTRUCTIONS is first and default: the dataset is what gets reviewed and edited; a run comes afterwards. -->
+  <div class="tabs evaltabs" role="tablist" aria-label="evaluation workspace">
+    <button type="button" role="tab" data-tab="ev-instr" aria-controls="pane-ev-instr" aria-selected="true" tabindex="0">Instructions <span class="tabn" id="gen-tabcount"></span></button>
+    <button type="button" role="tab" data-tab="ev-run" aria-controls="pane-ev-run" aria-selected="false" tabindex="-1">Run &amp; results</button>
+    <button type="button" role="tab" data-tab="ev-scene" aria-controls="pane-ev-scene" aria-selected="false" tabindex="-1">Scene-grounded set <span class="tabn">102</span></button>
+  </div>
+
+  <div class="evalpane" id="pane-ev-instr" data-pane="ev-instr" role="tabpanel" aria-label="general instructions">
+    <!-- the GENERAL instruction set: both languages side by side, editable (sim/general_set.py) -->
+    <div class="panel gencard" id="gencard">
+      <div class="panel-h"><h2>General instructions</h2><span class="dim small" id="gen-counts">not tied to one kitchen · English + فارسی</span></div>
+      <div class="panel-b">
+        <div class="gentools">
+          <div class="seg" id="gen-levels" role="group" aria-label="level filter">
+            <button type="button" class="on" data-level="">all</button>
+            <button type="button" data-level="L1">L1 atomic</button>
+            <button type="button" data-level="L2">L2 sequential</button>
+            <button type="button" data-level="L3">L3 abstract</button>
+          </div>
+          <select id="gen-show" aria-label="show">
+            <option value="">show: everything</option>
+            <option value="unchecked">show: not checked yet</option>
+            <option value="checked">show: checked</option>
+            <option value="partial">show: not in every kitchen</option>
+            <option value="setup">show: needs a setup</option>
+          </select>
+          <input id="gen-q" class="grow" type="search" dir="auto" placeholder="search English, فارسی or id" aria-label="search instructions">
+          <a class="btn" id="gen-export" href="/general_export" download title="the whole set as a bilingual CSV (opens in Excel with the Persian intact)">Export CSV</a>
+          <button type="button" class="btn primary" id="gen-add">+ Add instruction</button>
+        </div>
+        <div class="genprog" id="gen-prog" hidden>
+          <div class="pbar"><div class="pfill" id="gen-prog-fill"></div></div>
+          <span class="dim small" id="gen-prog-text"></span>
+        </div>
+        <div id="gen-new"></div>
+        <div class="genlist" id="gen-list"><span class="dim">loading the instruction set…</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="evalpane" id="pane-ev-run" data-pane="ev-run" role="tabpanel" aria-label="run and results" hidden>
+    <div class="panel" id="evalcard">
+      <div class="panel-h"><h2>Evaluation run</h2><span class="dim small">SR / PC / TDS · shares the GPU with the live view</span></div>
+      <div class="panel-b">
+        <div class="evalform">
+          <label class="fld-label" for="ev-models">models</label>
+          <input id="ev-models" value="gemma3:4b" title="comma-separated Ollama model tags">
+          <label class="fld-label" for="ev-rag">rag</label>
+          <select id="ev-rag"><option>off</option><option>keyword</option><option>hybrid</option></select>
+          <label class="fld-label" for="ev-loop">loop</label>
+          <select id="ev-loop"><option>off</option><option>on</option></select>
+          <label class="fld-label" for="ev-lang">lang</label>
+          <select id="ev-lang"><option>all</option><option>en</option><option>fa</option></select>
+          <label class="fld-label" for="ev-dataset">dataset</label>
+          <select id="ev-dataset" title="scene-grounded: each record runs in the one kitchen its gold was written for. general: every instruction runs in each scene you list; where a kitchen lacks the object the record is skipped, not failed.">
+            <option value="scene">scene-grounded · 102 records</option>
+            <option value="general">general instructions</option>
+          </select>
+          <label class="fld-label" for="ev-scenes">scenes</label>
+          <input id="ev-scenes" placeholder="all in dataset">
+          <label class="fld-label" for="ev-limit">limit</label>
+          <input id="ev-limit" type="number" min="1" placeholder="all" class="fld-num">
+        </div>
+        <div class="row">
+          <button type="button" class="btn primary" id="ev-run">Run evaluation</button>
+          <span class="dim small honest-only">Evaluation runs are refused in honest mode. Switch the agent to Oracle first.</span>
+        </div>
+        <div class="evalprog" id="ev-prog"></div>
+        <div class="metrichero" id="ev-hero"></div>
+        <div class="row">
+          <select id="ev-file" class="grow" aria-label="result file" onchange="loadEvalResults()"></select>
+          <button type="button" class="btn" onclick="loadEvalResults()">View</button>
+        </div>
+        <div id="ev-results"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="evalpane" id="pane-ev-scene" data-pane="ev-scene" role="tabpanel" aria-label="scene-grounded dataset" hidden>
+    <div class="panel dsbrowser">
+      <div class="panel-h"><h2>Scene-grounded set</h2><span class="dim small">read-only · each record belongs to one kitchen</span></div>
+      <div class="panel-b">
+        <div class="row">
+          <select id="ds-scene" aria-label="scene filter"><option value="">any scene</option><option>FloorPlan1</option><option>FloorPlan2</option><option>FloorPlan3</option></select>
+          <select id="ds-level" aria-label="level filter"><option value="">any level</option><option>L1</option><option>L2</option><option>L3</option></select>
+          <select id="ds-lang" aria-label="language filter"><option value="">any lang</option><option>en</option><option>fa</option></select>
+          <button type="button" class="btn" onclick="loadDataset()">Load</button>
+        </div>
+        <div class="dim small" id="ds-counts"></div>
+        <div class="dslist" id="ds-list"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="gentoast" id="gen-toast" hidden role="status" aria-live="polite"></div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ SETUP ══ -->
+<section class="l-setuppane" id="pane-setup" data-pane="setup" role="tabpanel" aria-label="setup" hidden>
+  <div class="l-setup">
+    <div class="panel">
+      <div class="panel-h"><h2>Scene</h2><span class="dim small honest-only">honest mode: FloorPlan1 only</span></div>
+      <div class="panel-b">
+        <div class="row">
+          <select id="scene-sel" class="grow" aria-label="kitchen scene"></select>
+          <button type="button" class="btn" onclick="loadScene()">Load</button>
+        </div>
+        <div class="grid2">
+          <button type="button" class="btn" onclick="api('/randomize?what=materials')">Materials</button>
+          <button type="button" class="btn" onclick="api('/randomize?what=lighting')">Lighting</button>
+          <button type="button" class="btn" onclick="api('/randomize?what=spawn')">Shuffle objects</button>
+          <button type="button" class="btn" onclick="api('/checkpoint')">Checkpoint</button>
+          <button type="button" class="btn" onclick="api('/restore')">Restore</button>
+        </div>
+        <div class="grid2 oracle-only">
+          <button type="button" class="btn" onclick="api('/batch?name=open_all')">Open all</button>
+          <button type="button" class="btn" onclick="api('/batch?name=close_all')">Close all</button>
+          <button type="button" class="btn" onclick="api('/batch?name=lights_on')">Lights on</button>
+          <button type="button" class="btn" onclick="api('/batch?name=lights_off')">Lights off</button>
+        </div>
+        <p class="dim small honest-only">Open all, close all and the lights act with simulator truth, so they are only in Oracle mode.</p>
+        <div class="setup-cam" id="cam-setup" aria-label="live view"></div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-h"><h2>Perception</h2></div>
+      <div class="panel-b">
+        <p class="dim small honest-only">Planner senses are an oracle-mode setting: the honest agent always plans from its own camera.</p>
+        <div class="row percrow oracle-only">
+          <span class="fld-label">planner senses</span>
+          <div class="seg" id="perc" role="radiogroup" aria-label="perception source">
+            <button type="button" role="radio" aria-checked="true"  tabindex="0"  data-perc="oracle" class="on">full (oracle)</button>
+            <button type="button" role="radio" aria-checked="false" tabindex="-1" data-perc="perceived">perceived</button>
+          </div>
+        </div>
+        <div class="row percrow" title="The ambiguity (inspection) specialist re-reads 10 look-alike kitchen objects (fork/spoon/butter knife/knife/spatula, salt/pepper shaker, plate/pot/pan). auto = only while the agent holds an object up, the rule it was trained for.">
+          <span class="fld-label">inspection</span>
+          <div class="seg" id="insp" role="radiogroup" aria-label="inspection specialist">
+            <button type="button" role="radio" aria-checked="true"  tabindex="0"  data-insp="auto" class="on">auto</button>
+            <button type="button" role="radio" aria-checked="false" tabindex="-1" data-insp="off">off</button>
+            <button type="button" role="radio" aria-checked="false" tabindex="-1" data-insp="always">always</button>
+          </div>
+        </div>
+        <p class="small" id="det-stack">detectors: —</p>
+        <div class="grid2 oracle-only">
+          <button type="button" class="btn" id="explore-btn" onclick="exploreScene()">Explore navigation</button>
+          <button type="button" class="btn" id="scan-btn" onclick="scanScene()">Scan &amp; learn</button>
+        </div>
+        <label class="toggle oracle-only" title="Open every cabinet, fridge and drawer and photograph what is inside. Without this, anything stored behind a door never reaches the dataset. Roughly triples scan time."><input type="checkbox" id="scan-containers" checked><span>look inside containers</span></label>
+        <div class="row">
+          <button type="button" class="btn" id="train-btn" onclick="trainScene()">Train detector</button>
+          <span class="dim small" id="train-stat"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-h"><h2>Planner</h2></div>
+      <div class="panel-b">
+        <p class="small">The LLM switch is the <b>LLM</b> chip in the top bar. Off = nothing contacts Ollama.</p>
+        <span class="fld-label">Oracle planner model</span>
+        <div class="row">
+          <select id="model" class="grow" title="LLM model" aria-label="LLM model"><option value="">— loading models… —</option></select>
+          <button type="button" class="btn quiet" id="model-refresh" title="reload model list" aria-label="reload model list">⟳</button>
+        </div>
+        <span class="fld-label">Honest planner model</span>
+        <div class="row">
+          <select id="h-model" class="grow" aria-label="honest planner model"></select>
+        </div>
+        <span class="fld-label">Ollama endpoint</span>
+        <div class="row">
+          <input id="endpoint" class="grow" placeholder="ollama endpoint" aria-label="ollama endpoint" spellcheck="false">
+        </div>
+        <p class="dim small" id="conn" role="status">connecting…</p>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-h"><h2>Simulator</h2></div>
+      <div class="panel-b">
+        <p class="small" id="sim-health">—</p>
+        <span class="fld-label">manual drive step</span>
+        <label class="slider" for="s-move"><span>step <b id="v-move">0.25</b> m</span><input type="range" id="s-move" min="0.05" max="1" step="0.05" value="0.25"></label>
+        <label class="slider" for="s-rot"><span>rotate <b id="v-rot">30</b>°</span><input type="range" id="s-rot" min="5" max="90" step="5" value="30"></label>
+        <p class="dim small">Motion detail and resolution are in the camera's Display menu. Reset is in the top bar.</p>
+      </div>
+    </div>
+
+    <div class="panel l-span2">
+      <div class="panel-h"><h2>Capture library</h2>
+        <button type="button" class="btn sm quiet" onclick="loadGallery()">Refresh</button>
+        <button type="button" class="btn sm quiet" onclick="api('/export')">Export log</button>
+      </div>
+      <div class="panel-b"><div class="gallery" id="gallery"></div></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<div id="actpop" class="actpop" hidden></div>
+<div class="toast" id="toast" hidden role="status" aria-live="polite"></div>
+
+<script src="/static/app.js"></script>
+<script src="/static/honest.js"></script>
+</body>
+</html>

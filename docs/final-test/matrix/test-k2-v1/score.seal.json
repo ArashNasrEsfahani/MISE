@@ -1,0 +1,28 @@
+{
+ "complete": true,
+ "created": "2026-10-21T03:58:48",
+ "cut_groups": [],
+ "gold_sha256": "7df9a9251d0d3b9d0b94f698ae2da35c89c464fa5e2dba235abf4b4d6cb13790",
+ "inputs": {
+  "exec": "52fce4eb1c77be806da0c39f45ab2a80e056be017e9c177b1d809682ab88ec4e",
+  "outcome": "a978af2ef9aa2047606d50425432738ded5fad2b45e93a225aa96b5e9785156b",
+  "plan": "666a277f5f0664e06d6288d29861c930335837c51c7bde220ebe741f27358ebd"
+ },
+ "invalid_episode_pres": [],
+ "n": 1200,
+ "n_cut_cells": 0,
+ "n_replay_zero_rows": 0,
+ "namespace": "test-k2-v1",
+ "partial": false,
+ "plan_diagnostics": {
+  "file": "plan_diagnostics.json",
+  "n": 0,
+  "rule": "A27-draft / A25 item 3: plan-only, no SR",
+  "sha256": "ffd8849a0a59821810b25a8072a22eedeeae755eab7ad04efc2172efb8c58798"
+ },
+ "schema": "ftm.score.seal/1",
+ "sha256": "28ed8672719c4f7e920717f9910666bb969d6e278f5ac178467c6ce030eac26d",
+ "skipped": 0,
+ "spec": "ftm-1",
+ "stopping_rule": null
+}

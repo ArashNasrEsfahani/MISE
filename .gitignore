@@ -1,0 +1,63 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.venv*/
+**/.venv*/
+venv/
+
+# Runtime stores (SQLite, trace store, WAL companions)
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+*.db.*
+trace.db*
+
+# Logs and run output
+*.log
+*.lock
+logs/
+runs/
+**/work/
+**/cache/
+**/.cache/
+**/_checkpoints/
+sim/captures/
+sim/datasets/
+sim/datasets_v2/
+sim/final_test/snapshots/
+sim/kitchen_v3/FloorPlan*/
+sim/eval_*.json
+sim/*.partial.jsonl
+sim/loop_reports.jsonl
+sim/knowledge_base_embeddings.json
+sim/gui_config.local.json
+# outputs of scripts/reproduce_tables.*
+reproduced/
+
+# Model weights (published separately on Hugging Face)
+*.pt
+*.pth
+*.onnx
+*.engine
+*.safetensors
+sim/weights/
+
+# Secrets
+.env
+.env.*
+*.key
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/
+
+# Local tooling
+.claude/
+.playwright-mcp/

@@ -1,0 +1,178 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CHECK — is it working?</title>
+<style>
+:root{
+  --bg:#0A0E12; --panel:#121A21; --well:#06090C; --edge:#2C3844; --div:#212C35;
+  --fg:#E9F0F6; --dim:#93A2B1; --faint:#7A8998;
+  --ok:#56D98A; --bad:#FF7A7A; --acc:#33E0C4; --warn:#FFB454;
+  --mono:ui-monospace,"Cascadia Mono",Consolas,monospace;
+  --ui:system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:14px/1.5 var(--ui);
+  padding:0 0 4rem;-webkit-font-smoothing:antialiased}
+header{position:sticky;top:0;z-index:9;background:var(--bg);border-bottom:1px solid var(--edge);
+  padding:.7rem 1.2rem;display:flex;align-items:center;gap:1rem;flex-wrap:wrap}
+h1{font:700 15px/1 var(--ui);margin:0;letter-spacing:.04em}
+h1 span{color:var(--faint);font-weight:400}
+.prog{font:12px/1 var(--mono);color:var(--dim);margin-left:auto}
+.prog b{color:var(--acc)}
+button{background:#17212A;color:var(--fg);border:1px solid #626D79;border-radius:5px;
+  padding:.3rem .7rem;font:11px/1 var(--mono);cursor:pointer;letter-spacing:.04em}
+button:hover{background:#232F3B}
+main{max-width:1080px;margin:0 auto;padding:1.2rem}
+h2{font:700 13px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--acc);
+  margin:2rem 0 .6rem;padding-bottom:.35rem;border-bottom:1px solid var(--div)}
+h2:first-of-type{margin-top:.5rem}
+h2 em{color:var(--faint);font-style:normal;font-weight:400;text-transform:none;letter-spacing:0;font-size:12px}
+pre{background:var(--well);border:1px solid var(--div);border-radius:6px;margin:.5rem 0;
+  padding:.6rem .8rem;overflow-x:auto;font:12px/1.55 var(--mono);color:#C6D2DC}
+table{width:100%;border-collapse:collapse;margin:.4rem 0}
+td{border-top:1px solid var(--div);padding:.42rem .5rem;vertical-align:top}
+tr:first-child td{border-top:none}
+td.c{width:26px;padding-right:0}
+td.k{width:34%;font:12px/1.5 var(--mono);color:var(--fg)}
+td.v{color:var(--dim);font-size:13px}
+td.v code,td.k code{font:12px/1.4 var(--mono);color:var(--acc);background:rgba(51,224,196,.09);
+  padding:.05rem .3rem;border-radius:3px}
+td.v b{color:var(--fg);font-weight:600}
+input[type=checkbox]{width:15px;height:15px;accent-color:var(--acc);cursor:pointer;margin-top:2px}
+tr.done td.k,tr.done td.v{opacity:.42}
+.note{border-left:2px solid var(--warn);background:rgba(255,180,84,.06);padding:.5rem .8rem;
+  margin:.6rem 0;font-size:13px;color:var(--dim);border-radius:0 5px 5px 0}
+.note b{color:var(--warn)}
+.bad-t td.k code{color:var(--bad);background:rgba(255,122,122,.10)}
+.lede{color:var(--dim);margin:.2rem 0 0;font-size:13px}
+.where{font:11px/1 var(--mono);color:var(--faint);letter-spacing:.08em;text-transform:uppercase}
+</style>
+
+<header>
+  <h1>CHECK <span>— is it working?</span></h1>
+  <button id="reset">clear ticks</button>
+  <span class="prog"><b id="n">0</b> / <span id="tot">0</span></span>
+</header>
+
+<main>
+<p class="lede">Every row is one thing to check. Tick as you go — progress is saved in this browser.
+Full explanations live in <code>HOW-TO-TEST.html</code>; this page is only the <em>what</em>.</p>
+
+<h2>A · Headless <em>— no GPU, no WSL, no Ollama · ~20 s</em></h2>
+<p class="where">Windows PowerShell · repo root</p>
+<pre>$env:PYTHONIOENCODING = 'utf-8'
+python sim/_agentic_rag_selftest.py ; python sim/_eval_selftest.py
+python sim/_phase7_selftest.py      ; python sim/_trace_selftest.py
+python sim/_motion_selftest.py      ; python sim/_search_selftest.py
+python sim/_detector_selftest.py    ; python sim/_scan_selftest.py
+python sim/_bench_detect_selftest.py; python sim/_oracle_eval_selftest.py
+python sim/eval.py --selftest       ; python sim/perception.py ; python sim/skills.py</pre>
+<table id="tA">
+  <tr><td class="k">_agentic_rag_selftest</td><td class="v"><code>91/91 PASS</code></td></tr>
+  <tr><td class="k">_eval_selftest</td><td class="v"><code>64 PASS · 0 FAIL · 0 SKIP</code> — a <b>SKIP</b> means <code>sim/eval.py</code> is broken</td></tr>
+  <tr><td class="k">_phase7_selftest</td><td class="v"><code>37/37</code></td></tr>
+  <tr><td class="k">_trace_selftest</td><td class="v"><code>81/81</code></td></tr>
+  <tr><td class="k">_motion_selftest</td><td class="v"><code>129/129</code></td></tr>
+  <tr><td class="k">_search_selftest</td><td class="v"><code>108/108</code></td></tr>
+  <tr><td class="k">_detector_selftest</td><td class="v"><code>108/108</code></td></tr>
+  <tr><td class="k">_scan_selftest</td><td class="v"><code>109 passed, 0 failed</code></td></tr>
+  <tr><td class="k">_bench_detect_selftest</td><td class="v"><code>211/211</code></td></tr>
+  <tr><td class="k">_oracle_eval_selftest</td><td class="v"><code>70/70</code></td></tr>
+  <tr><td class="k">eval.py --selftest</td><td class="v"><code>ALL PASS</code></td></tr>
+  <tr><td class="k">perception.py / skills.py</td><td class="v">both print <code>SELFTEST OK</code></td></tr>
+</table>
+<div class="note"><b>Run from the repo root</b>, never from <code>sim/</code> — <code>sim/trace.py</code> shadows the stdlib <code>trace</code> module.<br>
+<b>Stop the console first.</b> <code>_agentic_rag_selftest</code> checks N1/N2 assert that <code>sim/trace.db</code> is
+byte-identical before and after; a running console is appending to it, so they flake. Exit code is the truth —
+if the tail says <code>91/91 PASS</code>, believe the tail.</div>
+
+<h2>B · Console up <em>— START-TESTING.bat, or the WSL line below</em></h2>
+<pre>wsl -d Ubuntu-22.04 --cd "/mnt/d/Personal/Master's Project/sim" -- \
+  env MESA_D3D12_DEFAULT_ADAPTER_NAME=NVIDIA DISPLAY=:0 /home/arash/thor-env/bin/python webapp.py</pre>
+<p class="where">then, in the browser at http://&lt;printed-ip&gt;:8000</p>
+<table id="tB">
+  <tr><td class="k">no red banner</td><td class="v">a banner at the top = the server is older than the page. <b>Restart it.</b></td></tr>
+  <tr><td class="k">GPU chip</td><td class="v">names your card. <code>CPU (no GPU!)</code> = the env vars did not take</td></tr>
+  <tr><td class="k">FPS chip</td><td class="v">&gt; 20, not red</td></tr>
+  <tr><td class="k">/status</td><td class="v"><code>api=3</code> · <code>motion.dropped=0</code> · <code>perception_ready=true</code></td></tr>
+  <tr><td class="k">/trace_stats</td><td class="v"><code>write_errors: 0</code> and <code>journal_mode</code> <b>not</b> <code>WAL</code> — see <b>D</b></td></tr>
+  <tr><td class="k">/trace</td><td class="v">the run list has rows. Empty ⇒ <b>D</b></td></tr>
+</table>
+
+<h2>C · Live <em>— one command each, in this order</em></h2>
+<table id="tC">
+  <tr><td class="k">open the fridge</td><td class="v"><code>open Fridge: ok</code> · the agent <b>walks to it</b> · at <code>cinematic</code> the door <b>swings</b> rather than snapping</td></tr>
+  <tr><td class="k">find the apple</td><td class="v"><code>search: plan — here -&gt; …</code> then it <b>walks the route</b> · ends <code>FOUND</code> or <code>NOT FOUND</code>, never silence</td></tr>
+  <tr><td class="k">find the egg</td><td class="v">opens the fridge, finds it, then <code>closing the Fridge again</code> · Objects list: <b>no <code>[open]</code> left</b></td></tr>
+  <tr><td class="k">pick up the egg</td><td class="v"><code>opening Fridge to reach the Egg</code> → <code>pickup Egg: ok</code> → <code>closing the Fridge again</code> · HOLDING = Egg · POS moved</td></tr>
+  <tr><td class="k">find the wine bottle</td><td class="v">absent ⇒ <code>NOT FOUND</code> · <code>goal check FAILED</code> · <code>bandit reward: goal=0.00</code> · a lesson is written</td></tr>
+  <tr><td class="k">…run that one again</td><td class="v">ruled-out places now say <code>was NOT here last time</code> and are visited <b>last</b>. If it repeats the same route, the loop is learning backwards</td></tr>
+  <tr><td class="k" dir="rtl" lang="fa">سیب را پیدا کن</td><td class="v">identical behaviour to <code>find the apple</code> — the bilingual pivot</td></tr>
+  <tr><td class="k">scene info → OFF</td><td class="v">camera flips to <b>Detect</b> · <code>perceived: N object type(s) seen by YOLO</code> · a spin you can actually watch (~45 frames)</td></tr>
+  <tr><td class="k">…with no trained detector</td><td class="v">must say <code>perception DEGRADED to oracle: …</code> in red. Silent fallback = the switch is lying</td></tr>
+  <tr><td class="k">motion: fast ↔ cinematic</td><td class="v">visibly different. Identical ⇒ old server code</td></tr>
+  <tr><td class="k">reset → scene + chat</td><td class="v">transcript 1 line · plan cleared · doors shut · POS at spawn · <b>motion/perception kept</b></td></tr>
+  <tr><td class="k">reset → everything</td><td class="v"><code>"failed": []</code> · knowledge base back to 0/0. <b>Also wipes the nav map and bandit weights — not recoverable</b></td></tr>
+</table>
+
+<h2>D · Red flags <em>— if you see this, stop</em></h2>
+<table id="tD" class="bad-t">
+  <tr><td class="k">no event feed / unavailable</td><td class="v">check <code>/trace_stats → journal_mode</code>. <code>WAL</code> on a <code>/mnt/</code> path corrupts the store. <b>Deleting it does not fix it</b> — fix the mode first</td></tr>
+  <tr><td class="k">write_errors climbing</td><td class="v">the trace store is being destroyed as you watch. Every write since the first error is lost</td></tr>
+  <tr><td class="k">unable to open database file</td><td class="v">from WSL while Windows reads the same file fine ⇒ the same WAL-on-DrvFs bug</td></tr>
+  <tr><td class="k">a search that "succeeds" silently</td><td class="v">no <code>FOUND</code>/<code>NOT FOUND</code> line ⇒ old code. A search must never report success it cannot show</td></tr>
+  <tr><td class="k">a door left open</td><td class="v">whoever opened it must close it. Check the Objects list after any search or pickup</td></tr>
+  <tr><td class="k">pickup without moving</td><td class="v">POS unchanged ⇒ it reached from across the counter; the walk was skipped</td></tr>
+  <tr><td class="k">SKIP in a self-test count</td><td class="v"><code>sim/eval.py</code> is not importable — the banner names the exception</td></tr>
+  <tr><td class="k">UnicodeEncodeError: charmap</td><td class="v"><code>$env:PYTHONIOENCODING='utf-8'</code></td></tr>
+</table>
+
+<h2>E · Before citing any number</h2>
+<table id="tE">
+  <tr><td class="k">--loop on results</td><td class="v"><b>provisional.</b> Which tree produced them is unresolved — re-run the loop ablation</td></tr>
+  <tr><td class="k">--perception perceived</td><td class="v"><b>never actually run.</b> It silently returned oracle until 2026-08-22. The ablation is still open</td></tr>
+  <tr><td class="k">PC / TDS in eval_*.json</td><td class="v">predate <code>search_for</code> being a scored action. Use <code>--score-search off</code> to reproduce the old action space</td></tr>
+</table>
+</main>
+
+<script>
+(function () {
+  var KEY = "check-html-v1";
+  var state = {};
+  try { state = JSON.parse(localStorage.getItem(KEY) || "{}") || {}; } catch (e) { state = {}; }
+  var rows = [].slice.call(document.querySelectorAll("table tr"));
+  rows.forEach(function (tr, i) {
+    var id = (tr.closest("table").id || "t") + ":" + i;
+    var td = document.createElement("td");
+    td.className = "c";
+    var cb = document.createElement("input");
+    cb.type = "checkbox";
+    cb.checked = !!state[id];
+    tr.classList.toggle("done", cb.checked);
+    cb.addEventListener("change", function () {
+      state[id] = cb.checked;
+      tr.classList.toggle("done", cb.checked);
+      try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {}
+      count();
+    });
+    td.appendChild(cb);
+    tr.insertBefore(td, tr.firstChild);
+  });
+  function count() {
+    var boxes = document.querySelectorAll('input[type=checkbox]');
+    var n = 0;
+    boxes.forEach(function (b) { if (b.checked) n++; });
+    document.getElementById("n").textContent = n;
+    document.getElementById("tot").textContent = boxes.length;
+  }
+  document.getElementById("reset").addEventListener("click", function () {
+    state = {};
+    try { localStorage.removeItem(KEY); } catch (e) {}
+    document.querySelectorAll('input[type=checkbox]').forEach(function (b) {
+      b.checked = false; b.closest("tr").classList.remove("done");
+    });
+    count();
+  });
+  count();
+})();
+</script>

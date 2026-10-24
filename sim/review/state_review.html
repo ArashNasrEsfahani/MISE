@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>State Visibility Review</title>
+<style>
+  :root { --bg:#f6f5f2; --panel:#ffffff; --ink:#1d1d1b; --muted:#6b6a66; --line:#e2e0da; --accent:#2f5bd3;
+          --accent-ink:#ffffff; --good:#2e7d4f; --warn:#b26b00; --chip:#efeee9; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+          --bg:#161615; --panel:#20201e; --ink:#ecebe6; --muted:#a3a19b; --line:#34332f; --accent:#7c9bff;
+          --accent-ink:#0d0d0c; --good:#6cc494; --warn:#e0a24a; --chip:#2a2a27; } }
+  :root[data-theme="dark"] { --bg:#161615; --panel:#20201e; --ink:#ecebe6; --muted:#a3a19b; --line:#34332f;
+          --accent:#7c9bff; --accent-ink:#0d0d0c; --good:#6cc494; --warn:#e0a24a; --chip:#2a2a27; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:15px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { max-width:760px; margin:0 auto; padding:20px 16px 40px; }
+  header { display:flex; align-items:baseline; justify-content:space-between; gap:12px; flex-wrap:wrap; }
+  h1 { font-size:18px; margin:0; }
+  .muted { color:var(--muted); font-size:13px; }
+  .bar { height:6px; background:var(--line); border-radius:3px; margin:12px 0 18px; overflow:hidden; }
+  .bar > div { height:100%; background:var(--accent); width:0; transition:width .2s; }
+  .card { background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:16px; }
+  .views { display:flex; gap:14px; align-items:flex-start; flex-wrap:wrap; }
+  .views img.crop { width:360px; max-width:100%; border-radius:6px; background:#000; }
+  .views figure { margin:0; }
+  .views figcaption { font-size:12px; color:var(--muted); margin-top:4px; }
+  .views img.ctx { width:200px; max-width:100%; border-radius:6px; }
+  .q { margin:16px 0 10px; font-size:17px; }
+  .chip { display:inline-block; background:var(--chip); border-radius:999px; padding:2px 10px; font-size:13px; margin-right:6px; }
+  .opts { display:flex; flex-wrap:wrap; gap:8px; }
+  button { font:inherit; border:1px solid var(--line); background:var(--panel); color:var(--ink); border-radius:8px;
+           padding:9px 14px; cursor:pointer; min-width:92px; }
+  button:hover { border-color:var(--accent); }
+  button.sel { background:var(--accent); color:var(--accent-ink); border-color:var(--accent); }
+  button kbd { font:12px ui-monospace, monospace; opacity:.7; margin-right:6px; }
+  .nav { display:flex; justify-content:space-between; margin-top:16px; gap:8px; flex-wrap:wrap; }
+  .done { text-align:center; padding:28px 12px; }
+  .note { font-size:13px; color:var(--muted); margin-top:14px; }
+  .saved { color:var(--good); }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Can you see the state?</h1>
+    <span class="muted" id="meta"></span>
+  </header>
+  <div class="bar"><div id="bar"></div></div>
+  <div class="card" id="card"></div>
+  <p class="note">Answer only from what the picture shows — the yellow box marks the object. If the picture does not
+    let you decide, choose <b>Can't tell</b>; that answer is as valuable as the others. Keys: <kbd>1</kbd>–<kbd>5</kbd>
+    answer, <kbd>←</kbd>/<kbd>→</kbd> move. Answers save automatically in this browser; press <b>Export</b> when done
+    and save the file as <code>answers.json</code> in this folder.</p>
+</main>
+<script src="items.js"></script>
+<script>
+(function () {
+  const R = window.REVIEW || {items: []};
+  const KEY = "state-review:" + (R.created || "") + ":" + R.items.length;
+  let st = {i: 0, answers: {}};
+  try { st = Object.assign(st, JSON.parse(localStorage.getItem(KEY) || "{}")); } catch (e) {}
+  const save = () => { try { localStorage.setItem(KEY, JSON.stringify(st)); } catch (e) {} };
+  const $ = (id) => document.getElementById(id);
+  const answered = () => Object.keys(st.answers).length;
+
+  function exportAnswers() {
+    const blob = new Blob([JSON.stringify({created: R.created, exported: new Date().toISOString(),
+                                           n: R.items.length, answers: st.answers}, null, 1)],
+                          {type: "application/json"});
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob); a.download = "answers.json"; a.click();
+  }
+
+  function render() {
+    const n = R.items.length;
+    $("bar").style.width = (n ? 100 * answered() / n : 0) + "%";
+    $("meta").textContent = answered() + " / " + n + " answered";
+    const card = $("card");
+    if (!n) { card.innerHTML = "<p>No items. Run <code>state_review.py make</code> first.</p>"; return; }
+    if (st.i >= n) {
+      card.innerHTML = '<div class="done"><h2>All ' + n + ' done</h2><p>' + answered() + ' answered.</p>' +
+        '<div class="opts" style="justify-content:center"><button id="exp">Export answers</button>' +
+        '<button id="back">Back to last item</button></div></div>';
+      $("exp").onclick = exportAnswers;
+      $("back").onclick = () => { st.i = n - 1; save(); render(); };
+      return;
+    }
+    const it = R.items[st.i];
+    const cur = st.answers[it.id];
+    card.innerHTML =
+      '<div class="views"><figure><img class="crop" alt="object crop" src="crops/' + it.id + '.jpg"></figure>' +
+      '<figure><img class="ctx" alt="whole frame" src="crops/' + it.id + '_ctx.jpg"><figcaption>where it is in the frame</figcaption></figure></div>' +
+      '<div class="q"><span class="chip">' + it.type + '</span> ' + it.question + '</div>' +
+      '<div class="opts">' + it.options.map((o, k) =>
+        '<button data-v="' + o[0] + '" class="' + (cur === o[0] ? "sel" : "") + '"><kbd>' + (k + 1) + '</kbd>' + o[1] + '</button>'
+      ).join("") + '</div>' +
+      '<div class="nav"><button id="prev">← Previous</button><span class="muted">item ' + (st.i + 1) + ' of ' + n +
+      (cur ? ' · <span class="saved">saved</span>' : '') + '</span><button id="exp">Export</button><button id="next">Next →</button></div>';
+    card.querySelectorAll("button[data-v]").forEach(b => b.onclick = () => choose(b.dataset.v));
+    $("prev").onclick = () => move(-1);
+    $("next").onclick = () => move(1);
+    $("exp").onclick = exportAnswers;
+  }
+  function choose(v) { const it = R.items[st.i]; st.answers[it.id] = v; st.i += 1; save(); render(); }
+  function move(d) { st.i = Math.max(0, Math.min(R.items.length, st.i + d)); save(); render(); }
+  document.addEventListener("keydown", (e) => {
+    if (st.i < R.items.length) {
+      const it = R.items[st.i], k = parseInt(e.key, 10);
+      if (k >= 1 && k <= it.options.length) { choose(it.options[k - 1][0]); return; }
+    }
+    if (e.key === "ArrowLeft") move(-1);
+    if (e.key === "ArrowRight") move(1);
+  });
+  render();
+})();
+</script>
+</body>
+</html>

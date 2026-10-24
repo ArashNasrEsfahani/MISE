@@ -1,0 +1,981 @@
+{
+ "schema": "final-test.freeze-k23/1",
+ "created": "2026-10-21T01:51:02",
+ "scene": "FloorPlan17",
+ "namespaces": [
+  "test-k3-v1"
+ ],
+ "related_namespaces": {
+  "practice": "practice-k3-v1",
+  "rehearsal": "rehearsal-k3-v1"
+ },
+ "split_sha256": "09c7da232244c4fbec20ff98b47a1a459efff1308f29481aa09961a621e2794f",
+ "prereg_sha256": "247ef23ac91fec3ca6483d48883b3ce4583b09197e6a5bb0135fafa1d6803f69",
+ "treatment_id": "7e60a06fffb196cc1b75438f8d496015d460a277a419ea930cf1e25edafab375",
+ "dataset_sha256": "7df9a9251d0d3b9d0b94f698ae2da35c89c464fa5e2dba235abf4b4d6cb13790",
+ "detector_types_sha256": "aa959ba292f7264af84d89f4cfb0f09473efacdee029767b014607533483ca38",
+ "a29_roster_sha256": "33a5a596d574873be01c103d6da6883953608ee0aebd4f14e0f531e597f4c88f",
+ "snapshots": {
+  "S*": "e36100be424c55650782774bbc59aeeb9e60dcd369bab5871f3850bf1a09bed3"
+ },
+ "code_entries": [
+  "sim/final_test/matrix/k23_run.py",
+  "sim/final_test/matrix/k23_practice.py",
+  "sim/final_test/matrix/k23_entry.py",
+  "sim/final_test/matrix/k23_size_decision.py",
+  "sim/final_test/matrix/k23_freeze_agent.py",
+  "sim/final_test/matrix/k23_ns.py",
+  "sim/final_test/matrix/k23_analyze.py",
+  "sim/final_test/matrix/k23_fa_examples.py",
+  "sim/final_test/matrix/k23_leakage.py",
+  "sim/final_test/matrix/k23_capture_freeze.py",
+  "sim/final_test/matrix/k23_giso_waiver.py",
+  "sim/final_test/matrix/capture.py",
+  "sim/final_test/matrix/plan.py",
+  "sim/final_test/matrix/planfirst.py",
+  "sim/final_test/matrix/execute.py",
+  "sim/final_test/matrix/score.py",
+  "sim/final_test/matrix/common.py",
+  "sim/final_test/matrix/treatment.py",
+  "sim/final_test/matrix/practice_k.py",
+  "sim/final_test/matrix/matrix_run.py",
+  "sim/final_test/matrix/energy.py",
+  "sim/final_test/matrix/hang_guard.py",
+  "sim/final_test/matrix/acc_common.py",
+  "sim/final_test/c3/real_counter.py",
+  "sim/final_test/reset_gate.py",
+  "sim/planners/contract.py",
+  "sim/final_test/k23_run/launch_k23.py",
+  "sim/final_test/k23_run/practice/launch.py",
+  "sim/final_test/k23_run/practice/launch_strict.py",
+  "sim/final_test/k23_run/launch_k23_strict.py",
+  "sim/final_test/k23_run/chain_k23.sh",
+  "sim/final_test/k23_run/run_k23.sh",
+  "sim/final_test/k23_run/practice/run.sh",
+  "sim/final_test/k23_run/practice/inner.sh",
+  "sim/final_test/k23_run/practice/run_strict.sh",
+  "sim/final_test/k23_run/chain_k23_strict.sh",
+  "sim/final_test/k23_run/run_k23_strict.sh",
+  "sim/final_test/k23_run/practice/inner_strict.sh"
+ ],
+ "code": {
+  "sim/agent_llm.py": "a108a91a1d0a905a33d348c2765d1e60b967155627880c3aaf332a6c0b01bd81",
+  "sim/agentic_rag.py": "09e7ecb8250126ae0028c60dd7191062bbc0d7546570376451247b1d742fa23d",
+  "sim/eval.py": "4b3fe3415bfc90f03000a155d7f6d5426781250ed6f9180acd8fe52ce161940d",
+  "sim/feedback.py": "0c09ae0bc2858d914009085f477f83d692f41a69db41ba2237ecfa4d60f628a2",
+  "sim/final_test/c3/real_counter.py": "92bd73fa1ebb953fdd1a2a99d6065bfd71ea9c700fb69483129ff6d2f22ab77a",
+  "sim/final_test/k23_run/launch_k23.py": "9f15d215e3336ffdda3dc796621e4d9b65e318af21021d5808d0b590a0b5025d",
+  "sim/final_test/k23_run/launch_k23_strict.py": "29979181dcebb99718c6793a638afcd96ed8fc9983dbc48970353db353214360",
+  "sim/final_test/k23_run/practice/launch.py": "3912354535fea1511f387e56f29651660bd9bceffad84690caacd9d6cf2e0733",
+  "sim/final_test/k23_run/practice/launch_strict.py": "b130a588e9841b45bea2ef8b008cce3e6ae12f63a283e14222ff4652200e0fea",
+  "sim/final_test/matrix/a29_applicability.py": "fb640bc55c0c7d2cbfd3581acb60ab4be61fdf4d159b18369db21be21dc12853",
+  "sim/final_test/matrix/a36.py": "e7fa7fdbf61e1a4384ff36ca25b0edae301882cd36454fd850a900a374a2c7d0",
+  "sim/final_test/matrix/acc_common.py": "8b2aa2204aa9bcee6c2aea5ff974b58c9b74fb330cc7a22310d393db29511b33",
+  "sim/final_test/matrix/analyze.py": "630afc2d0509c50951dc0dd33873de24296ab854dcf6caadb0b71c2cd28c80fd",
+  "sim/final_test/matrix/capture.py": "a87c6b97d3dc55b40568ade1d76233b71936cd50a24e2526d501399b0e4a6c48",
+  "sim/final_test/matrix/common.py": "16666bf7bde6ceb394ca49daafef42d3b3570972bc9f81fd4ea9a1f9c17ad601",
+  "sim/final_test/matrix/context_fit.py": "0adcfe01f73e442ba01c0ca13c64f50e49d762b8ecdbdeb0182d6e60f894cec4",
+  "sim/final_test/matrix/energy.py": "d9f57b97730db32f076dc4b4805cfafa50cdc2155361c5d2e2c28fe859e45d89",
+  "sim/final_test/matrix/execute.py": "bddf109eec0faecfd709c62dd5ce41eaadec68092c2d6fb648e3fc492e450554",
+  "sim/final_test/matrix/freeze.py": "8ce2fedd46af6b53b1e43ee0fe753ae895ca0b6ccdb68fa963e8e5bab855d9d9",
+  "sim/final_test/matrix/freeze_ft2.py": "e19709d99559334458efb0e7409bca4189943345a8e14e45c9dd1aedd67de701",
+  "sim/final_test/matrix/fs_block.py": "52aba774c3559a5ee6db4a368c4ffead3f1461d6e64ad7ae73b439eab5edbce9",
+  "sim/final_test/matrix/gate_evidence.py": "8a368da51ada8ec1184ef3601b17685ade3817585fc5d103b09a9a58dea5134b",
+  "sim/final_test/matrix/hang_guard.py": "1b68c825ce35192f335e4e58f0180804503c86fdb523cbcae6c0d29bd44b6fa9",
+  "sim/final_test/matrix/k23_analyze.py": "045da89895f5e76235bbc4a768531a8eea64598e9d8d2eeca80e49fc58f93cd2",
+  "sim/final_test/matrix/k23_capture_freeze.py": "7894ea4ee02fcfd2b7d99e778c8c1ea4d18c9e0c3a41d73b12a2bbf20206ed35",
+  "sim/final_test/matrix/k23_entry.py": "81f130006fab7890f3e1d5d98f082cc218dfbb93858adae17772425c97981e9e",
+  "sim/final_test/matrix/k23_fa_examples.py": "4a397f97aa617ea711c4803caa14deea964c4bb48827057b10d6fb8dad4b0761",
+  "sim/final_test/matrix/k23_freeze_agent.py": "d232466ef5d9b157aea4f852bf0dd4ee1d82e8b78857596bd748853f38937746",
+  "sim/final_test/matrix/k23_giso_waiver.py": "733f2d9136c9e8108cd17488a5edf24d13cfc6f0697e247cf8a300d5953bcf26",
+  "sim/final_test/matrix/k23_leakage.py": "11524ca26f1e317184fc09f6ced02dc6049e5019ac7c1d1521f300f36d04421b",
+  "sim/final_test/matrix/k23_ns.py": "466500bb9975bccb4b23534a6e29d16263a05fd86a55dfa2aff90518c4b3caf0",
+  "sim/final_test/matrix/k23_practice.py": "d7630a55aab0379ae647f378e1a37e6cdb4e891ad5b8e1c2ff0c0e69a3cd6dee",
+  "sim/final_test/matrix/k23_run.py": "9a2fe42053539365a40ce3d1035eac8dc41180281f04c905abd23586cb9995bc",
+  "sim/final_test/matrix/k23_size_decision.py": "c9eb803e394cad59472a9ff86a5b0a1c06ab44075a5fb3df16ff061ffda36bf0",
+  "sim/final_test/matrix/matrix_run.py": "8fef0bf45c74d2591e1fa9abd5bc34583665dccb3bd52887e27a96a73d11bc4e",
+  "sim/final_test/matrix/monitor.py": "dbfbdc9e75be5ebc4b8505f9c96e3c30197f5f3962303278bd58a42e19764147",
+  "sim/final_test/matrix/obs_health.py": "f99cf9d79d417fef73e6cffd2bbefe50f42edaf193dd1af654280da48ee095ac",
+  "sim/final_test/matrix/plan.py": "36471d9ac9102ac5ae989816670a4cbb37cad50838994e9bf4703c0701dae053",
+  "sim/final_test/matrix/plan_batch.py": "9079ef1aa9df79a37829516e160427b2163635137f448de6834c159e187d506c",
+  "sim/final_test/matrix/planfirst.py": "dbcb7c60a3300a7eebb5a210bb3e2db314d8a00c46953bb750bbf12c2d0af41d",
+  "sim/final_test/matrix/practice_k.py": "9aab1099ffd74c17b45b6f829d18b76849a345017727a2274edb26083e4d73f3",
+  "sim/final_test/matrix/score.py": "78e7ca7f193cd8778608384f13486d8519e5c4a9874d4acccd902288b753745b",
+  "sim/final_test/matrix/throttle.py": "f62576a34f9e772c3630a81da6a27ae9c566a9b0dc0fc5aa4937e01dc685ba6f",
+  "sim/final_test/matrix/treatment.py": "1001a1786d621648f9d9e4889ea24cb3248f57551152fa721ca652fb754ba8eb",
+  "sim/final_test/matrix/x_isolation_probe.py": "a254d4b9edbb768995b44798ba167b1c6f0df71533d64f2d82a3e1fcd60ac17c",
+  "sim/final_test/reset_gate.py": "383c0b33cbc20e35e2f808cadb6ccb16c81c362c1c5e84eff57789ee8ddb3875",
+  "sim/final_test_h1.py": "9f50be07422e44e9ba346dfb1e2c55522466772eb10906db5b11485736733740",
+  "sim/final_test_h1_stats.py": "27954de73ca9a18e4831a180b196d7eb9b96681c2056c9e25af8b0ba1b9e9265",
+  "sim/final_test_power.py": "6f1f32b56c55d4c7c3ed8134d6de66b2d1953095f7d528c2b287f4cbb8b15912",
+  "sim/final_test_split.py": "b4003719bf514df5b39d037f730816a493f20f8b5d71858376cd24a99bba93b3",
+  "sim/gen_dataset.py": "b0bd8e21d1539dcfb66f1f2af462524a270265ad7788a9216384b125a6ebf506",
+  "sim/general_set.py": "e6d40f7ccbdab8941679d022f4bb39488dc6659f5568cdf2f1cdcb068ca0443e",
+  "sim/goal_schema.py": "0ca5c46b52e7e869871bed936ef54fe7c16dbbaefeea4f45151c279181e12220",
+  "sim/honest.py": "a3b76525d80509b8e7388cdd7a5213dd4e9d11f5116ca60f5da079b8c65db8a2",
+  "sim/honest_console.py": "ffd72d8711dea69110087dbd50c6729eab29b35c80ac5e6a6ead8d79d422c38e",
+  "sim/honest_map.py": "aeafa01dc86435744b0e77ed85de6a44a7ce1827c1557dbf3e2bc3a6155be5db",
+  "sim/honest_skills.py": "21543604e419439e485e8fcc482c41cd2e9c94438fa1edeb8411848ee131b8a8",
+  "sim/improve.py": "5605af0d7792b7f51040e95e70710e7de5cd7dda7088284d18bf666b701faa4c",
+  "sim/kitchen_briefing.py": "c75447d236f5ff69807da7f6897d4a6104eb563f2730aaf5b75b6fb068ea5c9f",
+  "sim/knowledge.py": "e746313d194a09122fe412eb6d46a4105a4e7a20b63fcd957b5c916433910315",
+  "sim/levels.py": "06bf7191183a37441783794436d3c02393da1646413b349e00a14c96275cec95",
+  "sim/llm.py": "9262391eff4058988d37809934c809520b83492730a1428a09bd8f9befde19f1",
+  "sim/ltm.py": "f4387f16caa3adb63ef778fe8698be437e30b8e31ace035ea11cec4c324c9c21",
+  "sim/ltm_adapter.py": "abe3545b06b2f4ed1e949986e157229916f7ab9c6efd445120dfe8d2a8aea6d2",
+  "sim/ltm_concepts.py": "bf8bb279dccbba7898bc524c6a3abfeb86a87c026decaf938964e16099793a98",
+  "sim/ltm_consolidate.py": "d385f07867428ce7ceaac8e0e64614e89d2af111e09c8c2615b8ccdeda903599",
+  "sim/ltm_decay.py": "1d318ac8b89917729c9975293a016bbc8641762ff47b52079f40d67ad6f503a3",
+  "sim/ltm_events.py": "d57e9e7d1f51ca00d0977d036c056bedd9d335909f80f6d459cb9d6244f5bc35",
+  "sim/ltm_examples.py": "509aacc15cba9f4d79d255c21c74b9d3222ad51ac7c44f8608511d78f4270405",
+  "sim/ltm_fragments.py": "c4a59348d5b0846288bf7eced130e9c94a35c4270bd100568c823e7b810a6183",
+  "sim/ltm_habits.py": "e9b2ba9cd45ad868786a62ec55ae38e08098ac745ad2da36bc9726086623294a",
+  "sim/ltm_identity.py": "1ae97d2eb804e1f10685bbd1f11eaa79aa72be4389bf89d685ce1be8bff01c53",
+  "sim/ltm_lessons.py": "59becef96825cf7993b1b2865d4b074832cda8bb99fe215c39b138908f0afcf5",
+  "sim/ltm_package.py": "22b8887172b20c61622edab7745aa23ee48eb4f4131e940b1abbea1fcbe94be3",
+  "sim/ltm_procedural.py": "801e4f9e458dbeac4e68388ac130ff40868f79f73ab864698874f5ecdbe394a4",
+  "sim/ltm_profile.py": "6e001f3df62c5a22097bdaefec54b1e0deb91c3a667706490b45844f54e36a05",
+  "sim/ltm_retrieval.py": "fbee350f094a7eaaa21e54283d143d0ef6a8d25c81d179c1ae19694ec271d0a0",
+  "sim/ltm_retrieve.py": "ca2c397e1206a2775c5af34d19d5e115961947b63a133a39cc3f2ff10708a25e",
+  "sim/ltm_store.py": "d34fd8b31cdbe5af12cc256299c48293aba942c67860ff938afcc176e7df04ab",
+  "sim/ltm_templates.py": "d9b7593cae0d0bafbe498de12326fdd7148133ec710bbb7a511a9d719116a83c",
+  "sim/ltm_wm.py": "ba0c1cec25f12e8a8c8104e3446f182a35c829ac3334cc76cd8d02b651f591dc",
+  "sim/memory.py": "8184f372f1db5f84d2ccbe3ff4172fab2043a843c5634892fad7de168fcccc75",
+  "sim/navmap.py": "d3f56eb92d9545bdb1e4c4bdd1850fbd325f30ddb9ed322ebbaf8de4a04845d8",
+  "sim/objmem.py": "a74e2492d1bfaa15fe68c93ca432c6911bfacb52e2c21ce3e005ef97c581ee2f",
+  "sim/perception.py": "6c13a45dee0d686c7cefbc6be20fdd6a565d37c5ba74ce64bb0c31dbe288333b",
+  "sim/pkg_schema.py": "7df5102cafb9b36f546acadd18bfbfa7dce24e419be965f1db3cda832cc8c6ea",
+  "sim/planners/__init__.py": "e69e2a1e80620c6663776dec089f1706c8053c4530e41781d0181e6195619c52",
+  "sim/planners/anthropic_batch.py": "126e5657483325285f671ac96a5ff7511eef51268e00c3ce2ba2a1ad051eb177",
+  "sim/planners/anthropic_provider.py": "ac91e848138984f3200a279a516afc6730b56d7f1976b070c794b5bc3199fb5d",
+  "sim/planners/base.py": "1b51d1585edba87369781faaf5134b4fdf6a46d9b16344b56875877430a8ddee",
+  "sim/planners/cache.py": "964d6c2e376492631ab976b22d9a7b08e03a6480654cfcff17dd8b18c87b176e",
+  "sim/planners/codex_provider.py": "686995f0a64007a934578aebb8c2f27cceb985aa949ef38e634c12499bda8118",
+  "sim/planners/contract.py": "2334ed82b865b39631d92a6873dd45e66fbffc3c4351b2e691b65eac383e90ce",
+  "sim/planners/keys.py": "524e639494f6f194d7f35ed61a656d573fe82e028a14d71fb4af63e4b0f20035",
+  "sim/planners/ledger.py": "3f7676e75396f25b8f4ab0657f6c3318c95ffaa8099950d52839e501df3cafd4",
+  "sim/planners/ollama_provider.py": "d5d6a7b757e6d8a9cdabd998a143decf09474bfb2a5f05754d333b10b366416c",
+  "sim/planners/openrouter_provider.py": "4a4db8fa4c8a5d76ba50572549fe98ef461d7bc0a6c702db74ecfa9990d8474b",
+  "sim/planners/prices.py": "75198cd2d8b2d015198d805b1694e0c5e871ebfd1e88fe58459d67a466d213f7",
+  "sim/planners/runner.py": "11cfa2541ce3030a3bb2fa0b9553723a274f8b1b831e89e3b3e09389165770df",
+  "sim/planners/summary_v2.py": "ad13424fa3cb93139a015aae54e52dd703720f2543d3014b4db8f5a5274ae3ce",
+  "sim/planners/validator_v2.py": "c281643edd7df8cbafb22fc2063385137f324e77157156b2193665f282b48f44",
+  "sim/rag.py": "6f90ec210eda175fd5cdb2919cef4869a62d45610a52a1506e4a8e46fe26a01b",
+  "sim/scan_plan.py": "a2e36a793392acb77f259edf69f94491f8e03ba6ae703ca7d076bcc5764e2c04",
+  "sim/search.py": "948f32976e87437d2c609cb5f9d57b0004ac8fc8b44e845ed57f05b0cdaa0851",
+  "sim/skills.py": "efde02cc781c6e9193e4ccfc0a1c6363f836e8d754cc679eafdb7ad001b85441",
+  "sim/state_data.py": "15294d0893f2957cd46d0a77a27302129d22df5762dd56ca4fa5b85f6837f47b",
+  "sim/step4_gemma.py": "53209052e697d242ec2cbc9538ce2e157820c70171572112fd5d9f070c0abac0",
+  "sim/step4_refplans.py": "14d08ec0903bc646fa94642080a4ddf8e82ccedab0c0f9af238ea91f70b0cb38",
+  "sim/step5_eval.py": "7d2fbf3bb76b4dc724817457b6132dd3eba6815a3796a7a3a12f80f458a6d278",
+  "sim/step5_live.py": "ddd6797b1eb6d62541aa8c32f725eb87177398cfe7d731a8244d5c208b2388a7",
+  "sim/thor_actions.py": "f752ed5d6ff51b30a5e6cbe0d9afd51cbadba95d74bef503aee3f3f375702a7a",
+  "sim/trace.py": "471fdf6c4671946f5d6f65483bf152b23ffa82377f274e4d593039c7f2645a68",
+  "sim/type_scope.py": "e81f1f9dd44e02a3ad78d25efb8ea6fc8cddc9efac86f057e417a789b9699676",
+  "sim/vocab.py": "c26ea2ea5c1ec61e5d9a32d5c1f90ca725d90c653798c59bfe041f3c48f29526",
+  "sim/webapp.py": "2a396e0a262d0bd6482f5d5cbe55b680f16fc47773b25a62d76b18d6fba743ae",
+  "sim/yolo_recipe.py": "e7688bebaeb07aca51f023b9be8c66cb450fd2edc6bc8ac1f16ee185729412b5",
+  "sim/final_test/k23_run/chain_k23.sh": "7eab2f8e84069e795198fbba20af67d47b619acb6a85977d0aa9b264c39708a5",
+  "sim/final_test/k23_run/run_k23.sh": "908ae617ae4d045628802eb0c58c3530f8d2c02fe6908b589332544779ab1537",
+  "sim/final_test/k23_run/practice/run.sh": "751535f79259dd6a8c6f3a57520db1e0c69dabc35b2882ca56e5d2ad97f179f1",
+  "sim/final_test/k23_run/practice/inner.sh": "9dfc5c9a21fea26666a75ae6f4f07ba43da204e7650bdd12185ee3d277c0decf",
+  "sim/final_test/k23_run/practice/run_strict.sh": "043ae810c0512f036507fe6c5c4c3279a96259602f5d8bbfcb26ac3ca734ad45",
+  "sim/final_test/k23_run/chain_k23_strict.sh": "67a4b6d82b7c2d20062f2c5d8fe812f78b571b62cf6b39a1dd44d6a165d1b853",
+  "sim/final_test/k23_run/run_k23_strict.sh": "e69f5c65323e0e8ff64b6fe9060a9adfa52f9f07e91a0af6a5320cef889a4712",
+  "sim/final_test/k23_run/practice/inner_strict.sh": "f3958aadee4a240663966ec0d5ba34ca2f3a1d39aa88e4f9c584986d3b485583",
+  "sim/step4/FloorPlan17.map.json": "9b4662db534c2f6362d2a97df8fcb4dc3f73142c0d7210a21b11dcb0d67f869c",
+  "sim/step5/lookalike_map_FloorPlan17.json": "efc9fdb9b96e7bb7f47aefacbe95123868dcb10c85f63706d5af101a3af92cd1",
+  "sim/step5/uses_table_FloorPlan17.json": "df8a1ed1d90b838df7967d84b14fbbdff07e23775ba2450ec9001b125810553b",
+  "sim/step5/homeowner_inventory_FloorPlan17.json": "4064a46d48b75d017e6f0ae826be310f977ae1f7bba386db6dcce550f1e51aef",
+  "docs/final-test/matrix/detector_types_FloorPlan17.json": "86888a72a738d57698024f94a08646194f4ad1a68b5078e5183acd5fd89a5106",
+  "docs/final-test/k23/a29_sample_FloorPlan17.json": "74a690258c31b27cd3853c6f1eaae30b83384ea5bc128f35c33a88bcd5ad3c09",
+  "docs/final-test/k23/applicability/FloorPlan17/equivalence_fa.json": "75b98f8fe3a5741e49e73f358aff5c1c23cb1072e8a2206ef5738a5beabc6e44",
+  "docs/final-test/split_manifest.json": "c1ec1b62d58932e630b8bfb2966e6c2e9d590b010244ec48156c9166b39ca3d9",
+  "docs/final-test/families_approved.json": "5b598e6ee2e32f011a2e438cf0a46633f1a3db24f0c7a850ffb44fa0904e5f82",
+  "docs/final-test/reset_tolerances.json": "2ffeca272961649ab232d9db25d89bf031f342a804765b13e34ca11dfdfdcd79",
+  "docs/final-test/signatures.json": "5b42d521a119d1312a9a8ec76e341535862a89532ba7a0704dc4033f7131a509",
+  "docs/final-test/k23/decisions/K23-FA-EXAMPLES.json": "48a4a0aff64dfeba9f354cf6bd859d116a961cec87ccc3f353f9ea35f15f93ab",
+  "docs/final-test/k23/decisions/K23-PRACTICE-LEAK.json": "e64cee626ae3e74d3149da2b705dab7e289044a2c424941b3db994b25c61ffc8",
+  "docs/final-test/k23/decisions/K23-GISO-WAIVER-FloorPlan17.json": "8ac69e7f8903685042229dbfb4928bebdc384697353332fb5e85385ac2fa4214",
+  "sim/final_test/_checkpoints/K3-GISO-INCONCLUSIVE/g_iso.json": "dd05fac7e6286d2d067f15286f319ab2e5a1b98c3f419204b775702314bb8ab5"
+ },
+ "perception": {
+  "record": "sim/kitchen_v3/FloorPlan17/frozen_weights.sha256",
+  "record_sha256": "4a87fb34b6be1a62fd74ecfc6d430d846a6c6f89edb7374d44b9d83f480d28df",
+  "meta_sha256": "7d842b31b3c92df474af9c297c72837049d5d13bef57322bf4c12b521e95c3f9"
+ },
+ "gates": {
+  "pins": {
+   "pass": true,
+   "problems": []
+  },
+  "a37_hold": {
+   "pass": true,
+   "problems": []
+  },
+  "perception": {
+   "pass": true,
+   "problems": [],
+   "record": "sim/kitchen_v3/FloorPlan17/frozen_weights.sha256",
+   "record_sha256": "4a87fb34b6be1a62fd74ecfc6d430d846a6c6f89edb7374d44b9d83f480d28df",
+   "meta_sha256": "7d842b31b3c92df474af9c297c72837049d5d13bef57322bf4c12b521e95c3f9"
+  },
+  "class_registration": {
+   "pass": true,
+   "problems": [],
+   "n_classes": 45,
+   "n_shown": 44,
+   "types_sha256": "aa959ba292f7264af84d89f4cfb0f09473efacdee029767b014607533483ca38",
+   "weights_sha": "9f70fd8fa69a9a96653a71657a3053ae9130a96cd8edef9bcf2782e38a2f7a99",
+   "registry_sha256": "aa959ba292f7264af84d89f4cfb0f09473efacdee029767b014607533483ca38",
+   "system_text_sha": "7f89a7edcf513e666beb7b45fd829d10203f63b5b2fbfe455cceed9ca7d1e800",
+   "texts_checked": 100,
+   "rehearsal_capture_rows": 20,
+   "rehearsal_plan_rows": 80
+  },
+  "samples": {
+   "pass": true,
+   "problems": []
+  },
+  "roster": {
+   "pass": true,
+   "problems": [],
+   "candidate": "all",
+   "checkpoint": "after-fp15",
+   "n_items": 101,
+   "presentations": 202,
+   "roster_sha256": "33a5a596d574873be01c103d6da6883953608ee0aebd4f14e0f531e597f4c88f"
+  },
+  "package": {
+   "pass": true,
+   "problems": [],
+   "files": {
+    "sim/step5/uses_table_FloorPlan17.json": "df8a1ed1d90b838df7967d84b14fbbdff07e23775ba2450ec9001b125810553b",
+    "sim/step5/homeowner_inventory_FloorPlan17.json": "4064a46d48b75d017e6f0ae826be310f977ae1f7bba386db6dcce550f1e51aef",
+    "sim/step5/lookalike_map_FloorPlan17.json": "efc9fdb9b96e7bb7f47aefacbe95123868dcb10c85f63706d5af101a3af92cd1"
+   },
+   "hint_table_sha": "86ea2979f97e569ba2ff843e218ea6721d7c71ca4ee8f0dba7e7081c1b57e62b"
+  },
+  "practice": {
+   "pass": true,
+   "problems": [],
+   "attempts": 10,
+   "snapshot_dir": "sim/final_test/snapshots_ft2/FloorPlan17/o0/k10",
+   "snapshot_dir_sha": "e36100be424c55650782774bbc59aeeb9e60dcd369bab5871f3850bf1a09bed3",
+   "practice_journal_sha": "76f40a1cd850340f424c59c3fa70f0679e8ebabddb0460db35dc969fa8746c97"
+  },
+  "rehearsal": {
+   "pass": true,
+   "problems": [],
+   "exec_rows": 69,
+   "violations": 0,
+   "invalid": 0,
+   "billed_usd": 0.775132
+  },
+  "bilingual": {
+   "pass": true,
+   "worlds": [
+    "canon"
+   ],
+   "registered_keys": 10,
+   "pairs_compared": 10,
+   "missing_or_one_language": [],
+   "extra": [],
+   "differences": []
+  },
+  "honesty": {
+   "pass": true,
+   "violations": 0,
+   "oracle": 0,
+   "map_build": 0,
+   "invalid": 0,
+   "missing": 0,
+   "rows": 99,
+   "g_iso_audit": {
+    "absent_vs_control_absent": 0,
+    "absent_vs_present": 0
+   }
+  },
+  "g_iso": {
+   "pass": true,
+   "problems": [],
+   "status": "inconclusive",
+   "n": 12,
+   "sha256": "dd05fac7e6286d2d067f15286f319ab2e5a1b98c3f419204b775702314bb8ab5",
+   "waived": true,
+   "waiver_decision_sha256": "8ac69e7f8903685042229dbfb4928bebdc384697353332fb5e85385ac2fa4214",
+   "narrowed_claim": "Kitchen 3 memory isolation shown on 9/12 presentations; 3 unmeasured because of restore blocking; the Phase A request tie-in was broken by a tooling bug (fixed for Kitchen 2)"
+  },
+  "masking_leakage": {
+   "pass": true,
+   "problems": [],
+   "presentations": 20,
+   "masking": 40,
+   "leakage": 20,
+   "g_iso": 20
+  },
+  "tokens": {
+   "pass": true,
+   "blocks": 20,
+   "max_real_tokens": 1165,
+   "cap": 2000,
+   "missing": 0
+  },
+  "context": {
+   "pass": true,
+   "problems": [],
+   "verdict": "PASS_FORECAST",
+   "sha256": "1960b10a89ad93e99097e79b1367908a8fa3b05b52898e474cdbb7086779ecc6"
+  },
+  "evaluator": {
+   "pass": true,
+   "problems": [],
+   "applicability_sha256": "9b5f4f00bdc8b230dd15766c8bac30b5e56173f26ef079c045ca95f1492f6524",
+   "rehearsal_p0_rows": 20,
+   "shared_125_sha256": "20ccea18fb3f4a9f3bf714f93cb73dd98a05e709d24dbfc87280ffa534cb46ce"
+  },
+  "reset": {
+   "pass": true,
+   "disposition": "shared",
+   "status": "calibrated",
+   "tau_pos_m": 0.05,
+   "tau_rot_deg": 5.0,
+   "ceilings": {
+    "pos_m": 0.1,
+    "rot_deg": 15.0,
+    "justification": "A14a (prereg s16): design limits fixed before calibration; grid 0.25 m, ID_SAME_D 0.25 m, VIEW_MOVE 0.20 m, VIEW_PITCH 15 deg; pilot settle 0.44 m would fail",
+    "dated": "2026-10-11",
+    "prereg_sha256": "df4d3852002a7beb54eeef6763bfe311e9fc0a2f411997dc849f9d375a5ff689",
+    "section_sha256": "1d0225745423f74f3a9ebf78bd561204a40f91ff2c00002b10e9d235dbb2aa95"
+   },
+   "validation": {
+    "pairs": 24,
+    "pass": 24,
+    "ok": true,
+    "failures": [],
+    "summary_other_rows": {
+     "pairs_affected": 4,
+     "rows_differing": 16,
+     "pairs_by_type": {
+      "Cabinet": 2,
+      "Drawer": 2,
+      "Faucet": 2,
+      "Floor": 1
+     }
+    },
+    "pairs_file_sha256": "22ffa1a862057caa65a13c7f977594921d6455a526d077023860703952ef8cf5"
+   },
+   "sha": "2ffeca272961649ab232d9db25d89bf031f342a804765b13e34ca11dfdfdcd79"
+  },
+  "spend": {
+   "pass": true,
+   "disposition": "shared",
+   "evidence": "docs/final-test/matrix/gates_ft2/12.7.json",
+   "sha256": "0e021255eea3e3b5ebc467709730bc9cfb6775dd851df7244fcc9479ad274088"
+  },
+  "families": {
+   "pass": true,
+   "disposition": "shared",
+   "reasons": [],
+   "sha": "5b598e6ee2e32f011a2e438cf0a46633f1a3db24f0c7a850ffb44fa0904e5f82"
+  },
+  "gemma": {
+   "pass": true,
+   "digest": "b37049369adfe3d2b653af0ab301a062ca5cbe96ace6aa0d3f2559ee9b563fc2",
+   "expected_prefix": "b37049369adf",
+   "version": "0.32.15",
+   "parent_model": "gemma4-validation-20260929:e2b-imatrix-attention-q6-q8-draft2",
+   "error": null,
+   "model": "gemma4:e2b-it-q4_K_M"
+  },
+  "workflow_b": {
+   "pass": true,
+   "disposition": "shared",
+   "evidence": "docs/final-test/matrix/gates_ft2/12.10.json",
+   "sha256": "aa9c52f80fdd8b55d146f1ed152aed10474efd04283618d72078c89846e0314f"
+  },
+  "renderer": {
+   "pass": true,
+   "render_calls": {},
+   "contract_version": "ft-v2",
+   "system_sha": "7f89a7edcf513e666beb7b45fd829d10203f63b5b2fbfe455cceed9ca7d1e800"
+  },
+  "namespace": {
+   "pass": true,
+   "rows": {
+    "capture": 0,
+    "plan": 0,
+    "exec": 0,
+    "score": 0
+   },
+   "cache_files": 0,
+   "ceilings": {
+    "core": 32.0,
+    "total": 32.0
+   }
+  },
+  "fb1": {
+   "pass": true,
+   "problems": []
+  },
+  "amendments": {
+   "pass": true,
+   "problems": [],
+   "prereg_sha256": "247ef23ac91fec3ca6483d48883b3ce4583b09197e6a5bb0135fafa1d6803f69"
+  },
+  "fa_examples": {
+   "pass": true,
+   "problems": [],
+   "decision_sha256": "48a4a0aff64dfeba9f354cf6bd859d116a961cec87ccc3f353f9ea35f15f93ab",
+   "activations": 7
+  },
+  "fa_equivalence": {
+   "pass": true,
+   "problems": [],
+   "kitchen": "FloorPlan17",
+   "n": 10,
+   "agreement": 10,
+   "sha256": "75b98f8fe3a5741e49e73f358aff5c1c23cb1072e8a2206ef5738a5beabc6e44",
+   "registered_n": 10
+  },
+  "dataset": {
+   "pass": true,
+   "dataset_sha256": "7df9a9251d0d3b9d0b94f698ae2da35c89c464fa5e2dba235abf4b4d6cb13790",
+   "split_names": "7df9a9251d0d3b9d0b94f698ae2da35c89c464fa5e2dba235abf4b4d6cb13790"
+  },
+  "budget": {
+   "pass": true,
+   "problems": [],
+   "projected_test_usd": 7.8598,
+   "study_committed_usd": 39.294869,
+   "namespace_ceiling_usd": 32.0
+  },
+  "selftests": {
+   "pass": true,
+   "problems": [],
+   "runs": {
+    "sim/final_test/matrix/_k23_practice_selftest.py": {
+     "rc": 0,
+     "last": "81/81",
+     "sha256": "d2d0f2a25f1b0459658e166fab3f93fa69f6b0269145502c6dcc731b62bb5406"
+    },
+    "sim/final_test/matrix/_k23_run_selftest.py": {
+     "rc": 0,
+     "last": "93/93",
+     "sha256": "083e5be59b919e55e532b2605ad4167d213a7320246d1dc676b1276aade2966a"
+    },
+    "sim/final_test/matrix/_k23_size_decision_selftest.py": {
+     "rc": 0,
+     "last": "33/33",
+     "sha256": "e81d2ea9a0b962fdb80efb22ceaf54479fc21dafce622797b203b2e908ec2b7a"
+    },
+    "sim/final_test/matrix/_k23_freeze_agent_selftest.py": {
+     "rc": 0,
+     "last": "60/60",
+     "sha256": "238f8f3fc87329baa40f5cd2a2177c109f2b6358cff240f806a936f8d85f6ebd"
+    },
+    "sim/final_test/matrix/_k23_namespaces_selftest.py": {
+     "rc": 0,
+     "last": "46/46",
+     "sha256": "daa7f1904a8e6e607f7cdda628d1b14f91381edeba44c56ce9e3b34114eb54a3"
+    },
+    "sim/final_test/matrix/_k23_scene_isolation_selftest.py": {
+     "rc": 0,
+     "last": "54/54",
+     "sha256": "a47d98c45976d40d0c3211ab5d3b304e706ff079cb4d1968e2fb5648b4c891ff"
+    },
+    "sim/final_test/matrix/_k23_a37_hold_selftest.py": {
+     "rc": 0,
+     "last": "102/102",
+     "sha256": "5bb88bb6f3d71a777b47bb4e92ba7b552d17fffc58089aec1dbecd0c8e567ecf"
+    },
+    "sim/kitchen_v3/k23/_k23_coco_meta_selftest.py": {
+     "rc": 0,
+     "last": "12/12",
+     "sha256": "55a1432a6979667485d500faed5f3a051e96137991b62ba90afde43fd22d4f51"
+    },
+    "sim/final_test/matrix/_k23_fa_examples_selftest.py": {
+     "rc": 0,
+     "last": "24/24",
+     "sha256": "43363610b0c7c376867765244882bd9522fc4cee18e0771cdd2a24e4d70456dd"
+    },
+    "sim/final_test/matrix/_k23_leakage_selftest.py": {
+     "rc": 0,
+     "last": "26/26",
+     "sha256": "12a4273e2df2b983f0ffc93e813a90e98fac34a404de593badd259f4dbee8753"
+    },
+    "sim/final_test/matrix/_k23_capture_freeze_selftest.py": {
+     "rc": 0,
+     "last": "29/29",
+     "sha256": "664bf9a071b02ac689c9f20693b9b17d3b7b587a03d63fa50f3db2412512a14d"
+    },
+    "sim/final_test/matrix/_k23_execute_types_selftest.py": {
+     "rc": 0,
+     "last": "7/7",
+     "sha256": "04c954888961fba5d78dae6759487d6b4a3602088a104613b2436442147a6e48"
+    },
+    "sim/final_test/matrix/_k23_giso_waiver_selftest.py": {
+     "rc": 0,
+     "last": "17/17",
+     "sha256": "46e3c3d079ab7b76a40ebad0a9847a24771ff11adcfac2b205019003fa2d555c"
+    },
+    "sim/final_test/k23_run/_k23_strict_wrappers_selftest.py": {
+     "rc": 0,
+     "last": "18/18",
+     "sha256": "7bc4333be1853da3c8688f7083b21b6dc0b47bbefe932a9b82f5b9088680c98a"
+    }
+   },
+   "python": "C:\\Users\\arash\\AppData\\Local\\Programs\\Python\\Python314\\python.exe"
+  },
+  "dispositions": {
+   "pass": true,
+   "problems": [],
+   "table": {
+    "12.1": {
+     "disposition": "current",
+     "k23_gates": [
+      "pins",
+      "perception",
+      "dataset",
+      "gemma"
+     ],
+     "basis": "code closure + bound data files (record 'code'), the kitchen's weights (perception record), the walked map and package files (record 'code'), split / prereg shas, model digest"
+    },
+    "12.2": {
+     "disposition": "current",
+     "k23_gates": [
+      "bilingual"
+     ],
+     "basis": "rehearsal capture of this kitchen"
+    },
+    "12.3": {
+     "disposition": "current",
+     "k23_gates": [
+      "honesty"
+     ],
+     "basis": "rehearsal capture + practice + rehearsal executions + rehearsal G-iso of this kitchen"
+    },
+    "12.4": {
+     "disposition": "shared",
+     "k23_gates": [
+      "reset"
+     ],
+     "basis": "validated A14b tolerances are kitchen-independent ceilings; per-kitchen effect = live state checks (A36)"
+    },
+    "12.5": {
+     "disposition": "current+shared",
+     "k23_gates": [
+      "evaluator"
+     ],
+     "basis": "this kitchen's A29 applicability + rehearsal P0; empty-plan control = bound K1 12.5 evidence"
+    },
+    "12.6": {
+     "disposition": "current",
+     "k23_gates": [
+      "g_iso",
+      "masking_leakage",
+      "practice"
+     ],
+     "basis": "G-iso live in this kitchen; masking / leakage per presentation; snapshot"
+    },
+    "12.7": {
+     "disposition": "current+shared",
+     "k23_gates": [
+      "spend",
+      "budget"
+     ],
+     "basis": "bound K1 spend-guard evidence + this kitchen's budget check"
+    },
+    "12.8": {
+     "disposition": "shared",
+     "k23_gates": [
+      "families"
+     ],
+     "basis": "the approved family manifest (the registered task set is common)"
+    },
+    "12.9": {
+     "disposition": "current",
+     "k23_gates": [
+      "gemma"
+     ],
+     "basis": "live digest probe of the served Gemma"
+    },
+    "12.10": {
+     "disposition": "shared",
+     "k23_gates": [
+      "workflow_b"
+     ],
+     "basis": "bound K1 Workflow-B evidence (the memory machinery is common code)"
+    },
+    "12.11": {
+     "disposition": "current",
+     "k23_gates": [
+      "renderer"
+     ],
+     "basis": "AST of the K23 entry points + the test namespace's effective contract"
+    },
+    "12.12": {
+     "disposition": "current",
+     "k23_gates": [
+      "class_registration"
+     ],
+     "basis": "the K23 form against the pre-capture probe registry"
+    },
+    "12.13": {
+     "disposition": "current",
+     "k23_gates": [
+      "namespace"
+     ],
+     "basis": "empty test namespace + its ceilings at the freeze"
+    },
+    "A12": {
+     "disposition": "not_applicable",
+     "k23_gates": [],
+     "basis": "superseded by the A24 package (as in Kitchen 1; the capture audit records 'not applicable')"
+    },
+    "A14": {
+     "disposition": "shared",
+     "k23_gates": [
+      "reset"
+     ],
+     "basis": "see 12.4"
+    },
+    "G-iso": {
+     "disposition": "current",
+     "k23_gates": [
+      "g_iso"
+     ],
+     "basis": "rehearsal-kN-v1 g_iso.json"
+    },
+    "X-iso": {
+     "disposition": "not_applicable",
+     "k23_gates": [],
+     "basis": "no Codex arm in Kitchens 2 / 3 (A29 item 1)"
+    },
+    "a24_2_cost": {
+     "disposition": "current",
+     "k23_gates": [],
+     "basis": "C5 energy metered at the test plan (k23_run energy gate before execute / score); A33 price basis shared"
+    },
+    "acceptance": {
+     "disposition": "not_applicable",
+     "k23_gates": [],
+     "basis": "the acceptance block is Kitchen 1's (A29 item 1: no acceptance block in Kitchens 2 / 3)"
+    },
+    "context": {
+     "disposition": "current",
+     "k23_gates": [
+      "context"
+     ],
+     "basis": "rehearsal capture, measured"
+    },
+    "fb-1": {
+     "disposition": "current",
+     "k23_gates": [
+      "fb1"
+     ],
+     "basis": "reproduced now"
+    },
+    "leakage": {
+     "disposition": "current",
+     "k23_gates": [
+      "masking_leakage",
+      "practice"
+     ],
+     "basis": "per presentation at capture + practice snapshot leakage gate"
+    },
+    "registration": {
+     "disposition": "not_applicable",
+     "k23_gates": [],
+     "basis": "the acceptance registration is Kitchen 1's"
+    },
+    "signatures": {
+     "disposition": "current+shared",
+     "k23_gates": [
+      "amendments"
+     ],
+     "basis": "K1 signatures (signatures.json) stay in force; the K23 texts must be in the preregistration the freeze binds"
+    },
+    "snapshot": {
+     "disposition": "current",
+     "k23_gates": [
+      "practice"
+     ],
+     "basis": "the kitchen's K = 10 snapshot"
+    },
+    "tokens": {
+     "disposition": "current",
+     "k23_gates": [
+      "tokens"
+     ],
+     "basis": "rehearsal capture blocks"
+    }
+   }
+  }
+ },
+ "gate_order": [
+  "pins",
+  "a37_hold",
+  "perception",
+  "class_registration",
+  "samples",
+  "roster",
+  "package",
+  "practice",
+  "rehearsal",
+  "bilingual",
+  "honesty",
+  "g_iso",
+  "masking_leakage",
+  "tokens",
+  "context",
+  "evaluator",
+  "reset",
+  "spend",
+  "families",
+  "gemma",
+  "workflow_b",
+  "renderer",
+  "namespace",
+  "fb1",
+  "amendments",
+  "fa_examples",
+  "fa_equivalence",
+  "dataset",
+  "budget",
+  "selftests",
+  "dispositions"
+ ],
+ "k1_gate_dispositions": {
+  "12.1": {
+   "disposition": "current",
+   "k23_gates": [
+    "pins",
+    "perception",
+    "dataset",
+    "gemma"
+   ],
+   "basis": "code closure + bound data files (record 'code'), the kitchen's weights (perception record), the walked map and package files (record 'code'), split / prereg shas, model digest"
+  },
+  "12.2": {
+   "disposition": "current",
+   "k23_gates": [
+    "bilingual"
+   ],
+   "basis": "rehearsal capture of this kitchen"
+  },
+  "12.3": {
+   "disposition": "current",
+   "k23_gates": [
+    "honesty"
+   ],
+   "basis": "rehearsal capture + practice + rehearsal executions + rehearsal G-iso of this kitchen"
+  },
+  "12.4": {
+   "disposition": "shared",
+   "k23_gates": [
+    "reset"
+   ],
+   "basis": "validated A14b tolerances are kitchen-independent ceilings; per-kitchen effect = live state checks (A36)"
+  },
+  "12.5": {
+   "disposition": "current+shared",
+   "k23_gates": [
+    "evaluator"
+   ],
+   "basis": "this kitchen's A29 applicability + rehearsal P0; empty-plan control = bound K1 12.5 evidence"
+  },
+  "12.6": {
+   "disposition": "current",
+   "k23_gates": [
+    "g_iso",
+    "masking_leakage",
+    "practice"
+   ],
+   "basis": "G-iso live in this kitchen; masking / leakage per presentation; snapshot"
+  },
+  "12.7": {
+   "disposition": "current+shared",
+   "k23_gates": [
+    "spend",
+    "budget"
+   ],
+   "basis": "bound K1 spend-guard evidence + this kitchen's budget check"
+  },
+  "12.8": {
+   "disposition": "shared",
+   "k23_gates": [
+    "families"
+   ],
+   "basis": "the approved family manifest (the registered task set is common)"
+  },
+  "12.9": {
+   "disposition": "current",
+   "k23_gates": [
+    "gemma"
+   ],
+   "basis": "live digest probe of the served Gemma"
+  },
+  "12.10": {
+   "disposition": "shared",
+   "k23_gates": [
+    "workflow_b"
+   ],
+   "basis": "bound K1 Workflow-B evidence (the memory machinery is common code)"
+  },
+  "12.11": {
+   "disposition": "current",
+   "k23_gates": [
+    "renderer"
+   ],
+   "basis": "AST of the K23 entry points + the test namespace's effective contract"
+  },
+  "12.12": {
+   "disposition": "current",
+   "k23_gates": [
+    "class_registration"
+   ],
+   "basis": "the K23 form against the pre-capture probe registry"
+  },
+  "12.13": {
+   "disposition": "current",
+   "k23_gates": [
+    "namespace"
+   ],
+   "basis": "empty test namespace + its ceilings at the freeze"
+  },
+  "A12": {
+   "disposition": "not_applicable",
+   "k23_gates": [],
+   "basis": "superseded by the A24 package (as in Kitchen 1; the capture audit records 'not applicable')"
+  },
+  "A14": {
+   "disposition": "shared",
+   "k23_gates": [
+    "reset"
+   ],
+   "basis": "see 12.4"
+  },
+  "G-iso": {
+   "disposition": "current",
+   "k23_gates": [
+    "g_iso"
+   ],
+   "basis": "rehearsal-kN-v1 g_iso.json"
+  },
+  "X-iso": {
+   "disposition": "not_applicable",
+   "k23_gates": [],
+   "basis": "no Codex arm in Kitchens 2 / 3 (A29 item 1)"
+  },
+  "a24_2_cost": {
+   "disposition": "current",
+   "k23_gates": [],
+   "basis": "C5 energy metered at the test plan (k23_run energy gate before execute / score); A33 price basis shared"
+  },
+  "acceptance": {
+   "disposition": "not_applicable",
+   "k23_gates": [],
+   "basis": "the acceptance block is Kitchen 1's (A29 item 1: no acceptance block in Kitchens 2 / 3)"
+  },
+  "context": {
+   "disposition": "current",
+   "k23_gates": [
+    "context"
+   ],
+   "basis": "rehearsal capture, measured"
+  },
+  "fb-1": {
+   "disposition": "current",
+   "k23_gates": [
+    "fb1"
+   ],
+   "basis": "reproduced now"
+  },
+  "leakage": {
+   "disposition": "current",
+   "k23_gates": [
+    "masking_leakage",
+    "practice"
+   ],
+   "basis": "per presentation at capture + practice snapshot leakage gate"
+  },
+  "registration": {
+   "disposition": "not_applicable",
+   "k23_gates": [],
+   "basis": "the acceptance registration is Kitchen 1's"
+  },
+  "signatures": {
+   "disposition": "current+shared",
+   "k23_gates": [
+    "amendments"
+   ],
+   "basis": "K1 signatures (signatures.json) stay in force; the K23 texts must be in the preregistration the freeze binds"
+  },
+  "snapshot": {
+   "disposition": "current",
+   "k23_gates": [
+    "practice"
+   ],
+   "basis": "the kitchen's K = 10 snapshot"
+  },
+  "tokens": {
+   "disposition": "current",
+   "k23_gates": [
+    "tokens"
+   ],
+   "basis": "rehearsal capture blocks"
+  }
+ },
+ "shared_evidence": {
+  "12.5": {
+   "path": "docs/final-test/matrix/gates_ft2/12.5.json",
+   "sha256": "20ccea18fb3f4a9f3bf714f93cb73dd98a05e709d24dbfc87280ffa534cb46ce"
+  },
+  "12.7": {
+   "path": "docs/final-test/matrix/gates_ft2/12.7.json",
+   "sha256": "0e021255eea3e3b5ebc467709730bc9cfb6775dd851df7244fcc9479ad274088"
+  },
+  "12.10": {
+   "path": "docs/final-test/matrix/gates_ft2/12.10.json",
+   "sha256": "aa9c52f80fdd8b55d146f1ed152aed10474efd04283618d72078c89846e0314f"
+  }
+ },
+ "design": {
+  "planning_arms": [
+   "G0",
+   "G+M",
+   "O0",
+   "O+M"
+  ],
+  "execution_controls": [
+   "P0",
+   "P+M"
+  ],
+  "world": "canon",
+  "r": 0,
+  "replays": false,
+  "stages": [
+   "free",
+   "core0"
+  ],
+  "tier": "synchronous (approve-all-6 item 3)",
+  "fresh_simulator_every": 300
+ },
+ "builder": {
+  "tool": "sim/final_test/matrix/k23_freeze_agent.py",
+  "python": "C:\\Users\\arash\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+  "platform": "win32"
+ },
+ "all_gates_pass": true,
+ "sha256": "d290c7c51f90071255c7fe4ee898d47d96ddaf801e8f2a621966947e50f4536f",
+ "standing_presignature": {
+  "basis": "approve-all-6 item 1",
+  "astra_review": "docs/final-test/k23/_astra/K23-FREEZE-FloorPlan17-86ac565ff50fdcce.txt",
+  "astra_review_sha256": "314634530552fe3ed312d383dbdf249f8b7a1728ff26c488cc3dbfbc06965cab",
+  "freeze_summary": "docs/final-test/k23/FREEZE-SUMMARY-FloorPlan17.md",
+  "freeze_summary_sha256": "292f77e752c68d39f140ec26afe15554111254e1beaa57f64f3a0368ca6b3b6f",
+  "ts": "2026-10-21T01:54:40",
+  "presigned_sha": "86ac565ff50fdcce5c9ed11a14b732e0dd9674000bb15d686d4bd9b544a03a8a"
+ }
+}

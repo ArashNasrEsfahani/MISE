@@ -1,0 +1,27 @@
+{
+ "id": "K23-WINDOW-RERUN",
+ "written": "2026-10-21T10:24:53",
+ "arash_words": [
+  "2026-10-21 morning, asked: '1. The 54 flagged Kitchen 2 units: keep the registered handling plus the sensitivity check, or re-run them in a separate pass? The primary results stay untouched either way.' Arash: 'you can do all of these three now.'",
+  "then: 'f is connected too. go for it all. i want everything done. so we can start writing the thesis and creating the pages.'"
+ ],
+ "status": "POST-HOC SENSITIVITY outside the registered K2 / K3 analysis. Decided AFTER the K2 / K3 results were seen (disclosed as such). The registered primary results, the sealed test-k2-v1 score and docs/final-test/k23/analysis/analysis_k23.* stay unchanged and remain the primary result; the existing window-exclusion sensitivity (K2-RENDER-WINDOW-sensitivity.json) stays as well.",
+ "design": {
+  "units": "every (unit, run) with an attempt in the 02:02:49-03:21:36 window of K2-RENDER-WINDOW.json: 54 units (31 ended blocked_state, 23 done), ALL re-executed, including the done ones (no selection by outcome)",
+  "how": "execute.ExecutePhase over the main test's own captures, plans, units (rebuilt and checked: same unit keys and cells as the main execution), restored worlds, snapshots, treatment and live executor; attempts 0-2 as registered, starting afresh in the pass's own journal; every other unit skipped",
+  "environment": "keep-awake on (display stays on), the AI2-THOR renderer verified on D3D12 before the run, one simulator, the shared sim lock",
+  "isolation": "writes only docs/final-test/k23/rerun/test-k2-v1/ and sim/final_test/matrix/work/rerun-test-k2-v1/; main journals read-only",
+  "scoring": "the main sealed score rows with every row of a window unit re-scored (score.score_cell, the registered scorer) from the re-execution; self-check: the same re-scoring of the MAIN execution reproduces every main window row exactly",
+  "analysis": "the registered k23_analyze (pinned, by import) on FloorPlan15 with the window rows re-executed + FloorPlan17 as sealed -> analysis_rerun.{json,md}; identity check before the run: the same path with nothing substituted reproduces analysis_k23.json exactly (meta aside)",
+  "reporting": "thesis: primary = registered analysis; the render-window event disclosed; two sensitivity views side by side (window excluded; window re-executed)"
+ },
+ "window_record": {
+  "path": "docs/final-test/k23/infra/K2-RENDER-WINDOW.json",
+  "sha256": "078472eb1aefafe04375e200bf66c23eef73a11f80e2a09c0e8d91b3c7a1005c"
+ },
+ "code": {
+  "module": "sim/final_test/matrix/k23_rerun.py",
+  "selftest": "sim/final_test/matrix/_k23_rerun_selftest.py (17/17)",
+  "wrapper": "sim/final_test/k23_run/rerun/run_rerun_exec.sh"
+ }
+}

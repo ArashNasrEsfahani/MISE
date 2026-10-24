@@ -1,0 +1,34 @@
+{
+ "schema": "k23.decision/1",
+ "id": "K23-GISO-WAIVER-FloorPlan17",
+ "choice": "written-waiver-narrowed-claim",
+ "rule": "A20.1: the inconclusive Kitchen 3 G-iso (rehearsal-k3-v1) is waived in writing by Arash with a narrowed claim; accepted by the agent freeze only for FloorPlan17, only for status 'inconclusive' with diff == [] and no absent-vs-present difference, only for the archived result named here; a 'fail' is never waivable",
+ "claim": "Kitchen 3 memory isolation shown on 9/12 presentations; 3 unmeasured because of restore blocking; the Phase A request tie-in was broken by a tooling bug (fixed for Kitchen 2)",
+ "scene": "FloorPlan17",
+ "namespace": "rehearsal-k3-v1",
+ "archive": "sim/final_test/_checkpoints/K3-GISO-INCONCLUSIVE/g_iso.json",
+ "g_iso_sha256": "dd05fac7e6286d2d067f15286f319ab2e5a1b98c3f419204b775702314bb8ab5",
+ "g_iso_self_sha": "663e4ef2abf4f6b4c7aa04ac96e35c8901fd8b2bdcafb3cd33d8f59a0bd2a524",
+ "status": "inconclusive",
+ "n": 12,
+ "blocked": [
+  "canon:g-l1-place-bowl-counter-top:en",
+  "canon:g-l1-place-bowl-counter-top:fa",
+  "canon:g-l2-microwave-run-egg:en"
+ ],
+ "control_noise": [
+  "canon:g-l1-place-bowl-counter-top:fa"
+ ],
+ "diff": [],
+ "inconclusive_reasons": [
+  "blocked run",
+  "request probe differs from the Phase A none-arm bytes",
+  "control differs outside (iv)"
+ ],
+ "by": "Arash",
+ "date": "2026-10-20",
+ "said": "Kitchen 3's G-iso is inconclusive (3/12 presentations blocked by restore mismatches; the 9 measured ones show perfect isolation). How should Kitchen 3 proceed? -> Written waiver, narrowed claim (Recommended)",
+ "recorded": "2026-10-20T21:56:19",
+ "basis": "prereg A20.1 (W5 only with Arash's explicit written waiver; claims narrowed)",
+ "sha256": "ae0b0a2dec4d236d8b7f1075ebc9b1d584db6dc7fc408a21fc636a109963c170"
+}

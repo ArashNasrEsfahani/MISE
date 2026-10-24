@@ -1,0 +1,304 @@
+{
+ "schema": "pkg.layout/1",
+ "scene": "FloorPlan1",
+ "extracted": "2026-10-12T20:31:26",
+ "fields_whitelist": [
+  "objectType",
+  "position.x",
+  "position.z",
+  "openable",
+  "toggleable",
+  "receptacle",
+  "pickupable"
+ ],
+ "quant_m": 0.5,
+ "fixtures": [
+  {
+   "type": "Cabinet",
+   "n": 9,
+   "cells": [
+    [
+     -2.0,
+     0.5
+    ],
+    [
+     -1.5,
+     -2.5
+    ],
+    [
+     -1.5,
+     -2.0
+    ],
+    [
+     -1.5,
+     0.5
+    ],
+    [
+     -1.0,
+     -2.0
+    ],
+    [
+     -0.5,
+     -2.5
+    ],
+    [
+     0.5,
+     -2.5
+    ],
+    [
+     0.5,
+     -2.0
+    ]
+   ],
+   "parent_type": null,
+   "openable": true,
+   "toggleable": false,
+   "receptacle": true
+  },
+  {
+   "type": "CoffeeMachine",
+   "n": 1,
+   "cells": [
+    [
+     -2.0,
+     0.0
+    ]
+   ],
+   "parent_type": null,
+   "openable": false,
+   "toggleable": true,
+   "receptacle": true
+  },
+  {
+   "type": "CounterTop",
+   "n": 3,
+   "cells": [
+    [
+     -2.0,
+     -1.0
+    ],
+    [
+     0.0,
+     0.0
+    ],
+    [
+     0.5,
+     -2.5
+    ]
+   ],
+   "parent_type": null,
+   "openable": false,
+   "toggleable": false,
+   "receptacle": true
+  },
+  {
+   "type": "Drawer",
+   "n": 9,
+   "cells": [
+    [
+     -1.5,
+     0.0
+    ],
+    [
+     1.0,
+     -2.0
+    ]
+   ],
+   "parent_type": null,
+   "openable": true,
+   "toggleable": false,
+   "receptacle": true
+  },
+  {
+   "type": "Faucet",
+   "n": 1,
+   "cells": [
+    [
+     -2.0,
+     -1.5
+    ]
+   ],
+   "parent_type": null,
+   "openable": false,
+   "toggleable": true,
+   "receptacle": false
+  },
+  {
+   "type": "Fridge",
+   "n": 1,
+   "cells": [
+    [
+     -2.0,
+     1.0
+    ]
+   ],
+   "parent_type": null,
+   "openable": true,
+   "toggleable": false,
+   "receptacle": true
+  },
+  {
+   "type": "GarbageCan",
+   "n": 1,
+   "cells": [
+    [
+     -2.0,
+     2.0
+    ]
+   ],
+   "parent_type": null,
+   "openable": false,
+   "toggleable": false,
+   "receptacle": true
+  },
+  {
+   "type": "LightSwitch",
+   "n": 1,
+   "cells": [
+    [
+     2.5,
+     0.0
+    ]
+   ],
+   "parent_type": null,
+   "openable": false,
+   "toggleable": true,
+   "receptacle": false
+  },
+  {
+   "type": "Microwave",
+   "n": 1,
+   "cells": [
+    [
+     0.0,
+     -2.5
+    ]
+   ],
+   "parent_type": null,
+   "openable": true,
+   "toggleable": true,
+   "receptacle": true
+  },
+  {
+   "type": "Shelf",
+   "n": 3,
+   "cells": [
+    [
+     2.0,
+     -2.5
+    ]
+   ],
+   "parent_type": null,
+   "openable": false,
+   "toggleable": false,
+   "receptacle": true
+  },
+  {
+   "type": "ShelvingUnit",
+   "n": 1,
+   "cells": [
+    [
+     2.0,
+     -2.5
+    ]
+   ],
+   "parent_type": null,
+   "openable": false,
+   "toggleable": false,
+   "receptacle": false
+  },
+  {
+   "type": "Sink",
+   "n": 1,
+   "cells": [
+    [
+     -2.0,
+     -1.5
+    ]
+   ],
+   "parent_type": null,
+   "openable": false,
+   "toggleable": false,
+   "receptacle": false
+  },
+  {
+   "type": "SinkBasin",
+   "n": 1,
+   "cells": [
+    [
+     -2.0,
+     -1.5
+    ]
+   ],
+   "parent_type": null,
+   "openable": false,
+   "toggleable": false,
+   "receptacle": true
+  },
+  {
+   "type": "StoveBurner",
+   "n": 4,
+   "cells": [
+    [
+     -0.5,
+     -2.5
+    ],
+    [
+     0.0,
+     -2.5
+    ]
+   ],
+   "parent_type": null,
+   "openable": false,
+   "toggleable": false,
+   "receptacle": true
+  },
+  {
+   "type": "StoveKnob",
+   "n": 4,
+   "cells": [
+    [
+     -0.5,
+     -2.0
+    ],
+    [
+     0.0,
+     -2.0
+    ]
+   ],
+   "parent_type": null,
+   "openable": false,
+   "toggleable": true,
+   "receptacle": false
+  },
+  {
+   "type": "Toaster",
+   "n": 1,
+   "cells": [
+    [
+     -2.0,
+     0.0
+    ]
+   ],
+   "parent_type": null,
+   "openable": false,
+   "toggleable": true,
+   "receptacle": true
+  },
+  {
+   "type": "Window",
+   "n": 1,
+   "cells": [
+    [
+     -2.0,
+     -1.0
+    ]
+   ],
+   "parent_type": null,
+   "openable": false,
+   "toggleable": false,
+   "receptacle": false
+  }
+ ],
+ "sha256": "cb4a1e2326cc94c8e13bf2a791970d056a8f9888fcf35f692187c392a0600faf"
+}
