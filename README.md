@@ -17,6 +17,16 @@ An embodied agent that turns a natural-language kitchen command (English or Pers
 [AI2-THOR](https://ai2thor.allenai.org/) simulator. A language model plans, a retrieval-augmented memory grounds the plan
 in what the agent has seen and learned, and a function library carries the plan out under strict "honest agent" rules.
 
+## The Agent at Work
+
+Three real runs, one per kitchen; each reached its goal. Left: the agent's own camera, the only image it uses. Right: a top view for illustration; the agent never sees it.
+
+![Kitchen 1: "Put the pan on the stove and turn the stove on."](assets/k1-stove-pan.gif)
+
+![Kitchen 2: "Start the pot on the stove for soup."](assets/k2-pot-heating.gif)
+
+![Kitchen 3: "Open the fridge, then pick up the apple."](assets/k3-fridge-apple.gif)
+
 ## What is in it
 
 - **Three-level command hierarchy.** Every instruction, plan and result declares its level:
