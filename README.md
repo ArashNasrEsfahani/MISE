@@ -173,6 +173,10 @@ gate evidence, Kitchen 2/3 maps and memory tables, acceptance-phase and signal-r
 `_motion_selftest.py` wants `sim/weights/FloorPlan1_physics.pt`), compare against the frozen sha256 manifests, need
 `ultralytics` (WSL side), or need WSL. That is expected and is not a code defect.
 
+## Related toolkit
+
+[AI2-THOR Web Console](https://github.com/ArashNasrEsfahani/ai2thor-web-console-extension) contains the browser console and Python agent toolkit extracted from MISE, offered as a starting point for similar embodied-agent projects in AI2-THOR.
+
 ## Licence
 
 GNU Affero General Public License v3.0 (`LICENSE`). Third-party components, fonts (SIL OFL 1.1, `OFL.txt`) and model
