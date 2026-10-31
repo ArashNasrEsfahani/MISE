@@ -1,0 +1,279 @@
+{
+ "copies": {
+  "docs/final-test/k23/codex/test-k2-v1/outcome.codex.jsonl": {
+   "bytes": 35092,
+   "sha256": "35a648edf82879e24f77659a515d9ae42220dc1ce7f7e9592c7400f54a3cf0d7"
+  },
+  "docs/final-test/k23/codex/test-k3-v1/outcome.codex.jsonl": {
+   "bytes": 54893,
+   "sha256": "3211c167228814eb4b69882c2835fb80dd5c8216c79ea30a8e2427ddd41088ee"
+  },
+  "docs/final-test/k23/rerun/test-k2-v1/exec.rerun.jsonl": {
+   "bytes": 77559,
+   "sha256": "5463707c398caf637fbe7345f451d6a8071e01d2b869585c0353b26dca8a6d68"
+  },
+  "docs/final-test/k23/rerun/test-k2-v1/outcome.rerun.jsonl": {
+   "bytes": 42067,
+   "sha256": "1de634eb2f31728eee99d7dc6b2a99ccd68be74b9c696236764aa6db67969a98"
+  },
+  "docs/final-test/matrix/test-k2-v1/outcome.sealed.jsonl": {
+   "bytes": 538849,
+   "sha256": "a978af2ef9aa2047606d50425432738ded5fad2b45e93a225aa96b5e9785156b"
+  },
+  "docs/final-test/matrix/test-k3-v1/outcome.sealed.jsonl": {
+   "bytes": 533029,
+   "sha256": "9c2cc8695ee8c857025bc35281c9ed478df865eccc729bcef4cc7437fc92feaa"
+  },
+  "docs/final-test/matrix/test-v1/outcome.sealed.jsonl": {
+   "bytes": 1303441,
+   "sha256": "8ccc71fc2bd56a04d4df834e310faefa95c9d4b4e677c4433baf2221365fc7da"
+  },
+  "docs/final-test/strengthen/N/test-k2-v1/rescue/exec.jsonl": {
+   "bytes": 248158,
+   "sha256": "4203c579de4142a7e7bd97ccabe7e8cd92663e3627d9b12b64524c2c93d969f3"
+  },
+  "docs/final-test/strengthen/N/test-k2-v1/rescue/outcome.jsonl": {
+   "bytes": 6889,
+   "sha256": "ac856fbcd6702c44226cb08bcfcff31f5a3b5e3367b7dba37f34d63aef9f92c6"
+  },
+  "docs/final-test/strengthen/N/test-k2-v1/score_e4b.noexcl.jsonl": {
+   "bytes": 590986,
+   "sha256": "2edcb33d41eb0be63f6e4f207057f1c9622a08eadfa671f5fb266c2f81967b78"
+  },
+  "docs/final-test/strengthen/N/test-k2-v1/score_q9b.noexcl.jsonl": {
+   "bytes": 587724,
+   "sha256": "767f87a8782d2c48cd02d4968199c7b0f529c66ee01f4bfa017dbf8ab7bc6bfe"
+  },
+  "docs/final-test/strengthen/N/test-k3-v1/rescue/exec.jsonl": {
+   "bytes": 377933,
+   "sha256": "2baf8176240dc2d7d70a6dd786ffe8bc93539591dc0fc0ce88206a603beb9909"
+  },
+  "docs/final-test/strengthen/N/test-k3-v1/rescue/outcome.jsonl": {
+   "bytes": 27657,
+   "sha256": "5b8f8c9409c1bc909ffc94ee9c4a283e2b0c699c009d86f73c9fbdb75b837a36"
+  },
+  "docs/final-test/strengthen/N/test-k3-v1/score_e4b.noexcl.jsonl": {
+   "bytes": 604087,
+   "sha256": "ba19cec5b0267b046703d7af29872352000f23e30f09a496b21acf6c30b0b4f2"
+  },
+  "docs/final-test/strengthen/N/test-k3-v1/score_q9b.noexcl.jsonl": {
+   "bytes": 601833,
+   "sha256": "839795ecbd3325a21dd63b9709ea85e8f988ad05181643dab2e36f4c988dd7f2"
+  },
+  "docs/final-test/strengthen/N/test-v1/rescue/exec.jsonl": {
+   "bytes": 480069,
+   "sha256": "213a232461d4fecd5902f8439620689060f974efbbc13938c6479cd8b01378f8"
+  },
+  "docs/final-test/strengthen/N/test-v1/rescue/outcome.jsonl": {
+   "bytes": 34758,
+   "sha256": "daf94daf6d1af2144af1ed9132d3a84916353414c57a4831a75012c236d0da13"
+  },
+  "docs/final-test/strengthen/N/test-v1/score_e4b.noexcl.jsonl": {
+   "bytes": 740560,
+   "sha256": "e6594245ce580141b971f331ff78690c1a9de7bc767d6f28a124e67dbf5efde4"
+  },
+  "docs/final-test/strengthen/N/test-v1/score_q9b.noexcl.jsonl": {
+   "bytes": 735944,
+   "sha256": "c50495d00d228da91c0441318d94114de82aec70f63615af0442219454eabe7e"
+  },
+  "docs/final-test/strengthen/R/test-k2-v1/exec.jsonl": {
+   "bytes": 106446,
+   "sha256": "8a62bc92533d01e4f709b1349fed8506b18b59fb0a7ba8bf8d86f86507467848"
+  },
+  "docs/final-test/strengthen/R/test-k2-v1/outcome.jsonl": {
+   "bytes": 26476,
+   "sha256": "050e7724769c184810166e347452f6de495422b8ef0bbc9d39be806fb1917467"
+  },
+  "docs/final-test/strengthen/R/test-k2-v1/score.codex.noexcl.jsonl": {
+   "bytes": 547062,
+   "sha256": "4a82f5e67692fe8a3e9662574a8adab67c99db6acab9e79e63f3686485a8d543"
+  },
+  "docs/final-test/strengthen/R/test-k2-v1/score.noexcl.jsonl": {
+   "bytes": 1617967,
+   "sha256": "52f47b5a475474ed6e1e2fe241015eede0e46757f4e3f1b3a23d8e968c686a9d"
+  },
+  "docs/final-test/strengthen/R/test-k3-v1/exec.jsonl": {
+   "bytes": 244644,
+   "sha256": "3c55c69482be1152db15ad2d43e1ae1da3a46be7b79c3d90d66a1ff70be5ff97"
+  },
+  "docs/final-test/strengthen/R/test-k3-v1/outcome.jsonl": {
+   "bytes": 30616,
+   "sha256": "098e45de07aaa61c5d65ef7198c7b86c0e271273b8c84f9e345f249a48c747a2"
+  },
+  "docs/final-test/strengthen/R/test-k3-v1/score.codex.noexcl.jsonl": {
+   "bytes": 557507,
+   "sha256": "58ee9ed4b185c79b5402561635728ed2484a62b8f7da53df85142592534e0055"
+  },
+  "docs/final-test/strengthen/R/test-k3-v1/score.noexcl.jsonl": {
+   "bytes": 1654728,
+   "sha256": "6605cb23723ff0355c05c1c551bbeaa870a28ac37e3821c148e998180844f7ea"
+  },
+  "docs/final-test/strengthen/R/test-v1/exec.jsonl": {
+   "bytes": 289413,
+   "sha256": "c1f86020c5dcfddecba66aa490134c0b694bc6cbd0ed0d6163962ff042535eb4"
+  },
+  "docs/final-test/strengthen/R/test-v1/outcome.jsonl": {
+   "bytes": 65118,
+   "sha256": "fa8e0f0f07b8fbff84aecc7ae4a7d26c9058741dd52bd693359011b520c2721c"
+  },
+  "docs/final-test/strengthen/R/test-v1/score.noexcl.jsonl": {
+   "bytes": 8054277,
+   "sha256": "d4ef5d2984b3f2a4994343c320dd81b2c6cbf4206170270a21db429d54de601a"
+  }
+ },
+ "extracts": {
+  "docs/final-test/reexecuted/inputs/adjusted_reference.json": {
+   "bytes": 11198,
+   "from": "the stored output of the earlier adjusted analysis of the sealed rows (not in this repository)",
+   "rule": "numbers only: per arm the adjusted overall success rate and its 95 % interval, and the paired per-level differences G+M minus each frontier condition (estimate, 95 % interval), as stored by the earlier adjusted analysis of the sealed rows; compute_final.py reproduces them as a check",
+   "sha256": "52787c09c2a18a5f6db20012a470c5af030e98c221e48e00c232ebecb5aacd0e"
+  },
+  "docs/final-test/reexecuted/inputs/analysis/A6.json": {
+   "bytes": 238602,
+   "from": {
+    "docs/final-test/strengthen/A/a6/analysis.json": "3c5b06791859da3afbd8a45cb6f840319ea75d9ed8b2fd1b0b95bfdaa8e31136"
+   },
+   "rule": "keys noise_floor, three_kitchen, kitchens.*.versions.*.arms.*.vs_full",
+   "sha256": "c8cf989cc73a567bd8ebb1924d3de5636ee601a4f32f795ab15130cc18cd63f3"
+  },
+  "docs/final-test/reexecuted/inputs/analysis/G.json": {
+   "bytes": 109680,
+   "from": {
+    "docs/final-test/strengthen/G/analysis.json": "b9c975c3df6af06a54b61e69ed1deb2f702dab83a4d78a71e7636c62f93deb8f"
+   },
+   "rule": "keys three_kitchen, kitchens.*.versions.*.contrasts",
+   "sha256": "0a01fb1515d09eea7d32141975441688b51e461ac32f09d0343d44cc2d16e5a6"
+  },
+  "docs/final-test/reexecuted/inputs/analysis/N.json": {
+   "bytes": 92310,
+   "from": {
+    "docs/final-test/strengthen/N/analysis.json": "3b5b17208c8a3d5fa355970d45ce5cc8e825ae29e81b61186528b1d3fe040b7d"
+   },
+   "rule": "keys written, kitchens.*.partial_missing, kitchens.*.versions.rescued.{rates_pct, differences}, three_kitchen.rescued.{rates_pct, differences}",
+   "sha256": "31c97c70ead0e8a7cfc5d31aafe83f94b1e384e42aed34aec04f8a0666785576"
+  },
+  "docs/final-test/reexecuted/inputs/analysis/N_rescue_summary.json": {
+   "bytes": 3631,
+   "from": {
+    "docs/final-test/strengthen/N/rescue_summary.json": "01a850898d0e0281c097cac07982fa4e3b6c6b36ec3e40b9d343581925ef9dc0"
+   },
+   "rule": "keys kitchens.*.{unique_units_tried, by_world, recovered_units, not_yet_tried, still_blocked_units} and kitchens.*.passes.*.{targets, finished, recovered, still_blocked, statuses}",
+   "sha256": "42fa89b207cd8cca01bd5d70bf55274ec04a86112bec41dcbd3ac3fdabee95e9"
+  },
+  "docs/final-test/reexecuted/inputs/analysis/R.json": {
+   "bytes": 348686,
+   "from": {
+    "docs/final-test/strengthen/R/analysis.json": "f23d73707bd95b72b7f5820027343d1464baa8040909e8937d436fb9d742b05c"
+   },
+   "rule": "keys inputs, outcome_summary, heldout_mean, kitchens.*.{rates, contrasts, level_diffs}",
+   "sha256": "8f2624dda60e180ec7450b3eccfe596f62b4f88e34f4450f1871571775352f4a"
+  },
+  "docs/final-test/reexecuted/inputs/analysis/V.json": {
+   "bytes": 73988,
+   "from": {
+    "docs/final-test/strengthen/V/analysis.json": "8459c55e0466e1509fb87d81d3232bb1ab471b2976ded20a5a1f0f53d2beec79"
+   },
+   "rule": "keys three_kitchen, kitchens.*.versions.*.contrasts",
+   "sha256": "e57bcb79b7fb6ea9b216bd060aed0646d6ec4ee1b61eba79df03cc367fdd02b7"
+  },
+  "docs/final-test/reexecuted/inputs/l3_reset_states.json": {
+   "bytes": 157002,
+   "from": {
+    "docs/final-test/matrix/test-k2-v1/capture.jsonl": "ab61c0803dccf5a5c267bd8607e9f1edd36370a56e96c041a9db5bb7c103dd48",
+    "docs/final-test/matrix/test-k3-v1/capture.jsonl": "465c6e4deee06b176accf20017effef24ab85ca7dddc914b2d57c7985c6197e2",
+    "docs/final-test/matrix/test-v1/capture.jsonl": "cb1fd611019c4aa18270ac873eaef008e66fa8112b6c5391bc4ef86adcd6ef9e"
+   },
+   "rule": "for every capture row of an Abstract (L3) presentation: capture_run, item, holding, state_ref and the sha256 of that state file, labels.goal_clauses of the state file, and summary_lines = the 'Type [states]' prefix of each line of the observation summary (prompt_summary, else summary) that matches ^([A-Za-z]+) \\[([^\\]]*)\\]; the rest of the capture row is left out; 136 rows",
+   "sha256": "0cd62663422ce6b4e8006f2499db81d04eac0f85c4844dc10c502eb1e4625248"
+  },
+  "docs/final-test/reexecuted/inputs/render_window_K2.json": {
+   "bytes": 44560,
+   "from": {
+    "docs/final-test/k23/infra/K2-RENDER-WINDOW.json": "078472eb1aefafe04375e200bf66c23eef73a11f80e2a09c0e8d91b3c7a1005c"
+   },
+   "rule": "keys namespace, affected_units, units (the exec rows of the 54 units in the rendering-fault window)",
+   "sha256": "ccbd6fb7e5839d9fda26d8df432ad55ad3b2c09b63f10c1132253dadaf35bb04"
+  },
+  "docs/final-test/reexecuted/inputs/rows/A6.no-exclusion.jsonl": {
+   "bytes": 15508744,
+   "from": {
+    "docs/final-test/strengthen/A/a6/score.jsonl": "1480ae5c2846fbdedb96b15c772672c8c1f3e61f1c18e97b20ff92722203e912"
+   },
+   "rule": "only the rows with a_version = no-exclusion, lines byte-identical and in order; the adjusted-version rows are left out; 9172 rows",
+   "sha256": "a457b517c56a85e137e1e2411c1757888b601593e529c6604aee551027b12511"
+  },
+  "docs/final-test/reexecuted/inputs/rows/G.no-exclusion.jsonl": {
+   "bytes": 5259791,
+   "from": {
+    "docs/final-test/strengthen/G/score.jsonl": "09d622df76cdff8c7d809045261bec2082c99346d4ac5caa9f2d02d6efd4c25c"
+   },
+   "rule": "only the rows with v_version = no-exclusion, lines byte-identical and in order; the adjusted-version rows are left out; 3260 rows",
+   "sha256": "2d486b01a664f7dc1a32666abac22773323d6d55b03ad5caadf8c82fd97a67c8"
+  },
+  "docs/final-test/reexecuted/inputs/rows/V.no-exclusion.jsonl": {
+   "bytes": 2149159,
+   "from": {
+    "docs/final-test/strengthen/V/score.jsonl": "6425f7700537743c6f8b822a02385f5fed1f3faeb18ba1c6ab9f576ef31e7ac7"
+   },
+   "rule": "only the rows with v_version = no-exclusion, lines byte-identical and in order; the adjusted-version rows are left out; 1304 rows",
+   "sha256": "91e779934082d23c747a1387bfbdf0002a1d128b86053599366d1376b7fd6a53"
+  },
+  "docs/final-test/reexecuted/inputs/starts/N-rescue.test-k2-v1.jsonl": {
+   "bytes": 40690,
+   "from": {
+    "docs/final-test/strengthen/N/test-k2-v1/rescue/events.jsonl": "067577bd13bd5251cd90b55f385f5b1f36d2977103ff632c67c6f5c00df3ed12"
+   },
+   "rule": "only the exec_attempt_start rows of the event log, lines byte-identical and in order (the analysis reads no other event); 130 rows",
+   "sha256": "b5659b01fc5434c7cf4128ba3b975c40fe55230e7d6614e85b791b1e3bf4aaec"
+  },
+  "docs/final-test/reexecuted/inputs/starts/N-rescue.test-k3-v1.jsonl": {
+   "bytes": 63539,
+   "from": {
+    "docs/final-test/strengthen/N/test-k3-v1/rescue/events.jsonl": "86249dde27dbf1b442ce5f9e2f744fe8b565cf21354fd1f0ec69badc5e9c5b99"
+   },
+   "rule": "only the exec_attempt_start rows of the event log, lines byte-identical and in order (the analysis reads no other event); 203 rows",
+   "sha256": "6335b53375e80ac0ade13a7b59d6fb51c7205f94922d285cf6c6293d641fcead"
+  },
+  "docs/final-test/reexecuted/inputs/starts/N-rescue.test-v1.jsonl": {
+   "bytes": 81355,
+   "from": {
+    "docs/final-test/strengthen/N/test-v1/rescue/events.jsonl": "a156601cebba48e22c009d33c1afe7d37a4bd6277951f8e07661c6d237be6d46"
+   },
+   "rule": "only the exec_attempt_start rows of the event log, lines byte-identical and in order (the analysis reads no other event); 265 rows",
+   "sha256": "50f575955911aa0cdd91147335d4dd984d83dcd8cd1ed0e09533b6b10ab4c9bd"
+  },
+  "docs/final-test/reexecuted/inputs/starts/R.test-k2-v1.jsonl": {
+   "bytes": 19470,
+   "from": {
+    "docs/final-test/strengthen/R/test-k2-v1/events.jsonl": "0d09b7c1f17a80577ef06ebfea2d3519c50dfc484ca7159afc4cca95e4ece659"
+   },
+   "rule": "only the exec_attempt_start rows of the event log, lines byte-identical and in order (the analysis reads no other event); 66 rows",
+   "sha256": "6a3177b54a1e5f19f6a6c3405b29a1694adee017783c0f9b6b285ebbe304ce5a"
+  },
+  "docs/final-test/reexecuted/inputs/starts/R.test-k3-v1.jsonl": {
+   "bytes": 41595,
+   "from": {
+    "docs/final-test/strengthen/R/test-k3-v1/events.jsonl": "06aaca26762203e488740407af9834fb6fbeb6b8b77040accd408bdc9fbeab16"
+   },
+   "rule": "only the exec_attempt_start rows of the event log, lines byte-identical and in order (the analysis reads no other event); 141 rows",
+   "sha256": "49f528a2d6d4b7842da1414555d8cf9ff9ef8fbd883a38aaee8738cf1d079493"
+  },
+  "docs/final-test/reexecuted/inputs/starts/R.test-v1.jsonl": {
+   "bytes": 49130,
+   "from": {
+    "docs/final-test/strengthen/R/test-v1/events.jsonl": "a9e2f528d33cc397060b31101bc424bc03f54ed2bf5d8022c2902b3c106ee1ac"
+   },
+   "rule": "only the exec_attempt_start rows of the event log, lines byte-identical and in order (the analysis reads no other event); 170 rows",
+   "sha256": "a6bb7324b87afdd2514976c3d27da4eb740767b01af9c0fdb568dd5033036c33"
+  },
+  "docs/final-test/reexecuted/inputs/starts/k23-rerun.test-k2-v1.jsonl": {
+   "bytes": 15930,
+   "from": {
+    "docs/final-test/k23/rerun/test-k2-v1/events.jsonl": "acb2ee7eb360e1926b46fab93d5988b13b131ef0a526148a82b8b9cec0695edf"
+   },
+   "rule": "only the exec_attempt_start rows of the event log, lines byte-identical and in order (the analysis reads no other event); 54 rows",
+   "sha256": "a393db250a9f0d10b0fe1a5397543c7a6803e26d91da3a7a8d6c832436b12077"
+  }
+ },
+ "note": "copies: unchanged record files at their usual paths. extracts: files under docs/final-test/reexecuted/inputs/ derived from records that are not in this repository in full; 'from' gives each source path in the original working tree and its sha256."
+}

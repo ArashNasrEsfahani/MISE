@@ -123,6 +123,9 @@ Each cell gives presentations analysed, with presentations left out in brackets.
 Across the first twelve rows above, the presentations left out are 27 of 3,000 (development), 8 of 1,600 (held-out A) and
 18 of 1,616 (held-out B).
 
+Source: `docs/final-test/reexecuted/final_results.json`, keys `counts` (first twelve rows) and `larger_planners` (last
+four rows). `docs/final-test/reexecuted/README.md` gives the command that regenerates it.
+
 ## 4. Rescue passes
 
 A unit is one execution. It can serve several conditions and several experiments, so unit counts and presentation counts
@@ -144,6 +147,9 @@ Each cell below gives units tried / recovered / still blocked.
 | Held-out A (FloorPlan15) | 19 / 4 / 15 | 15 / 3 / 12 | 12 / 1 / 11 |
 | Held-out B (FloorPlan17) | 40 / 17 / 23 | 23 / 8 / 15 | 15 / 4 / 11 |
 | **All** | **106 / 37 / 69** | **69 / 18 / 51** | **51 / 15 / 36** |
+
+Source: `docs/final-test/reexecuted/final_results.json`, key `rescue`; the rescue records are in
+`docs/final-test/strengthen/N/<ns>/rescue/`.
 
 Cause: scene restoration failed its state check. The final data hold no crash (`exec_crash`: 0), and every blocked state
 is flagged. The differences recorded by the check were in the observed types and scene summary (development), the agent
@@ -189,15 +195,19 @@ Counts are per language. Executions shared between conditions stay linked when r
 | Splits | `docs/final-test/split_manifest.json`, `docs/final-test/families_approved.json`, `docs/final-test/inclusion_manifest_a26.json`, `docs/final-test/k23/a29_sample_FloorPlan15.json`, `docs/final-test/k23/a29_sample_FloorPlan17.json` |
 | Evaluation scripts | `sim/final_test/matrix/score.py`, `sim/final_test/matrix/analyze.py`, `sim/final_test/matrix/k23_analyze.py`, `sim/final_test/matrix/k23_codex.py`, `sim/final_test_h1_stats.py`, `sim/final_test/reset_gate.py`, `docs/final-test/reset_tolerances.json`, `scripts/reproduce_analysis.py` |
 | Registered results | `docs/final-test/matrix/test-v1/analysis.md`, `docs/final-test/k23/analysis/analysis_k23.md`, `docs/final-test/k23/codex/test-k2-v1/summary.codex.json`, `docs/final-test/k23/codex/test-k3-v1/summary.codex.json` |
-| Rendering check | `docs/final-test/k23/decisions/K23-WINDOW-RERUN.json`, `docs/final-test/k23/rerun/test-k2-v1/analysis_rerun.md` |
+| Rendering check | `docs/final-test/k23/decisions/K23-WINDOW-RERUN.json`, `docs/final-test/k23/rerun/test-k2-v1/analysis_rerun.md`, `exec.rerun.jsonl` and `outcome.rerun.jsonl` in the same directory; under the re-executed analysis: `docs/final-test/reexecuted/final_results.json` (key `rendering_window_K2`) |
 | Detector training | `sim/train_kitchen.py`, `sim/train_amb.py`, `docs/kitchen-datasets.md` |
+| Re-executed analysis | `docs/final-test/reexecuted/README.md` (command, inputs, limits), `docs/final-test/reexecuted/run.py`, results in `docs/final-test/reexecuted/final_results.json`, `docs/final-test/reexecuted/l3_breakdown.json` and `docs/final-test/reexecuted/joint_bootstrap.json` (three-kitchen intervals from a joint family bootstrap) |
+| Re-execution and rescue records | first round: `docs/final-test/strengthen/R/<ns>/`; rescue passes: `docs/final-test/strengthen/N/<ns>/rescue/`; sealed outcomes: `docs/final-test/matrix/<ns>/outcome.sealed.jsonl`; extracts: `docs/final-test/reexecuted/inputs/` (listed in `inputs/MANIFEST.json`) |
+| Follow-up experiment results | component ablation, plan checker and goal library: `docs/final-test/reexecuted/inputs/rows/`; larger local planners: `docs/final-test/strengthen/N/<ns>/score_e4b.noexcl.jsonl`, `score_q9b.noexcl.jsonl`; analysed values: `docs/final-test/reexecuted/final_results.json` (keys `ablation`, `plan_checker`, `goal_library`, `larger_planners`) |
 
 ### Not in this repository
 
-- The code, per-run records and rates of the re-executed analysis, including the rescue summary behind section 4 and the
-  decision record for the executor revision in section 7.
-- The result records of the component ablation, plan checker and larger local planners experiments, including the run
-  settings of Gemma 4 E4B and Qwen 3.5 9B.
+- The full event logs of the re-executions (only their attempt-start rows are included), the decision record for the
+  executor revision in section 7, and the capture records with the planner prompts (the state at reset that the
+  analysis needs is extracted in `docs/final-test/reexecuted/inputs/l3_reset_states.json`).
+- The plan records of the follow-up experiments, the run settings of Gemma 4 E4B and Qwen 3.5 9B, and the
+  adjusted-version result rows of the component ablation, plan checker and goal library experiments.
 - The result records of the recognition experiment, and the simulation summary behind the power figures in section 2
   (`docs/final-test/h1_validation/power_summary.C7.json`).
 - Detector weights and training datasets, published on Hugging Face (see `README.md`).

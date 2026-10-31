@@ -1,0 +1,167 @@
+{
+ "kitchens": {
+  "test-k2-v1": {
+   "by_world": {
+    "canon": 19
+   },
+   "not_yet_tried": 0,
+   "passes": {
+    "1": {
+     "finished": 19,
+     "recovered": 4,
+     "statuses": {
+      "blocked_state": 15,
+      "done": 4
+     },
+     "still_blocked": 15,
+     "targets": 19
+    },
+    "2": {
+     "finished": 15,
+     "recovered": 3,
+     "statuses": {
+      "blocked_state": 12,
+      "done": 3
+     },
+     "still_blocked": 12,
+     "targets": 15
+    },
+    "3": {
+     "finished": 12,
+     "recovered": 1,
+     "statuses": {
+      "blocked_state": 11,
+      "done": 1
+     },
+     "still_blocked": 11,
+     "targets": 12
+    }
+   },
+   "recovered_units": 8,
+   "still_blocked_units": [
+    "357fac8a53803ad59fc3e667122486ed",
+    "3aa4f3ac95b6743e52697cc9aca94614",
+    "40040c436d53fe51cd6a95a2644d16b7",
+    "77b407f75216ff5ca7596fca36d8f2d8",
+    "92aae3ca75ea2d5417a363b78b02a258",
+    "a89ab39eefde8994857dc19ddb096235",
+    "dd3686b90ea70a1f3cfd0e55d6607c4c",
+    "e2e4506b280d4d53c561fd6a25ca69bf",
+    "e62b5afdbe51e4d9513513c9dfc6377d",
+    "ed6962fb8fc2f3a2d8f59fbbe8d5fa87",
+    "f59afe6666417b51dbd77047a207e84c"
+   ],
+   "unique_units_tried": 19
+  },
+  "test-k3-v1": {
+   "by_world": {
+    "canon": 40
+   },
+   "not_yet_tried": 0,
+   "passes": {
+    "1": {
+     "finished": 40,
+     "recovered": 17,
+     "statuses": {
+      "blocked_state": 23,
+      "done": 17
+     },
+     "still_blocked": 23,
+     "targets": 40
+    },
+    "2": {
+     "finished": 23,
+     "recovered": 8,
+     "statuses": {
+      "blocked_state": 15,
+      "done": 8
+     },
+     "still_blocked": 15,
+     "targets": 23
+    },
+    "3": {
+     "finished": 15,
+     "recovered": 4,
+     "statuses": {
+      "blocked_state": 11,
+      "done": 4
+     },
+     "still_blocked": 11,
+     "targets": 15
+    }
+   },
+   "recovered_units": 29,
+   "still_blocked_units": [
+    "1daaf188df01f998538c8508f5847a0b",
+    "2d214a2f28ed8fe0db598c4a5f52d7b8",
+    "5d1ba562c30edbcb5edcd5858f0fe74d",
+    "5da66557f4a0d19a68de246e0a313aeb",
+    "7d103fa5f0248172493b4da370cd2446",
+    "8c04b379427b52bc702d86494741a069",
+    "a2d75b95a5cba240614f3ac7467186d2",
+    "ad715a7715e7902e6a282e1cc2cedb80",
+    "cc9a89701ee5d673df81ba7c060b854f",
+    "eda13bad32abed77c721d76e02875afa",
+    "f0d7fb81c25541405548fd24a8f429b0"
+   ],
+   "unique_units_tried": 40
+  },
+  "test-v1": {
+   "by_world": {
+    "canon": 37,
+    "reloc": 10
+   },
+   "not_yet_tried": 0,
+   "passes": {
+    "1": {
+     "finished": 47,
+     "recovered": 16,
+     "statuses": {
+      "blocked_state": 31,
+      "done": 16
+     },
+     "still_blocked": 31,
+     "targets": 47
+    },
+    "2": {
+     "finished": 31,
+     "recovered": 7,
+     "statuses": {
+      "blocked_state": 24,
+      "done": 7
+     },
+     "still_blocked": 24,
+     "targets": 31
+    },
+    "3": {
+     "finished": 24,
+     "recovered": 10,
+     "statuses": {
+      "blocked_state": 14,
+      "done": 10
+     },
+     "still_blocked": 14,
+     "targets": 24
+    }
+   },
+   "recovered_units": 33,
+   "still_blocked_units": [
+    "04735ef4a55bc611cb867fdd8d969240",
+    "05bf03b6addc8176b8d0fb7ff128c3f9",
+    "1bd42d7a05a641cb1e22ecbc38507a93",
+    "273c32662507071b7fdc0ca5b88fa0d4",
+    "65599c0814df010a515dc2e7460246c8",
+    "71f38185295eb68f981ca59f0f7415c4",
+    "756eb6c64f314c01edb0991b1f344aa9",
+    "76878de50fc600b26be7e9e7480d8bc4",
+    "833ae58a5ecc7129a95c1f4a4571cdbc",
+    "833d7d0bea0fa256152788ac7279bd54",
+    "8fbd9da21ce4a52cba9b24a611874165",
+    "b2456ef779d49298c1888800c3a30fe9",
+    "f7639386a386f7773ddcbfe8566e5326",
+    "fd7e4ef9392b3fa52e5de697b52adf25"
+   ],
+   "unique_units_tried": 47
+  }
+ }
+}

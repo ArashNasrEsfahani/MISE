@@ -1,0 +1,2378 @@
+{
+ "arms": {
+  "G+M": {
+   "per_kitchen": {
+    "K1": {
+     "all_steps_no_goal": 27,
+     "by_class_and_ending": {
+      "misses_end_state / all_steps_no_goal": 27,
+      "misses_end_state / failed_skill_step": 9,
+      "reaches_on_paper / failed_skill_step": 7
+     },
+     "failed_skill_step": 16,
+     "failures": 43,
+     "first_failed_step_causes": {
+      "no_cutting_tool": 3,
+      "not_detected": 3,
+      "retry_exhausted": 10
+     },
+     "kinds": {
+      "broken": 2,
+      "clean": 5,
+      "closed": 3,
+      "empty": 2,
+      "filled": 8,
+      "hot": 1,
+      "in": 13,
+      "off": 6,
+      "on": 6,
+      "sliced": 10
+     },
+     "misses_end_state": 36,
+     "missing_clauses": 56,
+     "no_plan": 0,
+     "not_executed_failures": 0,
+     "preconditions_by_class": {
+      "reaches_on_paper / no_knife": 3
+     },
+     "presentations": 55,
+     "reaches_on_paper": 7,
+     "refused_plan": 0,
+     "rows": [
+      {
+       "class": "misses_end_state",
+       "ending": "failed_skill_step",
+       "first_failed_cause": "retry_exhausted",
+       "instruction": "Boil some water.",
+       "item": "g-l3-boil-water",
+       "lang": "en",
+       "missing": [
+        "Pot filled",
+        "Pot on/in the stove",
+        "the stove knob on"
+       ],
+       "not_checked": [],
+       "plan": "go_to Kettle ; toggle_on Kettle",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-boil-water:en"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "failed_skill_step",
+       "first_failed_cause": "retry_exhausted",
+       "instruction": "کمی آب بجوشان.",
+       "item": "g-l3-boil-water",
+       "lang": "fa",
+       "missing": [
+        "Pot filled",
+        "Pot on/in the stove",
+        "the stove knob on"
+       ],
+       "not_checked": [],
+       "plan": "fill Kettle water ; heat Kettle",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-boil-water:fa"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "all_steps_no_goal",
+       "first_failed_cause": null,
+       "instruction": "I want a cup of water chilling in the fridge.",
+       "item": "g-l3-chilled-water",
+       "lang": "en",
+       "missing": [
+        "Cup filled"
+       ],
+       "not_checked": [],
+       "plan": "pickup Cup ; go_to Fridge ; put_in Fridge ; close Fridge",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-chilled-water:en"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "failed_skill_step",
+       "first_failed_cause": "retry_exhausted",
+       "instruction": "یک فنجان آب می‌خواهم که در یخچال خنک شود.",
+       "item": "g-l3-chilled-water",
+       "lang": "fa",
+       "missing": [
+        "Cup filled",
+        "the fridge closed"
+       ],
+       "not_checked": [],
+       "plan": "open Fridge ; pickup Cup ; go_to Fridge ; empty Cup ; put_in Fridge",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-chilled-water:fa"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "failed_skill_step",
+       "first_failed_cause": "retry_exhausted",
+       "instruction": "Make me a coffee.",
+       "item": "g-l3-coffee",
+       "lang": "en",
+       "missing": [
+        "Mug on/in the coffee machine"
+       ],
+       "not_checked": [],
+       "plan": "go_to CoffeeMachine ; toggle_on CoffeeMachine ; pick_and_place PaperTowelRoll Mug ; heat CoffeeMachine",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-coffee:en"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "all_steps_no_goal",
+       "first_failed_cause": null,
+       "instruction": "برایم قهوه درست کن.",
+       "item": "g-l3-coffee",
+       "lang": "fa",
+       "missing": [
+        "Mug on/in the coffee machine"
+       ],
+       "not_checked": [],
+       "plan": "go_to CoffeeMachine ; toggle_on CoffeeMachine",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-coffee:fa"
+      },
+      {
+       "class": "reaches_on_paper",
+       "ending": "failed_skill_step",
+       "first_failed_cause": "not_detected",
+       "instruction": "Clean up the cookware after dinner.",
+       "item": "g-l3-cookware",
+       "lang": "en",
+       "missing": [],
+       "not_checked": [],
+       "plan": "pickup Pan ; wash Pan ; pick_and_place Pan SinkBasin ; pickup Pot ; wash Pot ; pick_and_place Pot SinkBasin",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-cookware:en"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "all_steps_no_goal",
+       "first_failed_cause": null,
+       "instruction": "بعد از شام ظرف‌های پخت‌وپز را تمیز کن.",
+       "item": "g-l3-cookware",
+       "lang": "fa",
+       "missing": [
+        "Pan clean"
+       ],
+       "not_checked": [],
+       "plan": "search_for Pot ; wash Pot",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-cookware:fa"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "all_steps_no_goal",
+       "first_failed_cause": null,
+       "instruction": "The cups are dirty. Take care of them.",
+       "item": "g-l3-dirty-cups",
+       "lang": "en",
+       "missing": [
+        "Mug clean"
+       ],
+       "not_checked": [],
+       "plan": "search_for Cup ; pickup Cup ; wash Cup",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-dirty-cups:en"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "all_steps_no_goal",
+       "first_failed_cause": null,
+       "instruction": "لیوان و فنجان کثیف‌اند؛ رسیدگی کن.",
+       "item": "g-l3-dirty-cups",
+       "lang": "fa",
+       "missing": [
+        "Cup clean"
+       ],
+       "not_checked": [],
+       "plan": "pickup Mug ; wash Mug",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-dirty-cups:fa"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "all_steps_no_goal",
+       "first_failed_cause": null,
+       "instruction": "Do the dishes.",
+       "item": "g-l3-dishes",
+       "lang": "en",
+       "missing": [
+        "Plate clean"
+       ],
+       "not_checked": [],
+       "plan": "pickup Bowl ; wash Bowl",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-dishes:en"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "all_steps_no_goal",
+       "first_failed_cause": null,
+       "instruction": "ظرف‌ها را بشوی.",
+       "item": "g-l3-dishes",
+       "lang": "fa",
+       "missing": [
+        "Plate clean"
+       ],
+       "not_checked": [],
+       "plan": "go_to SinkBasin ; wash Bowl",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-dishes:fa"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "all_steps_no_goal",
+       "first_failed_cause": null,
+       "instruction": "Someone left the fridge open and the water running.",
+       "item": "g-l3-fridge-and-water",
+       "lang": "en",
+       "missing": [
+        "the fridge closed"
+       ],
+       "not_checked": [],
+       "plan": "open Fridge ; toggle_off Faucet",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-fridge-and-water:en"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "all_steps_no_goal",
+       "first_failed_cause": null,
+       "instruction": "یک نفر در یخچال را باز و شیر آب را باز گذاشته است.",
+       "item": "g-l3-fridge-and-water",
+       "lang": "fa",
+       "missing": [
+        "the fridge closed",
+        "the faucet off"
+       ],
+       "not_checked": [],
+       "plan": "open Fridge ; toggle_on Faucet",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-fridge-and-water:fa"
+      },
+      {
+       "class": "reaches_on_paper",
+       "ending": "failed_skill_step",
+       "first_failed_cause": "retry_exhausted",
+       "instruction": "I feel like eating a hot tomato.",
+       "item": "g-l3-hot-tomato",
+       "lang": "en",
+       "missing": [],
+       "not_checked": [],
+       "plan": "heat Tomato",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-hot-tomato:en"
+      },
+      {
+       "class": "reaches_on_paper",
+       "ending": "failed_skill_step",
+       "first_failed_cause": "retry_exhausted",
+       "instruction": "هوس گوجه‌فرنگی داغ کرده‌ام.",
+       "item": "g-l3-hot-tomato",
+       "lang": "fa",
+       "missing": [],
+       "not_checked": [],
+       "plan": "heat Tomato",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-hot-tomato:fa"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "all_steps_no_goal",
+       "first_failed_cause": null,
+       "instruction": "We are leaving the house. Make the kitchen safe.",
+       "item": "g-l3-leaving-house",
+       "lang": "en",
+       "missing": [
+        "the stove knob off",
+        "the faucet off"
+       ],
+       "not_checked": [],
+       "plan": "close_all Cabinet ; toggle_off CoffeeMachine ; toggle_off LightSwitch",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-leaving-house:en"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "all_steps_no_goal",
+       "first_failed_cause": null,
+       "instruction": "داریم از خانه بیرون می‌رویم؛ آشپزخانه را ایمن کن.",
+       "item": "g-l3-leaving-house",
+       "lang": "fa",
+       "missing": [
+        "the stove knob off",
+        "the faucet off"
+       ],
+       "not_checked": [],
+       "plan": "close_all Cabinet",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-leaving-house:fa"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "all_steps_no_goal",
+       "first_failed_cause": null,
+       "instruction": "The potato and the apple are both past their best.",
+       "item": "g-l3-old-produce",
+       "lang": "en",
+       "missing": [
+        "Potato on/in the garbage can",
+        "Apple on/in the garbage can"
+       ],
+       "not_checked": [],
+       "plan": "pickup Potato ; drop ; pickup Apple ; drop",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-old-produce:en"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "all_steps_no_goal",
+       "first_failed_cause": null,
+       "instruction": "سیب‌زمینی و سیب هر دو کهنه شده‌اند.",
+       "item": "g-l3-old-produce",
+       "lang": "fa",
+       "missing": [
+        "Potato on/in the garbage can",
+        "Apple on/in the garbage can"
+       ],
+       "not_checked": [],
+       "plan": "pickup Potato ; drop ; pickup Apple",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-old-produce:fa"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "all_steps_no_goal",
+       "first_failed_cause": null,
+       "instruction": "The cup has old water in it.",
+       "item": "g-l3-old-water",
+       "lang": "en",
+       "missing": [
+        "Cup empty"
+       ],
+       "not_checked": [],
+       "plan": "pickup Cup",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-old-water:en"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "all_steps_no_goal",
+       "first_failed_cause": null,
+       "instruction": "I need a cracked egg for the omelette.",
+       "item": "g-l3-omelette-egg",
+       "lang": "en",
+       "missing": [
+        "Egg broken"
+       ],
+       "not_checked": [],
+       "plan": "search_for Egg",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-omelette-egg:en"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "all_steps_no_goal",
+       "first_failed_cause": null,
+       "instruction": "برای املت یک تخم‌مرغ شکسته لازم دارم.",
+       "item": "g-l3-omelette-egg",
+       "lang": "fa",
+       "missing": [
+        "Egg broken"
+       ],
+       "not_checked": [],
+       "plan": "pickup Egg ; cook Egg",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-omelette-egg:fa"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "failed_skill_step",
+       "first_failed_cause": "retry_exhausted",
+       "instruction": "Get a pan heating on the stove.",
+       "item": "g-l3-pan-heating",
+       "lang": "en",
+       "missing": [
+        "Pan on/in the stove",
+        "the stove knob on"
+       ],
+       "not_checked": [],
+       "plan": "search_for Pan ; pickup Pan ; go_to StoveBurner ; cook Pan",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-pan-heating:en"
+      },
+      {
+       "class": "reaches_on_paper",
+       "ending": "failed_skill_step",
+       "first_failed_cause": "no_cutting_tool",
+       "instruction": "The potato has to be in pieces before I can fry it.",
+       "item": "g-l3-potato-for-frying",
+       "lang": "en",
+       "missing": [],
+       "not_checked": [],
+       "plan": "pickup Potato ; slice Potato",
+       "precondition_problems": [
+        "no_knife"
+       ],
+       "pres": "canon:g-l3-potato-for-frying:en"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "failed_skill_step",
+       "first_failed_cause": "not_detected",
+       "instruction": "Prepare the ingredients for a sandwich.",
+       "item": "g-l3-sandwich-prep",
+       "lang": "en",
+       "missing": [
+        "Bread sliced",
+        "Tomato sliced",
+        "Lettuce sliced"
+       ],
+       "not_checked": [],
+       "plan": "pickup Bread ; pick_and_place Bread Plate",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-sandwich-prep:en"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "failed_skill_step",
+       "first_failed_cause": "not_detected",
+       "instruction": "مواد لازم برای ساندویچ را آماده کن.",
+       "item": "g-l3-sandwich-prep",
+       "lang": "fa",
+       "missing": [
+        "Bread sliced",
+        "Tomato sliced",
+        "Lettuce sliced"
+       ],
+       "not_checked": [],
+       "plan": "pickup Bread ; pick_and_place Bread Plate",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-sandwich-prep:fa"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "failed_skill_step",
+       "first_failed_cause": "retry_exhausted",
+       "instruction": "در مصرف برق صرفه‌جویی کن؛ مطمئن شو هیچ وسیله‌ای روشن نمانده است.",
+       "item": "g-l3-save-power",
+       "lang": "fa",
+       "missing": [
+        "the toaster off"
+       ],
+       "not_checked": [],
+       "plan": "toggle_off CoffeeMachine ; toggle_off LightSwitch ; toggle_off StoveBurner ; toggle_off StoveKnob",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-save-power:fa"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "all_steps_no_goal",
+       "first_failed_cause": null,
+       "instruction": "Tidy the seasonings away into a cabinet.",
+       "item": "g-l3-seasoning-away",
+       "lang": "en",
+       "missing": [
+        "SaltShaker on/in a cabinet",
+        "PepperShaker on/in a cabinet"
+       ],
+       "not_checked": [],
+       "plan": "close_all Cabinet",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-seasoning-away:en"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "all_steps_no_goal",
+       "first_failed_cause": null,
+       "instruction": "ادویه‌ها را مرتب داخل کابینت بگذار.",
+       "item": "g-l3-seasoning-away",
+       "lang": "fa",
+       "missing": [
+        "SaltShaker on/in a cabinet"
+       ],
+       "not_checked": [],
+       "plan": "pickup PepperShaker ; pick_and_place PepperShaker Cabinet",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-seasoning-away:fa"
+      },
+      {
+       "class": "reaches_on_paper",
+       "ending": "failed_skill_step",
+       "first_failed_cause": "retry_exhausted",
+       "instruction": "شام، سیب‌زمینی پخته در کاسه است.",
+       "item": "g-l3-serve-cooked-potato",
+       "lang": "fa",
+       "missing": [],
+       "not_checked": [],
+       "plan": "go_to Bowl ; pickup Potato ; cook Potato ; put_in Bowl",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-serve-cooked-potato:fa"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "all_steps_no_goal",
+       "first_failed_cause": null,
+       "instruction": "The lettuce is too big to eat like this.",
+       "item": "g-l3-shred-lettuce",
+       "lang": "en",
+       "missing": [
+        "Lettuce sliced"
+       ],
+       "not_checked": [],
+       "plan": "pickup Lettuce",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-shred-lettuce:en"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "all_steps_no_goal",
+       "first_failed_cause": null,
+       "instruction": "کاهو این‌طوری برای خوردن زیادی بزرگ است.",
+       "item": "g-l3-shred-lettuce",
+       "lang": "fa",
+       "missing": [
+        "Lettuce sliced"
+       ],
+       "not_checked": [],
+       "plan": "pickup Lettuce",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-shred-lettuce:fa"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "failed_skill_step",
+       "first_failed_cause": "retry_exhausted",
+       "instruction": "This coffee has gone cold and stale. Get rid of it.",
+       "item": "g-l3-stale-coffee",
+       "lang": "en",
+       "missing": [
+        "Mug empty"
+       ],
+       "not_checked": [],
+       "plan": "search_for CoffeeMachine ; pickup CoffeeMachine ; clean CoffeeMachine",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-stale-coffee:en"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "all_steps_no_goal",
+       "first_failed_cause": null,
+       "instruction": "Get the kettle going for tea.",
+       "item": "g-l3-tea-kettle",
+       "lang": "en",
+       "missing": [
+        "Kettle filled",
+        "Kettle on/in the stove",
+        "the stove knob on"
+       ],
+       "not_checked": [],
+       "plan": "pickup Kettle",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-tea-kettle:en"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "all_steps_no_goal",
+       "first_failed_cause": null,
+       "instruction": "کتری را برای چای آماده کن و روی اجاق بگذار تا جوش بیاید.",
+       "item": "g-l3-tea-kettle",
+       "lang": "fa",
+       "missing": [
+        "Kettle filled",
+        "the stove knob on"
+       ],
+       "not_checked": [],
+       "plan": "pickup Kettle ; go_to StoveBurner ; put_in StoveBurner",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-tea-kettle:fa"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "all_steps_no_goal",
+       "first_failed_cause": null,
+       "instruction": "I'm thirsty. Bring me a cup of water.",
+       "item": "g-l3-thirsty",
+       "lang": "en",
+       "missing": [
+        "Cup filled"
+       ],
+       "not_checked": [],
+       "plan": "search_for Cup ; pickup Cup",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-thirsty:en"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "all_steps_no_goal",
+       "first_failed_cause": null,
+       "instruction": "تشنه‌ام؛ یک فنجان آب برایم بیاور.",
+       "item": "g-l3-thirsty",
+       "lang": "fa",
+       "missing": [
+        "Cup filled"
+       ],
+       "not_checked": [],
+       "plan": "search_for Cup ; pickup Cup",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-thirsty:fa"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "all_steps_no_goal",
+       "first_failed_cause": null,
+       "instruction": "Make some toast.",
+       "item": "g-l3-toast",
+       "lang": "en",
+       "missing": [
+        "Bread sliced"
+       ],
+       "not_checked": [],
+       "plan": "go_to Toaster ; toggle_on Toaster",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-toast:en"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "all_steps_no_goal",
+       "first_failed_cause": null,
+       "instruction": "نان تست درست کن.",
+       "item": "g-l3-toast",
+       "lang": "fa",
+       "missing": [
+        "Bread sliced",
+        "the toaster on"
+       ],
+       "not_checked": [],
+       "plan": "pickup Bread ; cook Bread",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-toast:fa"
+      },
+      {
+       "class": "reaches_on_paper",
+       "ending": "failed_skill_step",
+       "first_failed_cause": "no_cutting_tool",
+       "instruction": "Get the tomato ready for a salad.",
+       "item": "g-l3-tomato-for-salad",
+       "lang": "en",
+       "missing": [],
+       "not_checked": [],
+       "plan": "pickup Tomato ; slice Tomato",
+       "precondition_problems": [
+        "no_knife"
+       ],
+       "pres": "canon:g-l3-tomato-for-salad:en"
+      },
+      {
+       "class": "reaches_on_paper",
+       "ending": "failed_skill_step",
+       "first_failed_cause": "no_cutting_tool",
+       "instruction": "گوجه‌فرنگی را برای سالاد آماده کن.",
+       "item": "g-l3-tomato-for-salad",
+       "lang": "fa",
+       "missing": [],
+       "not_checked": [],
+       "plan": "pickup Tomato ; slice Tomato",
+       "precondition_problems": [
+        "no_knife"
+       ],
+       "pres": "canon:g-l3-tomato-for-salad:fa"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "all_steps_no_goal",
+       "first_failed_cause": null,
+       "instruction": "The apple is too cold to eat. Take the chill off it.",
+       "item": "g-l3-warm-apple",
+       "lang": "en",
+       "missing": [
+        "Apple hot"
+       ],
+       "not_checked": [],
+       "plan": "pick_and_place Apple Fridge ; close Fridge",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-warm-apple:en"
+      }
+     ],
+     "successes_walk_says_missing": 0
+    },
+    "K2": {
+     "all_steps_no_goal": 15,
+     "by_class_and_ending": {
+      "misses_end_state / all_steps_no_goal": 15,
+      "misses_end_state / failed_skill_step": 6,
+      "reaches_on_paper / failed_skill_step": 3
+     },
+     "failed_skill_step": 9,
+     "failures": 24,
+     "first_failed_step_causes": {
+      "no_cutting_tool": 3,
+      "retry_exhausted": 6
+     },
+     "kinds": {
+      "broken": 1,
+      "clean": 2,
+      "closed": 1,
+      "empty": 3,
+      "filled": 3,
+      "hot": 1,
+      "in": 3,
+      "off": 2,
+      "on": 3,
+      "sliced": 10
+     },
+     "misses_end_state": 21,
+     "missing_clauses": 29,
+     "no_plan": 0,
+     "not_executed_failures": 0,
+     "preconditions_by_class": {
+      "misses_end_state / no_knife": 1,
+      "reaches_on_paper / no_knife": 2
+     },
+     "presentations": 36,
+     "reaches_on_paper": 3,
+     "refused_plan": 0,
+     "rows": [
+      {
+       "class": "misses_end_state",
+       "ending": "failed_skill_step",
+       "first_failed_cause": "retry_exhausted",
+       "instruction": "Boil some water.",
+       "item": "g-l3-boil-water",
+       "lang": "en",
+       "missing": [
+        "Pot filled",
+        "the stove knob on"
+       ],
+       "not_checked": [],
+       "plan": "go_to Kettle ; toggle_on Kettle",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-boil-water:en"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "failed_skill_step",
+       "first_failed_cause": "retry_exhausted",
+       "instruction": "کمی آب بجوشان.",
+       "item": "g-l3-boil-water",
+       "lang": "fa",
+       "missing": [
+        "Pot on/in the stove",
+        "the stove knob on"
+       ],
+       "not_checked": [],
+       "plan": "fill Pot water ; heat Pot",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-boil-water:fa"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "all_steps_no_goal",
+       "first_failed_cause": null,
+       "instruction": "The cups are dirty. Take care of them.",
+       "item": "g-l3-dirty-cups",
+       "lang": "en",
+       "missing": [
+        "Mug clean"
+       ],
+       "not_checked": [],
+       "plan": "search_for Cup ; pickup Cup ; wash Cup",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-dirty-cups:en"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "all_steps_no_goal",
+       "first_failed_cause": null,
+       "instruction": "لیوان و فنجان کثیف‌اند؛ رسیدگی کن.",
+       "item": "g-l3-dirty-cups",
+       "lang": "fa",
+       "missing": [
+        "Cup clean"
+       ],
+       "not_checked": [],
+       "plan": "pickup Mug ; wash Mug",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-dirty-cups:fa"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "all_steps_no_goal",
+       "first_failed_cause": null,
+       "instruction": "Someone left the fridge open and the water running.",
+       "item": "g-l3-fridge-and-water",
+       "lang": "en",
+       "missing": [
+        "the faucet off"
+       ],
+       "not_checked": [],
+       "plan": "open Fridge ; close Fridge",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-fridge-and-water:en"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "all_steps_no_goal",
+       "first_failed_cause": null,
+       "instruction": "یک نفر در یخچال را باز و شیر آب را باز گذاشته است.",
+       "item": "g-l3-fridge-and-water",
+       "lang": "fa",
+       "missing": [
+        "the fridge closed",
+        "the faucet off"
+       ],
+       "not_checked": [],
+       "plan": "open Fridge ; toggle_on Faucet",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-fridge-and-water:fa"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "failed_skill_step",
+       "first_failed_cause": "retry_exhausted",
+       "instruction": "The potato and the apple are both past their best.",
+       "item": "g-l3-old-produce",
+       "lang": "en",
+       "missing": [
+        "Potato on/in the garbage can",
+        "Apple on/in the garbage can"
+       ],
+       "not_checked": [],
+       "plan": "pickup Potato ; drop ; pickup Apple ; drop",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-old-produce:en"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "all_steps_no_goal",
+       "first_failed_cause": null,
+       "instruction": "The cup has old water in it.",
+       "item": "g-l3-old-water",
+       "lang": "en",
+       "missing": [
+        "Cup empty"
+       ],
+       "not_checked": [],
+       "plan": "pickup Cup",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-old-water:en"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "all_steps_no_goal",
+       "first_failed_cause": null,
+       "instruction": "داخل فنجان آب مانده است.",
+       "item": "g-l3-old-water",
+       "lang": "fa",
+       "missing": [
+        "Cup empty"
+       ],
+       "not_checked": [],
+       "plan": "go_to Mug ; empty Mug",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-old-water:fa"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "all_steps_no_goal",
+       "first_failed_cause": null,
+       "instruction": "I need a cracked egg for the omelette.",
+       "item": "g-l3-omelette-egg",
+       "lang": "en",
+       "missing": [
+        "Egg broken"
+       ],
+       "not_checked": [],
+       "plan": "pickup Egg",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-omelette-egg:en"
+      },
+      {
+       "class": "reaches_on_paper",
+       "ending": "failed_skill_step",
+       "first_failed_cause": "retry_exhausted",
+       "instruction": "برای املت یک تخم‌مرغ شکسته لازم دارم.",
+       "item": "g-l3-omelette-egg",
+       "lang": "fa",
+       "missing": [],
+       "not_checked": [],
+       "plan": "pickup Egg ; break Egg",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-omelette-egg:fa"
+      },
+      {
+       "class": "reaches_on_paper",
+       "ending": "failed_skill_step",
+       "first_failed_cause": "no_cutting_tool",
+       "instruction": "The potato has to be in pieces before I can fry it.",
+       "item": "g-l3-potato-for-frying",
+       "lang": "en",
+       "missing": [],
+       "not_checked": [],
+       "plan": "pickup Potato ; slice Potato",
+       "precondition_problems": [
+        "no_knife"
+       ],
+       "pres": "canon:g-l3-potato-for-frying:en"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "all_steps_no_goal",
+       "first_failed_cause": null,
+       "instruction": "Prepare the ingredients for a sandwich.",
+       "item": "g-l3-sandwich-prep",
+       "lang": "en",
+       "missing": [
+        "Bread sliced",
+        "Tomato sliced",
+        "Lettuce sliced"
+       ],
+       "not_checked": [],
+       "plan": "pickup Bread ; pick_and_place Bread Plate",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-sandwich-prep:en"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "failed_skill_step",
+       "first_failed_cause": "no_cutting_tool",
+       "instruction": "مواد لازم برای ساندویچ را آماده کن.",
+       "item": "g-l3-sandwich-prep",
+       "lang": "fa",
+       "missing": [
+        "Tomato sliced",
+        "Lettuce sliced"
+       ],
+       "not_checked": [],
+       "plan": "pickup Bread ; slice Bread",
+       "precondition_problems": [
+        "no_knife"
+       ],
+       "pres": "canon:g-l3-sandwich-prep:fa"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "all_steps_no_goal",
+       "first_failed_cause": null,
+       "instruction": "The lettuce is too big to eat like this.",
+       "item": "g-l3-shred-lettuce",
+       "lang": "en",
+       "missing": [
+        "Lettuce sliced"
+       ],
+       "not_checked": [],
+       "plan": "pickup Lettuce",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-shred-lettuce:en"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "all_steps_no_goal",
+       "first_failed_cause": null,
+       "instruction": "کاهو این‌طوری برای خوردن زیادی بزرگ است.",
+       "item": "g-l3-shred-lettuce",
+       "lang": "fa",
+       "missing": [
+        "Lettuce sliced"
+       ],
+       "not_checked": [],
+       "plan": "pickup Lettuce",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-shred-lettuce:fa"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "failed_skill_step",
+       "first_failed_cause": "retry_exhausted",
+       "instruction": "This coffee has gone cold and stale. Get rid of it.",
+       "item": "g-l3-stale-coffee",
+       "lang": "en",
+       "missing": [
+        "Mug empty"
+       ],
+       "not_checked": [],
+       "plan": "search_for Mug ; pickup Mug ; wash Mug",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-stale-coffee:en"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "all_steps_no_goal",
+       "first_failed_cause": null,
+       "instruction": "I'm thirsty. Bring me a cup of water.",
+       "item": "g-l3-thirsty",
+       "lang": "en",
+       "missing": [
+        "Cup filled"
+       ],
+       "not_checked": [],
+       "plan": "search_for Cup ; pickup Cup",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-thirsty:en"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "all_steps_no_goal",
+       "first_failed_cause": null,
+       "instruction": "تشنه‌ام؛ یک فنجان آب برایم بیاور.",
+       "item": "g-l3-thirsty",
+       "lang": "fa",
+       "missing": [
+        "Cup filled"
+       ],
+       "not_checked": [],
+       "plan": "search_for Cup ; pickup Cup",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-thirsty:fa"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "failed_skill_step",
+       "first_failed_cause": "retry_exhausted",
+       "instruction": "Make some toast.",
+       "item": "g-l3-toast",
+       "lang": "en",
+       "missing": [
+        "Bread sliced"
+       ],
+       "not_checked": [],
+       "plan": "go_to Toaster ; toggle_on Toaster ; pick_and_place Bread Toaster ; cook Bread",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-toast:en"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "all_steps_no_goal",
+       "first_failed_cause": null,
+       "instruction": "نان تست درست کن.",
+       "item": "g-l3-toast",
+       "lang": "fa",
+       "missing": [
+        "Bread sliced",
+        "the toaster on"
+       ],
+       "not_checked": [],
+       "plan": "pickup Bread ; cook Bread",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-toast:fa"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "all_steps_no_goal",
+       "first_failed_cause": null,
+       "instruction": "Get the tomato ready for a salad.",
+       "item": "g-l3-tomato-for-salad",
+       "lang": "en",
+       "missing": [
+        "Tomato sliced"
+       ],
+       "not_checked": [],
+       "plan": "pickup Tomato ; pick_and_place Tomato Plate",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-tomato-for-salad:en"
+      },
+      {
+       "class": "reaches_on_paper",
+       "ending": "failed_skill_step",
+       "first_failed_cause": "no_cutting_tool",
+       "instruction": "گوجه‌فرنگی را برای سالاد آماده کن.",
+       "item": "g-l3-tomato-for-salad",
+       "lang": "fa",
+       "missing": [],
+       "not_checked": [],
+       "plan": "pickup Tomato ; slice Tomato",
+       "precondition_problems": [
+        "no_knife"
+       ],
+       "pres": "canon:g-l3-tomato-for-salad:fa"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "all_steps_no_goal",
+       "first_failed_cause": null,
+       "instruction": "The apple is too cold to eat. Take the chill off it.",
+       "item": "g-l3-warm-apple",
+       "lang": "en",
+       "missing": [
+        "Apple hot"
+       ],
+       "not_checked": [],
+       "plan": "pickup Apple ; pick_and_place Apple Fridge ; close Fridge",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-warm-apple:en"
+      }
+     ],
+     "successes_walk_says_missing": 0
+    },
+    "K3": {
+     "all_steps_no_goal": 15,
+     "by_class_and_ending": {
+      "misses_end_state / all_steps_no_goal": 15,
+      "misses_end_state / failed_skill_step": 7,
+      "no_plan / refused_plan": 1,
+      "reaches_on_paper / failed_skill_step": 5
+     },
+     "failed_skill_step": 12,
+     "failures": 28,
+     "first_failed_step_causes": {
+      "no_cutting_tool": 3,
+      "not_detected": 1,
+      "retry_exhausted": 8
+     },
+     "kinds": {
+      "broken": 1,
+      "closed": 3,
+      "cooked": 1,
+      "empty": 1,
+      "filled": 5,
+      "hot": 1,
+      "in": 7,
+      "off": 7,
+      "on": 3,
+      "sliced": 4
+     },
+     "misses_end_state": 22,
+     "missing_clauses": 33,
+     "no_plan": 1,
+     "not_executed_failures": 1,
+     "preconditions_by_class": {
+      "reaches_on_paper / no_knife": 3
+     },
+     "presentations": 38,
+     "reaches_on_paper": 5,
+     "refused_plan": 1,
+     "rows": [
+      {
+       "class": "misses_end_state",
+       "ending": "failed_skill_step",
+       "first_failed_cause": "retry_exhausted",
+       "instruction": "Boil some water.",
+       "item": "g-l3-boil-water",
+       "lang": "en",
+       "missing": [
+        "Pot filled",
+        "the stove knob on"
+       ],
+       "not_checked": [],
+       "plan": "go_to Kettle ; toggle_on Kettle",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-boil-water:en"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "failed_skill_step",
+       "first_failed_cause": "retry_exhausted",
+       "instruction": "کمی آب بجوشان.",
+       "item": "g-l3-boil-water",
+       "lang": "fa",
+       "missing": [
+        "Pot filled",
+        "the stove knob on"
+       ],
+       "not_checked": [],
+       "plan": "fill Kettle water ; heat Kettle",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-boil-water:fa"
+      },
+      {
+       "class": "reaches_on_paper",
+       "ending": "failed_skill_step",
+       "first_failed_cause": "retry_exhausted",
+       "instruction": "I want a cup of water chilling in the fridge.",
+       "item": "g-l3-chilled-water",
+       "lang": "en",
+       "missing": [],
+       "not_checked": [],
+       "plan": "pickup Cup ; go_to Fridge ; open Fridge ; fill Cup water ; pick_and_place Cup Fridge ; close Fridge",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-chilled-water:en"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "failed_skill_step",
+       "first_failed_cause": "retry_exhausted",
+       "instruction": "یک فنجان آب می‌خواهم که در یخچال خنک شود.",
+       "item": "g-l3-chilled-water",
+       "lang": "fa",
+       "missing": [
+        "Cup filled",
+        "Cup on/in the fridge",
+        "the fridge closed"
+       ],
+       "not_checked": [],
+       "plan": "open Fridge ; pickup Cup ; go_to Fridge ; empty Cup",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-chilled-water:fa"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "all_steps_no_goal",
+       "first_failed_cause": null,
+       "instruction": "Someone left the fridge open and the water running.",
+       "item": "g-l3-fridge-and-water",
+       "lang": "en",
+       "missing": [
+        "the fridge closed"
+       ],
+       "not_checked": [],
+       "plan": "open Fridge ; toggle_off Faucet",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-fridge-and-water:en"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "all_steps_no_goal",
+       "first_failed_cause": null,
+       "instruction": "یک نفر در یخچال را باز و شیر آب را باز گذاشته است.",
+       "item": "g-l3-fridge-and-water",
+       "lang": "fa",
+       "missing": [
+        "the fridge closed",
+        "the faucet off"
+       ],
+       "not_checked": [],
+       "plan": "open Fridge ; toggle_on Faucet",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-fridge-and-water:fa"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "all_steps_no_goal",
+       "first_failed_cause": null,
+       "instruction": "We are leaving the house. Make the kitchen safe.",
+       "item": "g-l3-leaving-house",
+       "lang": "en",
+       "missing": [
+        "the stove knob off",
+        "the faucet off"
+       ],
+       "not_checked": [],
+       "plan": "close_all Cabinet",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-leaving-house:en"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "all_steps_no_goal",
+       "first_failed_cause": null,
+       "instruction": "داریم از خانه بیرون می‌رویم؛ آشپزخانه را ایمن کن.",
+       "item": "g-l3-leaving-house",
+       "lang": "fa",
+       "missing": [
+        "the stove knob off",
+        "the faucet off"
+       ],
+       "not_checked": [],
+       "plan": "close_all Cabinet",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-leaving-house:fa"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "failed_skill_step",
+       "first_failed_cause": "retry_exhausted",
+       "instruction": "The potato and the apple are both past their best.",
+       "item": "g-l3-old-produce",
+       "lang": "en",
+       "missing": [
+        "Potato on/in the garbage can",
+        "Apple on/in the garbage can"
+       ],
+       "not_checked": [],
+       "plan": "pickup Potato ; drop ; pickup Apple ; drop",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-old-produce:en"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "failed_skill_step",
+       "first_failed_cause": "retry_exhausted",
+       "instruction": "سیب‌زمینی و سیب هر دو کهنه شده‌اند.",
+       "item": "g-l3-old-produce",
+       "lang": "fa",
+       "missing": [
+        "Potato on/in the garbage can",
+        "Apple on/in the garbage can"
+       ],
+       "not_checked": [],
+       "plan": "pickup Potato ; drop ; pickup Apple",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-old-produce:fa"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "all_steps_no_goal",
+       "first_failed_cause": null,
+       "instruction": "داخل فنجان آب مانده است.",
+       "item": "g-l3-old-water",
+       "lang": "fa",
+       "missing": [
+        "Cup empty"
+       ],
+       "not_checked": [],
+       "plan": "empty Cup ; fill Cup water",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-old-water:fa"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "failed_skill_step",
+       "first_failed_cause": "not_detected",
+       "instruction": "I need a cracked egg for the omelette.",
+       "item": "g-l3-omelette-egg",
+       "lang": "en",
+       "missing": [
+        "Egg broken"
+       ],
+       "not_checked": [],
+       "plan": "search_for Egg",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-omelette-egg:en"
+      },
+      {
+       "class": "reaches_on_paper",
+       "ending": "failed_skill_step",
+       "first_failed_cause": "retry_exhausted",
+       "instruction": "برای املت یک تخم‌مرغ شکسته لازم دارم.",
+       "item": "g-l3-omelette-egg",
+       "lang": "fa",
+       "missing": [],
+       "not_checked": [],
+       "plan": "pickup Egg ; break Egg",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-omelette-egg:fa"
+      },
+      {
+       "class": "reaches_on_paper",
+       "ending": "failed_skill_step",
+       "first_failed_cause": "no_cutting_tool",
+       "instruction": "The potato has to be in pieces before I can fry it.",
+       "item": "g-l3-potato-for-frying",
+       "lang": "en",
+       "missing": [],
+       "not_checked": [],
+       "plan": "pickup Potato ; slice Potato",
+       "precondition_problems": [
+        "no_knife"
+       ],
+       "pres": "canon:g-l3-potato-for-frying:en"
+      },
+      {
+       "class": "no_plan",
+       "ending": "refused_plan",
+       "first_failed_cause": null,
+       "instruction": "سیب‌زمینی باید قبل از سرخ‌کردن تکه‌تکه شود.",
+       "item": "g-l3-potato-for-frying",
+       "lang": "fa",
+       "missing": [],
+       "not_checked": [],
+       "plan": "",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-potato-for-frying:fa"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "all_steps_no_goal",
+       "first_failed_cause": null,
+       "instruction": "Save electricity. Make sure no appliance has been left on.",
+       "item": "g-l3-save-power",
+       "lang": "en",
+       "missing": [
+        "the toaster off"
+       ],
+       "not_checked": [],
+       "plan": "toggle_off CoffeeMachine ; toggle_off LightSwitch",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-save-power:en"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "all_steps_no_goal",
+       "first_failed_cause": null,
+       "instruction": "در مصرف برق صرفه‌جویی کن؛ مطمئن شو هیچ وسیله‌ای روشن نمانده است.",
+       "item": "g-l3-save-power",
+       "lang": "fa",
+       "missing": [
+        "the toaster off"
+       ],
+       "not_checked": [],
+       "plan": "toggle_off CoffeeMachine ; toggle_off LightSwitch",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-save-power:fa"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "all_steps_no_goal",
+       "first_failed_cause": null,
+       "instruction": "Tidy the seasonings away into a cabinet.",
+       "item": "g-l3-seasoning-away",
+       "lang": "en",
+       "missing": [
+        "SaltShaker on/in a cabinet",
+        "PepperShaker on/in a cabinet"
+       ],
+       "not_checked": [],
+       "plan": "close_all Cabinet",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-seasoning-away:en"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "all_steps_no_goal",
+       "first_failed_cause": null,
+       "instruction": "شام، سیب‌زمینی پخته در کاسه است.",
+       "item": "g-l3-serve-cooked-potato",
+       "lang": "fa",
+       "missing": [
+        "Potato cooked"
+       ],
+       "not_checked": [],
+       "plan": "go_to Bowl ; pickup Potato ; pick_and_place Potato Bowl",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-serve-cooked-potato:fa"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "all_steps_no_goal",
+       "first_failed_cause": null,
+       "instruction": "The lettuce is too big to eat like this.",
+       "item": "g-l3-shred-lettuce",
+       "lang": "en",
+       "missing": [
+        "Lettuce sliced"
+       ],
+       "not_checked": [],
+       "plan": "pickup Lettuce",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-shred-lettuce:en"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "all_steps_no_goal",
+       "first_failed_cause": null,
+       "instruction": "کاهو این‌طوری برای خوردن زیادی بزرگ است.",
+       "item": "g-l3-shred-lettuce",
+       "lang": "fa",
+       "missing": [
+        "Lettuce sliced"
+       ],
+       "not_checked": [],
+       "plan": "pickup Lettuce",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-shred-lettuce:fa"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "all_steps_no_goal",
+       "first_failed_cause": null,
+       "instruction": "I'm thirsty. Bring me a cup of water.",
+       "item": "g-l3-thirsty",
+       "lang": "en",
+       "missing": [
+        "Cup filled"
+       ],
+       "not_checked": [],
+       "plan": "search_for Cup ; pickup Cup",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-thirsty:en"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "all_steps_no_goal",
+       "first_failed_cause": null,
+       "instruction": "تشنه‌ام؛ یک فنجان آب برایم بیاور.",
+       "item": "g-l3-thirsty",
+       "lang": "fa",
+       "missing": [
+        "Cup filled"
+       ],
+       "not_checked": [],
+       "plan": "search_for Cup ; pickup Cup",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-thirsty:fa"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "all_steps_no_goal",
+       "first_failed_cause": null,
+       "instruction": "Make some toast.",
+       "item": "g-l3-toast",
+       "lang": "en",
+       "missing": [
+        "Bread sliced"
+       ],
+       "not_checked": [],
+       "plan": "go_to Toaster ; toggle_on Toaster",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-toast:en"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "all_steps_no_goal",
+       "first_failed_cause": null,
+       "instruction": "نان تست درست کن.",
+       "item": "g-l3-toast",
+       "lang": "fa",
+       "missing": [
+        "Bread sliced",
+        "the toaster on"
+       ],
+       "not_checked": [],
+       "plan": "pickup Bread ; cook Bread",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-toast:fa"
+      },
+      {
+       "class": "reaches_on_paper",
+       "ending": "failed_skill_step",
+       "first_failed_cause": "no_cutting_tool",
+       "instruction": "Get the tomato ready for a salad.",
+       "item": "g-l3-tomato-for-salad",
+       "lang": "en",
+       "missing": [],
+       "not_checked": [],
+       "plan": "pickup Tomato ; slice Tomato",
+       "precondition_problems": [
+        "no_knife"
+       ],
+       "pres": "canon:g-l3-tomato-for-salad:en"
+      },
+      {
+       "class": "reaches_on_paper",
+       "ending": "failed_skill_step",
+       "first_failed_cause": "no_cutting_tool",
+       "instruction": "گوجه‌فرنگی را برای سالاد آماده کن.",
+       "item": "g-l3-tomato-for-salad",
+       "lang": "fa",
+       "missing": [],
+       "not_checked": [],
+       "plan": "pickup Tomato ; slice Tomato",
+       "precondition_problems": [
+        "no_knife"
+       ],
+       "pres": "canon:g-l3-tomato-for-salad:fa"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "failed_skill_step",
+       "first_failed_cause": "retry_exhausted",
+       "instruction": "The apple is too cold to eat. Take the chill off it.",
+       "item": "g-l3-warm-apple",
+       "lang": "en",
+       "missing": [
+        "Apple hot"
+       ],
+       "not_checked": [],
+       "plan": "pickup Apple ; pick_and_place Apple Fridge ; close Fridge",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-warm-apple:en"
+      }
+     ],
+     "successes_walk_says_missing": 0
+    }
+   },
+   "pooled": {
+    "all_steps_no_goal": 57,
+    "by_class_and_ending": {
+     "misses_end_state / all_steps_no_goal": 57,
+     "misses_end_state / failed_skill_step": 22,
+     "no_plan / refused_plan": 1,
+     "reaches_on_paper / failed_skill_step": 15
+    },
+    "failed_skill_step": 37,
+    "failures": 95,
+    "first_failed_step_causes": {
+     "no_cutting_tool": 9,
+     "not_detected": 4,
+     "retry_exhausted": 24
+    },
+    "kinds": {
+     "broken": 4,
+     "clean": 7,
+     "closed": 7,
+     "cooked": 1,
+     "empty": 6,
+     "filled": 16,
+     "hot": 3,
+     "in": 23,
+     "off": 15,
+     "on": 12,
+     "sliced": 24
+    },
+    "misses_end_state": 79,
+    "missing_clauses": 118,
+    "no_plan": 1,
+    "not_executed_failures": 1,
+    "preconditions_by_class": {
+     "misses_end_state / no_knife": 1,
+     "reaches_on_paper / no_knife": 8
+    },
+    "presentations": 129,
+    "reaches_on_paper": 15,
+    "refused_plan": 1,
+    "successes_walk_says_missing": 0
+   }
+  },
+  "O+M": {
+   "per_kitchen": {
+    "K1": {
+     "all_steps_no_goal": 4,
+     "by_class_and_ending": {
+      "misses_end_state / all_steps_no_goal": 4,
+      "misses_end_state / failed_skill_step": 2,
+      "reaches_on_paper / failed_skill_step": 5
+     },
+     "failed_skill_step": 7,
+     "failures": 11,
+     "first_failed_step_causes": {
+      "retry_exhausted": 7
+     },
+     "kinds": {
+      "clean": 3,
+      "filled": 2,
+      "in": 2,
+      "on": 1
+     },
+     "misses_end_state": 6,
+     "missing_clauses": 8,
+     "no_plan": 0,
+     "not_executed_failures": 0,
+     "preconditions_by_class": {},
+     "presentations": 55,
+     "reaches_on_paper": 5,
+     "refused_plan": 0,
+     "rows": [
+      {
+       "class": "misses_end_state",
+       "ending": "failed_skill_step",
+       "first_failed_cause": "retry_exhausted",
+       "instruction": "Boil some water.",
+       "item": "g-l3-boil-water",
+       "lang": "en",
+       "missing": [
+        "Pot filled",
+        "Pot on/in the stove"
+       ],
+       "not_checked": [],
+       "plan": "pickup Kettle ; fill Kettle water ; put_in StoveBurner ; toggle_on StoveKnob",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-boil-water:en"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "all_steps_no_goal",
+       "first_failed_cause": null,
+       "instruction": "کمی آب بجوشان.",
+       "item": "g-l3-boil-water",
+       "lang": "fa",
+       "missing": [
+        "Pot filled",
+        "Pot on/in the stove"
+       ],
+       "not_checked": [],
+       "plan": "pick_and_place Kettle StoveBurner ; fill Kettle water ; toggle_on StoveKnob",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-boil-water:fa"
+      },
+      {
+       "class": "reaches_on_paper",
+       "ending": "failed_skill_step",
+       "first_failed_cause": "retry_exhausted",
+       "instruction": "یک فنجان آب می‌خواهم که در یخچال خنک شود.",
+       "item": "g-l3-chilled-water",
+       "lang": "fa",
+       "missing": [],
+       "not_checked": [],
+       "plan": "pickup Cup ; fill Cup water ; put_in Fridge ; close Fridge",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-chilled-water:fa"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "all_steps_no_goal",
+       "first_failed_cause": null,
+       "instruction": "Make me a coffee.",
+       "item": "g-l3-coffee",
+       "lang": "en",
+       "missing": [
+        "the coffee machine on"
+       ],
+       "not_checked": [],
+       "plan": "pick_and_place Mug CoffeeMachine ; toggle_on CoffeeMachine ; fill Mug coffee ; toggle_off CoffeeMachine",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-coffee:en"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "all_steps_no_goal",
+       "first_failed_cause": null,
+       "instruction": "The cups are dirty. Take care of them.",
+       "item": "g-l3-dirty-cups",
+       "lang": "en",
+       "missing": [
+        "Mug clean"
+       ],
+       "not_checked": [],
+       "plan": "search_for Cup ; wash Cup",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-dirty-cups:en"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "failed_skill_step",
+       "first_failed_cause": "retry_exhausted",
+       "instruction": "Do the dishes.",
+       "item": "g-l3-dishes",
+       "lang": "en",
+       "missing": [
+        "Plate clean"
+       ],
+       "not_checked": [],
+       "plan": "wash Bowl ; wash Mug",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-dishes:en"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "all_steps_no_goal",
+       "first_failed_cause": null,
+       "instruction": "ظرف‌ها را بشوی.",
+       "item": "g-l3-dishes",
+       "lang": "fa",
+       "missing": [
+        "Plate clean"
+       ],
+       "not_checked": [],
+       "plan": "wash Bowl ; wash Mug",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-dishes:fa"
+      },
+      {
+       "class": "reaches_on_paper",
+       "ending": "failed_skill_step",
+       "first_failed_cause": "retry_exhausted",
+       "instruction": "I feel like eating a hot tomato.",
+       "item": "g-l3-hot-tomato",
+       "lang": "en",
+       "missing": [],
+       "not_checked": [],
+       "plan": "heat Tomato",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-hot-tomato:en"
+      },
+      {
+       "class": "reaches_on_paper",
+       "ending": "failed_skill_step",
+       "first_failed_cause": "retry_exhausted",
+       "instruction": "هوس گوجه‌فرنگی داغ کرده‌ام.",
+       "item": "g-l3-hot-tomato",
+       "lang": "fa",
+       "missing": [],
+       "not_checked": [],
+       "plan": "heat Tomato",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-hot-tomato:fa"
+      },
+      {
+       "class": "reaches_on_paper",
+       "ending": "failed_skill_step",
+       "first_failed_cause": "retry_exhausted",
+       "instruction": "I'm thirsty. Bring me a cup of water.",
+       "item": "g-l3-thirsty",
+       "lang": "en",
+       "missing": [],
+       "not_checked": [],
+       "plan": "search_for Cup ; pickup Cup ; fill Cup water",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-thirsty:en"
+      },
+      {
+       "class": "reaches_on_paper",
+       "ending": "failed_skill_step",
+       "first_failed_cause": "retry_exhausted",
+       "instruction": "تشنه‌ام؛ یک فنجان آب برایم بیاور.",
+       "item": "g-l3-thirsty",
+       "lang": "fa",
+       "missing": [],
+       "not_checked": [],
+       "plan": "search_for Cup ; pickup Cup ; fill Cup water",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-thirsty:fa"
+      }
+     ],
+     "successes_walk_says_missing": 0
+    },
+    "K2": {
+     "all_steps_no_goal": 1,
+     "by_class_and_ending": {
+      "misses_end_state / all_steps_no_goal": 1,
+      "misses_end_state / failed_skill_step": 1,
+      "reaches_on_paper / failed_skill_step": 3
+     },
+     "failed_skill_step": 4,
+     "failures": 5,
+     "first_failed_step_causes": {
+      "retry_exhausted": 4
+     },
+     "kinds": {
+      "clean": 1,
+      "held": 1
+     },
+     "misses_end_state": 2,
+     "missing_clauses": 2,
+     "no_plan": 0,
+     "not_executed_failures": 0,
+     "preconditions_by_class": {},
+     "presentations": 36,
+     "reaches_on_paper": 3,
+     "refused_plan": 0,
+     "rows": [
+      {
+       "class": "reaches_on_paper",
+       "ending": "failed_skill_step",
+       "first_failed_cause": "retry_exhausted",
+       "instruction": "Boil some water.",
+       "item": "g-l3-boil-water",
+       "lang": "en",
+       "missing": [],
+       "not_checked": [],
+       "plan": "pickup Pot ; fill Pot water ; put_in StoveBurner ; toggle_on StoveKnob",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-boil-water:en"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "all_steps_no_goal",
+       "first_failed_cause": null,
+       "instruction": "The cups are dirty. Take care of them.",
+       "item": "g-l3-dirty-cups",
+       "lang": "en",
+       "missing": [
+        "Mug clean"
+       ],
+       "not_checked": [],
+       "plan": "search_for Cup ; wash Cup",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-dirty-cups:en"
+      },
+      {
+       "class": "reaches_on_paper",
+       "ending": "failed_skill_step",
+       "first_failed_cause": "retry_exhausted",
+       "instruction": "This coffee has gone cold and stale. Get rid of it.",
+       "item": "g-l3-stale-coffee",
+       "lang": "en",
+       "missing": [],
+       "not_checked": [],
+       "plan": "pickup Mug ; empty Mug",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-stale-coffee:en"
+      },
+      {
+       "class": "reaches_on_paper",
+       "ending": "failed_skill_step",
+       "first_failed_cause": "retry_exhausted",
+       "instruction": "I'm thirsty. Bring me a cup of water.",
+       "item": "g-l3-thirsty",
+       "lang": "en",
+       "missing": [],
+       "not_checked": [],
+       "plan": "search_for Cup ; pickup Cup ; fill Cup water",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-thirsty:en"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "failed_skill_step",
+       "first_failed_cause": "retry_exhausted",
+       "instruction": "تشنه‌ام؛ یک فنجان آب برایم بیاور.",
+       "item": "g-l3-thirsty",
+       "lang": "fa",
+       "missing": [
+        "Cup in your hand"
+       ],
+       "not_checked": [],
+       "plan": "search_for Cup ; pickup Cup ; fill Cup water ; put_in DiningTable",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-thirsty:fa"
+      }
+     ],
+     "successes_walk_says_missing": 0
+    },
+    "K3": {
+     "all_steps_no_goal": 0,
+     "by_class_and_ending": {
+      "misses_end_state / failed_skill_step": 5,
+      "reaches_on_paper / failed_skill_step": 2
+     },
+     "failed_skill_step": 7,
+     "failures": 7,
+     "first_failed_step_causes": {
+      "not_detected": 1,
+      "retry_exhausted": 6
+     },
+     "kinds": {
+      "filled": 1,
+      "held": 1,
+      "on": 1,
+      "sliced": 2
+     },
+     "misses_end_state": 5,
+     "missing_clauses": 5,
+     "no_plan": 0,
+     "not_executed_failures": 0,
+     "preconditions_by_class": {},
+     "presentations": 38,
+     "reaches_on_paper": 2,
+     "refused_plan": 0,
+     "rows": [
+      {
+       "class": "misses_end_state",
+       "ending": "failed_skill_step",
+       "first_failed_cause": "retry_exhausted",
+       "instruction": "Boil some water.",
+       "item": "g-l3-boil-water",
+       "lang": "en",
+       "missing": [
+        "the stove knob on"
+       ],
+       "not_checked": [],
+       "plan": "fill Pot water ; pick_and_place Pot StoveBurner ; toggle_on StoveBurner",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-boil-water:en"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "failed_skill_step",
+       "first_failed_cause": "retry_exhausted",
+       "instruction": "کمی آب بجوشان.",
+       "item": "g-l3-boil-water",
+       "lang": "fa",
+       "missing": [
+        "Pot filled"
+       ],
+       "not_checked": [],
+       "plan": "open Kettle ; fill Kettle water ; close Kettle ; pick_and_place Kettle StoveBurner ; toggle_on StoveKnob",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-boil-water:fa"
+      },
+      {
+       "class": "reaches_on_paper",
+       "ending": "failed_skill_step",
+       "first_failed_cause": "retry_exhausted",
+       "instruction": "I need a cracked egg for the omelette.",
+       "item": "g-l3-omelette-egg",
+       "lang": "en",
+       "missing": [],
+       "not_checked": [],
+       "plan": "search_for Egg ; break Egg",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-omelette-egg:en"
+      },
+      {
+       "class": "reaches_on_paper",
+       "ending": "failed_skill_step",
+       "first_failed_cause": "not_detected",
+       "instruction": "برای املت یک تخم‌مرغ شکسته لازم دارم.",
+       "item": "g-l3-omelette-egg",
+       "lang": "fa",
+       "missing": [],
+       "not_checked": [],
+       "plan": "search_for Egg ; break Egg",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-omelette-egg:fa"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "failed_skill_step",
+       "first_failed_cause": "retry_exhausted",
+       "instruction": "تشنه‌ام؛ یک فنجان آب برایم بیاور.",
+       "item": "g-l3-thirsty",
+       "lang": "fa",
+       "missing": [
+        "Cup in your hand"
+       ],
+       "not_checked": [],
+       "plan": "pickup Cup ; fill Cup water ; put_in DiningTable",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-thirsty:fa"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "failed_skill_step",
+       "first_failed_cause": "retry_exhausted",
+       "instruction": "Make some toast.",
+       "item": "g-l3-toast",
+       "lang": "en",
+       "missing": [
+        "Bread sliced"
+       ],
+       "not_checked": [],
+       "plan": "pick_and_place Bread Toaster ; toggle_on Toaster",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-toast:en"
+      },
+      {
+       "class": "misses_end_state",
+       "ending": "failed_skill_step",
+       "first_failed_cause": "retry_exhausted",
+       "instruction": "نان تست درست کن.",
+       "item": "g-l3-toast",
+       "lang": "fa",
+       "missing": [
+        "Bread sliced"
+       ],
+       "not_checked": [],
+       "plan": "pick_and_place Bread Toaster ; toggle_on Toaster",
+       "precondition_problems": [],
+       "pres": "canon:g-l3-toast:fa"
+      }
+     ],
+     "successes_walk_says_missing": 0
+    }
+   },
+   "pooled": {
+    "all_steps_no_goal": 5,
+    "by_class_and_ending": {
+     "misses_end_state / all_steps_no_goal": 5,
+     "misses_end_state / failed_skill_step": 8,
+     "reaches_on_paper / failed_skill_step": 10
+    },
+    "failed_skill_step": 18,
+    "failures": 23,
+    "first_failed_step_causes": {
+     "not_detected": 1,
+     "retry_exhausted": 17
+    },
+    "kinds": {
+     "clean": 4,
+     "filled": 3,
+     "held": 2,
+     "in": 2,
+     "on": 2,
+     "sliced": 2
+    },
+    "misses_end_state": 13,
+    "missing_clauses": 15,
+    "no_plan": 0,
+    "not_executed_failures": 0,
+    "preconditions_by_class": {},
+    "presentations": 129,
+    "reaches_on_paper": 10,
+    "refused_plan": 0,
+    "successes_walk_says_missing": 0
+   }
+  }
+ },
+ "definition": "Rows    compute_final's own path, by import: R's re-run rows -> apply_rescue -> A36.flagged rows left out. Gate G1 proves they are the same rows. Plans   the recorded plan cell of each row (<ns>/plan.jsonl, latest row of r[\"cell\"]); never regenerated. Gate G4 proves it is the scored plan. Goals   the gold item's goal clauses, as the scorer's goal check reads them. Each clause becomes one plan_walk predicate (CLAUSE below). Walk    plan_walk.World, the executor's action model, unchanged. Its start is the recorded truth of each clause at reset (the capture's state file,         labels.goal_clauses, after the item's setup; extracted into inputs/l3_reset_states.json), so a clause already true and left alone is not \"missing\". A clause is missing when it is False after the last step. Each L3 failure gets one class: no_plan (plan_status != ok), misses_end_state (at least one clause False on paper), reaches_on_paper (none False). On the same plans, the two preconditions plan_walk.check_plan tests (slice without the ButterKnife in hand, toggle_on Microwave with its door open) are counted per class: such a plan can reach its end-states on paper and still be a planning error. Separately, how it ended (compute_final.failure_breakdown's definition): refused_plan / all_steps_no_goal / failed_skill_step. Counts are plain presentation counts, no weighting and no bootstrap. ",
+ "gates": [
+  {
+   "detail": "7df9a9251d0d3b9d",
+   "gate": "G0 gold file is the one the scorer verified",
+   "pass": true
+  },
+  {
+   "detail": null,
+   "gate": "G1 failure_breakdown recomputed from these rows equals final_results.json, all levels and arms",
+   "pass": true
+  },
+  {
+   "detail": null,
+   "gate": "G1b the input re-run rows have the hashes final_results.json recorded",
+   "pass": true
+  },
+  {
+   "detail": {
+    "K1 G+M": {
+     "failures": 43,
+     "item_mean_from_rows": 0.21428571428571427,
+     "pass": true,
+     "presentations": 55,
+     "recorded_L3_sr": 0.21428571428571427,
+     "recorded_presentations": 55
+    },
+    "K1 O+M": {
+     "failures": 11,
+     "item_mean_from_rows": 0.8035714285714286,
+     "pass": true,
+     "presentations": 55,
+     "recorded_L3_sr": 0.8035714285714286,
+     "recorded_presentations": 55
+    },
+    "K2 G+M": {
+     "failures": 24,
+     "item_mean_from_rows": 0.3333333333333333,
+     "pass": true,
+     "presentations": 36,
+     "recorded_L3_sr": 0.3333333333333333,
+     "recorded_presentations": 36
+    },
+    "K2 O+M": {
+     "failures": 5,
+     "item_mean_from_rows": 0.8611111111111112,
+     "pass": true,
+     "presentations": 36,
+     "recorded_L3_sr": 0.8611111111111112,
+     "recorded_presentations": 36
+    },
+    "K3 G+M": {
+     "failures": 28,
+     "item_mean_from_rows": 0.2631578947368421,
+     "pass": true,
+     "presentations": 38,
+     "recorded_L3_sr": 0.2631578947368421,
+     "recorded_presentations": 38
+    },
+    "K3 O+M": {
+     "failures": 7,
+     "item_mean_from_rows": 0.8157894736842105,
+     "pass": true,
+     "presentations": 38,
+     "recorded_L3_sr": 0.8157894736842105,
+     "recorded_presentations": 38
+    }
+   },
+   "gate": "G2 per arm and kitchen: L3 presentations and failure flags reproduce final_results.json rates exactly",
+   "pass": true
+  },
+  {
+   "detail": {
+    "K1 G+M": {
+     "all_steps_no_goal": 27,
+     "pass": true,
+     "presentations": 55,
+     "recorded": [
+      27,
+      55
+     ]
+    },
+    "K1 O+M": {
+     "all_steps_no_goal": 4,
+     "pass": true,
+     "presentations": 55,
+     "recorded": [
+      4,
+      55
+     ]
+    },
+    "K2 G+M": {
+     "all_steps_no_goal": 15,
+     "pass": true,
+     "presentations": 36,
+     "recorded": [
+      15,
+      36
+     ]
+    },
+    "K2 O+M": {
+     "all_steps_no_goal": 1,
+     "pass": true,
+     "presentations": 36,
+     "recorded": [
+      1,
+      36
+     ]
+    },
+    "K3 G+M": {
+     "all_steps_no_goal": 15,
+     "pass": true,
+     "presentations": 38,
+     "recorded": [
+      15,
+      38
+     ]
+    },
+    "K3 O+M": {
+     "all_steps_no_goal": 0,
+     "pass": true,
+     "presentations": 38,
+     "recorded": [
+      0,
+      38
+     ]
+    }
+   },
+   "gate": "G3 all steps ran without the goal equals the recorded diagnostics (K1 G+M 27 of 55, O+M 4 of 55; K2, K3 as recorded)",
+   "pass": true
+  },
+  {
+   "detail": {
+    "metrics_differ": 0,
+    "no_plan_cell": 0,
+    "plan_len_differs": 0,
+    "rows": 258,
+    "status_differs": 0,
+    "steps_compared": 257,
+    "steps_differ_from_plan": 0
+   },
+   "gate": "G4 the recorded plan is the scored plan (status, PC and TDS recomputed, length, executed steps a prefix of the plan)",
+   "pass": true
+  },
+  {
+   "detail": {
+    "presentations": 136,
+    "reference_misses": [],
+    "unchecked_clauses": {}
+   },
+   "gate": "G5 every gold reference plan reaches its goal on paper; no clause outside the action model",
+   "pass": true
+  }
+ ],
+ "kitchens": {
+  "K1": "development",
+  "K2": "held-out A",
+  "K3": "held-out B"
+ },
+ "older_analysis_check": {
+  "reconstructed": {
+   "labels": {
+    "G+M": {
+     "failures": 88,
+     "kinds": {
+      "broken": 4,
+      "clean": 6,
+      "closed": 7,
+      "cooked": 1,
+      "empty": 5,
+      "filled": 16,
+      "hot": 3,
+      "in": 21,
+      "off": 13,
+      "on": 12,
+      "sliced": 23
+     },
+     "misses_end_state": 73,
+     "no_plan": 1,
+     "presentations": 121,
+     "reaches_on_paper": 14,
+     "successes_walk_says_missing": 0
+    },
+    "O+M": {
+     "failures": 22,
+     "kinds": {
+      "clean": 4,
+      "filled": 3,
+      "held": 2,
+      "in": 2,
+      "on": 2,
+      "sliced": 2
+     },
+     "misses_end_state": 13,
+     "no_plan": 0,
+     "presentations": 121,
+     "reaches_on_paper": 9,
+     "successes_walk_says_missing": 0
+    }
+   },
+   "setup": {
+    "G+M": {
+     "failures": 88,
+     "kinds": {
+      "broken": 4,
+      "clean": 6,
+      "closed": 7,
+      "cooked": 1,
+      "empty": 5,
+      "filled": 16,
+      "hot": 3,
+      "in": 24,
+      "off": 13,
+      "on": 12,
+      "sliced": 23
+     },
+     "misses_end_state": 73,
+     "no_plan": 1,
+     "presentations": 121,
+     "reaches_on_paper": 14,
+     "successes_walk_says_missing": 0
+    },
+    "O+M": {
+     "failures": 22,
+     "kinds": {
+      "clean": 4,
+      "filled": 3,
+      "held": 2,
+      "in": 3,
+      "on": 2,
+      "sliced": 2
+     },
+     "misses_end_state": 13,
+     "no_plan": 0,
+     "presentations": 121,
+     "reaches_on_paper": 9,
+     "successes_walk_says_missing": 0
+    }
+   },
+   "setup-no-temperature": {
+    "G+M": {
+     "failures": 88,
+     "kinds": {
+      "broken": 4,
+      "clean": 6,
+      "closed": 7,
+      "cooked": 1,
+      "empty": 5,
+      "filled": 16,
+      "in": 24,
+      "off": 13,
+      "on": 12,
+      "sliced": 23
+     },
+     "misses_end_state": 70,
+     "no_plan": 1,
+     "presentations": 121,
+     "reaches_on_paper": 17,
+     "successes_walk_says_missing": 0
+    },
+    "O+M": {
+     "failures": 22,
+     "kinds": {
+      "clean": 4,
+      "filled": 3,
+      "held": 2,
+      "in": 3,
+      "on": 2,
+      "sliced": 2
+     },
+     "misses_end_state": 13,
+     "no_plan": 0,
+     "presentations": 121,
+     "reaches_on_paper": 9,
+     "successes_walk_says_missing": 0
+    }
+   }
+  },
+  "recorded": {
+   "G+M": {
+    "failures": 88,
+    "misses_end_state": 70,
+    "no_plan": 1,
+    "presentations": 121,
+    "reaches_on_paper": 17
+   },
+   "O+M": {
+    "failures": 22,
+    "misses_end_state": 13,
+    "no_plan": 0,
+    "presentations": 121,
+    "reaches_on_paper": 9
+   }
+  },
+  "recorded_kinds_G+M": {
+   "broken": 4,
+   "clean": 6,
+   "closed": 7,
+   "cooked": 1,
+   "empty": 5,
+   "filled": 16,
+   "in": 24,
+   "off": 13,
+   "on": 12,
+   "sliced": 23
+  }
+ },
+ "schema": "reexecuted.l3_breakdown/1"
+}

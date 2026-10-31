@@ -1,0 +1,1803 @@
+{
+ "affected_units": 54,
+ "namespace": "test-k2-v1",
+ "units": {
+  "06c13c53bf521164f82181a6e42a6040": [
+   {
+    "attempt": 0,
+    "breaches": [],
+    "cells": [
+     "test-k2-v1|plan|P0|canon:g-l1-fill-pot-coffee:en|r0"
+    ],
+    "key": "test-k2-v1|exec|06c13c53bf521164f82181a6e42a6040|run0",
+    "status": "done",
+    "ts": "2026-10-21T03:03:48",
+    "wall_s": 28.07
+   }
+  ],
+  "06f31eace0d3bde606ee5b03aff0127d": [
+   {
+    "attempt": 0,
+    "breaches": [],
+    "cells": [
+     "test-k2-v1|plan|G+M|canon:g-l1-empty-pot:en|r0"
+    ],
+    "key": "test-k2-v1|exec|06f31eace0d3bde606ee5b03aff0127d|run0",
+    "status": "done",
+    "ts": "2026-10-21T02:13:12",
+    "wall_s": 109.17
+   }
+  ],
+  "118875eda97beb2603ab08acd502aeda": [
+   {
+    "attempt": 0,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|G0|canon:g-l2-faucet-on-pickup-sponge:en|r0",
+     "test-k2-v1|plan|O0|canon:g-l2-faucet-on-pickup-sponge:en|r0",
+     "test-k2-v1|plan|P0|canon:g-l2-faucet-on-pickup-sponge:en|r0"
+    ],
+    "key": "test-k2-v1|exec|118875eda97beb2603ab08acd502aeda|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:41:28",
+    "wall_s": 14.24
+   },
+   {
+    "attempt": 1,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|G0|canon:g-l2-faucet-on-pickup-sponge:en|r0",
+     "test-k2-v1|plan|O0|canon:g-l2-faucet-on-pickup-sponge:en|r0",
+     "test-k2-v1|plan|P0|canon:g-l2-faucet-on-pickup-sponge:en|r0"
+    ],
+    "key": "test-k2-v1|exec|118875eda97beb2603ab08acd502aeda|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:41:43",
+    "wall_s": 14.17
+   },
+   {
+    "attempt": 2,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|G0|canon:g-l2-faucet-on-pickup-sponge:en|r0",
+     "test-k2-v1|plan|O0|canon:g-l2-faucet-on-pickup-sponge:en|r0",
+     "test-k2-v1|plan|P0|canon:g-l2-faucet-on-pickup-sponge:en|r0"
+    ],
+    "key": "test-k2-v1|exec|118875eda97beb2603ab08acd502aeda|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:41:57",
+    "wall_s": 13.92
+   }
+  ],
+  "1a5811d58e2b6a74f95d610fa23e3786": [
+   {
+    "attempt": 0,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|G+M|canon:g-l2-three-appliances:fa|r0",
+     "test-k2-v1|plan|O+M|canon:g-l2-three-appliances:fa|r0",
+     "test-k2-v1|plan|P+M|canon:g-l2-three-appliances:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|1a5811d58e2b6a74f95d610fa23e3786|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:16:16",
+    "wall_s": 14.31
+   },
+   {
+    "attempt": 1,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|G+M|canon:g-l2-three-appliances:fa|r0",
+     "test-k2-v1|plan|O+M|canon:g-l2-three-appliances:fa|r0",
+     "test-k2-v1|plan|P+M|canon:g-l2-three-appliances:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|1a5811d58e2b6a74f95d610fa23e3786|run0",
+    "status": "done",
+    "ts": "2026-10-21T02:17:03",
+    "wall_s": 46.76
+   }
+  ],
+  "1c7d9b5e400b901c982937fb02887f79": [
+   {
+    "attempt": 0,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|G0|canon:g-l2-cook-potato-counter-top:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|1c7d9b5e400b901c982937fb02887f79|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:05:24",
+    "wall_s": 14.5
+   },
+   {
+    "attempt": 1,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|G0|canon:g-l2-cook-potato-counter-top:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|1c7d9b5e400b901c982937fb02887f79|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:05:38",
+    "wall_s": 14.43
+   },
+   {
+    "attempt": 2,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|G0|canon:g-l2-cook-potato-counter-top:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|1c7d9b5e400b901c982937fb02887f79|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:05:53",
+    "wall_s": 14.21
+   }
+  ],
+  "1d7a30765ee848f7fd7f2475e4803d23": [
+   {
+    "attempt": 0,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|G+M|canon:g-l2-cook-potato-plate:en|r0",
+     "test-k2-v1|plan|P+M|canon:g-l2-cook-potato-plate:en|r0"
+    ],
+    "key": "test-k2-v1|exec|1d7a30765ee848f7fd7f2475e4803d23|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T03:18:43",
+    "wall_s": 14.19
+   },
+   {
+    "attempt": 1,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|G+M|canon:g-l2-cook-potato-plate:en|r0",
+     "test-k2-v1|plan|P+M|canon:g-l2-cook-potato-plate:en|r0"
+    ],
+    "key": "test-k2-v1|exec|1d7a30765ee848f7fd7f2475e4803d23|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T03:18:58",
+    "wall_s": 14.45
+   },
+   {
+    "attempt": 2,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|G+M|canon:g-l2-cook-potato-plate:en|r0",
+     "test-k2-v1|plan|P+M|canon:g-l2-cook-potato-plate:en|r0"
+    ],
+    "key": "test-k2-v1|exec|1d7a30765ee848f7fd7f2475e4803d23|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T03:19:13",
+    "wall_s": 14.37
+   }
+  ],
+  "23591169916c0f8935ad01c28afe83dd": [
+   {
+    "attempt": 0,
+    "breaches": [
+     "summary.coords"
+    ],
+    "cells": [
+     "test-k2-v1|plan|G0|canon:g-l1-dirty-cup:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|23591169916c0f8935ad01c28afe83dd|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T03:10:34",
+    "wall_s": 14.26
+   },
+   {
+    "attempt": 1,
+    "breaches": [],
+    "cells": [
+     "test-k2-v1|plan|G0|canon:g-l1-dirty-cup:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|23591169916c0f8935ad01c28afe83dd|run0",
+    "status": "done",
+    "ts": "2026-10-21T03:11:09",
+    "wall_s": 34.77
+   }
+  ],
+  "244f94f7d54d63fe471db1512ebdbd68": [
+   {
+    "attempt": 0,
+    "breaches": [
+     "summary.coords"
+    ],
+    "cells": [
+     "test-k2-v1|plan|O0|canon:g-l1-dirty-cup:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|244f94f7d54d63fe471db1512ebdbd68|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T03:04:02",
+    "wall_s": 14.25
+   },
+   {
+    "attempt": 1,
+    "breaches": [],
+    "cells": [
+     "test-k2-v1|plan|O0|canon:g-l1-dirty-cup:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|244f94f7d54d63fe471db1512ebdbd68|run0",
+    "status": "done",
+    "ts": "2026-10-21T03:04:32",
+    "wall_s": 30.27
+   }
+  ],
+  "2711abc09846824f2ea165011d62840e": [
+   {
+    "attempt": 0,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|P0|canon:g-l2-cook-potato-counter-top:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|2711abc09846824f2ea165011d62840e|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:04:41",
+    "wall_s": 13.64
+   },
+   {
+    "attempt": 1,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|P0|canon:g-l2-cook-potato-counter-top:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|2711abc09846824f2ea165011d62840e|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:04:55",
+    "wall_s": 13.74
+   },
+   {
+    "attempt": 2,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|P0|canon:g-l2-cook-potato-counter-top:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|2711abc09846824f2ea165011d62840e|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:05:09",
+    "wall_s": 13.67
+   }
+  ],
+  "2c4e1995255729570f50f525f24b2031": [
+   {
+    "attempt": 0,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|G0|canon:g-l2-three-appliances:fa|r0",
+     "test-k2-v1|plan|O0|canon:g-l2-three-appliances:fa|r0",
+     "test-k2-v1|plan|P0|canon:g-l2-three-appliances:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|2c4e1995255729570f50f525f24b2031|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:15:16",
+    "wall_s": 13.88
+   },
+   {
+    "attempt": 1,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|G0|canon:g-l2-three-appliances:fa|r0",
+     "test-k2-v1|plan|O0|canon:g-l2-three-appliances:fa|r0",
+     "test-k2-v1|plan|P0|canon:g-l2-three-appliances:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|2c4e1995255729570f50f525f24b2031|run0",
+    "status": "done",
+    "ts": "2026-10-21T02:16:01",
+    "wall_s": 45.48
+   }
+  ],
+  "337c169bc8eaefc319953df301ce3016": [
+   {
+    "attempt": 0,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|P+M|canon:g-l3-dirty-cups:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|337c169bc8eaefc319953df301ce3016|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:50:48",
+    "wall_s": 49.88
+   },
+   {
+    "attempt": 1,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|P+M|canon:g-l3-dirty-cups:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|337c169bc8eaefc319953df301ce3016|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:51:36",
+    "wall_s": 48.1
+   },
+   {
+    "attempt": 2,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|P+M|canon:g-l3-dirty-cups:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|337c169bc8eaefc319953df301ce3016|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:52:24",
+    "wall_s": 47.69
+   }
+  ],
+  "411c1f0d950db86607248475e922096b": [
+   {
+    "attempt": 0,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|G+M|canon:g-l1-slice-apple:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|411c1f0d950db86607248475e922096b|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:28:00",
+    "wall_s": 50.46
+   },
+   {
+    "attempt": 1,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|G+M|canon:g-l1-slice-apple:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|411c1f0d950db86607248475e922096b|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:28:50",
+    "wall_s": 49.6
+   },
+   {
+    "attempt": 2,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|G+M|canon:g-l1-slice-apple:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|411c1f0d950db86607248475e922096b|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:29:41",
+    "wall_s": 51.04
+   }
+  ],
+  "42f5542fb4be48e8e210df44d812329f": [
+   {
+    "attempt": 0,
+    "breaches": [],
+    "cells": [
+     "test-k2-v1|plan|G+M|canon:g-l2-light-off-open-fridge:fa|r0",
+     "test-k2-v1|plan|O+M|canon:g-l2-light-off-open-fridge:fa|r0",
+     "test-k2-v1|plan|P+M|canon:g-l2-light-off-open-fridge:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|42f5542fb4be48e8e210df44d812329f|run0",
+    "status": "done",
+    "ts": "2026-10-21T02:42:19",
+    "wall_s": 21.95
+   }
+  ],
+  "4d1666602d5e9f0f379aa2592ea5a0f5": [
+   {
+    "attempt": 0,
+    "breaches": [
+     "summary.coords"
+    ],
+    "cells": [
+     "test-k2-v1|plan|G+M|canon:g-l1-dirty-cup:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|4d1666602d5e9f0f379aa2592ea5a0f5|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T03:07:35",
+    "wall_s": 14.39
+   },
+   {
+    "attempt": 1,
+    "breaches": [
+     "summary.coords"
+    ],
+    "cells": [
+     "test-k2-v1|plan|G+M|canon:g-l1-dirty-cup:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|4d1666602d5e9f0f379aa2592ea5a0f5|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T03:07:48",
+    "wall_s": 13.42
+   },
+   {
+    "attempt": 2,
+    "breaches": [],
+    "cells": [
+     "test-k2-v1|plan|G+M|canon:g-l1-dirty-cup:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|4d1666602d5e9f0f379aa2592ea5a0f5|run0",
+    "status": "done",
+    "ts": "2026-10-21T03:10:20",
+    "wall_s": 151.3
+   }
+  ],
+  "4f47aa18263f76ad719e92c363c56357": [
+   {
+    "attempt": 0,
+    "breaches": [],
+    "cells": [
+     "test-k2-v1|plan|G0|canon:g-l1-fill-pot-coffee:en|r0",
+     "test-k2-v1|plan|O0|canon:g-l1-fill-pot-coffee:en|r0"
+    ],
+    "key": "test-k2-v1|exec|4f47aa18263f76ad719e92c363c56357|run0",
+    "status": "done",
+    "ts": "2026-10-21T03:03:19",
+    "wall_s": 28.88
+   }
+  ],
+  "545ef1b2969e4c0e323b58374c2098ad": [
+   {
+    "attempt": 0,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|G+M|canon:g-l1-close-microwave:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|545ef1b2969e4c0e323b58374c2098ad|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T03:00:30",
+    "wall_s": 40.78
+   },
+   {
+    "attempt": 1,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|G+M|canon:g-l1-close-microwave:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|545ef1b2969e4c0e323b58374c2098ad|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T03:01:12",
+    "wall_s": 41.37
+   },
+   {
+    "attempt": 2,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|G+M|canon:g-l1-close-microwave:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|545ef1b2969e4c0e323b58374c2098ad|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T03:01:53",
+    "wall_s": 41.22
+   }
+  ],
+  "585ab07b83e64080d21d3657bd8999ab": [
+   {
+    "attempt": 0,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|G0|canon:g-l1-slice-apple:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|585ab07b83e64080d21d3657bd8999ab|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:22:57",
+    "wall_s": 49.95
+   },
+   {
+    "attempt": 1,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|G0|canon:g-l1-slice-apple:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|585ab07b83e64080d21d3657bd8999ab|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:23:48",
+    "wall_s": 50.54
+   },
+   {
+    "attempt": 2,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|G0|canon:g-l1-slice-apple:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|585ab07b83e64080d21d3657bd8999ab|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:24:39",
+    "wall_s": 50.74
+   }
+  ],
+  "58aba8e436c403a9bab7f8abacb6989c": [
+   {
+    "attempt": 0,
+    "breaches": [],
+    "cells": [
+     "test-k2-v1|plan|O+M|canon:g-l1-fill-pot-coffee:en|r0",
+     "test-k2-v1|plan|P+M|canon:g-l1-fill-pot-coffee:en|r0"
+    ],
+    "key": "test-k2-v1|exec|58aba8e436c403a9bab7f8abacb6989c|run0",
+    "status": "done",
+    "ts": "2026-10-21T03:02:50",
+    "wall_s": 28.03
+   }
+  ],
+  "5add238390e31b8f6fed481ba4a057a9": [
+   {
+    "attempt": 0,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|P+M|canon:g-l2-cook-potato-counter-top:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|5add238390e31b8f6fed481ba4a057a9|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:06:50",
+    "wall_s": 13.81
+   },
+   {
+    "attempt": 1,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|P+M|canon:g-l2-cook-potato-counter-top:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|5add238390e31b8f6fed481ba4a057a9|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:07:04",
+    "wall_s": 14.61
+   },
+   {
+    "attempt": 2,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|P+M|canon:g-l2-cook-potato-counter-top:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|5add238390e31b8f6fed481ba4a057a9|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:07:18",
+    "wall_s": 13.81
+   }
+  ],
+  "5e2f67f055edc4e958ddf9e31a1c8391": [
+   {
+    "attempt": 0,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|O+M|canon:g-l1-slice-apple:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|5e2f67f055edc4e958ddf9e31a1c8391|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:20:26",
+    "wall_s": 50.64
+   },
+   {
+    "attempt": 1,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|O+M|canon:g-l1-slice-apple:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|5e2f67f055edc4e958ddf9e31a1c8391|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:21:16",
+    "wall_s": 50.39
+   },
+   {
+    "attempt": 2,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|O+M|canon:g-l1-slice-apple:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|5e2f67f055edc4e958ddf9e31a1c8391|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:22:07",
+    "wall_s": 50.27
+   }
+  ],
+  "6a54d62d95c8669ba3f21e794b94f12d": [
+   {
+    "attempt": 0,
+    "breaches": [],
+    "cells": [
+     "test-k2-v1|plan|G+M|canon:g-l1-drop-spoon:en|r0",
+     "test-k2-v1|plan|O+M|canon:g-l1-drop-spoon:en|r0",
+     "test-k2-v1|plan|P+M|canon:g-l1-drop-spoon:en|r0"
+    ],
+    "key": "test-k2-v1|exec|6a54d62d95c8669ba3f21e794b94f12d|run0",
+    "status": "done",
+    "ts": "2026-10-21T02:11:23",
+    "wall_s": 65.81
+   }
+  ],
+  "6e9a290e596aa83458ca668617c5c9f4": [
+   {
+    "attempt": 0,
+    "breaches": [],
+    "cells": [
+     "test-k2-v1|plan|G0|canon:g-l2-light-off-open-fridge:fa|r0",
+     "test-k2-v1|plan|O0|canon:g-l2-light-off-open-fridge:fa|r0",
+     "test-k2-v1|plan|P0|canon:g-l2-light-off-open-fridge:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|6e9a290e596aa83458ca668617c5c9f4|run0",
+    "status": "done",
+    "ts": "2026-10-21T02:42:41",
+    "wall_s": 21.6
+   }
+  ],
+  "7300f3b34909e7f60fef0bb692dbb990": [
+   {
+    "attempt": 0,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|G+M|canon:g-l1-dirty-pan:en|r0",
+     "test-k2-v1|plan|O+M|canon:g-l1-dirty-pan:en|r0",
+     "test-k2-v1|plan|P+M|canon:g-l1-dirty-pan:en|r0"
+    ],
+    "key": "test-k2-v1|exec|7300f3b34909e7f60fef0bb692dbb990|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:08:58",
+    "wall_s": 13.93
+   },
+   {
+    "attempt": 1,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|G+M|canon:g-l1-dirty-pan:en|r0",
+     "test-k2-v1|plan|O+M|canon:g-l1-dirty-pan:en|r0",
+     "test-k2-v1|plan|P+M|canon:g-l1-dirty-pan:en|r0"
+    ],
+    "key": "test-k2-v1|exec|7300f3b34909e7f60fef0bb692dbb990|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:09:12",
+    "wall_s": 13.92
+   },
+   {
+    "attempt": 2,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|G+M|canon:g-l1-dirty-pan:en|r0",
+     "test-k2-v1|plan|O+M|canon:g-l1-dirty-pan:en|r0",
+     "test-k2-v1|plan|P+M|canon:g-l1-dirty-pan:en|r0"
+    ],
+    "key": "test-k2-v1|exec|7300f3b34909e7f60fef0bb692dbb990|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:09:26",
+    "wall_s": 13.76
+   }
+  ],
+  "76e35580a0192e9e2d54b274947d91d4": [
+   {
+    "attempt": 0,
+    "breaches": [],
+    "cells": [
+     "test-k2-v1|plan|G0|canon:g-l1-empty-pot:en|r0",
+     "test-k2-v1|plan|O0|canon:g-l1-empty-pot:en|r0",
+     "test-k2-v1|plan|P0|canon:g-l1-empty-pot:en|r0"
+    ],
+    "key": "test-k2-v1|exec|76e35580a0192e9e2d54b274947d91d4|run0",
+    "status": "done",
+    "ts": "2026-10-21T02:14:08",
+    "wall_s": 55.47
+   }
+  ],
+  "7e64673c0e3f34d3fb3613b48e77ddf8": [
+   {
+    "attempt": 0,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|O0|canon:g-l1-slice-apple:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|7e64673c0e3f34d3fb3613b48e77ddf8|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:30:31",
+    "wall_s": 50.15
+   },
+   {
+    "attempt": 1,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|O0|canon:g-l1-slice-apple:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|7e64673c0e3f34d3fb3613b48e77ddf8|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:31:22",
+    "wall_s": 50.43
+   },
+   {
+    "attempt": 2,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|O0|canon:g-l1-slice-apple:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|7e64673c0e3f34d3fb3613b48e77ddf8|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:32:12",
+    "wall_s": 50.44
+   }
+  ],
+  "84d38b821c1710a48f0335472957f479": [
+   {
+    "attempt": 0,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|O0|canon:g-l1-close-microwave:fa|r0",
+     "test-k2-v1|plan|P0|canon:g-l1-close-microwave:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|84d38b821c1710a48f0335472957f479|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:55:31",
+    "wall_s": 41.26
+   },
+   {
+    "attempt": 1,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|O0|canon:g-l1-close-microwave:fa|r0",
+     "test-k2-v1|plan|P0|canon:g-l1-close-microwave:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|84d38b821c1710a48f0335472957f479|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:56:12",
+    "wall_s": 40.51
+   },
+   {
+    "attempt": 2,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|O0|canon:g-l1-close-microwave:fa|r0",
+     "test-k2-v1|plan|P0|canon:g-l1-close-microwave:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|84d38b821c1710a48f0335472957f479|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:56:54",
+    "wall_s": 42.33
+   }
+  ],
+  "88536fb4e2b2426cca737dcec322efdb": [
+   {
+    "attempt": 0,
+    "breaches": [],
+    "cells": [
+     "test-k2-v1|plan|G0|canon:g-l2-salt-then-light-off:en|r0",
+     "test-k2-v1|plan|O0|canon:g-l2-salt-then-light-off:en|r0",
+     "test-k2-v1|plan|P0|canon:g-l2-salt-then-light-off:en|r0"
+    ],
+    "key": "test-k2-v1|exec|88536fb4e2b2426cca737dcec322efdb|run0",
+    "status": "done",
+    "ts": "2026-10-21T02:32:51",
+    "wall_s": 38.81
+   }
+  ],
+  "9799375e6f51c3b1c847564d11f18e01": [
+   {
+    "attempt": 0,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|P+M|canon:g-l1-slice-apple:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|9799375e6f51c3b1c847564d11f18e01|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:17:54",
+    "wall_s": 51.22
+   },
+   {
+    "attempt": 1,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|P+M|canon:g-l1-slice-apple:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|9799375e6f51c3b1c847564d11f18e01|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:18:45",
+    "wall_s": 50.43
+   },
+   {
+    "attempt": 2,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|P+M|canon:g-l1-slice-apple:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|9799375e6f51c3b1c847564d11f18e01|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:19:35",
+    "wall_s": 50.29
+   }
+  ],
+  "97ad5f2be1a4b5ad192a642ed069a3f9": [
+   {
+    "attempt": 0,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|O0|canon:g-l2-cook-potato-counter-top:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|97ad5f2be1a4b5ad192a642ed069a3f9|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:04:00",
+    "wall_s": 55.61
+   },
+   {
+    "attempt": 1,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|O0|canon:g-l2-cook-potato-counter-top:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|97ad5f2be1a4b5ad192a642ed069a3f9|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:04:14",
+    "wall_s": 13.46
+   },
+   {
+    "attempt": 2,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|O0|canon:g-l2-cook-potato-counter-top:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|97ad5f2be1a4b5ad192a642ed069a3f9|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:04:28",
+    "wall_s": 13.76
+   }
+  ],
+  "9b102321101fb1f78c054dbbb2494bf6": [
+   {
+    "attempt": 0,
+    "breaches": [
+     "summary.coords"
+    ],
+    "cells": [
+     "test-k2-v1|plan|O+M|canon:g-l1-dirty-cup:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|9b102321101fb1f78c054dbbb2494bf6|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T03:04:47",
+    "wall_s": 14.68
+   },
+   {
+    "attempt": 1,
+    "breaches": [],
+    "cells": [
+     "test-k2-v1|plan|O+M|canon:g-l1-dirty-cup:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|9b102321101fb1f78c054dbbb2494bf6|run0",
+    "status": "done",
+    "ts": "2026-10-21T03:07:20",
+    "wall_s": 153.11
+   }
+  ],
+  "9ffda61d13298b7b45c37bea9df0bf89": [
+   {
+    "attempt": 0,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|G0|canon:g-l3-dirty-cups:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|9ffda61d13298b7b45c37bea9df0bf89|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:53:13",
+    "wall_s": 48.38
+   },
+   {
+    "attempt": 1,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|G0|canon:g-l3-dirty-cups:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|9ffda61d13298b7b45c37bea9df0bf89|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:54:01",
+    "wall_s": 48.25
+   },
+   {
+    "attempt": 2,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|G0|canon:g-l3-dirty-cups:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|9ffda61d13298b7b45c37bea9df0bf89|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:54:50",
+    "wall_s": 48.67
+   }
+  ],
+  "a1eb568d37de54ee2bfed09b18e4a50c": [
+   {
+    "attempt": 0,
+    "breaches": [],
+    "cells": [
+     "test-k2-v1|plan|G0|canon:g-l1-close-microwave:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|a1eb568d37de54ee2bfed09b18e4a50c|run0",
+    "status": "done",
+    "ts": "2026-10-21T02:59:49",
+    "wall_s": 44.09
+   }
+  ],
+  "aa1b53a788a5c39006b508d9598fe106": [
+   {
+    "attempt": 0,
+    "breaches": [],
+    "cells": [
+     "test-k2-v1|plan|G0|canon:g-l1-drop-spoon:en|r0",
+     "test-k2-v1|plan|O0|canon:g-l1-drop-spoon:en|r0",
+     "test-k2-v1|plan|P0|canon:g-l1-drop-spoon:en|r0"
+    ],
+    "key": "test-k2-v1|exec|aa1b53a788a5c39006b508d9598fe106|run0",
+    "status": "done",
+    "ts": "2026-10-21T02:10:17",
+    "wall_s": 50.91
+   }
+  ],
+  "ac84aa6d9f2f15051779f4e57a6bf039": [
+   {
+    "attempt": 0,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|O+M|canon:g-l2-cook-potato-counter-top:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|ac84aa6d9f2f15051779f4e57a6bf039|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:06:07",
+    "wall_s": 14.3
+   },
+   {
+    "attempt": 1,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|O+M|canon:g-l2-cook-potato-counter-top:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|ac84aa6d9f2f15051779f4e57a6bf039|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:06:21",
+    "wall_s": 14.03
+   },
+   {
+    "attempt": 2,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|O+M|canon:g-l2-cook-potato-counter-top:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|ac84aa6d9f2f15051779f4e57a6bf039|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:06:36",
+    "wall_s": 14.4
+   }
+  ],
+  "af297f39d5db8704ffed9127c13ce424": [
+   {
+    "attempt": 0,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|P0|canon:g-l1-slice-apple:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|af297f39d5db8704ffed9127c13ce424|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:25:29",
+    "wall_s": 49.69
+   },
+   {
+    "attempt": 1,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|P0|canon:g-l1-slice-apple:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|af297f39d5db8704ffed9127c13ce424|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:26:20",
+    "wall_s": 50.54
+   },
+   {
+    "attempt": 2,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|P0|canon:g-l1-slice-apple:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|af297f39d5db8704ffed9127c13ce424|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:27:10",
+    "wall_s": 49.62
+   }
+  ],
+  "b4e9d90f601e1dc82a29dbe6c4a555a0": [
+   {
+    "attempt": 0,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|O+M|canon:g-l3-stale-coffee:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|b4e9d90f601e1dc82a29dbe6c4a555a0|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:38:25",
+    "wall_s": 41.73
+   },
+   {
+    "attempt": 1,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|O+M|canon:g-l3-stale-coffee:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|b4e9d90f601e1dc82a29dbe6c4a555a0|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:39:07",
+    "wall_s": 41.84
+   },
+   {
+    "attempt": 2,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|O+M|canon:g-l3-stale-coffee:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|b4e9d90f601e1dc82a29dbe6c4a555a0|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:39:49",
+    "wall_s": 42.34
+   }
+  ],
+  "b6dbe0d8295ca4a0da599de12134abc9": [
+   {
+    "attempt": 0,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|O+M|canon:g-l1-close-microwave:fa|r0",
+     "test-k2-v1|plan|P+M|canon:g-l1-close-microwave:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|b6dbe0d8295ca4a0da599de12134abc9|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:57:35",
+    "wall_s": 41.33
+   },
+   {
+    "attempt": 1,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|O+M|canon:g-l1-close-microwave:fa|r0",
+     "test-k2-v1|plan|P+M|canon:g-l1-close-microwave:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|b6dbe0d8295ca4a0da599de12134abc9|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:58:18",
+    "wall_s": 42.05
+   },
+   {
+    "attempt": 2,
+    "breaches": [],
+    "cells": [
+     "test-k2-v1|plan|O+M|canon:g-l1-close-microwave:fa|r0",
+     "test-k2-v1|plan|P+M|canon:g-l1-close-microwave:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|b6dbe0d8295ca4a0da599de12134abc9|run0",
+    "status": "done",
+    "ts": "2026-10-21T02:59:05",
+    "wall_s": 47.36
+   }
+  ],
+  "bd489c6887e0e4fd159d1c48523c28da": [
+   {
+    "attempt": 0,
+    "breaches": [
+     "summary.coords"
+    ],
+    "cells": [
+     "test-k2-v1|plan|P0|canon:g-l1-dirty-cup:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|bd489c6887e0e4fd159d1c48523c28da|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T03:14:33",
+    "wall_s": 13.79
+   },
+   {
+    "attempt": 1,
+    "breaches": [],
+    "cells": [
+     "test-k2-v1|plan|P0|canon:g-l1-dirty-cup:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|bd489c6887e0e4fd159d1c48523c28da|run0",
+    "status": "done",
+    "ts": "2026-10-21T03:17:03",
+    "wall_s": 150.41
+   }
+  ],
+  "c05c60007df6442ef65d0aff84271104": [
+   {
+    "attempt": 0,
+    "breaches": [],
+    "cells": [
+     "test-k2-v1|plan|G+M|canon:g-l1-fill-pot-coffee:en|r0"
+    ],
+    "key": "test-k2-v1|exec|c05c60007df6442ef65d0aff84271104|run0",
+    "status": "done",
+    "ts": "2026-10-21T03:02:22",
+    "wall_s": 28.94
+   }
+  ],
+  "c10baa3ef085e2240ef8ef5e1cad3744": [
+   {
+    "attempt": 0,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|P0|canon:g-l2-cook-potato-plate:en|r0"
+    ],
+    "key": "test-k2-v1|exec|c10baa3ef085e2240ef8ef5e1cad3744|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T03:17:59",
+    "wall_s": 14.02
+   },
+   {
+    "attempt": 1,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|P0|canon:g-l2-cook-potato-plate:en|r0"
+    ],
+    "key": "test-k2-v1|exec|c10baa3ef085e2240ef8ef5e1cad3744|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T03:18:13",
+    "wall_s": 14.08
+   },
+   {
+    "attempt": 2,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|P0|canon:g-l2-cook-potato-plate:en|r0"
+    ],
+    "key": "test-k2-v1|exec|c10baa3ef085e2240ef8ef5e1cad3744|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T03:18:28",
+    "wall_s": 15.02
+   }
+  ],
+  "c8c521fa4ba22ceddb39b5caa0f43bf1": [
+   {
+    "attempt": 0,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|G0|canon:g-l2-cook-potato-plate:en|r0"
+    ],
+    "key": "test-k2-v1|exec|c8c521fa4ba22ceddb39b5caa0f43bf1|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T03:19:27",
+    "wall_s": 14.83
+   },
+   {
+    "attempt": 1,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|G0|canon:g-l2-cook-potato-plate:en|r0"
+    ],
+    "key": "test-k2-v1|exec|c8c521fa4ba22ceddb39b5caa0f43bf1|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T03:19:42",
+    "wall_s": 14.33
+   },
+   {
+    "attempt": 2,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|G0|canon:g-l2-cook-potato-plate:en|r0"
+    ],
+    "key": "test-k2-v1|exec|c8c521fa4ba22ceddb39b5caa0f43bf1|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T03:19:56",
+    "wall_s": 14.18
+   }
+  ],
+  "ce1848c9ee6d2aa0793a445a52438d3c": [
+   {
+    "attempt": 0,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|G+M|canon:g-l2-cook-potato-counter-top:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|ce1848c9ee6d2aa0793a445a52438d3c|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:07:33",
+    "wall_s": 14.62
+   },
+   {
+    "attempt": 1,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|G+M|canon:g-l2-cook-potato-counter-top:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|ce1848c9ee6d2aa0793a445a52438d3c|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:07:47",
+    "wall_s": 14.1
+   },
+   {
+    "attempt": 2,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|G+M|canon:g-l2-cook-potato-counter-top:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|ce1848c9ee6d2aa0793a445a52438d3c|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:08:01",
+    "wall_s": 14.28
+   }
+  ],
+  "d2abc5be469dbc1702aca692246da405": [
+   {
+    "attempt": 0,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|O0|canon:g-l2-cook-potato-plate:en|r0"
+    ],
+    "key": "test-k2-v1|exec|d2abc5be469dbc1702aca692246da405|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T03:17:17",
+    "wall_s": 14.09
+   },
+   {
+    "attempt": 1,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|O0|canon:g-l2-cook-potato-plate:en|r0"
+    ],
+    "key": "test-k2-v1|exec|d2abc5be469dbc1702aca692246da405|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T03:17:31",
+    "wall_s": 13.52
+   },
+   {
+    "attempt": 2,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|O0|canon:g-l2-cook-potato-plate:en|r0"
+    ],
+    "key": "test-k2-v1|exec|d2abc5be469dbc1702aca692246da405|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T03:17:45",
+    "wall_s": 13.59
+   }
+  ],
+  "dcd55b74da74c1c0a7ae6b7d418a1925": [
+   {
+    "attempt": 0,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|G+M|canon:g-l3-dirty-cups:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|dcd55b74da74c1c0a7ae6b7d418a1925|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:45:52",
+    "wall_s": 47.18
+   },
+   {
+    "attempt": 1,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|G+M|canon:g-l3-dirty-cups:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|dcd55b74da74c1c0a7ae6b7d418a1925|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:46:40",
+    "wall_s": 47.98
+   },
+   {
+    "attempt": 2,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|G+M|canon:g-l3-dirty-cups:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|dcd55b74da74c1c0a7ae6b7d418a1925|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:47:28",
+    "wall_s": 47.95
+   }
+  ],
+  "e7fac9c9b529c8105ca2e9eb260230a0": [
+   {
+    "attempt": 0,
+    "breaches": [
+     "summary.coords"
+    ],
+    "cells": [
+     "test-k2-v1|plan|P+M|canon:g-l1-dirty-cup:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|e7fac9c9b529c8105ca2e9eb260230a0|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T03:11:23",
+    "wall_s": 13.83
+   },
+   {
+    "attempt": 1,
+    "breaches": [
+     "summary.coords"
+    ],
+    "cells": [
+     "test-k2-v1|plan|P+M|canon:g-l1-dirty-cup:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|e7fac9c9b529c8105ca2e9eb260230a0|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T03:11:37",
+    "wall_s": 13.57
+   },
+   {
+    "attempt": 2,
+    "breaches": [],
+    "cells": [
+     "test-k2-v1|plan|P+M|canon:g-l1-dirty-cup:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|e7fac9c9b529c8105ca2e9eb260230a0|run0",
+    "status": "done",
+    "ts": "2026-10-21T03:14:19",
+    "wall_s": 161.89
+   }
+  ],
+  "e875caab102dc5644245af3b853e7a1f": [
+   {
+    "attempt": 0,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|G0|canon:g-l1-dirty-pan:en|r0",
+     "test-k2-v1|plan|O0|canon:g-l1-dirty-pan:en|r0",
+     "test-k2-v1|plan|P0|canon:g-l1-dirty-pan:en|r0"
+    ],
+    "key": "test-k2-v1|exec|e875caab102dc5644245af3b853e7a1f|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:08:16",
+    "wall_s": 14.07
+   },
+   {
+    "attempt": 1,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|G0|canon:g-l1-dirty-pan:en|r0",
+     "test-k2-v1|plan|O0|canon:g-l1-dirty-pan:en|r0",
+     "test-k2-v1|plan|P0|canon:g-l1-dirty-pan:en|r0"
+    ],
+    "key": "test-k2-v1|exec|e875caab102dc5644245af3b853e7a1f|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:08:29",
+    "wall_s": 13.72
+   },
+   {
+    "attempt": 2,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|G0|canon:g-l1-dirty-pan:en|r0",
+     "test-k2-v1|plan|O0|canon:g-l1-dirty-pan:en|r0",
+     "test-k2-v1|plan|P0|canon:g-l1-dirty-pan:en|r0"
+    ],
+    "key": "test-k2-v1|exec|e875caab102dc5644245af3b853e7a1f|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:08:44",
+    "wall_s": 14.35
+   }
+  ],
+  "e8e25d3ca928725ecb8215aa8a75ebdb": [
+   {
+    "attempt": 0,
+    "breaches": [],
+    "cells": [
+     "test-k2-v1|plan|O+M|canon:g-l1-empty-pot:en|r0",
+     "test-k2-v1|plan|P+M|canon:g-l1-empty-pot:en|r0"
+    ],
+    "key": "test-k2-v1|exec|e8e25d3ca928725ecb8215aa8a75ebdb|run0",
+    "status": "done",
+    "ts": "2026-10-21T02:15:01",
+    "wall_s": 53.55
+   }
+  ],
+  "ec1337bad5cb8acf27b95566a2c18ef7": [
+   {
+    "attempt": 0,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|G+M|canon:g-l3-stale-coffee:fa|r0",
+     "test-k2-v1|plan|P+M|canon:g-l3-stale-coffee:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|ec1337bad5cb8acf27b95566a2c18ef7|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:34:14",
+    "wall_s": 42.83
+   },
+   {
+    "attempt": 1,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|G+M|canon:g-l3-stale-coffee:fa|r0",
+     "test-k2-v1|plan|P+M|canon:g-l3-stale-coffee:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|ec1337bad5cb8acf27b95566a2c18ef7|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:34:55",
+    "wall_s": 40.93
+   },
+   {
+    "attempt": 2,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|G+M|canon:g-l3-stale-coffee:fa|r0",
+     "test-k2-v1|plan|P+M|canon:g-l3-stale-coffee:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|ec1337bad5cb8acf27b95566a2c18ef7|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:35:37",
+    "wall_s": 42.06
+   }
+  ],
+  "f165da9f179729cad74dce2ee83526f7": [
+   {
+    "attempt": 0,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|O0|canon:g-l3-dirty-cups:fa|r0",
+     "test-k2-v1|plan|P0|canon:g-l3-dirty-cups:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|f165da9f179729cad74dce2ee83526f7|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:43:28",
+    "wall_s": 47.12
+   },
+   {
+    "attempt": 1,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|O0|canon:g-l3-dirty-cups:fa|r0",
+     "test-k2-v1|plan|P0|canon:g-l3-dirty-cups:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|f165da9f179729cad74dce2ee83526f7|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:44:16",
+    "wall_s": 48.3
+   },
+   {
+    "attempt": 2,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|O0|canon:g-l3-dirty-cups:fa|r0",
+     "test-k2-v1|plan|P0|canon:g-l3-dirty-cups:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|f165da9f179729cad74dce2ee83526f7|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:45:04",
+    "wall_s": 47.98
+   }
+  ],
+  "f2da07405592cffc82d769f4f5368d03": [
+   {
+    "attempt": 0,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|G+M|canon:g-l2-faucet-on-pickup-sponge:en|r0"
+    ],
+    "key": "test-k2-v1|exec|f2da07405592cffc82d769f4f5368d03|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:40:03",
+    "wall_s": 13.99
+   },
+   {
+    "attempt": 1,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|G+M|canon:g-l2-faucet-on-pickup-sponge:en|r0"
+    ],
+    "key": "test-k2-v1|exec|f2da07405592cffc82d769f4f5368d03|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:40:17",
+    "wall_s": 13.81
+   },
+   {
+    "attempt": 2,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|G+M|canon:g-l2-faucet-on-pickup-sponge:en|r0"
+    ],
+    "key": "test-k2-v1|exec|f2da07405592cffc82d769f4f5368d03|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:40:32",
+    "wall_s": 13.93
+   }
+  ],
+  "f5e4c95f073a4808909f794c1823f800": [
+   {
+    "attempt": 0,
+    "breaches": [],
+    "cells": [
+     "test-k2-v1|plan|G+M|canon:g-l2-salt-then-light-off:en|r0",
+     "test-k2-v1|plan|O+M|canon:g-l2-salt-then-light-off:en|r0",
+     "test-k2-v1|plan|P+M|canon:g-l2-salt-then-light-off:en|r0"
+    ],
+    "key": "test-k2-v1|exec|f5e4c95f073a4808909f794c1823f800|run0",
+    "status": "done",
+    "ts": "2026-10-21T02:33:31",
+    "wall_s": 38.98
+   }
+  ],
+  "f79f7a7a7f36d390cb4c56b5f4da89de": [
+   {
+    "attempt": 0,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|G0|canon:g-l3-stale-coffee:fa|r0",
+     "test-k2-v1|plan|O0|canon:g-l3-stale-coffee:fa|r0",
+     "test-k2-v1|plan|P0|canon:g-l3-stale-coffee:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|f79f7a7a7f36d390cb4c56b5f4da89de|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:36:19",
+    "wall_s": 42.44
+   },
+   {
+    "attempt": 1,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|G0|canon:g-l3-stale-coffee:fa|r0",
+     "test-k2-v1|plan|O0|canon:g-l3-stale-coffee:fa|r0",
+     "test-k2-v1|plan|P0|canon:g-l3-stale-coffee:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|f79f7a7a7f36d390cb4c56b5f4da89de|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:37:01",
+    "wall_s": 41.92
+   },
+   {
+    "attempt": 2,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|G0|canon:g-l3-stale-coffee:fa|r0",
+     "test-k2-v1|plan|O0|canon:g-l3-stale-coffee:fa|r0",
+     "test-k2-v1|plan|P0|canon:g-l3-stale-coffee:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|f79f7a7a7f36d390cb4c56b5f4da89de|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:37:43",
+    "wall_s": 41.46
+   }
+  ],
+  "fdd0ba768a4ad1201e23af49c4096756": [
+   {
+    "attempt": 0,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|O+M|canon:g-l2-faucet-on-pickup-sponge:en|r0",
+     "test-k2-v1|plan|P+M|canon:g-l2-faucet-on-pickup-sponge:en|r0"
+    ],
+    "key": "test-k2-v1|exec|fdd0ba768a4ad1201e23af49c4096756|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:40:46",
+    "wall_s": 14.15
+   },
+   {
+    "attempt": 1,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|O+M|canon:g-l2-faucet-on-pickup-sponge:en|r0",
+     "test-k2-v1|plan|P+M|canon:g-l2-faucet-on-pickup-sponge:en|r0"
+    ],
+    "key": "test-k2-v1|exec|fdd0ba768a4ad1201e23af49c4096756|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:41:00",
+    "wall_s": 13.87
+   },
+   {
+    "attempt": 2,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|O+M|canon:g-l2-faucet-on-pickup-sponge:en|r0",
+     "test-k2-v1|plan|P+M|canon:g-l2-faucet-on-pickup-sponge:en|r0"
+    ],
+    "key": "test-k2-v1|exec|fdd0ba768a4ad1201e23af49c4096756|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:41:14",
+    "wall_s": 14.13
+   }
+  ],
+  "fe87450afcde9f6e8d955a3142211b2f": [
+   {
+    "attempt": 0,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|O+M|canon:g-l3-dirty-cups:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|fe87450afcde9f6e8d955a3142211b2f|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:48:17",
+    "wall_s": 49.13
+   },
+   {
+    "attempt": 1,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|O+M|canon:g-l3-dirty-cups:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|fe87450afcde9f6e8d955a3142211b2f|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:49:06",
+    "wall_s": 49.16
+   },
+   {
+    "attempt": 2,
+    "breaches": [
+     "summary"
+    ],
+    "cells": [
+     "test-k2-v1|plan|O+M|canon:g-l3-dirty-cups:fa|r0"
+    ],
+    "key": "test-k2-v1|exec|fe87450afcde9f6e8d955a3142211b2f|run0",
+    "status": "blocked_state",
+    "ts": "2026-10-21T02:49:58",
+    "wall_s": 50.78
+   }
+  ]
+ }
+}

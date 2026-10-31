@@ -1,0 +1,2055 @@
+{
+ "B": 20000,
+ "contrasts": {
+  "E4B+M - E4B0 (larger-planner rows)": {
+   "estimate": 0.10236963696369637,
+   "estimate_pp": 10.2,
+   "existing_ci95_pp": [
+    6.2,
+    14.4
+   ],
+   "existing_excludes_zero": true,
+   "families": {
+    "in_all_three": 36,
+    "in_two_or_more": 41,
+    "per_kitchen": [
+     42,
+     40,
+     37
+    ],
+    "union": 42
+   },
+   "independent_max_dev_pp": 0.1,
+   "independent_other_seeds": [
+    [
+     6.1,
+     14.5
+    ],
+    [
+     6.1,
+     14.4
+    ],
+    [
+     6.1,
+     14.4
+    ],
+    [
+     6.1,
+     14.5
+    ],
+    [
+     6.1,
+     14.4
+    ]
+   ],
+   "independent_reproduced": [
+    6.2,
+    14.4
+   ],
+   "independent_se_pp": 2.12,
+   "joint_ci95_pp": [
+    4.0,
+    17.0
+   ],
+   "joint_excludes_zero": true,
+   "joint_kitchen_correlation": {
+    "K1-K2": 0.673,
+    "K1-K3": 0.824,
+    "K2-K3": 0.722
+   },
+   "joint_other_seeds": [
+    [
+     4.0,
+     17.1
+    ],
+    [
+     4.0,
+     17.1
+    ],
+    [
+     4.0,
+     17.0
+    ],
+    [
+     3.9,
+     17.0
+    ],
+    [
+     3.9,
+     17.1
+    ]
+   ],
+   "joint_se_pp": 3.32,
+   "joint_zero_denominator_replicates": 0,
+   "per_kitchen_pp": [
+    14.8,
+    7.0,
+    8.9
+   ],
+   "width_ratio_joint_over_existing": 1.585
+  },
+  "E4B+M - G+M (larger-planner rows)": {
+   "estimate": 0.008501650165016502,
+   "estimate_pp": 0.9,
+   "existing_ci95_pp": [
+    -2.1,
+    3.9
+   ],
+   "existing_excludes_zero": false,
+   "families": {
+    "in_all_three": 36,
+    "in_two_or_more": 41,
+    "per_kitchen": [
+     42,
+     40,
+     37
+    ],
+    "union": 42
+   },
+   "independent_max_dev_pp": 0.1,
+   "independent_other_seeds": [
+    [
+     -2.2,
+     4.0
+    ],
+    [
+     -2.2,
+     4.0
+    ],
+    [
+     -2.1,
+     3.9
+    ],
+    [
+     -2.1,
+     4.0
+    ],
+    [
+     -2.2,
+     4.0
+    ]
+   ],
+   "independent_reproduced": [
+    -2.1,
+    3.9
+   ],
+   "independent_se_pp": 1.54,
+   "joint_ci95_pp": [
+    -3.3,
+    5.3
+   ],
+   "joint_excludes_zero": false,
+   "joint_kitchen_correlation": {
+    "K1-K2": 0.594,
+    "K1-K3": 0.513,
+    "K2-K3": 0.445
+   },
+   "joint_other_seeds": [
+    [
+     -3.4,
+     5.3
+    ],
+    [
+     -3.3,
+     5.3
+    ],
+    [
+     -3.4,
+     5.3
+    ],
+    [
+     -3.3,
+     5.4
+    ],
+    [
+     -3.3,
+     5.3
+    ]
+   ],
+   "joint_se_pp": 2.19,
+   "joint_zero_denominator_replicates": 0,
+   "per_kitchen_pp": [
+    -2.4,
+    0.0,
+    5.0
+   ],
+   "width_ratio_joint_over_existing": 1.433
+  },
+  "E4B0 - G+M (larger-planner rows)": {
+   "estimate": -0.09056765676567657,
+   "estimate_pp": -9.1,
+   "existing_ci95_pp": [
+    -14.1,
+    -4.1
+   ],
+   "existing_excludes_zero": true,
+   "families": {
+    "in_all_three": 36,
+    "in_two_or_more": 41,
+    "per_kitchen": [
+     42,
+     40,
+     37
+    ],
+    "union": 42
+   },
+   "independent_max_dev_pp": 0.1,
+   "independent_other_seeds": [
+    [
+     -14.1,
+     -4.1
+    ],
+    [
+     -14.1,
+     -4.1
+    ],
+    [
+     -14.0,
+     -4.1
+    ],
+    [
+     -14.0,
+     -4.1
+    ],
+    [
+     -14.0,
+     -4.0
+    ]
+   ],
+   "independent_reproduced": [
+    -14.1,
+    -4.1
+   ],
+   "independent_se_pp": 2.53,
+   "joint_ci95_pp": [
+    -16.8,
+    -1.7
+   ],
+   "joint_excludes_zero": true,
+   "joint_kitchen_correlation": {
+    "K1-K2": 0.688,
+    "K1-K3": 0.647,
+    "K2-K3": 0.685
+   },
+   "joint_other_seeds": [
+    [
+     -17.0,
+     -1.8
+    ],
+    [
+     -16.8,
+     -1.7
+    ],
+    [
+     -16.9,
+     -1.8
+    ],
+    [
+     -16.9,
+     -1.7
+    ],
+    [
+     -16.8,
+     -1.6
+    ]
+   ],
+   "joint_se_pp": 3.84,
+   "joint_zero_denominator_replicates": 0,
+   "per_kitchen_pp": [
+    -17.2,
+    -7.0,
+    -3.0
+   ],
+   "width_ratio_joint_over_existing": 1.51
+  },
+  "E4B0 - G0 (larger-planner rows)": {
+   "estimate": 0.043452145214521454,
+   "estimate_pp": 4.3,
+   "existing_ci95_pp": [
+    0.0,
+    8.7
+   ],
+   "existing_excludes_zero": false,
+   "families": {
+    "in_all_three": 36,
+    "in_two_or_more": 41,
+    "per_kitchen": [
+     42,
+     40,
+     37
+    ],
+    "union": 42
+   },
+   "independent_max_dev_pp": 0.1,
+   "independent_other_seeds": [
+    [
+     0.0,
+     8.7
+    ],
+    [
+     0.0,
+     8.7
+    ],
+    [
+     0.0,
+     8.7
+    ],
+    [
+     -0.0,
+     8.7
+    ],
+    [
+     0.0,
+     8.6
+    ]
+   ],
+   "independent_reproduced": [
+    0.0,
+    8.7
+   ],
+   "independent_se_pp": 2.21,
+   "joint_ci95_pp": [
+    -1.5,
+    10.6
+   ],
+   "joint_excludes_zero": false,
+   "joint_kitchen_correlation": {
+    "K1-K2": 0.312,
+    "K1-K3": 0.704,
+    "K2-K3": 0.455
+   },
+   "joint_other_seeds": [
+    [
+     -1.6,
+     10.7
+    ],
+    [
+     -1.6,
+     10.8
+    ],
+    [
+     -1.6,
+     10.6
+    ],
+    [
+     -1.6,
+     10.6
+    ],
+    [
+     -1.5,
+     10.8
+    ]
+   ],
+   "joint_se_pp": 3.12,
+   "joint_zero_denominator_replicates": 0,
+   "per_kitchen_pp": [
+    -0.4,
+    7.0,
+    6.4
+   ],
+   "width_ratio_joint_over_existing": 1.391
+  },
+  "English G+M - G0": {
+   "estimate": 0.058197706281329975,
+   "estimate_pp": 5.8,
+   "existing_ci95_pp": [
+    1.1,
+    10.5
+   ],
+   "existing_excludes_zero": true,
+   "families": {
+    "in_all_three": 34,
+    "in_two_or_more": 41,
+    "per_kitchen": [
+     42,
+     40,
+     35
+    ],
+    "union": 42
+   },
+   "independent_max_dev_pp": 0.1,
+   "independent_other_seeds": [
+    [
+     1.1,
+     10.5
+    ],
+    [
+     1.1,
+     10.5
+    ],
+    [
+     1.1,
+     10.4
+    ],
+    [
+     1.0,
+     10.5
+    ],
+    [
+     1.1,
+     10.5
+    ]
+   ],
+   "independent_reproduced": [
+    1.1,
+    10.5
+   ],
+   "independent_se_pp": 2.41,
+   "joint_ci95_pp": [
+    -0.4,
+    12.3
+   ],
+   "joint_excludes_zero": false,
+   "joint_kitchen_correlation": {
+    "K1-K2": 0.35,
+    "K1-K3": 0.583,
+    "K2-K3": 0.343
+   },
+   "joint_other_seeds": [
+    [
+     -0.5,
+     12.4
+    ],
+    [
+     -0.6,
+     12.4
+    ],
+    [
+     -0.5,
+     12.3
+    ],
+    [
+     -0.7,
+     12.3
+    ],
+    [
+     -0.5,
+     12.4
+    ]
+   ],
+   "joint_se_pp": 3.25,
+   "joint_zero_denominator_replicates": 0,
+   "per_kitchen_pp": [
+    7.3,
+    6.1,
+    4.1
+   ],
+   "width_ratio_joint_over_existing": 1.351
+  },
+  "G+M - G0": {
+   "estimate": 0.13401980198019803,
+   "estimate_pp": 13.4,
+   "existing_ci95_pp": [
+    9.0,
+    17.8
+   ],
+   "existing_excludes_zero": true,
+   "families": {
+    "in_all_three": 36,
+    "in_two_or_more": 41,
+    "per_kitchen": [
+     42,
+     40,
+     37
+    ],
+    "union": 42
+   },
+   "independent_max_dev_pp": 0.1,
+   "independent_other_seeds": [
+    [
+     8.9,
+     17.8
+    ],
+    [
+     9.0,
+     17.7
+    ],
+    [
+     9.0,
+     17.7
+    ],
+    [
+     8.9,
+     17.8
+    ],
+    [
+     9.0,
+     17.8
+    ]
+   ],
+   "independent_reproduced": [
+    9.0,
+    17.8
+   ],
+   "independent_se_pp": 2.24,
+   "joint_ci95_pp": [
+    7.2,
+    19.7
+   ],
+   "joint_excludes_zero": true,
+   "joint_kitchen_correlation": {
+    "K1-K2": 0.672,
+    "K1-K3": 0.608,
+    "K2-K3": 0.301
+   },
+   "joint_other_seeds": [
+    [
+     7.1,
+     19.8
+    ],
+    [
+     7.1,
+     19.7
+    ],
+    [
+     7.2,
+     19.7
+    ],
+    [
+     7.0,
+     19.8
+    ],
+    [
+     7.1,
+     19.7
+    ]
+   ],
+   "joint_se_pp": 3.2,
+   "joint_zero_denominator_replicates": 0,
+   "per_kitchen_pp": [
+    16.8,
+    14.0,
+    9.4
+   ],
+   "width_ratio_joint_over_existing": 1.42
+  },
+  "G+M - G0 (larger-planner rows)": {
+   "estimate": 0.13401980198019803,
+   "estimate_pp": 13.4,
+   "existing_ci95_pp": [
+    9.0,
+    17.8
+   ],
+   "existing_excludes_zero": true,
+   "families": {
+    "in_all_three": 36,
+    "in_two_or_more": 41,
+    "per_kitchen": [
+     42,
+     40,
+     37
+    ],
+    "union": 42
+   },
+   "independent_max_dev_pp": 0.1,
+   "independent_other_seeds": [
+    [
+     8.9,
+     17.8
+    ],
+    [
+     9.0,
+     17.7
+    ],
+    [
+     9.0,
+     17.7
+    ],
+    [
+     8.9,
+     17.8
+    ],
+    [
+     9.0,
+     17.8
+    ]
+   ],
+   "independent_reproduced": [
+    9.0,
+    17.8
+   ],
+   "independent_se_pp": 2.24,
+   "joint_ci95_pp": [
+    7.2,
+    19.7
+   ],
+   "joint_excludes_zero": true,
+   "joint_kitchen_correlation": {
+    "K1-K2": 0.672,
+    "K1-K3": 0.608,
+    "K2-K3": 0.301
+   },
+   "joint_other_seeds": [
+    [
+     7.1,
+     19.8
+    ],
+    [
+     7.1,
+     19.7
+    ],
+    [
+     7.2,
+     19.7
+    ],
+    [
+     7.0,
+     19.8
+    ],
+    [
+     7.1,
+     19.7
+    ]
+   ],
+   "joint_se_pp": 3.2,
+   "joint_zero_denominator_replicates": 0,
+   "per_kitchen_pp": [
+    16.8,
+    14.0,
+    9.4
+   ],
+   "width_ratio_joint_over_existing": 1.42
+  },
+  "Persian G+M - G0": {
+   "estimate": 0.21268817204301074,
+   "estimate_pp": 21.3,
+   "existing_ci95_pp": [
+    15.7,
+    26.7
+   ],
+   "existing_excludes_zero": true,
+   "families": {
+    "in_all_three": 36,
+    "in_two_or_more": 41,
+    "per_kitchen": [
+     42,
+     40,
+     37
+    ],
+    "union": 42
+   },
+   "independent_max_dev_pp": 0.1,
+   "independent_other_seeds": [
+    [
+     15.7,
+     26.7
+    ],
+    [
+     15.7,
+     26.6
+    ],
+    [
+     15.7,
+     26.6
+    ],
+    [
+     15.6,
+     26.6
+    ],
+    [
+     15.7,
+     26.6
+    ]
+   ],
+   "independent_reproduced": [
+    15.7,
+    26.7
+   ],
+   "independent_se_pp": 2.78,
+   "joint_ci95_pp": [
+    13.1,
+    29.2
+   ],
+   "joint_excludes_zero": true,
+   "joint_kitchen_correlation": {
+    "K1-K2": 0.66,
+    "K1-K3": 0.722,
+    "K2-K3": 0.36
+   },
+   "joint_other_seeds": [
+    [
+     13.0,
+     29.2
+    ],
+    [
+     13.0,
+     29.1
+    ],
+    [
+     13.2,
+     29.2
+    ],
+    [
+     13.0,
+     29.2
+    ],
+    [
+     13.1,
+     29.1
+    ]
+   ],
+   "joint_se_pp": 4.1,
+   "joint_zero_denominator_replicates": 0,
+   "per_kitchen_pp": [
+    25.8,
+    23.0,
+    15.0
+   ],
+   "width_ratio_joint_over_existing": 1.464
+  },
+  "Q9B+M - G+M (larger-planner rows)": {
+   "estimate": -0.14262046204620463,
+   "estimate_pp": -14.3,
+   "existing_ci95_pp": [
+    -22.5,
+    -6.1
+   ],
+   "existing_excludes_zero": true,
+   "families": {
+    "in_all_three": 36,
+    "in_two_or_more": 41,
+    "per_kitchen": [
+     42,
+     40,
+     37
+    ],
+    "union": 42
+   },
+   "independent_max_dev_pp": 0.2,
+   "independent_other_seeds": [
+    [
+     -22.5,
+     -6.2
+    ],
+    [
+     -22.7,
+     -6.1
+    ],
+    [
+     -22.7,
+     -6.2
+    ],
+    [
+     -22.5,
+     -6.1
+    ],
+    [
+     -22.7,
+     -6.1
+    ]
+   ],
+   "independent_reproduced": [
+    -22.5,
+    -6.1
+   ],
+   "independent_se_pp": 4.17,
+   "joint_ci95_pp": [
+    -28.7,
+    -1.2
+   ],
+   "joint_excludes_zero": true,
+   "joint_kitchen_correlation": {
+    "K1-K2": 0.877,
+    "K1-K3": 0.885,
+    "K2-K3": 0.878
+   },
+   "joint_other_seeds": [
+    [
+     -28.6,
+     -1.4
+    ],
+    [
+     -28.6,
+     -1.3
+    ],
+    [
+     -28.7,
+     -1.3
+    ],
+    [
+     -28.5,
+     -1.2
+    ],
+    [
+     -28.5,
+     -1.3
+    ]
+   ],
+   "joint_se_pp": 7.01,
+   "joint_zero_denominator_replicates": 0,
+   "per_kitchen_pp": [
+    -12.4,
+    -19.0,
+    -11.4
+   ],
+   "width_ratio_joint_over_existing": 1.677
+  },
+  "Q9B+M - Q9B0 (larger-planner rows)": {
+   "estimate": 0.021683168316831685,
+   "estimate_pp": 2.2,
+   "existing_ci95_pp": [
+    -2.5,
+    6.7
+   ],
+   "existing_excludes_zero": false,
+   "families": {
+    "in_all_three": 36,
+    "in_two_or_more": 41,
+    "per_kitchen": [
+     42,
+     40,
+     37
+    ],
+    "union": 42
+   },
+   "independent_max_dev_pp": 0.1,
+   "independent_other_seeds": [
+    [
+     -2.5,
+     6.8
+    ],
+    [
+     -2.4,
+     6.8
+    ],
+    [
+     -2.4,
+     6.8
+    ],
+    [
+     -2.5,
+     6.8
+    ],
+    [
+     -2.5,
+     6.8
+    ]
+   ],
+   "independent_reproduced": [
+    -2.5,
+    6.7
+   ],
+   "independent_se_pp": 2.34,
+   "joint_ci95_pp": [
+    -4.3,
+    9.2
+   ],
+   "joint_excludes_zero": false,
+   "joint_kitchen_correlation": {
+    "K1-K2": 0.451,
+    "K1-K3": 0.643,
+    "K2-K3": 0.672
+   },
+   "joint_other_seeds": [
+    [
+     -4.3,
+     9.3
+    ],
+    [
+     -4.2,
+     9.4
+    ],
+    [
+     -4.2,
+     9.3
+    ],
+    [
+     -4.2,
+     9.3
+    ],
+    [
+     -4.2,
+     9.1
+    ]
+   ],
+   "joint_se_pp": 3.46,
+   "joint_zero_denominator_replicates": 0,
+   "per_kitchen_pp": [
+    8.0,
+    -1.0,
+    -0.5
+   ],
+   "width_ratio_joint_over_existing": 1.467
+  },
+  "Q9B0 - G+M (larger-planner rows)": {
+   "estimate": -0.16265346534653466,
+   "estimate_pp": -16.3,
+   "existing_ci95_pp": [
+    -23.9,
+    -8.5
+   ],
+   "existing_excludes_zero": true,
+   "families": {
+    "in_all_three": 36,
+    "in_two_or_more": 41,
+    "per_kitchen": [
+     42,
+     40,
+     37
+    ],
+    "union": 42
+   },
+   "independent_max_dev_pp": 0.2,
+   "independent_other_seeds": [
+    [
+     -23.9,
+     -8.5
+    ],
+    [
+     -23.8,
+     -8.4
+    ],
+    [
+     -23.8,
+     -8.5
+    ],
+    [
+     -23.8,
+     -8.4
+    ],
+    [
+     -23.8,
+     -8.3
+    ]
+   ],
+   "independent_reproduced": [
+    -23.9,
+    -8.5
+   ],
+   "independent_se_pp": 3.9,
+   "joint_ci95_pp": [
+    -29.0,
+    -3.9
+   ],
+   "joint_excludes_zero": true,
+   "joint_kitchen_correlation": {
+    "K1-K2": 0.877,
+    "K1-K3": 0.87,
+    "K2-K3": 0.768
+   },
+   "joint_other_seeds": [
+    [
+     -29.0,
+     -3.9
+    ],
+    [
+     -29.1,
+     -3.8
+    ],
+    [
+     -29.0,
+     -3.8
+    ],
+    [
+     -28.9,
+     -3.7
+    ],
+    [
+     -28.9,
+     -3.7
+    ]
+   ],
+   "joint_se_pp": 6.43,
+   "joint_zero_denominator_replicates": 0,
+   "per_kitchen_pp": [
+    -20.4,
+    -18.0,
+    -10.4
+   ],
+   "width_ratio_joint_over_existing": 1.63
+  },
+  "ablation O no_procedures - O+M": {
+   "estimate": -0.00434983498349835,
+   "estimate_pp": -0.4,
+   "existing_ci95_pp": [
+    -2.2,
+    1.2
+   ],
+   "existing_excludes_zero": false,
+   "families": {
+    "in_all_three": 36,
+    "in_two_or_more": 41,
+    "per_kitchen": [
+     42,
+     40,
+     37
+    ],
+    "union": 42
+   },
+   "independent_max_dev_pp": 0.0,
+   "independent_other_seeds": [
+    [
+     -2.2,
+     1.2
+    ],
+    [
+     -2.2,
+     1.2
+    ],
+    [
+     -2.2,
+     1.2
+    ],
+    [
+     -2.2,
+     1.2
+    ],
+    [
+     -2.2,
+     1.2
+    ]
+   ],
+   "independent_reproduced": [
+    -2.2,
+    1.2
+   ],
+   "independent_se_pp": 0.87,
+   "joint_ci95_pp": [
+    -2.9,
+    1.6
+   ],
+   "joint_excludes_zero": false,
+   "joint_kitchen_correlation": {
+    "K1-K2": 0.569,
+    "K1-K3": 0.068,
+    "K2-K3": 0.429
+   },
+   "joint_other_seeds": [
+    [
+     -2.9,
+     1.6
+    ],
+    [
+     -2.9,
+     1.7
+    ],
+    [
+     -2.9,
+     1.6
+    ],
+    [
+     -2.9,
+     1.6
+    ],
+    [
+     -2.9,
+     1.7
+    ]
+   ],
+   "joint_se_pp": 1.14,
+   "joint_zero_denominator_replicates": 0,
+   "per_kitchen_pp": [
+    -2.8,
+    1.0,
+    0.5
+   ],
+   "width_ratio_joint_over_existing": 1.324
+  },
+  "ablation O no_req_proc - O+M": {
+   "estimate": -0.010966996699669967,
+   "estimate_pp": -1.1,
+   "existing_ci95_pp": [
+    -4.0,
+    2.2
+   ],
+   "existing_excludes_zero": false,
+   "families": {
+    "in_all_three": 36,
+    "in_two_or_more": 41,
+    "per_kitchen": [
+     42,
+     40,
+     37
+    ],
+    "union": 42
+   },
+   "independent_max_dev_pp": 0.1,
+   "independent_other_seeds": [
+    [
+     -4.1,
+     2.3
+    ],
+    [
+     -4.0,
+     2.3
+    ],
+    [
+     -4.0,
+     2.2
+    ],
+    [
+     -4.0,
+     2.2
+    ],
+    [
+     -4.1,
+     2.3
+    ]
+   ],
+   "independent_reproduced": [
+    -4.0,
+    2.2
+   ],
+   "independent_se_pp": 1.6,
+   "joint_ci95_pp": [
+    -4.7,
+    2.8
+   ],
+   "joint_excludes_zero": false,
+   "joint_kitchen_correlation": {
+    "K1-K2": 0.0,
+    "K1-K3": -0.014,
+    "K2-K3": 0.706
+   },
+   "joint_other_seeds": [
+    [
+     -4.7,
+     2.9
+    ],
+    [
+     -4.8,
+     3.0
+    ],
+    [
+     -4.8,
+     2.9
+    ],
+    [
+     -4.8,
+     3.0
+    ],
+    [
+     -4.8,
+     3.0
+    ]
+   ],
+   "joint_se_pp": 1.95,
+   "joint_zero_denominator_replicates": 0,
+   "per_kitchen_pp": [
+    -4.8,
+    2.5,
+    -1.0
+   ],
+   "width_ratio_joint_over_existing": 1.21
+  },
+  "ablation O no_request - O+M": {
+   "estimate": -0.02921782178217822,
+   "estimate_pp": -2.9,
+   "existing_ci95_pp": [
+    -4.4,
+    -1.4
+   ],
+   "existing_excludes_zero": true,
+   "families": {
+    "in_all_three": 36,
+    "in_two_or_more": 41,
+    "per_kitchen": [
+     42,
+     40,
+     37
+    ],
+    "union": 42
+   },
+   "independent_max_dev_pp": 0.0,
+   "independent_other_seeds": [
+    [
+     -4.4,
+     -1.4
+    ],
+    [
+     -4.4,
+     -1.4
+    ],
+    [
+     -4.4,
+     -1.4
+    ],
+    [
+     -4.4,
+     -1.4
+    ],
+    [
+     -4.4,
+     -1.4
+    ]
+   ],
+   "independent_reproduced": [
+    -4.4,
+    -1.4
+   ],
+   "independent_se_pp": 0.77,
+   "joint_ci95_pp": [
+    -5.0,
+    -1.0
+   ],
+   "joint_excludes_zero": true,
+   "joint_kitchen_correlation": {
+    "K1-K2": 0.662,
+    "K1-K3": 0.095,
+    "K2-K3": 0.473
+   },
+   "joint_other_seeds": [
+    [
+     -5.0,
+     -1.0
+    ],
+    [
+     -5.0,
+     -0.9
+    ],
+    [
+     -5.0,
+     -1.0
+    ],
+    [
+     -5.0,
+     -1.0
+    ],
+    [
+     -5.0,
+     -0.9
+    ]
+   ],
+   "joint_se_pp": 1.04,
+   "joint_zero_denominator_replicates": 0,
+   "per_kitchen_pp": [
+    -2.8,
+    -2.5,
+    -3.5
+   ],
+   "width_ratio_joint_over_existing": 1.333
+  },
+  "ablation O only_req_proc - O+M": {
+   "estimate": 0.0,
+   "estimate_pp": 0.0,
+   "existing_ci95_pp": [
+    -0.5,
+    0.6
+   ],
+   "existing_excludes_zero": false,
+   "families": {
+    "in_all_three": 36,
+    "in_two_or_more": 41,
+    "per_kitchen": [
+     42,
+     40,
+     37
+    ],
+    "union": 42
+   },
+   "independent_max_dev_pp": 0.0,
+   "independent_other_seeds": [
+    [
+     -0.5,
+     0.6
+    ],
+    [
+     -0.5,
+     0.6
+    ],
+    [
+     -0.5,
+     0.6
+    ],
+    [
+     -0.5,
+     0.6
+    ],
+    [
+     -0.5,
+     0.6
+    ]
+   ],
+   "independent_reproduced": [
+    -0.5,
+    0.6
+   ],
+   "independent_se_pp": 0.27,
+   "joint_ci95_pp": [
+    -0.5,
+    0.6
+   ],
+   "joint_excludes_zero": false,
+   "joint_kitchen_correlation": {
+    "K1-K2": null,
+    "K1-K3": null,
+    "K2-K3": null
+   },
+   "joint_other_seeds": [
+    [
+     -0.5,
+     0.6
+    ],
+    [
+     -0.5,
+     0.6
+    ],
+    [
+     -0.5,
+     0.6
+    ],
+    [
+     -0.5,
+     0.6
+    ],
+    [
+     -0.5,
+     0.6
+    ]
+   ],
+   "joint_se_pp": 0.27,
+   "joint_zero_denominator_replicates": 0,
+   "per_kitchen_pp": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "width_ratio_joint_over_existing": 1.0
+  },
+  "ablation O+M - O0": {
+   "estimate": 0.020283828382838282,
+   "estimate_pp": 2.0,
+   "existing_ci95_pp": [
+    -1.4,
+    5.4
+   ],
+   "existing_excludes_zero": false,
+   "families": {
+    "in_all_three": 36,
+    "in_two_or_more": 41,
+    "per_kitchen": [
+     42,
+     40,
+     37
+    ],
+    "union": 42
+   },
+   "independent_max_dev_pp": 0.1,
+   "independent_other_seeds": [
+    [
+     -1.5,
+     5.5
+    ],
+    [
+     -1.4,
+     5.4
+    ],
+    [
+     -1.5,
+     5.5
+    ],
+    [
+     -1.4,
+     5.4
+    ],
+    [
+     -1.4,
+     5.5
+    ]
+   ],
+   "independent_reproduced": [
+    -1.4,
+    5.4
+   ],
+   "independent_se_pp": 1.75,
+   "joint_ci95_pp": [
+    -1.9,
+    6.2
+   ],
+   "joint_excludes_zero": false,
+   "joint_kitchen_correlation": {
+    "K1-K2": 0.062,
+    "K1-K3": 0.277,
+    "K2-K3": 0.304
+   },
+   "joint_other_seeds": [
+    [
+     -2.0,
+     6.3
+    ],
+    [
+     -2.0,
+     6.2
+    ],
+    [
+     -2.0,
+     6.3
+    ],
+    [
+     -2.0,
+     6.2
+    ],
+    [
+     -2.0,
+     6.3
+    ]
+   ],
+   "joint_se_pp": 2.08,
+   "joint_zero_denominator_replicates": 0,
+   "per_kitchen_pp": [
+    5.6,
+    -1.0,
+    1.5
+   ],
+   "width_ratio_joint_over_existing": 1.191
+  },
+  "ablation irrelevant - G+M": {
+   "estimate": -0.15453795379537952,
+   "estimate_pp": -15.5,
+   "existing_ci95_pp": [
+    -19.9,
+    -10.8
+   ],
+   "existing_excludes_zero": true,
+   "families": {
+    "in_all_three": 36,
+    "in_two_or_more": 41,
+    "per_kitchen": [
+     42,
+     40,
+     37
+    ],
+    "union": 42
+   },
+   "independent_max_dev_pp": 0.1,
+   "independent_other_seeds": [
+    [
+     -20.0,
+     -10.8
+    ],
+    [
+     -19.9,
+     -10.9
+    ],
+    [
+     -19.9,
+     -10.8
+    ],
+    [
+     -20.0,
+     -10.9
+    ],
+    [
+     -20.0,
+     -10.8
+    ]
+   ],
+   "independent_reproduced": [
+    -19.9,
+    -10.8
+   ],
+   "independent_se_pp": 2.32,
+   "joint_ci95_pp": [
+    -22.4,
+    -8.5
+   ],
+   "joint_excludes_zero": true,
+   "joint_kitchen_correlation": {
+    "K1-K2": 0.655,
+    "K1-K3": 0.72,
+    "K2-K3": 0.685
+   },
+   "joint_other_seeds": [
+    [
+     -22.5,
+     -8.5
+    ],
+    [
+     -22.5,
+     -8.4
+    ],
+    [
+     -22.4,
+     -8.6
+    ],
+    [
+     -22.5,
+     -8.4
+    ],
+    [
+     -22.5,
+     -8.5
+    ]
+   ],
+   "joint_se_pp": 3.53,
+   "joint_zero_denominator_replicates": 0,
+   "per_kitchen_pp": [
+    -18.0,
+    -14.5,
+    -13.9
+   ],
+   "width_ratio_joint_over_existing": 1.527
+  },
+  "ablation no_procedures - G+M": {
+   "estimate": -0.055867986798679874,
+   "estimate_pp": -5.6,
+   "existing_ci95_pp": [
+    -8.8,
+    -2.4
+   ],
+   "existing_excludes_zero": true,
+   "families": {
+    "in_all_three": 36,
+    "in_two_or_more": 41,
+    "per_kitchen": [
+     42,
+     40,
+     37
+    ],
+    "union": 42
+   },
+   "independent_max_dev_pp": 0.1,
+   "independent_other_seeds": [
+    [
+     -8.8,
+     -2.5
+    ],
+    [
+     -8.8,
+     -2.5
+    ],
+    [
+     -8.8,
+     -2.5
+    ],
+    [
+     -8.9,
+     -2.4
+    ],
+    [
+     -8.9,
+     -2.5
+    ]
+   ],
+   "independent_reproduced": [
+    -8.8,
+    -2.4
+   ],
+   "independent_se_pp": 1.63,
+   "joint_ci95_pp": [
+    -10.2,
+    -1.3
+   ],
+   "joint_excludes_zero": true,
+   "joint_kitchen_correlation": {
+    "K1-K2": 0.411,
+    "K1-K3": 0.367,
+    "K2-K3": 0.751
+   },
+   "joint_other_seeds": [
+    [
+     -10.2,
+     -1.3
+    ],
+    [
+     -10.2,
+     -1.2
+    ],
+    [
+     -10.2,
+     -1.2
+    ],
+    [
+     -10.2,
+     -1.2
+    ],
+    [
+     -10.2,
+     -1.2
+    ]
+   ],
+   "joint_se_pp": 2.28,
+   "joint_zero_denominator_replicates": 0,
+   "per_kitchen_pp": [
+    -6.8,
+    -6.0,
+    -4.0
+   ],
+   "width_ratio_joint_over_existing": 1.391
+  },
+  "ablation no_req_proc - G+M": {
+   "estimate": -0.1054026402640264,
+   "estimate_pp": -10.5,
+   "existing_ci95_pp": [
+    -14.4,
+    -6.5
+   ],
+   "existing_excludes_zero": true,
+   "families": {
+    "in_all_three": 36,
+    "in_two_or_more": 41,
+    "per_kitchen": [
+     42,
+     40,
+     37
+    ],
+    "union": 42
+   },
+   "independent_max_dev_pp": 0.1,
+   "independent_other_seeds": [
+    [
+     -14.4,
+     -6.4
+    ],
+    [
+     -14.3,
+     -6.5
+    ],
+    [
+     -14.3,
+     -6.4
+    ],
+    [
+     -14.4,
+     -6.4
+    ],
+    [
+     -14.3,
+     -6.5
+    ]
+   ],
+   "independent_reproduced": [
+    -14.4,
+    -6.5
+   ],
+   "independent_se_pp": 2.02,
+   "joint_ci95_pp": [
+    -16.1,
+    -4.7
+   ],
+   "joint_excludes_zero": true,
+   "joint_kitchen_correlation": {
+    "K1-K2": 0.692,
+    "K1-K3": 0.499,
+    "K2-K3": 0.503
+   },
+   "joint_other_seeds": [
+    [
+     -16.1,
+     -4.6
+    ],
+    [
+     -16.1,
+     -4.6
+    ],
+    [
+     -16.1,
+     -4.7
+    ],
+    [
+     -16.1,
+     -4.5
+    ],
+    [
+     -16.0,
+     -4.5
+    ]
+   ],
+   "joint_se_pp": 2.91,
+   "joint_zero_denominator_replicates": 0,
+   "per_kitchen_pp": [
+    -13.2,
+    -10.5,
+    -7.9
+   ],
+   "width_ratio_joint_over_existing": 1.443
+  },
+  "ablation no_request - G+M": {
+   "estimate": -0.04296699669966997,
+   "estimate_pp": -4.3,
+   "existing_ci95_pp": [
+    -6.8,
+    -1.9
+   ],
+   "existing_excludes_zero": true,
+   "families": {
+    "in_all_three": 36,
+    "in_two_or_more": 41,
+    "per_kitchen": [
+     42,
+     40,
+     37
+    ],
+    "union": 42
+   },
+   "independent_max_dev_pp": 0.1,
+   "independent_other_seeds": [
+    [
+     -6.7,
+     -1.8
+    ],
+    [
+     -6.7,
+     -1.9
+    ],
+    [
+     -6.8,
+     -1.9
+    ],
+    [
+     -6.8,
+     -1.9
+    ],
+    [
+     -6.8,
+     -1.9
+    ]
+   ],
+   "independent_reproduced": [
+    -6.8,
+    -1.9
+   ],
+   "independent_se_pp": 1.25,
+   "joint_ci95_pp": [
+    -7.7,
+    -1.1
+   ],
+   "joint_excludes_zero": true,
+   "joint_kitchen_correlation": {
+    "K1-K2": 0.77,
+    "K1-K3": 0.323,
+    "K2-K3": 0.198
+   },
+   "joint_other_seeds": [
+    [
+     -7.8,
+     -1.1
+    ],
+    [
+     -7.8,
+     -1.1
+    ],
+    [
+     -7.7,
+     -1.1
+    ],
+    [
+     -7.8,
+     -1.1
+    ],
+    [
+     -7.8,
+     -1.1
+    ]
+   ],
+   "joint_se_pp": 1.71,
+   "joint_zero_denominator_replicates": 0,
+   "per_kitchen_pp": [
+    -6.4,
+    -5.5,
+    -1.0
+   ],
+   "width_ratio_joint_over_existing": 1.347
+  },
+  "ablation only_req_proc - G+M": {
+   "estimate": 0.0016501650165016502,
+   "estimate_pp": 0.2,
+   "existing_ci95_pp": [
+    -1.5,
+    1.7
+   ],
+   "existing_excludes_zero": false,
+   "families": {
+    "in_all_three": 36,
+    "in_two_or_more": 41,
+    "per_kitchen": [
+     42,
+     40,
+     37
+    ],
+    "union": 42
+   },
+   "independent_max_dev_pp": 0.1,
+   "independent_other_seeds": [
+    [
+     -1.5,
+     1.8
+    ],
+    [
+     -1.5,
+     1.7
+    ],
+    [
+     -1.5,
+     1.8
+    ],
+    [
+     -1.5,
+     1.8
+    ],
+    [
+     -1.5,
+     1.7
+    ]
+   ],
+   "independent_reproduced": [
+    -1.5,
+    1.7
+   ],
+   "independent_se_pp": 0.83,
+   "joint_ci95_pp": [
+    -2.2,
+    2.1
+   ],
+   "joint_excludes_zero": false,
+   "joint_kitchen_correlation": {
+    "K1-K2": 0.525,
+    "K1-K3": 0.419,
+    "K2-K3": 0.648
+   },
+   "joint_other_seeds": [
+    [
+     -2.1,
+     2.1
+    ],
+    [
+     -2.2,
+     2.1
+    ],
+    [
+     -2.2,
+     2.1
+    ],
+    [
+     -2.2,
+     2.2
+    ],
+    [
+     -2.1,
+     2.2
+    ]
+   ],
+   "joint_se_pp": 1.09,
+   "joint_zero_denominator_replicates": 0,
+   "per_kitchen_pp": [
+    0.0,
+    0.0,
+    0.5
+   ],
+   "width_ratio_joint_over_existing": 1.344
+  },
+  "ablation other_kitchen - G+M": {
+   "estimate": 1.6501650165016517e-05,
+   "estimate_pp": 0.0,
+   "existing_ci95_pp": [
+    -0.6,
+    0.6
+   ],
+   "existing_excludes_zero": false,
+   "families": {
+    "in_all_three": 36,
+    "in_two_or_more": 41,
+    "per_kitchen": [
+     42,
+     40,
+     37
+    ],
+    "union": 42
+   },
+   "independent_max_dev_pp": 0.0,
+   "independent_other_seeds": [
+    [
+     -0.6,
+     0.6
+    ],
+    [
+     -0.6,
+     0.6
+    ],
+    [
+     -0.6,
+     0.6
+    ],
+    [
+     -0.6,
+     0.6
+    ],
+    [
+     -0.6,
+     0.6
+    ]
+   ],
+   "independent_reproduced": [
+    -0.6,
+    0.6
+   ],
+   "independent_se_pp": 0.3,
+   "joint_ci95_pp": [
+    -0.6,
+    0.6
+   ],
+   "joint_excludes_zero": false,
+   "joint_kitchen_correlation": {
+    "K1-K2": 0.02,
+    "K1-K3": -0.01,
+    "K2-K3": 0.01
+   },
+   "joint_other_seeds": [
+    [
+     -0.6,
+     0.6
+    ],
+    [
+     -0.6,
+     0.6
+    ],
+    [
+     -0.6,
+     0.6
+    ],
+    [
+     -0.6,
+     0.6
+    ],
+    [
+     -0.6,
+     0.6
+    ]
+   ],
+   "joint_se_pp": 0.3,
+   "joint_zero_denominator_replicates": 0,
+   "per_kitchen_pp": [
+    0.0,
+    0.5,
+    -0.5
+   ],
+   "width_ratio_joint_over_existing": 1.0
+  },
+  "ablation rep - G+M": {
+   "estimate": -0.001316831683168317,
+   "estimate_pp": -0.1,
+   "existing_ci95_pp": [
+    -1.2,
+    0.9
+   ],
+   "existing_excludes_zero": false,
+   "families": {
+    "in_all_three": 36,
+    "in_two_or_more": 41,
+    "per_kitchen": [
+     42,
+     40,
+     37
+    ],
+    "union": 42
+   },
+   "independent_max_dev_pp": 0.1,
+   "independent_other_seeds": [
+    [
+     -1.2,
+     1.0
+    ],
+    [
+     -1.2,
+     0.9
+    ],
+    [
+     -1.2,
+     0.9
+    ],
+    [
+     -1.2,
+     0.9
+    ],
+    [
+     -1.2,
+     1.0
+    ]
+   ],
+   "independent_reproduced": [
+    -1.2,
+    0.9
+   ],
+   "independent_se_pp": 0.54,
+   "joint_ci95_pp": [
+    -1.2,
+    0.9
+   ],
+   "joint_excludes_zero": false,
+   "joint_kitchen_correlation": {
+    "K1-K2": 0.005,
+    "K1-K3": -0.011,
+    "K2-K3": -0.014
+   },
+   "joint_other_seeds": [
+    [
+     -1.2,
+     0.9
+    ],
+    [
+     -1.2,
+     1.0
+    ],
+    [
+     -1.2,
+     0.9
+    ],
+    [
+     -1.1,
+     1.0
+    ],
+    [
+     -1.2,
+     1.0
+    ]
+   ],
+   "joint_se_pp": 0.54,
+   "joint_zero_denominator_replicates": 0,
+   "per_kitchen_pp": [
+    -0.4,
+    0.5,
+    -0.5
+   ],
+   "width_ratio_joint_over_existing": 1.0
+  }
+ },
+ "definition": "The three-kitchen mean of compute_final.py (noexcl.stratified_mean) is the equal-weight mean of the three per-kitchen paired estimates; its 95 % interval resamples families INDEPENDENTLY within each kitchen (B = 20000, kitchen k seeded 20261010 + k). The instruction set is scene-agnostic, so the same items and families recur in every kitchen. The joint bootstrap below draws family ids ONCE per replicate from the union of the families of the contrast and applies the same multinomial weight to that family in every kitchen where it appears. Within a kitchen nothing else changes: a family's total is the sum of its items' paired differences (each item the mean over its languages, A36 paired common subset, shared executions kept), exactly the (_tot, _sizes) of analyze.contrast; each kitchen's replicate is the weighted ratio; kitchens get equal weight.",
+ "family_overlap_scored_cells": {
+  "execution_units_in_more_than_one_kitchen": 0,
+  "families_by_number_of_kitchens": {
+   "1": 1,
+   "2": 5,
+   "3": 36
+  },
+  "families_in_all_three": 36,
+  "families_only_in": {
+   "K1": [
+    "g-l2-mug-water-sink"
+   ],
+   "K2": [],
+   "K3": []
+  },
+  "families_per_kitchen": {
+   "K1": 42,
+   "K2": 40,
+   "K3": 37
+  },
+  "families_union": 42,
+  "items_in_all_three": 89,
+  "items_per_kitchen": {
+   "K1": 125,
+   "K2": 100,
+   "K3": 101
+  },
+  "items_union": 125,
+  "items_with_different_family_across_kitchens": []
+ },
+ "gates": {
+  "J1_point_estimates_equal_final_results": true,
+  "J2_partitions_equal_parts_of": true,
+  "J3_independent_mode_reproduces_published_ci_exactly": true,
+  "J3_mc_tolerance_pp_other_seeds": 0.5
+ },
+ "schema": "reexecuted.joint_bootstrap/1",
+ "seed": 20261010,
+ "summary": {
+  "n_contrasts": 23,
+  "width_ratio_range": [
+   1.0,
+   1.677
+  ],
+  "zero_exclusion_changes": [
+   "English G+M - G0"
+  ]
+ }
+}
