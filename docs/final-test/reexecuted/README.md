@@ -93,3 +93,11 @@ rescue passes). The namespaces are `test-v1` (development, FloorPlan1), `test-k2
 - The event logs are reduced to their attempt-start rows, the only rows the analysis reads.
 - The Abstract breakdown reads the state at reset from `inputs/l3_reset_states.json`, extracted from the capture records,
   which hold the planner prompts and are not published.
+
+## Fixed-procedure prompt comparison (A7)
+
+`python docs/final-test/reexecuted/a7_fixed.py` regenerates the fixed-procedure prompt comparison (fixed full store and fixed short
+procedure texts against Scene Memory, retrieved procedures with rephrasing, rephrasing only and no memory) from
+`inputs/rows/A7.no-exclusion.jsonl` and checks every value against `docs/final-test/strengthen/A/a7/analysis.json`. The arms, fixed texts,
+blocks, plans and execution journals are in `docs/final-test/strengthen/A/a7/`, and the code that produced them in
+`sim/final_test/strengthen/a7_*.py` (with the A6 / ablation modules it builds on).

@@ -1,0 +1,936 @@
+{
+ "gates": {
+  "test-k2-v1": {
+   "blocks_parsed": 200,
+   "instruction_specific_notes_not_in_fixed_text": [
+    [
+     "canon:g-l2-three-appliances:en",
+     "procedure/*/tool-close"
+    ],
+    [
+     "canon:g-l2-three-appliances:fa",
+     "procedure/*/tool-close"
+    ]
+   ],
+   "nonempty_blocks": 179,
+   "requests_reproduced": 400,
+   "store_lines_checked": 252,
+   "types_source": "detector_types_FloorPlan15.json"
+  },
+  "test-k3-v1": {
+   "blocks_parsed": 202,
+   "instruction_specific_notes_not_in_fixed_text": [
+    [
+     "canon:g-l2-stove-then-microwave:en",
+     "procedure/*/tool-close"
+    ],
+    [
+     "canon:g-l2-stove-then-microwave:fa",
+     "procedure/*/tool-close"
+    ],
+    [
+     "canon:g-l2-three-appliances:en",
+     "procedure/*/tool-close"
+    ],
+    [
+     "canon:g-l2-three-appliances:fa",
+     "procedure/*/tool-close"
+    ]
+   ],
+   "nonempty_blocks": 183,
+   "requests_reproduced": 404,
+   "store_lines_checked": 259,
+   "types_source": "detector_types_FloorPlan17.json"
+  },
+  "test-v1": {
+   "blocks_parsed": 250,
+   "instruction_specific_notes_not_in_fixed_text": [
+    [
+     "canon:g-l2-stove-then-microwave:en",
+     "procedure/*/tool-close"
+    ],
+    [
+     "canon:g-l2-stove-then-microwave:fa",
+     "procedure/*/tool-close"
+    ],
+    [
+     "canon:g-l2-three-appliances:en",
+     "procedure/*/tool-close"
+    ],
+    [
+     "canon:g-l2-three-appliances:fa",
+     "procedure/*/tool-close"
+    ]
+   ],
+   "nonempty_blocks": 223,
+   "requests_reproduced": 500,
+   "store_lines_checked": 326,
+   "types_source": "detector_types.json"
+  }
+ },
+ "kitchens": {
+  "test-k2-v1": {
+   "fixed_proc": {
+    "gemma_tokens": 1371,
+    "ids": [
+     "procedure/*/tool-pickup",
+     "procedure/*/tool-put-in",
+     "procedure/*/tool-pick-and-place",
+     "procedure/*/tool-open",
+     "procedure/*/tool-close",
+     "procedure/*/tool-toggle-on",
+     "procedure/*/tool-toggle-off",
+     "procedure/*/tool-slice",
+     "procedure/*/tool-break",
+     "procedure/*/tool-dirty",
+     "procedure/*/tool-clean",
+     "procedure/*/tool-fill",
+     "procedure/*/tool-empty",
+     "procedure/*/tool-heat",
+     "procedure/*/tool-cook",
+     "procedure/*/tool-wash",
+     "procedure/*/tool-go-to",
+     "procedure/*/tool-search-for",
+     "procedure/*/tool-drop",
+     "procedure/*/tool-close-all",
+     "procedure/*/tool-crouch",
+     "procedure/*/tool-stand",
+     "procedure/*/slice-with-butterknife",
+     "procedure/*/heat-then-place",
+     "procedure/*/microwave-put-close",
+     "procedure/*/microwave-run",
+     "procedure/*/faucet-run",
+     "procedure/*/chill",
+     "procedure/*/put-away-close",
+     "procedure/*/discard",
+     "procedure/*/dish-to-sink",
+     "procedure/*/empty-to-sink",
+     "procedure/*/wash-dish",
+     "procedure/*/fill-container",
+     "procedure/*/coffee",
+     "procedure/*/toast",
+     "procedure/*/stove-pan",
+     "procedure/*/find-then-take",
+     "procedure/*/tidy-up-close",
+     "procedure/*/afford-boil",
+     "procedure/*/afford-brew",
+     "procedure/*/afford-chill",
+     "procedure/*/afford-cut",
+     "procedure/*/afford-discard",
+     "procedure/*/afford-flip",
+     "procedure/*/afford-heat",
+     "procedure/*/afford-scoop",
+     "procedure/*/afford-spread",
+     "procedure/*/afford-stab",
+     "procedure/*/afford-toast",
+     "procedure/*/afford-wash"
+    ],
+    "n_records": 51,
+    "text": "Steps that work here:\npickup: walks to the object and picks it up; the hand must be empty first. To carry it to a place use pick_and_place.\nput_in R: puts the HELD object into or onto the receptacle R (opens R if closed, and may leave its door open). The object field is the receptacle, not the held item; with nothing held it is an error.\npick_and_place X to R: picks X up and puts it into or onto R (it walks, searches and opens R itself, and may leave its door open); the hand is empty afterwards. Closing R is a separate step. If X is already in your hand use put_in R.\nopen X: opens a fridge, cabinet, drawer or microwave; it stays open until a close X step. pick_and_place and put_in already open a closed target themselves.\nclose X: closes it. It is its own step: add it when the command says to close something or to leave it closed.\ntoggle_on X: switches on a faucet, stove knob, coffee machine, toaster, microwave or light. A burner is switched through its StoveKnob. A Microwave only switches on while its door is closed.\ntoggle_off X: switches it off again (faucet, stove knob, coffee machine, toaster, microwave, light).\nslice X: slices it. The executor needs the ButterKnife in hand; pickup ButterKnife first.\nbreak X: breaks or cracks it (for example an Egg, Mug or Plate).\ndirty X: makes it dirty.\nclean X: cleans it where it is. To rinse something in the sink use wash instead.\nfill X arg: fills the container with a liquid; arg is water, coffee or wine (water when omitted).\nempty X: pours the liquid out of the container.\nheat X: runs the whole microwave cycle itself (in, door closed, on, out again). Use it only when the command is to warm or heat the food. It is not 'put X in the microwave': X does not stay inside.\ncook X: the same whole microwave cycle as heat (put in, close, switch on, take out). Use it only when the command is to cook the food; it does not leave X in the microwave.\nwash X: rinses the item in the sink (SinkBasin and Faucet) and leaves it there; the hand is empty afterwards.\ngo_to X: walks to the object and looks at it.\nsearch_for X: looks for the object in likely places and opens closed containers; it succeeds only if the object is actually seen.\ndrop: lets go of what you are holding (needs a held object).\nclose_all: closes every container you have seen open.\ncrouch: crouches to see low places; stand undoes it.\nstand: stands up again after crouch.\nTo slice: pickup ButterKnife, then slice the food.\nTo warm food and then place it: heat the food (it does the whole microwave cycle), then pick_and_place it to the place.\nTo put something in the Microwave: pick_and_place it to Microwave, then close Microwave. This is not heat: heat takes the food out again.\nTo run the Microwave with something inside: pick_and_place it to Microwave, close Microwave, then toggle_on Microwave (close first). The food stays inside; do not take it out unless the command says to (then: toggle_off Microwave, open Microwave, pickup it). Done when it is inside, the door is closed and it is on.\nTo run the water: toggle_on Faucet; toggle_off Faucet stops it. wash already switches the Faucet on and off itself, so do not add it to a wash.\nTo chill food: pick_and_place it to Fridge, then close Fridge.\nTo put something away in a Cabinet or Drawer: pick_and_place it there, then close it.\nTo throw something away: pick_and_place it to GarbageCan.\nTo put dishes in the sink: pick_and_place each one to SinkBasin.\nTo pour out a container and put it in the sink: empty it, then pick_and_place it to SinkBasin.\nTo wash a dish: wash it (SinkBasin and Faucet needed); it stays in the sink and the hand ends empty.\nTo fill a container: fill it with arg water, coffee or wine.\nTo make coffee: pick_and_place a Mug to CoffeeMachine, then toggle_on CoffeeMachine. Needs a CoffeeMachine; availability unknown, check what you see.\nTo toast bread: pick_and_place Bread to Toaster, then toggle_on Toaster. Needs a Toaster; availability unknown, check what you see.\nTo warm a Pot or Pan on the stove: pick_and_place it to StoveBurner, then toggle_on StoveKnob. Needs a StoveBurner and a StoveKnob; availability unknown, check what you see.\nTo find and take something: search_for it, then pickup (the hand must be empty).\nTo close everything left open: close_all, or close each container by name.\nTo boil or fry use a Pot or Pan on the StoveBurner, then toggle_on StoveKnob.\nTo make coffee put a Mug in the CoffeeMachine, then toggle_on CoffeeMachine.\nTo chill or keep food cold put it in the Fridge, then close Fridge.\nTo cut or slice something use the ButterKnife: pickup ButterKnife first.\nTo throw something away put it in the GarbageCan.\nTo flip or turn food over use the Spatula: pickup Spatula first.\nTo warm food use heat (the Microwave); a Pot or Pan is warmed on the StoveBurner with its StoveKnob.\nTo scoop or stir liquid or soup use the Spoon: pickup Spoon first.\nTo spread something use the ButterKnife: pickup ButterKnife first.\nTo pick food up on a prong use the Fork (pickup Fork first); the Spoon is for liquid, the Spatula for flipping.\nTo toast bread put it in the Toaster, then toggle_on Toaster.\nTo wash a dish use wash (SinkBasin and Faucet); it switches the water itself.",
+    "text_sha": "a22d92d7e56cfc4c40755c30a699c57e884452d76c7feae93e25129e9eb4642c"
+   },
+   "fixed_proc_300": {
+    "gemma_tokens": 131,
+    "ids": [
+     "procedure/*/tool-open",
+     "procedure/*/tool-fill",
+     "procedure/*/fill-container",
+     "procedure/*/find-then-take"
+    ],
+    "limit_gemma": 172,
+    "longest_rephrasing_pres": "canon:g-l2-light-fridge-egg:fa",
+    "n_records": 4,
+    "ranking": [
+     {
+      "blocks_containing": 29,
+      "id": "procedure/*/tool-open"
+     },
+     {
+      "blocks_containing": 20,
+      "id": "procedure/*/fill-container"
+     },
+     {
+      "blocks_containing": 18,
+      "id": "procedure/*/find-then-take"
+     },
+     {
+      "blocks_containing": 18,
+      "id": "procedure/*/tool-fill"
+     },
+     {
+      "blocks_containing": 18,
+      "id": "procedure/*/wash-dish"
+     },
+     {
+      "blocks_containing": 16,
+      "id": "procedure/*/tool-close"
+     },
+     {
+      "blocks_containing": 16,
+      "id": "procedure/*/tool-pick-and-place"
+     },
+     {
+      "blocks_containing": 12,
+      "id": "procedure/*/tool-drop"
+     },
+     {
+      "blocks_containing": 12,
+      "id": "procedure/*/tool-toggle-off"
+     },
+     {
+      "blocks_containing": 10,
+      "id": "procedure/*/empty-to-sink"
+     },
+     {
+      "blocks_containing": 10,
+      "id": "procedure/*/tool-empty"
+     },
+     {
+      "blocks_containing": 8,
+      "id": "procedure/*/faucet-run"
+     },
+     {
+      "blocks_containing": 8,
+      "id": "procedure/*/microwave-put-close"
+     },
+     {
+      "blocks_containing": 8,
+      "id": "procedure/*/stove-pan"
+     },
+     {
+      "blocks_containing": 8,
+      "id": "procedure/*/tool-cook"
+     },
+     {
+      "blocks_containing": 8,
+      "id": "procedure/*/tool-toggle-on"
+     },
+     {
+      "blocks_containing": 6,
+      "id": "procedure/*/heat-then-place"
+     },
+     {
+      "blocks_containing": 6,
+      "id": "procedure/*/tool-break"
+     },
+     {
+      "blocks_containing": 5,
+      "id": "procedure/*/slice-with-butterknife"
+     },
+     {
+      "blocks_containing": 4,
+      "id": "procedure/*/chill"
+     },
+     {
+      "blocks_containing": 4,
+      "id": "procedure/*/dish-to-sink"
+     },
+     {
+      "blocks_containing": 4,
+      "id": "procedure/*/tool-heat"
+     },
+     {
+      "blocks_containing": 2,
+      "id": "procedure/*/coffee"
+     },
+     {
+      "blocks_containing": 2,
+      "id": "procedure/*/toast"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/afford-boil"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/afford-brew"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/afford-chill"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/afford-cut"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/afford-discard"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/afford-flip"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/afford-heat"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/afford-scoop"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/afford-spread"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/afford-stab"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/afford-toast"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/afford-wash"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/discard"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/microwave-run"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/put-away-close"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/tidy-up-close"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/tool-clean"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/tool-close-all"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/tool-crouch"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/tool-dirty"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/tool-go-to"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/tool-pickup"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/tool-put-in"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/tool-search-for"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/tool-slice"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/tool-stand"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/tool-wash"
+     }
+    ],
+    "text": "Steps that work here:\nopen X: opens a fridge, cabinet, drawer or microwave; it stays open until a close X step. pick_and_place and put_in already open a closed target themselves.\nfill X arg: fills the container with a liquid; arg is water, coffee or wine (water when omitted).\nTo fill a container: fill it with arg water, coffee or wine.\nTo find and take something: search_for it, then pickup (the hand must be empty).",
+    "text_sha": "ecb312334b127f9b7bd1345a71e2665663884d0ad8bf016713c120f9801837fb"
+   },
+   "store": {
+    "conditional_left_out": "affordance lines ending in '-request'",
+    "n_records": 51,
+    "sha": "e662f0df9d84261d6230acc768a804b5e4c420a23f1b337012ce324bb253c4a0"
+   }
+  },
+  "test-k3-v1": {
+   "fixed_proc": {
+    "gemma_tokens": 1371,
+    "ids": [
+     "procedure/*/tool-pickup",
+     "procedure/*/tool-put-in",
+     "procedure/*/tool-pick-and-place",
+     "procedure/*/tool-open",
+     "procedure/*/tool-close",
+     "procedure/*/tool-toggle-on",
+     "procedure/*/tool-toggle-off",
+     "procedure/*/tool-slice",
+     "procedure/*/tool-break",
+     "procedure/*/tool-dirty",
+     "procedure/*/tool-clean",
+     "procedure/*/tool-fill",
+     "procedure/*/tool-empty",
+     "procedure/*/tool-heat",
+     "procedure/*/tool-cook",
+     "procedure/*/tool-wash",
+     "procedure/*/tool-go-to",
+     "procedure/*/tool-search-for",
+     "procedure/*/tool-drop",
+     "procedure/*/tool-close-all",
+     "procedure/*/tool-crouch",
+     "procedure/*/tool-stand",
+     "procedure/*/slice-with-butterknife",
+     "procedure/*/heat-then-place",
+     "procedure/*/microwave-put-close",
+     "procedure/*/microwave-run",
+     "procedure/*/faucet-run",
+     "procedure/*/chill",
+     "procedure/*/put-away-close",
+     "procedure/*/discard",
+     "procedure/*/dish-to-sink",
+     "procedure/*/empty-to-sink",
+     "procedure/*/wash-dish",
+     "procedure/*/fill-container",
+     "procedure/*/coffee",
+     "procedure/*/toast",
+     "procedure/*/stove-pan",
+     "procedure/*/find-then-take",
+     "procedure/*/tidy-up-close",
+     "procedure/*/afford-boil",
+     "procedure/*/afford-brew",
+     "procedure/*/afford-chill",
+     "procedure/*/afford-cut",
+     "procedure/*/afford-discard",
+     "procedure/*/afford-flip",
+     "procedure/*/afford-heat",
+     "procedure/*/afford-scoop",
+     "procedure/*/afford-spread",
+     "procedure/*/afford-stab",
+     "procedure/*/afford-toast",
+     "procedure/*/afford-wash"
+    ],
+    "n_records": 51,
+    "text": "Steps that work here:\npickup: walks to the object and picks it up; the hand must be empty first. To carry it to a place use pick_and_place.\nput_in R: puts the HELD object into or onto the receptacle R (opens R if closed, and may leave its door open). The object field is the receptacle, not the held item; with nothing held it is an error.\npick_and_place X to R: picks X up and puts it into or onto R (it walks, searches and opens R itself, and may leave its door open); the hand is empty afterwards. Closing R is a separate step. If X is already in your hand use put_in R.\nopen X: opens a fridge, cabinet, drawer or microwave; it stays open until a close X step. pick_and_place and put_in already open a closed target themselves.\nclose X: closes it. It is its own step: add it when the command says to close something or to leave it closed.\ntoggle_on X: switches on a faucet, stove knob, coffee machine, toaster, microwave or light. A burner is switched through its StoveKnob. A Microwave only switches on while its door is closed.\ntoggle_off X: switches it off again (faucet, stove knob, coffee machine, toaster, microwave, light).\nslice X: slices it. The executor needs the ButterKnife in hand; pickup ButterKnife first.\nbreak X: breaks or cracks it (for example an Egg, Mug or Plate).\ndirty X: makes it dirty.\nclean X: cleans it where it is. To rinse something in the sink use wash instead.\nfill X arg: fills the container with a liquid; arg is water, coffee or wine (water when omitted).\nempty X: pours the liquid out of the container.\nheat X: runs the whole microwave cycle itself (in, door closed, on, out again). Use it only when the command is to warm or heat the food. It is not 'put X in the microwave': X does not stay inside.\ncook X: the same whole microwave cycle as heat (put in, close, switch on, take out). Use it only when the command is to cook the food; it does not leave X in the microwave.\nwash X: rinses the item in the sink (SinkBasin and Faucet) and leaves it there; the hand is empty afterwards.\ngo_to X: walks to the object and looks at it.\nsearch_for X: looks for the object in likely places and opens closed containers; it succeeds only if the object is actually seen.\ndrop: lets go of what you are holding (needs a held object).\nclose_all: closes every container you have seen open.\ncrouch: crouches to see low places; stand undoes it.\nstand: stands up again after crouch.\nTo slice: pickup ButterKnife, then slice the food.\nTo warm food and then place it: heat the food (it does the whole microwave cycle), then pick_and_place it to the place.\nTo put something in the Microwave: pick_and_place it to Microwave, then close Microwave. This is not heat: heat takes the food out again.\nTo run the Microwave with something inside: pick_and_place it to Microwave, close Microwave, then toggle_on Microwave (close first). The food stays inside; do not take it out unless the command says to (then: toggle_off Microwave, open Microwave, pickup it). Done when it is inside, the door is closed and it is on.\nTo run the water: toggle_on Faucet; toggle_off Faucet stops it. wash already switches the Faucet on and off itself, so do not add it to a wash.\nTo chill food: pick_and_place it to Fridge, then close Fridge.\nTo put something away in a Cabinet or Drawer: pick_and_place it there, then close it.\nTo throw something away: pick_and_place it to GarbageCan.\nTo put dishes in the sink: pick_and_place each one to SinkBasin.\nTo pour out a container and put it in the sink: empty it, then pick_and_place it to SinkBasin.\nTo wash a dish: wash it (SinkBasin and Faucet needed); it stays in the sink and the hand ends empty.\nTo fill a container: fill it with arg water, coffee or wine.\nTo make coffee: pick_and_place a Mug to CoffeeMachine, then toggle_on CoffeeMachine. Needs a CoffeeMachine; availability unknown, check what you see.\nTo toast bread: pick_and_place Bread to Toaster, then toggle_on Toaster. Needs a Toaster; availability unknown, check what you see.\nTo warm a Pot or Pan on the stove: pick_and_place it to StoveBurner, then toggle_on StoveKnob. Needs a StoveBurner and a StoveKnob; availability unknown, check what you see.\nTo find and take something: search_for it, then pickup (the hand must be empty).\nTo close everything left open: close_all, or close each container by name.\nTo boil or fry use a Pot or Pan on the StoveBurner, then toggle_on StoveKnob.\nTo make coffee put a Mug in the CoffeeMachine, then toggle_on CoffeeMachine.\nTo chill or keep food cold put it in the Fridge, then close Fridge.\nTo cut or slice something use the ButterKnife: pickup ButterKnife first.\nTo throw something away put it in the GarbageCan.\nTo flip or turn food over use the Spatula: pickup Spatula first.\nTo warm food use heat (the Microwave); a Pot or Pan is warmed on the StoveBurner with its StoveKnob.\nTo scoop or stir liquid or soup use the Spoon: pickup Spoon first.\nTo spread something use the ButterKnife: pickup ButterKnife first.\nTo pick food up on a prong use the Fork (pickup Fork first); the Spoon is for liquid, the Spatula for flipping.\nTo toast bread put it in the Toaster, then toggle_on Toaster.\nTo wash a dish use wash (SinkBasin and Faucet); it switches the water itself.",
+    "text_sha": "a22d92d7e56cfc4c40755c30a699c57e884452d76c7feae93e25129e9eb4642c"
+   },
+   "fixed_proc_300": {
+    "gemma_tokens": 138,
+    "ids": [
+     "procedure/*/tool-open",
+     "procedure/*/tool-fill",
+     "procedure/*/wash-dish",
+     "procedure/*/fill-container"
+    ],
+    "limit_gemma": 172,
+    "longest_rephrasing_pres": "canon:g-l2-knife-bread-toaster:fa",
+    "n_records": 4,
+    "ranking": [
+     {
+      "blocks_containing": 23,
+      "id": "procedure/*/tool-open"
+     },
+     {
+      "blocks_containing": 22,
+      "id": "procedure/*/fill-container"
+     },
+     {
+      "blocks_containing": 20,
+      "id": "procedure/*/tool-fill"
+     },
+     {
+      "blocks_containing": 20,
+      "id": "procedure/*/wash-dish"
+     },
+     {
+      "blocks_containing": 16,
+      "id": "procedure/*/tool-close"
+     },
+     {
+      "blocks_containing": 16,
+      "id": "procedure/*/tool-pick-and-place"
+     },
+     {
+      "blocks_containing": 14,
+      "id": "procedure/*/find-then-take"
+     },
+     {
+      "blocks_containing": 12,
+      "id": "procedure/*/tool-drop"
+     },
+     {
+      "blocks_containing": 10,
+      "id": "procedure/*/empty-to-sink"
+     },
+     {
+      "blocks_containing": 10,
+      "id": "procedure/*/tool-cook"
+     },
+     {
+      "blocks_containing": 10,
+      "id": "procedure/*/tool-empty"
+     },
+     {
+      "blocks_containing": 10,
+      "id": "procedure/*/tool-toggle-on"
+     },
+     {
+      "blocks_containing": 8,
+      "id": "procedure/*/dish-to-sink"
+     },
+     {
+      "blocks_containing": 8,
+      "id": "procedure/*/faucet-run"
+     },
+     {
+      "blocks_containing": 8,
+      "id": "procedure/*/heat-then-place"
+     },
+     {
+      "blocks_containing": 8,
+      "id": "procedure/*/microwave-put-close"
+     },
+     {
+      "blocks_containing": 8,
+      "id": "procedure/*/stove-pan"
+     },
+     {
+      "blocks_containing": 8,
+      "id": "procedure/*/tool-toggle-off"
+     },
+     {
+      "blocks_containing": 6,
+      "id": "procedure/*/tool-break"
+     },
+     {
+      "blocks_containing": 5,
+      "id": "procedure/*/chill"
+     },
+     {
+      "blocks_containing": 5,
+      "id": "procedure/*/slice-with-butterknife"
+     },
+     {
+      "blocks_containing": 4,
+      "id": "procedure/*/discard"
+     },
+     {
+      "blocks_containing": 4,
+      "id": "procedure/*/tool-heat"
+     },
+     {
+      "blocks_containing": 2,
+      "id": "procedure/*/coffee"
+     },
+     {
+      "blocks_containing": 2,
+      "id": "procedure/*/toast"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/afford-boil"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/afford-brew"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/afford-chill"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/afford-cut"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/afford-discard"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/afford-flip"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/afford-heat"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/afford-scoop"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/afford-spread"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/afford-stab"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/afford-toast"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/afford-wash"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/microwave-run"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/put-away-close"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/tidy-up-close"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/tool-clean"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/tool-close-all"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/tool-crouch"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/tool-dirty"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/tool-go-to"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/tool-pickup"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/tool-put-in"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/tool-search-for"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/tool-slice"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/tool-stand"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/tool-wash"
+     }
+    ],
+    "text": "Steps that work here:\nopen X: opens a fridge, cabinet, drawer or microwave; it stays open until a close X step. pick_and_place and put_in already open a closed target themselves.\nfill X arg: fills the container with a liquid; arg is water, coffee or wine (water when omitted).\nTo wash a dish: wash it (SinkBasin and Faucet needed); it stays in the sink and the hand ends empty.\nTo fill a container: fill it with arg water, coffee or wine.",
+    "text_sha": "75a1beed78527babcab4c3afcdf4ca7ea4761a523db17dac62cff11b76132929"
+   },
+   "store": {
+    "conditional_left_out": "affordance lines ending in '-request'",
+    "n_records": 51,
+    "sha": "e662f0df9d84261d6230acc768a804b5e4c420a23f1b337012ce324bb253c4a0"
+   }
+  },
+  "test-v1": {
+   "fixed_proc": {
+    "gemma_tokens": 1371,
+    "ids": [
+     "procedure/*/tool-pickup",
+     "procedure/*/tool-put-in",
+     "procedure/*/tool-pick-and-place",
+     "procedure/*/tool-open",
+     "procedure/*/tool-close",
+     "procedure/*/tool-toggle-on",
+     "procedure/*/tool-toggle-off",
+     "procedure/*/tool-slice",
+     "procedure/*/tool-break",
+     "procedure/*/tool-dirty",
+     "procedure/*/tool-clean",
+     "procedure/*/tool-fill",
+     "procedure/*/tool-empty",
+     "procedure/*/tool-heat",
+     "procedure/*/tool-cook",
+     "procedure/*/tool-wash",
+     "procedure/*/tool-go-to",
+     "procedure/*/tool-search-for",
+     "procedure/*/tool-drop",
+     "procedure/*/tool-close-all",
+     "procedure/*/tool-crouch",
+     "procedure/*/tool-stand",
+     "procedure/*/slice-with-butterknife",
+     "procedure/*/heat-then-place",
+     "procedure/*/microwave-put-close",
+     "procedure/*/microwave-run",
+     "procedure/*/faucet-run",
+     "procedure/*/chill",
+     "procedure/*/put-away-close",
+     "procedure/*/discard",
+     "procedure/*/dish-to-sink",
+     "procedure/*/empty-to-sink",
+     "procedure/*/wash-dish",
+     "procedure/*/fill-container",
+     "procedure/*/coffee",
+     "procedure/*/toast",
+     "procedure/*/stove-pan",
+     "procedure/*/find-then-take",
+     "procedure/*/tidy-up-close",
+     "procedure/*/afford-boil",
+     "procedure/*/afford-brew",
+     "procedure/*/afford-chill",
+     "procedure/*/afford-cut",
+     "procedure/*/afford-discard",
+     "procedure/*/afford-flip",
+     "procedure/*/afford-heat",
+     "procedure/*/afford-scoop",
+     "procedure/*/afford-spread",
+     "procedure/*/afford-stab",
+     "procedure/*/afford-toast",
+     "procedure/*/afford-wash"
+    ],
+    "n_records": 51,
+    "text": "Steps that work here:\npickup: walks to the object and picks it up; the hand must be empty first. To carry it to a place use pick_and_place.\nput_in R: puts the HELD object into or onto the receptacle R (opens R if closed, and may leave its door open). The object field is the receptacle, not the held item; with nothing held it is an error.\npick_and_place X to R: picks X up and puts it into or onto R (it walks, searches and opens R itself, and may leave its door open); the hand is empty afterwards. Closing R is a separate step. If X is already in your hand use put_in R.\nopen X: opens a fridge, cabinet, drawer or microwave; it stays open until a close X step. pick_and_place and put_in already open a closed target themselves.\nclose X: closes it. It is its own step: add it when the command says to close something or to leave it closed.\ntoggle_on X: switches on a faucet, stove knob, coffee machine, toaster, microwave or light. A burner is switched through its StoveKnob. A Microwave only switches on while its door is closed.\ntoggle_off X: switches it off again (faucet, stove knob, coffee machine, toaster, microwave, light).\nslice X: slices it. The executor needs the ButterKnife in hand; pickup ButterKnife first.\nbreak X: breaks or cracks it (for example an Egg, Mug or Plate).\ndirty X: makes it dirty.\nclean X: cleans it where it is. To rinse something in the sink use wash instead.\nfill X arg: fills the container with a liquid; arg is water, coffee or wine (water when omitted).\nempty X: pours the liquid out of the container.\nheat X: runs the whole microwave cycle itself (in, door closed, on, out again). Use it only when the command is to warm or heat the food. It is not 'put X in the microwave': X does not stay inside.\ncook X: the same whole microwave cycle as heat (put in, close, switch on, take out). Use it only when the command is to cook the food; it does not leave X in the microwave.\nwash X: rinses the item in the sink (SinkBasin and Faucet) and leaves it there; the hand is empty afterwards.\ngo_to X: walks to the object and looks at it.\nsearch_for X: looks for the object in likely places and opens closed containers; it succeeds only if the object is actually seen.\ndrop: lets go of what you are holding (needs a held object).\nclose_all: closes every container you have seen open.\ncrouch: crouches to see low places; stand undoes it.\nstand: stands up again after crouch.\nTo slice: pickup ButterKnife, then slice the food.\nTo warm food and then place it: heat the food (it does the whole microwave cycle), then pick_and_place it to the place.\nTo put something in the Microwave: pick_and_place it to Microwave, then close Microwave. This is not heat: heat takes the food out again.\nTo run the Microwave with something inside: pick_and_place it to Microwave, close Microwave, then toggle_on Microwave (close first). The food stays inside; do not take it out unless the command says to (then: toggle_off Microwave, open Microwave, pickup it). Done when it is inside, the door is closed and it is on.\nTo run the water: toggle_on Faucet; toggle_off Faucet stops it. wash already switches the Faucet on and off itself, so do not add it to a wash.\nTo chill food: pick_and_place it to Fridge, then close Fridge.\nTo put something away in a Cabinet or Drawer: pick_and_place it there, then close it.\nTo throw something away: pick_and_place it to GarbageCan.\nTo put dishes in the sink: pick_and_place each one to SinkBasin.\nTo pour out a container and put it in the sink: empty it, then pick_and_place it to SinkBasin.\nTo wash a dish: wash it (SinkBasin and Faucet needed); it stays in the sink and the hand ends empty.\nTo fill a container: fill it with arg water, coffee or wine.\nTo make coffee: pick_and_place a Mug to CoffeeMachine, then toggle_on CoffeeMachine. Needs a CoffeeMachine; availability unknown, check what you see.\nTo toast bread: pick_and_place Bread to Toaster, then toggle_on Toaster. Needs a Toaster; availability unknown, check what you see.\nTo warm a Pot or Pan on the stove: pick_and_place it to StoveBurner, then toggle_on StoveKnob. Needs a StoveBurner and a StoveKnob; availability unknown, check what you see.\nTo find and take something: search_for it, then pickup (the hand must be empty).\nTo close everything left open: close_all, or close each container by name.\nTo boil or fry use a Pot or Pan on the StoveBurner, then toggle_on StoveKnob.\nTo make coffee put a Mug in the CoffeeMachine, then toggle_on CoffeeMachine.\nTo chill or keep food cold put it in the Fridge, then close Fridge.\nTo cut or slice something use the ButterKnife: pickup ButterKnife first.\nTo throw something away put it in the GarbageCan.\nTo flip or turn food over use the Spatula: pickup Spatula first.\nTo warm food use heat (the Microwave); a Pot or Pan is warmed on the StoveBurner with its StoveKnob.\nTo scoop or stir liquid or soup use the Spoon: pickup Spoon first.\nTo spread something use the ButterKnife: pickup ButterKnife first.\nTo pick food up on a prong use the Fork (pickup Fork first); the Spoon is for liquid, the Spatula for flipping.\nTo toast bread put it in the Toaster, then toggle_on Toaster.\nTo wash a dish use wash (SinkBasin and Faucet); it switches the water itself.",
+    "text_sha": "a22d92d7e56cfc4c40755c30a699c57e884452d76c7feae93e25129e9eb4642c"
+   },
+   "fixed_proc_300": {
+    "gemma_tokens": 138,
+    "ids": [
+     "procedure/*/tool-open",
+     "procedure/*/tool-fill",
+     "procedure/*/wash-dish",
+     "procedure/*/fill-container"
+    ],
+    "limit_gemma": 172,
+    "longest_rephrasing_pres": "canon:g-l2-light-fridge-egg:fa",
+    "n_records": 4,
+    "ranking": [
+     {
+      "blocks_containing": 29,
+      "id": "procedure/*/tool-open"
+     },
+     {
+      "blocks_containing": 29,
+      "id": "procedure/*/wash-dish"
+     },
+     {
+      "blocks_containing": 28,
+      "id": "procedure/*/fill-container"
+     },
+     {
+      "blocks_containing": 26,
+      "id": "procedure/*/tool-fill"
+     },
+     {
+      "blocks_containing": 21,
+      "id": "procedure/*/tool-pick-and-place"
+     },
+     {
+      "blocks_containing": 20,
+      "id": "procedure/*/find-then-take"
+     },
+     {
+      "blocks_containing": 18,
+      "id": "procedure/*/dish-to-sink"
+     },
+     {
+      "blocks_containing": 18,
+      "id": "procedure/*/tool-close"
+     },
+     {
+      "blocks_containing": 12,
+      "id": "procedure/*/tool-drop"
+     },
+     {
+      "blocks_containing": 12,
+      "id": "procedure/*/tool-toggle-off"
+     },
+     {
+      "blocks_containing": 12,
+      "id": "procedure/*/tool-toggle-on"
+     },
+     {
+      "blocks_containing": 11,
+      "id": "procedure/*/microwave-put-close"
+     },
+     {
+      "blocks_containing": 11,
+      "id": "procedure/*/stove-pan"
+     },
+     {
+      "blocks_containing": 10,
+      "id": "procedure/*/empty-to-sink"
+     },
+     {
+      "blocks_containing": 10,
+      "id": "procedure/*/tool-cook"
+     },
+     {
+      "blocks_containing": 10,
+      "id": "procedure/*/tool-empty"
+     },
+     {
+      "blocks_containing": 8,
+      "id": "procedure/*/faucet-run"
+     },
+     {
+      "blocks_containing": 8,
+      "id": "procedure/*/heat-then-place"
+     },
+     {
+      "blocks_containing": 7,
+      "id": "procedure/*/chill"
+     },
+     {
+      "blocks_containing": 6,
+      "id": "procedure/*/tool-break"
+     },
+     {
+      "blocks_containing": 5,
+      "id": "procedure/*/slice-with-butterknife"
+     },
+     {
+      "blocks_containing": 5,
+      "id": "procedure/*/tool-heat"
+     },
+     {
+      "blocks_containing": 4,
+      "id": "procedure/*/coffee"
+     },
+     {
+      "blocks_containing": 4,
+      "id": "procedure/*/discard"
+     },
+     {
+      "blocks_containing": 2,
+      "id": "procedure/*/toast"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/afford-boil"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/afford-brew"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/afford-chill"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/afford-cut"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/afford-discard"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/afford-flip"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/afford-heat"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/afford-scoop"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/afford-spread"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/afford-stab"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/afford-toast"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/afford-wash"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/microwave-run"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/put-away-close"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/tidy-up-close"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/tool-clean"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/tool-close-all"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/tool-crouch"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/tool-dirty"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/tool-go-to"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/tool-pickup"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/tool-put-in"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/tool-search-for"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/tool-slice"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/tool-stand"
+     },
+     {
+      "blocks_containing": 0,
+      "id": "procedure/*/tool-wash"
+     }
+    ],
+    "text": "Steps that work here:\nopen X: opens a fridge, cabinet, drawer or microwave; it stays open until a close X step. pick_and_place and put_in already open a closed target themselves.\nfill X arg: fills the container with a liquid; arg is water, coffee or wine (water when omitted).\nTo wash a dish: wash it (SinkBasin and Faucet needed); it stays in the sink and the hand ends empty.\nTo fill a container: fill it with arg water, coffee or wine.",
+    "text_sha": "75a1beed78527babcab4c3afcdf4ca7ea4761a523db17dac62cff11b76132929"
+   },
+   "store": {
+    "conditional_left_out": "affordance lines ending in '-request'",
+    "n_records": 51,
+    "sha": "e662f0df9d84261d6230acc768a804b5e4c420a23f1b337012ce324bb253c4a0"
+   }
+  }
+ },
+ "store_identical_across_kitchens": true,
+ "tokenizers": [
+  "gemma"
+ ],
+ "written": "2026-11-01 00:41:56"
+}
